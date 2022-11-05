@@ -9,13 +9,8 @@
 #include <iomanip>
 #include "hls_linear_algebra.h"
 
-
 using namespace std;
 
-#define IMG_NUM 200
-#define IMG_H 28
-#define IMG_W 28
-const int VEC_SIZ = IMG_H * IMG_W; 
 //----------------------------------------------------------
 // Top function
 //----------------------------------------------------------
@@ -45,7 +40,7 @@ void dut(
   }
 
   // call pca
-  pca = PCA(input,output,tsf_mat,VEC_SIZ,IMG_NUM,10);
+  pca = PCA(input,output,tsf_mat,VEC_SIZ,IMG_NUM,k);
   pca.normalize();
   pca.apply_svd();
   pca.rank();
