@@ -1,11 +1,9 @@
 //==========================================================================
-// bnn.cpp
+// dut.cpp
 //==========================================================================
 // @brief: A convolution kernel for CNN on digit recognition
 
-#include "layer.h"
-#include "model.h"
-#include "bnn.h"
+#include "pca.h"
 #include <fstream>
 #include <iostream>
 #include <iomanip>
@@ -14,7 +12,7 @@
 
 using namespace std;
 
-#define IMG_NUM 100
+#define IMG_NUM 200
 #define IMG_H 28
 #define IMG_W 28
 const int VEC_SIZ = IMG_H * IMG_W; 
@@ -27,18 +25,26 @@ void dut(
     hls::stream<bit32_t> &strm_out
 )
 {
-  bit input[MAX_FMAP];
+  fix32_t** input;
   bit32_t input_l;
   bit32_t output;
 
-  //read one test image into digit
-  for (int i = 0; i < I_WIDTH1 * I_WIDTH1 / BUS_WIDTH; i++) {
-     input_l = strm_in.read();
-     for (int j = 0; j < BUS_WIDTH; j++) {
-       input[i*BUS_WIDTH+j] = input_l(j,j);
-     }
+  input = new fix32_t*[IMG_NUM];
+  for (int i = 0; i < IMG_NUM; i++)
+    input[i] = new fix32_t[VEC_SIZ];
+
+  // read one test image into digit
+  for (int test = 0; test < IMG_NUM; test++) {
+    for (int i = 0; i < 28*28/4; i++) {
+      input_l = strm_in.read();
+      for (int j = 0; j < 4; j++) {
+        input[test][i*4+j] = 0;
+        input[test][i*4+j](31,16) = input_l(j*8+7,j*8);
+      }
+    }
   }
-  //call bnn
+
+  // call pca
   pca = PCA(input,output,tsf_mat,VEC_SIZ,IMG_NUM,10);
   pca.normalize();
   pca.apply_svd();
@@ -48,5 +54,3 @@ void dut(
   // write out the result
   strm_out.write(output);
 }
-
-
