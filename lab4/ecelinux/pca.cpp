@@ -107,7 +107,7 @@ class PCA {
     sort(this->sorted_idx, this->sorted_idx+this->k, this->cmp);
     for(int i=0; i<this->k; i++){
       for(int j=0; j<this->vec_size; j++){
-        this->tsf_mat[i][j] = this->V[i][j];
+        this->tsf_mat[i][j] = this->V[sorted_idx[i]][j];
       }
     }
   }
