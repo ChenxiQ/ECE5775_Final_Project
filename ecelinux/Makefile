@@ -1,7 +1,7 @@
 #==========================================================================
 # Makefile
 #==========================================================================
-# @brief: A makefile the compiles and synthesizes the digitrec program
+# @brief: A makefile the compiles and synthesizes the pca program
 #
 # @desc: 1. "make" runs csim by default
 #        2. "make csim" compiles & executes the fixed-point implementation
@@ -16,13 +16,13 @@ CFLAGS = -g -I${VHLS_INC} -DHLS_NO_XIL_FPO_LIB
 
 all: csim
 
-csim: bnn.cpp layer.cpp bnn_test.cpp
-	@echo "Compiling & simulating cnn on amdpool ..."
-	g++ ${CFLAGS} $^ -o bnn -lrt
-	./bnn
+csim: pca.cpp pca_test.cpp
+	@echo "Compiling & simulating pca on amdpool ..."
+	g++ ${CFLAGS} $^ -o pca -lrt
+	./pca
 
 bitstream: 
-	@echo "Synthesizing cnn and creating bitstream on amdpool ..."
+	@echo "Synthesizing pca and creating bitstream on amdpool ..."
 	vivado_hls -f run.tcl
 	./run_bitstream.sh
 
@@ -31,5 +31,5 @@ vivado:
 	vivado_hls -f run.tcl
 
 clean:
-	rm -rf bnn *.dat *.prj *.log
+	rm -rf pca *.dat *.prj *.log
 	rm -rf zedboard_project* xillydemo.bit

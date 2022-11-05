@@ -11,17 +11,17 @@
 using namespace std;
 
 // Number of test instances
-const int TEST_SIZE = 100;
+const int TEST_SIZE = 200;
 
 //------------------------------------------------------------------------
 // Helper function for reading images and labels
 //------------------------------------------------------------------------
 
-void read_test_images(int8_t test_images[TEST_SIZE][256]) {
-  std::ifstream infile("data/test_b.dat");
+void read_test_images(int8_t test_images[TEST_SIZE][784]) {
+  std::ifstream infile("data/image.dat");
   if (infile.is_open()) {
     for (int index = 0; index < TEST_SIZE; index++) {
-      for (int pixel = 0; pixel < 256; pixel++) {
+      for (int pixel = 0; pixel < 784; pixel++) {
         int i;
         infile >> i;
         test_images[index][pixel] = i;
@@ -42,15 +42,15 @@ void read_test_labels(int test_labels[TEST_SIZE]) {
 }
 
 //------------------------------------------------------------------------
-// Digitrec testbench
+// pca testbench
 //------------------------------------------------------------------------
 
 int main(){
   // HLS streams for communicating with the cordic block
-  hls::stream<bit32_t> digitrec_in;
-  hls::stream<bit32_t> digitrec_out;
+  hls::stream<bit32_t> pca_in;
+  hls::stream<bit32_t> pca_out;
   
-  int8_t test_images[TEST_SIZE][256];
+  int test_images[TEST_SIZE][784];
   int test_labels[TEST_SIZE];
   
   // read test images and labels
@@ -60,28 +60,28 @@ int main(){
   float correct = 0.0;
   
   // Timer
-  Timer timer("digirec BNN");
+  Timer timer("pca");
   timer.start();
   
   // pack images to 32-bit and transmit to dut function 
   for (int test = 0; test < TEST_SIZE; test++) {
-    for (int i = 0; i < I_WIDTH1 * I_WIDTH1 / BUS_WIDTH; i++) {
-      for (int j = 0; j < BUS_WIDTH; j++) {
-        test_image(j,j) = test_images[test][i*BUS_WIDTH+j];
+    for (int i = 0; i < 28 * 28 / 4; i++) {
+      for (int j = 0; j < 4; j++) {
+        test_image(j*8+7,j*8) = test_images[test][i*4+j];
       }
-      digitrec_in.write(test_image);
+      pca_in.write(test_image);
     }
     
     // perform prediction
-    dut(digitrec_in, digitrec_out);
-   
+    dut(pca_in, pca_out);
+  
     // check results
-    if (digitrec_out.read() == test_labels[test]) correct += 1.0;
+    // if (pca_out.read() == test_labels[test]) correct += 1.0;
   }
   timer.stop();
 
   // Calculate accuracy
-  std::cout << "Accuracy: " << correct/TEST_SIZE << std::endl;
+  // std::cout << "Accuracy: " << correct/TEST_SIZE << std::endl;
   
   return 0;
 }
