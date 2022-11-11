@@ -54,17 +54,17 @@ void dut(
       XXT[i][j] = 0;
     }
   }
-  cout << "norm" << endl;
+  // cout << "norm" << endl;
   pca.normalize(X, mean);
-  cout << "cov" << endl;
+  // cout << "cov" << endl;
   pca.cov(X, XXT);
-  cout << "svd" << endl;
+  // cout << "svd" << endl;
   pca.apply_svd(XXT,S,U,V);
-  cout << "rank" << endl;
+  // cout << "rank" << endl;
   pca.rank(tsf_mat, S, U);
-  cout << "back_pjt" << endl;
+  // cout << "back_pjt" << endl;
   pca.back_pjt(tsf_mat, X, Y);
-  cout << "transfer output" << endl;
+  // cout << "transfer output" << endl;
 
   for (int i = 0; i < K; i++) {
     for (int j = 0; j < IMG_NUM; j++) {
@@ -82,5 +82,5 @@ void dut(
     strm_out.write(mean[i]);
   }
   
-  cout<< "end" <<endl;
+  // cout<< "end" <<endl;
 }
