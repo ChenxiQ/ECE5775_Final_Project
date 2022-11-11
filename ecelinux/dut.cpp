@@ -9,7 +9,6 @@
 #include <iomanip>
 #include "hls_linear_algebra.h"
 
-
 using namespace std;
 
 //----------------------------------------------------------
@@ -40,6 +39,7 @@ void dut(
     }
   }
   // call pca
+<<<<<<< HEAD
   PCA pca(VEC_SIZ,IMG_NUM,K);
   fix32_t S[VEC_SIZ][VEC_SIZ];
   fix32_t U[VEC_SIZ][VEC_SIZ];
@@ -79,4 +79,5 @@ void dut(
     strm_out.write(mean[i]);
   }
   cout<< "end" <<endl;
+
 }

@@ -11,6 +11,7 @@
 #include <fstream>
 using namespace std;
 
+<<<<<<< HEAD
 PCA::PCA(int VEC_SIZ, int VEC_NUM, int ka){
   vec_size = VEC_SIZ;
   k = ka; 
@@ -29,12 +30,14 @@ PCA::PCA(int VEC_SIZ, int VEC_NUM, int ka){
   for(int i=0; i<VEC_SIZ; i++)
     this->S[i] = (fix32_t*)malloc(sizeof(fix32_t) * VEC_SIZ);
 */
+
   for(int i=0; i<VEC_SIZ; i++)
     sorted_idx[i] = i;
   
 }
 
 PCA::~PCA(){
+<<<<<<< HEAD
   /*
   for(int i=0; i<IMG_NUM; i++)
     free(this->A[i]);
@@ -91,6 +94,8 @@ void PCA::normalize(fix32_t X[VEC_SIZ][IMG_NUM],fix32_t mean[VEC_SIZ]){
   }
   fmean.close();
   
+=======
+>>>>>>> master
 }
 
 void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
@@ -103,6 +108,7 @@ void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
   hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,VEC_SIZ,
   IMG_NUM,IMG_NUM,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
 
+<<<<<<< HEAD
   for(int i=0;i<VEC_SIZ;i++){
     for(int j=0; j<VEC_SIZ;j++){
       XXT[i][j] = XXT[i][j]/(IMG_NUM-1);
@@ -119,6 +125,10 @@ void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
   }
   fxxt.close();
   */
+=======
+  fix32_t U[IMG_NUM][IMG_NUM];
+  hls::svd<IMG_NUM,VEC_SIZ,fix32_t,fix32_t>(this->A, this->S, U, V);
+>>>>>>> master
 }
 
 void PCA::apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]){
