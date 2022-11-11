@@ -38,46 +38,49 @@ void dut(
       }
     }
   }
+
   // call pca
-<<<<<<< HEAD
-  PCA pca(VEC_SIZ,IMG_NUM,K);
+  PCA pca(VEC_SIZ, IMG_NUM, K);
   fix32_t S[VEC_SIZ][VEC_SIZ];
   fix32_t U[VEC_SIZ][VEC_SIZ];
   fix32_t V[VEC_SIZ][VEC_SIZ];
   fix32_t XXT[VEC_SIZ][VEC_SIZ];
   fix32_t mean[VEC_SIZ];
-  for(int i=0;i<VEC_SIZ;i++){
-    for(int j=0;j<VEC_SIZ;j++){
-      S[i][j]=0;
-      U[i][j]=0;
-      V[i][j]=0;
-      XXT[i][j]=0;
+  for (int i = 0; i < VEC_SIZ; i++) {
+    for (int j = 0; j < VEC_SIZ; j++) {
+      S[i][j] = 0;
+      U[i][j] = 0;
+      V[i][j] = 0;
+      XXT[i][j] = 0;
     }
   }
-  cout<<"norm"<<endl;
-  pca.normalize(X,mean);
-  cout<<"cov"<<endl;
+  cout << "norm" << endl;
+  pca.normalize(X, mean);
+  cout << "cov" << endl;
   pca.cov(X, XXT);
-  cout<<"svd"<<endl;
+  cout << "svd" << endl;
   pca.apply_svd(XXT,S,U,V);
-  cout<<"rank"<<endl;
+  cout << "rank" << endl;
   pca.rank(tsf_mat, S, U);
-  cout<<"back_pjt"<<endl;
+  cout << "back_pjt" << endl;
   pca.back_pjt(tsf_mat, X, Y);
-  cout<<"transfer output"<<endl;
+  cout << "transfer output" << endl;
+
   for (int i = 0; i < K; i++) {
     for (int j = 0; j < IMG_NUM; j++) {
       strm_out.write(Y[i][j]);
     }
   }
+
   for (int i = 0; i < K; i++) {
     for (int j = 0; j < VEC_SIZ; j++) {
       strm_out.write(tsf_mat[i][j]);
     }
   }
-  for (int i=0;i<VEC_SIZ;i++){
+
+  for (int i = 0; i<VEC_SIZ; i++){
     strm_out.write(mean[i]);
   }
+  
   cout<< "end" <<endl;
-
 }

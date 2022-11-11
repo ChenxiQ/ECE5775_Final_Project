@@ -43,10 +43,10 @@ void read_test_labels(int8_t test_labels[TEST_SIZE]) {
 }
 
 void write_test_result(float Y[K][TEST_SIZE], float tsf_mat[K][VEC_SIZ], float mean[VEC_SIZ]){
-  cout<<"write y"<<endl;
+  cout << "write y" << endl;
   ofstream fy("data/result.dat", ios_base::out);
-  for(int i=0;i<K;i++){
-    for(int j=0;j<TEST_SIZE;j++){
+  for(int i = 0; i < K; i++){
+    for(int j = 0; j < TEST_SIZE; j++){
       fy << Y[i][j] << "\t";
     }
     fy << endl;
@@ -123,14 +123,17 @@ int main(){
       Y[i][test] = pca_out.read();
     }
   }
+
   for (int i=0;i<K;i++){
     for (int j=0;j<VEC_SIZ;j++){
       tsf_mat[i][j] = pca_out.read();
     }
   }
+
   for (int i=0;i<VEC_SIZ;i++){
     mean[i] = pca_out.read();
   }
+  
   cout<<"write file"<<endl;
   write_test_result(Y,tsf_mat,mean);
 

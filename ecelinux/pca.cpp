@@ -11,7 +11,7 @@
 #include <fstream>
 using namespace std;
 
-<<<<<<< HEAD
+
 PCA::PCA(int VEC_SIZ, int VEC_NUM, int ka){
   vec_size = VEC_SIZ;
   k = ka; 
@@ -37,7 +37,6 @@ PCA::PCA(int VEC_SIZ, int VEC_NUM, int ka){
 }
 
 PCA::~PCA(){
-<<<<<<< HEAD
   /*
   for(int i=0; i<IMG_NUM; i++)
     free(this->A[i]);
@@ -94,8 +93,6 @@ void PCA::normalize(fix32_t X[VEC_SIZ][IMG_NUM],fix32_t mean[VEC_SIZ]){
   }
   fmean.close();
   
-=======
->>>>>>> master
 }
 
 void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
@@ -108,7 +105,7 @@ void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
   hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,VEC_SIZ,
   IMG_NUM,IMG_NUM,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
 
-<<<<<<< HEAD
+
   for(int i=0;i<VEC_SIZ;i++){
     for(int j=0; j<VEC_SIZ;j++){
       XXT[i][j] = XXT[i][j]/(IMG_NUM-1);
@@ -125,10 +122,7 @@ void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
   }
   fxxt.close();
   */
-=======
-  fix32_t U[IMG_NUM][IMG_NUM];
-  hls::svd<IMG_NUM,VEC_SIZ,fix32_t,fix32_t>(this->A, this->S, U, V);
->>>>>>> master
+
 }
 
 void PCA::apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]){
@@ -184,21 +178,20 @@ void PCA::rank(fix32_t tsf_mat[K][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t
   f.close();
   */
   //cout<<"max"<<endl;
-  for(int i=0; i<k; i++){
-    for(int j=0; j<vec_size; j++){
+  for (int i = 0; i < k; i++) {
+    for (int j = 0; j < vec_size; j++) {
       tsf_mat[i][j] = U[j][sorted_idx[i]];
     }
   }
   
   std::ofstream ftsf("data/tsf.dat", ios_base::out);
-  for(int i=0;i<K;i++){
-    for(int j=0; j<VEC_SIZ;j++){
+  for(int i = 0; i < K; i++){
+    for(int j = 0; j < VEC_SIZ; j++){
       ftsf << tsf_mat[i][j] << "\t";
     }
-    ftsf <<endl;
+    ftsf << endl;
   }
   ftsf.close();
-  
 }
 
 void PCA::back_pjt(fix32_t tsf_mat[K][VEC_SIZ], fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[K][IMG_NUM]){
@@ -209,7 +202,7 @@ void PCA::back_pjt(fix32_t tsf_mat[K][VEC_SIZ], fix32_t X[VEC_SIZ][IMG_NUM], fix
 void PCA::find_max(fix32_t S[VEC_SIZ][VEC_SIZ]){
   while(true){
     bool swap = false;
-    for(int i=0;i<VEC_SIZ-1;i++){
+    for(int i = 0; i < VEC_SIZ-1; i++){
       if(S[sorted_idx[i]][sorted_idx[i]]<S[sorted_idx[i+1]][sorted_idx[i+1]]){
         int temp = sorted_idx[i];
         sorted_idx[i] = sorted_idx[i+1];

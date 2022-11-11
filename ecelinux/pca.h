@@ -15,12 +15,6 @@
 #define K 20
 const int VEC_SIZ = IMG_H * IMG_W; 
 
-#define IMG_NUM 200
-#define IMG_H 28
-#define IMG_W 28
-#define K 10
-static const int VEC_SIZ = IMG_H * IMG_W; 
-
 class PCA {
   public:
   /*
