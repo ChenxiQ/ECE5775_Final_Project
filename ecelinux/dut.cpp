@@ -12,45 +12,71 @@
 
 using namespace std;
 
-#define IMG_NUM 200
-#define IMG_H 28
-#define IMG_W 28
-const int VEC_SIZ = IMG_H * IMG_W; 
 //----------------------------------------------------------
 // Top function
 //----------------------------------------------------------
 
 void dut(
     hls::stream<bit32_t> &strm_in,
-    hls::stream<bit32_t> &strm_out
+    hls::stream<float> &strm_out
 )
 {
-  fix32_t** input;
+  fix32_t X[VEC_SIZ][IMG_NUM];
   bit32_t input_l;
-  bit32_t output;
-
-  input = new fix32_t*[IMG_NUM];
-  for (int i = 0; i < IMG_NUM; i++)
-    input[i] = new fix32_t[VEC_SIZ];
-
+  fix32_t Y[K][IMG_NUM];
+  fix32_t tsf_mat[K][VEC_SIZ];
+  int counter = 0;
   // read one test image into digit
   for (int test = 0; test < IMG_NUM; test++) {
     for (int i = 0; i < 28*28/4; i++) {
       input_l = strm_in.read();
+      counter++;
+      //cout<<"dut "<<counter<<endl;
       for (int j = 0; j < 4; j++) {
-        input[test][i*4+j] = 0;
-        input[test][i*4+j](31,16) = input_l(j*8+7,j*8);
+        //X[i*4+j][test] = 0;
+        //X[i*4+j][test](31,16) = input_l(j*8+7,j*8);
+        X[i*4+j][test] = (float)input_l(j*8+7,j*8);
       }
     }
   }
-
   // call pca
-  pca = PCA(input,output,tsf_mat,VEC_SIZ,IMG_NUM,10);
-  pca.normalize();
-  pca.apply_svd();
-  pca.rank();
-  pca.back_pjt();
- 
-  // write out the result
-  strm_out.write(output);
+  PCA pca(VEC_SIZ,IMG_NUM,K);
+  fix32_t S[VEC_SIZ][VEC_SIZ];
+  fix32_t U[VEC_SIZ][VEC_SIZ];
+  fix32_t V[VEC_SIZ][VEC_SIZ];
+  fix32_t XXT[VEC_SIZ][VEC_SIZ];
+  fix32_t mean[VEC_SIZ];
+  for(int i=0;i<VEC_SIZ;i++){
+    for(int j=0;j<VEC_SIZ;j++){
+      S[i][j]=0;
+      U[i][j]=0;
+      V[i][j]=0;
+      XXT[i][j]=0;
+    }
+  }
+  cout<<"norm"<<endl;
+  pca.normalize(X,mean);
+  cout<<"cov"<<endl;
+  pca.cov(X, XXT);
+  cout<<"svd"<<endl;
+  pca.apply_svd(XXT,S,U,V);
+  cout<<"rank"<<endl;
+  pca.rank(tsf_mat, S, U);
+  cout<<"back_pjt"<<endl;
+  pca.back_pjt(tsf_mat, X, Y);
+  cout<<"transfer output"<<endl;
+  for (int i = 0; i < K; i++) {
+    for (int j = 0; j < IMG_NUM; j++) {
+      strm_out.write(Y[i][j]);
+    }
+  }
+  for (int i = 0; i < K; i++) {
+    for (int j = 0; j < VEC_SIZ; j++) {
+      strm_out.write(tsf_mat[i][j]);
+    }
+  }
+  for (int i=0;i<VEC_SIZ;i++){
+    strm_out.write(mean[i]);
+  }
+  cout<< "end" <<endl;
 }

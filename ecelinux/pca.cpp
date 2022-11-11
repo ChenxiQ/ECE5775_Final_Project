@@ -3,106 +3,210 @@
 //==========================================================================
 // @brief: TODO
 
-#include "layer.h"
-#include "model.h"
 #include <cmath>
 #include <iostream>
 #include <algorithm>
 #include "hls_linear_algebra.h"
-
 #include "pca.h"
-
+#include <fstream>
 using namespace std;
 
-PCA::PCA(fix32_t** X, fix32_t** Y, fix32_t** tsf_mat, int VEC_SIZ, int VEC_NUM, int k){
-  this->X = X;
-  this->Y = Y;
-  this->vec_size = VEC_SIZ;
-  this->k = k; 
-  this->vec_num = VEC_NUM
-  this->tsf_mat = tsf_mat;
-
-  this->A = new fix32_t*[VEC_NUM];
+PCA::PCA(int VEC_SIZ, int VEC_NUM, int ka){
+  vec_size = VEC_SIZ;
+  k = ka; 
+  vec_num = VEC_NUM;
+  //this->tsf_mat = tsf_mat;
+  /*
+  this->A = (fix32_t**)malloc(sizeof(fix32_t*) * VEC_NUM);
   for(int i=0; i<VEC_NUM; i++)
-    this->A[i] = new fix32_t[VEC_SIZ];
+    this->A[i] = (fix32_t*)malloc(sizeof(fix32_t) * VEC_SIZ);
   
-  this->V = new fix32_t*[VEC_SIZ];
+  this->V = (fix32_t**)malloc(sizeof(fix32_t*) * VEC_SIZ);
   for(int i=0; i<VEC_SIZ; i++)
-    this->V[i] = new fix32_t[VEC_SIZ];
+    this->V[i] = (fix32_t*)malloc(sizeof(fix32_t) * VEC_SIZ);
 
-  this->S = new fix32_t*[VEC_NUM];
+  this->S = (fix32_t**)malloc(sizeof(fix32_t*) * VEC_NUM);
   for(int i=0; i<VEC_SIZ; i++)
-    this->S[i] = new fix32_t[VEC_SIZ];
-
-  this->sorted_idx = new int[k];
+    this->S[i] = (fix32_t*)malloc(sizeof(fix32_t) * VEC_SIZ);
+*/
   for(int i=0; i<VEC_SIZ; i++)
-    this->sorted_idx[i] = i;
+    sorted_idx[i] = i;
+  
 }
 
 PCA::~PCA(){
-  VEC_NUM = this->vec_num;
-  VEC_SIZ = this->vec_size;
-  for(int i=0; i<VEC_NUM; i++)
-    this->A[i] = delete fix32_t[VEC_SIZ];
-  this->A = delete fix32_t*[VEC_NUM];
+  /*
+  for(int i=0; i<IMG_NUM; i++)
+    free(this->A[i]);
+  free(this->A);
   
   for(int i=0; i<VEC_SIZ; i++)
-    this->V[i] = delete fix32_t[VEC_SIZ];
-  this->V = delete fix32_t*[VEC_SIZ];
+    free(this->V[i]);
+  free(this->V);
 
   for(int i=0; i<VEC_SIZ; i++)
-    this->S[i] = delete fix32_t[VEC_SIZ];
-  this->S = delete fix32_t*[VEC_NUM];
+    free(this->S[i]);
+  free(this->S);
 
   for(int i=0; i<VEC_SIZ; i++)
     this->sorted_idx[i] = i;
-  this->sorted_idx = delete int[k];
+  free(this->sorted_idx);
+  */
 }
 
-void PCA::normalize(){
+void PCA::normalize(fix32_t X[VEC_SIZ][IMG_NUM],fix32_t mean[VEC_SIZ]){
+  /*
+  std::ofstream fx("data/x.dat", ios_base::out);
+  for(int i=0;i<VEC_SIZ;i++){
+    for(int j=0; j<IMG_NUM;j++){
+      fx << X[i][j] << "\t";
+    }
+    fx <<endl;
+  }
+  fx.close();
+  */
+  
   //center x so that each x has a zero mean
-  for(int i = 0; i < this->vec_num; i++){
+  for(int j = 0; j < vec_size; j++){
     fix32_t sum = 0;
-    for(int j = 0; j < this->vec_size; j++){
+    for(int i = 0; i < vec_num; i++){
       sum += X[j][i];
     }
-    fix32_t mean = sum/(fix32_t)this->vec_size;
-    for(int j = 0; j < this->vec_size; j++){
-      this->X[j][i] -= mean;
+    mean[j] = sum/(fix32_t)vec_num;
+    for(int i = 0; i < vec_num; i++){
+      X[j][i] -= mean[j];
     }
   }
-}
-
-void PCA::apply_svd(){
-  //set A = X^T
-  for(int i = 0; i < this->vec_num; i++){
-    for(int j = 0; j < this->vec_size; j++){
-      this->A[i][j] = this->X[j][i] * hls::fxp_sqrt((fix32_t)this->vec_num);
-    }
-  }
-
-  fix32_t** U = new fix32_t*[VEC_NUM];
-  for(int i=0; i<VEC_NUM; i++)
-    this->U[i] = new fix32_t[VEC_NUM];
   
-  hls::svd<vec_num,vec_size,fix32_t,fix32_t>(this->A,this->S,U,this->V);
+  
+  std::ofstream fn("data/mean.dat", ios_base::out);
+  for(int i=0;i<VEC_SIZ;i++){
+    fn << mean[i] << endl;
+  }
+  fn.close();
 
+  std::ofstream fmean("data/xn.dat", ios_base::out);
+  for(int i=0;i<VEC_SIZ;i++){
+    fmean << mean[i] << "\t";
+  }
+  fmean.close();
+  
 }
 
-bool PCA::cmp(int a, int b){
-  return self.V[a][a] > self.V[b][b];
-}
-
-void PCA::rank(){
-  sort(this->sorted_idx, this->sorted_idx+this->k, this->cmp);
-  for(int i=0; i<this->k; i++){
-    for(int j=0; j<this->vec_size; j++){
-      this->tsf_mat[i][j] = this->V[sorted_idx[i]][j];
+void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
+  fix32_t XT[IMG_NUM][VEC_SIZ];
+  for(int i=0;i<VEC_SIZ;i++){
+    for(int j=0;j<IMG_NUM;j++){
+      XT[j][i] = X[i][j];
     }
   }
+  hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,VEC_SIZ,
+  IMG_NUM,IMG_NUM,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
+
+  for(int i=0;i<VEC_SIZ;i++){
+    for(int j=0; j<VEC_SIZ;j++){
+      XXT[i][j] = XXT[i][j]/(IMG_NUM-1);
+    }
+  }
+
+  /*
+  std::ofstream fxxt("data/xxt.dat", ios_base::out);
+  for(int i=0;i<VEC_SIZ;i++){
+    for(int j=0; j<VEC_SIZ;j++){
+      fxxt << XXT[i][j] << "\t";
+    }
+    fxxt <<endl;
+  }
+  fxxt.close();
+  */
 }
 
-void PCA::back_pjt(){
-  hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,this->k,
-  this->vec_size,this->vec_size,this->vec_num,this->k,this->vec_num,fix32_t,fix32_t>(this->tsf_mat,this->X,this->Y);
+void PCA::apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]){
+  hls::svd<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(XXT,S,U,V);
+  /*
+  std::ofstream fs("data/s.dat", ios_base::out);
+  for(int i=0;i<VEC_SIZ;i++){
+    for(int j=0; j<VEC_SIZ;j++){
+      fs << S[i][j] << "\t";
+    }
+    fs <<endl;
+  }
+  fs.close();
+  
+  std::ofstream fu("data/u.dat", ios_base::out);
+  for(int i=0;i<VEC_SIZ;i++){
+    for(int j=0; j<VEC_SIZ;j++){
+      fu << U[i][j] << "\t";
+    }
+    fu <<endl;
+  }
+  fu.close();
+
+  std::ofstream fv("data/v.dat", ios_base::out);
+  for(int i=0;i<VEC_SIZ;i++){
+    for(int j=0; j<VEC_SIZ;j++){
+      fv << V[i][j] << "\t";
+    }
+    fv <<endl;
+  }
+  fv.close();
+  */
+}
+
+void PCA::rank(fix32_t tsf_mat[K][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t U[VEC_SIZ][VEC_SIZ]){
+
+  /*
+  for(int i=0;i<VEC_SIZ;i++){
+    for(int j=0;j<VEC_SIZ;j++){
+      S[i][j] = (float)(i+j);
+    }
+  }
+  */
+  this->find_max(S);
+  /*
+  std::ofstream f("data/test.dat", ios_base::out);
+  for(int i=0;i<k;i++){
+    f<<sorted_idx[i]<<endl;
+  }
+  for(int i=0;i<k;i++){
+    f<<S[sorted_idx[i]][sorted_idx[i]]<<endl;
+  }
+  f.close();
+  */
+  //cout<<"max"<<endl;
+  for(int i=0; i<k; i++){
+    for(int j=0; j<vec_size; j++){
+      tsf_mat[i][j] = U[j][sorted_idx[i]];
+    }
+  }
+  
+  std::ofstream ftsf("data/tsf.dat", ios_base::out);
+  for(int i=0;i<K;i++){
+    for(int j=0; j<VEC_SIZ;j++){
+      ftsf << tsf_mat[i][j] << "\t";
+    }
+    ftsf <<endl;
+  }
+  ftsf.close();
+  
+}
+
+void PCA::back_pjt(fix32_t tsf_mat[K][VEC_SIZ], fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[K][IMG_NUM]){
+  hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,K,
+  VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,fix32_t,fix32_t>(tsf_mat,X,Y);
+}
+
+void PCA::find_max(fix32_t S[VEC_SIZ][VEC_SIZ]){
+  while(true){
+    bool swap = false;
+    for(int i=0;i<VEC_SIZ-1;i++){
+      if(S[sorted_idx[i]][sorted_idx[i]]<S[sorted_idx[i+1]][sorted_idx[i+1]]){
+        int temp = sorted_idx[i];
+        sorted_idx[i] = sorted_idx[i+1];
+        sorted_idx[i+1] = temp;
+        swap = true;
+      }
+    }
+    if(!swap) break;
+  }
 }
