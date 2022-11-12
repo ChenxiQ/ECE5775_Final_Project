@@ -32,7 +32,7 @@
 				</Value>
 				<direction>2</direction>
 				<if_type>1</if_type>
-				<array_size>156800</array_size>
+				<array_size>78400</array_size>
 				<bit_vecs class_id="7" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>0</item_version>
@@ -159,7 +159,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -189,7 +189,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -456,7 +456,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -542,7 +542,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -600,7 +600,7 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>tmp_134_cast</name>
+						<name>tmp_43_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>75</lineNumber>
@@ -627,7 +627,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -641,7 +641,7 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>tmp_157</name>
+						<name>tmp_44</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>75</lineNumber>
@@ -668,7 +668,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -683,7 +683,7 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>tmp_172_cast</name>
+						<name>tmp_50_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>75</lineNumber>
@@ -751,7 +751,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -891,7 +891,7 @@
 					<Obj>
 						<type>0</type>
 						<id>31</id>
-						<name>tmp_133</name>
+						<name>tmp_42</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -1072,7 +1072,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -1158,7 +1158,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1216,7 +1216,7 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>tmp_135_cast</name>
+						<name>tmp_44_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -1243,7 +1243,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -1257,7 +1257,7 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>tmp_158</name>
+						<name>tmp_46</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -1284,7 +1284,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1299,7 +1299,7 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>tmp_173_cast</name>
+						<name>tmp_51_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -1367,7 +1367,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1424,7 +1424,7 @@
 					<Obj>
 						<type>0</type>
 						<id>47</id>
-						<name>tmp_136</name>
+						<name>tmp_45</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -1630,7 +1630,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -1653,10 +1653,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>200</content>
+				<content>100</content>
 			</item>
 			<item class_id_reference="16" object_id="_44">
 				<Value>
@@ -1745,7 +1745,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -1768,10 +1768,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>200</content>
+				<content>100</content>
 			</item>
 			<item class_id_reference="16" object_id="_49">
 				<Value>
@@ -1791,7 +1791,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -1840,7 +1840,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>1</const_type>
-				<content>200</content>
+				<content>100</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
@@ -2650,7 +2650,7 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>2366897</mMinLatency>
+			<mMinLatency>1190897</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -2697,7 +2697,7 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>784</mMinTripCount>
 			<mMaxTripCount>784</mMaxTripCount>
-			<mMinLatency>2366896</mMinLatency>
+			<mMinLatency>1190896</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -2741,9 +2741,9 @@
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
-			<mMinTripCount>200</mMinTripCount>
-			<mMaxTripCount>200</mMaxTripCount>
-			<mMinLatency>1400</mMinLatency>
+			<mMinTripCount>100</mMinTripCount>
+			<mMaxTripCount>100</mMaxTripCount>
+			<mMinLatency>700</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -2786,9 +2786,9 @@
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
-			<mMinTripCount>200</mMinTripCount>
-			<mMaxTripCount>200</mMaxTripCount>
-			<mMinLatency>1600</mMinLatency>
+			<mMinTripCount>100</mMinTripCount>
+			<mMaxTripCount>100</mMaxTripCount>
+			<mMinLatency>800</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>

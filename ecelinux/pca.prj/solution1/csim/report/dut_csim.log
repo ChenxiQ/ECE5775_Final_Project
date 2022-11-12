@@ -8,5 +8,5 @@ read fifo
 write file
 write y
 write mean
-pca                 :      1 calls; 129512.203 msecs total time
+pca                 :      1 calls; 120210.031 msecs total time
 INFO: [SIM 1] CSim done with 0 errors.

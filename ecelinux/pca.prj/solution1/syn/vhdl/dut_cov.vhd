@@ -17,7 +17,7 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    X_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
+    X_address0 : OUT STD_LOGIC_VECTOR (16 downto 0);
     X_ce0 : OUT STD_LOGIC;
     X_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
     XXT_address0 : OUT STD_LOGIC_VECTOR (19 downto 0);
@@ -67,21 +67,21 @@ architecture behav of dut_cov is
     constant ap_const_lv32_9 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001001";
     constant ap_const_lv32_18 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011000";
     constant ap_const_lv10_0 : STD_LOGIC_VECTOR (9 downto 0) := "0000000000";
-    constant ap_const_lv18_0 : STD_LOGIC_VECTOR (17 downto 0) := "000000000000000000";
+    constant ap_const_lv17_0 : STD_LOGIC_VECTOR (16 downto 0) := "00000000000000000";
     constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
-    constant ap_const_lv8_0 : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
+    constant ap_const_lv7_0 : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
     constant ap_const_lv32_4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000100";
     constant ap_const_lv20_0 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000000000000";
     constant ap_const_lv32_19 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011001";
     constant ap_const_lv32_7 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000111";
     constant ap_const_lv32_8 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001000";
-    constant ap_const_lv32_43470000 : STD_LOGIC_VECTOR (31 downto 0) := "01000011010001110000000000000000";
-    constant ap_const_lv18_C8 : STD_LOGIC_VECTOR (17 downto 0) := "000000000011001000";
+    constant ap_const_lv32_42C60000 : STD_LOGIC_VECTOR (31 downto 0) := "01000010110001100000000000000000";
+    constant ap_const_lv17_64 : STD_LOGIC_VECTOR (16 downto 0) := "00000000001100100";
     constant ap_const_lv10_310 : STD_LOGIC_VECTOR (9 downto 0) := "1100010000";
     constant ap_const_lv10_1 : STD_LOGIC_VECTOR (9 downto 0) := "0000000001";
-    constant ap_const_lv8_C8 : STD_LOGIC_VECTOR (7 downto 0) := "11001000";
-    constant ap_const_lv8_1 : STD_LOGIC_VECTOR (7 downto 0) := "00000001";
-    constant ap_const_lv18_310 : STD_LOGIC_VECTOR (17 downto 0) := "000000001100010000";
+    constant ap_const_lv7_64 : STD_LOGIC_VECTOR (6 downto 0) := "1100100";
+    constant ap_const_lv7_1 : STD_LOGIC_VECTOR (6 downto 0) := "0000001";
+    constant ap_const_lv17_310 : STD_LOGIC_VECTOR (16 downto 0) := "00000001100010000";
     constant ap_const_lv20_310 : STD_LOGIC_VECTOR (19 downto 0) := "00000000001100010000";
 
     signal ap_CS_fsm : STD_LOGIC_VECTOR (25 downto 0) := "00000000000000000000000001";
@@ -89,24 +89,24 @@ architecture behav of dut_cov is
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_sig_cseq_ST_st1_fsm_0 : STD_LOGIC;
     signal ap_sig_43 : BOOLEAN;
-    signal next_mul2_fu_175_p2 : STD_LOGIC_VECTOR (17 downto 0);
-    signal next_mul2_reg_284 : STD_LOGIC_VECTOR (17 downto 0);
+    signal next_mul2_fu_175_p2 : STD_LOGIC_VECTOR (16 downto 0);
+    signal next_mul2_reg_284 : STD_LOGIC_VECTOR (16 downto 0);
     signal ap_sig_cseq_ST_st2_fsm_1 : STD_LOGIC;
     signal ap_sig_69 : BOOLEAN;
     signal i_7_fu_187_p2 : STD_LOGIC_VECTOR (9 downto 0);
     signal i_7_reg_292 : STD_LOGIC_VECTOR (9 downto 0);
-    signal tmp_cast_fu_193_p1 : STD_LOGIC_VECTOR (17 downto 0);
-    signal tmp_cast_reg_297 : STD_LOGIC_VECTOR (17 downto 0);
+    signal tmp_cast_fu_193_p1 : STD_LOGIC_VECTOR (16 downto 0);
+    signal tmp_cast_reg_297 : STD_LOGIC_VECTOR (16 downto 0);
     signal exitcond3_fu_181_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal j_5_fu_203_p2 : STD_LOGIC_VECTOR (7 downto 0);
-    signal j_5_reg_305 : STD_LOGIC_VECTOR (7 downto 0);
+    signal j_5_fu_203_p2 : STD_LOGIC_VECTOR (6 downto 0);
+    signal j_5_reg_305 : STD_LOGIC_VECTOR (6 downto 0);
     signal ap_sig_cseq_ST_st3_fsm_2 : STD_LOGIC;
     signal ap_sig_86 : BOOLEAN;
     signal exitcond2_fu_197_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal next_mul_fu_224_p2 : STD_LOGIC_VECTOR (17 downto 0);
-    signal next_mul_reg_315 : STD_LOGIC_VECTOR (17 downto 0);
-    signal tmp_186_fu_230_p2 : STD_LOGIC_VECTOR (17 downto 0);
-    signal tmp_186_reg_320 : STD_LOGIC_VECTOR (17 downto 0);
+    signal next_mul_fu_224_p2 : STD_LOGIC_VECTOR (16 downto 0);
+    signal next_mul_reg_315 : STD_LOGIC_VECTOR (16 downto 0);
+    signal tmp_68_fu_230_p2 : STD_LOGIC_VECTOR (16 downto 0);
+    signal tmp_68_reg_320 : STD_LOGIC_VECTOR (16 downto 0);
     signal next_mul4_fu_239_p2 : STD_LOGIC_VECTOR (19 downto 0);
     signal next_mul4_reg_325 : STD_LOGIC_VECTOR (19 downto 0);
     signal ap_sig_cseq_ST_st6_fsm_5 : STD_LOGIC;
@@ -124,7 +124,7 @@ architecture behav of dut_cov is
     signal grp_fu_168_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_sig_cseq_ST_st25_fsm_24 : STD_LOGIC;
     signal ap_sig_137 : BOOLEAN;
-    signal XT_address0 : STD_LOGIC_VECTOR (17 downto 0);
+    signal XT_address0 : STD_LOGIC_VECTOR (16 downto 0);
     signal XT_ce0 : STD_LOGIC;
     signal XT_we0 : STD_LOGIC;
     signal XT_q0 : STD_LOGIC_VECTOR (31 downto 0);
@@ -132,20 +132,20 @@ architecture behav of dut_cov is
     signal grp_dut_matrix_multiply_alt26_fu_159_ap_done : STD_LOGIC;
     signal grp_dut_matrix_multiply_alt26_fu_159_ap_idle : STD_LOGIC;
     signal grp_dut_matrix_multiply_alt26_fu_159_ap_ready : STD_LOGIC;
-    signal grp_dut_matrix_multiply_alt26_fu_159_A_address0 : STD_LOGIC_VECTOR (17 downto 0);
+    signal grp_dut_matrix_multiply_alt26_fu_159_A_address0 : STD_LOGIC_VECTOR (16 downto 0);
     signal grp_dut_matrix_multiply_alt26_fu_159_A_ce0 : STD_LOGIC;
-    signal grp_dut_matrix_multiply_alt26_fu_159_B_address0 : STD_LOGIC_VECTOR (17 downto 0);
+    signal grp_dut_matrix_multiply_alt26_fu_159_B_address0 : STD_LOGIC_VECTOR (16 downto 0);
     signal grp_dut_matrix_multiply_alt26_fu_159_B_ce0 : STD_LOGIC;
     signal grp_dut_matrix_multiply_alt26_fu_159_C_address0 : STD_LOGIC_VECTOR (19 downto 0);
     signal grp_dut_matrix_multiply_alt26_fu_159_C_ce0 : STD_LOGIC;
     signal grp_dut_matrix_multiply_alt26_fu_159_C_we0 : STD_LOGIC;
     signal grp_dut_matrix_multiply_alt26_fu_159_C_d0 : STD_LOGIC_VECTOR (31 downto 0);
     signal i_reg_80 : STD_LOGIC_VECTOR (9 downto 0);
-    signal phi_mul1_reg_91 : STD_LOGIC_VECTOR (17 downto 0);
-    signal j_reg_103 : STD_LOGIC_VECTOR (7 downto 0);
+    signal phi_mul1_reg_91 : STD_LOGIC_VECTOR (16 downto 0);
+    signal j_reg_103 : STD_LOGIC_VECTOR (6 downto 0);
     signal ap_sig_cseq_ST_st4_fsm_3 : STD_LOGIC;
     signal ap_sig_183 : BOOLEAN;
-    signal phi_mul_reg_114 : STD_LOGIC_VECTOR (17 downto 0);
+    signal phi_mul_reg_114 : STD_LOGIC_VECTOR (16 downto 0);
     signal i1_reg_125 : STD_LOGIC_VECTOR (9 downto 0);
     signal ap_sig_cseq_ST_st5_fsm_4 : STD_LOGIC;
     signal ap_sig_195 : BOOLEAN;
@@ -155,17 +155,17 @@ architecture behav of dut_cov is
     signal ap_sig_212 : BOOLEAN;
     signal exitcond1_fu_245_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_reg_grp_dut_matrix_multiply_alt26_fu_159_ap_start : STD_LOGIC := '0';
-    signal tmp_202_cast_fu_219_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal tmp_204_cast_fu_235_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal tmp_205_cast_fu_279_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_80_cast_fu_219_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_82_cast_fu_235_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal tmp_83_cast_fu_279_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_sig_cseq_ST_st8_fsm_7 : STD_LOGIC;
     signal ap_sig_231 : BOOLEAN;
     signal ap_sig_cseq_ST_st9_fsm_8 : STD_LOGIC;
     signal ap_sig_239 : BOOLEAN;
-    signal tmp_151_cast_fu_209_p1 : STD_LOGIC_VECTOR (17 downto 0);
-    signal tmp_s_fu_213_p2 : STD_LOGIC_VECTOR (17 downto 0);
-    signal tmp_152_cast_fu_269_p1 : STD_LOGIC_VECTOR (19 downto 0);
-    signal tmp_187_fu_273_p2 : STD_LOGIC_VECTOR (19 downto 0);
+    signal tmp_57_cast_fu_209_p1 : STD_LOGIC_VECTOR (16 downto 0);
+    signal tmp_s_fu_213_p2 : STD_LOGIC_VECTOR (16 downto 0);
+    signal tmp_58_cast_fu_269_p1 : STD_LOGIC_VECTOR (19 downto 0);
+    signal tmp_69_fu_273_p2 : STD_LOGIC_VECTOR (19 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (25 downto 0);
 
     component dut_matrix_multiply_alt26 IS
@@ -176,10 +176,10 @@ architecture behav of dut_cov is
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        A_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
+        A_address0 : OUT STD_LOGIC_VECTOR (16 downto 0);
         A_ce0 : OUT STD_LOGIC;
         A_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
-        B_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
+        B_address0 : OUT STD_LOGIC_VECTOR (16 downto 0);
         B_ce0 : OUT STD_LOGIC;
         B_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
         C_address0 : OUT STD_LOGIC_VECTOR (19 downto 0);
@@ -214,7 +214,7 @@ architecture behav of dut_cov is
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
-        address0 : IN STD_LOGIC_VECTOR (17 downto 0);
+        address0 : IN STD_LOGIC_VECTOR (16 downto 0);
         ce0 : IN STD_LOGIC;
         we0 : IN STD_LOGIC;
         d0 : IN STD_LOGIC_VECTOR (31 downto 0);
@@ -227,8 +227,8 @@ begin
     XT_U : component dut_cov_XT
     generic map (
         DataWidth => 32,
-        AddressRange => 156800,
-        AddressWidth => 18)
+        AddressRange => 78400,
+        AddressWidth => 17)
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -268,7 +268,7 @@ begin
         clk => ap_clk,
         reset => ap_rst,
         din0 => XXT_q0,
-        din1 => ap_const_lv32_43470000,
+        din1 => ap_const_lv32_42C60000,
         ce => ap_const_logic_1,
         dout => grp_fu_168_p2);
 
@@ -341,7 +341,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and (exitcond3_fu_181_p2 = ap_const_lv1_0))) then 
-                j_reg_103 <= ap_const_lv8_0;
+                j_reg_103 <= ap_const_lv7_0;
             elsif ((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3)) then 
                 j_reg_103 <= j_5_reg_305;
             end if; 
@@ -354,7 +354,7 @@ begin
             if (((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2) and not((ap_const_lv1_0 = exitcond2_fu_197_p2)))) then 
                 phi_mul1_reg_91 <= next_mul2_reg_284;
             elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st1_fsm_0) and not((ap_start = ap_const_logic_0)))) then 
-                phi_mul1_reg_91 <= ap_const_lv18_0;
+                phi_mul1_reg_91 <= ap_const_lv17_0;
             end if; 
         end if;
     end process;
@@ -374,7 +374,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and (exitcond3_fu_181_p2 = ap_const_lv1_0))) then 
-                phi_mul_reg_114 <= ap_const_lv18_0;
+                phi_mul_reg_114 <= ap_const_lv17_0;
             elsif ((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3)) then 
                 phi_mul_reg_114 <= next_mul_reg_315;
             end if; 
@@ -384,7 +384,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_sig_cseq_ST_st7_fsm_6) and (ap_const_lv1_0 = exitcond_fu_257_p2))) then
-                XXT_addr_reg_346 <= tmp_205_cast_fu_279_p1(20 - 1 downto 0);
+                XXT_addr_reg_346 <= tmp_83_cast_fu_279_p1(20 - 1 downto 0);
             end if;
         end if;
     end process;
@@ -427,7 +427,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2) and (ap_const_lv1_0 = exitcond2_fu_197_p2))) then
                 next_mul_reg_315 <= next_mul_fu_224_p2;
-                tmp_186_reg_320 <= tmp_186_fu_230_p2;
+                tmp_68_reg_320 <= tmp_68_fu_230_p2;
             end if;
         end if;
     end process;
@@ -439,7 +439,7 @@ begin
             end if;
         end if;
     end process;
-    tmp_cast_reg_297(17 downto 10) <= "00000000";
+    tmp_cast_reg_297(16 downto 10) <= "0000000";
 
     ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, exitcond3_fu_181_p2, exitcond2_fu_197_p2, exitcond_fu_257_p2, grp_dut_matrix_multiply_alt26_fu_159_ap_done, exitcond1_fu_245_p2)
     begin
@@ -525,14 +525,14 @@ begin
         end case;
     end process;
 
-    XT_address0_assign_proc : process(grp_dut_matrix_multiply_alt26_fu_159_B_address0, ap_sig_cseq_ST_st4_fsm_3, ap_sig_cseq_ST_st5_fsm_4, tmp_204_cast_fu_235_p1)
+    XT_address0_assign_proc : process(grp_dut_matrix_multiply_alt26_fu_159_B_address0, ap_sig_cseq_ST_st4_fsm_3, ap_sig_cseq_ST_st5_fsm_4, tmp_82_cast_fu_235_p1)
     begin
         if ((ap_const_logic_1 = ap_sig_cseq_ST_st4_fsm_3)) then 
-            XT_address0 <= tmp_204_cast_fu_235_p1(18 - 1 downto 0);
+            XT_address0 <= tmp_82_cast_fu_235_p1(17 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_sig_cseq_ST_st5_fsm_4)) then 
             XT_address0 <= grp_dut_matrix_multiply_alt26_fu_159_B_address0;
         else 
-            XT_address0 <= "XXXXXXXXXXXXXXXXXX";
+            XT_address0 <= "XXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
@@ -559,12 +559,12 @@ begin
     end process;
 
 
-    XXT_address0_assign_proc : process(ap_sig_cseq_ST_st7_fsm_6, XXT_addr_reg_346, ap_sig_cseq_ST_st25_fsm_24, grp_dut_matrix_multiply_alt26_fu_159_C_address0, ap_sig_cseq_ST_st5_fsm_4, tmp_205_cast_fu_279_p1)
+    XXT_address0_assign_proc : process(ap_sig_cseq_ST_st7_fsm_6, XXT_addr_reg_346, ap_sig_cseq_ST_st25_fsm_24, grp_dut_matrix_multiply_alt26_fu_159_C_address0, ap_sig_cseq_ST_st5_fsm_4, tmp_83_cast_fu_279_p1)
     begin
         if ((ap_const_logic_1 = ap_sig_cseq_ST_st25_fsm_24)) then 
             XXT_address0 <= XXT_addr_reg_346;
         elsif ((ap_const_logic_1 = ap_sig_cseq_ST_st7_fsm_6)) then 
-            XXT_address0 <= tmp_205_cast_fu_279_p1(20 - 1 downto 0);
+            XXT_address0 <= tmp_83_cast_fu_279_p1(20 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_sig_cseq_ST_st5_fsm_4)) then 
             XXT_address0 <= grp_dut_matrix_multiply_alt26_fu_159_C_address0;
         else 
@@ -609,14 +609,14 @@ begin
     end process;
 
 
-    X_address0_assign_proc : process(ap_sig_cseq_ST_st3_fsm_2, grp_dut_matrix_multiply_alt26_fu_159_A_address0, ap_sig_cseq_ST_st5_fsm_4, tmp_202_cast_fu_219_p1)
+    X_address0_assign_proc : process(ap_sig_cseq_ST_st3_fsm_2, grp_dut_matrix_multiply_alt26_fu_159_A_address0, ap_sig_cseq_ST_st5_fsm_4, tmp_80_cast_fu_219_p1)
     begin
         if ((ap_const_logic_1 = ap_sig_cseq_ST_st3_fsm_2)) then 
-            X_address0 <= tmp_202_cast_fu_219_p1(18 - 1 downto 0);
+            X_address0 <= tmp_80_cast_fu_219_p1(17 - 1 downto 0);
         elsif ((ap_const_logic_1 = ap_sig_cseq_ST_st5_fsm_4)) then 
             X_address0 <= grp_dut_matrix_multiply_alt26_fu_159_A_address0;
         else 
-            X_address0 <= "XXXXXXXXXXXXXXXXXX";
+            X_address0 <= "XXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
@@ -855,24 +855,24 @@ begin
     end process;
 
     exitcond1_fu_245_p2 <= "1" when (i1_reg_125 = ap_const_lv10_310) else "0";
-    exitcond2_fu_197_p2 <= "1" when (j_reg_103 = ap_const_lv8_C8) else "0";
+    exitcond2_fu_197_p2 <= "1" when (j_reg_103 = ap_const_lv7_64) else "0";
     exitcond3_fu_181_p2 <= "1" when (i_reg_80 = ap_const_lv10_310) else "0";
     exitcond_fu_257_p2 <= "1" when (j2_reg_148 = ap_const_lv10_310) else "0";
     grp_dut_matrix_multiply_alt26_fu_159_ap_start <= ap_reg_grp_dut_matrix_multiply_alt26_fu_159_ap_start;
     i_7_fu_187_p2 <= std_logic_vector(unsigned(i_reg_80) + unsigned(ap_const_lv10_1));
     i_8_fu_251_p2 <= std_logic_vector(unsigned(i1_reg_125) + unsigned(ap_const_lv10_1));
-    j_5_fu_203_p2 <= std_logic_vector(unsigned(j_reg_103) + unsigned(ap_const_lv8_1));
+    j_5_fu_203_p2 <= std_logic_vector(unsigned(j_reg_103) + unsigned(ap_const_lv7_1));
     j_6_fu_263_p2 <= std_logic_vector(unsigned(j2_reg_148) + unsigned(ap_const_lv10_1));
-    next_mul2_fu_175_p2 <= std_logic_vector(unsigned(phi_mul1_reg_91) + unsigned(ap_const_lv18_C8));
+    next_mul2_fu_175_p2 <= std_logic_vector(unsigned(phi_mul1_reg_91) + unsigned(ap_const_lv17_64));
     next_mul4_fu_239_p2 <= std_logic_vector(unsigned(phi_mul3_reg_136) + unsigned(ap_const_lv20_310));
-    next_mul_fu_224_p2 <= std_logic_vector(unsigned(phi_mul_reg_114) + unsigned(ap_const_lv18_310));
-    tmp_151_cast_fu_209_p1 <= std_logic_vector(resize(unsigned(j_reg_103),18));
-    tmp_152_cast_fu_269_p1 <= std_logic_vector(resize(unsigned(j2_reg_148),20));
-    tmp_186_fu_230_p2 <= std_logic_vector(unsigned(phi_mul_reg_114) + unsigned(tmp_cast_reg_297));
-    tmp_187_fu_273_p2 <= std_logic_vector(unsigned(phi_mul3_reg_136) + unsigned(tmp_152_cast_fu_269_p1));
-    tmp_202_cast_fu_219_p1 <= std_logic_vector(resize(unsigned(tmp_s_fu_213_p2),64));
-    tmp_204_cast_fu_235_p1 <= std_logic_vector(resize(unsigned(tmp_186_reg_320),64));
-    tmp_205_cast_fu_279_p1 <= std_logic_vector(resize(unsigned(tmp_187_fu_273_p2),64));
-    tmp_cast_fu_193_p1 <= std_logic_vector(resize(unsigned(i_reg_80),18));
-    tmp_s_fu_213_p2 <= std_logic_vector(unsigned(phi_mul1_reg_91) + unsigned(tmp_151_cast_fu_209_p1));
+    next_mul_fu_224_p2 <= std_logic_vector(unsigned(phi_mul_reg_114) + unsigned(ap_const_lv17_310));
+    tmp_57_cast_fu_209_p1 <= std_logic_vector(resize(unsigned(j_reg_103),17));
+    tmp_58_cast_fu_269_p1 <= std_logic_vector(resize(unsigned(j2_reg_148),20));
+    tmp_68_fu_230_p2 <= std_logic_vector(unsigned(phi_mul_reg_114) + unsigned(tmp_cast_reg_297));
+    tmp_69_fu_273_p2 <= std_logic_vector(unsigned(phi_mul3_reg_136) + unsigned(tmp_58_cast_fu_269_p1));
+    tmp_80_cast_fu_219_p1 <= std_logic_vector(resize(unsigned(tmp_s_fu_213_p2),64));
+    tmp_82_cast_fu_235_p1 <= std_logic_vector(resize(unsigned(tmp_68_reg_320),64));
+    tmp_83_cast_fu_279_p1 <= std_logic_vector(resize(unsigned(tmp_69_fu_273_p2),64));
+    tmp_cast_fu_193_p1 <= std_logic_vector(resize(unsigned(i_reg_80),17));
+    tmp_s_fu_213_p2 <= std_logic_vector(unsigned(phi_mul1_reg_91) + unsigned(tmp_57_cast_fu_209_p1));
 end behav;

@@ -9,8 +9,8 @@
 module dut_cov_XT_ram (addr0, ce0, d0, we0, q0,  clk);
 
 parameter DWIDTH = 32;
-parameter AWIDTH = 18;
-parameter MEM_SIZE = 156800;
+parameter AWIDTH = 17;
+parameter MEM_SIZE = 78400;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -53,8 +53,8 @@ module dut_cov_XT(
     q0);
 
 parameter DataWidth = 32'd32;
-parameter AddressRange = 32'd156800;
-parameter AddressWidth = 32'd18;
+parameter AddressRange = 32'd78400;
+parameter AddressWidth = 32'd17;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

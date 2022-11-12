@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_matrix_multiply_alt26'" level="0">
-<item name = "Date">Fri Nov 11 18:59:54 2022
+<item name = "Date">Fri Nov 11 23:14:23 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">122931213, 122931213, 122931213, 122931213, none</column>
+<column name="">61465613, 61465613, 61465613, 61465613, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- a_col_loop_a_row_loop_b_col_loop">122931211, 122931211, 13, 1, 1, 122931200, yes</column>
+<column name="- a_col_loop_a_row_loop_b_col_loop">61465611, 61465611, 13, 1, 1, 61465600, yes</column>
 </table>
 </item>
 </section>

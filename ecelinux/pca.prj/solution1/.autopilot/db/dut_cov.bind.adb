@@ -32,7 +32,7 @@
 				</Value>
 				<direction>0</direction>
 				<if_type>1</if_type>
-				<array_size>156800</array_size>
+				<array_size>78400</array_size>
 				<bit_vecs class_id="7" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>0</item_version>
@@ -200,7 +200,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -230,7 +230,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -399,7 +399,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -467,7 +467,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -497,7 +497,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -583,7 +583,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -641,7 +641,7 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>tmp_151_cast</name>
+						<name>tmp_57_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>102</lineNumber>
@@ -668,7 +668,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -709,7 +709,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -724,7 +724,7 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>tmp_202_cast</name>
+						<name>tmp_80_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>102</lineNumber>
@@ -792,7 +792,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -821,7 +821,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -836,7 +836,7 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>tmp_186</name>
+						<name>tmp_68</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>102</lineNumber>
@@ -863,7 +863,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -878,7 +878,7 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>tmp_204_cast</name>
+						<name>tmp_82_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>102</lineNumber>
@@ -946,7 +946,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1090,7 +1090,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>499</lineNumber>
-						<contextFuncName>matrix_multiply_top&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_top&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1102,14 +1102,14 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, float, float&amp;gt;</second>
+											<second>matrix_multiply&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, float, float&amp;gt;</second>
 										</first>
 										<second>548</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_top&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_top&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
 										</first>
 										<second>499</second>
 									</item>
@@ -1557,7 +1557,7 @@
 					<Obj>
 						<type>0</type>
 						<id>53</id>
-						<name>tmp_152_cast</name>
+						<name>tmp_58_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>111</lineNumber>
@@ -1598,7 +1598,7 @@
 					<Obj>
 						<type>0</type>
 						<id>54</id>
-						<name>tmp_187</name>
+						<name>tmp_69</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>111</lineNumber>
@@ -1640,7 +1640,7 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>tmp_205_cast</name>
+						<name>tmp_83_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>111</lineNumber>
@@ -1765,7 +1765,7 @@
 					<Obj>
 						<type>0</type>
 						<id>58</id>
-						<name>tmp_153</name>
+						<name>tmp_59</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>111</lineNumber>
@@ -1994,7 +1994,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -2017,10 +2017,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>200</content>
+				<content>100</content>
 			</item>
 			<item class_id_reference="16" object_id="_54">
 				<Value>
@@ -2086,7 +2086,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -2109,10 +2109,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>200</content>
+				<content>100</content>
 			</item>
 			<item class_id_reference="16" object_id="_58">
 				<Value>
@@ -2132,7 +2132,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -2178,7 +2178,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>784</content>
@@ -2273,7 +2273,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>1</const_type>
-				<content>199</content>
+				<content>99</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
@@ -3266,7 +3266,7 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>135541072</mMinLatency>
+			<mMinLatency>73918672</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -3311,7 +3311,7 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>784</mMinTripCount>
 			<mMaxTripCount>784</mMaxTripCount>
-			<mMinLatency>315168</mMinLatency>
+			<mMinLatency>158368</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -3355,9 +3355,9 @@
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
-			<mMinTripCount>200</mMinTripCount>
-			<mMaxTripCount>200</mMaxTripCount>
-			<mMinLatency>400</mMinLatency>
+			<mMinTripCount>100</mMinTripCount>
+			<mMaxTripCount>100</mMaxTripCount>
+			<mMinLatency>200</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -3379,7 +3379,7 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>122931214</mMinLatency>
+			<mMinLatency>61465614</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -5417,7 +5417,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_151_cast_fu_209</first>
+			<first>tmp_57_cast_fu_209</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5425,7 +5425,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_152_cast_fu_269</first>
+			<first>tmp_58_cast_fu_269</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5433,7 +5433,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_186_fu_230</first>
+			<first>tmp_68_fu_230</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5441,7 +5441,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_187_fu_273</first>
+			<first>tmp_69_fu_273</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5449,7 +5449,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_202_cast_fu_219</first>
+			<first>tmp_80_cast_fu_219</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5457,7 +5457,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_204_cast_fu_235</first>
+			<first>tmp_82_cast_fu_235</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5465,7 +5465,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_205_cast_fu_279</first>
+			<first>tmp_83_cast_fu_279</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5913,7 +5913,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_153_reg_356</first>
+			<first>tmp_59_reg_356</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5921,7 +5921,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_186_reg_320</first>
+			<first>tmp_68_reg_320</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

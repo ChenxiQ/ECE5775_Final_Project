@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_matrix_multiply_alt2'
 ================================================================
-* Date:           Fri Nov 11 19:00:01 2022
+* Date:           Fri Nov 11 23:14:26 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -25,24 +25,24 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +---------+---------+---------+---------+---------+
-    |      Latency      |      Interval     | Pipeline|
-    |   min   |   max   |   min   |   max   |   Type  |
-    +---------+---------+---------+---------+---------+
-    |  3136012|  3136012|  3136012|  3136012|   none  |
-    +---------+---------+---------+---------+---------+
+    +----------+----------+----------+----------+---------+
+    |       Latency       |       Interval      | Pipeline|
+    |    min   |    max   |    min   |    max   |   Type  |
+    +----------+----------+----------+----------+---------+
+    |  10192002|  10192002|  10192002|  10192002|   none  |
+    +----------+----------+----------+----------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +------------------------------------+---------+---------+----------+-----------+-----------+---------+----------+
-        |                                    |      Latency      | Iteration|  Initiation Interval  |   Trip  |          |
-        |              Loop Name             |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
-        +------------------------------------+---------+---------+----------+-----------+-----------+---------+----------+
-        |- a_col_loop_a_row_loop_b_col_loop  |  3136010|  3136010|        12|          1|          1|  3136000|    yes   |
-        +------------------------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        +------------------------------------+----------+----------+----------+-----------+-----------+--------+----------+
+        |                                    |       Latency       | Iteration|  Initiation Interval  |  Trip  |          |
+        |              Loop Name             |    min   |    max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +------------------------------------+----------+----------+----------+-----------+-----------+--------+----------+
+        |- a_col_loop_a_row_loop_b_col_loop  |  10192000|  10192000|        13|         13|        100|  784000|    yes   |
+        +------------------------------------+----------+----------+----------+-----------+-----------+--------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -67,23 +67,23 @@ HasImplIP: 0
 IsGatedGlobalClock: 0
 
 + Individual pipeline summary: 
-  * Pipeline-0: initiation interval (II) = 1, depth = 12
+  * Pipeline-0: initiation interval (II) = 13, depth = 13
 
 
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states: 14
+* Number of FSM states: 15
 * Pipeline: 1
-  Pipeline-0: II = 1, D = 12, States = { 2 3 4 5 6 7 8 9 10 11 12 13 }
+  Pipeline-0: II = 13, D = 13, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 
 	2  / true
 2 --> 
-	14  / (exitcond_flatten4)
-	3  / (!exitcond_flatten4)
+	15  / (exitcond_flatten2)
+	3  / (!exitcond_flatten2)
 3 --> 
 	4  / true
 4 --> 
@@ -105,281 +105,285 @@ IsGatedGlobalClock: 0
 12 --> 
 	13  / true
 13 --> 
-	2  / true
+	14  / true
 14 --> 
+	2  / true
+15 --> 
 * FSM state operations: 
 
  <State 1>: 1.57ns
 ST_1: sum_mult [1/1] 0.00ns
-:0  %sum_mult = alloca [4000 x float], align 4
+:0  %sum_mult = alloca [1000 x float], align 4
 
-ST_1: stg_16 [1/1] 1.57ns
+ST_1: stg_17 [1/1] 1.57ns
 :1  br label %1
 
 
- <State 2>: 6.64ns
-ST_2: indvar_flatten4 [1/1] 0.00ns
-:0  %indvar_flatten4 = phi i22 [ 0, %0 ], [ %indvar_flatten_next4, %ifBlock ]
+ <State 2>: 5.65ns
+ST_2: indvar_flatten2 [1/1] 0.00ns
+:0  %indvar_flatten2 = phi i20 [ 0, %0 ], [ %indvar_flatten_next2, %ifBlock ]
 
 ST_2: Col_assign_3 [1/1] 0.00ns
 :1  %Col_assign_3 = phi i10 [ 0, %0 ], [ %tmp_i_i_mid2_v, %ifBlock ]
 
 ST_2: indvar_flatten [1/1] 0.00ns
-:2  %indvar_flatten = phi i13 [ 0, %0 ], [ %indvar_flatten_next, %ifBlock ]
+:2  %indvar_flatten = phi i11 [ 0, %0 ], [ %indvar_flatten_next, %ifBlock ]
 
 ST_2: Row_assign [1/1] 0.00ns
-:3  %Row_assign = phi i5 [ 0, %0 ], [ %tmp_139_mid2, %ifBlock ]
+:3  %Row_assign = phi i4 [ 0, %0 ], [ %tmp_40_mid2, %ifBlock ]
 
 ST_2: Col_assign [1/1] 0.00ns
-:4  %Col_assign = phi i8 [ 0, %0 ], [ %c, %ifBlock ]
+:4  %Col_assign = phi i7 [ 0, %0 ], [ %c, %ifBlock ]
 
-ST_2: exitcond_flatten4 [1/1] 2.37ns
-:5  %exitcond_flatten4 = icmp eq i22 %indvar_flatten4, -1058304
+ST_2: exitcond_flatten2 [1/1] 2.34ns
+:5  %exitcond_flatten2 = icmp eq i20 %indvar_flatten2, -264576
 
-ST_2: indvar_flatten_next4 [1/1] 2.20ns
-:6  %indvar_flatten_next4 = add i22 %indvar_flatten4, 1
+ST_2: indvar_flatten_next2 [1/1] 2.08ns
+:6  %indvar_flatten_next2 = add i20 %indvar_flatten2, 1
 
-ST_2: stg_24 [1/1] 0.00ns
-:7  br i1 %exitcond_flatten4, label %7, label %.reset7
+ST_2: stg_25 [1/1] 0.00ns
+:7  br i1 %exitcond_flatten2, label %7, label %.reset7
 
-ST_2: k [1/1] 1.84ns
-.reset7:0  %k = add i10 %Col_assign_3, 1
-
-ST_2: exitcond_flatten [1/1] 2.18ns
-.reset7:3  %exitcond_flatten = icmp eq i13 %indvar_flatten, 4000
+ST_2: exitcond_flatten [1/1] 2.11ns
+.reset7:3  %exitcond_flatten = icmp eq i11 %indvar_flatten, 1000
 
 ST_2: Row_assign_mid [1/1] 1.37ns
-.reset7:4  %Row_assign_mid = select i1 %exitcond_flatten, i5 0, i5 %Row_assign
-
-ST_2: tmp_mid1 [1/1] 2.07ns
-.reset7:5  %tmp_mid1 = icmp eq i10 %k, 0
-
-ST_2: tmp2 [1/1] 2.07ns
-.reset7:6  %tmp2 = icmp eq i10 %Col_assign_3, 0
-
-ST_2: tmp_mid2 [1/1] 1.37ns
-.reset7:7  %tmp_mid2 = select i1 %exitcond_flatten, i1 %tmp_mid1, i1 %tmp2
-
-ST_2: tmp_mid1_28 [1/1] 2.07ns
-.reset7:8  %tmp_mid1_28 = icmp eq i10 %k, -241
-
-ST_2: tmp_1 [1/1] 2.07ns
-.reset7:9  %tmp_1 = icmp eq i10 %Col_assign_3, -241
-
-ST_2: tmp_mid2_29 [1/1] 1.37ns
-.reset7:10  %tmp_mid2_29 = select i1 %exitcond_flatten, i1 %tmp_mid1_28, i1 %tmp_1
-
-ST_2: tmp_i_i_mid2_v [1/1] 1.37ns
-.reset7:11  %tmp_i_i_mid2_v = select i1 %exitcond_flatten, i10 %k, i10 %Col_assign_3
+.reset7:4  %Row_assign_mid = select i1 %exitcond_flatten, i4 0, i4 %Row_assign
 
 ST_2: not_exitcond_flatten [1/1] 0.00ns (grouped into LUT with out node exitcond_mid)
 .reset7:15  %not_exitcond_flatten = xor i1 %exitcond_flatten, true
 
-ST_2: exitcond [1/1] 2.00ns
-.reset7:16  %exitcond = icmp eq i8 %Col_assign, -56
+ST_2: exitcond [1/1] 1.97ns
+.reset7:16  %exitcond = icmp eq i7 %Col_assign, -28
 
 ST_2: exitcond_mid [1/1] 1.37ns (out node of the LUT)
 .reset7:17  %exitcond_mid = and i1 %exitcond, %not_exitcond_flatten
 
-ST_2: r [1/1] 1.72ns
-.reset7:18  %r = add i5 %Row_assign_mid, 1
+ST_2: r [1/1] 0.80ns
+.reset7:18  %r = add i4 %Row_assign_mid, 1
 
-ST_2: tmp_165 [1/1] 0.00ns (grouped into LUT with out node Col_assign_mid2)
-.reset7:20  %tmp_165 = or i1 %exitcond_mid, %exitcond_flatten
+ST_2: tmp_53 [1/1] 0.00ns (grouped into LUT with out node Col_assign_mid2)
+.reset7:20  %tmp_53 = or i1 %exitcond_mid, %exitcond_flatten
 
 ST_2: Col_assign_mid2 [1/1] 1.37ns (out node of the LUT)
-.reset7:21  %Col_assign_mid2 = select i1 %tmp_165, i8 0, i8 %Col_assign
+.reset7:21  %Col_assign_mid2 = select i1 %tmp_53, i7 0, i7 %Col_assign
 
-ST_2: tmp_139_mid2 [1/1] 1.37ns
-.reset7:22  %tmp_139_mid2 = select i1 %exitcond_mid, i5 %r, i5 %Row_assign_mid
-
-ST_2: stg_42 [1/1] 0.00ns
-.reset7:46  br i1 %tmp_mid2, label %2, label %3
-
-ST_2: stg_43 [1/1] 0.00ns
-:1  br i1 %tmp_mid2_29, label %4, label %5
-
-ST_2: c [1/1] 1.72ns
-ifBlock:1  %c = add i8 %Col_assign_mid2, 1
-
-ST_2: indvar_flatten_op [1/1] 1.96ns
-ifBlock:2  %indvar_flatten_op = add i13 %indvar_flatten, 1
-
-ST_2: indvar_flatten_next [1/1] 1.37ns
-ifBlock:3  %indvar_flatten_next = select i1 %exitcond_flatten, i13 1, i13 %indvar_flatten_op
+ST_2: tmp_40_mid2 [1/1] 1.37ns
+.reset7:22  %tmp_40_mid2 = select i1 %exitcond_mid, i4 %r, i4 %Row_assign_mid
 
 
- <State 3>: 9.09ns
+ <State 3>: 6.38ns
+ST_3: k [1/1] 1.84ns
+.reset7:0  %k = add i10 %Col_assign_3, 1
+
+ST_3: tmp_mid1 [1/1] 2.07ns
+.reset7:5  %tmp_mid1 = icmp eq i10 %k, 0
+
+ST_3: tmp2 [1/1] 2.07ns
+.reset7:6  %tmp2 = icmp eq i10 %Col_assign_3, 0
+
+ST_3: tmp_mid2 [1/1] 1.37ns
+.reset7:7  %tmp_mid2 = select i1 %exitcond_flatten, i1 %tmp_mid1, i1 %tmp2
+
+ST_3: tmp_mid1_23 [1/1] 2.07ns
+.reset7:8  %tmp_mid1_23 = icmp eq i10 %k, -241
+
+ST_3: tmp_1 [1/1] 2.07ns
+.reset7:9  %tmp_1 = icmp eq i10 %Col_assign_3, -241
+
+ST_3: tmp_mid2_24 [1/1] 1.37ns
+.reset7:10  %tmp_mid2_24 = select i1 %exitcond_flatten, i1 %tmp_mid1_23, i1 %tmp_1
+
+ST_3: tmp_i_i_mid2_v [1/1] 1.37ns
+.reset7:11  %tmp_i_i_mid2_v = select i1 %exitcond_flatten, i10 %k, i10 %Col_assign_3
+
 ST_3: tmp_i_i_mid2_cast2 [1/1] 0.00ns
-.reset7:12  %tmp_i_i_mid2_cast2 = zext i10 %tmp_i_i_mid2_v to i15
+.reset7:12  %tmp_i_i_mid2_cast2 = zext i10 %tmp_i_i_mid2_v to i14
 
-ST_3: tmp_i_i_mid2_cast [1/1] 0.00ns
-.reset7:13  %tmp_i_i_mid2_cast = zext i10 %tmp_i_i_mid2_v to i18
+ST_3: tmp_40_mid2_cast [1/1] 0.00ns
+.reset7:24  %tmp_40_mid2_cast = zext i4 %tmp_40_mid2 to i14
 
-ST_3: tmp_s [1/1] 3.36ns
-.reset7:14  %tmp_s = mul i18 %tmp_i_i_mid2_cast, 200
+ST_3: tmp_54 [1/1] 3.36ns
+.reset7:25  %tmp_54 = mul i14 %tmp_40_mid2_cast, 784
 
-ST_3: tmp_139_mid2_cast [1/1] 0.00ns
-.reset7:24  %tmp_139_mid2_cast = zext i5 %tmp_139_mid2 to i15
+ST_3: tmp_55 [1/1] 3.02ns
+.reset7:26  %tmp_55 = add i14 %tmp_i_i_mid2_cast2, %tmp_54
 
-ST_3: tmp_166 [1/1] 3.36ns
-.reset7:25  %tmp_166 = mul i15 %tmp_139_mid2_cast, 784
 
-ST_3: tmp_167 [1/1] 3.02ns
-.reset7:26  %tmp_167 = add i15 %tmp_i_i_mid2_cast2, %tmp_166
+ <State 4>: 9.09ns
+ST_4: tmp_i_i_mid2_cast [1/1] 0.00ns
+.reset7:13  %tmp_i_i_mid2_cast = zext i10 %tmp_i_i_mid2_v to i17
 
-ST_3: tmp_184_cast [1/1] 0.00ns
-.reset7:27  %tmp_184_cast = sext i15 %tmp_167 to i64
+ST_4: tmp_s [1/1] 3.36ns
+.reset7:14  %tmp_s = mul i17 %tmp_i_i_mid2_cast, 100
 
-ST_3: A_addr [1/1] 0.00ns
-.reset7:28  %A_addr = getelementptr [15680 x float]* %A, i64 0, i64 %tmp_184_cast
+ST_4: tmp_62_cast [1/1] 0.00ns
+.reset7:27  %tmp_62_cast = sext i14 %tmp_55 to i64
 
-ST_3: cast_in_a [2/2] 2.71ns
+ST_4: A_addr [1/1] 0.00ns
+.reset7:28  %A_addr = getelementptr [7840 x float]* %A, i64 0, i64 %tmp_62_cast
+
+ST_4: cast_in_a [2/2] 2.71ns
 .reset7:33  %cast_in_a = load float* %A_addr, align 4
 
-ST_3: tmp_i_i4_cast [1/1] 0.00ns
-.reset7:35  %tmp_i_i4_cast = zext i8 %Col_assign_mid2 to i18
+ST_4: tmp_i_i4_cast [1/1] 0.00ns
+.reset7:35  %tmp_i_i4_cast = zext i7 %Col_assign_mid2 to i17
 
-ST_3: tmp_169 [1/1] 3.02ns
-.reset7:36  %tmp_169 = add i18 %tmp_i_i4_cast, %tmp_s
+ST_4: tmp_57 [1/1] 3.02ns
+.reset7:36  %tmp_57 = add i17 %tmp_i_i4_cast, %tmp_s
 
-ST_3: tmp_186_cast [1/1] 0.00ns
-.reset7:37  %tmp_186_cast = zext i18 %tmp_169 to i64
+ST_4: tmp_64_cast [1/1] 0.00ns
+.reset7:37  %tmp_64_cast = zext i17 %tmp_57 to i64
 
-ST_3: B_addr [1/1] 0.00ns
-.reset7:38  %B_addr = getelementptr [156800 x float]* %B, i64 0, i64 %tmp_186_cast
+ST_4: B_addr [1/1] 0.00ns
+.reset7:38  %B_addr = getelementptr [78400 x float]* %B, i64 0, i64 %tmp_64_cast
 
-ST_3: cast_in_b [2/2] 2.71ns
+ST_4: cast_in_b [2/2] 2.71ns
 .reset7:43  %cast_in_b = load float* %B_addr, align 4
 
 
- <State 4>: 8.41ns
-ST_4: cast_in_a [1/2] 2.71ns
+ <State 5>: 9.09ns
+ST_5: tmp_40_mid2_cast1 [1/1] 0.00ns
+.reset7:23  %tmp_40_mid2_cast1 = zext i4 %tmp_40_mid2 to i11
+
+ST_5: tmp_56 [1/1] 3.36ns
+.reset7:29  %tmp_56 = mul i11 %tmp_40_mid2_cast1, 100
+
+ST_5: cast_in_a [1/2] 2.71ns
 .reset7:33  %cast_in_a = load float* %A_addr, align 4
 
-ST_4: cast_in_b [1/2] 2.71ns
+ST_5: tmp_i_i4_cast2 [1/1] 0.00ns
+.reset7:34  %tmp_i_i4_cast2 = zext i7 %Col_assign_mid2 to i11
+
+ST_5: tmp_58 [1/1] 3.02ns
+.reset7:39  %tmp_58 = add i11 %tmp_i_i4_cast2, %tmp_56
+
+ST_5: tmp_65_cast [1/1] 0.00ns
+.reset7:40  %tmp_65_cast = sext i11 %tmp_58 to i64
+
+ST_5: C_addr [1/1] 0.00ns
+.reset7:41  %C_addr = getelementptr [1000 x float]* %C, i64 0, i64 %tmp_65_cast
+
+ST_5: sum_mult_addr [1/1] 0.00ns
+.reset7:42  %sum_mult_addr = getelementptr [1000 x float]* %sum_mult, i64 0, i64 %tmp_65_cast
+
+ST_5: cast_in_b [1/2] 2.71ns
 .reset7:43  %cast_in_b = load float* %B_addr, align 4
 
-ST_4: mult [4/4] 5.70ns
+ST_5: mult [4/4] 5.70ns
 .reset7:44  %mult = fmul float %cast_in_a, %cast_in_b
 
+ST_5: sum_mult_load [2/2] 2.71ns
+.reset7:45  %sum_mult_load = load float* %sum_mult_addr, align 4
 
- <State 5>: 5.70ns
-ST_5: mult [3/4] 5.70ns
+
+ <State 6>: 5.70ns
+ST_6: mult [3/4] 5.70ns
 .reset7:44  %mult = fmul float %cast_in_a, %cast_in_b
 
-
- <State 6>: 9.09ns
-ST_6: tmp_139_mid2_cast1 [1/1] 0.00ns
-.reset7:23  %tmp_139_mid2_cast1 = zext i5 %tmp_139_mid2 to i13
-
-ST_6: tmp_168 [1/1] 3.36ns
-.reset7:29  %tmp_168 = mul i13 %tmp_139_mid2_cast1, 200
-
-ST_6: tmp_i_i4_cast2 [1/1] 0.00ns
-.reset7:34  %tmp_i_i4_cast2 = zext i8 %Col_assign_mid2 to i13
-
-ST_6: tmp_170 [1/1] 3.02ns
-.reset7:39  %tmp_170 = add i13 %tmp_i_i4_cast2, %tmp_168
-
-ST_6: tmp_187_cast [1/1] 0.00ns
-.reset7:40  %tmp_187_cast = sext i13 %tmp_170 to i64
-
-ST_6: C_addr [1/1] 0.00ns
-.reset7:41  %C_addr = getelementptr [4000 x float]* %C, i64 0, i64 %tmp_187_cast
-
-ST_6: sum_mult_addr [1/1] 0.00ns
-.reset7:42  %sum_mult_addr = getelementptr [4000 x float]* %sum_mult, i64 0, i64 %tmp_187_cast
-
-ST_6: mult [2/4] 5.70ns
-.reset7:44  %mult = fmul float %cast_in_a, %cast_in_b
-
-ST_6: sum_mult_load [2/2] 2.71ns
+ST_6: sum_mult_load [1/2] 2.71ns
 .reset7:45  %sum_mult_load = load float* %sum_mult_addr, align 4
 
 
  <State 7>: 5.70ns
-ST_7: mult [1/4] 5.70ns
+ST_7: mult [2/4] 5.70ns
 .reset7:44  %mult = fmul float %cast_in_a, %cast_in_b
 
-ST_7: sum_mult_load [1/2] 2.71ns
-.reset7:45  %sum_mult_load = load float* %sum_mult_addr, align 4
 
+ <State 8>: 8.41ns
+ST_8: stg_71 [1/1] 0.00ns
+.reset7:1  call void (...)* @_ssdm_op_SpecLoopName([33 x i8]* @a_col_loop_a_row_loop_b_col_lo)
 
- <State 8>: 7.26ns
-ST_8: tmp_139 [5/5] 7.26ns
-:0  %tmp_139 = fadd float %sum_mult_load, %mult
+ST_8: empty_22 [1/1] 0.00ns
+.reset7:2  %empty_22 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784000, i64 784000, i64 784000)
+
+ST_8: stg_73 [1/1] 0.00ns
+.reset7:19  call void (...)* @_ssdm_op_SpecLoopName([22 x i8]* @a_row_loop_b_col_loop_str)
+
+ST_8: stg_74 [1/1] 0.00ns
+.reset7:30  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str1809) nounwind
+
+ST_8: tmp_41 [1/1] 0.00ns
+.reset7:31  %tmp_41 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str1809)
+
+ST_8: stg_76 [1/1] 0.00ns
+.reset7:32  call void (...)* @_ssdm_op_SpecPipeline(i32 100, i32 1, i32 1, i32 0, [1 x i8]* @p_str1806) nounwind
+
+ST_8: mult [1/4] 5.70ns
+.reset7:44  %mult = fmul float %cast_in_a, %cast_in_b
+
+ST_8: stg_78 [1/1] 0.00ns
+.reset7:46  br i1 %tmp_mid2, label %2, label %3
+
+ST_8: stg_79 [1/1] 2.71ns
+:0  store float %mult, float* %sum_mult_addr, align 4
 
 
  <State 9>: 7.26ns
-ST_9: tmp_139 [4/5] 7.26ns
-:0  %tmp_139 = fadd float %sum_mult_load, %mult
+ST_9: tmp_42 [5/5] 7.26ns
+:0  %tmp_42 = fadd float %sum_mult_load, %mult
 
 
  <State 10>: 7.26ns
-ST_10: tmp_139 [3/5] 7.26ns
-:0  %tmp_139 = fadd float %sum_mult_load, %mult
+ST_10: tmp_42 [4/5] 7.26ns
+:0  %tmp_42 = fadd float %sum_mult_load, %mult
 
 
  <State 11>: 7.26ns
-ST_11: tmp_139 [2/5] 7.26ns
-:0  %tmp_139 = fadd float %sum_mult_load, %mult
+ST_11: tmp_42 [3/5] 7.26ns
+:0  %tmp_42 = fadd float %sum_mult_load, %mult
 
 
  <State 12>: 7.26ns
-ST_12: tmp_139 [1/5] 7.26ns
-:0  %tmp_139 = fadd float %sum_mult_load, %mult
+ST_12: tmp_42 [2/5] 7.26ns
+:0  %tmp_42 = fadd float %sum_mult_load, %mult
 
 
- <State 13>: 2.71ns
-ST_13: stg_81 [1/1] 0.00ns
-.reset7:1  call void (...)* @_ssdm_op_SpecLoopName([33 x i8]* @a_col_loop_a_row_loop_b_col_lo)
+ <State 13>: 7.26ns
+ST_13: tmp_42 [1/5] 7.26ns
+:0  %tmp_42 = fadd float %sum_mult_load, %mult
 
-ST_13: empty_27 [1/1] 0.00ns
-.reset7:2  %empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3136000, i64 3136000, i64 3136000)
+ST_13: stg_85 [1/1] 0.00ns
+:1  br i1 %tmp_mid2_24, label %4, label %5
 
-ST_13: stg_83 [1/1] 0.00ns
-.reset7:19  call void (...)* @_ssdm_op_SpecLoopName([22 x i8]* @a_row_loop_b_col_loop_str)
 
-ST_13: stg_84 [1/1] 0.00ns
-.reset7:30  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str1809) nounwind
+ <State 14>: 3.21ns
+ST_14: stg_86 [1/1] 2.71ns
+:0  store float %tmp_42, float* %sum_mult_addr, align 4
 
-ST_13: tmp_138 [1/1] 0.00ns
-.reset7:31  %tmp_138 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str1809)
-
-ST_13: stg_86 [1/1] 0.00ns
-.reset7:32  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1806) nounwind
-
-ST_13: stg_87 [1/1] 2.71ns
-:0  store float %tmp_139, float* %sum_mult_addr, align 4
-
-ST_13: stg_88 [1/1] 0.00ns
+ST_14: stg_87 [1/1] 0.00ns
 :1  br label %6
 
-ST_13: stg_89 [1/1] 2.71ns
-:0  store float %tmp_139, float* %C_addr, align 4
+ST_14: stg_88 [1/1] 2.71ns
+:0  store float %tmp_42, float* %C_addr, align 4
 
-ST_13: stg_90 [1/1] 0.00ns
+ST_14: stg_89 [1/1] 0.00ns
 :1  br label %6
 
-ST_13: stg_91 [1/1] 0.00ns
+ST_14: stg_90 [1/1] 0.00ns
 :0  br label %ifBlock
 
-ST_13: stg_92 [1/1] 2.71ns
-:0  store float %mult, float* %sum_mult_addr, align 4
-
-ST_13: stg_93 [1/1] 0.00ns
+ST_14: stg_91 [1/1] 0.00ns
 :1  br label %ifBlock
 
-ST_13: empty [1/1] 0.00ns
-ifBlock:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str1809, i32 %tmp_138)
+ST_14: empty [1/1] 0.00ns
+ifBlock:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str1809, i32 %tmp_41)
 
-ST_13: stg_95 [1/1] 0.00ns
+ST_14: c [1/1] 1.72ns
+ifBlock:1  %c = add i7 %Col_assign_mid2, 1
+
+ST_14: indvar_flatten_op [1/1] 1.84ns
+ifBlock:2  %indvar_flatten_op = add i11 %indvar_flatten, 1
+
+ST_14: indvar_flatten_next [1/1] 1.37ns
+ifBlock:3  %indvar_flatten_next = select i1 %exitcond_flatten, i11 1, i11 %indvar_flatten_op
+
+ST_14: stg_96 [1/1] 0.00ns
 ifBlock:4  br label %1
 
 
- <State 14>: 0.00ns
-ST_14: stg_96 [1/1] 0.00ns
+ <State 15>: 0.00ns
+ST_15: stg_97 [1/1] 0.00ns
 :0  ret void
 
 
@@ -389,17 +393,17 @@ ST_14: stg_96 [1/1] 0.00ns
 ============================================================
 Target clock period: 10ns, clock uncertainty: 1.25ns.
 
- <State 3>: 9.09ns
+ <State 4>: 9.09ns
 The critical path consists of the following:
 	'mul' operation ('tmp_s', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h:60->/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h:99->/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:317) (3.36 ns)
-	'add' operation ('tmp_169', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h:60->/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h:99->/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:317) (3.02 ns)
+	'add' operation ('tmp_57', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h:60->/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h:99->/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:317) (3.02 ns)
 	'getelementptr' operation ('B_addr', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h:60->/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h:99->/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:317) (0 ns)
 	'load' operation ('cast_in_b', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h:60->/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h:99->/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:317) on array 'B' (2.71 ns)
 
- <State 6>: 9.09ns
+ <State 5>: 9.09ns
 The critical path consists of the following:
-	'mul' operation ('tmp_168', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:327) (3.36 ns)
-	'add' operation ('tmp_170', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:327) (3.02 ns)
+	'mul' operation ('tmp_56', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:327) (3.36 ns)
+	'add' operation ('tmp_58', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:327) (3.02 ns)
 	'getelementptr' operation ('sum_mult_addr', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:327) (0 ns)
 	'load' operation ('sum_mult_load', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:327) on array 'sum_mult', /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h:304 (2.71 ns)
 
@@ -426,6 +430,7 @@ N/A
 	State 12
 	State 13
 	State 14
+	State 15
 
 
 ============================================================

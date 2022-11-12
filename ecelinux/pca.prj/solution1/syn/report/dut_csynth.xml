@@ -17,7 +17,7 @@
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>14.33</EstimatedClockPeriod>
+<EstimatedClockPeriod>9.09</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -29,8 +29,8 @@
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
-<TripCount>200</TripCount>
-<Latency>1333200</Latency>
+<TripCount>100</TripCount>
+<Latency>666600</Latency>
 <IterationLatency>6666</IterationLatency>
 <Loop1.1>
 <TripCount>196</TripCount>
@@ -59,18 +59,18 @@
 </Loop3.1>
 </Loop3>
 <Loop4>
-<TripCount>20</TripCount>
-<Latency>8040</Latency>
-<IterationLatency>402</IterationLatency>
+<TripCount>10</TripCount>
+<Latency>2020</Latency>
+<IterationLatency>202</IterationLatency>
 <Loop4.1>
-<TripCount>200</TripCount>
-<Latency>400</Latency>
+<TripCount>100</TripCount>
+<Latency>200</Latency>
 <IterationLatency>2</IterationLatency>
 </Loop4.1>
 </Loop4>
 <Loop5>
-<TripCount>20</TripCount>
-<Latency>31400</Latency>
+<TripCount>10</TripCount>
+<Latency>15700</Latency>
 <IterationLatency>1570</IterationLatency>
 <Loop5.1>
 <TripCount>784</TripCount>
@@ -88,10 +88,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>23620</BRAM_18K>
-<DSP48E>69</DSP48E>
-<FF>13297</FF>
-<LUT>19561</LUT>
+<BRAM_18K>16920</BRAM_18K>
+<DSP48E>99</DSP48E>
+<FF>16219</FF>
+<LUT>24123</LUT>
 </Resources>
 <AvailableResources>
 <BRAM_18K>280</BRAM_18K>

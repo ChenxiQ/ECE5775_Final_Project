@@ -60,7 +60,7 @@
 				</Value>
 				<direction>1</direction>
 				<if_type>1</if_type>
-				<array_size>15680</array_size>
+				<array_size>7840</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -134,7 +134,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>203</lineNumber>
+						<lineNumber>206</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -149,14 +149,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>203</second>
+										<second>206</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -182,7 +182,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>205</lineNumber>
+						<lineNumber>208</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -197,14 +197,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>205</second>
+										<second>208</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -294,7 +294,7 @@
 						<name>exitcond_i</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>205</lineNumber>
+						<lineNumber>208</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -309,14 +309,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>205</second>
+										<second>208</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -343,7 +343,7 @@
 						<name>i_1</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -358,14 +358,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -392,7 +392,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>205</lineNumber>
+						<lineNumber>208</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -407,14 +407,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>205</second>
+										<second>208</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -442,7 +442,7 @@
 						<name>tmp_i</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -457,14 +457,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -490,7 +490,7 @@
 						<name>PCA_sorted_idx_addr_1</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -505,14 +505,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -540,7 +540,7 @@
 						<name>temp</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -555,14 +555,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -585,10 +585,10 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>tmp_159</name>
+						<name>tmp_29</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -603,14 +603,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -633,10 +633,10 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>tmp_153</name>
+						<name>tmp_34</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -651,14 +651,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -682,10 +682,10 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>tmp_166_cast</name>
+						<name>tmp_44_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -700,14 +700,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -733,7 +733,7 @@
 						<name>S_addr</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -748,14 +748,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -783,7 +783,7 @@
 						<name>S_load</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -798,14 +798,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -828,10 +828,10 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>tmp_180_i</name>
+						<name>tmp_81_i</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -846,14 +846,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -879,7 +879,7 @@
 						<name>PCA_sorted_idx_addr_2</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -894,14 +894,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -929,7 +929,7 @@
 						<name>PCA_sorted_idx_load_2</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -944,14 +944,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -974,10 +974,10 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>tmp_160</name>
+						<name>tmp_30</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -992,14 +992,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1022,10 +1022,10 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>tmp_154</name>
+						<name>tmp_40</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1040,14 +1040,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1071,10 +1071,10 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>tmp_167_cast</name>
+						<name>tmp_45_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1089,14 +1089,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1119,10 +1119,10 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>S_addr_2</name>
+						<name>S_addr_8</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1137,14 +1137,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1172,7 +1172,7 @@
 						<name>S_load_1</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1187,14 +1187,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1220,7 +1220,7 @@
 						<name>S_load_to_int</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1235,14 +1235,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1268,7 +1268,7 @@
 						<name>tmp</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1283,14 +1283,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1316,10 +1316,10 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>tmp_161</name>
+						<name>tmp_31</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1334,14 +1334,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1367,7 +1367,7 @@
 						<name>S_load_1_to_int</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1382,14 +1382,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1412,10 +1412,10 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>tmp_45</name>
+						<name>tmp_33</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1430,14 +1430,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1463,10 +1463,10 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>tmp_162</name>
+						<name>tmp_32</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1481,14 +1481,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1514,7 +1514,7 @@
 						<name>notlhs</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1529,14 +1529,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1563,7 +1563,7 @@
 						<name>notrhs</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1578,14 +1578,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1609,10 +1609,10 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>tmp_47</name>
+						<name>tmp_35</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1627,14 +1627,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1661,7 +1661,7 @@
 						<name>notlhs3</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1676,14 +1676,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1710,7 +1710,7 @@
 						<name>notrhs4</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1725,14 +1725,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1756,10 +1756,10 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>tmp_48</name>
+						<name>tmp_36</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1774,14 +1774,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1805,10 +1805,10 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>tmp_49</name>
+						<name>tmp_37</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1823,14 +1823,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1854,10 +1854,10 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>tmp_50</name>
+						<name>tmp_38</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1872,14 +1872,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1903,10 +1903,10 @@
 					<Obj>
 						<type>0</type>
 						<id>46</id>
-						<name>tmp_51</name>
+						<name>tmp_39</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1921,14 +1921,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -1955,7 +1955,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>206</lineNumber>
+						<lineNumber>209</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1970,14 +1970,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>206</second>
+										<second>209</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -2005,7 +2005,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>208</lineNumber>
+						<lineNumber>211</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2020,14 +2020,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>208</second>
+										<second>211</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -2055,7 +2055,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>209</lineNumber>
+						<lineNumber>212</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2070,14 +2070,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>209</second>
+										<second>212</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -2105,7 +2105,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>211</lineNumber>
+						<lineNumber>214</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2120,14 +2120,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>211</second>
+										<second>214</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -2153,7 +2153,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>213</lineNumber>
+						<lineNumber>216</lineNumber>
 						<contextFuncName>find_max</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2168,14 +2168,14 @@
 											<first>pca.cpp</first>
 											<second>find_max</second>
 										</first>
-										<second>213</second>
+										<second>216</second>
 									</item>
 									<item>
 										<first>
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>169</second>
+										<second>170</second>
 									</item>
 								</second>
 							</item>
@@ -2213,7 +2213,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -2243,7 +2243,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>14</bitwidth>
+					<bitwidth>13</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -2273,7 +2273,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>14</bitwidth>
+					<bitwidth>13</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -2291,7 +2291,7 @@
 						<name>exitcond1</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>181</lineNumber>
+						<lineNumber>182</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2306,7 +2306,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>181</second>
+										<second>182</second>
 									</item>
 								</second>
 							</item>
@@ -2333,7 +2333,7 @@
 						<name>i_2</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>181</lineNumber>
+						<lineNumber>182</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2348,7 +2348,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>181</second>
+										<second>182</second>
 									</item>
 								</second>
 							</item>
@@ -2357,7 +2357,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -2375,7 +2375,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>181</lineNumber>
+						<lineNumber>182</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2390,7 +2390,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>181</second>
+										<second>182</second>
 									</item>
 								</second>
 							</item>
@@ -2418,7 +2418,7 @@
 						<name>tmp_s</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2433,7 +2433,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -2459,7 +2459,7 @@
 						<name>PCA_sorted_idx_addr</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2474,7 +2474,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -2502,7 +2502,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>182</lineNumber>
+						<lineNumber>183</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2517,7 +2517,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>182</second>
+										<second>183</second>
 									</item>
 								</second>
 							</item>
@@ -2630,7 +2630,7 @@
 						<name>exitcond</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>182</lineNumber>
+						<lineNumber>183</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2645,7 +2645,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>182</second>
+										<second>183</second>
 									</item>
 								</second>
 							</item>
@@ -2672,7 +2672,7 @@
 						<name>j_1</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>182</lineNumber>
+						<lineNumber>183</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2687,7 +2687,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>182</second>
+										<second>183</second>
 									</item>
 								</second>
 							</item>
@@ -2714,7 +2714,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>182</lineNumber>
+						<lineNumber>183</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2729,7 +2729,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>182</second>
+										<second>183</second>
 									</item>
 								</second>
 							</item>
@@ -2757,7 +2757,7 @@
 						<name>PCA_sorted_idx_load</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2772,7 +2772,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -2795,10 +2795,10 @@
 					<Obj>
 						<type>0</type>
 						<id>76</id>
-						<name>tmp_163</name>
+						<name>tmp_41</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2813,7 +2813,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -2836,10 +2836,10 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>tmp_132_cast</name>
+						<name>tmp_41_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2854,7 +2854,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -2863,7 +2863,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>14</bitwidth>
+					<bitwidth>13</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -2877,10 +2877,10 @@
 					<Obj>
 						<type>0</type>
 						<id>78</id>
-						<name>tmp_155</name>
+						<name>tmp_42</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2895,7 +2895,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -2904,7 +2904,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>14</bitwidth>
+					<bitwidth>13</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -2919,10 +2919,10 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>tmp_169_cast</name>
+						<name>tmp_47_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2937,7 +2937,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -2963,7 +2963,7 @@
 						<name>tsf_mat_addr</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2978,7 +2978,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -2987,7 +2987,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>14</bitwidth>
+					<bitwidth>13</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -3031,10 +3031,10 @@
 					<Obj>
 						<type>0</type>
 						<id>82</id>
-						<name>tmp_156</name>
+						<name>tmp_43</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3049,7 +3049,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -3073,10 +3073,10 @@
 					<Obj>
 						<type>0</type>
 						<id>83</id>
-						<name>tmp_171_cast</name>
+						<name>tmp_49_cast</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3091,7 +3091,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -3117,7 +3117,7 @@
 						<name>U_addr</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3132,7 +3132,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -3160,7 +3160,7 @@
 						<name>U_load</name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3175,7 +3175,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -3201,7 +3201,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>183</lineNumber>
+						<lineNumber>184</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3216,7 +3216,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>183</second>
+										<second>184</second>
 									</item>
 								</second>
 							</item>
@@ -3243,7 +3243,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>182</lineNumber>
+						<lineNumber>183</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3258,7 +3258,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>182</second>
+										<second>183</second>
 									</item>
 								</second>
 							</item>
@@ -3284,7 +3284,7 @@
 						<name></name>
 						<fileName>pca.cpp</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>195</lineNumber>
+						<lineNumber>196</lineNumber>
 						<contextFuncName>rank</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3299,7 +3299,7 @@
 											<first>pca.cpp</first>
 											<second>rank</second>
 										</first>
-										<second>195</second>
+										<second>196</second>
 									</item>
 								</second>
 							</item>
@@ -3591,7 +3591,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -3614,7 +3614,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>14</bitwidth>
+					<bitwidth>13</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -3637,7 +3637,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>14</bitwidth>
+					<bitwidth>13</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>784</content>
@@ -3660,10 +3660,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>20</content>
+				<content>10</content>
 			</item>
 			<item class_id_reference="16" object_id="_92">
 				<Value>
@@ -3683,7 +3683,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -5211,9 +5211,9 @@
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
-			<mMinTripCount>20</mMinTripCount>
-			<mMaxTripCount>20</mMaxTripCount>
-			<mMinLatency>78440</mMinLatency>
+			<mMinTripCount>10</mMinTripCount>
+			<mMaxTripCount>10</mMaxTripCount>
+			<mMinLatency>39220</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -7276,7 +7276,7 @@
 			</second>
 		</item>
 		<item>
-			<first>S_addr_2_gep_fu_91</first>
+			<first>S_addr_8_gep_fu_91</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7468,47 +7468,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_132_cast_fu_372</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>77</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_153_fu_411</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>20</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_154_fu_406</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>28</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_155_fu_376</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>78</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_156_fu_392</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>82</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_159_fu_235</first>
+			<first>tmp_29_fu_235</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7516,7 +7476,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_160_fu_239</first>
+			<first>tmp_30_fu_239</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7524,7 +7484,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_161_fu_264</first>
+			<first>tmp_31_fu_264</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7532,7 +7492,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_162_fu_281</first>
+			<first>tmp_32_fu_281</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7540,55 +7500,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_163_fu_388</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>76</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_166_cast_fu_243</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>21</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_167_cast_fu_247</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>29</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_169_cast_fu_402</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>79</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_171_cast_fu_397</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>83</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_180_i_fu_230</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>24</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_45_fu_271</first>
+			<first>tmp_33_fu_271</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7596,7 +7508,15 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_47_fu_297</first>
+			<first>tmp_34_fu_411</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>20</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_35_fu_297</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7604,7 +7524,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_48_fu_315</first>
+			<first>tmp_36_fu_315</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7612,7 +7532,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_49_fu_321</first>
+			<first>tmp_37_fu_321</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7620,7 +7540,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_50_fu_209</first>
+			<first>tmp_38_fu_209</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7628,11 +7548,91 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_51_fu_327</first>
+			<first>tmp_39_fu_327</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>46</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_40_fu_406</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>28</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_41_cast_fu_372</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>77</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_41_fu_388</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>76</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_42_fu_376</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>78</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_43_fu_392</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>82</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_44_cast_fu_243</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>21</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_45_cast_fu_247</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>29</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_47_cast_fu_402</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>79</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_49_cast_fu_397</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>83</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_81_i_fu_230</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>24</item>
 			</second>
 		</item>
 		<item>
@@ -8021,7 +8021,7 @@
 			</second>
 		</item>
 		<item>
-			<first>S_addr_2_reg_470</first>
+			<first>S_addr_8_reg_470</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8165,31 +8165,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_153_reg_455</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>20</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_154_reg_460</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>28</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_155_reg_521</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>78</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_159_reg_440</first>
+			<first>tmp_29_reg_440</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -8197,11 +8173,35 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_160_reg_450</first>
+			<first>tmp_30_reg_450</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>27</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_34_reg_455</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>20</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_40_reg_460</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>28</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_42_reg_521</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>78</item>
 			</second>
 		</item>
 	</dp_regname_nodes>

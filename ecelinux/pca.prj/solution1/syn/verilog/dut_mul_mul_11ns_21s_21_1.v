@@ -1,7 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
-  module dut_mul_mul_11ns_21s_21_1_DSP48_5(a, b, p);
+  module dut_mul_mul_11ns_21s_21_1_DSP48_3(a, b, p);
 input [11 - 1 : 0] a; 
 input signed [21 - 1 : 0] b; 
 output signed [21 - 1 : 0] p; 
@@ -27,7 +27,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-dut_mul_mul_11ns_21s_21_1_DSP48_5 dut_mul_mul_11ns_21s_21_1_DSP48_5_U(
+dut_mul_mul_11ns_21s_21_1_DSP48_3 dut_mul_mul_11ns_21s_21_1_DSP48_3_U(
     .a( din0 ),
     .b( din1 ),
     .p( dout ));

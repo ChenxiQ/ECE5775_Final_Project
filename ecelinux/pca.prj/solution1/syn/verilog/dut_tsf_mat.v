@@ -9,8 +9,8 @@
 module dut_tsf_mat_ram (addr0, ce0, d0, we0, q0,  clk);
 
 parameter DWIDTH = 32;
-parameter AWIDTH = 14;
-parameter MEM_SIZE = 15680;
+parameter AWIDTH = 13;
+parameter MEM_SIZE = 7840;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -53,8 +53,8 @@ module dut_tsf_mat(
     q0);
 
 parameter DataWidth = 32'd32;
-parameter AddressRange = 32'd15680;
-parameter AddressWidth = 32'd14;
+parameter AddressRange = 32'd7840;
+parameter AddressWidth = 32'd13;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

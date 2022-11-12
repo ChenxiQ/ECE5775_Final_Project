@@ -126,7 +126,8 @@ void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
 }
 
 void PCA::apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]){
-  hls::svd<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(XXT,S,U,V);
+  hls::svd_top<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD,fix32_t,fix32_t>(XXT,S,U,V);
+  //hls::svd<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(XXT,S,U,V);
   /*
   std::ofstream fs("data/s.dat", ios_base::out);
   for(int i=0;i<VEC_SIZ;i++){
@@ -195,8 +196,10 @@ void PCA::rank(fix32_t tsf_mat[K][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t
 }
 
 void PCA::back_pjt(fix32_t tsf_mat[K][VEC_SIZ], fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[K][IMG_NUM]){
-  hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,K,
-  VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,fix32_t,fix32_t>(tsf_mat,X,Y);
+  hls::matrix_multiply_top<hls::NoTranspose,hls::NoTranspose,
+  K,VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,MY_CONFIG_MULT,fix32_t,fix32_t>(tsf_mat,X,Y);
+  //hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,K,
+  //VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,fix32_t,fix32_t>(tsf_mat,X,Y);
 }
 
 void PCA::find_max(fix32_t S[VEC_SIZ][VEC_SIZ]){

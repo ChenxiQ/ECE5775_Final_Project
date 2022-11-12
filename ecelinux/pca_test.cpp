@@ -11,8 +11,8 @@
 using namespace std;
 
 // Number of test instances
-const int TEST_SIZE = 200;
-const int K = 20;
+const int TEST_SIZE = 100;
+const int K = 10;
 const int VEC_SIZ = 784;
 //------------------------------------------------------------------------
 // Helper function for reading images and labels

@@ -220,21 +220,21 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 
 set id 8
-set name dut_mac_muladd_8ns_11ns_10ns_18_1
+set name dut_mac_muladd_7ns_11ns_10ns_17_1
 set corename simcore_mac
 set op mac
 set stage_num 1
 set max_latency -1
 set registered_input 1
-set in0_width 8
+set in0_width 7
 set in0_signed 0
 set in1_width 11
 set in1_signed 0
 set in2_width 10
 set in2_signed 0
-set out_width 18
+set out_width 17
 set exp i0*i1+i2
-set arg_lists {i0 {8 0 +} i1 {11 0 +} m {18 0 +} i2 {10 0 +} p {18 0 +} c_reg {1} }
+set arg_lists {i0 {7 0 +} i1 {11 0 +} m {17 0 +} i2 {10 0 +} p {17 0 +} c_reg {1} }
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
 eval "ap_gen_simcore_mac { \
@@ -299,7 +299,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 
 set id 9
-set name dut_mac_muladd_10ns_9ns_8ns_18_1
+set name dut_mac_muladd_10ns_8ns_7ns_17_1
 set corename simcore_mac
 set op mac
 set stage_num 1
@@ -307,13 +307,13 @@ set max_latency -1
 set registered_input 1
 set in0_width 10
 set in0_signed 0
-set in1_width 9
+set in1_width 8
 set in1_signed 0
-set in2_width 8
+set in2_width 7
 set in2_signed 0
-set out_width 18
+set out_width 17
 set exp i0*i1+i2
-set arg_lists {i0 {10 0 +} i1 {9 0 +} m {18 0 +} i2 {8 0 +} p {18 0 +} c_reg {1} }
+set arg_lists {i0 {10 0 +} i1 {8 0 +} m {17 0 +} i2 {7 0 +} p {17 0 +} c_reg {1} }
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
 eval "ap_gen_simcore_mac { \
@@ -477,7 +477,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename A \
     op interface \
-    ports { A_address0 { O 18 vector } A_ce0 { O 1 bit } A_q0 { I 32 vector } } \
+    ports { A_address0 { O 17 vector } A_ce0 { O 1 bit } A_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'A'"
@@ -496,7 +496,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename B \
     op interface \
-    ports { B_address0 { O 18 vector } B_ce0 { O 1 bit } B_q0 { I 32 vector } } \
+    ports { B_address0 { O 17 vector } B_ce0 { O 1 bit } B_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'B'"

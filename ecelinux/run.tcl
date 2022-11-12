@@ -27,6 +27,9 @@ create_clock -period 10
 
 ### You can insert your own directives here ###
 
+set_directive_inline -off "vm2x1_base"
+set_directive_allocation -limit 1 -type function "svd_pairs" vm2x1_base
+
 
 ############################################
 

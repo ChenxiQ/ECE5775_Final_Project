@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut'
 ================================================================
-* Date:           Fri Nov 11 19:00:01 2022
+* Date:           Fri Nov 11 23:14:27 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|     14.33|        1.25|
+    |ap_clk  |  10.00|      9.09|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -41,15 +41,15 @@
         |                 |      Latency      | Iteration|  Initiation Interval  | Trip |          |
         |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-----------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- Loop 1         |  1333200|  1333200|      6666|          -|          -|   200|    no    |
+        |- Loop 1         |   666600|   666600|      6666|          -|          -|   100|    no    |
         | + Loop 1.1      |     6664|     6664|        34|          -|          -|   196|    no    |
         |  ++ Loop 1.1.1  |       32|       32|         8|          -|          -|     4|    no    |
         |- Loop 2         |      784|      784|         1|          -|          -|   784|    no    |
         |- Loop 3         |  1230880|  1230880|      1570|          -|          -|   784|    no    |
         | + Loop 3.1      |     1568|     1568|         2|          -|          -|   784|    no    |
-        |- Loop 4         |     8040|     8040|       402|          -|          -|    20|    no    |
-        | + Loop 4.1      |      400|      400|         2|          -|          -|   200|    no    |
-        |- Loop 5         |    31400|    31400|      1570|          -|          -|    20|    no    |
+        |- Loop 4         |     2020|     2020|       202|          -|          -|    10|    no    |
+        | + Loop 4.1      |      200|      200|         2|          -|          -|   100|    no    |
+        |- Loop 5         |    15700|    15700|      1570|          -|          -|    10|    no    |
         | + Loop 5.1      |     1568|     1568|         2|          -|          -|   784|    no    |
         |- Loop 6         |     1568|     1568|         2|          -|          -|   784|    no    |
         +-----------------+---------+---------+----------+-----------+-----------+------+----------+
@@ -165,8 +165,8 @@ IsGatedGlobalClock: 0
 ST_1: empty [1/1] 0.00ns
 :0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
 
-ST_1: empty_30 [1/1] 0.00ns
-:1  %empty_30 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %strm_in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+ST_1: empty_25 [1/1] 0.00ns
+:1  %empty_25 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %strm_in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
 
 ST_1: stg_35 [1/1] 0.00ns
 :2  call void (...)* @_ssdm_op_SpecBitsMap(i32* %strm_in_V_V), !map !215
@@ -178,13 +178,13 @@ ST_1: stg_37 [1/1] 0.00ns
 :4  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @dut_str) nounwind
 
 ST_1: X [1/1] 0.00ns
-:5  %X = alloca [156800 x float], align 4
+:5  %X = alloca [78400 x float], align 4
 
 ST_1: Y_assign [1/1] 0.00ns
-:6  %Y_assign = alloca [4000 x float], align 4
+:6  %Y_assign = alloca [1000 x float], align 4
 
 ST_1: tsf_mat [1/1] 0.00ns
-:7  %tsf_mat = alloca [15680 x float], align 4
+:7  %tsf_mat = alloca [7840 x float], align 4
 
 ST_1: pca_sorted_idx [1/1] 0.00ns
 :8  %pca_sorted_idx = alloca [784 x i32], align 4
@@ -208,24 +208,24 @@ ST_1: stg_47 [1/1] 1.57ns
 :14  br label %.loopexit5
 
 
- <State 2>: 3.57ns
+ <State 2>: 3.54ns
 ST_2: test [1/1] 0.00ns
-.loopexit5:0  %test = phi i8 [ 0, %0 ], [ %test_1, %.preheader42 ]
+.loopexit5:0  %test = phi i7 [ 0, %0 ], [ %test_1, %.preheader42 ]
 
-ST_2: exitcond1 [1/1] 2.00ns
-.loopexit5:1  %exitcond1 = icmp eq i8 %test, -56
+ST_2: exitcond1 [1/1] 1.97ns
+.loopexit5:1  %exitcond1 = icmp eq i7 %test, -28
 
-ST_2: empty_31 [1/1] 0.00ns
-.loopexit5:2  %empty_31 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 200, i64 200, i64 200)
+ST_2: empty_26 [1/1] 0.00ns
+.loopexit5:2  %empty_26 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)
 
 ST_2: test_1 [1/1] 1.72ns
-.loopexit5:3  %test_1 = add i8 %test, 1
+.loopexit5:3  %test_1 = add i7 %test, 1
 
 ST_2: stg_52 [1/1] 1.57ns
 .loopexit5:4  br i1 %exitcond1, label %.preheader11, label %.preheader42.preheader
 
 ST_2: tmp_cast [1/1] 0.00ns
-.preheader42.preheader:0  %tmp_cast = zext i8 %test to i18
+.preheader42.preheader:0  %tmp_cast = zext i7 %test to i17
 
 ST_2: stg_54 [1/1] 1.57ns
 .preheader42.preheader:1  br label %.preheader42
@@ -238,8 +238,8 @@ ST_3: i [1/1] 0.00ns
 ST_3: exitcond2 [1/1] 2.00ns
 .preheader42:1  %exitcond2 = icmp eq i8 %i, -60
 
-ST_3: empty_32 [1/1] 0.00ns
-.preheader42:2  %empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 196, i64 196, i64 196)
+ST_3: empty_27 [1/1] 0.00ns
+.preheader42:2  %empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 196, i64 196, i64 196)
 
 ST_3: i_2 [1/1] 1.72ns
 .preheader42:3  %i_2 = add i8 %i, 1
@@ -250,8 +250,8 @@ ST_3: stg_59 [1/1] 0.00ns
 ST_3: tmp_V [1/1] 4.38ns
 :0  %tmp_V = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %strm_in_V_V)
 
-ST_3: tmp_140 [1/1] 0.00ns
-:1  %tmp_140 = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %i, i2 0)
+ST_3: tmp_46 [1/1] 0.00ns
+:1  %tmp_46 = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %i, i2 0)
 
 ST_3: stg_62 [1/1] 1.57ns
 :2  br label %2
@@ -267,8 +267,8 @@ ST_4: j_cast [1/1] 0.00ns
 ST_4: exitcond4 [1/1] 1.62ns
 :2  %exitcond4 = icmp eq i3 %j, -4
 
-ST_4: empty_33 [1/1] 0.00ns
-:3  %empty_33 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+ST_4: empty_28 [1/1] 0.00ns
+:3  %empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
 
 ST_4: j_1 [1/1] 0.80ns
 :4  %j_1 = add i3 %j, 1
@@ -285,106 +285,106 @@ ST_4: Lo_assign [1/1] 0.00ns
 ST_4: Hi_assign [1/1] 0.00ns
 :2  %Hi_assign = or i5 %Lo_assign, 7
 
-ST_4: tmp_164 [1/1] 1.91ns
-:3  %tmp_164 = icmp ugt i5 %Lo_assign, %Hi_assign
+ST_4: tmp_42 [1/1] 1.91ns
+:3  %tmp_42 = icmp ugt i5 %Lo_assign, %Hi_assign
 
-ST_4: tmp_165 [1/1] 0.00ns
-:4  %tmp_165 = zext i5 %Lo_assign to i6
+ST_4: tmp_43 [1/1] 0.00ns
+:4  %tmp_43 = zext i5 %Lo_assign to i6
 
-ST_4: tmp_166 [1/1] 0.00ns
-:5  %tmp_166 = zext i5 %Hi_assign to i6
+ST_4: tmp_44 [1/1] 0.00ns
+:5  %tmp_44 = zext i5 %Hi_assign to i6
 
-ST_4: tmp_167 [1/1] 0.00ns (grouped into LUT with out node tmp_178)
-:6  %tmp_167 = call i32 @llvm.part.select.i32(i32 %tmp_V, i32 31, i32 0)
+ST_4: tmp_45 [1/1] 0.00ns (grouped into LUT with out node tmp_60)
+:6  %tmp_45 = call i32 @llvm.part.select.i32(i32 %tmp_V, i32 31, i32 0)
 
-ST_4: tmp_168 [1/1] 1.72ns
-:7  %tmp_168 = sub i6 %tmp_165, %tmp_166
+ST_4: tmp_47 [1/1] 1.72ns
+:7  %tmp_47 = sub i6 %tmp_43, %tmp_44
 
-ST_4: tmp_169 [1/1] 0.00ns (grouped into LUT with out node tmp_178)
-:8  %tmp_169 = xor i6 %tmp_165, 31
+ST_4: tmp_50 [1/1] 0.00ns (grouped into LUT with out node tmp_60)
+:8  %tmp_50 = xor i6 %tmp_43, 31
 
-ST_4: tmp_170 [1/1] 1.72ns
-:9  %tmp_170 = sub i6 %tmp_166, %tmp_165
+ST_4: tmp_51 [1/1] 1.72ns
+:9  %tmp_51 = sub i6 %tmp_44, %tmp_43
 
-ST_4: tmp_172 [1/1] 0.00ns (grouped into LUT with out node tmp_175)
-:10  %tmp_172 = select i1 %tmp_164, i6 %tmp_168, i6 %tmp_170
+ST_4: tmp_52 [1/1] 0.00ns (grouped into LUT with out node tmp_56)
+:10  %tmp_52 = select i1 %tmp_42, i6 %tmp_47, i6 %tmp_51
 
-ST_4: tmp_173 [1/1] 0.00ns (grouped into LUT with out node tmp_178)
-:11  %tmp_173 = select i1 %tmp_164, i32 %tmp_167, i32 %tmp_V
+ST_4: tmp_53 [1/1] 0.00ns (grouped into LUT with out node tmp_60)
+:11  %tmp_53 = select i1 %tmp_42, i32 %tmp_45, i32 %tmp_V
 
-ST_4: tmp_174 [1/1] 0.00ns (grouped into LUT with out node tmp_178)
-:12  %tmp_174 = select i1 %tmp_164, i6 %tmp_169, i6 %tmp_165
+ST_4: tmp_54 [1/1] 0.00ns (grouped into LUT with out node tmp_60)
+:12  %tmp_54 = select i1 %tmp_42, i6 %tmp_50, i6 %tmp_43
 
-ST_4: tmp_175 [1/1] 1.72ns (out node of the LUT)
-:13  %tmp_175 = sub i6 31, %tmp_172
+ST_4: tmp_56 [1/1] 1.72ns (out node of the LUT)
+:13  %tmp_56 = sub i6 31, %tmp_52
 
-ST_4: tmp_176 [1/1] 0.00ns (grouped into LUT with out node tmp_178)
-:14  %tmp_176 = zext i6 %tmp_174 to i32
+ST_4: tmp_57 [1/1] 0.00ns (grouped into LUT with out node tmp_60)
+:14  %tmp_57 = zext i6 %tmp_54 to i32
 
-ST_4: tmp_177 [1/1] 0.00ns (grouped into LUT with out node p_Result_s)
-:15  %tmp_177 = zext i6 %tmp_175 to i32
+ST_4: tmp_58 [1/1] 0.00ns (grouped into LUT with out node p_Result_s)
+:15  %tmp_58 = zext i6 %tmp_56 to i32
 
-ST_4: tmp_178 [1/1] 2.80ns (out node of the LUT)
-:16  %tmp_178 = lshr i32 %tmp_173, %tmp_176
+ST_4: tmp_60 [1/1] 2.80ns (out node of the LUT)
+:16  %tmp_60 = lshr i32 %tmp_53, %tmp_57
 
-ST_4: tmp_179 [1/1] 0.00ns (grouped into LUT with out node p_Result_s)
-:17  %tmp_179 = lshr i32 -1, %tmp_177
+ST_4: tmp_61 [1/1] 0.00ns (grouped into LUT with out node p_Result_s)
+:17  %tmp_61 = lshr i32 -1, %tmp_58
 
 ST_4: p_Result_s [1/1] 1.37ns (out node of the LUT)
-:18  %p_Result_s = and i32 %tmp_178, %tmp_179
+:18  %p_Result_s = and i32 %tmp_60, %tmp_61
 
-ST_4: tmp_143 [1/1] 1.84ns
-:20  %tmp_143 = add i10 %tmp_140, %j_cast
+ST_4: tmp_49 [1/1] 1.84ns
+:20  %tmp_49 = add i10 %tmp_46, %j_cast
 
 
  <State 5>: 8.46ns
-ST_5: tmp_142 [6/6] 6.41ns
-:19  %tmp_142 = uitofp i32 %p_Result_s to float
+ST_5: tmp_48 [6/6] 6.41ns
+:19  %tmp_48 = uitofp i32 %p_Result_s to float
 
-ST_5: tmp_144_cast [1/1] 0.00ns
-:21  %tmp_144_cast = zext i10 %tmp_143 to i18
+ST_5: tmp_50_cast [1/1] 0.00ns
+:21  %tmp_50_cast = zext i10 %tmp_49 to i17
 
-ST_5: tmp_180 [1/1] 6.38ns
-:22  %tmp_180 = mul i18 200, %tmp_144_cast
+ST_5: tmp_62 [1/1] 6.38ns
+:22  %tmp_62 = mul i17 100, %tmp_50_cast
 
-ST_5: tmp_181 [1/1] 2.08ns
-:23  %tmp_181 = add i18 %tmp_cast, %tmp_180
+ST_5: tmp_63 [1/1] 2.08ns
+:23  %tmp_63 = add i17 %tmp_cast, %tmp_62
 
 
  <State 6>: 6.41ns
-ST_6: tmp_142 [5/6] 6.41ns
-:19  %tmp_142 = uitofp i32 %p_Result_s to float
+ST_6: tmp_48 [5/6] 6.41ns
+:19  %tmp_48 = uitofp i32 %p_Result_s to float
 
 
  <State 7>: 6.41ns
-ST_7: tmp_142 [4/6] 6.41ns
-:19  %tmp_142 = uitofp i32 %p_Result_s to float
+ST_7: tmp_48 [4/6] 6.41ns
+:19  %tmp_48 = uitofp i32 %p_Result_s to float
 
 
  <State 8>: 6.41ns
-ST_8: tmp_142 [3/6] 6.41ns
-:19  %tmp_142 = uitofp i32 %p_Result_s to float
+ST_8: tmp_48 [3/6] 6.41ns
+:19  %tmp_48 = uitofp i32 %p_Result_s to float
 
 
  <State 9>: 6.41ns
-ST_9: tmp_142 [2/6] 6.41ns
-:19  %tmp_142 = uitofp i32 %p_Result_s to float
+ST_9: tmp_48 [2/6] 6.41ns
+:19  %tmp_48 = uitofp i32 %p_Result_s to float
 
 
  <State 10>: 6.41ns
-ST_10: tmp_142 [1/6] 6.41ns
-:19  %tmp_142 = uitofp i32 %p_Result_s to float
+ST_10: tmp_48 [1/6] 6.41ns
+:19  %tmp_48 = uitofp i32 %p_Result_s to float
 
 
  <State 11>: 2.71ns
-ST_11: tmp_191_cast [1/1] 0.00ns
-:24  %tmp_191_cast = zext i18 %tmp_181 to i64
+ST_11: tmp_69_cast [1/1] 0.00ns
+:24  %tmp_69_cast = zext i17 %tmp_63 to i64
 
 ST_11: X_addr [1/1] 0.00ns
-:25  %X_addr = getelementptr [156800 x float]* %X, i64 0, i64 %tmp_191_cast
+:25  %X_addr = getelementptr [78400 x float]* %X, i64 0, i64 %tmp_69_cast
 
 ST_11: stg_100 [1/1] 2.71ns
-:26  store float %tmp_142, float* %X_addr, align 4
+:26  store float %tmp_48, float* %X_addr, align 4
 
 ST_11: stg_101 [1/1] 0.00ns
 :27  br label %2
@@ -400,8 +400,8 @@ ST_12: i_0_i_cast8 [1/1] 0.00ns
 ST_12: exitcond10 [1/1] 2.07ns
 .preheader11:2  %exitcond10 = icmp eq i10 %i_0_i, -240
 
-ST_12: empty_34 [1/1] 0.00ns
-.preheader11:3  %empty_34 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
+ST_12: empty_29 [1/1] 0.00ns
+.preheader11:3  %empty_29 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
 
 ST_12: i_1 [1/1] 1.84ns
 .preheader11:4  %i_1 = add i10 %i_0_i, 1
@@ -435,8 +435,8 @@ PCA.exit:2  %next_mul = add i20 %phi_mul, 784
 ST_13: exitcond3 [1/1] 2.07ns
 PCA.exit:3  %exitcond3 = icmp eq i10 %i1, -240
 
-ST_13: empty_35 [1/1] 0.00ns
-PCA.exit:4  %empty_35 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
+ST_13: empty_30 [1/1] 0.00ns
+PCA.exit:4  %empty_30 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
 
 ST_13: i_3 [1/1] 1.84ns
 PCA.exit:5  %i_3 = add i10 %i1, 1
@@ -445,7 +445,7 @@ ST_13: stg_118 [1/1] 1.57ns
 PCA.exit:6  br i1 %exitcond3, label %6, label %.preheader41
 
 ST_13: stg_119 [2/2] 0.00ns
-:0  call fastcc void @dut_normalize([156800 x float]* %X, [784 x float]* %mean)
+:0  call fastcc void @dut_normalize([78400 x float]* %X, [784 x float]* %mean)
 
 
  <State 14>: 4.69ns
@@ -455,8 +455,8 @@ ST_14: j2 [1/1] 0.00ns
 ST_14: exitcond6 [1/1] 2.07ns
 .preheader41:1  %exitcond6 = icmp eq i10 %j2, -240
 
-ST_14: empty_36 [1/1] 0.00ns
-.preheader41:2  %empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
+ST_14: empty_31 [1/1] 0.00ns
+.preheader41:2  %empty_31 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
 
 ST_14: j_2 [1/1] 1.84ns
 .preheader41:3  %j_2 = add i10 %j2, 1
@@ -464,26 +464,26 @@ ST_14: j_2 [1/1] 1.84ns
 ST_14: stg_124 [1/1] 0.00ns
 .preheader41:4  br i1 %exitcond6, label %PCA.exit, label %5
 
-ST_14: tmp_146_cast [1/1] 0.00ns
-:0  %tmp_146_cast = zext i10 %j2 to i20
+ST_14: tmp_52_cast [1/1] 0.00ns
+:0  %tmp_52_cast = zext i10 %j2 to i20
 
-ST_14: tmp_171 [1/1] 2.08ns
-:1  %tmp_171 = add i20 %phi_mul, %tmp_146_cast
+ST_14: tmp_59 [1/1] 2.08ns
+:1  %tmp_59 = add i20 %phi_mul, %tmp_52_cast
 
-ST_14: tmp_193_cast [1/1] 0.00ns
-:2  %tmp_193_cast = zext i20 %tmp_171 to i64
+ST_14: tmp_71_cast [1/1] 0.00ns
+:2  %tmp_71_cast = zext i20 %tmp_59 to i64
 
 ST_14: S_addr [1/1] 0.00ns
-:3  %S_addr = getelementptr [614656 x float]* %S, i64 0, i64 %tmp_193_cast
+:3  %S_addr = getelementptr [614656 x float]* %S, i64 0, i64 %tmp_71_cast
 
 ST_14: U_addr [1/1] 0.00ns
-:4  %U_addr = getelementptr [614656 x float]* %U, i64 0, i64 %tmp_193_cast
+:4  %U_addr = getelementptr [614656 x float]* %U, i64 0, i64 %tmp_71_cast
 
 ST_14: V_addr [1/1] 0.00ns
-:5  %V_addr = getelementptr [614656 x float]* %V, i64 0, i64 %tmp_193_cast
+:5  %V_addr = getelementptr [614656 x float]* %V, i64 0, i64 %tmp_71_cast
 
 ST_14: XXT_addr [1/1] 0.00ns
-:6  %XXT_addr = getelementptr [614656 x float]* %XXT, i64 0, i64 %tmp_193_cast
+:6  %XXT_addr = getelementptr [614656 x float]* %XXT, i64 0, i64 %tmp_71_cast
 
 ST_14: stg_132 [2/2] 2.61ns
 :7  store float 0.000000e+00, float* %S_addr, align 4
@@ -517,70 +517,70 @@ ST_15: stg_140 [1/1] 0.00ns
 
  <State 16>: 0.00ns
 ST_16: stg_141 [1/2] 0.00ns
-:0  call fastcc void @dut_normalize([156800 x float]* %X, [784 x float]* %mean)
+:0  call fastcc void @dut_normalize([78400 x float]* %X, [784 x float]* %mean)
 
 
  <State 17>: 0.00ns
 ST_17: stg_142 [2/2] 0.00ns
-:1  call fastcc void @dut_cov([156800 x float]* %X, [614656 x float]* %XXT)
+:1  call fastcc void @dut_cov([78400 x float]* %X, [614656 x float]* %XXT)
 
 
  <State 18>: 0.00ns
 ST_18: stg_143 [1/2] 0.00ns
-:1  call fastcc void @dut_cov([156800 x float]* %X, [614656 x float]* %XXT)
+:1  call fastcc void @dut_cov([78400 x float]* %X, [614656 x float]* %XXT)
 
 
  <State 19>: 0.00ns
 ST_19: stg_144 [2/2] 0.00ns
-:2  call fastcc void @dut_svd_pairs([614656 x float]* %XXT, [614656 x float]* %S, [614656 x float]* %U, [614656 x float]* %V)
+:2  call fastcc void @dut_svd_basic([614656 x float]* %XXT, [614656 x float]* %S, [614656 x float]* %U, [614656 x float]* %V)
 
 
  <State 20>: 0.00ns
 ST_20: stg_145 [1/2] 0.00ns
-:2  call fastcc void @dut_svd_pairs([614656 x float]* %XXT, [614656 x float]* %S, [614656 x float]* %U, [614656 x float]* %V)
+:2  call fastcc void @dut_svd_basic([614656 x float]* %XXT, [614656 x float]* %S, [614656 x float]* %U, [614656 x float]* %V)
 
 
  <State 21>: 0.00ns
 ST_21: stg_146 [2/2] 0.00ns
-:3  call fastcc void @dut_rank([784 x i32]* %pca_sorted_idx, [15680 x float]* %tsf_mat, [614656 x float]* %S, [614656 x float]* %U)
+:3  call fastcc void @dut_rank([784 x i32]* %pca_sorted_idx, [7840 x float]* %tsf_mat, [614656 x float]* %S, [614656 x float]* %U)
 
 
  <State 22>: 0.00ns
 ST_22: stg_147 [1/2] 0.00ns
-:3  call fastcc void @dut_rank([784 x i32]* %pca_sorted_idx, [15680 x float]* %tsf_mat, [614656 x float]* %S, [614656 x float]* %U)
+:3  call fastcc void @dut_rank([784 x i32]* %pca_sorted_idx, [7840 x float]* %tsf_mat, [614656 x float]* %S, [614656 x float]* %U)
 
 
  <State 23>: 0.00ns
 ST_23: stg_148 [2/2] 0.00ns
-:4  call fastcc void @dut_matrix_multiply_alt2([15680 x float]* %tsf_mat, [156800 x float]* %X, [4000 x float]* %Y_assign)
+:4  call fastcc void @dut_matrix_multiply_alt2([7840 x float]* %tsf_mat, [78400 x float]* %X, [1000 x float]* %Y_assign)
 
 
  <State 24>: 1.57ns
 ST_24: stg_149 [1/2] 0.00ns
-:4  call fastcc void @dut_matrix_multiply_alt2([15680 x float]* %tsf_mat, [156800 x float]* %X, [4000 x float]* %Y_assign)
+:4  call fastcc void @dut_matrix_multiply_alt2([7840 x float]* %tsf_mat, [78400 x float]* %X, [1000 x float]* %Y_assign)
 
 ST_24: stg_150 [1/1] 1.57ns
 :5  br label %.loopexit
 
 
- <State 25>: 3.48ns
+ <State 25>: 3.45ns
 ST_25: i3 [1/1] 0.00ns
-.loopexit:0  %i3 = phi i5 [ 0, %6 ], [ %i_4, %.preheader40 ]
+.loopexit:0  %i3 = phi i4 [ 0, %6 ], [ %i_4, %.preheader40 ]
 
 ST_25: phi_mul1 [1/1] 0.00ns
-.loopexit:1  %phi_mul1 = phi i12 [ 0, %6 ], [ %next_mul2, %.preheader40 ]
+.loopexit:1  %phi_mul1 = phi i10 [ 0, %6 ], [ %next_mul2, %.preheader40 ]
 
 ST_25: next_mul2 [1/1] 1.84ns
-.loopexit:2  %next_mul2 = add i12 %phi_mul1, 200
+.loopexit:2  %next_mul2 = add i10 %phi_mul1, 100
 
-ST_25: exitcond5 [1/1] 1.91ns
-.loopexit:3  %exitcond5 = icmp eq i5 %i3, -12
+ST_25: exitcond5 [1/1] 1.88ns
+.loopexit:3  %exitcond5 = icmp eq i4 %i3, -6
 
-ST_25: empty_37 [1/1] 0.00ns
-.loopexit:4  %empty_37 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 20, i64 20, i64 20)
+ST_25: empty_32 [1/1] 0.00ns
+.loopexit:4  %empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)
 
-ST_25: i_4 [1/1] 1.72ns
-.loopexit:5  %i_4 = add i5 %i3, 1
+ST_25: i_4 [1/1] 0.80ns
+.loopexit:5  %i_4 = add i4 %i3, 1
 
 ST_25: stg_157 [1/1] 1.57ns
 .loopexit:6  br i1 %exitcond5, label %.preheader39, label %.preheader40
@@ -588,65 +588,65 @@ ST_25: stg_157 [1/1] 1.57ns
 
  <State 26>: 4.55ns
 ST_26: j4 [1/1] 0.00ns
-.preheader40:0  %j4 = phi i8 [ %j_3, %7 ], [ 0, %.loopexit ]
+.preheader40:0  %j4 = phi i7 [ %j_3, %7 ], [ 0, %.loopexit ]
 
-ST_26: exitcond8 [1/1] 2.00ns
-.preheader40:1  %exitcond8 = icmp eq i8 %j4, -56
+ST_26: exitcond8 [1/1] 1.97ns
+.preheader40:1  %exitcond8 = icmp eq i7 %j4, -28
 
-ST_26: empty_38 [1/1] 0.00ns
-.preheader40:2  %empty_38 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 200, i64 200, i64 200)
+ST_26: empty_33 [1/1] 0.00ns
+.preheader40:2  %empty_33 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)
 
 ST_26: j_3 [1/1] 1.72ns
-.preheader40:3  %j_3 = add i8 %j4, 1
+.preheader40:3  %j_3 = add i7 %j4, 1
 
 ST_26: stg_162 [1/1] 0.00ns
 .preheader40:4  br i1 %exitcond8, label %.loopexit, label %7
 
-ST_26: tmp_148_cast [1/1] 0.00ns
-:0  %tmp_148_cast = zext i8 %j4 to i12
+ST_26: tmp_54_cast [1/1] 0.00ns
+:0  %tmp_54_cast = zext i7 %j4 to i10
 
-ST_26: tmp_182 [1/1] 1.84ns
-:1  %tmp_182 = add i12 %phi_mul1, %tmp_148_cast
+ST_26: tmp_64 [1/1] 1.84ns
+:1  %tmp_64 = add i10 %phi_mul1, %tmp_54_cast
 
-ST_26: tmp_195_cast [1/1] 0.00ns
-:2  %tmp_195_cast = zext i12 %tmp_182 to i64
+ST_26: tmp_73_cast [1/1] 0.00ns
+:2  %tmp_73_cast = zext i10 %tmp_64 to i64
 
 ST_26: Y_assign_addr [1/1] 0.00ns
-:3  %Y_assign_addr = getelementptr [4000 x float]* %Y_assign, i64 0, i64 %tmp_195_cast
+:3  %Y_assign_addr = getelementptr [1000 x float]* %Y_assign, i64 0, i64 %tmp_73_cast
 
-ST_26: tmp_183 [2/2] 2.71ns
-:4  %tmp_183 = load float* %Y_assign_addr, align 4
+ST_26: tmp_65 [2/2] 2.71ns
+:4  %tmp_65 = load float* %Y_assign_addr, align 4
 
 
  <State 27>: 7.08ns
-ST_27: tmp_183 [1/2] 2.71ns
-:4  %tmp_183 = load float* %Y_assign_addr, align 4
+ST_27: tmp_65 [1/2] 2.71ns
+:4  %tmp_65 = load float* %Y_assign_addr, align 4
 
 ST_27: stg_169 [1/1] 4.38ns
-:5  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_183)
+:5  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_65)
 
 ST_27: stg_170 [1/1] 0.00ns
 :6  br label %.preheader40
 
 
- <State 28>: 3.48ns
+ <State 28>: 3.45ns
 ST_28: i5 [1/1] 0.00ns
-.preheader39:0  %i5 = phi i5 [ 0, %.loopexit ], [ %i_6, %.preheader38 ]
+.preheader39:0  %i5 = phi i4 [ 0, %.loopexit ], [ %i_6, %.preheader38 ]
 
 ST_28: phi_mul3 [1/1] 0.00ns
-.preheader39:1  %phi_mul3 = phi i14 [ 0, %.loopexit ], [ %next_mul4, %.preheader38 ]
+.preheader39:1  %phi_mul3 = phi i13 [ 0, %.loopexit ], [ %next_mul4, %.preheader38 ]
 
 ST_28: next_mul4 [1/1] 1.96ns
-.preheader39:2  %next_mul4 = add i14 %phi_mul3, 784
+.preheader39:2  %next_mul4 = add i13 %phi_mul3, 784
 
-ST_28: exitcond7 [1/1] 1.91ns
-.preheader39:3  %exitcond7 = icmp eq i5 %i5, -12
+ST_28: exitcond7 [1/1] 1.88ns
+.preheader39:3  %exitcond7 = icmp eq i4 %i5, -6
 
-ST_28: empty_39 [1/1] 0.00ns
-.preheader39:4  %empty_39 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 20, i64 20, i64 20)
+ST_28: empty_34 [1/1] 0.00ns
+.preheader39:4  %empty_34 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)
 
-ST_28: i_6 [1/1] 1.72ns
-.preheader39:5  %i_6 = add i5 %i5, 1
+ST_28: i_6 [1/1] 0.80ns
+.preheader39:5  %i_6 = add i4 %i5, 1
 
 ST_28: stg_177 [1/1] 1.57ns
 .preheader39:6  br i1 %exitcond7, label %.preheader, label %.preheader38
@@ -659,8 +659,8 @@ ST_29: j6 [1/1] 0.00ns
 ST_29: exitcond9 [1/1] 2.07ns
 .preheader38:1  %exitcond9 = icmp eq i10 %j6, -240
 
-ST_29: empty_40 [1/1] 0.00ns
-.preheader38:2  %empty_40 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
+ST_29: empty_35 [1/1] 0.00ns
+.preheader38:2  %empty_35 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
 
 ST_29: j_4 [1/1] 1.84ns
 .preheader38:3  %j_4 = add i10 %j6, 1
@@ -668,28 +668,28 @@ ST_29: j_4 [1/1] 1.84ns
 ST_29: stg_182 [1/1] 0.00ns
 .preheader38:4  br i1 %exitcond9, label %.preheader39, label %8
 
-ST_29: tmp_150_cast [1/1] 0.00ns
-:0  %tmp_150_cast = zext i10 %j6 to i14
+ST_29: tmp_56_cast [1/1] 0.00ns
+:0  %tmp_56_cast = zext i10 %j6 to i13
 
-ST_29: tmp_185 [1/1] 1.96ns
-:1  %tmp_185 = add i14 %phi_mul3, %tmp_150_cast
+ST_29: tmp_67 [1/1] 1.96ns
+:1  %tmp_67 = add i13 %phi_mul3, %tmp_56_cast
 
-ST_29: tmp_198_cast [1/1] 0.00ns
-:2  %tmp_198_cast = zext i14 %tmp_185 to i64
+ST_29: tmp_76_cast [1/1] 0.00ns
+:2  %tmp_76_cast = zext i13 %tmp_67 to i64
 
 ST_29: tsf_mat_addr [1/1] 0.00ns
-:3  %tsf_mat_addr = getelementptr [15680 x float]* %tsf_mat, i64 0, i64 %tmp_198_cast
+:3  %tsf_mat_addr = getelementptr [7840 x float]* %tsf_mat, i64 0, i64 %tmp_76_cast
 
-ST_29: tmp_186 [2/2] 2.71ns
-:4  %tmp_186 = load float* %tsf_mat_addr, align 4
+ST_29: tmp_68 [2/2] 2.71ns
+:4  %tmp_68 = load float* %tsf_mat_addr, align 4
 
 
  <State 30>: 7.08ns
-ST_30: tmp_186 [1/2] 2.71ns
-:4  %tmp_186 = load float* %tsf_mat_addr, align 4
+ST_30: tmp_68 [1/2] 2.71ns
+:4  %tmp_68 = load float* %tsf_mat_addr, align 4
 
 ST_30: stg_189 [1/1] 4.38ns
-:5  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_186)
+:5  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_68)
 
 ST_30: stg_190 [1/1] 0.00ns
 :6  br label %.preheader38
@@ -702,8 +702,8 @@ ST_31: i7 [1/1] 0.00ns
 ST_31: exitcond [1/1] 2.07ns
 .preheader:1  %exitcond = icmp eq i10 %i7, -240
 
-ST_31: empty_41 [1/1] 0.00ns
-.preheader:2  %empty_41 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
+ST_31: empty_36 [1/1] 0.00ns
+.preheader:2  %empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
 
 ST_31: i_5 [1/1] 1.84ns
 .preheader:3  %i_5 = add i10 %i7, 1
@@ -711,25 +711,25 @@ ST_31: i_5 [1/1] 1.84ns
 ST_31: stg_195 [1/1] 0.00ns
 .preheader:4  br i1 %exitcond, label %10, label %9
 
-ST_31: tmp_149 [1/1] 0.00ns
-:0  %tmp_149 = zext i10 %i7 to i64
+ST_31: tmp_55 [1/1] 0.00ns
+:0  %tmp_55 = zext i10 %i7 to i64
 
 ST_31: mean_addr [1/1] 0.00ns
-:1  %mean_addr = getelementptr inbounds [784 x float]* %mean, i64 0, i64 %tmp_149
+:1  %mean_addr = getelementptr inbounds [784 x float]* %mean, i64 0, i64 %tmp_55
 
-ST_31: tmp_184 [2/2] 2.71ns
-:2  %tmp_184 = load float* %mean_addr, align 4
+ST_31: tmp_66 [2/2] 2.71ns
+:2  %tmp_66 = load float* %mean_addr, align 4
 
 ST_31: stg_199 [1/1] 0.00ns
 :0  ret void
 
 
  <State 32>: 7.08ns
-ST_32: tmp_184 [1/2] 2.71ns
-:2  %tmp_184 = load float* %mean_addr, align 4
+ST_32: tmp_66 [1/2] 2.71ns
+:2  %tmp_66 = load float* %mean_addr, align 4
 
 ST_32: stg_201 [1/1] 4.38ns
-:3  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_184)
+:3  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_66)
 
 ST_32: stg_202 [1/1] 0.00ns
 :4  br label %.preheader

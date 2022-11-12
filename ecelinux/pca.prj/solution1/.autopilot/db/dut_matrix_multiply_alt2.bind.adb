@@ -32,7 +32,7 @@
 				</Value>
 				<direction>0</direction>
 				<if_type>1</if_type>
-				<array_size>15680</array_size>
+				<array_size>7840</array_size>
 				<bit_vecs class_id="7" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>0</item_version>
@@ -60,7 +60,7 @@
 				</Value>
 				<direction>0</direction>
 				<if_type>1</if_type>
-				<array_size>156800</array_size>
+				<array_size>78400</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -88,7 +88,7 @@
 				</Value>
 				<direction>1</direction>
 				<if_type>1</if_type>
-				<array_size>4000</array_size>
+				<array_size>1000</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -107,7 +107,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>304</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -119,7 +119,7 @@
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>304</second>
 									</item>
@@ -148,7 +148,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>310</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -160,7 +160,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>310</second>
 									</item>
@@ -185,7 +185,7 @@
 					<Obj>
 						<type>0</type>
 						<id>7</id>
-						<name>indvar_flatten4</name>
+						<name>indvar_flatten2</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -198,7 +198,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -219,7 +219,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;20, 784, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;10, 784, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -231,21 +231,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>316</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;20, 784, float&amp;gt;</second>
+											<second>GetElement&amp;lt;10, 784, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 20, 784, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 10, 784, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -286,7 +286,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -307,7 +307,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>324</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -319,7 +319,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>324</second>
 									</item>
@@ -330,7 +330,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -360,7 +360,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -377,7 +377,7 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>exitcond_flatten4</name>
+						<name>exitcond_flatten2</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -405,7 +405,7 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>indvar_flatten_next4</name>
+						<name>indvar_flatten_next2</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -418,7 +418,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -466,7 +466,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>310</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -478,7 +478,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>310</second>
 									</item>
@@ -536,7 +536,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>324</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -548,7 +548,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>324</second>
 									</item>
@@ -559,7 +559,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -579,7 +579,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>322</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -591,7 +591,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>322</second>
 									</item>
@@ -621,7 +621,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>322</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -633,7 +633,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>322</second>
 									</item>
@@ -663,7 +663,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>322</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -675,7 +675,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>322</second>
 									</item>
@@ -702,11 +702,11 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>tmp_mid1_28</name>
+						<name>tmp_mid1_23</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>325</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -718,7 +718,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>325</second>
 									</item>
@@ -748,7 +748,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>325</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -760,7 +760,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>325</second>
 									</item>
@@ -786,11 +786,11 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>tmp_mid2_29</name>
+						<name>tmp_mid2_24</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>325</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -802,7 +802,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>325</second>
 									</item>
@@ -833,7 +833,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;20, 784, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;10, 784, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -845,21 +845,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>316</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;20, 784, float&amp;gt;</second>
+											<second>GetElement&amp;lt;10, 784, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 20, 784, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 10, 784, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -890,7 +890,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -902,21 +902,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>317</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+											<second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -927,7 +927,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>15</bitwidth>
+					<bitwidth>14</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -945,7 +945,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -957,21 +957,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>317</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+											<second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -982,7 +982,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -1000,7 +1000,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1012,21 +1012,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>317</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+											<second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -1037,7 +1037,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1056,7 +1056,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>312</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1068,7 +1068,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>312</second>
 									</item>
@@ -1098,7 +1098,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>312</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1110,7 +1110,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>312</second>
 									</item>
@@ -1140,7 +1140,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>312</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1152,7 +1152,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>312</second>
 									</item>
@@ -1182,7 +1182,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>311</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1194,7 +1194,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>311</second>
 									</item>
@@ -1205,7 +1205,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1220,11 +1220,11 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>tmp_165</name>
+						<name>tmp_53</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>312</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1236,7 +1236,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>312</second>
 									</item>
@@ -1266,7 +1266,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>312</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1278,7 +1278,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>312</second>
 									</item>
@@ -1289,7 +1289,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1305,11 +1305,11 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>tmp_139_mid2</name>
+						<name>tmp_40_mid2</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>324</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1321,7 +1321,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>324</second>
 									</item>
@@ -1332,7 +1332,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1348,11 +1348,11 @@
 					<Obj>
 						<type>0</type>
 						<id>39</id>
-						<name>tmp_139_mid2_cast1</name>
+						<name>tmp_40_mid2_cast1</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>324</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1364,7 +1364,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>324</second>
 									</item>
@@ -1375,7 +1375,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -1389,11 +1389,11 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>tmp_139_mid2_cast</name>
+						<name>tmp_40_mid2_cast</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>324</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1405,7 +1405,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>324</second>
 									</item>
@@ -1416,7 +1416,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>15</bitwidth>
+					<bitwidth>14</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -1430,11 +1430,11 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>tmp_166</name>
+						<name>tmp_54</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;20, 784, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;10, 784, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1446,21 +1446,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>316</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;20, 784, float&amp;gt;</second>
+											<second>GetElement&amp;lt;10, 784, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 20, 784, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 10, 784, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -1471,7 +1471,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>15</bitwidth>
+					<bitwidth>14</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1486,11 +1486,11 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>tmp_167</name>
+						<name>tmp_55</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;20, 784, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;10, 784, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1502,21 +1502,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>316</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;20, 784, float&amp;gt;</second>
+											<second>GetElement&amp;lt;10, 784, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 20, 784, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 10, 784, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -1527,7 +1527,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>15</bitwidth>
+					<bitwidth>14</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1542,11 +1542,11 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>tmp_184_cast</name>
+						<name>tmp_62_cast</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;20, 784, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;10, 784, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1558,21 +1558,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>316</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;20, 784, float&amp;gt;</second>
+											<second>GetElement&amp;lt;10, 784, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 20, 784, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 10, 784, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -1601,7 +1601,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;20, 784, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;10, 784, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1613,21 +1613,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>316</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;20, 784, float&amp;gt;</second>
+											<second>GetElement&amp;lt;10, 784, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 20, 784, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 10, 784, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -1638,7 +1638,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>14</bitwidth>
+					<bitwidth>13</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1654,11 +1654,11 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>tmp_168</name>
+						<name>tmp_56</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>327</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1670,7 +1670,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>327</second>
 									</item>
@@ -1681,7 +1681,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1700,7 +1700,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;20, 784, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;10, 784, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1712,21 +1712,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>316</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;20, 784, float&amp;gt;</second>
+											<second>GetElement&amp;lt;10, 784, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 20, 784, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 10, 784, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -1755,7 +1755,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1767,21 +1767,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>317</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+											<second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -1792,7 +1792,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -1810,7 +1810,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1822,21 +1822,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>317</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+											<second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -1847,7 +1847,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -1861,11 +1861,11 @@
 					<Obj>
 						<type>0</type>
 						<id>52</id>
-						<name>tmp_169</name>
+						<name>tmp_57</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1877,21 +1877,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>317</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+											<second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -1902,7 +1902,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1917,11 +1917,11 @@
 					<Obj>
 						<type>0</type>
 						<id>53</id>
-						<name>tmp_186_cast</name>
+						<name>tmp_64_cast</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1933,21 +1933,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>317</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+											<second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -1976,7 +1976,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -1988,21 +1988,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>317</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+											<second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -2013,7 +2013,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2029,11 +2029,11 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>tmp_170</name>
+						<name>tmp_58</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>327</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2045,7 +2045,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>327</second>
 									</item>
@@ -2056,7 +2056,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -2071,11 +2071,11 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>tmp_187_cast</name>
+						<name>tmp_65_cast</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>327</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2087,7 +2087,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>327</second>
 									</item>
@@ -2116,7 +2116,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>327</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2128,7 +2128,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>327</second>
 									</item>
@@ -2139,7 +2139,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>12</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2159,7 +2159,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>327</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2171,7 +2171,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>327</second>
 									</item>
@@ -2182,7 +2182,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>12</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2202,7 +2202,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>60</lineNumber>
-						<contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+						<contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2214,21 +2214,21 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>317</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+											<second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
 										</first>
 										<second>60</second>
 									</item>
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+											<second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
 										</first>
 										<second>99</second>
 									</item>
@@ -2257,7 +2257,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>318</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2269,7 +2269,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>318</second>
 									</item>
@@ -2299,7 +2299,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>327</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2311,7 +2311,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>327</second>
 									</item>
@@ -2340,7 +2340,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>322</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2352,7 +2352,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>322</second>
 									</item>
@@ -2379,11 +2379,11 @@
 					<Obj>
 						<type>0</type>
 						<id>64</id>
-						<name>tmp_139</name>
+						<name>tmp_42</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>327</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2395,7 +2395,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>327</second>
 									</item>
@@ -2425,7 +2425,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>325</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2437,7 +2437,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>325</second>
 									</item>
@@ -2468,7 +2468,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>330</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2480,7 +2480,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>330</second>
 									</item>
@@ -2498,7 +2498,7 @@
 					<item_version>0</item_version>
 					<item>134</item>
 					<item>135</item>
-					<item>285</item>
+					<item>286</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 			</item>
@@ -2538,7 +2538,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>327</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2550,7 +2550,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>327</second>
 									</item>
@@ -2580,7 +2580,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>328</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2592,7 +2592,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>328</second>
 									</item>
@@ -2648,7 +2648,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>324</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2660,7 +2660,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>324</second>
 									</item>
@@ -2678,7 +2678,7 @@
 					<item_version>0</item_version>
 					<item>123</item>
 					<item>124</item>
-					<item>284</item>
+					<item>285</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 			</item>
@@ -2691,7 +2691,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>325</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2703,7 +2703,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>325</second>
 									</item>
@@ -2732,7 +2732,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>312</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2744,7 +2744,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>312</second>
 									</item>
@@ -2755,7 +2755,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -2783,7 +2783,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -2811,7 +2811,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2858,7 +2858,7 @@
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>335</lineNumber>
-						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+						<contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -2870,7 +2870,7 @@
 									<item>
 										<first>
 											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, 20, 200, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 20, 784, 784, 200, float, float&amp;gt;, float, float&amp;gt;</second>
+											<second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 10, 784, 784, 100, 10, 100, MY_CONFIG_MULT, float, float&amp;gt;</second>
 										</first>
 										<second>335</second>
 									</item>
@@ -2934,7 +2934,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -2980,7 +2980,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -3003,7 +3003,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -3026,7 +3026,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -3049,10 +3049,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>3136000</content>
+				<content>784000</content>
 			</item>
 			<item class_id_reference="16" object_id="_76">
 				<Value>
@@ -3072,7 +3072,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -3095,7 +3095,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -3118,7 +3118,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -3164,10 +3164,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>4000</content>
+				<content>1000</content>
 			</item>
 			<item class_id_reference="16" object_id="_81">
 				<Value>
@@ -3210,10 +3210,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>18</bitwidth>
+					<bitwidth>17</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>200</content>
+				<content>100</content>
 			</item>
 			<item class_id_reference="16" object_id="_83">
 				<Value>
@@ -3256,10 +3256,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>8</bitwidth>
+					<bitwidth>7</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>200</content>
+				<content>100</content>
 			</item>
 			<item class_id_reference="16" object_id="_85">
 				<Value>
@@ -3279,7 +3279,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -3302,7 +3302,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>15</bitwidth>
+					<bitwidth>14</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>784</content>
@@ -3348,10 +3348,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>13</bitwidth>
+					<bitwidth>11</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>200</content>
+				<content>100</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
@@ -4445,85 +4445,85 @@
 				<sink_obj>62</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_232">
-				<id>272</id>
+				<id>273</id>
 				<edge_type>2</edge_type>
 				<source_obj>6</source_obj>
 				<sink_obj>15</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_233">
-				<id>273</id>
+				<id>274</id>
 				<edge_type>2</edge_type>
 				<source_obj>15</source_obj>
 				<sink_obj>85</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_234">
-				<id>274</id>
+				<id>275</id>
 				<edge_type>2</edge_type>
 				<source_obj>15</source_obj>
 				<sink_obj>63</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_235">
-				<id>275</id>
+				<id>276</id>
 				<edge_type>2</edge_type>
 				<source_obj>63</source_obj>
 				<sink_obj>77</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_236">
-				<id>276</id>
+				<id>277</id>
 				<edge_type>2</edge_type>
 				<source_obj>63</source_obj>
 				<sink_obj>66</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_237">
-				<id>277</id>
+				<id>278</id>
 				<edge_type>2</edge_type>
 				<source_obj>66</source_obj>
 				<sink_obj>72</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_238">
-				<id>278</id>
+				<id>279</id>
 				<edge_type>2</edge_type>
 				<source_obj>66</source_obj>
 				<sink_obj>69</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_239">
-				<id>279</id>
+				<id>280</id>
 				<edge_type>2</edge_type>
 				<source_obj>69</source_obj>
 				<sink_obj>74</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_240">
-				<id>280</id>
+				<id>281</id>
 				<edge_type>2</edge_type>
 				<source_obj>72</source_obj>
 				<sink_obj>74</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_241">
-				<id>281</id>
+				<id>282</id>
 				<edge_type>2</edge_type>
 				<source_obj>74</source_obj>
 				<sink_obj>83</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_242">
-				<id>282</id>
+				<id>283</id>
 				<edge_type>2</edge_type>
 				<source_obj>77</source_obj>
 				<sink_obj>83</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_243">
-				<id>283</id>
+				<id>284</id>
 				<edge_type>2</edge_type>
 				<source_obj>83</source_obj>
 				<sink_obj>15</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_244">
-				<id>284</id>
+				<id>285</id>
 				<edge_type>4</edge_type>
 				<source_obj>61</source_obj>
 				<sink_obj>75</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_245">
-				<id>285</id>
+				<id>286</id>
 				<edge_type>4</edge_type>
 				<source_obj>61</source_obj>
 				<sink_obj>67</sink_obj>
@@ -4552,7 +4552,7 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>3136012</mMinLatency>
+			<mMinLatency>10192002</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -4599,11 +4599,11 @@
 				<item>77</item>
 				<item>83</item>
 			</basic_blocks>
-			<mII>1</mII>
-			<mDepth>12</mDepth>
-			<mMinTripCount>3136000</mMinTripCount>
-			<mMaxTripCount>3136000</mMaxTripCount>
-			<mMinLatency>3136010</mMinLatency>
+			<mII>13</mII>
+			<mDepth>13</mDepth>
+			<mMinTripCount>784000</mMinTripCount>
+			<mMaxTripCount>784000</mMaxTripCount>
+			<mMinLatency>10192000</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -4633,7 +4633,7 @@
 	</cdfg_regions>
 	<fsm class_id="24" tracking_level="1" version="0" object_id="_250">
 		<states class_id="25" tracking_level="0" version="0">
-			<count>14</count>
+			<count>15</count>
 			<item_version>0</item_version>
 			<item class_id="26" tracking_level="1" version="0" object_id="_251">
 				<id>1</id>
@@ -4655,7 +4655,7 @@
 			<item class_id_reference="26" object_id="_254">
 				<id>2</id>
 				<operations>
-					<count>30</count>
+					<count>17</count>
 					<item_version>0</item_version>
 					<item class_id_reference="28" object_id="_255">
 						<id>7</id>
@@ -4698,445 +4698,452 @@
 						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_263">
-						<id>16</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_264">
 						<id>19</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_265">
+					<item class_id_reference="28" object_id="_264">
 						<id>20</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_266">
-						<id>21</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_267">
-						<id>22</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_268">
-						<id>23</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_269">
-						<id>24</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_270">
-						<id>25</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_271">
-						<id>26</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_272">
-						<id>27</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_273">
+					<item class_id_reference="28" object_id="_265">
 						<id>31</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_274">
+					<item class_id_reference="28" object_id="_266">
 						<id>32</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_275">
+					<item class_id_reference="28" object_id="_267">
 						<id>33</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_276">
+					<item class_id_reference="28" object_id="_268">
 						<id>34</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_277">
+					<item class_id_reference="28" object_id="_269">
 						<id>36</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_278">
+					<item class_id_reference="28" object_id="_270">
 						<id>37</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_279">
+					<item class_id_reference="28" object_id="_271">
 						<id>38</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
+				</operations>
+			</item>
+			<item class_id_reference="26" object_id="_272">
+				<id>3</id>
+				<operations>
+					<count>12</count>
+					<item_version>0</item_version>
+					<item class_id_reference="28" object_id="_273">
+						<id>16</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_274">
+						<id>21</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_275">
+						<id>22</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_276">
+						<id>23</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_277">
+						<id>24</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_278">
+						<id>25</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_279">
+						<id>26</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
 					<item class_id_reference="28" object_id="_280">
-						<id>62</id>
+						<id>27</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_281">
-						<id>65</id>
+						<id>28</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_282">
-						<id>79</id>
+						<id>40</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_283">
-						<id>80</id>
+						<id>41</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
 					<item class_id_reference="28" object_id="_284">
-						<id>81</id>
+						<id>42</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
 				</operations>
 			</item>
 			<item class_id_reference="26" object_id="_285">
-				<id>3</id>
+				<id>4</id>
 				<operations>
-					<count>14</count>
+					<count>10</count>
 					<item_version>0</item_version>
 					<item class_id_reference="28" object_id="_286">
-						<id>28</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_287">
 						<id>29</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_288">
+					<item class_id_reference="28" object_id="_287">
 						<id>30</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_289">
-						<id>40</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_290">
-						<id>41</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_291">
-						<id>42</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_292">
+					<item class_id_reference="28" object_id="_288">
 						<id>43</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_293">
+					<item class_id_reference="28" object_id="_289">
 						<id>44</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_294">
+					<item class_id_reference="28" object_id="_290">
 						<id>49</id>
 						<stage>2</stage>
 						<latency>2</latency>
 					</item>
-					<item class_id_reference="28" object_id="_295">
+					<item class_id_reference="28" object_id="_291">
 						<id>51</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_296">
+					<item class_id_reference="28" object_id="_292">
 						<id>52</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_297">
+					<item class_id_reference="28" object_id="_293">
 						<id>53</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_298">
+					<item class_id_reference="28" object_id="_294">
 						<id>54</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_299">
+					<item class_id_reference="28" object_id="_295">
 						<id>59</id>
 						<stage>2</stage>
 						<latency>2</latency>
 					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_300">
-				<id>4</id>
-				<operations>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_301">
-						<id>49</id>
-						<stage>1</stage>
-						<latency>2</latency>
-					</item>
-					<item class_id_reference="28" object_id="_302">
-						<id>59</id>
-						<stage>1</stage>
-						<latency>2</latency>
-					</item>
-					<item class_id_reference="28" object_id="_303">
-						<id>60</id>
-						<stage>4</stage>
-						<latency>4</latency>
-					</item>
-				</operations>
-			</item>
-			<item class_id_reference="26" object_id="_304">
+			<item class_id_reference="26" object_id="_296">
 				<id>5</id>
 				<operations>
-					<count>1</count>
+					<count>11</count>
 					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_305">
-						<id>60</id>
-						<stage>3</stage>
-						<latency>4</latency>
-					</item>
-				</operations>
-			</item>
-			<item class_id_reference="26" object_id="_306">
-				<id>6</id>
-				<operations>
-					<count>9</count>
-					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_307">
+					<item class_id_reference="28" object_id="_297">
 						<id>39</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_308">
+					<item class_id_reference="28" object_id="_298">
 						<id>45</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_309">
+					<item class_id_reference="28" object_id="_299">
+						<id>49</id>
+						<stage>1</stage>
+						<latency>2</latency>
+					</item>
+					<item class_id_reference="28" object_id="_300">
 						<id>50</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_310">
+					<item class_id_reference="28" object_id="_301">
 						<id>55</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_311">
+					<item class_id_reference="28" object_id="_302">
 						<id>56</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_312">
+					<item class_id_reference="28" object_id="_303">
 						<id>57</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_313">
+					<item class_id_reference="28" object_id="_304">
 						<id>58</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_314">
+					<item class_id_reference="28" object_id="_305">
+						<id>59</id>
+						<stage>1</stage>
+						<latency>2</latency>
+					</item>
+					<item class_id_reference="28" object_id="_306">
 						<id>60</id>
-						<stage>2</stage>
+						<stage>4</stage>
 						<latency>4</latency>
 					</item>
-					<item class_id_reference="28" object_id="_315">
+					<item class_id_reference="28" object_id="_307">
 						<id>61</id>
 						<stage>2</stage>
 						<latency>2</latency>
 					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_316">
-				<id>7</id>
+			<item class_id_reference="26" object_id="_308">
+				<id>6</id>
 				<operations>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_317">
+					<item class_id_reference="28" object_id="_309">
 						<id>60</id>
-						<stage>1</stage>
+						<stage>3</stage>
 						<latency>4</latency>
 					</item>
-					<item class_id_reference="28" object_id="_318">
+					<item class_id_reference="28" object_id="_310">
 						<id>61</id>
 						<stage>1</stage>
 						<latency>2</latency>
 					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_319">
-				<id>8</id>
+			<item class_id_reference="26" object_id="_311">
+				<id>7</id>
 				<operations>
 					<count>1</count>
 					<item_version>0</item_version>
+					<item class_id_reference="28" object_id="_312">
+						<id>60</id>
+						<stage>2</stage>
+						<latency>4</latency>
+					</item>
+				</operations>
+			</item>
+			<item class_id_reference="26" object_id="_313">
+				<id>8</id>
+				<operations>
+					<count>9</count>
+					<item_version>0</item_version>
+					<item class_id_reference="28" object_id="_314">
+						<id>17</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_315">
+						<id>18</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_316">
+						<id>35</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_317">
+						<id>46</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_318">
+						<id>47</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_319">
+						<id>48</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
 					<item class_id_reference="28" object_id="_320">
+						<id>60</id>
+						<stage>1</stage>
+						<latency>4</latency>
+					</item>
+					<item class_id_reference="28" object_id="_321">
+						<id>62</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_322">
+						<id>75</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+				</operations>
+			</item>
+			<item class_id_reference="26" object_id="_323">
+				<id>9</id>
+				<operations>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item class_id_reference="28" object_id="_324">
 						<id>64</id>
 						<stage>5</stage>
 						<latency>5</latency>
 					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_321">
-				<id>9</id>
+			<item class_id_reference="26" object_id="_325">
+				<id>10</id>
 				<operations>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_322">
+					<item class_id_reference="28" object_id="_326">
 						<id>64</id>
 						<stage>4</stage>
 						<latency>5</latency>
 					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_323">
-				<id>10</id>
+			<item class_id_reference="26" object_id="_327">
+				<id>11</id>
 				<operations>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_324">
+					<item class_id_reference="28" object_id="_328">
 						<id>64</id>
 						<stage>3</stage>
 						<latency>5</latency>
 					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_325">
-				<id>11</id>
+			<item class_id_reference="26" object_id="_329">
+				<id>12</id>
 				<operations>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_326">
+					<item class_id_reference="28" object_id="_330">
 						<id>64</id>
 						<stage>2</stage>
 						<latency>5</latency>
 					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_327">
-				<id>12</id>
+			<item class_id_reference="26" object_id="_331">
+				<id>13</id>
 				<operations>
-					<count>1</count>
+					<count>2</count>
 					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_328">
+					<item class_id_reference="28" object_id="_332">
 						<id>64</id>
 						<stage>1</stage>
 						<latency>5</latency>
 					</item>
+					<item class_id_reference="28" object_id="_333">
+						<id>65</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_329">
-				<id>13</id>
+			<item class_id_reference="26" object_id="_334">
+				<id>14</id>
 				<operations>
-					<count>15</count>
+					<count>11</count>
 					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_330">
-						<id>17</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_331">
-						<id>18</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_332">
-						<id>35</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_333">
-						<id>46</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_334">
-						<id>47</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
 					<item class_id_reference="28" object_id="_335">
-						<id>48</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_336">
 						<id>67</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_337">
+					<item class_id_reference="28" object_id="_336">
 						<id>68</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_338">
+					<item class_id_reference="28" object_id="_337">
 						<id>70</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_339">
+					<item class_id_reference="28" object_id="_338">
 						<id>71</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_340">
+					<item class_id_reference="28" object_id="_339">
 						<id>73</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_341">
-						<id>75</id>
-						<stage>1</stage>
-						<latency>1</latency>
-					</item>
-					<item class_id_reference="28" object_id="_342">
+					<item class_id_reference="28" object_id="_340">
 						<id>76</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
-					<item class_id_reference="28" object_id="_343">
+					<item class_id_reference="28" object_id="_341">
 						<id>78</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
+					<item class_id_reference="28" object_id="_342">
+						<id>79</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_343">
+						<id>80</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
 					<item class_id_reference="28" object_id="_344">
+						<id>81</id>
+						<stage>1</stage>
+						<latency>1</latency>
+					</item>
+					<item class_id_reference="28" object_id="_345">
 						<id>82</id>
 						<stage>1</stage>
 						<latency>1</latency>
 					</item>
 				</operations>
 			</item>
-			<item class_id_reference="26" object_id="_345">
-				<id>14</id>
+			<item class_id_reference="26" object_id="_346">
+				<id>15</id>
 				<operations>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item class_id_reference="28" object_id="_346">
+					<item class_id_reference="28" object_id="_347">
 						<id>84</id>
 						<stage>1</stage>
 						<latency>1</latency>
@@ -5145,13 +5152,13 @@
 			</item>
 		</states>
 		<transitions class_id="29" tracking_level="0" version="0">
-			<count>14</count>
+			<count>15</count>
 			<item_version>0</item_version>
-			<item class_id="30" tracking_level="1" version="0" object_id="_347">
+			<item class_id="30" tracking_level="1" version="0" object_id="_348">
 				<inState>1</inState>
 				<outState>2</outState>
 				<condition class_id="31" tracking_level="0" version="0">
-					<id>67</id>
+					<id>69</id>
 					<sop class_id="32" tracking_level="0" version="0">
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5162,26 +5169,11 @@
 					</sop>
 				</condition>
 			</item>
-			<item class_id_reference="30" object_id="_348">
+			<item class_id_reference="30" object_id="_349">
 				<inState>3</inState>
 				<outState>4</outState>
 				<condition>
-					<id>107</id>
-					<sop>
-						<count>1</count>
-						<item_version>0</item_version>
-						<item>
-							<count>0</count>
-							<item_version>0</item_version>
-						</item>
-					</sop>
-				</condition>
-			</item>
-			<item class_id_reference="30" object_id="_349">
-				<inState>4</inState>
-				<outState>5</outState>
-				<condition>
-					<id>108</id>
+					<id>94</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5193,10 +5185,10 @@
 				</condition>
 			</item>
 			<item class_id_reference="30" object_id="_350">
-				<inState>5</inState>
-				<outState>6</outState>
+				<inState>4</inState>
+				<outState>5</outState>
 				<condition>
-					<id>109</id>
+					<id>95</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5208,10 +5200,10 @@
 				</condition>
 			</item>
 			<item class_id_reference="30" object_id="_351">
-				<inState>6</inState>
-				<outState>7</outState>
+				<inState>5</inState>
+				<outState>6</outState>
 				<condition>
-					<id>110</id>
+					<id>96</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5223,10 +5215,10 @@
 				</condition>
 			</item>
 			<item class_id_reference="30" object_id="_352">
-				<inState>7</inState>
-				<outState>8</outState>
+				<inState>6</inState>
+				<outState>7</outState>
 				<condition>
-					<id>111</id>
+					<id>97</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5238,10 +5230,10 @@
 				</condition>
 			</item>
 			<item class_id_reference="30" object_id="_353">
-				<inState>8</inState>
-				<outState>9</outState>
+				<inState>7</inState>
+				<outState>8</outState>
 				<condition>
-					<id>112</id>
+					<id>98</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5253,10 +5245,10 @@
 				</condition>
 			</item>
 			<item class_id_reference="30" object_id="_354">
-				<inState>9</inState>
-				<outState>10</outState>
+				<inState>8</inState>
+				<outState>9</outState>
 				<condition>
-					<id>113</id>
+					<id>99</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5268,10 +5260,10 @@
 				</condition>
 			</item>
 			<item class_id_reference="30" object_id="_355">
-				<inState>10</inState>
-				<outState>11</outState>
+				<inState>9</inState>
+				<outState>10</outState>
 				<condition>
-					<id>114</id>
+					<id>100</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5283,10 +5275,10 @@
 				</condition>
 			</item>
 			<item class_id_reference="30" object_id="_356">
-				<inState>11</inState>
-				<outState>12</outState>
+				<inState>10</inState>
+				<outState>11</outState>
 				<condition>
-					<id>115</id>
+					<id>101</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5298,10 +5290,10 @@
 				</condition>
 			</item>
 			<item class_id_reference="30" object_id="_357">
-				<inState>12</inState>
-				<outState>13</outState>
+				<inState>11</inState>
+				<outState>12</outState>
 				<condition>
-					<id>116</id>
+					<id>102</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5313,10 +5305,10 @@
 				</condition>
 			</item>
 			<item class_id_reference="30" object_id="_358">
-				<inState>13</inState>
-				<outState>2</outState>
+				<inState>12</inState>
+				<outState>13</outState>
 				<condition>
-					<id>117</id>
+					<id>103</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5328,10 +5320,40 @@
 				</condition>
 			</item>
 			<item class_id_reference="30" object_id="_359">
-				<inState>2</inState>
+				<inState>13</inState>
 				<outState>14</outState>
 				<condition>
-					<id>106</id>
+					<id>104</id>
+					<sop>
+						<count>1</count>
+						<item_version>0</item_version>
+						<item>
+							<count>0</count>
+							<item_version>0</item_version>
+						</item>
+					</sop>
+				</condition>
+			</item>
+			<item class_id_reference="30" object_id="_360">
+				<inState>14</inState>
+				<outState>2</outState>
+				<condition>
+					<id>105</id>
+					<sop>
+						<count>1</count>
+						<item_version>0</item_version>
+						<item>
+							<count>0</count>
+							<item_version>0</item_version>
+						</item>
+					</sop>
+				</condition>
+			</item>
+			<item class_id_reference="30" object_id="_361">
+				<inState>2</inState>
+				<outState>15</outState>
+				<condition>
+					<id>93</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5349,11 +5371,11 @@
 					</sop>
 				</condition>
 			</item>
-			<item class_id_reference="30" object_id="_360">
+			<item class_id_reference="30" object_id="_362">
 				<inState>2</inState>
 				<outState>3</outState>
 				<condition>
-					<id>118</id>
+					<id>106</id>
 					<sop>
 						<count>1</count>
 						<item_version>0</item_version>
@@ -5450,7 +5472,7 @@
 		<item>
 			<first>16</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -5471,49 +5493,49 @@
 		<item>
 			<first>21</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>22</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>23</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>24</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>25</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>26</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>27</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -5527,14 +5549,14 @@
 		<item>
 			<first>29</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>30</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -5590,7 +5612,7 @@
 		<item>
 			<first>39</first>
 			<second>
-				<first>5</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -5618,210 +5640,210 @@
 		<item>
 			<first>43</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>44</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>45</first>
 			<second>
-				<first>5</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>49</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>50</first>
 			<second>
-				<first>5</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>51</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>52</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>53</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>54</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>55</first>
 			<second>
-				<first>5</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>56</first>
 			<second>
-				<first>5</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>57</first>
 			<second>
-				<first>5</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>58</first>
 			<second>
-				<first>5</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>59</first>
 			<second>
-				<first>2</first>
+				<first>3</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>60</first>
 			<second>
-				<first>3</first>
+				<first>4</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>61</first>
 			<second>
-				<first>5</first>
+				<first>4</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>62</first>
 			<second>
-				<first>1</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>64</first>
 			<second>
-				<first>7</first>
+				<first>8</first>
 				<second>4</second>
 			</second>
 		</item>
 		<item>
 			<first>65</first>
 			<second>
-				<first>1</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>67</first>
 			<second>
-				<first>12</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>68</first>
 			<second>
-				<first>12</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>70</first>
 			<second>
-				<first>12</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>71</first>
 			<second>
-				<first>12</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>73</first>
 			<second>
-				<first>12</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>75</first>
 			<second>
-				<first>12</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>76</first>
 			<second>
-				<first>12</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>79</first>
 			<second>
-				<first>1</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>80</first>
 			<second>
-				<first>1</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>81</first>
 			<second>
-				<first>1</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>82</first>
 			<second>
-				<first>12</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -5854,49 +5876,49 @@
 			<first>63</first>
 			<second>
 				<first>1</first>
-				<second>12</second>
+				<second>7</second>
 			</second>
 		</item>
 		<item>
 			<first>66</first>
 			<second>
-				<first>1</first>
-				<second>11</second>
+				<first>8</first>
+				<second>12</second>
 			</second>
 		</item>
 		<item>
 			<first>69</first>
 			<second>
-				<first>12</first>
-				<second>12</second>
+				<first>13</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>72</first>
 			<second>
-				<first>12</first>
-				<second>12</second>
+				<first>13</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>74</first>
 			<second>
-				<first>12</first>
-				<second>12</second>
+				<first>13</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>77</first>
 			<second>
-				<first>12</first>
-				<second>12</second>
+				<first>7</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
 			<first>83</first>
 			<second>
-				<first>1</first>
-				<second>12</second>
+				<first>13</first>
+				<second>13</second>
 			</second>
 		</item>
 		<item>
@@ -5910,7 +5932,7 @@
 	<regions class_id="43" tracking_level="0" version="0">
 		<count>1</count>
 		<item_version>0</item_version>
-		<item class_id="44" tracking_level="1" version="0" object_id="_361">
+		<item class_id="44" tracking_level="1" version="0" object_id="_363">
 			<region_name>a_col_loop_a_row_loop_b_col_loop</region_name>
 			<basic_blocks>
 				<count>8</count>
@@ -5930,15 +5952,15 @@
 			</nodes>
 			<anchor_node>-1</anchor_node>
 			<region_type>8</region_type>
-			<interval>1</interval>
-			<pipe_depth>12</pipe_depth>
+			<interval>13</interval>
+			<pipe_depth>13</pipe_depth>
 		</item>
 	</regions>
 	<dp_fu_nodes class_id="45" tracking_level="0" version="0">
 		<count>50</count>
 		<item_version>0</item_version>
 		<item class_id="46" tracking_level="0" version="0">
-			<first>70</first>
+			<first>72</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5946,7 +5968,7 @@
 			</second>
 		</item>
 		<item>
-			<first>74</first>
+			<first>76</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5954,7 +5976,7 @@
 			</second>
 		</item>
 		<item>
-			<first>81</first>
+			<first>83</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -5963,7 +5985,7 @@
 			</second>
 		</item>
 		<item>
-			<first>86</first>
+			<first>88</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5971,7 +5993,7 @@
 			</second>
 		</item>
 		<item>
-			<first>93</first>
+			<first>95</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -5980,7 +6002,7 @@
 			</second>
 		</item>
 		<item>
-			<first>98</first>
+			<first>100</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5988,7 +6010,7 @@
 			</second>
 		</item>
 		<item>
-			<first>105</first>
+			<first>107</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -5996,18 +6018,18 @@
 			</second>
 		</item>
 		<item>
-			<first>111</first>
+			<first>113</first>
 			<second>
 				<count>4</count>
 				<item_version>0</item_version>
 				<item>61</item>
 				<item>61</item>
-				<item>67</item>
 				<item>75</item>
+				<item>67</item>
 			</second>
 		</item>
 		<item>
-			<first>119</first>
+			<first>118</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6015,7 +6037,7 @@
 			</second>
 		</item>
 		<item>
-			<first>127</first>
+			<first>126</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6023,7 +6045,7 @@
 			</second>
 		</item>
 		<item>
-			<first>138</first>
+			<first>137</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6039,7 +6061,7 @@
 			</second>
 		</item>
 		<item>
-			<first>160</first>
+			<first>161</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6047,7 +6069,7 @@
 			</second>
 		</item>
 		<item>
-			<first>171</first>
+			<first>172</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6055,7 +6077,7 @@
 			</second>
 		</item>
 		<item>
-			<first>178</first>
+			<first>179</first>
 			<second>
 				<count>5</count>
 				<item_version>0</item_version>
@@ -6067,7 +6089,7 @@
 			</second>
 		</item>
 		<item>
-			<first>182</first>
+			<first>183</first>
 			<second>
 				<count>4</count>
 				<item_version>0</item_version>
@@ -6078,7 +6100,7 @@
 			</second>
 		</item>
 		<item>
-			<first>188</first>
+			<first>190</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6086,7 +6108,7 @@
 			</second>
 		</item>
 		<item>
-			<first>194</first>
+			<first>196</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6094,15 +6116,7 @@
 			</second>
 		</item>
 		<item>
-			<first>200</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>16</item>
-			</second>
-		</item>
-		<item>
-			<first>206</first>
+			<first>202</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6110,7 +6124,7 @@
 			</second>
 		</item>
 		<item>
-			<first>212</first>
+			<first>208</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6118,63 +6132,7 @@
 			</second>
 		</item>
 		<item>
-			<first>220</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>21</item>
-			</second>
-		</item>
-		<item>
-			<first>226</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>22</item>
-			</second>
-		</item>
-		<item>
-			<first>232</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>23</item>
-			</second>
-		</item>
-		<item>
-			<first>240</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>24</item>
-			</second>
-		</item>
-		<item>
-			<first>246</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>25</item>
-			</second>
-		</item>
-		<item>
-			<first>252</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>26</item>
-			</second>
-		</item>
-		<item>
-			<first>260</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>27</item>
-			</second>
-		</item>
-		<item>
-			<first>268</first>
+			<first>216</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6182,7 +6140,7 @@
 			</second>
 		</item>
 		<item>
-			<first>274</first>
+			<first>222</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6190,7 +6148,7 @@
 			</second>
 		</item>
 		<item>
-			<first>280</first>
+			<first>228</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6198,7 +6156,7 @@
 			</second>
 		</item>
 		<item>
-			<first>286</first>
+			<first>234</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6206,7 +6164,7 @@
 			</second>
 		</item>
 		<item>
-			<first>292</first>
+			<first>240</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6214,7 +6172,7 @@
 			</second>
 		</item>
 		<item>
-			<first>298</first>
+			<first>246</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6222,7 +6180,7 @@
 			</second>
 		</item>
 		<item>
-			<first>306</first>
+			<first>254</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6230,31 +6188,71 @@
 			</second>
 		</item>
 		<item>
-			<first>314</first>
+			<first>262</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>79</item>
+				<item>16</item>
 			</second>
 		</item>
 		<item>
-			<first>320</first>
+			<first>268</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>80</item>
+				<item>21</item>
 			</second>
 		</item>
 		<item>
-			<first>326</first>
+			<first>274</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>81</item>
+				<item>22</item>
 			</second>
 		</item>
 		<item>
-			<first>334</first>
+			<first>280</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>23</item>
+			</second>
+		</item>
+		<item>
+			<first>287</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>24</item>
+			</second>
+		</item>
+		<item>
+			<first>293</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>25</item>
+			</second>
+		</item>
+		<item>
+			<first>299</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>26</item>
+			</second>
+		</item>
+		<item>
+			<first>306</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>27</item>
+			</second>
+		</item>
+		<item>
+			<first>313</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6262,15 +6260,7 @@
 			</second>
 		</item>
 		<item>
-			<first>337</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>29</item>
-			</second>
-		</item>
-		<item>
-			<first>340</first>
+			<first>317</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6278,7 +6268,15 @@
 			</second>
 		</item>
 		<item>
-			<first>343</first>
+			<first>320</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>29</item>
+			</second>
+		</item>
+		<item>
+			<first>323</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6286,7 +6284,7 @@
 			</second>
 		</item>
 		<item>
-			<first>347</first>
+			<first>327</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6294,7 +6292,7 @@
 			</second>
 		</item>
 		<item>
-			<first>350</first>
+			<first>330</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6302,7 +6300,7 @@
 			</second>
 		</item>
 		<item>
-			<first>354</first>
+			<first>334</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6310,7 +6308,7 @@
 			</second>
 		</item>
 		<item>
-			<first>357</first>
+			<first>337</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6318,7 +6316,7 @@
 			</second>
 		</item>
 		<item>
-			<first>360</first>
+			<first>340</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6326,7 +6324,31 @@
 			</second>
 		</item>
 		<item>
-			<first>365</first>
+			<first>345</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>79</item>
+			</second>
+		</item>
+		<item>
+			<first>350</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>80</item>
+			</second>
+		</item>
+		<item>
+			<first>356</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>81</item>
+			</second>
+		</item>
+		<item>
+			<first>363</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -6335,7 +6357,7 @@
 			</second>
 		</item>
 		<item>
-			<first>374</first>
+			<first>372</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -6344,7 +6366,7 @@
 			</second>
 		</item>
 		<item>
-			<first>383</first>
+			<first>381</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -6357,7 +6379,7 @@
 		<count>44</count>
 		<item_version>0</item_version>
 		<item class_id="49" tracking_level="0" version="0">
-			<first>A_addr_gep_fu_74</first>
+			<first>A_addr_gep_fu_76</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6365,7 +6387,7 @@
 			</second>
 		</item>
 		<item>
-			<first>B_addr_gep_fu_86</first>
+			<first>B_addr_gep_fu_88</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6373,7 +6395,7 @@
 			</second>
 		</item>
 		<item>
-			<first>C_addr_gep_fu_98</first>
+			<first>C_addr_gep_fu_100</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6381,7 +6403,7 @@
 			</second>
 		</item>
 		<item>
-			<first>Col_assign_3_phi_fu_138</first>
+			<first>Col_assign_3_phi_fu_137</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6389,7 +6411,7 @@
 			</second>
 		</item>
 		<item>
-			<first>Col_assign_mid2_fu_298</first>
+			<first>Col_assign_mid2_fu_246</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6397,7 +6419,7 @@
 			</second>
 		</item>
 		<item>
-			<first>Col_assign_phi_fu_171</first>
+			<first>Col_assign_phi_fu_172</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6405,7 +6427,7 @@
 			</second>
 		</item>
 		<item>
-			<first>Row_assign_mid_fu_212</first>
+			<first>Row_assign_mid_fu_208</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6413,7 +6435,7 @@
 			</second>
 		</item>
 		<item>
-			<first>Row_assign_phi_fu_160</first>
+			<first>Row_assign_phi_fu_161</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6421,7 +6443,7 @@
 			</second>
 		</item>
 		<item>
-			<first>c_fu_314</first>
+			<first>c_fu_345</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6429,7 +6451,7 @@
 			</second>
 		</item>
 		<item>
-			<first>exitcond_flatten4_fu_188</first>
+			<first>exitcond_flatten2_fu_190</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6437,7 +6459,7 @@
 			</second>
 		</item>
 		<item>
-			<first>exitcond_flatten_fu_206</first>
+			<first>exitcond_flatten_fu_202</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6445,7 +6467,7 @@
 			</second>
 		</item>
 		<item>
-			<first>exitcond_fu_274</first>
+			<first>exitcond_fu_222</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6453,7 +6475,7 @@
 			</second>
 		</item>
 		<item>
-			<first>exitcond_mid_fu_280</first>
+			<first>exitcond_mid_fu_228</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6461,7 +6483,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_fu_365</first>
+			<first>grp_fu_363</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -6470,7 +6492,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_fu_374</first>
+			<first>grp_fu_372</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -6479,7 +6501,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_fu_383</first>
+			<first>grp_fu_381</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -6488,7 +6510,7 @@
 			</second>
 		</item>
 		<item>
-			<first>indvar_flatten4_phi_fu_127</first>
+			<first>indvar_flatten2_phi_fu_126</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6496,7 +6518,7 @@
 			</second>
 		</item>
 		<item>
-			<first>indvar_flatten_next4_fu_194</first>
+			<first>indvar_flatten_next2_fu_196</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6504,7 +6526,7 @@
 			</second>
 		</item>
 		<item>
-			<first>indvar_flatten_next_fu_326</first>
+			<first>indvar_flatten_next_fu_356</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6512,7 +6534,7 @@
 			</second>
 		</item>
 		<item>
-			<first>indvar_flatten_op_fu_320</first>
+			<first>indvar_flatten_op_fu_350</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6528,7 +6550,7 @@
 			</second>
 		</item>
 		<item>
-			<first>k_fu_200</first>
+			<first>k_fu_262</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6536,7 +6558,7 @@
 			</second>
 		</item>
 		<item>
-			<first>not_exitcond_flatten_fu_268</first>
+			<first>not_exitcond_flatten_fu_216</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6544,7 +6566,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_fu_286</first>
+			<first>r_fu_234</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6552,7 +6574,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sum_mult_addr_gep_fu_105</first>
+			<first>sum_mult_addr_gep_fu_107</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6560,7 +6582,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sum_mult_alloca_fu_70</first>
+			<first>sum_mult_alloca_fu_72</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6568,7 +6590,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp2_fu_226</first>
+			<first>tmp2_fu_274</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6576,63 +6598,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_139_mid2_cast1_fu_354</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>39</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_139_mid2_cast_fu_340</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>40</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_139_mid2_fu_306</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>38</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_165_fu_292</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>36</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_184_cast_fu_343</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>43</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_186_cast_fu_350</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>53</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_187_cast_fu_360</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>56</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_1_fu_246</first>
+			<first>tmp_1_fu_293</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6640,7 +6606,63 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_i4_cast2_fu_357</first>
+			<first>tmp_40_mid2_cast1_fu_334</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>39</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_40_mid2_cast_fu_317</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>40</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_40_mid2_fu_254</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>38</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_53_fu_240</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>36</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_62_cast_fu_323</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>43</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_64_cast_fu_330</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>53</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_65_cast_fu_340</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>56</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_i_i4_cast2_fu_337</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6648,7 +6670,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_i4_cast_fu_347</first>
+			<first>tmp_i_i4_cast_fu_327</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6656,7 +6678,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_i_mid2_cast2_fu_334</first>
+			<first>tmp_i_i_mid2_cast2_fu_313</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6664,7 +6686,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_i_mid2_cast_fu_337</first>
+			<first>tmp_i_i_mid2_cast_fu_320</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6672,7 +6694,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_i_mid2_v_fu_260</first>
+			<first>tmp_i_i_mid2_v_fu_306</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6680,7 +6702,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_mid1_28_fu_240</first>
+			<first>tmp_mid1_23_fu_287</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6688,7 +6710,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_mid1_fu_220</first>
+			<first>tmp_mid1_fu_268</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6696,7 +6718,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_mid2_29_fu_252</first>
+			<first>tmp_mid2_24_fu_299</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6704,7 +6726,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_mid2_fu_232</first>
+			<first>tmp_mid2_fu_280</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6716,7 +6738,7 @@
 		<count>2</count>
 		<item_version>0</item_version>
 		<item>
-			<first>grp_fu_178</first>
+			<first>grp_fu_179</first>
 			<second>
 				<count>5</count>
 				<item_version>0</item_version>
@@ -6728,7 +6750,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_fu_182</first>
+			<first>grp_fu_183</first>
 			<second>
 				<count>4</count>
 				<item_version>0</item_version>
@@ -6748,7 +6770,7 @@
 		<item_version>0</item_version>
 	</return_ports>
 	<dp_mem_port_nodes class_id="50" tracking_level="0" version="0">
-		<count>5</count>
+		<count>4</count>
 		<item_version>0</item_version>
 		<item class_id="51" tracking_level="0" version="0">
 			<first class_id="52" tracking_level="0" version="0">
@@ -6791,30 +6813,20 @@
 				<second>0</second>
 			</first>
 			<second>
-				<count>2</count>
+				<count>4</count>
 				<item_version>0</item_version>
 				<item>61</item>
 				<item>61</item>
-			</second>
-		</item>
-		<item>
-			<first>
-				<first>sum_mult</first>
-				<second>1</second>
-			</first>
-			<second>
-				<count>2</count>
-				<item_version>0</item_version>
-				<item>67</item>
 				<item>75</item>
+				<item>67</item>
 			</second>
 		</item>
 	</dp_mem_port_nodes>
 	<dp_reg_nodes>
-		<count>23</count>
+		<count>25</count>
 		<item_version>0</item_version>
 		<item>
-			<first>123</first>
+			<first>122</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6822,7 +6834,7 @@
 			</second>
 		</item>
 		<item>
-			<first>134</first>
+			<first>133</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6838,7 +6850,7 @@
 			</second>
 		</item>
 		<item>
-			<first>156</first>
+			<first>157</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6846,7 +6858,7 @@
 			</second>
 		</item>
 		<item>
-			<first>167</first>
+			<first>168</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6854,7 +6866,7 @@
 			</second>
 		</item>
 		<item>
-			<first>392</first>
+			<first>389</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6862,7 +6874,7 @@
 			</second>
 		</item>
 		<item>
-			<first>396</first>
+			<first>393</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6870,31 +6882,15 @@
 			</second>
 		</item>
 		<item>
-			<first>401</first>
+			<first>398</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>23</item>
+				<item>19</item>
 			</second>
 		</item>
 		<item>
-			<first>405</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>26</item>
-			</second>
-		</item>
-		<item>
-			<first>409</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>27</item>
-			</second>
-		</item>
-		<item>
-			<first>416</first>
+			<first>406</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6902,7 +6898,7 @@
 			</second>
 		</item>
 		<item>
-			<first>422</first>
+			<first>413</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6910,11 +6906,27 @@
 			</second>
 		</item>
 		<item>
-			<first>429</first>
+			<first>420</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>79</item>
+				<item>23</item>
+			</second>
+		</item>
+		<item>
+			<first>424</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>26</item>
+			</second>
+		</item>
+		<item>
+			<first>428</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>27</item>
 			</second>
 		</item>
 		<item>
@@ -6922,7 +6934,7 @@
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>81</item>
+				<item>42</item>
 			</second>
 		</item>
 		<item>
@@ -6954,7 +6966,7 @@
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>59</item>
+				<item>57</item>
 			</second>
 		</item>
 		<item>
@@ -6962,7 +6974,7 @@
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>57</item>
+				<item>58</item>
 			</second>
 		</item>
 		<item>
@@ -6970,19 +6982,11 @@
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>58</item>
+				<item>59</item>
 			</second>
 		</item>
 		<item>
-			<first>470</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>60</item>
-			</second>
-		</item>
-		<item>
-			<first>476</first>
+			<first>469</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -6990,16 +6994,40 @@
 			</second>
 		</item>
 		<item>
-			<first>481</first>
+			<first>474</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>60</item>
+			</second>
+		</item>
+		<item>
+			<first>479</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>64</item>
 			</second>
 		</item>
+		<item>
+			<first>485</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>79</item>
+			</second>
+		</item>
+		<item>
+			<first>490</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>81</item>
+			</second>
+		</item>
 	</dp_reg_nodes>
 	<dp_regname_nodes>
-		<count>23</count>
+		<count>25</count>
 		<item_version>0</item_version>
 		<item>
 			<first>A_addr_reg_439</first>
@@ -7018,7 +7046,7 @@
 			</second>
 		</item>
 		<item>
-			<first>C_addr_reg_459</first>
+			<first>C_addr_reg_454</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7026,7 +7054,7 @@
 			</second>
 		</item>
 		<item>
-			<first>Col_assign_3_reg_134</first>
+			<first>Col_assign_3_reg_133</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7034,7 +7062,7 @@
 			</second>
 		</item>
 		<item>
-			<first>Col_assign_mid2_reg_416</first>
+			<first>Col_assign_mid2_reg_406</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7042,7 +7070,7 @@
 			</second>
 		</item>
 		<item>
-			<first>Col_assign_reg_167</first>
+			<first>Col_assign_reg_168</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7050,7 +7078,7 @@
 			</second>
 		</item>
 		<item>
-			<first>Row_assign_reg_156</first>
+			<first>Row_assign_reg_157</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7058,7 +7086,7 @@
 			</second>
 		</item>
 		<item>
-			<first>c_reg_429</first>
+			<first>c_reg_485</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7074,7 +7102,7 @@
 			</second>
 		</item>
 		<item>
-			<first>cast_in_b_reg_454</first>
+			<first>cast_in_b_reg_464</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7082,7 +7110,7 @@
 			</second>
 		</item>
 		<item>
-			<first>exitcond_flatten4_reg_392</first>
+			<first>exitcond_flatten2_reg_389</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7090,7 +7118,15 @@
 			</second>
 		</item>
 		<item>
-			<first>indvar_flatten4_reg_123</first>
+			<first>exitcond_flatten_reg_398</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>19</item>
+			</second>
+		</item>
+		<item>
+			<first>indvar_flatten2_reg_122</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7098,7 +7134,7 @@
 			</second>
 		</item>
 		<item>
-			<first>indvar_flatten_next4_reg_396</first>
+			<first>indvar_flatten_next2_reg_393</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7106,7 +7142,7 @@
 			</second>
 		</item>
 		<item>
-			<first>indvar_flatten_next_reg_434</first>
+			<first>indvar_flatten_next_reg_490</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7122,7 +7158,7 @@
 			</second>
 		</item>
 		<item>
-			<first>mult_reg_470</first>
+			<first>mult_reg_474</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7130,7 +7166,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sum_mult_addr_reg_464</first>
+			<first>sum_mult_addr_reg_459</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7138,7 +7174,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sum_mult_load_reg_476</first>
+			<first>sum_mult_load_reg_469</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7146,7 +7182,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_139_mid2_reg_422</first>
+			<first>tmp_40_mid2_reg_413</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7154,7 +7190,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_139_reg_481</first>
+			<first>tmp_42_reg_479</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7162,7 +7198,15 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_i_mid2_v_reg_409</first>
+			<first>tmp_55_reg_434</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>42</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_i_i_mid2_v_reg_428</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7170,7 +7214,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_mid2_29_reg_405</first>
+			<first>tmp_mid2_24_reg_424</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7178,7 +7222,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_mid2_reg_401</first>
+			<first>tmp_mid2_reg_420</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7190,7 +7234,7 @@
 		<count>5</count>
 		<item_version>0</item_version>
 		<item>
-			<first>123</first>
+			<first>122</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7198,7 +7242,7 @@
 			</second>
 		</item>
 		<item>
-			<first>134</first>
+			<first>133</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7214,7 +7258,7 @@
 			</second>
 		</item>
 		<item>
-			<first>156</first>
+			<first>157</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7222,7 +7266,7 @@
 			</second>
 		</item>
 		<item>
-			<first>167</first>
+			<first>168</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7234,7 +7278,7 @@
 		<count>5</count>
 		<item_version>0</item_version>
 		<item>
-			<first>Col_assign_3_reg_134</first>
+			<first>Col_assign_3_reg_133</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7242,7 +7286,7 @@
 			</second>
 		</item>
 		<item>
-			<first>Col_assign_reg_167</first>
+			<first>Col_assign_reg_168</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7250,7 +7294,7 @@
 			</second>
 		</item>
 		<item>
-			<first>Row_assign_reg_156</first>
+			<first>Row_assign_reg_157</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -7258,7 +7302,7 @@
 			</second>
 		</item>
 		<item>
-			<first>indvar_flatten4_reg_123</first>
+			<first>indvar_flatten2_reg_122</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

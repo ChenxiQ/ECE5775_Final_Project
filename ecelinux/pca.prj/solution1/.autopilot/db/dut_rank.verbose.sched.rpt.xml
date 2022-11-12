@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_rank'" level="0">
-<item name = "Date">Fri Nov 11 19:00:00 2022
+<item name = "Date">Fri Nov 11 23:14:26 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -37,7 +37,7 @@
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- Loop 1">?, ?, 6266, -, -, ?, no</column>
 <column name=" + Loop 1.1">6264, 6264, 8, -, -, 783, no</column>
-<column name="- Loop 2">78440, 78440, 3922, -, -, 20, no</column>
+<column name="- Loop 2">39220, 39220, 3922, -, -, 10, no</column>
 <column name=" + Loop 2.1">3920, 3920, 5, -, -, 784, no</column>
 </table>
 </item>

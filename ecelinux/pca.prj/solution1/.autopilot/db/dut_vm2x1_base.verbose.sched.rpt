@@ -1,0 +1,204 @@
+
+
+================================================================
+== Vivado HLS Report for 'dut_vm2x1_base'
+================================================================
+* Date:           Fri Nov 11 23:14:24 2022
+
+* Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
+* Project:        pca.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.58|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    9|    9|   10|   10| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 10, depth = 10
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 10
+* Pipeline: 1
+  Pipeline-0: II = 10, D = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+* FSM state operations: 
+
+ <State 1>: 7.58ns
+ST_1: b1_read [1/1] 1.87ns
+:2  %b1_read = call float @_ssdm_op_Read.ap_auto.float(float %b1)
+
+ST_1: a1_read [1/1] 1.87ns
+:3  %a1_read = call float @_ssdm_op_Read.ap_auto.float(float %a1)
+
+ST_1: tmp [4/4] 5.70ns
+:4  %tmp = fmul float %a1_read, %b1_read
+
+
+ <State 2>: 7.58ns
+ST_2: b2_read [1/1] 1.87ns
+:0  %b2_read = call float @_ssdm_op_Read.ap_auto.float(float %b2)
+
+ST_2: a2_read [1/1] 1.87ns
+:1  %a2_read = call float @_ssdm_op_Read.ap_auto.float(float %a2)
+
+ST_2: tmp [3/4] 5.70ns
+:4  %tmp = fmul float %a1_read, %b1_read
+
+ST_2: tmp_5 [4/4] 5.70ns
+:5  %tmp_5 = fmul float %a2_read, %b2_read
+
+
+ <State 3>: 5.70ns
+ST_3: tmp [2/4] 5.70ns
+:4  %tmp = fmul float %a1_read, %b1_read
+
+ST_3: tmp_5 [3/4] 5.70ns
+:5  %tmp_5 = fmul float %a2_read, %b2_read
+
+
+ <State 4>: 5.70ns
+ST_4: tmp [1/4] 5.70ns
+:4  %tmp = fmul float %a1_read, %b1_read
+
+ST_4: tmp_5 [2/4] 5.70ns
+:5  %tmp_5 = fmul float %a2_read, %b2_read
+
+
+ <State 5>: 5.70ns
+ST_5: tmp_5 [1/4] 5.70ns
+:5  %tmp_5 = fmul float %a2_read, %b2_read
+
+
+ <State 6>: 7.26ns
+ST_6: c_write_assign [5/5] 7.26ns
+:6  %c_write_assign = fadd float %tmp, %tmp_5
+
+
+ <State 7>: 7.26ns
+ST_7: c_write_assign [4/5] 7.26ns
+:6  %c_write_assign = fadd float %tmp, %tmp_5
+
+
+ <State 8>: 7.26ns
+ST_8: c_write_assign [3/5] 7.26ns
+:6  %c_write_assign = fadd float %tmp, %tmp_5
+
+
+ <State 9>: 7.26ns
+ST_9: c_write_assign [2/5] 7.26ns
+:6  %c_write_assign = fadd float %tmp, %tmp_5
+
+
+ <State 10>: 7.26ns
+ST_10: c_write_assign [1/5] 7.26ns
+:6  %c_write_assign = fadd float %tmp, %tmp_5
+
+ST_10: stg_28 [1/1] 0.00ns
+:7  ret float %c_write_assign
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

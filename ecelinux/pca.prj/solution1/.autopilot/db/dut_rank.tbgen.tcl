@@ -9,7 +9,7 @@ set C_modelName {dut_rank}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ PCA_sorted_idx int 32 regular {array 784 { 2 2 } 1 1 }  }
-	{ tsf_mat float 32 regular {array 15680 { 0 3 } 0 1 }  }
+	{ tsf_mat float 32 regular {array 7840 { 0 3 } 0 1 }  }
 	{ S float 32 regular {array 614656 { 1 1 } 3 1 }  }
 	{ U float 32 regular {array 614656 { 1 3 } 3 1 }  }
 }
@@ -37,7 +37,7 @@ set portList {
 	{ PCA_sorted_idx_we1 sc_out sc_logic 1 signal 0 } 
 	{ PCA_sorted_idx_d1 sc_out sc_lv 32 signal 0 } 
 	{ PCA_sorted_idx_q1 sc_in sc_lv 32 signal 0 } 
-	{ tsf_mat_address0 sc_out sc_lv 14 signal 1 } 
+	{ tsf_mat_address0 sc_out sc_lv 13 signal 1 } 
 	{ tsf_mat_ce0 sc_out sc_logic 1 signal 1 } 
 	{ tsf_mat_we0 sc_out sc_logic 1 signal 1 } 
 	{ tsf_mat_d0 sc_out sc_lv 32 signal 1 } 
@@ -68,7 +68,7 @@ set NewPortList {[
  	{ "name": "PCA_sorted_idx_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "PCA_sorted_idx", "role": "we1" }} , 
  	{ "name": "PCA_sorted_idx_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "PCA_sorted_idx", "role": "d1" }} , 
  	{ "name": "PCA_sorted_idx_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "PCA_sorted_idx", "role": "q1" }} , 
- 	{ "name": "tsf_mat_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "tsf_mat", "role": "address0" }} , 
+ 	{ "name": "tsf_mat_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "tsf_mat", "role": "address0" }} , 
  	{ "name": "tsf_mat_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tsf_mat", "role": "ce0" }} , 
  	{ "name": "tsf_mat_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "tsf_mat", "role": "we0" }} , 
  	{ "name": "tsf_mat_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "tsf_mat", "role": "d0" }} , 
@@ -91,9 +91,9 @@ set RtlHierarchyInfo {[
 		{"Name" : "U", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
 		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fcmp_32ns_32ns_1_1_U41", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_mul_11ns_21s_21_1_U42", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_mul_11ns_21s_21_1_U43", "Parent" : "0", "Child" : []}]}
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fcmp_32ns_32ns_1_1_U40", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_mul_11ns_21s_21_1_U41", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_mul_mul_11ns_21s_21_1_U42", "Parent" : "0", "Child" : []}]}
 
 set PerformanceInfo {[
 	{"Name" : "Latency", "Min" : "-1", "Max" : "-1"}
@@ -102,7 +102,7 @@ set PerformanceInfo {[
 
 set Spec2ImplPortList { 
 	PCA_sorted_idx { ap_memory {  { PCA_sorted_idx_address0 mem_address 1 10 }  { PCA_sorted_idx_ce0 mem_ce 1 1 }  { PCA_sorted_idx_we0 mem_we 1 1 }  { PCA_sorted_idx_d0 mem_din 1 32 }  { PCA_sorted_idx_q0 mem_dout 0 32 }  { PCA_sorted_idx_address1 mem_address 1 10 }  { PCA_sorted_idx_ce1 mem_ce 1 1 }  { PCA_sorted_idx_we1 mem_we 1 1 }  { PCA_sorted_idx_d1 mem_din 1 32 }  { PCA_sorted_idx_q1 mem_dout 0 32 } } }
-	tsf_mat { ap_memory {  { tsf_mat_address0 mem_address 1 14 }  { tsf_mat_ce0 mem_ce 1 1 }  { tsf_mat_we0 mem_we 1 1 }  { tsf_mat_d0 mem_din 1 32 } } }
+	tsf_mat { ap_memory {  { tsf_mat_address0 mem_address 1 13 }  { tsf_mat_ce0 mem_ce 1 1 }  { tsf_mat_we0 mem_we 1 1 }  { tsf_mat_d0 mem_din 1 32 } } }
 	S { ap_memory {  { S_address0 mem_address 1 20 }  { S_ce0 mem_ce 1 1 }  { S_q0 mem_dout 0 32 }  { S_address1 mem_address 1 20 }  { S_ce1 mem_ce 1 1 }  { S_q1 mem_dout 0 32 } } }
 	U { ap_memory {  { U_address0 mem_address 1 20 }  { U_ce0 mem_ce 1 1 }  { U_q0 mem_dout 0 32 } } }
 }

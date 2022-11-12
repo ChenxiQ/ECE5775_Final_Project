@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_matrix_multiply_alt26'
 ================================================================
-* Date:           Fri Nov 11 18:59:54 2022
+* Date:           Fri Nov 11 23:14:23 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -25,24 +25,24 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----------+-----------+-----------+-----------+---------+
-    |        Latency        |        Interval       | Pipeline|
-    |    min    |    max    |    min    |    max    |   Type  |
-    +-----------+-----------+-----------+-----------+---------+
-    |  122931213|  122931213|  122931213|  122931213|   none  |
-    +-----------+-----------+-----------+-----------+---------+
+    +----------+----------+----------+----------+---------+
+    |       Latency       |       Interval      | Pipeline|
+    |    min   |    max   |    min   |    max   |   Type  |
+    +----------+----------+----------+----------+---------+
+    |  61465613|  61465613|  61465613|  61465613|   none  |
+    +----------+----------+----------+----------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +------------------------------------+-----------+-----------+----------+-----------+-----------+-----------+----------+
-        |                                    |        Latency        | Iteration|  Initiation Interval  |    Trip   |          |
-        |              Loop Name             |    min    |    max    |  Latency |  achieved |   target  |   Count   | Pipelined|
-        +------------------------------------+-----------+-----------+----------+-----------+-----------+-----------+----------+
-        |- a_col_loop_a_row_loop_b_col_loop  |  122931211|  122931211|        13|          1|          1|  122931200|    yes   |
-        +------------------------------------+-----------+-----------+----------+-----------+-----------+-----------+----------+
+        +------------------------------------+----------+----------+----------+-----------+-----------+----------+----------+
+        |                                    |       Latency       | Iteration|  Initiation Interval  |   Trip   |          |
+        |              Loop Name             |    min   |    max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +------------------------------------+----------+----------+----------+-----------+-----------+----------+----------+
+        |- a_col_loop_a_row_loop_b_col_loop  |  61465611|  61465611|        13|          1|          1|  61465600|    yes   |
+        +------------------------------------+----------+----------+----------+-----------+-----------+----------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -82,8 +82,8 @@ IsGatedGlobalClock: 0
 1 --> 
 	2  / true
 2 --> 
-	15  / (exitcond_flatten3)
-	3  / (!exitcond_flatten3)
+	15  / (exitcond_flatten1)
+	3  / (!exitcond_flatten1)
 3 --> 
 	4  / true
 4 --> 
@@ -120,32 +120,32 @@ ST_1: stg_17 [1/1] 1.57ns
 
 
  <State 2>: 6.92ns
-ST_2: indvar_flatten3 [1/1] 0.00ns
-:0  %indvar_flatten3 = phi i27 [ 0, %0 ], [ %indvar_flatten_next3, %ifBlock ]
+ST_2: indvar_flatten1 [1/1] 0.00ns
+:0  %indvar_flatten1 = phi i26 [ 0, %0 ], [ %indvar_flatten_next1, %ifBlock ]
 
 ST_2: Col_assign_2 [1/1] 0.00ns
-:1  %Col_assign_2 = phi i8 [ 0, %0 ], [ %tmp_i_i_mid2_v, %ifBlock ]
+:1  %Col_assign_2 = phi i7 [ 0, %0 ], [ %tmp_i_i_mid2_v, %ifBlock ]
 
 ST_2: indvar_flatten [1/1] 0.00ns
 :2  %indvar_flatten = phi i20 [ 0, %0 ], [ %indvar_flatten_next, %ifBlock ]
 
 ST_2: Row_assign [1/1] 0.00ns
-:3  %Row_assign = phi i10 [ 0, %0 ], [ %tmp_133_mid2, %ifBlock ]
+:3  %Row_assign = phi i10 [ 0, %0 ], [ %tmp_34_mid2, %ifBlock ]
 
 ST_2: Col_assign [1/1] 0.00ns
 :4  %Col_assign = phi i10 [ 0, %0 ], [ %c, %ifBlock ]
 
-ST_2: exitcond_flatten3 [1/1] 2.44ns
-:5  %exitcond_flatten3 = icmp eq i27 %indvar_flatten3, -11286528
+ST_2: exitcond_flatten1 [1/1] 2.43ns
+:5  %exitcond_flatten1 = icmp eq i26 %indvar_flatten1, -5643264
 
-ST_2: indvar_flatten_next3 [1/1] 2.32ns
-:6  %indvar_flatten_next3 = add i27 %indvar_flatten3, 1
+ST_2: indvar_flatten_next1 [1/1] 2.32ns
+:6  %indvar_flatten_next1 = add i26 %indvar_flatten1, 1
 
 ST_2: stg_25 [1/1] 0.00ns
-:7  br i1 %exitcond_flatten3, label %7, label %.reset7
+:7  br i1 %exitcond_flatten1, label %7, label %.reset7
 
 ST_2: k [1/1] 1.72ns
-.reset7:0  %k = add i8 %Col_assign_2, 1
+.reset7:0  %k = add i7 %Col_assign_2, 1
 
 ST_2: exitcond_flatten [1/1] 2.34ns
 .reset7:3  %exitcond_flatten = icmp eq i20 %indvar_flatten, -433920
@@ -153,26 +153,26 @@ ST_2: exitcond_flatten [1/1] 2.34ns
 ST_2: Row_assign_mid [1/1] 1.37ns
 .reset7:4  %Row_assign_mid = select i1 %exitcond_flatten, i10 0, i10 %Row_assign
 
-ST_2: tmp_mid1 [1/1] 2.00ns
-.reset7:5  %tmp_mid1 = icmp eq i8 %k, 0
+ST_2: tmp_mid1 [1/1] 1.97ns
+.reset7:5  %tmp_mid1 = icmp eq i7 %k, 0
 
-ST_2: tmp2 [1/1] 2.00ns
-.reset7:6  %tmp2 = icmp eq i8 %Col_assign_2, 0
+ST_2: tmp2 [1/1] 1.97ns
+.reset7:6  %tmp2 = icmp eq i7 %Col_assign_2, 0
 
 ST_2: tmp_mid2 [1/1] 1.37ns
 .reset7:7  %tmp_mid2 = select i1 %exitcond_flatten, i1 %tmp_mid1, i1 %tmp2
 
-ST_2: tmp_mid1_25 [1/1] 2.00ns
-.reset7:8  %tmp_mid1_25 = icmp eq i8 %k, -57
+ST_2: tmp_mid1_20 [1/1] 1.97ns
+.reset7:8  %tmp_mid1_20 = icmp eq i7 %k, -29
 
-ST_2: tmp_1 [1/1] 2.00ns
-.reset7:9  %tmp_1 = icmp eq i8 %Col_assign_2, -57
+ST_2: tmp_1 [1/1] 1.97ns
+.reset7:9  %tmp_1 = icmp eq i7 %Col_assign_2, -29
 
-ST_2: tmp_mid2_26 [1/1] 1.37ns
-.reset7:10  %tmp_mid2_26 = select i1 %exitcond_flatten, i1 %tmp_mid1_25, i1 %tmp_1
+ST_2: tmp_mid2_21 [1/1] 1.37ns
+.reset7:10  %tmp_mid2_21 = select i1 %exitcond_flatten, i1 %tmp_mid1_20, i1 %tmp_1
 
 ST_2: tmp_i_i_mid2_v [1/1] 1.37ns
-.reset7:11  %tmp_i_i_mid2_v = select i1 %exitcond_flatten, i8 %k, i8 %Col_assign_2
+.reset7:11  %tmp_i_i_mid2_v = select i1 %exitcond_flatten, i7 %k, i7 %Col_assign_2
 
 ST_2: not_exitcond_flatten [1/1] 0.00ns (grouped into LUT with out node exitcond_mid)
 .reset7:15  %not_exitcond_flatten = xor i1 %exitcond_flatten, true
@@ -186,20 +186,20 @@ ST_2: exitcond_mid [1/1] 1.37ns (out node of the LUT)
 ST_2: r [1/1] 1.84ns
 .reset7:18  %r = add i10 %Row_assign_mid, 1
 
-ST_2: tmp_159 [1/1] 0.00ns (grouped into LUT with out node Col_assign_mid2)
-.reset7:20  %tmp_159 = or i1 %exitcond_mid, %exitcond_flatten
+ST_2: tmp_47 [1/1] 0.00ns (grouped into LUT with out node Col_assign_mid2)
+.reset7:20  %tmp_47 = or i1 %exitcond_mid, %exitcond_flatten
 
 ST_2: Col_assign_mid2 [1/1] 1.37ns (out node of the LUT)
-.reset7:21  %Col_assign_mid2 = select i1 %tmp_159, i10 0, i10 %Col_assign
+.reset7:21  %Col_assign_mid2 = select i1 %tmp_47, i10 0, i10 %Col_assign
 
-ST_2: tmp_133_mid2 [1/1] 1.37ns
-.reset7:22  %tmp_133_mid2 = select i1 %exitcond_mid, i10 %r, i10 %Row_assign_mid
+ST_2: tmp_34_mid2 [1/1] 1.37ns
+.reset7:22  %tmp_34_mid2 = select i1 %exitcond_mid, i10 %r, i10 %Row_assign_mid
 
 ST_2: stg_43 [1/1] 0.00ns
 .reset7:46  br i1 %tmp_mid2, label %2, label %3
 
 ST_2: stg_44 [1/1] 0.00ns
-:1  br i1 %tmp_mid2_26, label %4, label %5
+:1  br i1 %tmp_mid2_21, label %4, label %5
 
 ST_2: c [1/1] 1.84ns
 ifBlock:1  %c = add i10 %Col_assign_mid2, 1
@@ -213,54 +213,54 @@ ifBlock:3  %indvar_flatten_next = select i1 %exitcond_flatten, i20 1, i20 %indva
 
  <State 3>: 9.09ns
 ST_3: tmp_i_i_mid2_cast1 [1/1] 0.00ns
-.reset7:12  %tmp_i_i_mid2_cast1 = zext i8 %tmp_i_i_mid2_v to i18
+.reset7:12  %tmp_i_i_mid2_cast1 = zext i7 %tmp_i_i_mid2_v to i17
 
 ST_3: tmp_i_i_mid2_cast [1/1] 0.00ns
-.reset7:13  %tmp_i_i_mid2_cast = zext i8 %tmp_i_i_mid2_v to i18
+.reset7:13  %tmp_i_i_mid2_cast = zext i7 %tmp_i_i_mid2_v to i17
 
 ST_3: tmp_s [1/1] 3.36ns
-.reset7:14  %tmp_s = mul i18 %tmp_i_i_mid2_cast, 784
+.reset7:14  %tmp_s = mul i17 %tmp_i_i_mid2_cast, 784
 
-ST_3: tmp_133_mid2_cast [1/1] 0.00ns
-.reset7:24  %tmp_133_mid2_cast = zext i10 %tmp_133_mid2 to i18
+ST_3: tmp_34_mid2_cast [1/1] 0.00ns
+.reset7:24  %tmp_34_mid2_cast = zext i10 %tmp_34_mid2 to i17
 
-ST_3: tmp_160 [1/1] 3.36ns
-.reset7:25  %tmp_160 = mul i18 %tmp_133_mid2_cast, 200
+ST_3: tmp_48 [1/1] 3.36ns
+.reset7:25  %tmp_48 = mul i17 %tmp_34_mid2_cast, 100
 
-ST_3: tmp_161 [1/1] 3.02ns
-.reset7:26  %tmp_161 = add i18 %tmp_i_i_mid2_cast1, %tmp_160
+ST_3: tmp_49 [1/1] 3.02ns
+.reset7:26  %tmp_49 = add i17 %tmp_i_i_mid2_cast1, %tmp_48
 
-ST_3: tmp_177_cast [1/1] 0.00ns
-.reset7:27  %tmp_177_cast = zext i18 %tmp_161 to i64
+ST_3: tmp_55_cast [1/1] 0.00ns
+.reset7:27  %tmp_55_cast = zext i17 %tmp_49 to i64
 
 ST_3: A_addr [1/1] 0.00ns
-.reset7:28  %A_addr = getelementptr [156800 x float]* %A, i64 0, i64 %tmp_177_cast
+.reset7:28  %A_addr = getelementptr [78400 x float]* %A, i64 0, i64 %tmp_55_cast
 
 ST_3: cast_in_a [2/2] 2.71ns
 .reset7:33  %cast_in_a = load float* %A_addr, align 4
 
 ST_3: tmp_i_i4_cast [1/1] 0.00ns
-.reset7:35  %tmp_i_i4_cast = zext i10 %Col_assign_mid2 to i18
+.reset7:35  %tmp_i_i4_cast = zext i10 %Col_assign_mid2 to i17
 
-ST_3: tmp_163 [1/1] 3.02ns
-.reset7:36  %tmp_163 = add i18 %tmp_i_i4_cast, %tmp_s
+ST_3: tmp_51 [1/1] 3.02ns
+.reset7:36  %tmp_51 = add i17 %tmp_i_i4_cast, %tmp_s
 
-ST_3: tmp_179_cast [1/1] 0.00ns
-.reset7:37  %tmp_179_cast = zext i18 %tmp_163 to i64
+ST_3: tmp_57_cast [1/1] 0.00ns
+.reset7:37  %tmp_57_cast = zext i17 %tmp_51 to i64
 
 ST_3: B_addr [1/1] 0.00ns
-.reset7:38  %B_addr = getelementptr [156800 x float]* %B, i64 0, i64 %tmp_179_cast
+.reset7:38  %B_addr = getelementptr [78400 x float]* %B, i64 0, i64 %tmp_57_cast
 
 ST_3: cast_in_b [2/2] 2.71ns
 .reset7:43  %cast_in_b = load float* %B_addr, align 4
 
 
  <State 4>: 8.99ns
-ST_4: tmp_133_mid2_cast1 [1/1] 0.00ns
-.reset7:23  %tmp_133_mid2_cast1 = zext i10 %tmp_133_mid2 to i20
+ST_4: tmp_34_mid2_cast1 [1/1] 0.00ns
+.reset7:23  %tmp_34_mid2_cast1 = zext i10 %tmp_34_mid2 to i20
 
-ST_4: tmp_162 [1/1] 3.36ns
-.reset7:29  %tmp_162 = mul i20 %tmp_133_mid2_cast1, 784
+ST_4: tmp_50 [1/1] 3.36ns
+.reset7:29  %tmp_50 = mul i20 %tmp_34_mid2_cast1, 784
 
 ST_4: cast_in_a [1/2] 2.71ns
 .reset7:33  %cast_in_a = load float* %A_addr, align 4
@@ -268,17 +268,17 @@ ST_4: cast_in_a [1/2] 2.71ns
 ST_4: tmp_i_i4_cast1 [1/1] 0.00ns
 .reset7:34  %tmp_i_i4_cast1 = zext i10 %Col_assign_mid2 to i20
 
-ST_4: tmp_164 [1/1] 3.02ns
-.reset7:39  %tmp_164 = add i20 %tmp_i_i4_cast1, %tmp_162
+ST_4: tmp_52 [1/1] 3.02ns
+.reset7:39  %tmp_52 = add i20 %tmp_i_i4_cast1, %tmp_50
 
-ST_4: tmp_180_cast [1/1] 0.00ns
-.reset7:40  %tmp_180_cast = zext i20 %tmp_164 to i64
+ST_4: tmp_58_cast [1/1] 0.00ns
+.reset7:40  %tmp_58_cast = zext i20 %tmp_52 to i64
 
 ST_4: C_addr [1/1] 0.00ns
-.reset7:41  %C_addr = getelementptr [614656 x float]* %C, i64 0, i64 %tmp_180_cast
+.reset7:41  %C_addr = getelementptr [614656 x float]* %C, i64 0, i64 %tmp_58_cast
 
 ST_4: sum_mult_addr [1/1] 0.00ns
-.reset7:42  %sum_mult_addr = getelementptr [614656 x float]* %sum_mult, i64 0, i64 %tmp_180_cast
+.reset7:42  %sum_mult_addr = getelementptr [614656 x float]* %sum_mult, i64 0, i64 %tmp_58_cast
 
 ST_4: cast_in_b [1/2] 2.71ns
 .reset7:43  %cast_in_b = load float* %B_addr, align 4
@@ -315,36 +315,36 @@ ST_7: sum_mult_load [1/4] 2.61ns
 
 
  <State 8>: 7.26ns
-ST_8: tmp_135 [5/5] 7.26ns
-:0  %tmp_135 = fadd float %sum_mult_load, %mult
+ST_8: tmp_36 [5/5] 7.26ns
+:0  %tmp_36 = fadd float %sum_mult_load, %mult
 
 
  <State 9>: 7.26ns
-ST_9: tmp_135 [4/5] 7.26ns
-:0  %tmp_135 = fadd float %sum_mult_load, %mult
+ST_9: tmp_36 [4/5] 7.26ns
+:0  %tmp_36 = fadd float %sum_mult_load, %mult
 
 
  <State 10>: 7.26ns
-ST_10: tmp_135 [3/5] 7.26ns
-:0  %tmp_135 = fadd float %sum_mult_load, %mult
+ST_10: tmp_36 [3/5] 7.26ns
+:0  %tmp_36 = fadd float %sum_mult_load, %mult
 
 
  <State 11>: 7.26ns
-ST_11: tmp_135 [2/5] 7.26ns
-:0  %tmp_135 = fadd float %sum_mult_load, %mult
+ST_11: tmp_36 [2/5] 7.26ns
+:0  %tmp_36 = fadd float %sum_mult_load, %mult
 
 
  <State 12>: 7.26ns
-ST_12: tmp_135 [1/5] 7.26ns
-:0  %tmp_135 = fadd float %sum_mult_load, %mult
+ST_12: tmp_36 [1/5] 7.26ns
+:0  %tmp_36 = fadd float %sum_mult_load, %mult
 
 
  <State 13>: 2.61ns
 ST_13: stg_84 [2/2] 2.61ns
-:0  store float %tmp_135, float* %sum_mult_addr, align 4
+:0  store float %tmp_36, float* %sum_mult_addr, align 4
 
 ST_13: stg_85 [2/2] 2.61ns
-:0  store float %tmp_135, float* %C_addr, align 4
+:0  store float %tmp_36, float* %C_addr, align 4
 
 ST_13: stg_86 [2/2] 2.61ns
 :0  store float %mult, float* %sum_mult_addr, align 4
@@ -354,8 +354,8 @@ ST_13: stg_86 [2/2] 2.61ns
 ST_14: stg_87 [1/1] 0.00ns
 .reset7:1  call void (...)* @_ssdm_op_SpecLoopName([33 x i8]* @a_col_loop_a_row_loop_b_col_lo)
 
-ST_14: empty_24 [1/1] 0.00ns
-.reset7:2  %empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 122931200, i64 122931200, i64 122931200)
+ST_14: empty_19 [1/1] 0.00ns
+.reset7:2  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 61465600, i64 61465600, i64 61465600)
 
 ST_14: stg_89 [1/1] 0.00ns
 .reset7:19  call void (...)* @_ssdm_op_SpecLoopName([22 x i8]* @a_row_loop_b_col_loop_str)
@@ -363,20 +363,20 @@ ST_14: stg_89 [1/1] 0.00ns
 ST_14: stg_90 [1/1] 0.00ns
 .reset7:30  call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str1809) nounwind
 
-ST_14: tmp_134 [1/1] 0.00ns
-.reset7:31  %tmp_134 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str1809)
+ST_14: tmp_35 [1/1] 0.00ns
+.reset7:31  %tmp_35 = call i32 (...)* @_ssdm_op_SpecRegionBegin([11 x i8]* @p_str1809)
 
 ST_14: stg_92 [1/1] 0.00ns
 .reset7:32  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1806) nounwind
 
 ST_14: stg_93 [1/2] 2.61ns
-:0  store float %tmp_135, float* %sum_mult_addr, align 4
+:0  store float %tmp_36, float* %sum_mult_addr, align 4
 
 ST_14: stg_94 [1/1] 0.00ns
 :1  br label %6
 
 ST_14: stg_95 [1/2] 2.61ns
-:0  store float %tmp_135, float* %C_addr, align 4
+:0  store float %tmp_36, float* %C_addr, align 4
 
 ST_14: stg_96 [1/1] 0.00ns
 :1  br label %6
@@ -391,7 +391,7 @@ ST_14: stg_99 [1/1] 0.00ns
 :1  br label %ifBlock
 
 ST_14: empty [1/1] 0.00ns
-ifBlock:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str1809, i32 %tmp_134)
+ifBlock:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([11 x i8]* @p_str1809, i32 %tmp_35)
 
 ST_14: stg_101 [1/1] 0.00ns
 ifBlock:4  br label %1
@@ -426,13 +426,13 @@ Port [ C]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0
 <method=bitvector/>
 sum_mult             (alloca           ) [ 0011111111111110]
 stg_17               (br               ) [ 0111111111111110]
-indvar_flatten3      (phi              ) [ 0010000000000000]
+indvar_flatten1      (phi              ) [ 0010000000000000]
 Col_assign_2         (phi              ) [ 0010000000000000]
 indvar_flatten       (phi              ) [ 0010000000000000]
 Row_assign           (phi              ) [ 0010000000000000]
 Col_assign           (phi              ) [ 0010000000000000]
-exitcond_flatten3    (icmp             ) [ 0011111111111110]
-indvar_flatten_next3 (add              ) [ 0111111111111110]
+exitcond_flatten1    (icmp             ) [ 0011111111111110]
+indvar_flatten_next1 (add              ) [ 0111111111111110]
 stg_25               (br               ) [ 0000000000000000]
 k                    (add              ) [ 0000000000000000]
 exitcond_flatten     (icmp             ) [ 0000000000000000]
@@ -440,17 +440,17 @@ Row_assign_mid       (select           ) [ 0000000000000000]
 tmp_mid1             (icmp             ) [ 0000000000000000]
 tmp2                 (icmp             ) [ 0000000000000000]
 tmp_mid2             (select           ) [ 0011111111111110]
-tmp_mid1_25          (icmp             ) [ 0000000000000000]
+tmp_mid1_20          (icmp             ) [ 0000000000000000]
 tmp_1                (icmp             ) [ 0000000000000000]
-tmp_mid2_26          (select           ) [ 0011111111111110]
+tmp_mid2_21          (select           ) [ 0011111111111110]
 tmp_i_i_mid2_v       (select           ) [ 0111111111111110]
 not_exitcond_flatten (xor              ) [ 0000000000000000]
 exitcond             (icmp             ) [ 0000000000000000]
 exitcond_mid         (and              ) [ 0000000000000000]
 r                    (add              ) [ 0000000000000000]
-tmp_159              (or               ) [ 0000000000000000]
+tmp_47               (or               ) [ 0000000000000000]
 Col_assign_mid2      (select           ) [ 0011100000000000]
-tmp_133_mid2         (select           ) [ 0111111111111110]
+tmp_34_mid2          (select           ) [ 0111111111111110]
 stg_43               (br               ) [ 0000000000000000]
 stg_44               (br               ) [ 0000000000000000]
 c                    (add              ) [ 0111111111111110]
@@ -459,32 +459,32 @@ indvar_flatten_next  (select           ) [ 0111111111111110]
 tmp_i_i_mid2_cast1   (zext             ) [ 0000000000000000]
 tmp_i_i_mid2_cast    (zext             ) [ 0000000000000000]
 tmp_s                (mul              ) [ 0000000000000000]
-tmp_133_mid2_cast    (zext             ) [ 0000000000000000]
-tmp_160              (mul              ) [ 0000000000000000]
-tmp_161              (add              ) [ 0000000000000000]
-tmp_177_cast         (zext             ) [ 0000000000000000]
+tmp_34_mid2_cast     (zext             ) [ 0000000000000000]
+tmp_48               (mul              ) [ 0000000000000000]
+tmp_49               (add              ) [ 0000000000000000]
+tmp_55_cast          (zext             ) [ 0000000000000000]
 A_addr               (getelementptr    ) [ 0010100000000000]
 tmp_i_i4_cast        (zext             ) [ 0000000000000000]
-tmp_163              (add              ) [ 0000000000000000]
-tmp_179_cast         (zext             ) [ 0000000000000000]
+tmp_51               (add              ) [ 0000000000000000]
+tmp_57_cast          (zext             ) [ 0000000000000000]
 B_addr               (getelementptr    ) [ 0010100000000000]
-tmp_133_mid2_cast1   (zext             ) [ 0000000000000000]
-tmp_162              (mul              ) [ 0000000000000000]
+tmp_34_mid2_cast1    (zext             ) [ 0000000000000000]
+tmp_50               (mul              ) [ 0000000000000000]
 cast_in_a            (load             ) [ 0010011100000000]
 tmp_i_i4_cast1       (zext             ) [ 0000000000000000]
-tmp_164              (add              ) [ 0000000000000000]
-tmp_180_cast         (zext             ) [ 0000000000000000]
+tmp_52               (add              ) [ 0000000000000000]
+tmp_58_cast          (zext             ) [ 0000000000000000]
 C_addr               (getelementptr    ) [ 0010011111111110]
 sum_mult_addr        (getelementptr    ) [ 0010011111111110]
 cast_in_b            (load             ) [ 0010011100000000]
 mult                 (fmul             ) [ 0010000011111110]
 sum_mult_load        (load             ) [ 0010000011111000]
-tmp_135              (fadd             ) [ 0010000000000110]
+tmp_36               (fadd             ) [ 0010000000000110]
 stg_87               (specloopname     ) [ 0000000000000000]
-empty_24             (speclooptripcount) [ 0000000000000000]
+empty_19             (speclooptripcount) [ 0000000000000000]
 stg_89               (specloopname     ) [ 0000000000000000]
 stg_90               (specloopname     ) [ 0000000000000000]
-tmp_134              (specregionbegin  ) [ 0000000000000000]
+tmp_35               (specregionbegin  ) [ 0000000000000000]
 stg_92               (specpipeline     ) [ 0000000000000000]
 stg_93               (store            ) [ 0000000000000000]
 stg_94               (br               ) [ 0000000000000000]
@@ -816,8 +816,8 @@ stg_102              (ret              ) [ 0000000000000000]
 <pin_list>
 <pin id="71" dir="0" index="0" bw="32" slack="0"/>
 <pin id="72" dir="0" index="1" bw="1" slack="0"/>
-<pin id="73" dir="0" index="2" bw="18" slack="0"/>
-<pin id="74" dir="1" index="3" bw="18" slack="0"/>
+<pin id="73" dir="0" index="2" bw="17" slack="0"/>
+<pin id="74" dir="1" index="3" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
@@ -827,7 +827,7 @@ stg_102              (ret              ) [ 0000000000000000]
 
 <comp id="77" class="1004" name="grp_access_fu_77">
 <pin_list>
-<pin id="78" dir="0" index="0" bw="18" slack="0"/>
+<pin id="78" dir="0" index="0" bw="17" slack="0"/>
 <pin id="79" dir="0" index="1" bw="32" slack="2147483647"/>
 <pin id="80" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
@@ -841,8 +841,8 @@ stg_102              (ret              ) [ 0000000000000000]
 <pin_list>
 <pin id="83" dir="0" index="0" bw="32" slack="0"/>
 <pin id="84" dir="0" index="1" bw="1" slack="0"/>
-<pin id="85" dir="0" index="2" bw="18" slack="0"/>
-<pin id="86" dir="1" index="3" bw="18" slack="0"/>
+<pin id="85" dir="0" index="2" bw="17" slack="0"/>
+<pin id="86" dir="1" index="3" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
@@ -852,7 +852,7 @@ stg_102              (ret              ) [ 0000000000000000]
 
 <comp id="89" class="1004" name="grp_access_fu_89">
 <pin_list>
-<pin id="90" dir="0" index="0" bw="18" slack="0"/>
+<pin id="90" dir="0" index="0" bw="17" slack="0"/>
 <pin id="91" dir="0" index="1" bw="32" slack="2147483647"/>
 <pin id="92" dir="1" index="2" bw="32" slack="0"/>
 </pin_list>
@@ -915,34 +915,34 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="119" class="1005" name="indvar_flatten3_reg_119">
+<comp id="119" class="1005" name="indvar_flatten1_reg_119">
 <pin_list>
-<pin id="120" dir="0" index="0" bw="27" slack="1"/>
-<pin id="121" dir="1" index="1" bw="27" slack="1"/>
+<pin id="120" dir="0" index="0" bw="26" slack="1"/>
+<pin id="121" dir="1" index="1" bw="26" slack="1"/>
 </pin_list>
 <bind>
-<opset="indvar_flatten3 (phireg) "/>
+<opset="indvar_flatten1 (phireg) "/>
 </bind>
 </comp>
 
-<comp id="123" class="1004" name="indvar_flatten3_phi_fu_123">
+<comp id="123" class="1004" name="indvar_flatten1_phi_fu_123">
 <pin_list>
 <pin id="124" dir="0" index="0" bw="1" slack="1"/>
 <pin id="125" dir="0" index="1" bw="0" slack="2147483647"/>
-<pin id="126" dir="0" index="2" bw="27" slack="0"/>
+<pin id="126" dir="0" index="2" bw="26" slack="0"/>
 <pin id="127" dir="0" index="3" bw="0" slack="2147483647"/>
-<pin id="128" dir="1" index="4" bw="27" slack="0"/>
+<pin id="128" dir="1" index="4" bw="26" slack="0"/>
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
-<opset="indvar_flatten3/2 "/>
+<opset="indvar_flatten1/2 "/>
 </bind>
 </comp>
 
 <comp id="130" class="1005" name="Col_assign_2_reg_130">
 <pin_list>
-<pin id="131" dir="0" index="0" bw="8" slack="1"/>
-<pin id="132" dir="1" index="1" bw="8" slack="1"/>
+<pin id="131" dir="0" index="0" bw="7" slack="1"/>
+<pin id="132" dir="1" index="1" bw="7" slack="1"/>
 </pin_list>
 <bind>
 <opset="Col_assign_2 (phireg) "/>
@@ -953,9 +953,9 @@ stg_102              (ret              ) [ 0000000000000000]
 <pin_list>
 <pin id="135" dir="0" index="0" bw="1" slack="1"/>
 <pin id="136" dir="0" index="1" bw="0" slack="2147483647"/>
-<pin id="137" dir="0" index="2" bw="8" slack="0"/>
+<pin id="137" dir="0" index="2" bw="7" slack="0"/>
 <pin id="138" dir="0" index="3" bw="0" slack="2147483647"/>
-<pin id="139" dir="1" index="4" bw="8" slack="0"/>
+<pin id="139" dir="1" index="4" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
@@ -1043,7 +1043,7 @@ stg_102              (ret              ) [ 0000000000000000]
 </pin_list>
 <bind>
 <opcode="fadd(9) " fcode="fadd"/>
-<opset="tmp_135/8 "/>
+<opset="tmp_36/8 "/>
 </bind>
 </comp>
 
@@ -1059,35 +1059,35 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="184" class="1004" name="exitcond_flatten3_fu_184">
+<comp id="184" class="1004" name="exitcond_flatten1_fu_184">
 <pin_list>
-<pin id="185" dir="0" index="0" bw="27" slack="0"/>
-<pin id="186" dir="0" index="1" bw="25" slack="0"/>
+<pin id="185" dir="0" index="0" bw="26" slack="0"/>
+<pin id="186" dir="0" index="1" bw="24" slack="0"/>
 <pin id="187" dir="1" index="2" bw="1" slack="1"/>
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="exitcond_flatten3/2 "/>
+<opset="exitcond_flatten1/2 "/>
 </bind>
 </comp>
 
-<comp id="190" class="1004" name="indvar_flatten_next3_fu_190">
+<comp id="190" class="1004" name="indvar_flatten_next1_fu_190">
 <pin_list>
-<pin id="191" dir="0" index="0" bw="27" slack="0"/>
+<pin id="191" dir="0" index="0" bw="26" slack="0"/>
 <pin id="192" dir="0" index="1" bw="1" slack="0"/>
-<pin id="193" dir="1" index="2" bw="27" slack="0"/>
+<pin id="193" dir="1" index="2" bw="26" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="indvar_flatten_next3/2 "/>
+<opset="indvar_flatten_next1/2 "/>
 </bind>
 </comp>
 
 <comp id="196" class="1004" name="k_fu_196">
 <pin_list>
-<pin id="197" dir="0" index="0" bw="8" slack="0"/>
+<pin id="197" dir="0" index="0" bw="7" slack="0"/>
 <pin id="198" dir="0" index="1" bw="1" slack="0"/>
-<pin id="199" dir="1" index="2" bw="8" slack="0"/>
+<pin id="199" dir="1" index="2" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -1122,7 +1122,7 @@ stg_102              (ret              ) [ 0000000000000000]
 
 <comp id="216" class="1004" name="tmp_mid1_fu_216">
 <pin_list>
-<pin id="217" dir="0" index="0" bw="8" slack="0"/>
+<pin id="217" dir="0" index="0" bw="7" slack="0"/>
 <pin id="218" dir="0" index="1" bw="1" slack="0"/>
 <pin id="219" dir="1" index="2" bw="1" slack="0"/>
 </pin_list>
@@ -1134,7 +1134,7 @@ stg_102              (ret              ) [ 0000000000000000]
 
 <comp id="222" class="1004" name="tmp2_fu_222">
 <pin_list>
-<pin id="223" dir="0" index="0" bw="8" slack="0"/>
+<pin id="223" dir="0" index="0" bw="7" slack="0"/>
 <pin id="224" dir="0" index="1" bw="1" slack="0"/>
 <pin id="225" dir="1" index="2" bw="1" slack="0"/>
 </pin_list>
@@ -1157,22 +1157,22 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="236" class="1004" name="tmp_mid1_25_fu_236">
+<comp id="236" class="1004" name="tmp_mid1_20_fu_236">
 <pin_list>
-<pin id="237" dir="0" index="0" bw="8" slack="0"/>
-<pin id="238" dir="0" index="1" bw="7" slack="0"/>
+<pin id="237" dir="0" index="0" bw="7" slack="0"/>
+<pin id="238" dir="0" index="1" bw="6" slack="0"/>
 <pin id="239" dir="1" index="2" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="tmp_mid1_25/2 "/>
+<opset="tmp_mid1_20/2 "/>
 </bind>
 </comp>
 
 <comp id="242" class="1004" name="tmp_1_fu_242">
 <pin_list>
-<pin id="243" dir="0" index="0" bw="8" slack="0"/>
-<pin id="244" dir="0" index="1" bw="7" slack="0"/>
+<pin id="243" dir="0" index="0" bw="7" slack="0"/>
+<pin id="244" dir="0" index="1" bw="6" slack="0"/>
 <pin id="245" dir="1" index="2" bw="1" slack="0"/>
 </pin_list>
 <bind>
@@ -1181,7 +1181,7 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="248" class="1004" name="tmp_mid2_26_fu_248">
+<comp id="248" class="1004" name="tmp_mid2_21_fu_248">
 <pin_list>
 <pin id="249" dir="0" index="0" bw="1" slack="0"/>
 <pin id="250" dir="0" index="1" bw="1" slack="0"/>
@@ -1190,16 +1190,16 @@ stg_102              (ret              ) [ 0000000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_mid2_26/2 "/>
+<opset="tmp_mid2_21/2 "/>
 </bind>
 </comp>
 
 <comp id="256" class="1004" name="tmp_i_i_mid2_v_fu_256">
 <pin_list>
 <pin id="257" dir="0" index="0" bw="1" slack="0"/>
-<pin id="258" dir="0" index="1" bw="8" slack="0"/>
-<pin id="259" dir="0" index="2" bw="8" slack="0"/>
-<pin id="260" dir="1" index="3" bw="8" slack="0"/>
+<pin id="258" dir="0" index="1" bw="7" slack="0"/>
+<pin id="259" dir="0" index="2" bw="7" slack="0"/>
+<pin id="260" dir="1" index="3" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
@@ -1255,7 +1255,7 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="288" class="1004" name="tmp_159_fu_288">
+<comp id="288" class="1004" name="tmp_47_fu_288">
 <pin_list>
 <pin id="289" dir="0" index="0" bw="1" slack="0"/>
 <pin id="290" dir="0" index="1" bw="1" slack="0"/>
@@ -1263,7 +1263,7 @@ stg_102              (ret              ) [ 0000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="tmp_159/2 "/>
+<opset="tmp_47/2 "/>
 </bind>
 </comp>
 
@@ -1280,7 +1280,7 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="302" class="1004" name="tmp_133_mid2_fu_302">
+<comp id="302" class="1004" name="tmp_34_mid2_fu_302">
 <pin_list>
 <pin id="303" dir="0" index="0" bw="1" slack="0"/>
 <pin id="304" dir="0" index="1" bw="10" slack="0"/>
@@ -1289,7 +1289,7 @@ stg_102              (ret              ) [ 0000000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="tmp_133_mid2/2 "/>
+<opset="tmp_34_mid2/2 "/>
 </bind>
 </comp>
 
@@ -1332,8 +1332,8 @@ stg_102              (ret              ) [ 0000000000000000]
 
 <comp id="330" class="1004" name="tmp_i_i_mid2_cast1_fu_330">
 <pin_list>
-<pin id="331" dir="0" index="0" bw="8" slack="1"/>
-<pin id="332" dir="1" index="1" bw="18" slack="0"/>
+<pin id="331" dir="0" index="0" bw="7" slack="1"/>
+<pin id="332" dir="1" index="1" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
@@ -1343,8 +1343,8 @@ stg_102              (ret              ) [ 0000000000000000]
 
 <comp id="333" class="1004" name="tmp_i_i_mid2_cast_fu_333">
 <pin_list>
-<pin id="334" dir="0" index="0" bw="8" slack="1"/>
-<pin id="335" dir="1" index="1" bw="18" slack="0"/>
+<pin id="334" dir="0" index="0" bw="7" slack="1"/>
+<pin id="335" dir="1" index="1" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
@@ -1352,32 +1352,32 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="336" class="1004" name="tmp_133_mid2_cast_fu_336">
+<comp id="336" class="1004" name="tmp_34_mid2_cast_fu_336">
 <pin_list>
 <pin id="337" dir="0" index="0" bw="10" slack="1"/>
-<pin id="338" dir="1" index="1" bw="18" slack="0"/>
+<pin id="338" dir="1" index="1" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_133_mid2_cast/3 "/>
+<opset="tmp_34_mid2_cast/3 "/>
 </bind>
 </comp>
 
-<comp id="339" class="1004" name="tmp_177_cast_fu_339">
+<comp id="339" class="1004" name="tmp_55_cast_fu_339">
 <pin_list>
-<pin id="340" dir="0" index="0" bw="18" slack="0"/>
+<pin id="340" dir="0" index="0" bw="17" slack="0"/>
 <pin id="341" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_177_cast/3 "/>
+<opset="tmp_55_cast/3 "/>
 </bind>
 </comp>
 
 <comp id="343" class="1004" name="tmp_i_i4_cast_fu_343">
 <pin_list>
 <pin id="344" dir="0" index="0" bw="10" slack="1"/>
-<pin id="345" dir="1" index="1" bw="18" slack="0"/>
+<pin id="345" dir="1" index="1" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
@@ -1385,25 +1385,25 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="346" class="1004" name="tmp_179_cast_fu_346">
+<comp id="346" class="1004" name="tmp_57_cast_fu_346">
 <pin_list>
-<pin id="347" dir="0" index="0" bw="18" slack="0"/>
+<pin id="347" dir="0" index="0" bw="17" slack="0"/>
 <pin id="348" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_179_cast/3 "/>
+<opset="tmp_57_cast/3 "/>
 </bind>
 </comp>
 
-<comp id="350" class="1004" name="tmp_133_mid2_cast1_fu_350">
+<comp id="350" class="1004" name="tmp_34_mid2_cast1_fu_350">
 <pin_list>
 <pin id="351" dir="0" index="0" bw="10" slack="2"/>
 <pin id="352" dir="1" index="1" bw="20" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_133_mid2_cast1/4 "/>
+<opset="tmp_34_mid2_cast1/4 "/>
 </bind>
 </comp>
 
@@ -1418,14 +1418,14 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="356" class="1004" name="tmp_180_cast_fu_356">
+<comp id="356" class="1004" name="tmp_58_cast_fu_356">
 <pin_list>
 <pin id="357" dir="0" index="0" bw="20" slack="0"/>
 <pin id="358" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_180_cast/4 "/>
+<opset="tmp_58_cast/4 "/>
 </bind>
 </comp>
 
@@ -1438,53 +1438,53 @@ stg_102              (ret              ) [ 0000000000000000]
 </pin_list>
 <bind>
 <opcode="muladd(1172) " fcode="muladd"/>
-<opset="tmp_162/4 tmp_164/4 "/>
+<opset="tmp_50/4 tmp_52/4 "/>
 </bind>
 </comp>
 
 <comp id="370" class="1007" name="grp_fu_370">
 <pin_list>
-<pin id="371" dir="0" index="0" bw="8" slack="0"/>
+<pin id="371" dir="0" index="0" bw="7" slack="0"/>
 <pin id="372" dir="0" index="1" bw="11" slack="0"/>
 <pin id="373" dir="0" index="2" bw="10" slack="0"/>
-<pin id="374" dir="1" index="3" bw="18" slack="0"/>
+<pin id="374" dir="1" index="3" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="muladd(1172) " fcode="muladd"/>
-<opset="tmp_s/3 tmp_163/3 "/>
+<opset="tmp_s/3 tmp_51/3 "/>
 </bind>
 </comp>
 
 <comp id="379" class="1007" name="grp_fu_379">
 <pin_list>
 <pin id="380" dir="0" index="0" bw="10" slack="0"/>
-<pin id="381" dir="0" index="1" bw="9" slack="0"/>
-<pin id="382" dir="0" index="2" bw="8" slack="0"/>
-<pin id="383" dir="1" index="3" bw="18" slack="0"/>
+<pin id="381" dir="0" index="1" bw="8" slack="0"/>
+<pin id="382" dir="0" index="2" bw="7" slack="0"/>
+<pin id="383" dir="1" index="3" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="muladd(1172) " fcode="muladd"/>
-<opset="tmp_160/3 tmp_161/3 "/>
+<opset="tmp_48/3 tmp_49/3 "/>
 </bind>
 </comp>
 
-<comp id="388" class="1005" name="exitcond_flatten3_reg_388">
+<comp id="388" class="1005" name="exitcond_flatten1_reg_388">
 <pin_list>
 <pin id="389" dir="0" index="0" bw="1" slack="1"/>
 <pin id="390" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="exitcond_flatten3 "/>
+<opset="exitcond_flatten1 "/>
 </bind>
 </comp>
 
-<comp id="392" class="1005" name="indvar_flatten_next3_reg_392">
+<comp id="392" class="1005" name="indvar_flatten_next1_reg_392">
 <pin_list>
-<pin id="393" dir="0" index="0" bw="27" slack="0"/>
-<pin id="394" dir="1" index="1" bw="27" slack="0"/>
+<pin id="393" dir="0" index="0" bw="26" slack="0"/>
+<pin id="394" dir="1" index="1" bw="26" slack="0"/>
 </pin_list>
 <bind>
-<opset="indvar_flatten_next3 "/>
+<opset="indvar_flatten_next1 "/>
 </bind>
 </comp>
 
@@ -1498,20 +1498,20 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="401" class="1005" name="tmp_mid2_26_reg_401">
+<comp id="401" class="1005" name="tmp_mid2_21_reg_401">
 <pin_list>
 <pin id="402" dir="0" index="0" bw="1" slack="11"/>
 <pin id="403" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="tmp_mid2_26 "/>
+<opset="tmp_mid2_21 "/>
 </bind>
 </comp>
 
 <comp id="405" class="1005" name="tmp_i_i_mid2_v_reg_405">
 <pin_list>
-<pin id="406" dir="0" index="0" bw="8" slack="0"/>
-<pin id="407" dir="1" index="1" bw="8" slack="0"/>
+<pin id="406" dir="0" index="0" bw="7" slack="0"/>
+<pin id="407" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opset="tmp_i_i_mid2_v "/>
@@ -1528,13 +1528,13 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="418" class="1005" name="tmp_133_mid2_reg_418">
+<comp id="418" class="1005" name="tmp_34_mid2_reg_418">
 <pin_list>
 <pin id="419" dir="0" index="0" bw="10" slack="0"/>
 <pin id="420" dir="1" index="1" bw="10" slack="0"/>
 </pin_list>
 <bind>
-<opset="tmp_133_mid2 "/>
+<opset="tmp_34_mid2 "/>
 </bind>
 </comp>
 
@@ -1560,8 +1560,8 @@ stg_102              (ret              ) [ 0000000000000000]
 
 <comp id="435" class="1005" name="A_addr_reg_435">
 <pin_list>
-<pin id="436" dir="0" index="0" bw="18" slack="1"/>
-<pin id="437" dir="1" index="1" bw="18" slack="1"/>
+<pin id="436" dir="0" index="0" bw="17" slack="1"/>
+<pin id="437" dir="1" index="1" bw="17" slack="1"/>
 </pin_list>
 <bind>
 <opset="A_addr "/>
@@ -1570,8 +1570,8 @@ stg_102              (ret              ) [ 0000000000000000]
 
 <comp id="440" class="1005" name="B_addr_reg_440">
 <pin_list>
-<pin id="441" dir="0" index="0" bw="18" slack="1"/>
-<pin id="442" dir="1" index="1" bw="18" slack="1"/>
+<pin id="441" dir="0" index="0" bw="17" slack="1"/>
+<pin id="442" dir="1" index="1" bw="17" slack="1"/>
 </pin_list>
 <bind>
 <opset="B_addr "/>
@@ -1638,13 +1638,13 @@ stg_102              (ret              ) [ 0000000000000000]
 </bind>
 </comp>
 
-<comp id="477" class="1005" name="tmp_135_reg_477">
+<comp id="477" class="1005" name="tmp_36_reg_477">
 <pin_list>
 <pin id="478" dir="0" index="0" bw="32" slack="1"/>
 <pin id="479" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_135 "/>
+<opset="tmp_36 "/>
 </bind>
 </comp>
 
@@ -1927,8 +1927,8 @@ stg_102              (ret              ) [ 0000000000000000]
   - Chain level:
 	State 1
 	State 2
-		exitcond_flatten3 : 1
-		indvar_flatten_next3 : 1
+		exitcond_flatten1 : 1
+		indvar_flatten_next1 : 1
 		stg_25 : 2
 		k : 1
 		exitcond_flatten : 1
@@ -1936,17 +1936,17 @@ stg_102              (ret              ) [ 0000000000000000]
 		tmp_mid1 : 2
 		tmp2 : 1
 		tmp_mid2 : 3
-		tmp_mid1_25 : 2
+		tmp_mid1_20 : 2
 		tmp_1 : 1
-		tmp_mid2_26 : 3
+		tmp_mid2_21 : 3
 		tmp_i_i_mid2_v : 2
 		not_exitcond_flatten : 2
 		exitcond : 1
 		exitcond_mid : 2
 		r : 3
-		tmp_159 : 2
+		tmp_47 : 2
 		Col_assign_mid2 : 2
-		tmp_133_mid2 : 2
+		tmp_34_mid2 : 2
 		stg_43 : 4
 		stg_44 : 4
 		c : 3
@@ -1954,19 +1954,19 @@ stg_102              (ret              ) [ 0000000000000000]
 		indvar_flatten_next : 2
 	State 3
 		tmp_s : 1
-		tmp_160 : 1
-		tmp_161 : 2
-		tmp_177_cast : 3
+		tmp_48 : 1
+		tmp_49 : 2
+		tmp_55_cast : 3
 		A_addr : 4
 		cast_in_a : 5
-		tmp_163 : 2
-		tmp_179_cast : 3
+		tmp_51 : 2
+		tmp_57_cast : 3
 		B_addr : 4
 		cast_in_b : 5
 	State 4
-		tmp_162 : 1
-		tmp_164 : 2
-		tmp_180_cast : 3
+		tmp_50 : 1
+		tmp_52 : 2
+		tmp_58_cast : 3
 		C_addr : 4
 		sum_mult_addr : 4
 		mult : 1
@@ -1997,25 +1997,25 @@ stg_102              (ret              ) [ 0000000000000000]
 |----------|-----------------------------|---------|---------|---------|
 |   fmul   |          grp_fu_178         |    3    |   143   |   321   |
 |----------|-----------------------------|---------|---------|---------|
-|          | indvar_flatten_next3_fu_190 |    0    |    0    |    27   |
-|          |           k_fu_196          |    0    |    0    |    8    |
+|          | indvar_flatten_next1_fu_190 |    0    |    0    |    26   |
+|          |           k_fu_196          |    0    |    0    |    7    |
 |    add   |           r_fu_282          |    0    |    0    |    10   |
 |          |           c_fu_310          |    0    |    0    |    10   |
 |          |   indvar_flatten_op_fu_316  |    0    |    0    |    20   |
 |----------|-----------------------------|---------|---------|---------|
 |          |    Row_assign_mid_fu_208    |    0    |    0    |    10   |
 |          |       tmp_mid2_fu_228       |    0    |    0    |    1    |
-|          |      tmp_mid2_26_fu_248     |    0    |    0    |    1    |
-|  select  |    tmp_i_i_mid2_v_fu_256    |    0    |    0    |    8    |
+|          |      tmp_mid2_21_fu_248     |    0    |    0    |    1    |
+|  select  |    tmp_i_i_mid2_v_fu_256    |    0    |    0    |    7    |
 |          |    Col_assign_mid2_fu_294   |    0    |    0    |    10   |
-|          |     tmp_133_mid2_fu_302     |    0    |    0    |    10   |
+|          |      tmp_34_mid2_fu_302     |    0    |    0    |    10   |
 |          |  indvar_flatten_next_fu_322 |    0    |    0    |    20   |
 |----------|-----------------------------|---------|---------|---------|
-|          |   exitcond_flatten3_fu_184  |    0    |    0    |    9    |
+|          |   exitcond_flatten1_fu_184  |    0    |    0    |    9    |
 |          |   exitcond_flatten_fu_202   |    0    |    0    |    7    |
 |          |       tmp_mid1_fu_216       |    0    |    0    |    3    |
 |   icmp   |         tmp2_fu_222         |    0    |    0    |    3    |
-|          |      tmp_mid1_25_fu_236     |    0    |    0    |    3    |
+|          |      tmp_mid1_20_fu_236     |    0    |    0    |    3    |
 |          |         tmp_1_fu_242        |    0    |    0    |    3    |
 |          |       exitcond_fu_270       |    0    |    0    |    4    |
 |----------|-----------------------------|---------|---------|---------|
@@ -2027,19 +2027,19 @@ stg_102              (ret              ) [ 0000000000000000]
 |----------|-----------------------------|---------|---------|---------|
 |    and   |     exitcond_mid_fu_276     |    0    |    0    |    1    |
 |----------|-----------------------------|---------|---------|---------|
-|    or    |        tmp_159_fu_288       |    0    |    0    |    1    |
+|    or    |        tmp_47_fu_288        |    0    |    0    |    1    |
 |----------|-----------------------------|---------|---------|---------|
 |          |  tmp_i_i_mid2_cast1_fu_330  |    0    |    0    |    0    |
 |          |   tmp_i_i_mid2_cast_fu_333  |    0    |    0    |    0    |
-|          |   tmp_133_mid2_cast_fu_336  |    0    |    0    |    0    |
-|          |     tmp_177_cast_fu_339     |    0    |    0    |    0    |
+|          |   tmp_34_mid2_cast_fu_336   |    0    |    0    |    0    |
+|          |      tmp_55_cast_fu_339     |    0    |    0    |    0    |
 |   zext   |     tmp_i_i4_cast_fu_343    |    0    |    0    |    0    |
-|          |     tmp_179_cast_fu_346     |    0    |    0    |    0    |
-|          |  tmp_133_mid2_cast1_fu_350  |    0    |    0    |    0    |
+|          |      tmp_57_cast_fu_346     |    0    |    0    |    0    |
+|          |   tmp_34_mid2_cast1_fu_350  |    0    |    0    |    0    |
 |          |    tmp_i_i4_cast1_fu_353    |    0    |    0    |    0    |
-|          |     tmp_180_cast_fu_356     |    0    |    0    |    0    |
+|          |      tmp_58_cast_fu_356     |    0    |    0    |    0    |
 |----------|-----------------------------|---------|---------|---------|
-|   Total  |                             |    8    |   348   |   881   |
+|   Total  |                             |    8    |   348   |   878   |
 |----------|-----------------------------|---------|---------|---------|
 
 Memories:
@@ -2055,45 +2055,45 @@ Memories:
 +----------------------------+--------+
 |                            |   FF   |
 +----------------------------+--------+
-|       A_addr_reg_435       |   18   |
-|       B_addr_reg_440       |   18   |
+|       A_addr_reg_435       |   17   |
+|       B_addr_reg_440       |   17   |
 |       C_addr_reg_450       |   20   |
-|    Col_assign_2_reg_130    |    8   |
+|    Col_assign_2_reg_130    |    7   |
 |   Col_assign_mid2_reg_412  |   10   |
 |     Col_assign_reg_163     |   10   |
 |     Row_assign_reg_152     |   10   |
 |          c_reg_425         |   10   |
 |      cast_in_a_reg_445     |   32   |
 |      cast_in_b_reg_461     |   32   |
-|  exitcond_flatten3_reg_388 |    1   |
-|   indvar_flatten3_reg_119  |   27   |
-|indvar_flatten_next3_reg_392|   27   |
+|  exitcond_flatten1_reg_388 |    1   |
+|   indvar_flatten1_reg_119  |   26   |
+|indvar_flatten_next1_reg_392|   26   |
 | indvar_flatten_next_reg_430|   20   |
 |   indvar_flatten_reg_141   |   20   |
 |        mult_reg_466        |   32   |
 |    sum_mult_addr_reg_455   |   20   |
 |    sum_mult_load_reg_472   |   32   |
-|    tmp_133_mid2_reg_418    |   10   |
-|       tmp_135_reg_477      |   32   |
-|   tmp_i_i_mid2_v_reg_405   |    8   |
-|     tmp_mid2_26_reg_401    |    1   |
+|     tmp_34_mid2_reg_418    |   10   |
+|       tmp_36_reg_477       |   32   |
+|   tmp_i_i_mid2_v_reg_405   |    7   |
+|     tmp_mid2_21_reg_401    |    1   |
 |      tmp_mid2_reg_397      |    1   |
 +----------------------------+--------+
-|            Total           |   399  |
+|            Total           |   393  |
 +----------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |-------------------|------|------|------|--------||---------||---------|
 |        Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
 |-------------------|------|------|------|--------||---------||---------|
-|  grp_access_fu_77 |  p0  |   2  |  18  |   36   ||    18   |
-|  grp_access_fu_89 |  p0  |   2  |  18  |   36   ||    18   |
+|  grp_access_fu_77 |  p0  |   2  |  17  |   34   ||    17   |
+|  grp_access_fu_89 |  p0  |   2  |  17  |   34   ||    17   |
 | grp_access_fu_107 |  p0  |   2  |  20  |   40   ||    20   |
 | grp_access_fu_107 |  p4  |   2  |  32  |   64   ||    32   |
 |     grp_fu_178    |  p0  |   2  |  32  |   64   ||    32   |
 |     grp_fu_178    |  p1  |   2  |  32  |   64   ||    32   |
 |-------------------|------|------|------|--------||---------||---------|
-|       Total       |      |      |      |   304  ||  9.426  ||   152   |
+|       Total       |      |      |      |   300  ||  9.426  ||   150   |
 |-------------------|------|------|------|--------||---------||---------|
 
 
@@ -2102,10 +2102,10 @@ Memories:
 +-----------+--------+--------+--------+--------+--------+
 |           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+--------+
-|  Function |    -   |    8   |    -   |   348  |   881  |
+|  Function |    -   |    8   |    -   |   348  |   878  |
 |   Memory  |  2048  |    -   |    -   |   64   |    0   |
-|Multiplexer|    -   |    -   |    9   |    -   |   152  |
-|  Register |    -   |    -   |    -   |   399  |    -   |
+|Multiplexer|    -   |    -   |    9   |    -   |   150  |
+|  Register |    -   |    -   |    -   |   393  |    -   |
 +-----------+--------+--------+--------+--------+--------+
-|   Total   |  2048  |    8   |    9   |   811  |  1033  |
+|   Total   |  2048  |    8   |    9   |   805  |  1028  |
 +-----------+--------+--------+--------+--------+--------+

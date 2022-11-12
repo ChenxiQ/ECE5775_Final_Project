@@ -938,84 +938,88 @@
 #pragma line 61 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h" 2 ::: 63647
 #pragma line 85 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h" ::: 63675
 #pragma line 122 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h" ::: 63699
-#pragma line 50 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 2 ::: 64873
-#pragma line 10 "pca.cpp" 2 ::: 64878
-#pragma line 1 "./pca.h" 1 ::: 64879
-#pragma line 1 "./typedefs.h" 1 ::: 64889
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1 ::: 64900
-#pragma line 11 "./typedefs.h" 2 ::: 64905
-#pragma line 9 "./pca.h" 2 ::: 64914
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3 ::: 64916
-#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 64955
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 1 3 ::: 64959
-#pragma line 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3 ::: 65000
-#pragma line 42 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3 ::: 65465
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3 ::: 65466
-#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3 ::: 65508
-#pragma line 1 "/usr/include/stdio.h" 1 3 4 ::: 65511
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4 ::: 65545
-#pragma line 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4 ::: 65570
-#pragma line 34 "/usr/include/stdio.h" 2 3 4 ::: 65573
-#pragma line 74 "/usr/include/stdio.h" 3 4 ::: 65574
-#pragma line 1 "/usr/include/libio.h" 1 3 4 ::: 65575
-#pragma line 1 "/usr/include/_G_config.h" 1 3 4 ::: 65608
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4 ::: 65624
-#pragma line 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4 ::: 65649
-#pragma line 16 "/usr/include/_G_config.h" 2 3 4 ::: 65652
-#pragma line 1 "/usr/include/wchar.h" 1 3 4 ::: 65657
-#pragma line 897 "/usr/include/wchar.h" 3 4 ::: 65679
-#pragma line 21 "/usr/include/_G_config.h" 2 3 4 ::: 65682
-#pragma line 45 "/usr/include/_G_config.h" 3 4 ::: 65693
-#pragma line 33 "/usr/include/libio.h" 2 3 4 ::: 65703
-#pragma line 48 "/usr/include/libio.h" 3 4 ::: 65705
-#pragma line 87 "/usr/include/libio.h" 3 4 ::: 65707
-#pragma line 125 "/usr/include/libio.h" 3 4 ::: 65713
-#pragma line 145 "/usr/include/libio.h" 3 4 ::: 65715
-#pragma line 178 "/usr/include/libio.h" 3 4 ::: 65739
-#pragma line 246 "/usr/include/libio.h" 3 4 ::: 65750
-#pragma line 294 "/usr/include/libio.h" 3 4 ::: 65791
-#pragma line 303 "/usr/include/libio.h" 3 4 ::: 65793
-#pragma line 335 "/usr/include/libio.h" 3 4 ::: 65815
-#pragma line 435 "/usr/include/libio.h" 3 4 ::: 65875
-#pragma line 465 "/usr/include/libio.h" 3 4 ::: 65890
-#pragma line 527 "/usr/include/libio.h" 3 4 ::: 65902
-#pragma line 75 "/usr/include/stdio.h" 2 3 4 ::: 65904
-#pragma line 107 "/usr/include/stdio.h" 3 4 ::: 65910
-#pragma line 150 "/usr/include/stdio.h" 3 4 ::: 65944
-#pragma line 1 "/usr/include/bits/stdio_lim.h" 1 3 4 ::: 65960
-#pragma line 165 "/usr/include/stdio.h" 2 3 4 ::: 65977
-#pragma line 205 "/usr/include/stdio.h" 3 4 ::: 66009
-#pragma line 297 "/usr/include/stdio.h" 3 4 ::: 66086
-#pragma line 467 "/usr/include/stdio.h" 3 4 ::: 66225
-#pragma line 527 "/usr/include/stdio.h" 3 4 ::: 66245
-#pragma line 794 "/usr/include/stdio.h" 3 4 ::: 66498
-#pragma line 818 "/usr/include/stdio.h" 3 4 ::: 66509
-#pragma line 1 "/usr/include/bits/sys_errlist.h" 1 3 4 ::: 66546
-#pragma line 854 "/usr/include/stdio.h" 2 3 4 ::: 66578
-#pragma line 931 "/usr/include/stdio.h" 3 4 ::: 66646
-#pragma line 943 "/usr/include/stdio.h" 3 4 ::: 66649
-#pragma line 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 2 3 ::: 66651
-#pragma line 91 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3 ::: 66657
-#pragma line 147 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3 ::: 66705
-#pragma line 165 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3 ::: 66708
-#pragma line 43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3 ::: 66725
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 1 3 ::: 66726
-#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3 ::: 66765
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 1 3 ::: 66768
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3 ::: 66805
-#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3 ::: 66847
-#pragma line 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 2 3 ::: 66848
-#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 2 3 ::: 66862
-#pragma line 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3 ::: 66931
-#pragma line 280 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67155
-#pragma line 484 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67341
-#pragma line 561 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67397
-#pragma line 655 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67472
-#pragma line 734 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67529
-#pragma line 824 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67603
-#pragma line 903 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67660
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 1 3 ::: 67679
-#pragma line 39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3 ::: 67719
-#pragma line 921 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3 ::: 68663
-#pragma line 10 "./pca.h" 2 ::: 68664
-#pragma line 11 "pca.cpp" 2 ::: 68703
+#pragma line 134 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h" ::: 63714
+#pragma line 791 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h" ::: 64374
+#pragma line 50 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 2 ::: 64879
+#pragma line 10 "pca.cpp" 2 ::: 64884
+#pragma line 1 "./pca.h" 1 ::: 64885
+#pragma line 1 "./typedefs.h" 1 ::: 64895
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1 ::: 64906
+#pragma line 11 "./typedefs.h" 2 ::: 64911
+#pragma line 9 "./pca.h" 2 ::: 64920
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3 ::: 64922
+#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 64961
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 1 3 ::: 64965
+#pragma line 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3 ::: 65006
+#pragma line 42 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3 ::: 65471
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3 ::: 65472
+#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3 ::: 65514
+#pragma line 1 "/usr/include/stdio.h" 1 3 4 ::: 65517
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4 ::: 65551
+#pragma line 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4 ::: 65576
+#pragma line 34 "/usr/include/stdio.h" 2 3 4 ::: 65579
+#pragma line 74 "/usr/include/stdio.h" 3 4 ::: 65580
+#pragma line 1 "/usr/include/libio.h" 1 3 4 ::: 65581
+#pragma line 1 "/usr/include/_G_config.h" 1 3 4 ::: 65614
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4 ::: 65630
+#pragma line 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4 ::: 65655
+#pragma line 16 "/usr/include/_G_config.h" 2 3 4 ::: 65658
+#pragma line 1 "/usr/include/wchar.h" 1 3 4 ::: 65663
+#pragma line 897 "/usr/include/wchar.h" 3 4 ::: 65685
+#pragma line 21 "/usr/include/_G_config.h" 2 3 4 ::: 65688
+#pragma line 45 "/usr/include/_G_config.h" 3 4 ::: 65699
+#pragma line 33 "/usr/include/libio.h" 2 3 4 ::: 65709
+#pragma line 48 "/usr/include/libio.h" 3 4 ::: 65711
+#pragma line 87 "/usr/include/libio.h" 3 4 ::: 65713
+#pragma line 125 "/usr/include/libio.h" 3 4 ::: 65719
+#pragma line 145 "/usr/include/libio.h" 3 4 ::: 65721
+#pragma line 178 "/usr/include/libio.h" 3 4 ::: 65745
+#pragma line 246 "/usr/include/libio.h" 3 4 ::: 65756
+#pragma line 294 "/usr/include/libio.h" 3 4 ::: 65797
+#pragma line 303 "/usr/include/libio.h" 3 4 ::: 65799
+#pragma line 335 "/usr/include/libio.h" 3 4 ::: 65821
+#pragma line 435 "/usr/include/libio.h" 3 4 ::: 65881
+#pragma line 465 "/usr/include/libio.h" 3 4 ::: 65896
+#pragma line 527 "/usr/include/libio.h" 3 4 ::: 65908
+#pragma line 75 "/usr/include/stdio.h" 2 3 4 ::: 65910
+#pragma line 107 "/usr/include/stdio.h" 3 4 ::: 65916
+#pragma line 150 "/usr/include/stdio.h" 3 4 ::: 65950
+#pragma line 1 "/usr/include/bits/stdio_lim.h" 1 3 4 ::: 65966
+#pragma line 165 "/usr/include/stdio.h" 2 3 4 ::: 65983
+#pragma line 205 "/usr/include/stdio.h" 3 4 ::: 66015
+#pragma line 297 "/usr/include/stdio.h" 3 4 ::: 66092
+#pragma line 467 "/usr/include/stdio.h" 3 4 ::: 66231
+#pragma line 527 "/usr/include/stdio.h" 3 4 ::: 66251
+#pragma line 794 "/usr/include/stdio.h" 3 4 ::: 66504
+#pragma line 818 "/usr/include/stdio.h" 3 4 ::: 66515
+#pragma line 1 "/usr/include/bits/sys_errlist.h" 1 3 4 ::: 66552
+#pragma line 854 "/usr/include/stdio.h" 2 3 4 ::: 66584
+#pragma line 931 "/usr/include/stdio.h" 3 4 ::: 66652
+#pragma line 943 "/usr/include/stdio.h" 3 4 ::: 66655
+#pragma line 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 2 3 ::: 66657
+#pragma line 91 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3 ::: 66663
+#pragma line 147 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3 ::: 66711
+#pragma line 165 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3 ::: 66714
+#pragma line 43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3 ::: 66731
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 1 3 ::: 66732
+#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3 ::: 66771
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 1 3 ::: 66774
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3 ::: 66811
+#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3 ::: 66853
+#pragma line 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 2 3 ::: 66854
+#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 2 3 ::: 66868
+#pragma line 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3 ::: 66937
+#pragma line 280 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67161
+#pragma line 484 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67347
+#pragma line 561 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67403
+#pragma line 655 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67478
+#pragma line 734 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67535
+#pragma line 824 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67609
+#pragma line 903 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3 ::: 67666
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 1 3 ::: 67685
+#pragma line 39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3 ::: 67725
+#pragma line 921 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3 ::: 68669
+#pragma line 10 "./pca.h" 2 ::: 68670
+#pragma line 55 "./pca.h" ::: 68719
+#pragma line 68 "./pca.h" ::: 68736
+#pragma line 11 "pca.cpp" 2 ::: 68738

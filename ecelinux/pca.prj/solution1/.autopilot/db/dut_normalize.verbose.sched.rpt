@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_normalize'
 ================================================================
-* Date:           Fri Nov 11 18:59:54 2022
+* Date:           Fri Nov 11 23:14:22 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -29,7 +29,7 @@
     |      Latency      |      Interval     | Pipeline|
     |   min   |   max   |   min   |   max   |   Type  |
     +---------+---------+---------+---------+---------+
-    |  2366897|  2366897|  2366897|  2366897|   none  |
+    |  1190897|  1190897|  1190897|  1190897|   none  |
     +---------+---------+---------+---------+---------+
 
     + Detail: 
@@ -41,9 +41,9 @@
         |             |      Latency      | Iteration|  Initiation Interval  | Trip |          |
         |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- Loop 1     |  2366896|  2366896|      3019|          -|          -|   784|    no    |
-        | + Loop 1.1  |     1400|     1400|         7|          -|          -|   200|    no    |
-        | + Loop 1.2  |     1600|     1600|         8|          -|          -|   200|    no    |
+        |- Loop 1     |  1190896|  1190896|      1519|          -|          -|   784|    no    |
+        | + Loop 1.1  |      700|      700|         7|          -|          -|   100|    no    |
+        | + Loop 1.2  |      800|      800|         8|          -|          -|   100|    no    |
         +-------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -157,10 +157,10 @@ ST_2: j [1/1] 0.00ns
 .loopexit:0  %j = phi i10 [ 0, %0 ], [ %j_2, %3 ]
 
 ST_2: phi_mul [1/1] 0.00ns
-.loopexit:1  %phi_mul = phi i18 [ 0, %0 ], [ %next_mul, %3 ]
+.loopexit:1  %phi_mul = phi i17 [ 0, %0 ], [ %next_mul, %3 ]
 
 ST_2: next_mul [1/1] 2.08ns
-.loopexit:2  %next_mul = add i18 %phi_mul, 200
+.loopexit:2  %next_mul = add i17 %phi_mul, 100
 
 ST_2: empty [1/1] 0.00ns
 .loopexit:3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
@@ -189,37 +189,37 @@ ST_3: sum [1/1] 0.00ns
 .preheader:0  %sum = phi float [ %sum_1, %1 ], [ 0.000000e+00, %.preheader.preheader ]
 
 ST_3: i [1/1] 0.00ns
-.preheader:1  %i = phi i8 [ %i_3, %1 ], [ 0, %.preheader.preheader ]
+.preheader:1  %i = phi i7 [ %i_3, %1 ], [ 0, %.preheader.preheader ]
 
-ST_3: empty_22 [1/1] 0.00ns
-.preheader:2  %empty_22 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 200, i64 200, i64 200)
+ST_3: empty_17 [1/1] 0.00ns
+.preheader:2  %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)
 
-ST_3: exitcond1 [1/1] 2.00ns
-.preheader:3  %exitcond1 = icmp eq i8 %i, -56
+ST_3: exitcond1 [1/1] 1.97ns
+.preheader:3  %exitcond1 = icmp eq i7 %i, -28
 
 ST_3: i_3 [1/1] 1.72ns
-.preheader:4  %i_3 = add i8 %i, 1
+.preheader:4  %i_3 = add i7 %i, 1
 
 ST_3: stg_50 [1/1] 0.00ns
 .preheader:5  br i1 %exitcond1, label %2, label %1
 
-ST_3: tmp_134_cast [1/1] 0.00ns
-:0  %tmp_134_cast = zext i8 %i to i18
+ST_3: tmp_43_cast [1/1] 0.00ns
+:0  %tmp_43_cast = zext i7 %i to i17
 
-ST_3: tmp_157 [1/1] 2.08ns
-:1  %tmp_157 = add i18 %phi_mul, %tmp_134_cast
+ST_3: tmp_44 [1/1] 2.08ns
+:1  %tmp_44 = add i17 %phi_mul, %tmp_43_cast
 
-ST_3: tmp_172_cast [1/1] 0.00ns
-:2  %tmp_172_cast = zext i18 %tmp_157 to i64
+ST_3: tmp_50_cast [1/1] 0.00ns
+:2  %tmp_50_cast = zext i17 %tmp_44 to i64
 
 ST_3: X_addr [1/1] 0.00ns
-:3  %X_addr = getelementptr [156800 x float]* %X, i64 0, i64 %tmp_172_cast
+:3  %X_addr = getelementptr [78400 x float]* %X, i64 0, i64 %tmp_50_cast
 
 ST_3: X_load [2/2] 2.71ns
 :4  %X_load = load float* %X_addr, align 4
 
-ST_3: tmp_133 [16/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_3: tmp_42 [16/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 4>: 2.71ns
@@ -256,78 +256,78 @@ ST_9: stg_63 [1/1] 0.00ns
 
 
  <State 10>: 6.08ns
-ST_10: tmp_133 [15/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_10: tmp_42 [15/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 11>: 6.08ns
-ST_11: tmp_133 [14/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_11: tmp_42 [14/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 12>: 6.08ns
-ST_12: tmp_133 [13/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_12: tmp_42 [13/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 13>: 6.08ns
-ST_13: tmp_133 [12/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_13: tmp_42 [12/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 14>: 6.08ns
-ST_14: tmp_133 [11/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_14: tmp_42 [11/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 15>: 6.08ns
-ST_15: tmp_133 [10/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_15: tmp_42 [10/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 16>: 6.08ns
-ST_16: tmp_133 [9/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_16: tmp_42 [9/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 17>: 6.08ns
-ST_17: tmp_133 [8/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_17: tmp_42 [8/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 18>: 6.08ns
-ST_18: tmp_133 [7/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_18: tmp_42 [7/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 19>: 6.08ns
-ST_19: tmp_133 [6/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_19: tmp_42 [6/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 20>: 6.08ns
-ST_20: tmp_133 [5/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_20: tmp_42 [5/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 21>: 6.08ns
-ST_21: tmp_133 [4/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_21: tmp_42 [4/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 22>: 6.08ns
-ST_22: tmp_133 [3/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_22: tmp_42 [3/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 23>: 6.08ns
-ST_23: tmp_133 [2/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_23: tmp_42 [2/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 24>: 6.08ns
-ST_24: tmp_133 [1/16] 6.08ns
-:0  %tmp_133 = fdiv float %sum, 2.000000e+02
+ST_24: tmp_42 [1/16] 6.08ns
+:0  %tmp_42 = fdiv float %sum, 1.000000e+02
 
 
  <State 25>: 2.71ns
@@ -335,7 +335,7 @@ ST_25: mean_addr [1/1] 0.00ns
 :1  %mean_addr = getelementptr [784 x float]* %mean, i64 0, i64 %tmp_s
 
 ST_25: stg_80 [1/1] 2.71ns
-:2  store float %tmp_133, float* %mean_addr, align 4
+:2  store float %tmp_42, float* %mean_addr, align 4
 
 ST_25: stg_81 [1/1] 1.57ns
 :3  br label %3
@@ -343,31 +343,31 @@ ST_25: stg_81 [1/1] 1.57ns
 
  <State 26>: 4.79ns
 ST_26: i1 [1/1] 0.00ns
-:0  %i1 = phi i8 [ 0, %2 ], [ %i_4, %4 ]
+:0  %i1 = phi i7 [ 0, %2 ], [ %i_4, %4 ]
 
-ST_26: empty_23 [1/1] 0.00ns
-:1  %empty_23 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 200, i64 200, i64 200)
+ST_26: empty_18 [1/1] 0.00ns
+:1  %empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)
 
-ST_26: exitcond [1/1] 2.00ns
-:2  %exitcond = icmp eq i8 %i1, -56
+ST_26: exitcond [1/1] 1.97ns
+:2  %exitcond = icmp eq i7 %i1, -28
 
 ST_26: i_4 [1/1] 1.72ns
-:3  %i_4 = add i8 %i1, 1
+:3  %i_4 = add i7 %i1, 1
 
 ST_26: stg_86 [1/1] 0.00ns
 :4  br i1 %exitcond, label %.loopexit, label %4
 
-ST_26: tmp_135_cast [1/1] 0.00ns
-:0  %tmp_135_cast = zext i8 %i1 to i18
+ST_26: tmp_44_cast [1/1] 0.00ns
+:0  %tmp_44_cast = zext i7 %i1 to i17
 
-ST_26: tmp_158 [1/1] 2.08ns
-:1  %tmp_158 = add i18 %phi_mul, %tmp_135_cast
+ST_26: tmp_46 [1/1] 2.08ns
+:1  %tmp_46 = add i17 %phi_mul, %tmp_44_cast
 
-ST_26: tmp_173_cast [1/1] 0.00ns
-:2  %tmp_173_cast = zext i18 %tmp_158 to i64
+ST_26: tmp_51_cast [1/1] 0.00ns
+:2  %tmp_51_cast = zext i17 %tmp_46 to i64
 
 ST_26: X_addr_1 [1/1] 0.00ns
-:3  %X_addr_1 = getelementptr [156800 x float]* %X, i64 0, i64 %tmp_173_cast
+:3  %X_addr_1 = getelementptr [78400 x float]* %X, i64 0, i64 %tmp_51_cast
 
 ST_26: X_load_1 [2/2] 2.71ns
 :4  %X_load_1 = load float* %X_addr_1, align 4
@@ -379,33 +379,33 @@ ST_27: X_load_1 [1/2] 2.71ns
 
 
  <State 28>: 7.26ns
-ST_28: tmp_136 [5/5] 7.26ns
-:5  %tmp_136 = fsub float %X_load_1, %tmp_133
+ST_28: tmp_45 [5/5] 7.26ns
+:5  %tmp_45 = fsub float %X_load_1, %tmp_42
 
 
  <State 29>: 7.26ns
-ST_29: tmp_136 [4/5] 7.26ns
-:5  %tmp_136 = fsub float %X_load_1, %tmp_133
+ST_29: tmp_45 [4/5] 7.26ns
+:5  %tmp_45 = fsub float %X_load_1, %tmp_42
 
 
  <State 30>: 7.26ns
-ST_30: tmp_136 [3/5] 7.26ns
-:5  %tmp_136 = fsub float %X_load_1, %tmp_133
+ST_30: tmp_45 [3/5] 7.26ns
+:5  %tmp_45 = fsub float %X_load_1, %tmp_42
 
 
  <State 31>: 7.26ns
-ST_31: tmp_136 [2/5] 7.26ns
-:5  %tmp_136 = fsub float %X_load_1, %tmp_133
+ST_31: tmp_45 [2/5] 7.26ns
+:5  %tmp_45 = fsub float %X_load_1, %tmp_42
 
 
  <State 32>: 7.26ns
-ST_32: tmp_136 [1/5] 7.26ns
-:5  %tmp_136 = fsub float %X_load_1, %tmp_133
+ST_32: tmp_45 [1/5] 7.26ns
+:5  %tmp_45 = fsub float %X_load_1, %tmp_42
 
 
  <State 33>: 2.71ns
 ST_33: stg_98 [1/1] 2.71ns
-:6  store float %tmp_136, float* %X_addr_1, align 4
+:6  store float %tmp_45, float* %X_addr_1, align 4
 
 ST_33: stg_99 [1/1] 0.00ns
 :7  br label %3

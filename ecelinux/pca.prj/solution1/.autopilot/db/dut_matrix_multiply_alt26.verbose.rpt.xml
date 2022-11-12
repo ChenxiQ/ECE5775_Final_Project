@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_matrix_multiply_alt26'" level="0">
-<item name = "Date">Fri Nov 11 19:00:03 2022
+<item name = "Date">Fri Nov 11 23:14:28 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">122931213, 122931213, 122931213, 122931213, none</column>
+<column name="">61465613, 61465613, 61465613, 61465613, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- a_col_loop_a_row_loop_b_col_loop">122931211, 122931211, 13, 1, 1, 122931200, yes</column>
+<column name="- a_col_loop_a_row_loop_b_col_loop">61465611, 61465611, 13, 1, 1, 61465600, yes</column>
 </table>
 </item>
 </section>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, 3, -, -</column>
-<column name="Expression">-, -, 0, 172</column>
+<column name="Expression">-, -, 0, 169</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, 5, 348, 711</column>
 <column name="Memory">2048, -, 64, 0</column>
-<column name="Multiplexer">-, -, -, 127</column>
-<column name="Register">-, -, 278, 75</column>
+<column name="Multiplexer">-, -, -, 124</column>
+<column name="Register">-, -, 275, 75</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
 <specialColumn name="Utilization (%)">731, 3, ~0, 2</specialColumn>
 </table>
@@ -69,8 +69,8 @@
 <item name = "DSP48"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
 <column name="dut_mac_muladd_10ns_11ns_10ns_20_1_U7">dut_mac_muladd_10ns_11ns_10ns_20_1, i0 + i1 * i2</column>
-<column name="dut_mac_muladd_10ns_9ns_8ns_18_1_U9">dut_mac_muladd_10ns_9ns_8ns_18_1, i0 + i1 * i2</column>
-<column name="dut_mac_muladd_8ns_11ns_10ns_18_1_U8">dut_mac_muladd_8ns_11ns_10ns_18_1, i0 + i1 * i2</column>
+<column name="dut_mac_muladd_10ns_8ns_7ns_17_1_U9">dut_mac_muladd_10ns_8ns_7ns_17_1, i0 + i1 * i2</column>
+<column name="dut_mac_muladd_7ns_11ns_10ns_17_1_U8">dut_mac_muladd_7ns_11ns_10ns_17_1, i0 + i1 * i2</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -85,40 +85,40 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="c_fu_310_p2">+, 0, 0, 10, 10, 1</column>
-<column name="indvar_flatten_next3_fu_190_p2">+, 0, 0, 27, 27, 1</column>
+<column name="indvar_flatten_next1_fu_190_p2">+, 0, 0, 26, 26, 1</column>
 <column name="indvar_flatten_op_fu_316_p2">+, 0, 0, 20, 20, 1</column>
-<column name="k_fu_196_p2">+, 0, 0, 8, 8, 1</column>
+<column name="k_fu_196_p2">+, 0, 0, 7, 7, 1</column>
 <column name="r_fu_282_p2">+, 0, 0, 10, 10, 1</column>
 <column name="ap_sig_250">and, 0, 0, 1, 1, 1</column>
 <column name="exitcond_mid_fu_276_p2">and, 0, 0, 1, 1, 1</column>
-<column name="exitcond_flatten3_fu_184_p2">icmp, 0, 0, 9, 27, 25</column>
+<column name="exitcond_flatten1_fu_184_p2">icmp, 0, 0, 9, 26, 24</column>
 <column name="exitcond_flatten_fu_202_p2">icmp, 0, 0, 7, 20, 20</column>
 <column name="exitcond_fu_270_p2">icmp, 0, 0, 4, 10, 9</column>
-<column name="tmp2_fu_222_p2">icmp, 0, 0, 3, 8, 1</column>
-<column name="tmp_1_fu_242_p2">icmp, 0, 0, 3, 8, 7</column>
-<column name="tmp_mid1_25_fu_236_p2">icmp, 0, 0, 3, 8, 7</column>
-<column name="tmp_mid1_fu_216_p2">icmp, 0, 0, 3, 8, 1</column>
-<column name="tmp_159_fu_288_p2">or, 0, 0, 1, 1, 1</column>
+<column name="tmp2_fu_222_p2">icmp, 0, 0, 3, 7, 1</column>
+<column name="tmp_1_fu_242_p2">icmp, 0, 0, 3, 7, 6</column>
+<column name="tmp_mid1_20_fu_236_p2">icmp, 0, 0, 3, 7, 6</column>
+<column name="tmp_mid1_fu_216_p2">icmp, 0, 0, 3, 7, 1</column>
+<column name="tmp_47_fu_288_p2">or, 0, 0, 1, 1, 1</column>
 <column name="Col_assign_mid2_fu_294_p3">select, 0, 0, 10, 1, 1</column>
 <column name="Row_assign_mid_fu_208_p3">select, 0, 0, 10, 1, 1</column>
 <column name="indvar_flatten_next_fu_322_p3">select, 0, 0, 20, 1, 1</column>
-<column name="tmp_133_mid2_fu_302_p3">select, 0, 0, 10, 1, 10</column>
-<column name="tmp_i_i_mid2_v_fu_256_p3">select, 0, 0, 8, 1, 8</column>
-<column name="tmp_mid2_26_fu_248_p3">select, 0, 0, 1, 1, 1</column>
+<column name="tmp_34_mid2_fu_302_p3">select, 0, 0, 10, 1, 10</column>
+<column name="tmp_i_i_mid2_v_fu_256_p3">select, 0, 0, 7, 1, 7</column>
+<column name="tmp_mid2_21_fu_248_p3">select, 0, 0, 1, 1, 1</column>
 <column name="tmp_mid2_fu_228_p3">select, 0, 0, 1, 1, 1</column>
 <column name="not_exitcond_flatten_fu_264_p2">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="Col_assign_2_phi_fu_134_p4">8, 2, 8, 16</column>
-<column name="Col_assign_2_reg_130">8, 2, 8, 16</column>
+<column name="Col_assign_2_phi_fu_134_p4">7, 2, 7, 14</column>
+<column name="Col_assign_2_reg_130">7, 2, 7, 14</column>
 <column name="Col_assign_reg_163">10, 2, 10, 20</column>
 <column name="Row_assign_phi_fu_156_p4">10, 2, 10, 20</column>
 <column name="Row_assign_reg_152">10, 2, 10, 20</column>
 <column name="ap_NS_fsm">1, 4, 1, 4</column>
 <column name="ap_reg_ppiten_pp0_it12">1, 2, 1, 2</column>
-<column name="indvar_flatten3_reg_119">27, 2, 27, 54</column>
+<column name="indvar_flatten1_reg_119">26, 2, 26, 52</column>
 <column name="indvar_flatten_reg_141">20, 2, 20, 40</column>
 <column name="sum_mult_d1">32, 3, 32, 96</column>
 </table>
@@ -126,7 +126,7 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="C_addr_reg_450">20, 0, 20, 0</column>
-<column name="Col_assign_2_reg_130">8, 0, 8, 0</column>
+<column name="Col_assign_2_reg_130">7, 0, 7, 0</column>
 <column name="Col_assign_mid2_reg_412">10, 0, 10, 0</column>
 <column name="Col_assign_reg_163">10, 0, 10, 0</column>
 <column name="Row_assign_reg_152">10, 0, 10, 0</column>
@@ -145,23 +145,23 @@
 <column name="ap_reg_ppiten_pp0_it8">1, 0, 1, 0</column>
 <column name="ap_reg_ppiten_pp0_it9">1, 0, 1, 0</column>
 <column name="ap_reg_ppstg_Col_assign_mid2_reg_412_pp0_iter1">10, 0, 10, 0</column>
-<column name="ap_reg_ppstg_tmp_133_mid2_reg_418_pp0_iter1">10, 0, 10, 0</column>
-<column name="exitcond_flatten3_reg_388">1, 0, 1, 0</column>
-<column name="indvar_flatten3_reg_119">27, 0, 27, 0</column>
+<column name="ap_reg_ppstg_tmp_34_mid2_reg_418_pp0_iter1">10, 0, 10, 0</column>
+<column name="exitcond_flatten1_reg_388">1, 0, 1, 0</column>
+<column name="indvar_flatten1_reg_119">26, 0, 26, 0</column>
 <column name="indvar_flatten_reg_141">20, 0, 20, 0</column>
 <column name="mult_reg_466">32, 0, 32, 0</column>
 <column name="sum_mult_addr_reg_455">20, 0, 20, 0</column>
 <column name="sum_mult_load_reg_472">32, 0, 32, 0</column>
-<column name="tmp_133_mid2_reg_418">10, 0, 10, 0</column>
-<column name="tmp_135_reg_477">32, 0, 32, 0</column>
-<column name="tmp_i_i_mid2_v_reg_405">8, 0, 8, 0</column>
-<column name="tmp_mid2_26_reg_401">1, 0, 1, 0</column>
+<column name="tmp_34_mid2_reg_418">10, 0, 10, 0</column>
+<column name="tmp_36_reg_477">32, 0, 32, 0</column>
+<column name="tmp_i_i_mid2_v_reg_405">7, 0, 7, 0</column>
+<column name="tmp_mid2_21_reg_401">1, 0, 1, 0</column>
 <column name="tmp_mid2_reg_397">1, 0, 1, 0</column>
 <column name="C_addr_reg_450">0, 20, 20, 0</column>
-<column name="exitcond_flatten3_reg_388">0, 1, 1, 0</column>
+<column name="exitcond_flatten1_reg_388">0, 1, 1, 0</column>
 <column name="mult_reg_466">0, 32, 32, 0</column>
 <column name="sum_mult_addr_reg_455">0, 20, 20, 0</column>
-<column name="tmp_mid2_26_reg_401">0, 1, 1, 0</column>
+<column name="tmp_mid2_21_reg_401">0, 1, 1, 0</column>
 <column name="tmp_mid2_reg_397">0, 1, 1, 0</column>
 </table>
 </item>
@@ -178,10 +178,10 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, dut_matrix_multiply_alt26, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, dut_matrix_multiply_alt26, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, dut_matrix_multiply_alt26, return value</column>
-<column name="A_address0">out, 18, ap_memory, A, array</column>
+<column name="A_address0">out, 17, ap_memory, A, array</column>
 <column name="A_ce0">out, 1, ap_memory, A, array</column>
 <column name="A_q0">in, 32, ap_memory, A, array</column>
-<column name="B_address0">out, 18, ap_memory, B, array</column>
+<column name="B_address0">out, 17, ap_memory, B, array</column>
 <column name="B_ce0">out, 1, ap_memory, B, array</column>
 <column name="B_q0">in, 32, ap_memory, B, array</column>
 <column name="C_address0">out, 20, ap_memory, C, array</column>

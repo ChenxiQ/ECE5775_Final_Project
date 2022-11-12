@@ -1,21 +1,21 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 50
-set name dut_mac_muladd_5ns_9ns_8ns_13_1
+set id 49
+set name dut_mac_muladd_4ns_8ns_7ns_11_1
 set corename simcore_mac
 set op mac
 set stage_num 1
 set max_latency -1
 set registered_input 1
-set in0_width 5
+set in0_width 4
 set in0_signed 0
-set in1_width 9
+set in1_width 8
 set in1_signed 0
-set in2_width 8
+set in2_width 7
 set in2_signed 0
-set out_width 13
+set out_width 11
 set exp i0*i1+i2
-set arg_lists {i0 {5 0 +} i1 {9 0 +} m {13 0 +} i2 {8 0 +} p {13 0 +} c_reg {1} }
+set arg_lists {i0 {4 0 +} i1 {8 0 +} m {11 0 +} i2 {7 0 +} p {11 0 +} c_reg {1} }
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
 eval "ap_gen_simcore_mac { \
@@ -79,22 +79,22 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 }
 
 
-set id 52
-set name dut_mac_muladd_5ns_11ns_10ns_15_1
+set id 51
+set name dut_mac_muladd_4ns_11ns_10ns_14_1
 set corename simcore_mac
 set op mac
 set stage_num 1
 set max_latency -1
 set registered_input 1
-set in0_width 5
+set in0_width 4
 set in0_signed 0
 set in1_width 11
 set in1_signed 0
 set in2_width 10
 set in2_signed 0
-set out_width 15
+set out_width 14
 set exp i0*i1+i2
-set arg_lists {i0 {5 0 +} i1 {11 0 +} m {15 0 +} i2 {10 0 +} p {15 0 +} c_reg {1} }
+set arg_lists {i0 {4 0 +} i1 {11 0 +} m {14 0 +} i2 {10 0 +} p {14 0 +} c_reg {1} }
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mac] == "ap_gen_simcore_mac"} {
 eval "ap_gen_simcore_mac { \
@@ -159,13 +159,13 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your p
 
 
 # Memory (RAM/ROM)  definition:
-set ID 53
+set ID 52
 set MemName dut_matrix_multiply_alt2_sum_mult
 set CoreName ap_simcore_mem
-set PortList { 1 0 }
+set PortList { 2 3 }
 set DataWd 32
-set AddrRange 4000
-set AddrWd 12
+set AddrRange 1000
+set AddrWd 10
 set impl_style block
 set TrueReset 0
 set HasInitializer 0
@@ -251,14 +251,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 54 \
+    id 53 \
     name A \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename A \
     op interface \
-    ports { A_address0 { O 14 vector } A_ce0 { O 1 bit } A_q0 { I 32 vector } } \
+    ports { A_address0 { O 13 vector } A_ce0 { O 1 bit } A_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'A'"
@@ -270,14 +270,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 55 \
+    id 54 \
     name B \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename B \
     op interface \
-    ports { B_address0 { O 18 vector } B_ce0 { O 1 bit } B_q0 { I 32 vector } } \
+    ports { B_address0 { O 17 vector } B_ce0 { O 1 bit } B_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'B'"
@@ -289,14 +289,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 56 \
+    id 55 \
     name C \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename C \
     op interface \
-    ports { C_address0 { O 12 vector } C_ce0 { O 1 bit } C_we0 { O 1 bit } C_d0 { O 32 vector } } \
+    ports { C_address0 { O 10 vector } C_ce0 { O 1 bit } C_we0 { O 1 bit } C_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'C'"

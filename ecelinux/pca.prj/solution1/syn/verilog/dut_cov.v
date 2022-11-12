@@ -58,21 +58,21 @@ parameter    ap_const_lv32_6 = 32'b110;
 parameter    ap_const_lv32_9 = 32'b1001;
 parameter    ap_const_lv32_18 = 32'b11000;
 parameter    ap_const_lv10_0 = 10'b0000000000;
-parameter    ap_const_lv18_0 = 18'b000000000000000000;
+parameter    ap_const_lv17_0 = 17'b00000000000000000;
 parameter    ap_const_lv32_3 = 32'b11;
-parameter    ap_const_lv8_0 = 8'b00000000;
+parameter    ap_const_lv7_0 = 7'b0000000;
 parameter    ap_const_lv32_4 = 32'b100;
 parameter    ap_const_lv20_0 = 20'b00000000000000000000;
 parameter    ap_const_lv32_19 = 32'b11001;
 parameter    ap_const_lv32_7 = 32'b111;
 parameter    ap_const_lv32_8 = 32'b1000;
-parameter    ap_const_lv32_43470000 = 32'b1000011010001110000000000000000;
-parameter    ap_const_lv18_C8 = 18'b11001000;
+parameter    ap_const_lv32_42C60000 = 32'b1000010110001100000000000000000;
+parameter    ap_const_lv17_64 = 17'b1100100;
 parameter    ap_const_lv10_310 = 10'b1100010000;
 parameter    ap_const_lv10_1 = 10'b1;
-parameter    ap_const_lv8_C8 = 8'b11001000;
-parameter    ap_const_lv8_1 = 8'b1;
-parameter    ap_const_lv18_310 = 18'b1100010000;
+parameter    ap_const_lv7_64 = 7'b1100100;
+parameter    ap_const_lv7_1 = 7'b1;
+parameter    ap_const_lv17_310 = 17'b1100010000;
 parameter    ap_const_lv20_310 = 20'b1100010000;
 
 input   ap_clk;
@@ -81,7 +81,7 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output  [17:0] X_address0;
+output  [16:0] X_address0;
 output   X_ce0;
 input  [31:0] X_q0;
 output  [19:0] XXT_address0;
@@ -93,7 +93,7 @@ input  [31:0] XXT_q0;
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
-reg[17:0] X_address0;
+reg[16:0] X_address0;
 reg X_ce0;
 reg[19:0] XXT_address0;
 reg XXT_ce0;
@@ -103,24 +103,24 @@ reg[31:0] XXT_d0;
 (* fsm_encoding = "none" *) reg   [25:0] ap_CS_fsm;
 reg    ap_sig_cseq_ST_st1_fsm_0;
 reg    ap_sig_43;
-wire   [17:0] next_mul2_fu_175_p2;
-reg   [17:0] next_mul2_reg_284;
+wire   [16:0] next_mul2_fu_175_p2;
+reg   [16:0] next_mul2_reg_284;
 reg    ap_sig_cseq_ST_st2_fsm_1;
 reg    ap_sig_69;
 wire   [9:0] i_7_fu_187_p2;
 reg   [9:0] i_7_reg_292;
-wire   [17:0] tmp_cast_fu_193_p1;
-reg   [17:0] tmp_cast_reg_297;
+wire   [16:0] tmp_cast_fu_193_p1;
+reg   [16:0] tmp_cast_reg_297;
 wire   [0:0] exitcond3_fu_181_p2;
-wire   [7:0] j_5_fu_203_p2;
-reg   [7:0] j_5_reg_305;
+wire   [6:0] j_5_fu_203_p2;
+reg   [6:0] j_5_reg_305;
 reg    ap_sig_cseq_ST_st3_fsm_2;
 reg    ap_sig_86;
 wire   [0:0] exitcond2_fu_197_p2;
-wire   [17:0] next_mul_fu_224_p2;
-reg   [17:0] next_mul_reg_315;
-wire   [17:0] tmp_186_fu_230_p2;
-reg   [17:0] tmp_186_reg_320;
+wire   [16:0] next_mul_fu_224_p2;
+reg   [16:0] next_mul_reg_315;
+wire   [16:0] tmp_68_fu_230_p2;
+reg   [16:0] tmp_68_reg_320;
 wire   [19:0] next_mul4_fu_239_p2;
 reg   [19:0] next_mul4_reg_325;
 reg    ap_sig_cseq_ST_st6_fsm_5;
@@ -138,7 +138,7 @@ reg    ap_sig_128;
 wire   [31:0] grp_fu_168_p2;
 reg    ap_sig_cseq_ST_st25_fsm_24;
 reg    ap_sig_137;
-reg   [17:0] XT_address0;
+reg   [16:0] XT_address0;
 reg    XT_ce0;
 reg    XT_we0;
 wire   [31:0] XT_q0;
@@ -146,20 +146,20 @@ wire    grp_dut_matrix_multiply_alt26_fu_159_ap_start;
 wire    grp_dut_matrix_multiply_alt26_fu_159_ap_done;
 wire    grp_dut_matrix_multiply_alt26_fu_159_ap_idle;
 wire    grp_dut_matrix_multiply_alt26_fu_159_ap_ready;
-wire   [17:0] grp_dut_matrix_multiply_alt26_fu_159_A_address0;
+wire   [16:0] grp_dut_matrix_multiply_alt26_fu_159_A_address0;
 wire    grp_dut_matrix_multiply_alt26_fu_159_A_ce0;
-wire   [17:0] grp_dut_matrix_multiply_alt26_fu_159_B_address0;
+wire   [16:0] grp_dut_matrix_multiply_alt26_fu_159_B_address0;
 wire    grp_dut_matrix_multiply_alt26_fu_159_B_ce0;
 wire   [19:0] grp_dut_matrix_multiply_alt26_fu_159_C_address0;
 wire    grp_dut_matrix_multiply_alt26_fu_159_C_ce0;
 wire    grp_dut_matrix_multiply_alt26_fu_159_C_we0;
 wire   [31:0] grp_dut_matrix_multiply_alt26_fu_159_C_d0;
 reg   [9:0] i_reg_80;
-reg   [17:0] phi_mul1_reg_91;
-reg   [7:0] j_reg_103;
+reg   [16:0] phi_mul1_reg_91;
+reg   [6:0] j_reg_103;
 reg    ap_sig_cseq_ST_st4_fsm_3;
 reg    ap_sig_183;
-reg   [17:0] phi_mul_reg_114;
+reg   [16:0] phi_mul_reg_114;
 reg   [9:0] i1_reg_125;
 reg    ap_sig_cseq_ST_st5_fsm_4;
 reg    ap_sig_195;
@@ -169,17 +169,17 @@ reg    ap_sig_cseq_ST_st26_fsm_25;
 reg    ap_sig_212;
 wire   [0:0] exitcond1_fu_245_p2;
 reg    ap_reg_grp_dut_matrix_multiply_alt26_fu_159_ap_start;
-wire   [63:0] tmp_202_cast_fu_219_p1;
-wire   [63:0] tmp_204_cast_fu_235_p1;
-wire   [63:0] tmp_205_cast_fu_279_p1;
+wire   [63:0] tmp_80_cast_fu_219_p1;
+wire   [63:0] tmp_82_cast_fu_235_p1;
+wire   [63:0] tmp_83_cast_fu_279_p1;
 reg    ap_sig_cseq_ST_st8_fsm_7;
 reg    ap_sig_231;
 reg    ap_sig_cseq_ST_st9_fsm_8;
 reg    ap_sig_239;
-wire   [17:0] tmp_151_cast_fu_209_p1;
-wire   [17:0] tmp_s_fu_213_p2;
-wire   [19:0] tmp_152_cast_fu_269_p1;
-wire   [19:0] tmp_187_fu_273_p2;
+wire   [16:0] tmp_57_cast_fu_209_p1;
+wire   [16:0] tmp_s_fu_213_p2;
+wire   [19:0] tmp_58_cast_fu_269_p1;
+wire   [19:0] tmp_69_fu_273_p2;
 reg   [25:0] ap_NS_fsm;
 
 // power-on initialization
@@ -190,8 +190,8 @@ end
 
 dut_cov_XT #(
     .DataWidth( 32 ),
-    .AddressRange( 156800 ),
-    .AddressWidth( 18 ))
+    .AddressRange( 78400 ),
+    .AddressWidth( 17 ))
 XT_U(
     .clk(ap_clk),
     .reset(ap_rst),
@@ -231,7 +231,7 @@ dut_fdiv_32ns_32ns_32_16_U14(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(XXT_q0),
-    .din1(ap_const_lv32_43470000),
+    .din1(ap_const_lv32_42C60000),
     .ce(1'b1),
     .dout(grp_fu_168_p2)
 );
@@ -282,7 +282,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (exitcond3_fu_181_p2 == 1'b0))) begin
-        j_reg_103 <= ap_const_lv8_0;
+        j_reg_103 <= ap_const_lv7_0;
     end else if ((1'b1 == ap_sig_cseq_ST_st4_fsm_3)) begin
         j_reg_103 <= j_5_reg_305;
     end
@@ -292,7 +292,7 @@ always @ (posedge ap_clk) begin
     if (((1'b1 == ap_sig_cseq_ST_st3_fsm_2) & ~(1'b0 == exitcond2_fu_197_p2))) begin
         phi_mul1_reg_91 <= next_mul2_reg_284;
     end else if (((1'b1 == ap_sig_cseq_ST_st1_fsm_0) & ~(ap_start == 1'b0))) begin
-        phi_mul1_reg_91 <= ap_const_lv18_0;
+        phi_mul1_reg_91 <= ap_const_lv17_0;
     end
 end
 
@@ -306,7 +306,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_sig_cseq_ST_st2_fsm_1) & (exitcond3_fu_181_p2 == 1'b0))) begin
-        phi_mul_reg_114 <= ap_const_lv18_0;
+        phi_mul_reg_114 <= ap_const_lv17_0;
     end else if ((1'b1 == ap_sig_cseq_ST_st4_fsm_3)) begin
         phi_mul_reg_114 <= next_mul_reg_315;
     end
@@ -314,7 +314,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_sig_cseq_ST_st7_fsm_6) & (1'b0 == exitcond_fu_257_p2))) begin
-        XXT_addr_reg_346 <= tmp_205_cast_fu_279_p1;
+        XXT_addr_reg_346 <= tmp_83_cast_fu_279_p1;
     end
 end
 
@@ -347,7 +347,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_sig_cseq_ST_st3_fsm_2) & (1'b0 == exitcond2_fu_197_p2))) begin
         next_mul_reg_315 <= next_mul_fu_224_p2;
-        tmp_186_reg_320 <= tmp_186_fu_230_p2;
+        tmp_68_reg_320 <= tmp_68_fu_230_p2;
     end
 end
 
@@ -359,7 +359,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_sig_cseq_ST_st4_fsm_3)) begin
-        XT_address0 = tmp_204_cast_fu_235_p1;
+        XT_address0 = tmp_82_cast_fu_235_p1;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
         XT_address0 = grp_dut_matrix_multiply_alt26_fu_159_B_address0;
     end else begin
@@ -389,7 +389,7 @@ always @ (*) begin
     if ((1'b1 == ap_sig_cseq_ST_st25_fsm_24)) begin
         XXT_address0 = XXT_addr_reg_346;
     end else if ((1'b1 == ap_sig_cseq_ST_st7_fsm_6)) begin
-        XXT_address0 = tmp_205_cast_fu_279_p1;
+        XXT_address0 = tmp_83_cast_fu_279_p1;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
         XXT_address0 = grp_dut_matrix_multiply_alt26_fu_159_C_address0;
     end else begin
@@ -429,7 +429,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_sig_cseq_ST_st3_fsm_2)) begin
-        X_address0 = tmp_202_cast_fu_219_p1;
+        X_address0 = tmp_80_cast_fu_219_p1;
     end else if ((1'b1 == ap_sig_cseq_ST_st5_fsm_4)) begin
         X_address0 = grp_dut_matrix_multiply_alt26_fu_159_A_address0;
     end else begin
@@ -727,7 +727,7 @@ end
 
 assign exitcond1_fu_245_p2 = ((i1_reg_125 == ap_const_lv10_310) ? 1'b1 : 1'b0);
 
-assign exitcond2_fu_197_p2 = ((j_reg_103 == ap_const_lv8_C8) ? 1'b1 : 1'b0);
+assign exitcond2_fu_197_p2 = ((j_reg_103 == ap_const_lv7_64) ? 1'b1 : 1'b0);
 
 assign exitcond3_fu_181_p2 = ((i_reg_80 == ap_const_lv10_310) ? 1'b1 : 1'b0);
 
@@ -739,36 +739,36 @@ assign i_7_fu_187_p2 = (i_reg_80 + ap_const_lv10_1);
 
 assign i_8_fu_251_p2 = (i1_reg_125 + ap_const_lv10_1);
 
-assign j_5_fu_203_p2 = (j_reg_103 + ap_const_lv8_1);
+assign j_5_fu_203_p2 = (j_reg_103 + ap_const_lv7_1);
 
 assign j_6_fu_263_p2 = (j2_reg_148 + ap_const_lv10_1);
 
-assign next_mul2_fu_175_p2 = (phi_mul1_reg_91 + ap_const_lv18_C8);
+assign next_mul2_fu_175_p2 = (phi_mul1_reg_91 + ap_const_lv17_64);
 
 assign next_mul4_fu_239_p2 = (phi_mul3_reg_136 + ap_const_lv20_310);
 
-assign next_mul_fu_224_p2 = (phi_mul_reg_114 + ap_const_lv18_310);
+assign next_mul_fu_224_p2 = (phi_mul_reg_114 + ap_const_lv17_310);
 
-assign tmp_151_cast_fu_209_p1 = j_reg_103;
+assign tmp_57_cast_fu_209_p1 = j_reg_103;
 
-assign tmp_152_cast_fu_269_p1 = j2_reg_148;
+assign tmp_58_cast_fu_269_p1 = j2_reg_148;
 
-assign tmp_186_fu_230_p2 = (phi_mul_reg_114 + tmp_cast_reg_297);
+assign tmp_68_fu_230_p2 = (phi_mul_reg_114 + tmp_cast_reg_297);
 
-assign tmp_187_fu_273_p2 = (phi_mul3_reg_136 + tmp_152_cast_fu_269_p1);
+assign tmp_69_fu_273_p2 = (phi_mul3_reg_136 + tmp_58_cast_fu_269_p1);
 
-assign tmp_202_cast_fu_219_p1 = tmp_s_fu_213_p2;
+assign tmp_80_cast_fu_219_p1 = tmp_s_fu_213_p2;
 
-assign tmp_204_cast_fu_235_p1 = tmp_186_reg_320;
+assign tmp_82_cast_fu_235_p1 = tmp_68_reg_320;
 
-assign tmp_205_cast_fu_279_p1 = tmp_187_fu_273_p2;
+assign tmp_83_cast_fu_279_p1 = tmp_69_fu_273_p2;
 
 assign tmp_cast_fu_193_p1 = i_reg_80;
 
-assign tmp_s_fu_213_p2 = (phi_mul1_reg_91 + tmp_151_cast_fu_209_p1);
+assign tmp_s_fu_213_p2 = (phi_mul1_reg_91 + tmp_57_cast_fu_209_p1);
 
 always @ (posedge ap_clk) begin
-    tmp_cast_reg_297[17:10] <= 8'b00000000;
+    tmp_cast_reg_297[16:10] <= 7'b0000000;
 end
 
 endmodule //dut_cov

@@ -42772,318 +42772,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 #921 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
 #10 "./pca.h" 2
 
-
-
-
-
-
-const int VEC_SIZ = 28 * 28;
-
-class PCA {
-  public:
-  /*
-  fix32_t X[VEC_SIZ][IMG_NUM];
-  fix32_t Y[K][IMG_NUM];
-  fix32_t V[VEC_SIZ][VEC_SIZ];
-  fix32_t S[IMG_NUM][VEC_SIZ];
-  fix32_t tsf_mat[K][VEC_SIZ];*/
-
-  int vec_size;
-  int vec_num;
-  int k;
-
-  //PCA(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[VEC_SIZ][IMG_NUM], fix32_t tsf_mat[K][VEC_SIZ], int VEC_SIZ, int VEC_NUM, int k);
-  PCA(int VEC_SIZ, int VEC_NUM, int k);
-  ~PCA();
-
-  void normalize(fix32_t X[VEC_SIZ][200], fix32_t mean[VEC_SIZ]);
-  void cov(fix32_t X[VEC_SIZ][200], fix32_t XXT[VEC_SIZ][VEC_SIZ]);
-  void apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]);
-  bool cmp(int a, int b);
-  void rank(fix32_t tsf_mat[20][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t V[VEC_SIZ][VEC_SIZ]);
-  void back_pjt(fix32_t tsf_mat[20][VEC_SIZ], fix32_t X[VEC_SIZ][200], fix32_t Y[20][200]);
-  void find_max(fix32_t S[VEC_SIZ][VEC_SIZ]);
-
-  private:
-  //fix32_t A[IMG_NUM][VEC_SIZ];
-  int sorted_idx[VEC_SIZ];
-
-};
-#7 "dut.cpp" 2
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 1 3
-// Standard stream manipulators -*- C++ -*-
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005
-// 2006, 2007, 2008, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/iomanip
- *  This is a Standard C++ Library header.
- */
-
-//
-// ISO C++ 14882: 27.6.3  Standard manipulators
-//
-
-
-
-
-
-#38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
-#47 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  // [27.6.3] standard manipulators
-  // Also see DR 183.
-
-  struct _Resetiosflags { ios_base::fmtflags _M_mask; };
-
-  /**
-   *  @brief  Manipulator for @c setf.
-   *  @param  mask  A format flags mask.
-   *
-   *  Sent to a stream object, this manipulator resets the specified flags,
-   *  via @e stream.setf(0,mask).
-  */
-  inline _Resetiosflags
-  resetiosflags(ios_base::fmtflags __mask)
-  { return { __mask }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Resetiosflags __f)
-    {
-      __is.setf(ios_base::fmtflags(0), __f._M_mask);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
-    {
-      __os.setf(ios_base::fmtflags(0), __f._M_mask);
-      return __os;
-    }
-
-
-  struct _Setiosflags { ios_base::fmtflags _M_mask; };
-
-  /**
-   *  @brief  Manipulator for @c setf.
-   *  @param  mask  A format flags mask.
-   *
-   *  Sent to a stream object, this manipulator sets the format flags
-   *  to @a mask.
-  */
-  inline _Setiosflags
-  setiosflags(ios_base::fmtflags __mask)
-  { return { __mask }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setiosflags __f)
-    {
-      __is.setf(__f._M_mask);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
-    {
-      __os.setf(__f._M_mask);
-      return __os;
-    }
-
-
-  struct _Setbase { int _M_base; };
-
-  /**
-   *  @brief  Manipulator for @c setf.
-   *  @param  base  A numeric base.
-   *
-   *  Sent to a stream object, this manipulator changes the
-   *  @c ios_base::basefield flags to @c oct, @c dec, or @c hex when @a base
-   *  is 8, 10, or 16, accordingly, and to 0 if @a base is any other value.
-  */
-  inline _Setbase
-  setbase(int __base)
-  { return { __base }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setbase __f)
-    {
-      __is.setf(__f._M_base == 8 ? ios_base::oct :
-  __f._M_base == 10 ? ios_base::dec :
-  __f._M_base == 16 ? ios_base::hex :
-  ios_base::fmtflags(0), ios_base::basefield);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
-    {
-      __os.setf(__f._M_base == 8 ? ios_base::oct :
-  __f._M_base == 10 ? ios_base::dec :
-  __f._M_base == 16 ? ios_base::hex :
-  ios_base::fmtflags(0), ios_base::basefield);
-      return __os;
-    }
-
-
-  template<typename _CharT>
-    struct _Setfill { _CharT _M_c; };
-
-  /**
-   *  @brief  Manipulator for @c fill.
-   *  @param  c  The new fill character.
-   *
-   *  Sent to a stream object, this manipulator calls @c fill(c) for that
-   *  object.
-  */
-  template<typename _CharT>
-    inline _Setfill<_CharT>
-    setfill(_CharT __c)
-    { return { __c }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setfill<_CharT> __f)
-    {
-      __is.fill(__f._M_c);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
-    {
-      __os.fill(__f._M_c);
-      return __os;
-    }
-
-
-  struct _Setprecision { int _M_n; };
-
-  /**
-   *  @brief  Manipulator for @c precision.
-   *  @param  n  The new precision.
-   *
-   *  Sent to a stream object, this manipulator calls @c precision(n) for
-   *  that object.
-  */
-  inline _Setprecision
-  setprecision(int __n)
-  { return { __n }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setprecision __f)
-    {
-      __is.precision(__f._M_n);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
-    {
-      __os.precision(__f._M_n);
-      return __os;
-    }
-
-
-  struct _Setw { int _M_n; };
-
-  /**
-   *  @brief  Manipulator for @c width.
-   *  @param  n  The new width.
-   *
-   *  Sent to a stream object, this manipulator calls @c width(n) for
-   *  that object.
-  */
-  inline _Setw
-  setw(int __n)
-  { return { __n }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setw __f)
-    {
-      __is.width(__f._M_n);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
-    {
-      __os.width(__f._M_n);
-      return __os;
-    }
-#315 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
-  // Inhibit implicit instantiations for required instantiations,
-  // which are defined via explicit instantiations elsewhere.  
-  // NB:  This syntax is a GNU extension.
-
-  extern template ostream& operator<<(ostream&, _Setfill<char>);
-  extern template ostream& operator<<(ostream&, _Setiosflags);
-  extern template ostream& operator<<(ostream&, _Resetiosflags);
-  extern template ostream& operator<<(ostream&, _Setbase);
-  extern template ostream& operator<<(ostream&, _Setprecision);
-  extern template ostream& operator<<(ostream&, _Setw);
-  extern template istream& operator>>(istream&, _Setfill<char>);
-  extern template istream& operator>>(istream&, _Setiosflags);
-  extern template istream& operator>>(istream&, _Resetiosflags);
-  extern template istream& operator>>(istream&, _Setbase);
-  extern template istream& operator>>(istream&, _Setprecision);
-  extern template istream& operator>>(istream&, _Setw);
-
-
-  extern template wostream& operator<<(wostream&, _Setfill<wchar_t>);
-  extern template wostream& operator<<(wostream&, _Setiosflags);
-  extern template wostream& operator<<(wostream&, _Resetiosflags);
-  extern template wostream& operator<<(wostream&, _Setbase);
-  extern template wostream& operator<<(wostream&, _Setprecision);
-  extern template wostream& operator<<(wostream&, _Setw);
-  extern template wistream& operator>>(wistream&, _Setfill<wchar_t>);
-  extern template wistream& operator>>(wistream&, _Setiosflags);
-  extern template wistream& operator>>(wistream&, _Resetiosflags);
-  extern template wistream& operator>>(wistream&, _Setbase);
-  extern template wistream& operator>>(wistream&, _Setprecision);
-  extern template wistream& operator>>(wistream&, _Setw);
-
-
-
-
-} // namespace
-#10 "dut.cpp" 2
 #1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 1
 /*****************************************************************************
  *
@@ -59899,6 +59587,9 @@ inline __attribute__((always_inline)) svd_traits() { _ssdm_SpecConstant(&NUM_SWE
       AType a2, BType b2,
       CType &c)
     {
+_ssdm_InlineSelf(2, "");
+#134 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h"
+
       // Disable the inlining of the base vm2x1 function and limit instances using the ALLOCATION directive
       // #pragma HLS inline off
       c = a1*b1 + a2*b2;
@@ -60556,6 +60247,9 @@ _ssdm_op_SpecPipeline(SVDTraits::OFF_DIAG_II, 1, 1, 0, "");
                        OutputType U[RowsA][RowsA],
                        OutputType V[ColsA][ColsA] )
   {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
+_ssdm_op_SpecResourceLimit(1, "", "", "vm2x1_base", "");
+#791 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h"
+
     // Initially only supporting square matrix
     ((RowsA==ColsA) ? static_cast<void> (0) : __assert_fail ("RowsA==ColsA", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h", 793, __PRETTY_FUNCTION__));
 
@@ -61064,7 +60758,349 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#11 "dut.cpp" 2
+#11 "./pca.h" 2
+
+
+
+
+
+
+const int VEC_SIZ = 28 * 28;
+
+class PCA {
+  public:
+  /*
+  fix32_t X[VEC_SIZ][IMG_NUM];
+  fix32_t Y[K][IMG_NUM];
+  fix32_t V[VEC_SIZ][VEC_SIZ];
+  fix32_t S[IMG_NUM][VEC_SIZ];
+  fix32_t tsf_mat[K][VEC_SIZ];*/
+
+  int vec_size;
+  int vec_num;
+  int k;
+
+  //PCA(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[VEC_SIZ][IMG_NUM], fix32_t tsf_mat[K][VEC_SIZ], int VEC_SIZ, int VEC_NUM, int k);
+  PCA(int VEC_SIZ, int VEC_NUM, int k);
+  ~PCA();
+
+  void normalize(fix32_t X[VEC_SIZ][100], fix32_t mean[VEC_SIZ]);
+  void cov(fix32_t X[VEC_SIZ][100], fix32_t XXT[VEC_SIZ][VEC_SIZ]);
+  void apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]);
+  bool cmp(int a, int b);
+  void rank(fix32_t tsf_mat[10][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t V[VEC_SIZ][VEC_SIZ]);
+  void back_pjt(fix32_t tsf_mat[10][VEC_SIZ], fix32_t X[VEC_SIZ][100], fix32_t Y[10][100]);
+  void find_max(fix32_t S[VEC_SIZ][VEC_SIZ]);
+
+  private:
+  //fix32_t A[IMG_NUM][VEC_SIZ];
+  int sorted_idx[VEC_SIZ];
+
+};
+
+struct MY_CONFIG_SVD : hls::svd_traits<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>{
+ static const int NUM_SWEEPS = 6;
+ static const int DIAG_II = 100;
+ static const int OFF_DIAG_II = 100;
+ static const int ARCH = 0;
+
+public :
+inline __attribute__((always_inline)) MY_CONFIG_SVD() { _ssdm_SpecConstant(&NUM_SWEEPS); _ssdm_SpecConstant(&DIAG_II); _ssdm_SpecConstant(&OFF_DIAG_II); _ssdm_SpecConstant(&ARCH);  }
+#55 "./pca.h"
+};
+
+struct MY_CONFIG_MULT: hls::matrix_multiply_traits<hls::NoTranspose,
+ hls::NoTranspose,
+ 10,
+ VEC_SIZ,
+ VEC_SIZ,
+ 100,
+ fix32_t,
+ fix32_t>{
+ static const int ARCH = 2;
+ static const int INNER_II = 100;
+ static const int UNROLL_FACTOR = 1;
+
+public :
+inline __attribute__((always_inline)) MY_CONFIG_MULT() { _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&UNROLL_FACTOR);  }
+#68 "./pca.h"
+};
+#7 "dut.cpp" 2
+
+
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 1 3
+// Standard stream manipulators -*- C++ -*-
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file include/iomanip
+ *  This is a Standard C++ Library header.
+ */
+
+//
+// ISO C++ 14882: 27.6.3  Standard manipulators
+//
+
+
+
+
+
+#38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+#47 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  // [27.6.3] standard manipulators
+  // Also see DR 183.
+
+  struct _Resetiosflags { ios_base::fmtflags _M_mask; };
+
+  /**
+   *  @brief  Manipulator for @c setf.
+   *  @param  mask  A format flags mask.
+   *
+   *  Sent to a stream object, this manipulator resets the specified flags,
+   *  via @e stream.setf(0,mask).
+  */
+  inline _Resetiosflags
+  resetiosflags(ios_base::fmtflags __mask)
+  { return { __mask }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Resetiosflags __f)
+    {
+      __is.setf(ios_base::fmtflags(0), __f._M_mask);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+    {
+      __os.setf(ios_base::fmtflags(0), __f._M_mask);
+      return __os;
+    }
+
+
+  struct _Setiosflags { ios_base::fmtflags _M_mask; };
+
+  /**
+   *  @brief  Manipulator for @c setf.
+   *  @param  mask  A format flags mask.
+   *
+   *  Sent to a stream object, this manipulator sets the format flags
+   *  to @a mask.
+  */
+  inline _Setiosflags
+  setiosflags(ios_base::fmtflags __mask)
+  { return { __mask }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setiosflags __f)
+    {
+      __is.setf(__f._M_mask);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+    {
+      __os.setf(__f._M_mask);
+      return __os;
+    }
+
+
+  struct _Setbase { int _M_base; };
+
+  /**
+   *  @brief  Manipulator for @c setf.
+   *  @param  base  A numeric base.
+   *
+   *  Sent to a stream object, this manipulator changes the
+   *  @c ios_base::basefield flags to @c oct, @c dec, or @c hex when @a base
+   *  is 8, 10, or 16, accordingly, and to 0 if @a base is any other value.
+  */
+  inline _Setbase
+  setbase(int __base)
+  { return { __base }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setbase __f)
+    {
+      __is.setf(__f._M_base == 8 ? ios_base::oct :
+  __f._M_base == 10 ? ios_base::dec :
+  __f._M_base == 16 ? ios_base::hex :
+  ios_base::fmtflags(0), ios_base::basefield);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+    {
+      __os.setf(__f._M_base == 8 ? ios_base::oct :
+  __f._M_base == 10 ? ios_base::dec :
+  __f._M_base == 16 ? ios_base::hex :
+  ios_base::fmtflags(0), ios_base::basefield);
+      return __os;
+    }
+
+
+  template<typename _CharT>
+    struct _Setfill { _CharT _M_c; };
+
+  /**
+   *  @brief  Manipulator for @c fill.
+   *  @param  c  The new fill character.
+   *
+   *  Sent to a stream object, this manipulator calls @c fill(c) for that
+   *  object.
+  */
+  template<typename _CharT>
+    inline _Setfill<_CharT>
+    setfill(_CharT __c)
+    { return { __c }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setfill<_CharT> __f)
+    {
+      __is.fill(__f._M_c);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+    {
+      __os.fill(__f._M_c);
+      return __os;
+    }
+
+
+  struct _Setprecision { int _M_n; };
+
+  /**
+   *  @brief  Manipulator for @c precision.
+   *  @param  n  The new precision.
+   *
+   *  Sent to a stream object, this manipulator calls @c precision(n) for
+   *  that object.
+  */
+  inline _Setprecision
+  setprecision(int __n)
+  { return { __n }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setprecision __f)
+    {
+      __is.precision(__f._M_n);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+    {
+      __os.precision(__f._M_n);
+      return __os;
+    }
+
+
+  struct _Setw { int _M_n; };
+
+  /**
+   *  @brief  Manipulator for @c width.
+   *  @param  n  The new width.
+   *
+   *  Sent to a stream object, this manipulator calls @c width(n) for
+   *  that object.
+  */
+  inline _Setw
+  setw(int __n)
+  { return { __n }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setw __f)
+    {
+      __is.width(__f._M_n);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+    {
+      __os.width(__f._M_n);
+      return __os;
+    }
+#315 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+  // Inhibit implicit instantiations for required instantiations,
+  // which are defined via explicit instantiations elsewhere.  
+  // NB:  This syntax is a GNU extension.
+
+  extern template ostream& operator<<(ostream&, _Setfill<char>);
+  extern template ostream& operator<<(ostream&, _Setiosflags);
+  extern template ostream& operator<<(ostream&, _Resetiosflags);
+  extern template ostream& operator<<(ostream&, _Setbase);
+  extern template ostream& operator<<(ostream&, _Setprecision);
+  extern template ostream& operator<<(ostream&, _Setw);
+  extern template istream& operator>>(istream&, _Setfill<char>);
+  extern template istream& operator>>(istream&, _Setiosflags);
+  extern template istream& operator>>(istream&, _Resetiosflags);
+  extern template istream& operator>>(istream&, _Setbase);
+  extern template istream& operator>>(istream&, _Setprecision);
+  extern template istream& operator>>(istream&, _Setw);
+
+
+  extern template wostream& operator<<(wostream&, _Setfill<wchar_t>);
+  extern template wostream& operator<<(wostream&, _Setiosflags);
+  extern template wostream& operator<<(wostream&, _Resetiosflags);
+  extern template wostream& operator<<(wostream&, _Setbase);
+  extern template wostream& operator<<(wostream&, _Setprecision);
+  extern template wostream& operator<<(wostream&, _Setw);
+  extern template wistream& operator>>(wistream&, _Setfill<wchar_t>);
+  extern template wistream& operator>>(wistream&, _Setiosflags);
+  extern template wistream& operator>>(wistream&, _Resetiosflags);
+  extern template wistream& operator>>(wistream&, _Setbase);
+  extern template wistream& operator>>(wistream&, _Setprecision);
+  extern template wistream& operator>>(wistream&, _Setw);
+
+
+
+
+} // namespace
+#10 "dut.cpp" 2
+
 
 using namespace std;
 
@@ -61077,13 +61113,13 @@ void dut(
     hls::stream<fix32_t> &strm_out
 )
 {
-  fix32_t X[VEC_SIZ][200];
+  fix32_t X[VEC_SIZ][100];
   bit32_t input_l;
-  fix32_t Y[20][200];
-  fix32_t tsf_mat[20][VEC_SIZ];
+  fix32_t Y[10][100];
+  fix32_t tsf_mat[10][VEC_SIZ];
   int counter = 0;
   // read one test image into digit
-  for (int test = 0; test < 200; test++) {
+  for (int test = 0; test < 100; test++) {
     for (int i = 0; i < 28*28/4; i++) {
       input_l = strm_in.read();
       counter++;
@@ -61097,7 +61133,7 @@ void dut(
   }
 
   // call pca
-  PCA pca(VEC_SIZ, 200, 20);
+  PCA pca(VEC_SIZ, 100, 10);
   fix32_t S[VEC_SIZ][VEC_SIZ];
   fix32_t U[VEC_SIZ][VEC_SIZ];
   fix32_t V[VEC_SIZ][VEC_SIZ];
@@ -61123,13 +61159,13 @@ void dut(
   pca.back_pjt(tsf_mat, X, Y);
   //cout << "transfer output" << endl;
 
-  for (int i = 0; i < 20; i++) {
-    for (int j = 0; j < 200; j++) {
+  for (int i = 0; i < 10; i++) {
+    for (int j = 0; j < 100; j++) {
       strm_out.write(Y[i][j]);
     }
   }
 
-  for (int i = 0; i < 20; i++) {
+  for (int i = 0; i < 10; i++) {
     for (int j = 0; j < VEC_SIZ; j++) {
       strm_out.write(tsf_mat[i][j]);
       //cout << tsf_mat[i][j] << '\t';
@@ -61148,7 +61184,6 @@ void dut(
 class ssdm_global_array_dutpp0cppaplinecpp {
 	public:
 		 inline __attribute__((always_inline)) ssdm_global_array_dutpp0cppaplinecpp() {
-			_ssdm_SpecConstant(&VEC_SIZ);
 			_ssdm_SpecConstant(&hls::ref_cordic);
 			_ssdm_SpecConstant(&hls::ref_4oPi_512);
 			_ssdm_SpecConstant(hls::ref_4oPi_table_256);
@@ -61192,6 +61227,7 @@ class ssdm_global_array_dutpp0cppaplinecpp {
 			_ssdm_SpecConstant(hls::sin_cos_K0);
 			_ssdm_SpecConstant(hls::sin_cos_K1);
 			_ssdm_SpecConstant(hls::sin_cos_K2);
+			_ssdm_SpecConstant(&VEC_SIZ);
 		}
 };
 static ssdm_global_array_dutpp0cppaplinecpp ssdm_global_array_ins;

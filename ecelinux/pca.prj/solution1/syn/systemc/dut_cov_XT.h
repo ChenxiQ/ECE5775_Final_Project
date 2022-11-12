@@ -22,8 +22,8 @@ using namespace sc_dt;
 struct dut_cov_XT_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 32;
-  static const unsigned AddressRange = 156800;
-  static const unsigned AddressWidth = 18;
+  static const unsigned AddressRange = 78400;
+  static const unsigned AddressWidth = 17;
 
 //latency = 1
 //input_reg = 1
@@ -79,8 +79,8 @@ SC_MODULE(dut_cov_XT) {
 
 
 static const unsigned DataWidth = 32;
-static const unsigned AddressRange = 156800;
-static const unsigned AddressWidth = 18;
+static const unsigned AddressRange = 78400;
+static const unsigned AddressWidth = 17;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;

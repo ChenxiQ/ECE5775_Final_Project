@@ -39,8 +39,8 @@
 </Loop1.1>
 </Loop1>
 <Loop2>
-<TripCount>20</TripCount>
-<Latency>78440</Latency>
+<TripCount>10</TripCount>
+<Latency>39220</Latency>
 <IterationLatency>3922</IterationLatency>
 <Loop2.1>
 <TripCount>784</TripCount>
@@ -54,8 +54,8 @@
 <AreaEstimates>
 <Resources>
 <DSP48E>2</DSP48E>
-<FF>472</FF>
-<LUT>464</LUT>
+<FF>466</FF>
+<LUT>459</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>
@@ -251,7 +251,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>14</Bits>
+<Bits>13</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>

@@ -6,8 +6,8 @@ set MemName dut_cov_XT
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 32
-set AddrRange 156800
-set AddrWd 18
+set AddrRange 78400
+set AddrWd 17
 set impl_style block
 set TrueReset 0
 set HasInitializer 0
@@ -100,7 +100,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename X \
     op interface \
-    ports { X_address0 { O 18 vector } X_ce0 { O 1 bit } X_q0 { I 32 vector } } \
+    ports { X_address0 { O 17 vector } X_ce0 { O 1 bit } X_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'X'"

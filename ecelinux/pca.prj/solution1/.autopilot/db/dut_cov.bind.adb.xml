@@ -200,7 +200,7 @@
 
 <node id="3" bw="32" op_0_bw="64">
 <![CDATA[
-:0  %XT = alloca [156800 x float], align 4
+:0  %XT = alloca [78400 x float], align 4
 
 ]]></node>
 <StgValue><ssdm name="XT"/><MemPortTyVec>2 3 </MemPortTyVec>
@@ -247,9 +247,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="7" bw="18" op_0_bw="18" op_1_bw="0">
+<node id="7" bw="17" op_0_bw="17" op_1_bw="0">
 <![CDATA[
-.loopexit5:1  %phi_mul1 = phi i18 [ 0, %0 ], [ %next_mul2, %.preheader4 ]
+.loopexit5:1  %phi_mul1 = phi i17 [ 0, %0 ], [ %next_mul2, %.preheader4 ]
 
 ]]></node>
 <StgValue><ssdm name="phi_mul1"/></StgValue>
@@ -262,9 +262,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="8" bw="18" op_0_bw="18" op_1_bw="18">
+<node id="8" bw="17" op_0_bw="17" op_1_bw="17">
 <![CDATA[
-.loopexit5:2  %next_mul2 = add i18 %phi_mul1, 200
+.loopexit5:2  %next_mul2 = add i17 %phi_mul1, 100
 
 ]]></node>
 <StgValue><ssdm name="next_mul2"/></StgValue>
@@ -338,9 +338,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="14" bw="18" op_0_bw="10">
+<node id="14" bw="17" op_0_bw="10">
 <![CDATA[
-.preheader4.preheader:0  %tmp_cast = zext i10 %i to i18
+.preheader4.preheader:0  %tmp_cast = zext i10 %i to i17
 
 ]]></node>
 <StgValue><ssdm name="tmp_cast"/></StgValue>
@@ -372,7 +372,7 @@
 
 <node id="36" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-:0  call fastcc void @dut_matrix_multiply_alt26([156800 x float]* %X, [156800 x float]* %XT, [614656 x float]* %XXT)
+:0  call fastcc void @dut_matrix_multiply_alt26([78400 x float]* %X, [78400 x float]* %XT, [614656 x float]* %XXT)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -388,9 +388,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="17" bw="8" op_0_bw="8" op_1_bw="0">
+<node id="17" bw="7" op_0_bw="7" op_1_bw="0">
 <![CDATA[
-.preheader4:0  %j = phi i8 [ %j_5, %1 ], [ 0, %.preheader4.preheader ]
+.preheader4:0  %j = phi i7 [ %j_5, %1 ], [ 0, %.preheader4.preheader ]
 
 ]]></node>
 <StgValue><ssdm name="j"/></StgValue>
@@ -403,9 +403,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="18" bw="18" op_0_bw="18" op_1_bw="0">
+<node id="18" bw="17" op_0_bw="17" op_1_bw="0">
 <![CDATA[
-.preheader4:1  %phi_mul = phi i18 [ %next_mul, %1 ], [ 0, %.preheader4.preheader ]
+.preheader4:1  %phi_mul = phi i17 [ %next_mul, %1 ], [ 0, %.preheader4.preheader ]
 
 ]]></node>
 <StgValue><ssdm name="phi_mul"/></StgValue>
@@ -418,9 +418,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="19" bw="1" op_0_bw="8" op_1_bw="8">
+<node id="19" bw="1" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.preheader4:2  %exitcond2 = icmp eq i8 %j, -56
+.preheader4:2  %exitcond2 = icmp eq i7 %j, -28
 
 ]]></node>
 <StgValue><ssdm name="exitcond2"/></StgValue>
@@ -435,10 +435,10 @@
 
 <node id="20" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader4:3  %empty_42 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 200, i64 200, i64 200)
+.preheader4:3  %empty_37 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100)
 
 ]]></node>
-<StgValue><ssdm name="empty_42"/></StgValue>
+<StgValue><ssdm name="empty_37"/></StgValue>
 </operation>
 
 <operation id="43" st_id="3" stage="1" lat="1">
@@ -448,9 +448,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="21" bw="8" op_0_bw="8" op_1_bw="8">
+<node id="21" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.preheader4:4  %j_5 = add i8 %j, 1
+.preheader4:4  %j_5 = add i7 %j, 1
 
 ]]></node>
 <StgValue><ssdm name="j_5"/></StgValue>
@@ -479,12 +479,12 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="24" bw="18" op_0_bw="8">
+<node id="24" bw="17" op_0_bw="7">
 <![CDATA[
-:0  %tmp_151_cast = zext i8 %j to i18
+:0  %tmp_57_cast = zext i7 %j to i17
 
 ]]></node>
-<StgValue><ssdm name="tmp_151_cast"/></StgValue>
+<StgValue><ssdm name="tmp_57_cast"/></StgValue>
 </operation>
 
 <operation id="46" st_id="3" stage="1" lat="1">
@@ -495,9 +495,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="25" bw="18" op_0_bw="18" op_1_bw="18">
+<node id="25" bw="17" op_0_bw="17" op_1_bw="17">
 <![CDATA[
-:1  %tmp_s = add i18 %phi_mul1, %tmp_151_cast
+:1  %tmp_s = add i17 %phi_mul1, %tmp_57_cast
 
 ]]></node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
@@ -511,12 +511,12 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="26" bw="64" op_0_bw="18">
+<node id="26" bw="64" op_0_bw="17">
 <![CDATA[
-:2  %tmp_202_cast = zext i18 %tmp_s to i64
+:2  %tmp_80_cast = zext i17 %tmp_s to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_202_cast"/></StgValue>
+<StgValue><ssdm name="tmp_80_cast"/></StgValue>
 </operation>
 
 <operation id="48" st_id="3" stage="1" lat="1">
@@ -527,9 +527,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="27" bw="18" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<node id="27" bw="17" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:3  %X_addr = getelementptr [156800 x float]* %X, i64 0, i64 %tmp_202_cast
+:3  %X_addr = getelementptr [78400 x float]* %X, i64 0, i64 %tmp_80_cast
 
 ]]></node>
 <StgValue><ssdm name="X_addr"/></StgValue>
@@ -543,9 +543,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="28" bw="18" op_0_bw="18" op_1_bw="18">
+<node id="28" bw="17" op_0_bw="17" op_1_bw="17">
 <![CDATA[
-:4  %next_mul = add i18 %phi_mul, 784
+:4  %next_mul = add i17 %phi_mul, 784
 
 ]]></node>
 <StgValue><ssdm name="next_mul"/></StgValue>
@@ -559,12 +559,12 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="29" bw="18" op_0_bw="18" op_1_bw="18">
+<node id="29" bw="17" op_0_bw="17" op_1_bw="17">
 <![CDATA[
-:5  %tmp_186 = add i18 %phi_mul, %tmp_cast
+:5  %tmp_68 = add i17 %phi_mul, %tmp_cast
 
 ]]></node>
-<StgValue><ssdm name="tmp_186"/></StgValue>
+<StgValue><ssdm name="tmp_68"/></StgValue>
 </operation>
 
 <operation id="51" st_id="3" stage="2" lat="2">
@@ -575,7 +575,7 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="32" bw="32" op_0_bw="18">
+<node id="32" bw="32" op_0_bw="17">
 <![CDATA[
 :8  %X_load = load float* %X_addr, align 4
 
@@ -593,12 +593,12 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="30" bw="64" op_0_bw="18">
+<node id="30" bw="64" op_0_bw="17">
 <![CDATA[
-:6  %tmp_204_cast = zext i18 %tmp_186 to i64
+:6  %tmp_82_cast = zext i17 %tmp_68 to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_204_cast"/></StgValue>
+<StgValue><ssdm name="tmp_82_cast"/></StgValue>
 </operation>
 
 <operation id="53" st_id="4" stage="1" lat="1">
@@ -608,9 +608,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="31" bw="18" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<node id="31" bw="17" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:7  %XT_addr = getelementptr [156800 x float]* %XT, i64 0, i64 %tmp_204_cast
+:7  %XT_addr = getelementptr [78400 x float]* %XT, i64 0, i64 %tmp_82_cast
 
 ]]></node>
 <StgValue><ssdm name="XT_addr"/></StgValue>
@@ -623,7 +623,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="32" bw="32" op_0_bw="18">
+<node id="32" bw="32" op_0_bw="17">
 <![CDATA[
 :8  %X_load = load float* %X_addr, align 4
 
@@ -638,7 +638,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="33" bw="0" op_0_bw="32" op_1_bw="18">
+<node id="33" bw="0" op_0_bw="32" op_1_bw="17">
 <![CDATA[
 :9  store float %X_load, float* %XT_addr, align 4
 
@@ -673,7 +673,7 @@
 
 <node id="36" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-:0  call fastcc void @dut_matrix_multiply_alt26([156800 x float]* %X, [156800 x float]* %XT, [614656 x float]* %XXT)
+:0  call fastcc void @dut_matrix_multiply_alt26([78400 x float]* %X, [78400 x float]* %XT, [614656 x float]* %XXT)
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -766,10 +766,10 @@
 
 <node id="43" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.loopexit:4  %empty_43 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
+.loopexit:4  %empty_38 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
 
 ]]></node>
-<StgValue><ssdm name="empty_43"/></StgValue>
+<StgValue><ssdm name="empty_38"/></StgValue>
 </operation>
 
 <operation id="64" st_id="6" stage="1" lat="1">
@@ -860,10 +860,10 @@
 
 <node id="49" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader:2  %empty_44 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
+.preheader:2  %empty_39 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
 
 ]]></node>
-<StgValue><ssdm name="empty_44"/></StgValue>
+<StgValue><ssdm name="empty_39"/></StgValue>
 </operation>
 
 <operation id="70" st_id="7" stage="1" lat="1">
@@ -906,10 +906,10 @@
 
 <node id="53" bw="20" op_0_bw="10">
 <![CDATA[
-:0  %tmp_152_cast = zext i10 %j2 to i20
+:0  %tmp_58_cast = zext i10 %j2 to i20
 
 ]]></node>
-<StgValue><ssdm name="tmp_152_cast"/></StgValue>
+<StgValue><ssdm name="tmp_58_cast"/></StgValue>
 </operation>
 
 <operation id="73" st_id="7" stage="1" lat="1">
@@ -922,10 +922,10 @@
 
 <node id="54" bw="20" op_0_bw="20" op_1_bw="20">
 <![CDATA[
-:1  %tmp_187 = add i20 %phi_mul3, %tmp_152_cast
+:1  %tmp_69 = add i20 %phi_mul3, %tmp_58_cast
 
 ]]></node>
-<StgValue><ssdm name="tmp_187"/></StgValue>
+<StgValue><ssdm name="tmp_69"/></StgValue>
 </operation>
 
 <operation id="74" st_id="7" stage="1" lat="1">
@@ -938,10 +938,10 @@
 
 <node id="55" bw="64" op_0_bw="20">
 <![CDATA[
-:2  %tmp_205_cast = zext i20 %tmp_187 to i64
+:2  %tmp_83_cast = zext i20 %tmp_69 to i64
 
 ]]></node>
-<StgValue><ssdm name="tmp_205_cast"/></StgValue>
+<StgValue><ssdm name="tmp_83_cast"/></StgValue>
 </operation>
 
 <operation id="75" st_id="7" stage="1" lat="1">
@@ -954,7 +954,7 @@
 
 <node id="56" bw="20" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:3  %XXT_addr = getelementptr [614656 x float]* %XXT, i64 0, i64 %tmp_205_cast
+:3  %XXT_addr = getelementptr [614656 x float]* %XXT, i64 0, i64 %tmp_83_cast
 
 ]]></node>
 <StgValue><ssdm name="XXT_addr"/></StgValue>
@@ -1039,10 +1039,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1057,10 +1057,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1075,10 +1075,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1093,10 +1093,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1111,10 +1111,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1129,10 +1129,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1147,10 +1147,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1165,10 +1165,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1183,10 +1183,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1201,10 +1201,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1219,10 +1219,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1237,10 +1237,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1255,10 +1255,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1273,10 +1273,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1291,10 +1291,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 </state>
 
@@ -1309,10 +1309,10 @@
 
 <node id="58" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-:5  %tmp_153 = fdiv float %XXT_load, 1.990000e+02
+:5  %tmp_59 = fdiv float %XXT_load, 9.900000e+01
 
 ]]></node>
-<StgValue><ssdm name="tmp_153"/></StgValue>
+<StgValue><ssdm name="tmp_59"/></StgValue>
 </operation>
 
 <operation id="96" st_id="25" stage="2" lat="2">
@@ -1324,7 +1324,7 @@
 
 <node id="59" bw="0" op_0_bw="32" op_1_bw="20">
 <![CDATA[
-:6  store float %tmp_153, float* %XXT_addr, align 4
+:6  store float %tmp_59, float* %XXT_addr, align 4
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1342,7 +1342,7 @@
 
 <node id="59" bw="0" op_0_bw="32" op_1_bw="20">
 <![CDATA[
-:6  store float %tmp_153, float* %XXT_addr, align 4
+:6  store float %tmp_59, float* %XXT_addr, align 4
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1485,13 +1485,13 @@
 </dataflow>
 <dataflow id="178" from="stg_177" to="exitcond2" fromId="177" toId="41">
 </dataflow>
-<dataflow id="179" from="_ssdm_op_SpecLoopTripCount" to="empty_42" fromId="151" toId="42">
+<dataflow id="179" from="_ssdm_op_SpecLoopTripCount" to="empty_37" fromId="151" toId="42">
 </dataflow>
-<dataflow id="181" from="stg_180" to="empty_42" fromId="180" toId="42">
+<dataflow id="181" from="stg_180" to="empty_37" fromId="180" toId="42">
 </dataflow>
-<dataflow id="182" from="stg_180" to="empty_42" fromId="180" toId="42">
+<dataflow id="182" from="stg_180" to="empty_37" fromId="180" toId="42">
 </dataflow>
-<dataflow id="183" from="stg_180" to="empty_42" fromId="180" toId="42">
+<dataflow id="183" from="stg_180" to="empty_37" fromId="180" toId="42">
 </dataflow>
 <dataflow id="184" from="j" to="j_5" fromId="39" toId="43">
 </dataflow>
@@ -1499,37 +1499,37 @@
 </dataflow>
 <dataflow id="187" from="exitcond2" to="stg_44" fromId="41" toId="44">
 </dataflow>
-<dataflow id="188" from="j" to="tmp_151_cast" fromId="39" toId="45">
+<dataflow id="188" from="j" to="tmp_57_cast" fromId="39" toId="45">
 </dataflow>
 <dataflow id="189" from="phi_mul1" to="tmp_s" fromId="30" toId="46">
 </dataflow>
-<dataflow id="190" from="tmp_151_cast" to="tmp_s" fromId="45" toId="46">
+<dataflow id="190" from="tmp_57_cast" to="tmp_s" fromId="45" toId="46">
 </dataflow>
-<dataflow id="191" from="tmp_s" to="tmp_202_cast" fromId="46" toId="47">
+<dataflow id="191" from="tmp_s" to="tmp_80_cast" fromId="46" toId="47">
 </dataflow>
 <dataflow id="192" from="X" to="X_addr" fromId="131" toId="48">
 </dataflow>
 <dataflow id="194" from="stg_193" to="X_addr" fromId="193" toId="48">
 </dataflow>
-<dataflow id="195" from="tmp_202_cast" to="X_addr" fromId="47" toId="48">
+<dataflow id="195" from="tmp_80_cast" to="X_addr" fromId="47" toId="48">
 </dataflow>
 <dataflow id="196" from="phi_mul" to="next_mul" fromId="40" toId="49">
 </dataflow>
 <dataflow id="198" from="stg_197" to="next_mul" fromId="197" toId="49">
 </dataflow>
-<dataflow id="199" from="phi_mul" to="tmp_186" fromId="40" toId="50">
+<dataflow id="199" from="phi_mul" to="tmp_68" fromId="40" toId="50">
 </dataflow>
-<dataflow id="200" from="tmp_cast" to="tmp_186" fromId="36" toId="50">
+<dataflow id="200" from="tmp_cast" to="tmp_68" fromId="36" toId="50">
 </dataflow>
 <dataflow id="201" from="X_addr" to="X_load" fromId="48" toId="51">
 </dataflow>
-<dataflow id="202" from="tmp_186" to="tmp_204_cast" fromId="50" toId="52">
+<dataflow id="202" from="tmp_68" to="tmp_82_cast" fromId="50" toId="52">
 </dataflow>
 <dataflow id="203" from="XT" to="XT_addr" fromId="27" toId="53">
 </dataflow>
 <dataflow id="204" from="stg_193" to="XT_addr" fromId="193" toId="53">
 </dataflow>
-<dataflow id="205" from="tmp_204_cast" to="XT_addr" fromId="52" toId="53">
+<dataflow id="205" from="tmp_82_cast" to="XT_addr" fromId="52" toId="53">
 </dataflow>
 <dataflow id="206" from="X_addr" to="X_load" fromId="48" toId="54">
 </dataflow>
@@ -1587,13 +1587,13 @@
 </dataflow>
 <dataflow id="226" from="stg_149" to="exitcond1" fromId="149" toId="62">
 </dataflow>
-<dataflow id="227" from="_ssdm_op_SpecLoopTripCount" to="empty_43" fromId="151" toId="63">
+<dataflow id="227" from="_ssdm_op_SpecLoopTripCount" to="empty_38" fromId="151" toId="63">
 </dataflow>
-<dataflow id="228" from="stg_153" to="empty_43" fromId="153" toId="63">
+<dataflow id="228" from="stg_153" to="empty_38" fromId="153" toId="63">
 </dataflow>
-<dataflow id="229" from="stg_153" to="empty_43" fromId="153" toId="63">
+<dataflow id="229" from="stg_153" to="empty_38" fromId="153" toId="63">
 </dataflow>
-<dataflow id="230" from="stg_153" to="empty_43" fromId="153" toId="63">
+<dataflow id="230" from="stg_153" to="empty_38" fromId="153" toId="63">
 </dataflow>
 <dataflow id="231" from="i1" to="i_8" fromId="59" toId="64">
 </dataflow>
@@ -1622,13 +1622,13 @@
 </dataflow>
 <dataflow id="239" from="stg_149" to="exitcond" fromId="149" toId="68">
 </dataflow>
-<dataflow id="240" from="_ssdm_op_SpecLoopTripCount" to="empty_44" fromId="151" toId="69">
+<dataflow id="240" from="_ssdm_op_SpecLoopTripCount" to="empty_39" fromId="151" toId="69">
 </dataflow>
-<dataflow id="241" from="stg_153" to="empty_44" fromId="153" toId="69">
+<dataflow id="241" from="stg_153" to="empty_39" fromId="153" toId="69">
 </dataflow>
-<dataflow id="242" from="stg_153" to="empty_44" fromId="153" toId="69">
+<dataflow id="242" from="stg_153" to="empty_39" fromId="153" toId="69">
 </dataflow>
-<dataflow id="243" from="stg_153" to="empty_44" fromId="153" toId="69">
+<dataflow id="243" from="stg_153" to="empty_39" fromId="153" toId="69">
 </dataflow>
 <dataflow id="244" from="j2" to="j_6" fromId="67" toId="70">
 </dataflow>
@@ -1636,19 +1636,19 @@
 </dataflow>
 <dataflow id="246" from="exitcond" to="stg_71" fromId="68" toId="71">
 </dataflow>
-<dataflow id="247" from="j2" to="tmp_152_cast" fromId="67" toId="72">
+<dataflow id="247" from="j2" to="tmp_58_cast" fromId="67" toId="72">
 </dataflow>
-<dataflow id="248" from="phi_mul3" to="tmp_187" fromId="60" toId="73">
+<dataflow id="248" from="phi_mul3" to="tmp_69" fromId="60" toId="73">
 </dataflow>
-<dataflow id="249" from="tmp_152_cast" to="tmp_187" fromId="72" toId="73">
+<dataflow id="249" from="tmp_58_cast" to="tmp_69" fromId="72" toId="73">
 </dataflow>
-<dataflow id="250" from="tmp_187" to="tmp_205_cast" fromId="73" toId="74">
+<dataflow id="250" from="tmp_69" to="tmp_83_cast" fromId="73" toId="74">
 </dataflow>
 <dataflow id="251" from="XXT" to="XXT_addr" fromId="132" toId="75">
 </dataflow>
 <dataflow id="252" from="stg_193" to="XXT_addr" fromId="193" toId="75">
 </dataflow>
-<dataflow id="253" from="tmp_205_cast" to="XXT_addr" fromId="74" toId="75">
+<dataflow id="253" from="tmp_83_cast" to="XXT_addr" fromId="74" toId="75">
 </dataflow>
 <dataflow id="254" from="XXT_addr" to="XXT_load" fromId="75" toId="76">
 </dataflow>
@@ -1658,75 +1658,75 @@
 </dataflow>
 <dataflow id="257" from="XXT_addr" to="XXT_load" fromId="75" toId="79">
 </dataflow>
-<dataflow id="258" from="XXT_load" to="tmp_153" fromId="79" toId="80">
+<dataflow id="258" from="XXT_load" to="tmp_59" fromId="79" toId="80">
 </dataflow>
-<dataflow id="260" from="stg_259" to="tmp_153" fromId="259" toId="80">
+<dataflow id="260" from="stg_259" to="tmp_59" fromId="259" toId="80">
 </dataflow>
-<dataflow id="261" from="XXT_load" to="tmp_153" fromId="79" toId="81">
+<dataflow id="261" from="XXT_load" to="tmp_59" fromId="79" toId="81">
 </dataflow>
-<dataflow id="262" from="stg_259" to="tmp_153" fromId="259" toId="81">
+<dataflow id="262" from="stg_259" to="tmp_59" fromId="259" toId="81">
 </dataflow>
-<dataflow id="263" from="XXT_load" to="tmp_153" fromId="79" toId="82">
+<dataflow id="263" from="XXT_load" to="tmp_59" fromId="79" toId="82">
 </dataflow>
-<dataflow id="264" from="stg_259" to="tmp_153" fromId="259" toId="82">
+<dataflow id="264" from="stg_259" to="tmp_59" fromId="259" toId="82">
 </dataflow>
-<dataflow id="265" from="XXT_load" to="tmp_153" fromId="79" toId="83">
+<dataflow id="265" from="XXT_load" to="tmp_59" fromId="79" toId="83">
 </dataflow>
-<dataflow id="266" from="stg_259" to="tmp_153" fromId="259" toId="83">
+<dataflow id="266" from="stg_259" to="tmp_59" fromId="259" toId="83">
 </dataflow>
-<dataflow id="267" from="XXT_load" to="tmp_153" fromId="79" toId="84">
+<dataflow id="267" from="XXT_load" to="tmp_59" fromId="79" toId="84">
 </dataflow>
-<dataflow id="268" from="stg_259" to="tmp_153" fromId="259" toId="84">
+<dataflow id="268" from="stg_259" to="tmp_59" fromId="259" toId="84">
 </dataflow>
-<dataflow id="269" from="XXT_load" to="tmp_153" fromId="79" toId="85">
+<dataflow id="269" from="XXT_load" to="tmp_59" fromId="79" toId="85">
 </dataflow>
-<dataflow id="270" from="stg_259" to="tmp_153" fromId="259" toId="85">
+<dataflow id="270" from="stg_259" to="tmp_59" fromId="259" toId="85">
 </dataflow>
-<dataflow id="271" from="XXT_load" to="tmp_153" fromId="79" toId="86">
+<dataflow id="271" from="XXT_load" to="tmp_59" fromId="79" toId="86">
 </dataflow>
-<dataflow id="272" from="stg_259" to="tmp_153" fromId="259" toId="86">
+<dataflow id="272" from="stg_259" to="tmp_59" fromId="259" toId="86">
 </dataflow>
-<dataflow id="273" from="XXT_load" to="tmp_153" fromId="79" toId="87">
+<dataflow id="273" from="XXT_load" to="tmp_59" fromId="79" toId="87">
 </dataflow>
-<dataflow id="274" from="stg_259" to="tmp_153" fromId="259" toId="87">
+<dataflow id="274" from="stg_259" to="tmp_59" fromId="259" toId="87">
 </dataflow>
-<dataflow id="275" from="XXT_load" to="tmp_153" fromId="79" toId="88">
+<dataflow id="275" from="XXT_load" to="tmp_59" fromId="79" toId="88">
 </dataflow>
-<dataflow id="276" from="stg_259" to="tmp_153" fromId="259" toId="88">
+<dataflow id="276" from="stg_259" to="tmp_59" fromId="259" toId="88">
 </dataflow>
-<dataflow id="277" from="XXT_load" to="tmp_153" fromId="79" toId="89">
+<dataflow id="277" from="XXT_load" to="tmp_59" fromId="79" toId="89">
 </dataflow>
-<dataflow id="278" from="stg_259" to="tmp_153" fromId="259" toId="89">
+<dataflow id="278" from="stg_259" to="tmp_59" fromId="259" toId="89">
 </dataflow>
-<dataflow id="279" from="XXT_load" to="tmp_153" fromId="79" toId="90">
+<dataflow id="279" from="XXT_load" to="tmp_59" fromId="79" toId="90">
 </dataflow>
-<dataflow id="280" from="stg_259" to="tmp_153" fromId="259" toId="90">
+<dataflow id="280" from="stg_259" to="tmp_59" fromId="259" toId="90">
 </dataflow>
-<dataflow id="281" from="XXT_load" to="tmp_153" fromId="79" toId="91">
+<dataflow id="281" from="XXT_load" to="tmp_59" fromId="79" toId="91">
 </dataflow>
-<dataflow id="282" from="stg_259" to="tmp_153" fromId="259" toId="91">
+<dataflow id="282" from="stg_259" to="tmp_59" fromId="259" toId="91">
 </dataflow>
-<dataflow id="283" from="XXT_load" to="tmp_153" fromId="79" toId="92">
+<dataflow id="283" from="XXT_load" to="tmp_59" fromId="79" toId="92">
 </dataflow>
-<dataflow id="284" from="stg_259" to="tmp_153" fromId="259" toId="92">
+<dataflow id="284" from="stg_259" to="tmp_59" fromId="259" toId="92">
 </dataflow>
-<dataflow id="285" from="XXT_load" to="tmp_153" fromId="79" toId="93">
+<dataflow id="285" from="XXT_load" to="tmp_59" fromId="79" toId="93">
 </dataflow>
-<dataflow id="286" from="stg_259" to="tmp_153" fromId="259" toId="93">
+<dataflow id="286" from="stg_259" to="tmp_59" fromId="259" toId="93">
 </dataflow>
-<dataflow id="287" from="XXT_load" to="tmp_153" fromId="79" toId="94">
+<dataflow id="287" from="XXT_load" to="tmp_59" fromId="79" toId="94">
 </dataflow>
-<dataflow id="288" from="stg_259" to="tmp_153" fromId="259" toId="94">
+<dataflow id="288" from="stg_259" to="tmp_59" fromId="259" toId="94">
 </dataflow>
-<dataflow id="289" from="XXT_load" to="tmp_153" fromId="79" toId="95">
+<dataflow id="289" from="XXT_load" to="tmp_59" fromId="79" toId="95">
 </dataflow>
-<dataflow id="290" from="stg_259" to="tmp_153" fromId="259" toId="95">
+<dataflow id="290" from="stg_259" to="tmp_59" fromId="259" toId="95">
 </dataflow>
-<dataflow id="291" from="tmp_153" to="stg_96" fromId="95" toId="96">
+<dataflow id="291" from="tmp_59" to="stg_96" fromId="95" toId="96">
 </dataflow>
 <dataflow id="292" from="XXT_addr" to="stg_96" fromId="75" toId="96">
 </dataflow>
-<dataflow id="293" from="tmp_153" to="stg_97" fromId="95" toId="97">
+<dataflow id="293" from="tmp_59" to="stg_97" fromId="95" toId="97">
 </dataflow>
 <dataflow id="294" from="XXT_addr" to="stg_97" fromId="75" toId="97">
 </dataflow>

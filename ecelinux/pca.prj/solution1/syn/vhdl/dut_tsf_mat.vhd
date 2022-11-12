@@ -14,8 +14,8 @@ entity dut_tsf_mat_ram is
     generic(
             mem_type    : string := "block"; 
             dwidth     : integer := 32; 
-            awidth     : integer := 14; 
-            mem_size    : integer := 15680
+            awidth     : integer := 13; 
+            mem_size    : integer := 7840
     ); 
     port (
           addr0     : in std_logic_vector(awidth-1 downto 0); 
@@ -77,8 +77,8 @@ use IEEE.std_logic_1164.all;
 entity dut_tsf_mat is
     generic (
         DataWidth : INTEGER := 32;
-        AddressRange : INTEGER := 15680;
-        AddressWidth : INTEGER := 14);
+        AddressRange : INTEGER := 7840;
+        AddressWidth : INTEGER := 13);
     port (
         reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;

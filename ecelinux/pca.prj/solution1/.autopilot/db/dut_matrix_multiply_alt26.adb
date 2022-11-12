@@ -32,7 +32,7 @@
           </Value>
           <direction>0</direction>
           <if_type>1</if_type>
-          <array_size>156800</array_size>
+          <array_size>78400</array_size>
           <bit_vecs class_id="7" tracking_level="0" version="0">
             <count>0</count>
             <item_version>0</item_version>
@@ -60,7 +60,7 @@
           </Value>
           <direction>0</direction>
           <if_type>1</if_type>
-          <array_size>156800</array_size>
+          <array_size>78400</array_size>
           <bit_vecs>
             <count>0</count>
             <item_version>0</item_version>
@@ -107,7 +107,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>304</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -119,7 +119,7 @@
                     <item class_id="12" tracking_level="0" version="0">
                       <first class_id="13" tracking_level="0" version="0">
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>304</second>
                     </item>
@@ -148,7 +148,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>310</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -160,7 +160,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>310</second>
                     </item>
@@ -185,7 +185,7 @@
             <Obj>
               <type>0</type>
               <id>7</id>
-              <name>indvar_flatten3</name>
+              <name>indvar_flatten1</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -198,7 +198,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>27</bitwidth>
+            <bitwidth>26</bitwidth>
           </Value>
           <oprand_edges>
             <count>4</count>
@@ -219,7 +219,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -231,21 +231,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>316</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -256,7 +256,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>7</bitwidth>
           </Value>
           <oprand_edges>
             <count>4</count>
@@ -307,7 +307,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>324</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -319,7 +319,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>324</second>
                     </item>
@@ -377,7 +377,7 @@
             <Obj>
               <type>0</type>
               <id>12</id>
-              <name>exitcond_flatten3</name>
+              <name>exitcond_flatten1</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -387,7 +387,7 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>exitcond_flatten3_fu_184_p2</rtlName>
+              <rtlName>exitcond_flatten1_fu_184_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -405,7 +405,7 @@
             <Obj>
               <type>0</type>
               <id>13</id>
-              <name>indvar_flatten_next3</name>
+              <name>indvar_flatten_next1</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -415,10 +415,10 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>indvar_flatten_next3_fu_190_p2</rtlName>
+              <rtlName>indvar_flatten_next1_fu_190_p2</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>27</bitwidth>
+            <bitwidth>26</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -466,7 +466,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>310</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -478,7 +478,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>310</second>
                     </item>
@@ -489,7 +489,7 @@
               <rtlName>k_fu_196_p2</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>7</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -536,7 +536,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>324</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -548,7 +548,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>324</second>
                     </item>
@@ -579,7 +579,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>322</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -591,7 +591,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>322</second>
                     </item>
@@ -621,7 +621,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>322</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -633,7 +633,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>322</second>
                     </item>
@@ -663,7 +663,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>322</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -675,7 +675,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>322</second>
                     </item>
@@ -702,11 +702,11 @@
             <Obj>
               <type>0</type>
               <id>24</id>
-              <name>tmp_mid1_25</name>
+              <name>tmp_mid1_20</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>325</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -718,7 +718,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>325</second>
                     </item>
@@ -726,7 +726,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_mid1_25_fu_236_p2</rtlName>
+              <rtlName>tmp_mid1_20_fu_236_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -748,7 +748,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>325</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -760,7 +760,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>325</second>
                     </item>
@@ -786,11 +786,11 @@
             <Obj>
               <type>0</type>
               <id>26</id>
-              <name>tmp_mid2_26</name>
+              <name>tmp_mid2_21</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>325</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -802,7 +802,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>325</second>
                     </item>
@@ -810,7 +810,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_mid2_26_fu_248_p3</rtlName>
+              <rtlName>tmp_mid2_21_fu_248_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -833,7 +833,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -845,21 +845,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>316</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -870,7 +870,7 @@
               <rtlName>tmp_i_i_mid2_v_fu_256_p3</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>7</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -890,7 +890,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;200, 784, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;100, 784, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -902,21 +902,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>317</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;200, 784, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;100, 784, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 200, 784, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 100, 784, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -927,7 +927,7 @@
               <rtlName>grp_fu_379_p20</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -945,7 +945,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;200, 784, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;100, 784, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -957,21 +957,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>317</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;200, 784, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;100, 784, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 200, 784, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 100, 784, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -982,7 +982,7 @@
               <rtlName>grp_fu_370_p00</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -1000,7 +1000,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;200, 784, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;100, 784, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1012,21 +1012,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>317</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;200, 784, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;100, 784, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 200, 784, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 100, 784, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -1034,10 +1034,10 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>dut_mac_muladd_8ns_11ns_10ns_18_1_U8</rtlName>
+              <rtlName>dut_mac_muladd_7ns_11ns_10ns_17_1_U8</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -1056,7 +1056,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>312</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1068,7 +1068,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>312</second>
                     </item>
@@ -1098,7 +1098,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>312</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1110,7 +1110,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>312</second>
                     </item>
@@ -1140,7 +1140,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>312</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1152,7 +1152,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>312</second>
                     </item>
@@ -1182,7 +1182,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>311</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1194,7 +1194,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>311</second>
                     </item>
@@ -1220,11 +1220,11 @@
             <Obj>
               <type>0</type>
               <id>36</id>
-              <name>tmp_159</name>
+              <name>tmp_47</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>312</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1236,7 +1236,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>312</second>
                     </item>
@@ -1244,7 +1244,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_159_fu_288_p2</rtlName>
+              <rtlName>tmp_47_fu_288_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1266,7 +1266,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>312</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1278,7 +1278,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>312</second>
                     </item>
@@ -1305,11 +1305,11 @@
             <Obj>
               <type>0</type>
               <id>38</id>
-              <name>tmp_133_mid2</name>
+              <name>tmp_34_mid2</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>324</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1321,7 +1321,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>324</second>
                     </item>
@@ -1329,7 +1329,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_133_mid2_fu_302_p3</rtlName>
+              <rtlName>tmp_34_mid2_fu_302_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>10</bitwidth>
@@ -1348,11 +1348,11 @@
             <Obj>
               <type>0</type>
               <id>39</id>
-              <name>tmp_133_mid2_cast1</name>
+              <name>tmp_34_mid2_cast1</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>327</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1364,7 +1364,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>327</second>
                     </item>
@@ -1389,11 +1389,11 @@
             <Obj>
               <type>0</type>
               <id>40</id>
-              <name>tmp_133_mid2_cast</name>
+              <name>tmp_34_mid2_cast</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1405,21 +1405,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>316</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -1430,7 +1430,7 @@
               <rtlName>grp_fu_379_p00</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -1444,11 +1444,11 @@
             <Obj>
               <type>0</type>
               <id>41</id>
-              <name>tmp_160</name>
+              <name>tmp_48</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1460,21 +1460,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>316</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -1482,10 +1482,10 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>dut_mac_muladd_10ns_9ns_8ns_18_1_U9</rtlName>
+              <rtlName>dut_mac_muladd_10ns_8ns_7ns_17_1_U9</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -1500,11 +1500,11 @@
             <Obj>
               <type>0</type>
               <id>42</id>
-              <name>tmp_161</name>
+              <name>tmp_49</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1516,21 +1516,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>316</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -1538,10 +1538,10 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>dut_mac_muladd_10ns_9ns_8ns_18_1_U9</rtlName>
+              <rtlName>dut_mac_muladd_10ns_8ns_7ns_17_1_U9</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -1556,11 +1556,11 @@
             <Obj>
               <type>0</type>
               <id>43</id>
-              <name>tmp_177_cast</name>
+              <name>tmp_55_cast</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1572,21 +1572,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>316</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -1594,7 +1594,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_177_cast_fu_339_p1</rtlName>
+              <rtlName>tmp_55_cast_fu_339_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1615,7 +1615,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1627,21 +1627,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>316</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -1652,7 +1652,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -1668,11 +1668,11 @@
             <Obj>
               <type>0</type>
               <id>45</id>
-              <name>tmp_162</name>
+              <name>tmp_50</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>327</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1684,7 +1684,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>327</second>
                     </item>
@@ -1714,7 +1714,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;784, 200, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;784, 100, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1726,21 +1726,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>316</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;784, 200, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;784, 100, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 200, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 784, 100, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -1769,7 +1769,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;200, 784, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;100, 784, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1781,21 +1781,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>317</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;200, 784, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;100, 784, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 200, 784, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 100, 784, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -1824,7 +1824,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;200, 784, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;100, 784, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1836,21 +1836,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>317</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;200, 784, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;100, 784, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 200, 784, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 100, 784, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -1861,7 +1861,7 @@
               <rtlName>grp_fu_370_p20</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -1875,11 +1875,11 @@
             <Obj>
               <type>0</type>
               <id>52</id>
-              <name>tmp_163</name>
+              <name>tmp_51</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;200, 784, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;100, 784, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1891,21 +1891,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>317</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;200, 784, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;100, 784, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 200, 784, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 100, 784, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -1913,10 +1913,10 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>dut_mac_muladd_8ns_11ns_10ns_18_1_U8</rtlName>
+              <rtlName>dut_mac_muladd_7ns_11ns_10ns_17_1_U8</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -1931,11 +1931,11 @@
             <Obj>
               <type>0</type>
               <id>53</id>
-              <name>tmp_179_cast</name>
+              <name>tmp_57_cast</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;200, 784, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;100, 784, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -1947,21 +1947,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>317</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;200, 784, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;100, 784, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 200, 784, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 100, 784, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -1969,7 +1969,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_179_cast_fu_346_p1</rtlName>
+              <rtlName>tmp_57_cast_fu_346_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1990,7 +1990,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;200, 784, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;100, 784, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2002,21 +2002,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>317</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;200, 784, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;100, 784, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 200, 784, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 100, 784, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -2027,7 +2027,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -2043,11 +2043,11 @@
             <Obj>
               <type>0</type>
               <id>55</id>
-              <name>tmp_164</name>
+              <name>tmp_52</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>327</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2059,7 +2059,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>327</second>
                     </item>
@@ -2085,11 +2085,11 @@
             <Obj>
               <type>0</type>
               <id>56</id>
-              <name>tmp_180_cast</name>
+              <name>tmp_58_cast</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>327</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2101,7 +2101,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>327</second>
                     </item>
@@ -2109,7 +2109,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_180_cast_fu_356_p1</rtlName>
+              <rtlName>tmp_58_cast_fu_356_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -2130,7 +2130,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>327</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2142,7 +2142,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>327</second>
                     </item>
@@ -2173,7 +2173,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>327</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2185,7 +2185,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>327</second>
                     </item>
@@ -2216,7 +2216,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>60</lineNumber>
-              <contextFuncName>GetElement&amp;lt;200, 784, float&amp;gt;</contextFuncName>
+              <contextFuncName>GetElement&amp;lt;100, 784, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2228,21 +2228,21 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>317</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetElement&amp;lt;200, 784, float&amp;gt;</second>
+                        <second>GetElement&amp;lt;100, 784, float&amp;gt;</second>
                       </first>
                       <second>60</second>
                     </item>
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
-                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 200, 784, float&amp;gt;</second>
+                        <second>GetMatrixElement&amp;lt;hls::NoTranspose, 100, 784, float&amp;gt;</second>
                       </first>
                       <second>99</second>
                     </item>
@@ -2271,7 +2271,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>318</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2283,7 +2283,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>318</second>
                     </item>
@@ -2313,7 +2313,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>327</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2325,7 +2325,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>327</second>
                     </item>
@@ -2354,7 +2354,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>322</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2366,7 +2366,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>322</second>
                     </item>
@@ -2393,11 +2393,11 @@
             <Obj>
               <type>0</type>
               <id>64</id>
-              <name>tmp_135</name>
+              <name>tmp_36</name>
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>327</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2409,7 +2409,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>327</second>
                     </item>
@@ -2439,7 +2439,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>325</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2451,7 +2451,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>325</second>
                     </item>
@@ -2482,7 +2482,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>330</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2494,7 +2494,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>330</second>
                     </item>
@@ -2552,7 +2552,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>327</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2564,7 +2564,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>327</second>
                     </item>
@@ -2594,7 +2594,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>328</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2606,7 +2606,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>328</second>
                     </item>
@@ -2662,7 +2662,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>324</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2674,7 +2674,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>324</second>
                     </item>
@@ -2705,7 +2705,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>325</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2717,7 +2717,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>325</second>
                     </item>
@@ -2746,7 +2746,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>312</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2758,7 +2758,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>312</second>
                     </item>
@@ -2872,7 +2872,7 @@
               <fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>335</lineNumber>
-              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
+              <contextFuncName>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -2884,7 +2884,7 @@
                     <item>
                       <first>
                         <first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h</first>
-                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 200, 200, 784, float, float&amp;gt;, float, float&amp;gt;</second>
+                        <second>matrix_multiply_alt2&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, 784, 784, hls::matrix_multiply_traits&amp;lt;hls::NoTranspose, hls::NoTranspose, 784, 100, 100, 784, float, float&amp;gt;, float, float&amp;gt;</second>
                       </first>
                       <second>335</second>
                     </item>
@@ -2948,7 +2948,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>27</bitwidth>
+            <bitwidth>26</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>0</content>
@@ -2971,7 +2971,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>7</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>0</content>
@@ -3040,10 +3040,10 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>27</bitwidth>
+            <bitwidth>26</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>122931200</content>
+          <content>61465600</content>
         </item>
         <item class_id_reference="16" object_id="_75">
           <Value>
@@ -3063,7 +3063,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>27</bitwidth>
+            <bitwidth>26</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>1</content>
@@ -3132,7 +3132,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>7</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>1</content>
@@ -3178,10 +3178,10 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>8</bitwidth>
+            <bitwidth>7</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>199</content>
+          <content>99</content>
         </item>
         <item class_id_reference="16" object_id="_81">
           <Value>
@@ -3201,7 +3201,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>784</content>
@@ -3270,10 +3270,10 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>18</bitwidth>
+            <bitwidth>17</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>200</content>
+          <content>100</content>
         </item>
         <item class_id_reference="16" object_id="_85">
           <Value>
@@ -4520,7 +4520,7 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>122931213</mMinLatency>
+        <mMinLatency>61465613</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -4569,9 +4569,9 @@
         </basic_blocks>
         <mII>1</mII>
         <mDepth>13</mDepth>
-        <mMinTripCount>122931200</mMinTripCount>
-        <mMaxTripCount>122931200</mMaxTripCount>
-        <mMinLatency>122931211</mMinLatency>
+        <mMinTripCount>61465600</mMinTripCount>
+        <mMaxTripCount>61465600</mMaxTripCount>
+        <mMinLatency>61465611</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -5535,17 +5535,17 @@
           </second>
         </item>
         <item>
-          <first>exitcond_flatten3_fu_184_p2 ( icmp ) </first>
+          <first>exitcond_flatten1_fu_184_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>27</second>
+              <second>26</second>
             </item>
             <item>
               <first>(1P1)</first>
-              <second>25</second>
+              <second>24</second>
             </item>
             <item>
               <first>FF</first>
@@ -5627,13 +5627,13 @@
           </second>
         </item>
         <item>
-          <first>indvar_flatten_next3_fu_190_p2 ( + ) </first>
+          <first>indvar_flatten_next1_fu_190_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>27</second>
+              <second>26</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -5645,7 +5645,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>27</second>
+              <second>26</second>
             </item>
           </second>
         </item>
@@ -5706,7 +5706,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>8</second>
+              <second>7</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -5718,7 +5718,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>8</second>
+              <second>7</second>
             </item>
           </second>
         </item>
@@ -5775,7 +5775,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>8</second>
+              <second>7</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -5792,7 +5792,30 @@
           </second>
         </item>
         <item>
-          <first>tmp_133_mid2_fu_302_p3 ( select ) </first>
+          <first>tmp_1_fu_242_p2 ( icmp ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>7</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>6</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>3</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>tmp_34_mid2_fu_302_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -5819,7 +5842,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_159_fu_288_p2 ( or ) </first>
+          <first>tmp_47_fu_288_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -5838,29 +5861,6 @@
             <item>
               <first>LUT</first>
               <second>1</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_1_fu_242_p2 ( icmp ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>8</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>7</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>3</second>
             </item>
           </second>
         </item>
@@ -5875,11 +5875,11 @@
             </item>
             <item>
               <first>(1P1)</first>
-              <second>8</second>
+              <second>7</second>
             </item>
             <item>
               <first>(2P2)</first>
-              <second>8</second>
+              <second>7</second>
             </item>
             <item>
               <first>FF</first>
@@ -5887,22 +5887,22 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>8</second>
+              <second>7</second>
             </item>
           </second>
         </item>
         <item>
-          <first>tmp_mid1_25_fu_236_p2 ( icmp ) </first>
+          <first>tmp_mid1_20_fu_236_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>8</second>
+              <second>7</second>
             </item>
             <item>
               <first>(1P1)</first>
-              <second>7</second>
+              <second>6</second>
             </item>
             <item>
               <first>FF</first>
@@ -5921,7 +5921,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>8</second>
+              <second>7</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -5938,7 +5938,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_mid2_26_fu_248_p3 ( select ) </first>
+          <first>tmp_mid2_21_fu_248_p3 ( select ) </first>
           <second>
             <count>5</count>
             <item_version>0</item_version>
@@ -6049,15 +6049,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>8</second>
+              <second>7</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>16</second>
+              <second>14</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>8</second>
+              <second>7</second>
             </item>
           </second>
         </item>
@@ -6072,15 +6072,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>8</second>
+              <second>7</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>16</second>
+              <second>14</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>8</second>
+              <second>7</second>
             </item>
           </second>
         </item>
@@ -6200,7 +6200,7 @@
           </second>
         </item>
         <item>
-          <first>indvar_flatten3_reg_119</first>
+          <first>indvar_flatten1_reg_119</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -6210,15 +6210,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>27</second>
+              <second>26</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>54</second>
+              <second>52</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>27</second>
+              <second>26</second>
             </item>
           </second>
         </item>
@@ -6298,7 +6298,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>8</second>
+              <second>7</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -6306,7 +6306,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>8</second>
+              <second>7</second>
             </item>
           </second>
         </item>
@@ -6653,7 +6653,7 @@
           </second>
         </item>
         <item>
-          <first>ap_reg_ppstg_tmp_133_mid2_reg_418_pp0_iter1</first>
+          <first>ap_reg_ppstg_tmp_34_mid2_reg_418_pp0_iter1</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6672,7 +6672,7 @@
           </second>
         </item>
         <item>
-          <first>exitcond_flatten3_reg_388</first>
+          <first>exitcond_flatten1_reg_388</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6691,13 +6691,13 @@
           </second>
         </item>
         <item>
-          <first>indvar_flatten3_reg_119</first>
+          <first>indvar_flatten1_reg_119</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>27</second>
+              <second>26</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -6705,7 +6705,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>27</second>
+              <second>26</second>
             </item>
           </second>
         </item>
@@ -6786,7 +6786,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_133_mid2_reg_418</first>
+          <first>tmp_34_mid2_reg_418</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6805,7 +6805,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_135_reg_477</first>
+          <first>tmp_36_reg_477</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6830,7 +6830,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>8</second>
+              <second>7</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -6838,12 +6838,12 @@
             </item>
             <item>
               <first>FF</first>
-              <second>8</second>
+              <second>7</second>
             </item>
           </second>
         </item>
         <item>
-          <first>tmp_mid2_26_reg_401</first>
+          <first>tmp_mid2_21_reg_401</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6929,7 +6929,7 @@
           </second>
         </item>
         <item>
-          <first>exitcond_flatten3_fu_184_p2 ( icmp ) </first>
+          <first>exitcond_flatten1_fu_184_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -6961,7 +6961,7 @@
           </second>
         </item>
         <item>
-          <first>indvar_flatten_next3_fu_190_p2 ( + ) </first>
+          <first>indvar_flatten_next1_fu_190_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -7017,7 +7017,15 @@
           </second>
         </item>
         <item>
-          <first>tmp_133_mid2_fu_302_p3 ( select ) </first>
+          <first>tmp_1_fu_242_p2 ( icmp ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>25</item>
+          </second>
+        </item>
+        <item>
+          <first>tmp_34_mid2_fu_302_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -7025,19 +7033,11 @@
           </second>
         </item>
         <item>
-          <first>tmp_159_fu_288_p2 ( or ) </first>
+          <first>tmp_47_fu_288_p2 ( or ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
             <item>36</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_1_fu_242_p2 ( icmp ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>25</item>
           </second>
         </item>
         <item>
@@ -7049,7 +7049,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_mid1_25_fu_236_p2 ( icmp ) </first>
+          <first>tmp_mid1_20_fu_236_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -7065,7 +7065,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_mid2_26_fu_248_p3 ( select ) </first>
+          <first>tmp_mid2_21_fu_248_p3 ( select ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -8158,7 +8158,7 @@
         </second>
       </item>
       <item>
-        <first>exitcond_flatten3_fu_184</first>
+        <first>exitcond_flatten1_fu_184</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8217,7 +8217,7 @@
         </second>
       </item>
       <item>
-        <first>indvar_flatten3_phi_fu_123</first>
+        <first>indvar_flatten1_phi_fu_123</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8225,7 +8225,7 @@
         </second>
       </item>
       <item>
-        <first>indvar_flatten_next3_fu_190</first>
+        <first>indvar_flatten_next1_fu_190</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8305,7 +8305,15 @@
         </second>
       </item>
       <item>
-        <first>tmp_133_mid2_cast1_fu_350</first>
+        <first>tmp_1_fu_242</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>25</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_34_mid2_cast1_fu_350</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8313,7 +8321,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_133_mid2_cast_fu_336</first>
+        <first>tmp_34_mid2_cast_fu_336</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8321,7 +8329,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_133_mid2_fu_302</first>
+        <first>tmp_34_mid2_fu_302</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8329,7 +8337,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_159_fu_288</first>
+        <first>tmp_47_fu_288</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8337,7 +8345,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_177_cast_fu_339</first>
+        <first>tmp_55_cast_fu_339</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8345,7 +8353,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_179_cast_fu_346</first>
+        <first>tmp_57_cast_fu_346</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8353,19 +8361,11 @@
         </second>
       </item>
       <item>
-        <first>tmp_180_cast_fu_356</first>
+        <first>tmp_58_cast_fu_356</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>56</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_1_fu_242</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>25</item>
         </second>
       </item>
       <item>
@@ -8409,7 +8409,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_mid1_25_fu_236</first>
+        <first>tmp_mid1_20_fu_236</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8425,7 +8425,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_mid2_26_fu_248</first>
+        <first>tmp_mid2_21_fu_248</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8816,7 +8816,7 @@
         </second>
       </item>
       <item>
-        <first>exitcond_flatten3_reg_388</first>
+        <first>exitcond_flatten1_reg_388</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8824,7 +8824,7 @@
         </second>
       </item>
       <item>
-        <first>indvar_flatten3_reg_119</first>
+        <first>indvar_flatten1_reg_119</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8832,7 +8832,7 @@
         </second>
       </item>
       <item>
-        <first>indvar_flatten_next3_reg_392</first>
+        <first>indvar_flatten_next1_reg_392</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8880,7 +8880,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_133_mid2_reg_418</first>
+        <first>tmp_34_mid2_reg_418</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8888,7 +8888,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_135_reg_477</first>
+        <first>tmp_36_reg_477</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8904,7 +8904,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_mid2_26_reg_401</first>
+        <first>tmp_mid2_21_reg_401</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -8992,7 +8992,7 @@
         </second>
       </item>
       <item>
-        <first>indvar_flatten3_reg_119</first>
+        <first>indvar_flatten1_reg_119</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

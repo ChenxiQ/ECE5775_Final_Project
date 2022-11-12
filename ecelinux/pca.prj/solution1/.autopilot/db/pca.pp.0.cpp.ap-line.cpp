@@ -68384,6 +68384,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
+#pragma empty_line
 const int VEC_SIZ = 28 * 28;
 #pragma empty_line
 class PCA {
@@ -68403,18 +68404,38 @@ class PCA {
   PCA(int VEC_SIZ, int VEC_NUM, int k);
   ~PCA();
 #pragma empty_line
-  void normalize(fix32_t X[VEC_SIZ][200], fix32_t mean[VEC_SIZ]);
-  void cov(fix32_t X[VEC_SIZ][200], fix32_t XXT[VEC_SIZ][VEC_SIZ]);
+  void normalize(fix32_t X[VEC_SIZ][100], fix32_t mean[VEC_SIZ]);
+  void cov(fix32_t X[VEC_SIZ][100], fix32_t XXT[VEC_SIZ][VEC_SIZ]);
   void apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]);
   bool cmp(int a, int b);
-  void rank(fix32_t tsf_mat[20][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t V[VEC_SIZ][VEC_SIZ]);
-  void back_pjt(fix32_t tsf_mat[20][VEC_SIZ], fix32_t X[VEC_SIZ][200], fix32_t Y[20][200]);
+  void rank(fix32_t tsf_mat[10][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t V[VEC_SIZ][VEC_SIZ]);
+  void back_pjt(fix32_t tsf_mat[10][VEC_SIZ], fix32_t X[VEC_SIZ][100], fix32_t Y[10][100]);
   void find_max(fix32_t S[VEC_SIZ][VEC_SIZ]);
 #pragma empty_line
   private:
   //fix32_t A[IMG_NUM][VEC_SIZ];
   int sorted_idx[VEC_SIZ];
 #pragma empty_line
+};
+#pragma empty_line
+struct MY_CONFIG_SVD : hls::svd_traits<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>{
+ static const int NUM_SWEEPS = 6;
+ static const int DIAG_II = 100;
+ static const int OFF_DIAG_II = 100;
+ static const int ARCH = 0;
+};
+#pragma empty_line
+struct MY_CONFIG_MULT: hls::matrix_multiply_traits<hls::NoTranspose,
+ hls::NoTranspose,
+ 10,
+ VEC_SIZ,
+ VEC_SIZ,
+ 100,
+ fix32_t,
+ fix32_t>{
+ static const int ARCH = 2;
+ static const int INNER_II = 100;
+ static const int UNROLL_FACTOR = 1;
 };
 #pragma line 11 "pca.cpp" 2
 #pragma empty_line
@@ -68465,7 +68486,7 @@ PCA::~PCA(){
   */
 }
 #pragma empty_line
-void PCA::normalize(fix32_t X[VEC_SIZ][200],fix32_t mean[VEC_SIZ]){
+void PCA::normalize(fix32_t X[VEC_SIZ][100],fix32_t mean[VEC_SIZ]){
   /*
   std::ofstream fx("data/x.dat", ios_base::out);
   for(int i=0;i<VEC_SIZ;i++){
@@ -68504,20 +68525,20 @@ void PCA::normalize(fix32_t X[VEC_SIZ][200],fix32_t mean[VEC_SIZ]){
   */
 }
 #pragma empty_line
-void PCA::cov(fix32_t X[VEC_SIZ][200], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
-  fix32_t XT[200][VEC_SIZ];
+void PCA::cov(fix32_t X[VEC_SIZ][100], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
+  fix32_t XT[100][VEC_SIZ];
   for(int i=0;i<VEC_SIZ;i++){
-    for(int j=0;j<200;j++){
+    for(int j=0;j<100;j++){
       XT[j][i] = X[i][j];
     }
   }
   hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,VEC_SIZ,
-  200,200,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
+  100,100,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
 #pragma empty_line
 #pragma empty_line
   for(int i=0;i<VEC_SIZ;i++){
     for(int j=0; j<VEC_SIZ;j++){
-      XXT[i][j] = XXT[i][j]/(200 -1);
+      XXT[i][j] = XXT[i][j]/(100 -1);
     }
   }
 #pragma empty_line
@@ -68535,7 +68556,8 @@ void PCA::cov(fix32_t X[VEC_SIZ][200], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
 }
 #pragma empty_line
 void PCA::apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]){
-  hls::svd<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(XXT,S,U,V);
+  hls::svd_top<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD,fix32_t,fix32_t>(XXT,S,U,V);
+  //hls::svd<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(XXT,S,U,V);
   /*
   std::ofstream fs("data/s.dat", ios_base::out);
   for(int i=0;i<VEC_SIZ;i++){
@@ -68566,7 +68588,7 @@ void PCA::apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],f
   */
 }
 #pragma empty_line
-void PCA::rank(fix32_t tsf_mat[20][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t U[VEC_SIZ][VEC_SIZ]){
+void PCA::rank(fix32_t tsf_mat[10][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t U[VEC_SIZ][VEC_SIZ]){
 #pragma empty_line
   /*
   for(int i=0;i<VEC_SIZ;i++){
@@ -68603,9 +68625,11 @@ void PCA::rank(fix32_t tsf_mat[20][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_
   ftsf.close();*/
 }
 #pragma empty_line
-void PCA::back_pjt(fix32_t tsf_mat[20][VEC_SIZ], fix32_t X[VEC_SIZ][200], fix32_t Y[20][200]){
-  hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,20,
-  VEC_SIZ,VEC_SIZ,200,20,200,fix32_t,fix32_t>(tsf_mat,X,Y);
+void PCA::back_pjt(fix32_t tsf_mat[10][VEC_SIZ], fix32_t X[VEC_SIZ][100], fix32_t Y[10][100]){
+  hls::matrix_multiply_top<hls::NoTranspose,hls::NoTranspose,
+  10,VEC_SIZ,VEC_SIZ,100,10,100,MY_CONFIG_MULT,fix32_t,fix32_t>(tsf_mat,X,Y);
+  //hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,K,
+  //VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,fix32_t,fix32_t>(tsf_mat,X,Y);
 }
 #pragma empty_line
 void PCA::find_max(fix32_t S[VEC_SIZ][VEC_SIZ]){

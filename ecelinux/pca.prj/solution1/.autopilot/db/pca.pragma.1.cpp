@@ -63721,6 +63721,9 @@ inline __attribute__((always_inline)) svd_traits() { _ssdm_SpecConstant(&NUM_SWE
       AType a2, BType b2,
       CType &c)
     {
+_ssdm_InlineSelf(2, "");
+#134 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h"
+
       // Disable the inlining of the base vm2x1 function and limit instances using the ALLOCATION directive
       // #pragma HLS inline off
       c = a1*b1 + a2*b2;
@@ -64378,6 +64381,9 @@ _ssdm_op_SpecPipeline(SVDTraits::OFF_DIAG_II, 1, 1, 0, "");
                        OutputType U[RowsA][RowsA],
                        OutputType V[ColsA][ColsA] )
   {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
+_ssdm_op_SpecResourceLimit(1, "", "", "vm2x1_base", "");
+#791 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h"
+
     // Initially only supporting square matrix
     ((RowsA==ColsA) ? static_cast<void> (0) : __assert_fail ("RowsA==ColsA", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h", 793, __PRETTY_FUNCTION__));
 
@@ -68679,6 +68685,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
+
 const int VEC_SIZ = 28 * 28;
 
 class PCA {
@@ -68698,18 +68705,46 @@ class PCA {
   PCA(int VEC_SIZ, int VEC_NUM, int k);
   ~PCA();
 
-  void normalize(fix32_t X[VEC_SIZ][200], fix32_t mean[VEC_SIZ]);
-  void cov(fix32_t X[VEC_SIZ][200], fix32_t XXT[VEC_SIZ][VEC_SIZ]);
+  void normalize(fix32_t X[VEC_SIZ][100], fix32_t mean[VEC_SIZ]);
+  void cov(fix32_t X[VEC_SIZ][100], fix32_t XXT[VEC_SIZ][VEC_SIZ]);
   void apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]);
   bool cmp(int a, int b);
-  void rank(fix32_t tsf_mat[20][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t V[VEC_SIZ][VEC_SIZ]);
-  void back_pjt(fix32_t tsf_mat[20][VEC_SIZ], fix32_t X[VEC_SIZ][200], fix32_t Y[20][200]);
+  void rank(fix32_t tsf_mat[10][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t V[VEC_SIZ][VEC_SIZ]);
+  void back_pjt(fix32_t tsf_mat[10][VEC_SIZ], fix32_t X[VEC_SIZ][100], fix32_t Y[10][100]);
   void find_max(fix32_t S[VEC_SIZ][VEC_SIZ]);
 
   private:
   //fix32_t A[IMG_NUM][VEC_SIZ];
   int sorted_idx[VEC_SIZ];
 
+};
+
+struct MY_CONFIG_SVD : hls::svd_traits<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>{
+ static const int NUM_SWEEPS = 6;
+ static const int DIAG_II = 100;
+ static const int OFF_DIAG_II = 100;
+ static const int ARCH = 0;
+
+public :
+inline __attribute__((always_inline)) MY_CONFIG_SVD() { _ssdm_SpecConstant(&NUM_SWEEPS); _ssdm_SpecConstant(&DIAG_II); _ssdm_SpecConstant(&OFF_DIAG_II); _ssdm_SpecConstant(&ARCH);  }
+#55 "./pca.h"
+};
+
+struct MY_CONFIG_MULT: hls::matrix_multiply_traits<hls::NoTranspose,
+ hls::NoTranspose,
+ 10,
+ VEC_SIZ,
+ VEC_SIZ,
+ 100,
+ fix32_t,
+ fix32_t>{
+ static const int ARCH = 2;
+ static const int INNER_II = 100;
+ static const int UNROLL_FACTOR = 1;
+
+public :
+inline __attribute__((always_inline)) MY_CONFIG_MULT() { _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&UNROLL_FACTOR);  }
+#68 "./pca.h"
 };
 #11 "pca.cpp" 2
 
@@ -68760,7 +68795,7 @@ PCA::~PCA(){
   */
 }
 
-void PCA::normalize(fix32_t X[VEC_SIZ][200],fix32_t mean[VEC_SIZ]){_ssdm_SpecArrayDimSize(mean,VEC_SIZ);_ssdm_SpecArrayDimSize(X,VEC_SIZ);
+void PCA::normalize(fix32_t X[VEC_SIZ][100],fix32_t mean[VEC_SIZ]){_ssdm_SpecArrayDimSize(mean,VEC_SIZ);_ssdm_SpecArrayDimSize(X,VEC_SIZ);
   /*
   std::ofstream fx("data/x.dat", ios_base::out);
   for(int i=0;i<VEC_SIZ;i++){
@@ -68799,20 +68834,20 @@ void PCA::normalize(fix32_t X[VEC_SIZ][200],fix32_t mean[VEC_SIZ]){_ssdm_SpecArr
   */
 }
 
-void PCA::cov(fix32_t X[VEC_SIZ][200], fix32_t XXT[VEC_SIZ][VEC_SIZ]){_ssdm_SpecArrayDimSize(XXT,VEC_SIZ);_ssdm_SpecArrayDimSize(X,VEC_SIZ);
-  fix32_t XT[200][VEC_SIZ];
+void PCA::cov(fix32_t X[VEC_SIZ][100], fix32_t XXT[VEC_SIZ][VEC_SIZ]){_ssdm_SpecArrayDimSize(XXT,VEC_SIZ);_ssdm_SpecArrayDimSize(X,VEC_SIZ);
+  fix32_t XT[100][VEC_SIZ];
   for(int i=0;i<VEC_SIZ;i++){
-    for(int j=0;j<200;j++){
+    for(int j=0;j<100;j++){
       XT[j][i] = X[i][j];
     }
   }
   hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,VEC_SIZ,
-  200,200,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
+  100,100,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
 
 
   for(int i=0;i<VEC_SIZ;i++){
     for(int j=0; j<VEC_SIZ;j++){
-      XXT[i][j] = XXT[i][j]/(200 -1);
+      XXT[i][j] = XXT[i][j]/(100 -1);
     }
   }
 
@@ -68830,7 +68865,8 @@ void PCA::cov(fix32_t X[VEC_SIZ][200], fix32_t XXT[VEC_SIZ][VEC_SIZ]){_ssdm_Spec
 }
 
 void PCA::apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]){_ssdm_SpecArrayDimSize(S,VEC_SIZ);_ssdm_SpecArrayDimSize(XXT,VEC_SIZ);_ssdm_SpecArrayDimSize(U,VEC_SIZ);_ssdm_SpecArrayDimSize(V,VEC_SIZ);
-  hls::svd<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(XXT,S,U,V);
+  hls::svd_top<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD,fix32_t,fix32_t>(XXT,S,U,V);
+  //hls::svd<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(XXT,S,U,V);
   /*
   std::ofstream fs("data/s.dat", ios_base::out);
   for(int i=0;i<VEC_SIZ;i++){
@@ -68861,7 +68897,7 @@ void PCA::apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],f
   */
 }
 
-void PCA::rank(fix32_t tsf_mat[20][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t U[VEC_SIZ][VEC_SIZ]){_ssdm_SpecArrayDimSize(tsf_mat,20);_ssdm_SpecArrayDimSize(S,VEC_SIZ);_ssdm_SpecArrayDimSize(U,VEC_SIZ);
+void PCA::rank(fix32_t tsf_mat[10][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t U[VEC_SIZ][VEC_SIZ]){_ssdm_SpecArrayDimSize(tsf_mat,10);_ssdm_SpecArrayDimSize(S,VEC_SIZ);_ssdm_SpecArrayDimSize(U,VEC_SIZ);
 
   /*
   for(int i=0;i<VEC_SIZ;i++){
@@ -68898,9 +68934,11 @@ void PCA::rank(fix32_t tsf_mat[20][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_
   ftsf.close();*/
 }
 
-void PCA::back_pjt(fix32_t tsf_mat[20][VEC_SIZ], fix32_t X[VEC_SIZ][200], fix32_t Y[20][200]){_ssdm_SpecArrayDimSize(tsf_mat,20);_ssdm_SpecArrayDimSize(X,VEC_SIZ);_ssdm_SpecArrayDimSize(Y,20);
-  hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,20,
-  VEC_SIZ,VEC_SIZ,200,20,200,fix32_t,fix32_t>(tsf_mat,X,Y);
+void PCA::back_pjt(fix32_t tsf_mat[10][VEC_SIZ], fix32_t X[VEC_SIZ][100], fix32_t Y[10][100]){_ssdm_SpecArrayDimSize(tsf_mat,10);_ssdm_SpecArrayDimSize(X,VEC_SIZ);_ssdm_SpecArrayDimSize(Y,10);
+  hls::matrix_multiply_top<hls::NoTranspose,hls::NoTranspose,
+  10,VEC_SIZ,VEC_SIZ,100,10,100,MY_CONFIG_MULT,fix32_t,fix32_t>(tsf_mat,X,Y);
+  //hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,K,
+  //VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,fix32_t,fix32_t>(tsf_mat,X,Y);
 }
 
 void PCA::find_max(fix32_t S[VEC_SIZ][VEC_SIZ]){_ssdm_SpecArrayDimSize(S,VEC_SIZ);
