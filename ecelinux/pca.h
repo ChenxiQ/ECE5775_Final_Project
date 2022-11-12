@@ -38,12 +38,14 @@ class PCA {
   bool cmp(int a, int b);
   void rank(fix32_t tsf_mat[K][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t V[VEC_SIZ][VEC_SIZ]);
   void back_pjt(fix32_t tsf_mat[K][VEC_SIZ], fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[K][IMG_NUM]);
-  void find_max(fix32_t S[VEC_SIZ][VEC_SIZ]);
 
   private:
   //fix32_t A[IMG_NUM][VEC_SIZ];
   int sorted_idx[VEC_SIZ];
-
+  void find_max(fix32_t S[VEC_SIZ][VEC_SIZ]);
+  void swap(int* a, int* b);
+  int partition(int arr[], int l, int h, fix32_t S[VEC_SIZ][VEC_SIZ]);
+  void quickSort(int arr[], int l, int h, fix32_t S[VEC_SIZ][VEC_SIZ]);
 };
 
 #endif

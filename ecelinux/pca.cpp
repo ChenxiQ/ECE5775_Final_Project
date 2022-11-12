@@ -199,6 +199,7 @@ void PCA::back_pjt(fix32_t tsf_mat[K][VEC_SIZ], fix32_t X[VEC_SIZ][IMG_NUM], fix
   VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,fix32_t,fix32_t>(tsf_mat,X,Y);
 }
 
+/*
 void PCA::find_max(fix32_t S[VEC_SIZ][VEC_SIZ]){
   while(true){
     bool swap = false;
@@ -212,4 +213,70 @@ void PCA::find_max(fix32_t S[VEC_SIZ][VEC_SIZ]){
     }
     if(!swap) break;
   }
+}
+*/
+
+// A utility function to swap two elements
+void PCA::swap(int* a, int* b) {
+  int t = *a;
+  *a = *b;
+  *b = t;
+}
+
+int PCA::partition(int arr[], int l, int h, fix32_t S[VEC_SIZ][VEC_SIZ]) {
+    int x = arr[h];
+    int i = (l - 1);
+ 
+    for (int j = l; j <= h - 1; j++) {
+      if (S[arr[j]][arr[j]] > S[x][x]) {
+        i++;
+        swap(&arr[i], &arr[j]);
+      }
+    }
+    swap(&arr[i + 1], &arr[h]);
+    return i + 1;
+}
+
+/* A[] --> Array to be sorted,
+l --> Starting index,
+h --> Ending index */
+void PCA::quickSort(int arr[], int l, int h, fix32_t S[VEC_SIZ][VEC_SIZ]) {
+  // Create an auxiliary stack
+  int stack[h - l + 1];
+
+  // initialize top of stack
+  int top = -1;
+
+  // push initial values of l and h to stack
+  stack[++top] = l;
+  stack[++top] = h;
+
+  // Keep popping from stack while is not empty
+  while (top >= 0) {
+    // Pop h and l
+    h = stack[top--];
+    l = stack[top--];
+
+    // Set pivot element at its correct position
+    // in sorted array
+    int p = partition(arr, l, h, S);
+
+    // If there are elements on left side of pivot,
+    // then push left side to stack
+    if (p - 1 > l) {
+      stack[++top] = l;
+      stack[++top] = p - 1;
+    }
+
+    // If there are elements on right side of pivot,
+    // then push right side to stack
+    if (p + 1 < h) {
+      stack[++top] = p + 1;
+      stack[++top] = h;
+    }
+  }
+}
+
+void PCA::find_max(fix32_t S[VEC_SIZ][VEC_SIZ]) {
+  PCA::quickSort(sorted_idx, 0, VEC_SIZ-1, S);
 }
