@@ -1,0 +1,449 @@
+
+
+================================================================
+== Vivado HLS Report for 'dut_rank'
+================================================================
+* Date:           Fri Nov 11 19:00:00 2022
+
+* Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
+* Project:        pca.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.16|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+        |             |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |      ?|      ?|      6266|          -|          -|     ?|    no    |
+        | + Loop 1.1  |   6264|   6264|         8|          -|          -|   783|    no    |
+        |- Loop 2     |  78440|  78440|      3922|          -|          -|    20|    no    |
+        | + Loop 2.1  |   3920|   3920|         5|          -|          -|   784|    no    |
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 16
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / (!exitcond_i)
+	2  / (exitcond_i & swap_i)
+	11  / (exitcond_i & !swap_i)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	3  / true
+11 --> 
+	12  / (!exitcond1)
+12 --> 
+	11  / (exitcond)
+	13  / (!exitcond)
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	12  / true
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: stg_17 [1/1] 0.00ns
+:0  br label %._crit_edge1.i
+
+
+ <State 2>: 1.57ns
+ST_2: stg_18 [1/1] 1.57ns
+._crit_edge1.i:0  br label %._crit_edge.i
+
+
+ <State 3>: 4.55ns
+ST_3: swap_i [1/1] 0.00ns
+._crit_edge.i:0  %swap_i = phi i1 [ false, %._crit_edge1.i ], [ true, %2 ], [ %swap_i, %1 ]
+
+ST_3: i_i [1/1] 0.00ns
+._crit_edge.i:1  %i_i = phi i10 [ 0, %._crit_edge1.i ], [ %i_1, %2 ], [ %i_1, %1 ]
+
+ST_3: exitcond_i [1/1] 2.07ns
+._crit_edge.i:2  %exitcond_i = icmp eq i10 %i_i, -241
+
+ST_3: empty [1/1] 0.00ns
+._crit_edge.i:3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 783, i64 783, i64 783)
+
+ST_3: i_1 [1/1] 1.84ns
+._crit_edge.i:4  %i_1 = add i10 %i_i, 1
+
+ST_3: stg_24 [1/1] 0.00ns
+._crit_edge.i:5  br i1 %exitcond_i, label %3, label %1
+
+ST_3: tmp_i [1/1] 0.00ns
+:0  %tmp_i = zext i10 %i_i to i64
+
+ST_3: PCA_sorted_idx_addr_1 [1/1] 0.00ns
+:1  %PCA_sorted_idx_addr_1 = getelementptr [784 x i32]* %PCA_sorted_idx, i64 0, i64 %tmp_i
+
+ST_3: temp [2/2] 2.71ns
+:2  %temp = load i32* %PCA_sorted_idx_addr_1, align 4
+
+ST_3: tmp_180_i [1/1] 0.00ns
+:8  %tmp_180_i = zext i10 %i_1 to i64
+
+ST_3: PCA_sorted_idx_addr_2 [1/1] 0.00ns
+:9  %PCA_sorted_idx_addr_2 = getelementptr [784 x i32]* %PCA_sorted_idx, i64 0, i64 %tmp_180_i
+
+ST_3: PCA_sorted_idx_load_2 [2/2] 2.71ns
+:10  %PCA_sorted_idx_load_2 = load i32* %PCA_sorted_idx_addr_2, align 4
+
+ST_3: stg_31 [1/1] 1.57ns
+:0  br i1 %swap_i, label %._crit_edge1.i, label %find_max.exit
+
+
+ <State 4>: 2.71ns
+ST_4: temp [1/2] 2.71ns
+:2  %temp = load i32* %PCA_sorted_idx_addr_1, align 4
+
+ST_4: tmp_159 [1/1] 0.00ns
+:3  %tmp_159 = trunc i32 %temp to i21
+
+ST_4: PCA_sorted_idx_load_2 [1/2] 2.71ns
+:10  %PCA_sorted_idx_load_2 = load i32* %PCA_sorted_idx_addr_2, align 4
+
+ST_4: tmp_160 [1/1] 0.00ns
+:11  %tmp_160 = trunc i32 %PCA_sorted_idx_load_2 to i21
+
+
+ <State 5>: 6.38ns
+ST_5: tmp_153 [1/1] 6.38ns
+:4  %tmp_153 = mul i21 785, %tmp_159
+
+ST_5: tmp_154 [1/1] 6.38ns
+:12  %tmp_154 = mul i21 785, %tmp_160
+
+
+ <State 6>: 2.61ns
+ST_6: tmp_166_cast [1/1] 0.00ns
+:5  %tmp_166_cast = sext i21 %tmp_153 to i64
+
+ST_6: S_addr [1/1] 0.00ns
+:6  %S_addr = getelementptr [614656 x float]* %S, i64 0, i64 %tmp_166_cast
+
+ST_6: S_load [4/4] 2.61ns
+:7  %S_load = load float* %S_addr, align 4
+
+ST_6: tmp_167_cast [1/1] 0.00ns
+:13  %tmp_167_cast = sext i21 %tmp_154 to i64
+
+ST_6: S_addr_2 [1/1] 0.00ns
+:14  %S_addr_2 = getelementptr [614656 x float]* %S, i64 0, i64 %tmp_167_cast
+
+ST_6: S_load_1 [4/4] 2.61ns
+:15  %S_load_1 = load float* %S_addr_2, align 4
+
+
+ <State 7>: 2.61ns
+ST_7: S_load [3/4] 2.61ns
+:7  %S_load = load float* %S_addr, align 4
+
+ST_7: S_load_1 [3/4] 2.61ns
+:15  %S_load_1 = load float* %S_addr_2, align 4
+
+
+ <State 8>: 2.61ns
+ST_8: S_load [2/4] 2.61ns
+:7  %S_load = load float* %S_addr, align 4
+
+ST_8: S_load_1 [2/4] 2.61ns
+:15  %S_load_1 = load float* %S_addr_2, align 4
+
+
+ <State 9>: 2.61ns
+ST_9: S_load [1/4] 2.61ns
+:7  %S_load = load float* %S_addr, align 4
+
+ST_9: S_load_1 [1/4] 2.61ns
+:15  %S_load_1 = load float* %S_addr_2, align 4
+
+
+ <State 10>: 8.16ns
+ST_10: S_load_to_int [1/1] 0.00ns
+:16  %S_load_to_int = bitcast float %S_load to i32
+
+ST_10: tmp [1/1] 0.00ns
+:17  %tmp = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %S_load_to_int, i32 23, i32 30)
+
+ST_10: tmp_161 [1/1] 0.00ns
+:18  %tmp_161 = trunc i32 %S_load_to_int to i23
+
+ST_10: S_load_1_to_int [1/1] 0.00ns
+:19  %S_load_1_to_int = bitcast float %S_load_1 to i32
+
+ST_10: tmp_45 [1/1] 0.00ns
+:20  %tmp_45 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %S_load_1_to_int, i32 23, i32 30)
+
+ST_10: tmp_162 [1/1] 0.00ns
+:21  %tmp_162 = trunc i32 %S_load_1_to_int to i23
+
+ST_10: notlhs [1/1] 2.00ns
+:22  %notlhs = icmp ne i8 %tmp, -1
+
+ST_10: notrhs [1/1] 2.39ns
+:23  %notrhs = icmp eq i23 %tmp_161, 0
+
+ST_10: tmp_47 [1/1] 0.00ns (grouped into LUT with out node tmp_51)
+:24  %tmp_47 = or i1 %notrhs, %notlhs
+
+ST_10: notlhs3 [1/1] 2.00ns
+:25  %notlhs3 = icmp ne i8 %tmp_45, -1
+
+ST_10: notrhs4 [1/1] 2.39ns
+:26  %notrhs4 = icmp eq i23 %tmp_162, 0
+
+ST_10: tmp_48 [1/1] 0.00ns (grouped into LUT with out node tmp_51)
+:27  %tmp_48 = or i1 %notrhs4, %notlhs3
+
+ST_10: tmp_49 [1/1] 0.00ns (grouped into LUT with out node tmp_51)
+:28  %tmp_49 = and i1 %tmp_47, %tmp_48
+
+ST_10: tmp_50 [1/1] 6.79ns
+:29  %tmp_50 = fcmp olt float %S_load, %S_load_1
+
+ST_10: tmp_51 [1/1] 1.37ns (out node of the LUT)
+:30  %tmp_51 = and i1 %tmp_49, %tmp_50
+
+ST_10: stg_65 [1/1] 0.00ns
+:31  br i1 %tmp_51, label %2, label %._crit_edge.i
+
+ST_10: stg_66 [1/1] 2.71ns
+:0  store i32 %PCA_sorted_idx_load_2, i32* %PCA_sorted_idx_addr_1, align 4
+
+ST_10: stg_67 [1/1] 2.71ns
+:1  store i32 %temp, i32* %PCA_sorted_idx_addr_2, align 4
+
+ST_10: stg_68 [1/1] 0.00ns
+:2  br label %._crit_edge.i
+
+
+ <State 11>: 1.96ns
+ST_11: i [1/1] 0.00ns
+find_max.exit:0  %i = phi i5 [ 0, %3 ], [ %i_2, %.preheader ]
+
+ST_11: phi_mul1 [1/1] 0.00ns
+find_max.exit:1  %phi_mul1 = phi i14 [ 0, %3 ], [ %next_mul2, %.preheader ]
+
+ST_11: next_mul2 [1/1] 1.96ns
+find_max.exit:2  %next_mul2 = add i14 %phi_mul1, 784
+
+ST_11: empty_20 [1/1] 0.00ns
+find_max.exit:3  %empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 20, i64 20, i64 20)
+
+ST_11: exitcond1 [1/1] 1.91ns
+find_max.exit:4  %exitcond1 = icmp eq i5 %i, -12
+
+ST_11: i_2 [1/1] 1.72ns
+find_max.exit:5  %i_2 = add i5 %i, 1
+
+ST_11: stg_75 [1/1] 0.00ns
+find_max.exit:6  br i1 %exitcond1, label %5, label %.preheader.preheader
+
+ST_11: tmp_s [1/1] 0.00ns
+.preheader.preheader:0  %tmp_s = zext i5 %i to i64
+
+ST_11: PCA_sorted_idx_addr [1/1] 0.00ns
+.preheader.preheader:1  %PCA_sorted_idx_addr = getelementptr [784 x i32]* %PCA_sorted_idx, i64 0, i64 %tmp_s
+
+ST_11: stg_78 [1/1] 1.57ns
+.preheader.preheader:2  br label %.preheader
+
+ST_11: stg_79 [1/1] 0.00ns
+:0  ret void
+
+
+ <State 12>: 2.71ns
+ST_12: j [1/1] 0.00ns
+.preheader:0  %j = phi i10 [ %j_1, %4 ], [ 0, %.preheader.preheader ]
+
+ST_12: phi_mul [1/1] 0.00ns
+.preheader:1  %phi_mul = phi i20 [ %next_mul, %4 ], [ 0, %.preheader.preheader ]
+
+ST_12: phi_mul_cast [1/1] 0.00ns
+.preheader:2  %phi_mul_cast = zext i20 %phi_mul to i21
+
+ST_12: empty_21 [1/1] 0.00ns
+.preheader:3  %empty_21 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
+
+ST_12: exitcond [1/1] 2.07ns
+.preheader:4  %exitcond = icmp eq i10 %j, -240
+
+ST_12: j_1 [1/1] 1.84ns
+.preheader:5  %j_1 = add i10 %j, 1
+
+ST_12: stg_86 [1/1] 0.00ns
+.preheader:6  br i1 %exitcond, label %find_max.exit, label %4
+
+ST_12: PCA_sorted_idx_load [2/2] 2.71ns
+:0  %PCA_sorted_idx_load = load i32* %PCA_sorted_idx_addr, align 4
+
+ST_12: tmp_132_cast [1/1] 0.00ns
+:2  %tmp_132_cast = zext i10 %j to i14
+
+ST_12: tmp_155 [1/1] 1.96ns
+:3  %tmp_155 = add i14 %tmp_132_cast, %phi_mul1
+
+ST_12: next_mul [1/1] 2.08ns
+:6  %next_mul = add i20 784, %phi_mul
+
+
+ <State 13>: 7.52ns
+ST_13: PCA_sorted_idx_load [1/2] 2.71ns
+:0  %PCA_sorted_idx_load = load i32* %PCA_sorted_idx_addr, align 4
+
+ST_13: tmp_163 [1/1] 0.00ns
+:1  %tmp_163 = trunc i32 %PCA_sorted_idx_load to i21
+
+ST_13: tmp_156 [1/1] 2.20ns
+:7  %tmp_156 = add i21 %tmp_163, %phi_mul_cast
+
+ST_13: tmp_171_cast [1/1] 0.00ns
+:8  %tmp_171_cast = zext i21 %tmp_156 to i64
+
+ST_13: U_addr [1/1] 0.00ns
+:9  %U_addr = getelementptr [614656 x float]* %U, i64 0, i64 %tmp_171_cast
+
+ST_13: U_load [4/4] 2.61ns
+:10  %U_load = load float* %U_addr, align 4
+
+
+ <State 14>: 2.61ns
+ST_14: U_load [3/4] 2.61ns
+:10  %U_load = load float* %U_addr, align 4
+
+
+ <State 15>: 2.61ns
+ST_15: U_load [2/4] 2.61ns
+:10  %U_load = load float* %U_addr, align 4
+
+
+ <State 16>: 5.32ns
+ST_16: tmp_169_cast [1/1] 0.00ns
+:4  %tmp_169_cast = zext i14 %tmp_155 to i64
+
+ST_16: tsf_mat_addr [1/1] 0.00ns
+:5  %tsf_mat_addr = getelementptr [15680 x float]* %tsf_mat, i64 0, i64 %tmp_169_cast
+
+ST_16: U_load [1/4] 2.61ns
+:10  %U_load = load float* %U_addr, align 4
+
+ST_16: stg_102 [1/1] 2.71ns
+:11  store float %U_load, float* %tsf_mat_addr, align 4
+
+ST_16: stg_103 [1/1] 0.00ns
+:12  br label %.preheader
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

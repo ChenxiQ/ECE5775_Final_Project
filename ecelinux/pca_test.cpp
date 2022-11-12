@@ -52,14 +52,19 @@ void write_test_result(float Y[K][TEST_SIZE], float tsf_mat[K][VEC_SIZ], float m
     fy << endl;
   }
   fy.close();
-  /*
-  cout<<"write tsf"<<endl;
+
+  //int count = 0;
+  //cout<<"write tsf"<<endl;
   ofstream ftsf("data/tsf.dat", ios_base::out);
   for(int i=0;i<K;i++){
-    for(int j=0;j=VEC_SIZ;j++){
+    for(int j=0;j<VEC_SIZ;j++){
+      //cout << tsf_mat[i][j] << "\t";
+      //cout<< '\r' << count;
+      //count ++;
       ftsf << tsf_mat[i][j] << "\t";
     }
     ftsf << endl;
+    //cout << endl;
   }
   ftsf.close();
 
@@ -69,7 +74,7 @@ void write_test_result(float Y[K][TEST_SIZE], float tsf_mat[K][VEC_SIZ], float m
     fm << mean[i] << endl;
   }
   fm.close();
-  */
+  
 }
 
 //------------------------------------------------------------------------

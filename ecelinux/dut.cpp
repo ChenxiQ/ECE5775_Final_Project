@@ -17,7 +17,7 @@ using namespace std;
 
 void dut(
     hls::stream<bit32_t> &strm_in,
-    hls::stream<float> &strm_out
+    hls::stream<fix32_t> &strm_out
 )
 {
   fix32_t X[VEC_SIZ][IMG_NUM];
@@ -54,17 +54,17 @@ void dut(
       XXT[i][j] = 0;
     }
   }
-  // cout << "norm" << endl;
+  //cout << "norm" << endl;
   pca.normalize(X, mean);
-  // cout << "cov" << endl;
+  //cout << "cov" << endl;
   pca.cov(X, XXT);
-  // cout << "svd" << endl;
+  //cout << "svd" << endl;
   pca.apply_svd(XXT,S,U,V);
-  // cout << "rank" << endl;
+  //cout << "rank" << endl;
   pca.rank(tsf_mat, S, U);
-  // cout << "back_pjt" << endl;
+  //cout << "back_pjt" << endl;
   pca.back_pjt(tsf_mat, X, Y);
-  // cout << "transfer output" << endl;
+  //cout << "transfer output" << endl;
 
   for (int i = 0; i < K; i++) {
     for (int j = 0; j < IMG_NUM; j++) {
@@ -75,11 +75,14 @@ void dut(
   for (int i = 0; i < K; i++) {
     for (int j = 0; j < VEC_SIZ; j++) {
       strm_out.write(tsf_mat[i][j]);
+      //cout << tsf_mat[i][j] << '\t';
     }
+    //cout << endl;
   }
 
   for (int i = 0; i<VEC_SIZ; i++){
     strm_out.write(mean[i]);
+
   }
   
   // cout<< "end" <<endl;

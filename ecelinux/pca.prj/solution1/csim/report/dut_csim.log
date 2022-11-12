@@ -1,0 +1,12 @@
+make[1]: Entering directory `/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
+   Compiling ../../../../pca_test.cpp in release mode
+   Compiling ../../../../dut.cpp in release mode
+   Compiling ../../../../pca.cpp in release mode
+   Generating csim.exe
+make[1]: Leaving directory `/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
+read fifo
+write file
+write y
+write mean
+pca                 :      1 calls; 129512.203 msecs total time
+INFO: [SIM 1] CSim done with 0 errors.

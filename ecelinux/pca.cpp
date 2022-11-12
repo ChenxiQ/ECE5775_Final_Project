@@ -80,7 +80,7 @@ void PCA::normalize(fix32_t X[VEC_SIZ][IMG_NUM],fix32_t mean[VEC_SIZ]){
     }
   }
   
-  
+  /*
   std::ofstream fn("data/mean.dat", ios_base::out);
   for(int i=0;i<VEC_SIZ;i++){
     fn << mean[i] << endl;
@@ -92,7 +92,7 @@ void PCA::normalize(fix32_t X[VEC_SIZ][IMG_NUM],fix32_t mean[VEC_SIZ]){
     fmean << mean[i] << "\t";
   }
   fmean.close();
-  
+  */
 }
 
 void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
@@ -183,7 +183,7 @@ void PCA::rank(fix32_t tsf_mat[K][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t
       tsf_mat[i][j] = U[j][sorted_idx[i]];
     }
   }
-  
+  /*
   std::ofstream ftsf("data/tsf.dat", ios_base::out);
   for(int i = 0; i < K; i++){
     for(int j = 0; j < VEC_SIZ; j++){
@@ -191,7 +191,7 @@ void PCA::rank(fix32_t tsf_mat[K][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t
     }
     ftsf << endl;
   }
-  ftsf.close();
+  ftsf.close();*/
 }
 
 void PCA::back_pjt(fix32_t tsf_mat[K][VEC_SIZ], fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[K][IMG_NUM]){
