@@ -1,5 +1,5 @@
-TEST_SIZE = 200
-PCA_COMPONENT = 10
-IMG_WIDTH = 28
-IMG_HEIGHT = 28
-IMG_SIZE = IMG_WIDTH * IMG_HEIGHT
+M = 200         # Number of test images
+K = 10          # K principle components
+W = 28          # Width of Image
+H = 28          # Height of Image
+N = W * H       # Number of feature in a single image

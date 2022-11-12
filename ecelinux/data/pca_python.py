@@ -5,13 +5,13 @@ from sklearn.decomposition import PCA
 
 
 def pca_sklearn():
-    test_data = np.loadtxt("./image.dat", delimiter="\n").reshape([TEST_SIZE, IMG_SIZE])[0:50, ]
+    test_data = np.loadtxt("./image.dat", delimiter="\n").reshape([M, N])[0:50, ]
     pca = PCA(n_components=10, svd_solver="full")
     y_ref = pca.fit_transform(test_data)
 
 
 def pca_python():
-    test_data = np.loadtxt("./image.dat", delimiter="\n").reshape([TEST_SIZE, IMG_SIZE])[0:50, ]
+    test_data = np.loadtxt("./image.dat", delimiter="\n").reshape([M, N])[0:50, ]
     MEAN = np.mean(test_data, axis=0, keepdims=True)
     A = torch.from_numpy((1 / 4) * np.transpose(test_data - MEAN) @ (test_data - MEAN))
 
