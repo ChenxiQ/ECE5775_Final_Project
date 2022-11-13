@@ -9,6 +9,7 @@
 #include "typedefs.h"
 #include <fstream>
 #include "hls_linear_algebra.h"
+#include "svd.h"
 
 #define IMG_NUM 100
 #define IMG_H 28
@@ -49,7 +50,7 @@ class PCA {
   void quickSort(int arr[], int l, int h, fix32_t S[VEC_SIZ][VEC_SIZ]);
 };
 
-struct MY_CONFIG_SVD : hls::svd_traits<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>{
+struct MY_CONFIG_SVD : svd::svd_traits<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>{
  static const int NUM_SWEEPS = 6;
  static const int DIAG_II = 100;
  static const int OFF_DIAG_II = 100;
