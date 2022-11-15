@@ -1,12 +1,16 @@
 #ifndef SVD_H
 #define SVD_H
  
+ #include "dut.h"
 #include "ap_fixed.h"
 #include <complex>
 #include "hls/linear_algebra/utils/x_hls_matrix_utils.h"
 #include "hls/utils/x_hls_utils.h"
 #include "hls/linear_algebra/utils/x_hls_complex.h"
 #include <assert.h>
+#include <iostream>
+#include <iomanip>
+
 
 namespace svd {
  // ===================================================================================================================
@@ -261,6 +265,149 @@ namespace svd {
   }
 
 
+  template<
+  int RowsA,
+  int ColsA,
+  class SVDTraits>
+  void calc_svd_update_on_diag_s_off_diag_vd( int top_left, int bottom_right,   
+                                              float s_temp[2][2],
+                                              float u_temp[2][2],
+                                              float v_temp[2][2],
+                                              float u_row_temp[RowsA][2],
+                                              float v_row_temp[RowsA][2],
+                                              float new_j[2][2],
+                                              float new_k[2][2]){
+
+    // Internal memories for partial results
+    typename SVDTraits::SIntType s_in[RowsA][ColsA];
+    typename SVDTraits::UIntType u_in[RowsA][ColsA];
+    typename SVDTraits::VIntType v_in[RowsA][ColsA];
+
+    // Current S,U,V values being worked on
+    typename SVDTraits::SIntType w_in, x_in, y_in, z_in;
+    typename SVDTraits::SIntType w_out, x_out, y_out, z_out;
+    typename SVDTraits::UIntType uw_in, ux_in, uy_in, uz_in;
+    typename SVDTraits::UIntType uw_out, ux_out, uy_out, uz_out;
+    typename SVDTraits::VIntType vw_in, vx_in, vy_in, vz_in;
+    typename SVDTraits::VIntType vw_out, vx_out, vy_out, vz_out;
+
+    // 2x2 Rotation values
+    typename SVDTraits::CSIntType uw_new, ux_new, uy_new, uz_new;
+    typename SVDTraits::CSIntType vw_new, vx_new, vy_new, vz_new;
+
+    //calc
+    w_in =s_temp[0][0];
+    x_in =s_temp[0][1];
+    y_in =s_temp[1][0];
+    z_in =s_temp[1][1];
+
+    svd2x2(w_in, x_in, y_in, z_in, uw_new, ux_new, uy_new, uz_new, vw_new, vx_new, vy_new, vz_new, w_out, x_out, y_out, z_out);
+
+    s_temp[0][0] = w_out;
+    s_temp[0][1] = x_out;
+    s_temp[1][0] = y_out;
+    s_temp[1][1] = z_out;
+
+    new_j[0][0] = uw_new;
+    new_j[0][1] = ux_new;
+    new_j[1][0] = uy_new;
+    new_j[1][1] = uz_new;
+    
+    new_k[0][0] = vw_new;
+    new_k[0][1] = vx_new;
+    new_k[1][0] = vy_new;
+    new_k[1][1] = vz_new;
+
+    uw_in = u_temp[0][0];
+    ux_in = u_temp[0][1];
+    uy_in = u_temp[1][0];
+    uz_in = u_temp[1][1];
+
+    vw_in = v_temp[0][0];
+    vx_in = v_temp[0][1];
+    vy_in = v_temp[1][0];
+    vz_in = v_temp[1][1];
+
+    mm2x2(uw_in, ux_in, uy_in, uz_in, uw_new, ux_new, uy_new, uz_new, uw_out, ux_out, uy_out, uz_out);
+    mm2x2(vw_in, vx_in, vy_in, vz_in, vw_new, vx_new, vy_new, vz_new, vw_out, vx_out, vy_out, vz_out);
+
+    u_temp[0][0] = uw_out;
+    u_temp[0][1] = ux_out;
+    u_temp[1][0] = uy_out;
+    u_temp[1][1] = uz_out;
+    v_temp[0][0] = vw_out;
+    v_temp[0][1] = vx_out;
+    v_temp[1][0] = vy_out;
+    v_temp[1][1] = vz_out;
+
+    off_row_uv: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
+      if (off_row == bottom_right || off_row == top_left) continue;
+
+      vx_in = v_row_temp[off_row][1];
+      ux_in = u_row_temp[off_row][1];
+      vw_in = v_row_temp[off_row][0];
+      uw_in = u_row_temp[off_row][0];
+
+      vm2x1(vw_in,vw_new,vx_in,vy_new,vw_out);
+      vm2x1(vw_in,vx_new,vx_in,vz_new,vx_out);
+      
+      vm2x1(uw_in,uw_new,ux_in,uy_new,uw_out);
+      vm2x1(uw_in,ux_new,ux_in,uz_new,ux_out);
+
+      v_row_temp[off_row][0] = vw_out;
+      v_row_temp[off_row][1] = vx_out;
+      u_row_temp[off_row][0] = uw_out;
+      u_row_temp[off_row][1] = ux_out;
+    }
+
+  }
+
+template<
+int RowsA,
+int ColsA,
+class SVDTraits>
+void update_off_diag_s(int top_left, int bottom_right, float new_j[2][2],float new_k[2][2], float s_col_temp[2][ColsA],float s_row_temp[RowsA][2]){
+  float w_in,x_in,y_in;
+  float w_out,x_out,y_out;
+
+  float uw_new = new_j[0][0];
+  float ux_new = new_j[0][1];
+  float uy_new = new_j[1][0];
+  float uz_new = new_j[1][1];
+
+  float vw_new = new_k[0][0];
+  float vx_new = new_k[0][1];
+  float vy_new = new_k[1][0];
+  float vz_new = new_k[1][1];
+  
+
+  off_col_s: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
+    if (off_col == bottom_right || off_col == top_left) continue;
+
+    w_in =s_col_temp[0][off_col];
+    y_in =s_col_temp[1][off_col];
+
+    vm2x1(uw_new,w_in,uy_new,y_in,w_out);
+    vm2x1(ux_new,w_in,uz_new,y_in,y_out);
+
+    s_col_temp[0][off_col] = w_out;
+    s_col_temp[1][off_col] = y_out;
+    
+  }
+
+  off_row_s: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
+    if (off_row == bottom_right || off_row == top_left) continue;
+      w_in =  s_row_temp[off_row][0];
+
+      x_in = s_row_temp[off_row][1];
+
+      vm2x1(w_in,vw_new,x_in,vy_new,w_out);
+      vm2x1(w_in,vx_new,x_in,vz_new,x_out);
+      
+      s_row_temp[off_row][0] = w_out;
+      s_row_temp[off_row][1] = x_out;
+  }
+}
 
 // ===================================================================================================================
 // SVD_BASIC: Top level function taking a SVDTraits template parameter to defines internal types
@@ -271,9 +418,10 @@ namespace svd {
   typename InputType,
   typename OutputType>
   void svd_basic( const InputType A[RowsA][ColsA],
-                      OutputType S[RowsA][ColsA],
-                      OutputType U[RowsA][RowsA],
-                      OutputType V[ColsA][ColsA] ) 
+                  OutputType S[RowsA][ColsA],
+                  OutputType U[RowsA][RowsA],
+                  OutputType V[ColsA][ColsA], 
+                  hls::stream<float> & pca_in, hls::stream<float> & pca_out) 
   {
   // Initially only supporting square matrix
   #ifndef __SYNTHESIS__
@@ -297,177 +445,140 @@ namespace svd {
   typename SVDTraits::CSIntType uw_new, ux_new, uy_new, uz_new;
   typename SVDTraits::CSIntType vw_new, vx_new, vy_new, vz_new;
 
+  for(int i=0; i<RowsA; i++){
+    for(int j=0; j<ColsA; j++){
+      U[i][j] = i==j?1:0;
+      V[i][j] = i==j?1:0;
+      S[i][j] = A[i][j];
+    }
+  }
+
   sweep_loop: for(int sweepnum = 0; sweepnum < SVDTraits::NUM_SWEEPS; sweepnum++) {
-      // NOTE: Using the minimum dimension. i.e. will process a square matrix
-      row_loop: for(int top_left = 0; top_left < SVDTraits::MIN_DIM; top_left++) {
-        col_loop: for(int bottom_right = top_left+1; bottom_right< SVDTraits::MIN_DIM; bottom_right++) {
-          // Fetch w,x,y,z values
-          if (sweepnum == 0 && top_left == 0) {
-            if (bottom_right == 1) {
-            w_in =A[top_left]    [top_left];
-            x_in =A[top_left]    [bottom_right];
-            y_in =A[bottom_right][top_left];
-            } else {
-            // Now revist values already updated in first diagonal pass
-            w_in =s_in[top_left]    [top_left];
-            x_in =s_in[top_left]    [bottom_right];
-            y_in =s_in[bottom_right][top_left];
+      for (int distance = 2; distance < RowsA+1; distance ++){
+        for (int offset = 0; offset < distance; offset ++){
+          float new_j[RowsA][2][2];
+          float new_k[RowsA][2][2]; 
+
+          //diag
+          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
+            int bottom_right = top_left + distance - 1;
+            
+            pca_in.write(1);
+
+            //std::cout << "write to fpga" << std::endl;
+            pca_in.write((float)top_left);
+            pca_in.write((float)bottom_right);
+            pca_in.write(S[top_left]    [top_left]    );
+            pca_in.write(S[top_left]    [bottom_right]);
+            pca_in.write(S[bottom_right][top_left]    );
+            pca_in.write(S[bottom_right][bottom_right]);
+            pca_in.write(U[top_left]    [top_left]    );
+            pca_in.write(U[top_left]    [bottom_right]);
+            pca_in.write(U[bottom_right][top_left]    );
+            pca_in.write(U[bottom_right][bottom_right]);
+            pca_in.write(V[top_left]    [top_left]    );
+            pca_in.write(V[top_left]    [bottom_right]);
+            pca_in.write(V[bottom_right][top_left]    );
+            pca_in.write(V[bottom_right][bottom_right]);
+
+            for(int i=0;i<RowsA;i++){
+              pca_in.write(U[i][top_left]    );
+              pca_in.write(U[i][bottom_right]);
+              pca_in.write(V[i][top_left]    );
+              pca_in.write(V[i][bottom_right]);
             }
-            z_in =A[bottom_right][bottom_right];
-          } else {
-            w_in =s_in[top_left]    [top_left];
-            x_in =s_in[top_left]    [bottom_right];
-            y_in =s_in[bottom_right][top_left];
-            z_in =s_in[bottom_right][bottom_right];
+          }
+
+          //std::cout << "run dut" << std::endl;
+          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
+            dut(pca_in, pca_out);
           }
           
-          // Diagonal
-          svd2x2(w_in, x_in, y_in, z_in, uw_new, ux_new, uy_new, uz_new, vw_new, vx_new, vy_new, vz_new, w_out, x_out, y_out, z_out);
-          
-          // Update S on diagonal
-          s_in[top_left]    [top_left]     = w_out;
-          s_in[top_left]    [bottom_right] = x_out;
-          s_in[bottom_right][top_left]     = y_out;
-          s_in[bottom_right][bottom_right] = z_out;
-          if (sweepnum == SVDTraits::NUM_SWEEPS-1) {
-            S[top_left]    [top_left]     = w_out;
-            S[top_left]    [bottom_right] = x_out;
-            S[bottom_right][top_left]     = y_out;
-            S[bottom_right][bottom_right] = z_out;
+          //wb
+          //std::cout << "read from fpga" << std::endl;
+          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
+            int bottom_right = top_left + distance - 1;
+      
+            S[top_left]    [top_left]     = pca_out.read();
+            S[top_left]    [bottom_right] = pca_out.read();
+            S[bottom_right][top_left]     = pca_out.read();
+            S[bottom_right][bottom_right] = pca_out.read();
+            U[top_left]    [top_left]     = pca_out.read();
+            U[top_left]    [bottom_right] = pca_out.read();
+            U[bottom_right][top_left]     = pca_out.read();
+            U[bottom_right][bottom_right] = pca_out.read();
+            V[top_left]    [top_left]     = pca_out.read();
+            V[top_left]    [bottom_right] = pca_out.read();
+            V[bottom_right][top_left]     = pca_out.read();
+            V[bottom_right][bottom_right] = pca_out.read();
+            //exit(0);
+            for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
+              if (off_row == top_left || off_row == bottom_right) continue;
+              V[off_row][top_left]     = pca_out.read();
+              V[off_row][bottom_right] = pca_out.read();
+              U[off_row][top_left]     = pca_out.read();
+              U[off_row][bottom_right] = pca_out.read();
+            }
+       
+
+            new_j[top_left][0][0] = pca_out.read();
+            new_j[top_left][0][1] = pca_out.read();
+            new_j[top_left][1][0] = pca_out.read();
+            new_j[top_left][1][1] = pca_out.read();
+
+            new_k[top_left][0][0] = pca_out.read();
+            new_k[top_left][0][1] = pca_out.read();
+            new_k[top_left][1][0] = pca_out.read();
+            new_k[top_left][1][1] = pca_out.read();
+
+            
           }
           
-          // Update U & V
-          // o On the diagonal use a 2x2 as per the sigma
-          // o Need to create the indentity in U & V at the start
-          if (sweepnum == 0 && top_left == 0) {
-            if (bottom_right==1) {
-            uw_in = 1;
-            vw_in = 1;
-            } else {
-            // Now re-visiting diagonal values where I has been set
-            uw_in = u_in[top_left][top_left];
-            vw_in = v_in[top_left][top_left];
+          //off diag
+          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
+            int bottom_right = top_left + distance - 1;
+
+            pca_in.write(2);
+            pca_in.write((float)top_left);
+            pca_in.write((float)bottom_right);
+
+            //init
+            float s_col_temp[2][ColsA];
+            for(int i=0;i<ColsA;i++){
+              pca_in.write(S[top_left]    [i]);
+              pca_in.write(S[bottom_right][i]);
+            }
+
+            float s_row_temp[RowsA][2];
+            for(int i=0;i<RowsA;i++){
+              pca_in.write(S[i][top_left]    );
+              pca_in.write(S[i][bottom_right]);
+            }
+
+            pca_in.write(new_j[top_left][0][0]);
+            pca_in.write(new_j[top_left][0][1]);
+            pca_in.write(new_j[top_left][1][0]);
+            pca_in.write(new_j[top_left][1][1]);
+            
+            pca_in.write(new_k[top_left][0][0]);
+            pca_in.write(new_k[top_left][0][1]);
+            pca_in.write(new_k[top_left][1][0]);
+            pca_in.write(new_k[top_left][1][1]);
+
+            dut(pca_in, pca_out);
+
+            //wb
+            off_col_wb: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
+              if (off_col == top_left || off_col == bottom_right) continue;
+              S[top_left][off_col]     = pca_out.read();
+              S[bottom_right][off_col] = pca_out.read();
             }
             
-            ux_in = 0;
-            uy_in = 0;
-            uz_in = 1;
             
-            vx_in = 0;
-            vy_in = 0;
-            vz_in = 1;
-          } else {
-            uw_in = u_in[top_left]    [top_left];
-            ux_in = u_in[top_left]    [bottom_right];
-            uy_in = u_in[bottom_right][top_left];
-            uz_in = u_in[bottom_right][bottom_right];
-            vw_in = v_in[top_left]    [top_left];
-            vx_in = v_in[top_left]    [bottom_right];
-            vy_in = v_in[bottom_right][top_left];
-            vz_in = v_in[bottom_right][bottom_right];
-          }
-          
-          mm2x2(uw_in, ux_in, uy_in, uz_in, uw_new, ux_new, uy_new, uz_new, uw_out, ux_out, uy_out, uz_out);
-          mm2x2(vw_in, vx_in, vy_in, vz_in, vw_new, vx_new, vy_new, vz_new, vw_out, vx_out, vy_out, vz_out);
-          
-          u_in[top_left]    [top_left]     = uw_out;
-          u_in[top_left]    [bottom_right] = ux_out;
-          u_in[bottom_right][top_left]     = uy_out;
-          u_in[bottom_right][bottom_right] = uz_out;
-          v_in[top_left]    [top_left]     = vw_out;
-          v_in[top_left]    [bottom_right] = vx_out;
-          v_in[bottom_right][top_left]     = vy_out;
-          v_in[bottom_right][bottom_right] = vz_out;
-          if (sweepnum == SVDTraits::NUM_SWEEPS-1) {
-            U[top_left]    [top_left]     = uw_out;
-            U[top_left]    [bottom_right] = ux_out;
-            U[bottom_right][top_left]     = uy_out;
-            U[bottom_right][bottom_right] = uz_out;
-            V[top_left]    [top_left]     = vw_out;
-            V[top_left]    [bottom_right] = vx_out;
-            V[bottom_right][top_left]     = vy_out;
-            V[bottom_right][bottom_right] = vz_out;
-          }
-          
-          // Off-diagonal
-          // Col updates
-          off_col: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
-            #pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
-            if (off_col != bottom_right && off_col != top_left) {
-              if (sweepnum == 0 && top_left == 0 && bottom_right == 1) {
-              w_in =A[top_left][off_col];
-              } else {
-              w_in =s_in[top_left][off_col];
-              }
-              if (sweepnum == 0 && top_left == 0 && off_col > bottom_right) {
-              y_in =A[bottom_right][off_col];
-              } else {
-              y_in =s_in[bottom_right][off_col];
-              }
-              
-              // U must be Hermitian transposed before it is applied to A
-              vm2x1(hls::x_conj(uw_new),w_in,hls::x_conj(uy_new),y_in,w_out);
-              vm2x1(hls::x_conj(ux_new),w_in,hls::x_conj(uz_new),y_in,y_out);
-              
-              //Store off-diagonal updates
-              s_in[top_left]    [off_col] = w_out;
-              s_in[bottom_right][off_col] = y_out;
-              if (sweepnum == SVDTraits::NUM_SWEEPS-1) {
-              S[top_left]    [off_col] = w_out;
-              S[bottom_right][off_col] = y_out;
-              }
-            }
-          }
-          // Row update
-          off_row: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-            #pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
-            if (off_row != bottom_right && off_row != top_left) {
-              if (sweepnum == 0 && top_left== 0 && bottom_right == 1) {
-                w_in =A[off_row][top_left];
-                vw_in = 0;
-                uw_in = 0;
-              } else {
-                w_in =  s_in[off_row][top_left];
-                vw_in = v_in[off_row][top_left];
-                uw_in = u_in[off_row][top_left];
-              }
-              if (sweepnum == 0 && top_left == 0 && off_row > bottom_right) {
-                x_in = A[off_row][bottom_right];
-              } else {
-                x_in = s_in[off_row][bottom_right];
-              }
-              if (sweepnum == 0 && top_left == 0) {
-                vx_in = 0;
-                ux_in = 0;
-              } else {
-                vx_in = v_in[off_row][bottom_right];
-                ux_in = u_in[off_row][bottom_right];
-              }
-              
-              vm2x1(w_in,vw_new,x_in,vy_new,w_out);
-              vm2x1(w_in,vx_new,x_in,vz_new,x_out);
-              
-              vm2x1(vw_in,vw_new,vx_in,vy_new,vw_out);
-              vm2x1(vw_in,vx_new,vx_in,vz_new,vx_out);
-              
-              vm2x1(uw_in,uw_new,ux_in,uy_new,uw_out);
-              vm2x1(uw_in,ux_new,ux_in,uz_new,ux_out);
-              
-              //Store off-diagonal updates
-              s_in[off_row][top_left]     = w_out;
-              s_in[off_row][bottom_right] = x_out;
-              v_in[off_row][top_left]     = vw_out;
-              v_in[off_row][bottom_right] = vx_out;
-              u_in[off_row][top_left]     = uw_out;
-              u_in[off_row][bottom_right] = ux_out;
-              if (sweepnum==SVDTraits::NUM_SWEEPS-1) {
-                S[off_row][top_left]     = w_out;
-                S[off_row][bottom_right] = x_out;
-                V[off_row][top_left]     = vw_out;
-                V[off_row][bottom_right] = vx_out;
-                U[off_row][top_left]     = uw_out;
-                U[off_row][bottom_right] = ux_out;
-              }
+            off_row_wb_s: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
+              if (off_row == top_left || off_row == bottom_right) continue;
+              S[off_row][top_left]     = pca_out.read();
+              S[off_row][bottom_right] = pca_out.read();
             }
           }
         }
@@ -488,18 +599,12 @@ namespace svd {
   void svd_top( const InputType  A[RowsA][ColsA],
                       OutputType S[RowsA][ColsA],
                       OutputType U[RowsA][RowsA],
-                      OutputType V[ColsA][ColsA] ) {
-    switch(SVDTraits::ARCH) {
-    case 0:
-      svd_basic<RowsA,ColsA,SVDTraits,InputType,OutputType>(A,S,U,V);
-      break;
-    case 1:
-      svd_basic<RowsA,ColsA,SVDTraits,InputType,OutputType>(A,S,U,V);
-      break;
-    default:
-      svd_basic<RowsA,ColsA,SVDTraits,InputType,OutputType>(A,S,U,V);
-      break;
-    }
+                      OutputType V[ColsA][ColsA],
+                      hls::stream<float> & pca_in, hls::stream<float> & pca_out) {
+
+    svd_basic<RowsA,ColsA,SVDTraits,InputType,OutputType>
+    (A,S,U,V,pca_in,pca_out);
+
   }
 }
 

@@ -5,7 +5,6 @@
 
 #include <iostream>
 #include <fstream>
-#include "dut.h"
 #include "pca.h"
 #include "timer.h"
 #include "hls_linear_algebra.h"
@@ -80,11 +79,12 @@ void write_test_result(float Y[K][IMG_NUM], float tsf_mat[K][VEC_SIZ], float mea
   
 }
 
-void run_pca(uint8_t test_imgs[IMG_NUM][VEC_SIZ]){
+void run_pca(uint8_t test_imgs[IMG_NUM][VEC_SIZ],   
+hls::stream<float> & pca_in, hls::stream<float> & pca_out){
   fix32_t X[VEC_SIZ][IMG_NUM];
   fix32_t Y[K][IMG_NUM];
   fix32_t tsf_mat[K][VEC_SIZ];
-  PCA pca(VEC_SIZ, IMG_NUM, K);
+  PCA pca(VEC_SIZ, IMG_NUM, K, pca_in, pca_out);
   fix32_t S[VEC_SIZ][VEC_SIZ];
   fix32_t U[VEC_SIZ][VEC_SIZ];
   fix32_t V[VEC_SIZ][VEC_SIZ];
@@ -125,8 +125,8 @@ void run_pca(uint8_t test_imgs[IMG_NUM][VEC_SIZ]){
 
 int main(){
   // HLS streams for communicating with the cordic block
-  hls::stream<bit32_t> pca_in;
-  hls::stream<float> pca_out;
+  hls::stream<float> pca_in("pca in");
+  hls::stream<float> pca_out("pca out");
   
   uint8_t test_images[IMG_NUM][VEC_SIZ];
   uint8_t test_labels[IMG_NUM];
@@ -160,7 +160,7 @@ int main(){
     // if (pca_out.read() == test_labels[test]) correct += 1.0;
   }*/
   //dut(pca_in, pca_out);
-  run_pca(test_images);
+  run_pca(test_images,pca_in, pca_out);
 
   /*
   cout<<"read fifo"<< endl;

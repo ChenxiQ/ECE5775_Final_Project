@@ -8,6 +8,8 @@
 
 #include "typedefs.h"
 #include <fstream>
+#include <iostream>
+#include <iomanip>
 #include "hls_linear_algebra.h"
 #include "svd.h"
 
@@ -29,9 +31,11 @@ class PCA {
   int vec_size;
   int vec_num;
   int k;
+  hls::stream<float> *pca_in;
+  hls::stream<float> *pca_out;
 
   //PCA(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[VEC_SIZ][IMG_NUM], fix32_t tsf_mat[K][VEC_SIZ], int VEC_SIZ, int VEC_NUM, int k);
-  PCA(int VEC_SIZ, int VEC_NUM, int k);
+  PCA(int VEC_SIZ, int VEC_NUM, int k, hls::stream<float> & pca_in_, hls::stream<float> & pca_out_);
   ~PCA();
 
   void normalize(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t mean[VEC_SIZ]);

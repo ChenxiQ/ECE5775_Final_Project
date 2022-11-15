@@ -12,10 +12,12 @@
 using namespace std;
 
 
-PCA::PCA(int VEC_SIZ, int VEC_NUM, int ka){
-  vec_size = VEC_SIZ;
-  k = ka; 
-  vec_num = VEC_NUM;
+PCA::PCA(int VEC_SIZ, int VEC_NUM, int ka, hls::stream<float> & pca_in_, hls::stream<float> & pca_out_){
+  vec_size  = VEC_SIZ;
+  k         = ka; 
+  vec_num   = VEC_NUM;
+  pca_in    = &pca_in_;
+  pca_out   = &pca_out_;
   //this->tsf_mat = tsf_mat;
   /*
   this->A = (fix32_t**)malloc(sizeof(fix32_t*) * VEC_NUM);
@@ -109,7 +111,7 @@ void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
 }
 
 void PCA::apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]){
-  svd::svd_top<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD,fix32_t,fix32_t>(XXT,S,U,V);
+  svd::svd_top<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD,fix32_t,fix32_t>(XXT,S,U,V,*pca_in, *pca_out);
   //hls::svd<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(XXT,S,U,V);
   
   std::ofstream fs("data/s.dat", ios_base::out);

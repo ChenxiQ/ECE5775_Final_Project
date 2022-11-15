@@ -7,11 +7,13 @@
 #define DUT
 #include "typedefs.h"
 #include <hls_stream.h>
+#include "pca.h"
 
 // Top function for synthesis
 void dut (
-  hls::stream<bit32_t> &strm_in,
+  hls::stream<float> &strm_in,
   hls::stream<float> &strm_out
 );
+
 
 #endif
