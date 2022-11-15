@@ -1,0 +1,545 @@
+
+
+================================================================
+== Vivado HLS Report for 'dut_update_off_diag_s'
+================================================================
+* Date:           Tue Nov 15 03:39:04 2022
+
+* Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
+* Project:        pca.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.41|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+-------+------+-------+---------+
+    |    Latency   |   Interval   | Pipeline|
+    |  min |  max  |  min |  max  |   Type  |
+    +------+-------+------+-------+---------+
+    |  3138|  17250|  3138|  17250|   none  |
+    +------+-------+------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+------+------+----------+-----------+-----------+------+----------+
+        |             |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+------+------+----------+-----------+-----------+------+----------+
+        |- off_col_s  |  1568|  8624|  2 ~ 11  |          -|          -|   784|    no    |
+        |- off_row_s  |  1568|  8624|  2 ~ 11  |          -|          -|   784|    no    |
+        +-------------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 23
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	13  / (exitcond1)
+	3  / (!exitcond1 & !or_cond)
+	12  / (!exitcond1 & or_cond)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	2  / true
+13 --> 
+	14  / (!exitcond & !or_cond2)
+	23  / (!exitcond & or_cond2)
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	13  / true
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: p_read_1 [1/1] 0.00ns
+:0  %p_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %p_read7)
+
+ST_1: p_read_2 [1/1] 0.00ns
+:1  %p_read_2 = call float @_ssdm_op_Read.ap_auto.float(float %p_read6)
+
+ST_1: p_read_3 [1/1] 0.00ns
+:2  %p_read_3 = call float @_ssdm_op_Read.ap_auto.float(float %p_read5)
+
+ST_1: p_read_4 [1/1] 0.00ns
+:3  %p_read_4 = call float @_ssdm_op_Read.ap_auto.float(float %p_read4)
+
+ST_1: p_read_5 [1/1] 0.00ns
+:4  %p_read_5 = call float @_ssdm_op_Read.ap_auto.float(float %p_read3)
+
+ST_1: p_read_6 [1/1] 0.00ns
+:5  %p_read_6 = call float @_ssdm_op_Read.ap_auto.float(float %p_read2)
+
+ST_1: p_read_7 [1/1] 0.00ns
+:6  %p_read_7 = call float @_ssdm_op_Read.ap_auto.float(float %p_read1)
+
+ST_1: p_read_8 [1/1] 0.00ns
+:7  %p_read_8 = call float @_ssdm_op_Read.ap_auto.float(float %p_read)
+
+ST_1: bottom_right_read [1/1] 0.00ns
+:8  %bottom_right_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %bottom_right)
+
+ST_1: top_left_read [1/1] 0.00ns
+:9  %top_left_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %top_left)
+
+ST_1: stg_34 [1/1] 1.57ns
+:10  br label %1
+
+
+ <State 2>: 3.89ns
+ST_2: off_col [1/1] 0.00ns
+:0  %off_col = phi i10 [ 0, %0 ], [ %off_col_1, %._crit_edge ]
+
+ST_2: off_col_cast2 [1/1] 0.00ns
+:1  %off_col_cast2 = zext i10 %off_col to i32
+
+ST_2: exitcond1 [1/1] 2.07ns
+:2  %exitcond1 = icmp eq i10 %off_col, -240
+
+ST_2: empty [1/1] 0.00ns
+:3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
+
+ST_2: off_col_1 [1/1] 1.84ns
+:4  %off_col_1 = add i10 %off_col, 1
+
+ST_2: stg_40 [1/1] 1.57ns
+:5  br i1 %exitcond1, label %.preheader, label %2
+
+ST_2: stg_41 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str1808) nounwind
+
+ST_2: tmp [1/1] 2.52ns
+:1  %tmp = icmp eq i32 %off_col_cast2, %bottom_right_read
+
+ST_2: tmp_5 [1/1] 2.52ns
+:2  %tmp_5 = icmp eq i32 %off_col_cast2, %top_left_read
+
+ST_2: or_cond [1/1] 1.37ns
+:3  %or_cond = or i1 %tmp, %tmp_5
+
+ST_2: stg_45 [1/1] 0.00ns
+:4  br i1 %or_cond, label %._crit_edge, label %3
+
+ST_2: tmp_6 [1/1] 0.00ns
+:0  %tmp_6 = zext i10 %off_col to i64
+
+ST_2: s_col_temp_0_addr [1/1] 0.00ns
+:1  %s_col_temp_0_addr = getelementptr [784 x float]* %s_col_temp_0, i64 0, i64 %tmp_6
+
+ST_2: w_in [2/2] 2.71ns
+:2  %w_in = load float* %s_col_temp_0_addr, align 4
+
+ST_2: s_col_temp_1_addr [1/1] 0.00ns
+:3  %s_col_temp_1_addr = getelementptr [784 x float]* %s_col_temp_1, i64 0, i64 %tmp_6
+
+ST_2: y_in [2/2] 2.71ns
+:4  %y_in = load float* %s_col_temp_1_addr, align 4
+
+
+ <State 3>: 8.41ns
+ST_3: w_in [1/2] 2.71ns
+:2  %w_in = load float* %s_col_temp_0_addr, align 4
+
+ST_3: y_in [1/2] 2.71ns
+:4  %y_in = load float* %s_col_temp_1_addr, align 4
+
+ST_3: tmp_i [4/4] 5.70ns
+:5  %tmp_i = fmul float %w_in, %p_read_8
+
+ST_3: tmp_3_i [4/4] 5.70ns
+:6  %tmp_3_i = fmul float %y_in, %p_read_6
+
+ST_3: tmp_i8 [4/4] 5.70ns
+:8  %tmp_i8 = fmul float %w_in, %p_read_7
+
+ST_3: tmp_3_i9 [4/4] 5.70ns
+:9  %tmp_3_i9 = fmul float %y_in, %p_read_5
+
+
+ <State 4>: 5.70ns
+ST_4: tmp_i [3/4] 5.70ns
+:5  %tmp_i = fmul float %w_in, %p_read_8
+
+ST_4: tmp_3_i [3/4] 5.70ns
+:6  %tmp_3_i = fmul float %y_in, %p_read_6
+
+ST_4: tmp_i8 [3/4] 5.70ns
+:8  %tmp_i8 = fmul float %w_in, %p_read_7
+
+ST_4: tmp_3_i9 [3/4] 5.70ns
+:9  %tmp_3_i9 = fmul float %y_in, %p_read_5
+
+
+ <State 5>: 5.70ns
+ST_5: tmp_i [2/4] 5.70ns
+:5  %tmp_i = fmul float %w_in, %p_read_8
+
+ST_5: tmp_3_i [2/4] 5.70ns
+:6  %tmp_3_i = fmul float %y_in, %p_read_6
+
+ST_5: tmp_i8 [2/4] 5.70ns
+:8  %tmp_i8 = fmul float %w_in, %p_read_7
+
+ST_5: tmp_3_i9 [2/4] 5.70ns
+:9  %tmp_3_i9 = fmul float %y_in, %p_read_5
+
+
+ <State 6>: 5.70ns
+ST_6: tmp_i [1/4] 5.70ns
+:5  %tmp_i = fmul float %w_in, %p_read_8
+
+ST_6: tmp_3_i [1/4] 5.70ns
+:6  %tmp_3_i = fmul float %y_in, %p_read_6
+
+ST_6: tmp_i8 [1/4] 5.70ns
+:8  %tmp_i8 = fmul float %w_in, %p_read_7
+
+ST_6: tmp_3_i9 [1/4] 5.70ns
+:9  %tmp_3_i9 = fmul float %y_in, %p_read_5
+
+
+ <State 7>: 7.26ns
+ST_7: w_out [5/5] 7.26ns
+:7  %w_out = fadd float %tmp_i, %tmp_3_i
+
+ST_7: y_out [5/5] 7.26ns
+:10  %y_out = fadd float %tmp_i8, %tmp_3_i9
+
+
+ <State 8>: 7.26ns
+ST_8: w_out [4/5] 7.26ns
+:7  %w_out = fadd float %tmp_i, %tmp_3_i
+
+ST_8: y_out [4/5] 7.26ns
+:10  %y_out = fadd float %tmp_i8, %tmp_3_i9
+
+
+ <State 9>: 7.26ns
+ST_9: w_out [3/5] 7.26ns
+:7  %w_out = fadd float %tmp_i, %tmp_3_i
+
+ST_9: y_out [3/5] 7.26ns
+:10  %y_out = fadd float %tmp_i8, %tmp_3_i9
+
+
+ <State 10>: 7.26ns
+ST_10: w_out [2/5] 7.26ns
+:7  %w_out = fadd float %tmp_i, %tmp_3_i
+
+ST_10: y_out [2/5] 7.26ns
+:10  %y_out = fadd float %tmp_i8, %tmp_3_i9
+
+
+ <State 11>: 7.26ns
+ST_11: w_out [1/5] 7.26ns
+:7  %w_out = fadd float %tmp_i, %tmp_3_i
+
+ST_11: y_out [1/5] 7.26ns
+:10  %y_out = fadd float %tmp_i8, %tmp_3_i9
+
+
+ <State 12>: 2.71ns
+ST_12: stg_79 [1/1] 2.71ns
+:11  store float %w_out, float* %s_col_temp_0_addr, align 4
+
+ST_12: stg_80 [1/1] 2.71ns
+:12  store float %y_out, float* %s_col_temp_1_addr, align 4
+
+ST_12: stg_81 [1/1] 0.00ns
+:13  br label %._crit_edge
+
+ST_12: stg_82 [1/1] 0.00ns
+._crit_edge:0  br label %1
+
+
+ <State 13>: 3.89ns
+ST_13: off_row [1/1] 0.00ns
+.preheader:0  %off_row = phi i10 [ %off_row_1, %._crit_edge3 ], [ 0, %1 ]
+
+ST_13: off_row_cast1 [1/1] 0.00ns
+.preheader:1  %off_row_cast1 = zext i10 %off_row to i32
+
+ST_13: exitcond [1/1] 2.07ns
+.preheader:2  %exitcond = icmp eq i10 %off_row, -240
+
+ST_13: empty_8 [1/1] 0.00ns
+.preheader:3  %empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)
+
+ST_13: off_row_1 [1/1] 1.84ns
+.preheader:4  %off_row_1 = add i10 %off_row, 1
+
+ST_13: stg_88 [1/1] 0.00ns
+.preheader:5  br i1 %exitcond, label %6, label %4
+
+ST_13: stg_89 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str1809) nounwind
+
+ST_13: tmp_7 [1/1] 2.52ns
+:1  %tmp_7 = icmp eq i32 %off_row_cast1, %bottom_right_read
+
+ST_13: tmp_8 [1/1] 2.52ns
+:2  %tmp_8 = icmp eq i32 %off_row_cast1, %top_left_read
+
+ST_13: or_cond2 [1/1] 1.37ns
+:3  %or_cond2 = or i1 %tmp_7, %tmp_8
+
+ST_13: stg_93 [1/1] 0.00ns
+:4  br i1 %or_cond2, label %._crit_edge3, label %5
+
+ST_13: tmp_s [1/1] 0.00ns
+:0  %tmp_s = zext i10 %off_row to i64
+
+ST_13: s_row_temp_0_addr [1/1] 0.00ns
+:1  %s_row_temp_0_addr = getelementptr [784 x float]* %s_row_temp_0, i64 0, i64 %tmp_s
+
+ST_13: w_in_1 [2/2] 2.71ns
+:2  %w_in_1 = load float* %s_row_temp_0_addr, align 4
+
+ST_13: s_row_temp_1_addr [1/1] 0.00ns
+:3  %s_row_temp_1_addr = getelementptr [784 x float]* %s_row_temp_1, i64 0, i64 %tmp_s
+
+ST_13: x_in [2/2] 2.71ns
+:4  %x_in = load float* %s_row_temp_1_addr, align 4
+
+ST_13: stg_99 [1/1] 0.00ns
+:0  ret void
+
+
+ <State 14>: 8.41ns
+ST_14: w_in_1 [1/2] 2.71ns
+:2  %w_in_1 = load float* %s_row_temp_0_addr, align 4
+
+ST_14: x_in [1/2] 2.71ns
+:4  %x_in = load float* %s_row_temp_1_addr, align 4
+
+ST_14: tmp_i1 [4/4] 5.70ns
+:5  %tmp_i1 = fmul float %w_in_1, %p_read_4
+
+ST_14: tmp_3_i1 [4/4] 5.70ns
+:6  %tmp_3_i1 = fmul float %x_in, %p_read_2
+
+ST_14: tmp_i2 [4/4] 5.70ns
+:8  %tmp_i2 = fmul float %w_in_1, %p_read_3
+
+ST_14: tmp_3_i2 [4/4] 5.70ns
+:9  %tmp_3_i2 = fmul float %x_in, %p_read_1
+
+
+ <State 15>: 5.70ns
+ST_15: tmp_i1 [3/4] 5.70ns
+:5  %tmp_i1 = fmul float %w_in_1, %p_read_4
+
+ST_15: tmp_3_i1 [3/4] 5.70ns
+:6  %tmp_3_i1 = fmul float %x_in, %p_read_2
+
+ST_15: tmp_i2 [3/4] 5.70ns
+:8  %tmp_i2 = fmul float %w_in_1, %p_read_3
+
+ST_15: tmp_3_i2 [3/4] 5.70ns
+:9  %tmp_3_i2 = fmul float %x_in, %p_read_1
+
+
+ <State 16>: 5.70ns
+ST_16: tmp_i1 [2/4] 5.70ns
+:5  %tmp_i1 = fmul float %w_in_1, %p_read_4
+
+ST_16: tmp_3_i1 [2/4] 5.70ns
+:6  %tmp_3_i1 = fmul float %x_in, %p_read_2
+
+ST_16: tmp_i2 [2/4] 5.70ns
+:8  %tmp_i2 = fmul float %w_in_1, %p_read_3
+
+ST_16: tmp_3_i2 [2/4] 5.70ns
+:9  %tmp_3_i2 = fmul float %x_in, %p_read_1
+
+
+ <State 17>: 5.70ns
+ST_17: tmp_i1 [1/4] 5.70ns
+:5  %tmp_i1 = fmul float %w_in_1, %p_read_4
+
+ST_17: tmp_3_i1 [1/4] 5.70ns
+:6  %tmp_3_i1 = fmul float %x_in, %p_read_2
+
+ST_17: tmp_i2 [1/4] 5.70ns
+:8  %tmp_i2 = fmul float %w_in_1, %p_read_3
+
+ST_17: tmp_3_i2 [1/4] 5.70ns
+:9  %tmp_3_i2 = fmul float %x_in, %p_read_1
+
+
+ <State 18>: 7.26ns
+ST_18: w_out_1 [5/5] 7.26ns
+:7  %w_out_1 = fadd float %tmp_i1, %tmp_3_i1
+
+ST_18: x_out [5/5] 7.26ns
+:10  %x_out = fadd float %tmp_i2, %tmp_3_i2
+
+
+ <State 19>: 7.26ns
+ST_19: w_out_1 [4/5] 7.26ns
+:7  %w_out_1 = fadd float %tmp_i1, %tmp_3_i1
+
+ST_19: x_out [4/5] 7.26ns
+:10  %x_out = fadd float %tmp_i2, %tmp_3_i2
+
+
+ <State 20>: 7.26ns
+ST_20: w_out_1 [3/5] 7.26ns
+:7  %w_out_1 = fadd float %tmp_i1, %tmp_3_i1
+
+ST_20: x_out [3/5] 7.26ns
+:10  %x_out = fadd float %tmp_i2, %tmp_3_i2
+
+
+ <State 21>: 7.26ns
+ST_21: w_out_1 [2/5] 7.26ns
+:7  %w_out_1 = fadd float %tmp_i1, %tmp_3_i1
+
+ST_21: x_out [2/5] 7.26ns
+:10  %x_out = fadd float %tmp_i2, %tmp_3_i2
+
+
+ <State 22>: 7.26ns
+ST_22: w_out_1 [1/5] 7.26ns
+:7  %w_out_1 = fadd float %tmp_i1, %tmp_3_i1
+
+ST_22: x_out [1/5] 7.26ns
+:10  %x_out = fadd float %tmp_i2, %tmp_3_i2
+
+
+ <State 23>: 2.71ns
+ST_23: stg_128 [1/1] 2.71ns
+:11  store float %w_out_1, float* %s_row_temp_0_addr, align 4
+
+ST_23: stg_129 [1/1] 2.71ns
+:12  store float %x_out, float* %s_row_temp_1_addr, align 4
+
+ST_23: stg_130 [1/1] 0.00ns
+:13  br label %._crit_edge3
+
+ST_23: stg_131 [1/1] 0.00ns
+._crit_edge3:0  br label %.preheader
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

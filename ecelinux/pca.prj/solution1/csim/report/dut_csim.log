@@ -1,13 +1,18 @@
 make[1]: Entering directory `/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
    Compiling ../../../../pca_test.cpp in release mode
+   Compiling ../../../../dut.cpp in release mode
+   Compiling ../../../../pca.cpp in release mode
+   Generating csim.exe
 make[1]: Leaving directory `/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
-../../../../pca_test.cpp: In function ‘void run_pca(int8_t)’:
-../../../../pca_test.cpp:82:23: error: invalid types ‘int8_t {aka signed char}[const int]’ for array subscript
-../../../../pca_test.cpp:85:3: error: ‘PCA’ was not declared in this scope
-../../../../pca_test.cpp:85:7: error: expected ‘;’ before ‘pca’
-../../../../pca_test.cpp:93:3: error: ‘pca’ was not declared in this scope
-../../../../pca_test.cpp: In function ‘int main()’:
-../../../../pca_test.cpp:145:11: error: too few arguments to function ‘void run_pca(int8_t)’
-../../../../pca_test.cpp:81:6: note: declared here
-make[1]: *** [obj/pca_test.o] Error 1
-CRITICAL WARNING: [SIM 1] 'csim_design' failed: compilation error(s).
+calculating norm...
+calculating cov...
+calculating svd...
+ranking...
+back projecting...
+transfering output...
+writing files...
+write y
+write tsf
+write mean
+pca                 :      1 calls; 194028.031 msecs total time
+INFO: [SIM 1] CSim done with 0 errors.

@@ -1,0 +1,208 @@
+
+
+================================================================
+== Vivado HLS Report for 'dut_update_off_diag_s'
+================================================================
+* Date:           Tue Nov 15 03:39:07 2022
+
+* Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
+* Project:        pca.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.41|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+-------+------+-------+---------+
+    |    Latency   |   Interval   | Pipeline|
+    |  min |  max  |  min |  max  |   Type  |
+    +------+-------+------+-------+---------+
+    |  3138|  17250|  3138|  17250|   none  |
+    +------+-------+------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+------+------+----------+-----------+-----------+------+----------+
+        |             |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+------+------+----------+-----------+-----------+------+----------+
+        |- off_col_s  |  1568|  8624|  2 ~ 11  |          -|          -|   784|    no    |
+        |- off_row_s  |  1568|  8624|  2 ~ 11  |          -|          -|   784|    no    |
+        +-------------+------+------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|     74|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|     16|     982|   2064|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    337|
+|Register         |        -|      -|     297|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|     16|    1279|   2475|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      7|       1|      4|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------+----------------------------------+---------+-------+-----+-----+
+    |               Instance              |              Module              | BRAM_18K| DSP48E|  FF | LUT |
+    +-------------------------------------+----------------------------------+---------+-------+-----+-----+
+    |dut_fadd_32ns_32ns_32_5_full_dsp_U1  |dut_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|  205|  390|
+    |dut_fadd_32ns_32ns_32_5_full_dsp_U2  |dut_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|  205|  390|
+    |dut_fmul_32ns_32ns_32_4_max_dsp_U3   |dut_fmul_32ns_32ns_32_4_max_dsp   |        0|      3|  143|  321|
+    |dut_fmul_32ns_32ns_32_4_max_dsp_U4   |dut_fmul_32ns_32ns_32_4_max_dsp   |        0|      3|  143|  321|
+    |dut_fmul_32ns_32ns_32_4_max_dsp_U5   |dut_fmul_32ns_32ns_32_4_max_dsp   |        0|      3|  143|  321|
+    |dut_fmul_32ns_32ns_32_4_max_dsp_U6   |dut_fmul_32ns_32ns_32_4_max_dsp   |        0|      3|  143|  321|
+    +-------------------------------------+----------------------------------+---------+-------+-----+-----+
+    |Total                                |                                  |        0|     16|  982| 2064|
+    +-------------------------------------+----------------------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |off_col_1_fu_254_p2  |     +    |      0|  0|  10|          10|           1|
+    |off_row_1_fu_292_p2  |     +    |      0|  0|  10|          10|           1|
+    |exitcond1_fu_248_p2  |   icmp   |      0|  0|   4|          10|           9|
+    |exitcond_fu_286_p2   |   icmp   |      0|  0|   4|          10|           9|
+    |tmp_5_fu_265_p2      |   icmp   |      0|  0|  11|          32|          32|
+    |tmp_7_fu_298_p2      |   icmp   |      0|  0|  11|          32|          32|
+    |tmp_8_fu_303_p2      |   icmp   |      0|  0|  11|          32|          32|
+    |tmp_fu_260_p2        |   icmp   |      0|  0|  11|          32|          32|
+    |or_cond2_fu_308_p2   |    or    |      0|  0|   1|           1|           1|
+    |or_cond_fu_270_p2    |    or    |      0|  0|   1|           1|           1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      0|  0|  74|         170|         150|
+    +---------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |  21|         24|    1|         24|
+    |grp_fu_188_p0          |  32|          3|   32|         96|
+    |grp_fu_188_p1          |  32|          3|   32|         96|
+    |grp_fu_193_p0          |  32|          3|   32|         96|
+    |grp_fu_193_p1          |  32|          3|   32|         96|
+    |grp_fu_198_p0          |  32|          3|   32|         96|
+    |grp_fu_198_p1          |  32|          3|   32|         96|
+    |grp_fu_203_p0          |  32|          3|   32|         96|
+    |grp_fu_203_p1          |  32|          3|   32|         96|
+    |off_col_reg_158        |  10|          2|   10|         20|
+    |off_row_reg_169        |  10|          2|   10|         20|
+    |s_col_temp_0_address0  |  10|          3|   10|         30|
+    |s_col_temp_1_address0  |  10|          3|   10|         30|
+    |s_row_temp_0_address0  |  10|          3|   10|         30|
+    |s_row_temp_1_address0  |  10|          3|   10|         30|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 337|         64|  317|        952|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------+----+----+-----+-----------+
+    |            Name           | FF | LUT| Bits| Const Bits|
+    +---------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                  |  23|   0|   23|          0|
+    |off_col_1_reg_375          |  10|   0|   10|          0|
+    |off_col_reg_158            |  10|   0|   10|          0|
+    |off_row_1_reg_409          |  10|   0|   10|          0|
+    |off_row_reg_169            |  10|   0|   10|          0|
+    |or_cond2_reg_414           |   1|   0|    1|          0|
+    |or_cond_reg_380            |   1|   0|    1|          0|
+    |reg_212                    |  32|   0|   32|          0|
+    |reg_217                    |  32|   0|   32|          0|
+    |reg_222                    |  32|   0|   32|          0|
+    |reg_227                    |  32|   0|   32|          0|
+    |reg_232                    |  32|   0|   32|          0|
+    |reg_238                    |  32|   0|   32|          0|
+    |s_col_temp_0_addr_reg_384  |  10|   0|   10|          0|
+    |s_col_temp_1_addr_reg_389  |  10|   0|   10|          0|
+    |s_row_temp_0_addr_reg_418  |  10|   0|   10|          0|
+    |s_row_temp_1_addr_reg_423  |  10|   0|   10|          0|
+    +---------------------------+----+----+-----+-----------+
+    |Total                      | 297|   0|  297|          0|
+    +---------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+-----------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-----------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                 |  in |    1| ap_ctrl_hs | dut_update_off_diag_s | return value |
+|ap_rst                 |  in |    1| ap_ctrl_hs | dut_update_off_diag_s | return value |
+|ap_start               |  in |    1| ap_ctrl_hs | dut_update_off_diag_s | return value |
+|ap_done                | out |    1| ap_ctrl_hs | dut_update_off_diag_s | return value |
+|ap_idle                | out |    1| ap_ctrl_hs | dut_update_off_diag_s | return value |
+|ap_ready               | out |    1| ap_ctrl_hs | dut_update_off_diag_s | return value |
+|top_left               |  in |   32|   ap_none  |        top_left       |    scalar    |
+|bottom_right           |  in |   32|   ap_none  |      bottom_right     |    scalar    |
+|p_read                 |  in |   32|   ap_none  |         p_read        |    scalar    |
+|p_read1                |  in |   32|   ap_none  |        p_read1        |    scalar    |
+|p_read2                |  in |   32|   ap_none  |        p_read2        |    scalar    |
+|p_read3                |  in |   32|   ap_none  |        p_read3        |    scalar    |
+|p_read4                |  in |   32|   ap_none  |        p_read4        |    scalar    |
+|p_read5                |  in |   32|   ap_none  |        p_read5        |    scalar    |
+|p_read6                |  in |   32|   ap_none  |        p_read6        |    scalar    |
+|p_read7                |  in |   32|   ap_none  |        p_read7        |    scalar    |
+|s_col_temp_0_address0  | out |   10|  ap_memory |      s_col_temp_0     |     array    |
+|s_col_temp_0_ce0       | out |    1|  ap_memory |      s_col_temp_0     |     array    |
+|s_col_temp_0_we0       | out |    1|  ap_memory |      s_col_temp_0     |     array    |
+|s_col_temp_0_d0        | out |   32|  ap_memory |      s_col_temp_0     |     array    |
+|s_col_temp_0_q0        |  in |   32|  ap_memory |      s_col_temp_0     |     array    |
+|s_col_temp_1_address0  | out |   10|  ap_memory |      s_col_temp_1     |     array    |
+|s_col_temp_1_ce0       | out |    1|  ap_memory |      s_col_temp_1     |     array    |
+|s_col_temp_1_we0       | out |    1|  ap_memory |      s_col_temp_1     |     array    |
+|s_col_temp_1_d0        | out |   32|  ap_memory |      s_col_temp_1     |     array    |
+|s_col_temp_1_q0        |  in |   32|  ap_memory |      s_col_temp_1     |     array    |
+|s_row_temp_0_address0  | out |   10|  ap_memory |      s_row_temp_0     |     array    |
+|s_row_temp_0_ce0       | out |    1|  ap_memory |      s_row_temp_0     |     array    |
+|s_row_temp_0_we0       | out |    1|  ap_memory |      s_row_temp_0     |     array    |
+|s_row_temp_0_d0        | out |   32|  ap_memory |      s_row_temp_0     |     array    |
+|s_row_temp_0_q0        |  in |   32|  ap_memory |      s_row_temp_0     |     array    |
+|s_row_temp_1_address0  | out |   10|  ap_memory |      s_row_temp_1     |     array    |
+|s_row_temp_1_ce0       | out |    1|  ap_memory |      s_row_temp_1     |     array    |
+|s_row_temp_1_we0       | out |    1|  ap_memory |      s_row_temp_1     |     array    |
+|s_row_temp_1_d0        | out |   32|  ap_memory |      s_row_temp_1     |     array    |
+|s_row_temp_1_q0        |  in |   32|  ap_memory |      s_row_temp_1     |     array    |
++-----------------------+-----+-----+------------+-----------------------+--------------+
+
