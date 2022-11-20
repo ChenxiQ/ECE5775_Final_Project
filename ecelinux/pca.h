@@ -74,4 +74,6 @@ struct MY_CONFIG_MULT: hls::matrix_multiply_traits<hls::NoTranspose,
  static const int UNROLL_FACTOR = 1;
 };
 
+void norm_calc(float vec[IMG_NUM]);
+
 #endif

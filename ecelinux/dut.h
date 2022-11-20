@@ -7,7 +7,6 @@
 #define DUT
 #include "typedefs.h"
 #include <hls_stream.h>
-#include "pca.h"
 
 // Top function for synthesis
 void dut (

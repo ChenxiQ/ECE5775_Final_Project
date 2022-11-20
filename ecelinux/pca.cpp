@@ -9,6 +9,7 @@
 #include "hls_linear_algebra.h"
 #include "pca.h"
 #include <fstream>
+#include "dut.h"
 using namespace std;
 
 
@@ -54,14 +55,18 @@ void PCA::normalize(fix32_t X[VEC_SIZ][IMG_NUM],fix32_t mean[VEC_SIZ]){
   
   
   //center x so that each x has a zero mean
+  pca_in->write(3);
   for(int j = 0; j < vec_size; j++){
-    fix32_t sum = 0;
     for(int i = 0; i < vec_num; i++){
-      sum += X[j][i];
+      pca_in->write(X[j][i]);
     }
-    mean[j] = sum/(fix32_t)vec_num;
+  }
+  for(int j = 0; j < vec_size; j++){
+    dut(*pca_in, *pca_out);
+  }
+  for(int j = 0; j < vec_size; j++){
     for(int i = 0; i < vec_num; i++){
-      X[j][i] -= mean[j];
+      X[j][i] = pca_out->read();
     }
   }
   

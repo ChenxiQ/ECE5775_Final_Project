@@ -9,6 +9,7 @@
 #include "timer.h"
 #include "hls_linear_algebra.h"
 #include "typedefs.h"
+#include <cstdlib>
 
 using namespace std;
 
@@ -20,27 +21,39 @@ using namespace std;
 // Helper function for reading images and labels
 //------------------------------------------------------------------------
 
-void read_test_images(uint8_t test_images[IMG_NUM][VEC_SIZ]) {
+void read_cov_mat(fix32_t XXT[VEC_SIZ][VEC_SIZ]) {
   std::ifstream infile("data/image.dat");
   if (infile.is_open()) {
-    for (int index = 0; index < IMG_NUM; index++) {
-      for (int pixel = 0; pixel < VEC_SIZ; pixel++) {
-        int i;
-        infile >> i;
-        test_images[index][pixel] = i;
+    for (int i = 0; i < VEC_SIZ; i++) {
+      for (int j = 0; j < VEC_SIZ; j++) {
+        fix32_t p;
+        infile >> p;
+        XXT[index][pixel] = p;
       }
     }
     infile.close();
   }
 }
 
-void read_test_labels(uint8_t test_labels[IMG_NUM]) {
-  std::ifstream infile("data/label.dat");
-  if (infile.is_open()) {
-    for (int index = 0; index < IMG_NUM; index++) {
-      infile >> test_labels[index];
+void read_test_mat(float S_test[VEC_SIZ][VEC_SIZ],float U_test[VEC_SIZ][VEC_SIZ]){
+  std::ifstream infile_s("data/S_test.dat");
+  if (infile_s.is_open()) {
+    for (int i = 0; i < VEC_SIZ; i++) {
+      for (int j = 0; j < VEC_SIZ; j++) {
+        infile_s >> S_test[i][j];
+      }
     }
-    infile.close();
+    infile_s.close();
+  }
+
+  std::ifstream infile_u("data/U_test.dat");
+  if (infile_u.is_open()) {
+    for (int i = 0; i < VEC_SIZ; i++) {
+      for (int j = 0; j < VEC_SIZ; j++) {
+        infile_u >> U_test[i][j];
+      }
+    }
+    infile_u.close();
   }
 }
 
@@ -128,63 +141,51 @@ int main(){
   hls::stream<float> pca_in("pca in");
   hls::stream<float> pca_out("pca out");
   
-  uint8_t test_images[IMG_NUM][VEC_SIZ];
-  uint8_t test_labels[IMG_NUM];
+
+  fix32_t S_test[IMG_NUM];
+  fix32_t U_test[IMG_NUM];
   
+  fix32_t XXT[VEC_SIZ][VEC_SIZ];
+  fix32_t S[VEC_SIZ][VEC_SIZ];
+  fix32_t U[VEC_SIZ][VEC_SIZ];
+  fix32_t V[VEC_SIZ][VEC_SIZ];
+
   // read test images and labels
-  read_test_images(test_images);
-  read_test_labels(test_labels);
+  read_cov_mat(XXT);
+  read_test_mat(S_test,U_test);
   bit32_t test_image;
   float correct = 0.0;
   
   // Timer
-  Timer timer("pca");
+  Timer timer("svd");
   timer.start();
   
-  int counter = 0;
-  /*
-  // pack images to 32-bit and transmit to dut function 
-  for (int test = 0; test < IMG_NUM; test++) {
-    for (int i = 0; i < 28 * 28 / 4; i++) {
-      for (int j = 0; j < 4; j++) {
-        test_image(j*8+7,j*8) = test_images[test][i*4+j];
+  for(int i=0; i<VEC_SIZ; i++){
+    for(int j=0; j<VEC_SIZ; j++){
+      pca_in.write(XXT[i][j]);
+    }
+  }
+
+  dut(pca_in, pca_out);
+
+  for(int i=0; i<VEC_SIZ; i++){
+    for(int j=0; j<VEC_SIZ; j++){
+      S[i][j] = pca_out.read();
+      if (abs(abs(S[i][j]) - abs(S_test[i][j])) > 1e-1){
+        print("Error found in S: %f, %f", S[i][j], S_test[i][j]);
       }
-      pca_in.write(test_image);
-      counter++;
-      //cout<<"test "<<counter<<endl;
-    }
-    // perform prediction
-  
-    //cout<<"dut run "<<counter<<endl;
-    // check results
-    // if (pca_out.read() == test_labels[test]) correct += 1.0;
-  }*/
-  //dut(pca_in, pca_out);
-  run_pca(test_images,pca_in, pca_out);
-
-  /*
-  cout<<"read fifo"<< endl;
-  float Y[K][IMG_NUM];
-  float mean[VEC_SIZ];
-  float tsf_mat[K][VEC_SIZ];
-
-  for (int i = 0; i < K; i++) {
-    for (int test = 0; test < IMG_NUM; test++) {
-      Y[i][test] = pca_out.read();
     }
   }
 
-  for (int i=0;i<K;i++){
-    for (int j=0;j<VEC_SIZ;j++){
-      tsf_mat[i][j] = pca_out.read();
+  for(int i=0; i<VEC_SIZ; i++){
+    for(int j=0; j<VEC_SIZ; j++){
+      U[i][j] = pca_out.read();
+      if (abs(abs(U[i][j]) - abs(U_test[i][j])) > 1e-1){
+        print("Error found in U: %f, %f", U[i][j], U_test[i][j]);
+      }
     }
   }
 
-  for (int i=0;i<VEC_SIZ;i++){
-    mean[i] = pca_out.read();
-  }
-  write_test_result(Y,tsf_mat,mean);
-  */
   timer.stop();
 
   // Calculate accuracy
