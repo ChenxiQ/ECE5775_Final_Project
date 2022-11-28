@@ -5,12 +5,11 @@
                 <option name="off" value="" positionalBoolean="1"/>
             </pragma>
         </directive>
-        <directive functionName="svd_pairs" label="" functionLabel="">
-            <pragma name="ALLOCATION">
-                <option name="instances" value="vm2x1_base" positionalBoolean="4"/>
-                <option name="limit" value="1"/>
-                <option name="function" value="" positionalBoolean="type"/>
-            </pragma>
+        <directive functionName="svd_alt" label="svd_calc_1" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_calc_2" functionLabel="">
+            <pragma name="UNROLL"/>
         </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>

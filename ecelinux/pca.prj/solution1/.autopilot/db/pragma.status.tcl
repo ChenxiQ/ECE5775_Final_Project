@@ -1,4 +1,3 @@
 lappend pragmaStatus0 {pragma "INLINE" source "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp" location "vm2x1_base" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
-lappend pragmaStatus1 {pragma "ALLOCATION" source "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp" location "svd_pairs" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
-lappend pragmaStatus0 {pragma "INLINE" source "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp" location "vm2x1_base" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
-lappend pragmaStatus1 {pragma "ALLOCATION" source "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp" location "svd_pairs" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "UNROLL" source "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp" location "svd_alt/svd_calc_1" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus2 {pragma "UNROLL" source "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp" location "svd_alt/svd_calc_2" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}

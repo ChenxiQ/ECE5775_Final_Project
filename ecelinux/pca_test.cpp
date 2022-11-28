@@ -5,13 +5,15 @@
 
 #include <iostream>
 #include <fstream>
-#include "pca.h"
+#include "dut.h"
 #include "timer.h"
 #include "hls_linear_algebra.h"
 #include "typedefs.h"
 #include <cstdlib>
+#include <algorithm>
 
 using namespace std;
+
 
 // Number of test instances
 //const int IMG_NUM = 100;
@@ -21,34 +23,92 @@ using namespace std;
 // Helper function for reading images and labels
 //------------------------------------------------------------------------
 
+// A utility function to swap two elements
+void swap(int* a, int* b) {
+  int t = *a;
+  *a = *b;
+  *b = t;
+}
+
+int partition(int arr[], int l, int h, fix32_t S[VEC_SIZ][VEC_SIZ]) {
+    int x = arr[h];
+    int i = (l - 1);
+ 
+    for (int j = l; j <= h - 1; j++) {
+      if (S[arr[j]][arr[j]] > S[x][x]) {
+        i++;
+        swap(&arr[i], &arr[j]);
+      }
+    }
+    swap(&arr[i + 1], &arr[h]);
+    return i + 1;
+}
+
+void quickSort(int arr[], int l, int h, fix32_t S[VEC_SIZ][VEC_SIZ]) {
+  // Create an auxiliary stack
+  int stack[h - l + 1];
+
+  // initialize top of stack
+  int top = -1;
+
+  // push initial values of l and h to stack
+  stack[++top] = l;
+  stack[++top] = h;
+
+  // Keep popping from stack while is not empty
+  while (top >= 0) {
+    // Pop h and l
+    h = stack[top--];
+    l = stack[top--];
+
+    // Set pivot element at its correct position
+    // in sorted array
+    int p = partition(arr, l, h, S);
+
+    // If there are elements on left side of pivot,
+    // then push left side to stack
+    if (p - 1 > l) {
+      stack[++top] = l;
+      stack[++top] = p - 1;
+    }
+
+    // If there are elements on right side of pivot,
+    // then push right side to stack
+    if (p + 1 < h) {
+      stack[++top] = p + 1;
+      stack[++top] = h;
+    }
+  }
+}
+
 void read_cov_mat(fix32_t XXT[VEC_SIZ][VEC_SIZ]) {
-  std::ifstream infile("data/image.dat");
+  std::ifstream infile("data/xxt.dat");
   if (infile.is_open()) {
     for (int i = 0; i < VEC_SIZ; i++) {
       for (int j = 0; j < VEC_SIZ; j++) {
         fix32_t p;
         infile >> p;
-        XXT[index][pixel] = p;
+        XXT[i][j] = p;
       }
     }
     infile.close();
   }
 }
 
-void read_test_mat(float S_test[VEC_SIZ][VEC_SIZ],float U_test[VEC_SIZ][VEC_SIZ]){
+void read_test_mat(float S_test[K],float U_test[K][VEC_SIZ]){
   std::ifstream infile_s("data/S_test.dat");
   if (infile_s.is_open()) {
-    for (int i = 0; i < VEC_SIZ; i++) {
-      for (int j = 0; j < VEC_SIZ; j++) {
-        infile_s >> S_test[i][j];
-      }
+    for (int i = 0; i < K; i++) {
+  
+      infile_s >> S_test[i];
+      //cout << S_test[i] << endl;
     }
     infile_s.close();
   }
 
   std::ifstream infile_u("data/U_test.dat");
   if (infile_u.is_open()) {
-    for (int i = 0; i < VEC_SIZ; i++) {
+    for (int i = 0; i < K; i++) {
       for (int j = 0; j < VEC_SIZ; j++) {
         infile_u >> U_test[i][j];
       }
@@ -92,48 +152,9 @@ void write_test_result(float Y[K][IMG_NUM], float tsf_mat[K][VEC_SIZ], float mea
   
 }
 
-void run_pca(uint8_t test_imgs[IMG_NUM][VEC_SIZ],   
-hls::stream<float> & pca_in, hls::stream<float> & pca_out){
-  fix32_t X[VEC_SIZ][IMG_NUM];
-  fix32_t Y[K][IMG_NUM];
-  fix32_t tsf_mat[K][VEC_SIZ];
-  PCA pca(VEC_SIZ, IMG_NUM, K, pca_in, pca_out);
-  fix32_t S[VEC_SIZ][VEC_SIZ];
-  fix32_t U[VEC_SIZ][VEC_SIZ];
-  fix32_t V[VEC_SIZ][VEC_SIZ];
-  fix32_t XXT[VEC_SIZ][VEC_SIZ];
-  fix32_t mean[VEC_SIZ];
-
-  for(int i=0;i<IMG_NUM;i++){
-    for(int j=0;j<VEC_SIZ;j++){
-      X[j][i] = (float)test_imgs[i][j];
-    }
-  }
-  for (int i = 0; i < VEC_SIZ; i++) {
-    for (int j = 0; j < VEC_SIZ; j++) {
-      S[i][j] = 0;
-      U[i][j] = 0;
-      V[i][j] = 0;
-      XXT[i][j] = 0;
-    }
-  }
-  cout << "calculating norm..." << endl;
-  pca.normalize(X, mean);
-  cout << "calculating cov..." << endl;
-  pca.cov(X, XXT);
-  cout << "calculating svd..." << endl;
-  pca.apply_svd(XXT,S,U,V);
-  cout << "ranking..." << endl;
-  pca.rank(tsf_mat, S, U);
-  cout << "back projecting..." << endl;
-  pca.back_pjt(tsf_mat, X, Y);
-  cout << "transfering output..." << endl;
-  cout<<"writing files..."<<endl;
-  write_test_result(Y,tsf_mat,mean);
-}
 
 //------------------------------------------------------------------------
-// pca testbench
+// svd testbench
 //------------------------------------------------------------------------
 
 int main(){
@@ -142,8 +163,8 @@ int main(){
   hls::stream<float> pca_out("pca out");
   
 
-  fix32_t S_test[IMG_NUM];
-  fix32_t U_test[IMG_NUM];
+  fix32_t S_test[K];
+  fix32_t U_test[K][VEC_SIZ];
   
   fix32_t XXT[VEC_SIZ][VEC_SIZ];
   fix32_t S[VEC_SIZ][VEC_SIZ];
@@ -171,25 +192,45 @@ int main(){
   for(int i=0; i<VEC_SIZ; i++){
     for(int j=0; j<VEC_SIZ; j++){
       S[i][j] = pca_out.read();
-      if (abs(abs(S[i][j]) - abs(S_test[i][j])) > 1e-1){
-        print("Error found in S: %f, %f", S[i][j], S_test[i][j]);
-      }
+      //if (abs(abs(S[i][j]) - abs(S_test[i][j])) > 1e-1)
+        //print("Error found in S: %f, %f", S[i][j], S_test[i][j]);
     }
   }
 
   for(int i=0; i<VEC_SIZ; i++){
     for(int j=0; j<VEC_SIZ; j++){
       U[i][j] = pca_out.read();
-      if (abs(abs(U[i][j]) - abs(U_test[i][j])) > 1e-1){
-        print("Error found in U: %f, %f", U[i][j], U_test[i][j]);
-      }
+      //if (abs(abs(U[i][j]) - abs(U_test[i][j])) > 1e-1)
+        //print("Error found in U: %f, %f", U[i][j], U_test[i][j]);
     }
+  }
+
+  int sorted_idx[VEC_SIZ];
+  for (int i=0;i<VEC_SIZ;i++){
+    sorted_idx[i] = i;
+  }
+
+  quickSort(sorted_idx, 0, VEC_SIZ-1, S);
+  
+  std::ofstream fs("data/s.dat", ios_base::out);
+  for(int i=0;i<VEC_SIZ;i++){
+    for(int j=0;j<VEC_SIZ;j++){
+      fs << S[i][j] << "\t";
+    }
+    fs << endl;
+  }
+  fs.close();
+  
+
+  int counter=0;
+  for(int i=0;i<10;i++){
+    if (abs((S[sorted_idx[i]][sorted_idx[i]] - S_test[i])/(S[sorted_idx[i]][sorted_idx[i]]))>0.01) counter ++;
   }
 
   timer.stop();
 
   // Calculate accuracy
-  // std::cout << "Accuracy: " << correct/IMG_NUM << std::endl;
+  std::cout << "Number of Eigenvalues with error larger than 1%: " << counter << std::endl;
   
   return 0;
 }

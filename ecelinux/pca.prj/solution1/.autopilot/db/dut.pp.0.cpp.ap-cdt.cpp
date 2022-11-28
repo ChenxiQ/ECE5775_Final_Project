@@ -209,137 +209,13 @@ extern "C" {
 //==========================================================================
 // @brief: A convolution kernel for CNN on digit recognition
 #pragma empty_line
+//#include "pca.h"
 #pragma empty_line
-#pragma line 1 "./pca.h" 1
-//===========================================================================
-// pca.h
-//===========================================================================
-// @brief: TODO
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3
+// File based streams -*- C++ -*-
 #pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "./typedefs.h" 1
-//===========================================================================
-// typedefs.h
-//===========================================================================
-// @brief: This header defines the shorthand of several ap_uint data types.
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h" 1
-// -*- c++ -*-
-/*
-#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
-#-
-#-  This file contains confidential and proprietary information
-#-  of Xilinx, Inc. and is protected under U.S. and
-#-  international copyright and other intellectual property
-#-  laws.
-#-
-#-  DISCLAIMER
-#-  This disclaimer is not a license and does not grant any
-#-  rights to the materials distributed herewith. Except as
-#-  otherwise provided in a valid license issued to you by
-#-  Xilinx, and to the maximum extent permitted by applicable
-#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-#-  (2) Xilinx shall not be liable (whether in contract or tort,
-#-  including negligence, or under any other theory of
-#-  liability) for any loss or damage of any kind or nature
-#-  related to, arising under or in connection with these
-#-  materials, including for any direct, or any indirect,
-#-  special, incidental, or consequential loss or damage
-#-  (including loss of data, profits, goodwill, or any type of
-#-  loss or damage suffered as a result of any action brought
-#-  by a third party) even if such damage or loss was
-#-  reasonably foreseeable or Xilinx had been advised of the
-#-  possibility of the same.
-#-
-#-  CRITICAL APPLICATIONS
-#-  Xilinx products are not designed or intended to be fail-
-#-  safe, or for use in any application requiring fail-safe
-#-  performance, such as life-support or safety devices or
-#-  systems, Class III medical devices, nuclear facilities,
-#-  applications related to the deployment of airbags, or any
-#-  other applications that could lead to death, personal
-#-  injury, or severe property or environmental damage
-#-  (individually and collectively, "Critical
-#-  Applications"). Customer assumes the sole risk and
-#-  liability of any use of Xilinx products in Critical
-#-  Applications, subject only to applicable laws and
-#-  regulations governing limitations on product liability.
-#-
-#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-#-  PART OF THIS FILE AT ALL TIMES. 
-#- ************************************************************************
-#pragma empty_line
- *
- */
-#pragma line 60 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h"
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h" 1
-/* -*- c++ -*-*/
-/*
-#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
-#-
-#-  This file contains confidential and proprietary information
-#-  of Xilinx, Inc. and is protected under U.S. and
-#-  international copyright and other intellectual property
-#-  laws.
-#-
-#-  DISCLAIMER
-#-  This disclaimer is not a license and does not grant any
-#-  rights to the materials distributed herewith. Except as
-#-  otherwise provided in a valid license issued to you by
-#-  Xilinx, and to the maximum extent permitted by applicable
-#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-#-  (2) Xilinx shall not be liable (whether in contract or tort,
-#-  including negligence, or under any other theory of
-#-  liability) for any loss or damage of any kind or nature
-#-  related to, arising under or in connection with these
-#-  materials, including for any direct, or any indirect,
-#-  special, incidental, or consequential loss or damage
-#-  (including loss of data, profits, goodwill, or any type of
-#-  loss or damage suffered as a result of any action brought
-#-  by a third party) even if such damage or loss was
-#-  reasonably foreseeable or Xilinx had been advised of the
-#-  possibility of the same.
-#-
-#-  CRITICAL APPLICATIONS
-#-  Xilinx products are not designed or intended to be fail-
-#-  safe, or for use in any application requiring fail-safe
-#-  performance, such as life-support or safety devices or
-#-  systems, Class III medical devices, nuclear facilities,
-#-  applications related to the deployment of airbags, or any
-#-  other applications that could lead to death, personal
-#-  injury, or severe property or environmental damage
-#-  (individually and collectively, "Critical
-#-  Applications"). Customer assumes the sole risk and
-#-  liability of any use of Xilinx products in Critical
-#-  Applications, subject only to applicable laws and
-#-  regulations governing limitations on product liability.
-#-
-#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-#-  PART OF THIS FILE AT ALL TIMES. 
-#- ************************************************************************
-#pragma empty_line
- *
- */
-#pragma line 68 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h"
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3
-// Standard iostream objects -*- C++ -*-
-#pragma empty_line
-// Copyright (C) 1997, 1998, 1999, 2001, 2002, 2005, 2008, 2009, 2010
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010, 2011
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -362,19 +238,141 @@ extern "C" {
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 #pragma empty_line
-/** @file include/iostream
+/** @file include/fstream
  *  This is a Standard C++ Library header.
  */
 #pragma empty_line
 //
-// ISO C++ 14882: 27.3  Standard iostream objects
+// ISO C++ 14882: 27.8  File-based streams
 //
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma line 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
+#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+#pragma empty_line
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 1 3
+// Input streams -*- C++ -*-
+#pragma empty_line
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010, 2011
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+//
+// ISO C++ 14882: 27.6.1  Input streams
+//
+#pragma empty_line
+/** @file include/istream
+ *  This is a Standard C++ Library header.
+ */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+#pragma empty_line
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 1 3
+// Iostreams base classes -*- C++ -*-
+#pragma empty_line
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004,
+// 2005, 2006, 2007, 2009, 2010 Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+/** @file include/ios
+ *  This is a Standard C++ Library header.
+ */
+#pragma empty_line
+//
+// ISO C++ 14882: 27.4  Iostreams base classes
+//
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 3
+#pragma empty_line
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 1 3
+// Forwarding declarations -*- C++ -*-
+#pragma empty_line
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+/** @file include/iosfwd
+ *  This is a Standard C++ Library header.
+ */
+#pragma empty_line
+//
+// ISO C++ 14882: 27.2  Forward declarations
+//
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 3
 #pragma empty_line
 #pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 1 3
 // Predefined symbols and macros -*- C++ -*-
@@ -1997,130 +1995,7 @@ namespace std
 /* #undef _GLIBCXX_USE_SCHED_YIELD */
 #pragma empty_line
 /* Define if code specialized for wchar_t should be used. */
-#pragma line 39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 1 3
-// Output streams -*- C++ -*-
-#pragma empty_line
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-/** @file include/ostream
- *  This is a Standard C++ Library header.
- */
-#pragma empty_line
-//
-// ISO C++ 14882: 27.6.2  Output streams
-//
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 1 3
-// Iostreams base classes -*- C++ -*-
-#pragma empty_line
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004,
-// 2005, 2006, 2007, 2009, 2010 Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-/** @file include/ios
- *  This is a Standard C++ Library header.
- */
-#pragma empty_line
-//
-// ISO C++ 14882: 27.4  Iostreams base classes
-//
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 3
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 1 3
-// Forwarding declarations -*- C++ -*-
-#pragma empty_line
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-/** @file include/iosfwd
- *  This is a Standard C++ Library header.
- */
-#pragma empty_line
-//
-// ISO C++ 14882: 27.2  Forward declarations
-//
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 3
-#pragma empty_line
-#pragma empty_line
+#pragma line 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd" 2 3
 #pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stringfwd.h" 1 3
 // String support -*- C++ -*-
 #pragma empty_line
@@ -27589,7 +27464,49 @@ namespace std __attribute__ ((__visibility__ ("default")))
 } // namespace std
 #pragma line 473 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 2 3
 #pragma line 45 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-#pragma line 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
+#pragma line 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 1 3
+// Output streams -*- C++ -*-
+#pragma empty_line
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010, 2011
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+/** @file include/ostream
+ *  This is a Standard C++ Library header.
+ */
+#pragma empty_line
+//
+// ISO C++ 14882: 27.6.2  Output streams
+//
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+#pragma empty_line
+#pragma empty_line
 #pragma empty_line
 #pragma empty_line
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -28529,50 +28446,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 #pragma empty_line
 } // namespace std
 #pragma line 588 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
-#pragma line 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 1 3
-// Input streams -*- C++ -*-
-#pragma empty_line
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-//
-// ISO C++ 14882: 27.6.1  Input streams
-//
-#pragma empty_line
-/** @file include/istream
- *  This is a Standard C++ Library header.
- */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
+#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
 #pragma empty_line
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -30467,7 +30341,3757 @@ namespace std __attribute__ ((__visibility__ ("default")))
 #pragma empty_line
 } // namespace std
 #pragma line 859 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
-#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
+#pragma line 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+#pragma empty_line
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 1 3
+// Locale support (codecvt) -*- C++ -*-
+#pragma empty_line
+// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008,
+// 2009, 2010, 2011  Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+/** @file bits/codecvt.h
+ *  This is an internal header file, included by other library headers.
+ *  Do not attempt to use it directly. @headername{locale}
+ */
+#pragma empty_line
+//
+// ISO C++ 14882: 22.2.1.5 Template class codecvt
+//
+#pragma empty_line
+// Written by Benjamin Kosnik <bkoz@redhat.com>
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+#pragma empty_line
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+#pragma empty_line
+#pragma empty_line
+  /// Empty base class for codecvt facet [22.2.1.5].
+  class codecvt_base
+  {
+  public:
+    enum result
+    {
+      ok,
+      partial,
+      error,
+      noconv
+    };
+  };
+#pragma empty_line
+  /**
+   *  @brief  Common base for codecvt functions.
+   *
+   *  This template class provides implementations of the public functions
+   *  that forward to the protected virtual functions.
+   *
+   *  This template also provides abstract stubs for the protected virtual
+   *  functions.
+  */
+  template<typename _InternT, typename _ExternT, typename _StateT>
+    class __codecvt_abstract_base
+    : public locale::facet, public codecvt_base
+    {
+    public:
+      // Types:
+      typedef codecvt_base::result result;
+      typedef _InternT intern_type;
+      typedef _ExternT extern_type;
+      typedef _StateT state_type;
+#pragma empty_line
+      // 22.2.1.5.1 codecvt members
+      /**
+       *  @brief  Convert from internal to external character set.
+       *
+       *  Converts input string of intern_type to output string of
+       *  extern_type.  This is analogous to wcsrtombs.  It does this by
+       *  calling codecvt::do_out.
+       *
+       *  The source and destination character sets are determined by the
+       *  facet's locale, internal and external types.
+       *
+       *  The characters in [from,from_end) are converted and written to
+       *  [to,to_end).  from_next and to_next are set to point to the
+       *  character following the last successfully converted character,
+       *  respectively.  If the result needed no conversion, from_next and
+       *  to_next are not affected.
+       *
+       *  The @a state argument should be initialized if the input is at the
+       *  beginning and carried from a previous call if continuing
+       *  conversion.  There are no guarantees about how @a state is used.
+       *
+       *  The result returned is a member of codecvt_base::result.  If
+       *  all the input is converted, returns codecvt_base::ok.  If no
+       *  conversion is necessary, returns codecvt_base::noconv.  If
+       *  the input ends early or there is insufficient space in the
+       *  output, returns codecvt_base::partial.  Otherwise the
+       *  conversion failed and codecvt_base::error is returned.
+       *
+       *  @param  state  Persistent conversion state data.
+       *  @param  from  Start of input.
+       *  @param  from_end  End of input.
+       *  @param  from_next  Returns start of unconverted data.
+       *  @param  to  Start of output buffer.
+       *  @param  to_end  End of output buffer.
+       *  @param  to_next  Returns start of unused output area.
+       *  @return  codecvt_base::result.
+      */
+      result
+      out(state_type& __state, const intern_type* __from,
+   const intern_type* __from_end, const intern_type*& __from_next,
+   extern_type* __to, extern_type* __to_end,
+   extern_type*& __to_next) const
+      {
+ return this->do_out(__state, __from, __from_end, __from_next,
+       __to, __to_end, __to_next);
+      }
+#pragma empty_line
+      /**
+       *  @brief  Reset conversion state.
+       *
+       *  Writes characters to output that would restore @a state to initial
+       *  conditions.  The idea is that if a partial conversion occurs, then
+       *  the converting the characters written by this function would leave
+       *  the state in initial conditions, rather than partial conversion
+       *  state.  It does this by calling codecvt::do_unshift().
+       *
+       *  For example, if 4 external characters always converted to 1 internal
+       *  character, and input to in() had 6 external characters with state
+       *  saved, this function would write two characters to the output and
+       *  set the state to initialized conditions.
+       *
+       *  The source and destination character sets are determined by the
+       *  facet's locale, internal and external types.
+       *
+       *  The result returned is a member of codecvt_base::result.  If the
+       *  state could be reset and data written, returns codecvt_base::ok.  If
+       *  no conversion is necessary, returns codecvt_base::noconv.  If the
+       *  output has insufficient space, returns codecvt_base::partial.
+       *  Otherwise the reset failed and codecvt_base::error is returned.
+       *
+       *  @param  state  Persistent conversion state data.
+       *  @param  to  Start of output buffer.
+       *  @param  to_end  End of output buffer.
+       *  @param  to_next  Returns start of unused output area.
+       *  @return  codecvt_base::result.
+      */
+      result
+      unshift(state_type& __state, extern_type* __to, extern_type* __to_end,
+       extern_type*& __to_next) const
+      { return this->do_unshift(__state, __to,__to_end,__to_next); }
+#pragma empty_line
+      /**
+       *  @brief  Convert from external to internal character set.
+       *
+       *  Converts input string of extern_type to output string of
+       *  intern_type.  This is analogous to mbsrtowcs.  It does this by
+       *  calling codecvt::do_in.
+       *
+       *  The source and destination character sets are determined by the
+       *  facet's locale, internal and external types.
+       *
+       *  The characters in [from,from_end) are converted and written to
+       *  [to,to_end).  from_next and to_next are set to point to the
+       *  character following the last successfully converted character,
+       *  respectively.  If the result needed no conversion, from_next and
+       *  to_next are not affected.
+       *
+       *  The @a state argument should be initialized if the input is at the
+       *  beginning and carried from a previous call if continuing
+       *  conversion.  There are no guarantees about how @a state is used.
+       *
+       *  The result returned is a member of codecvt_base::result.  If
+       *  all the input is converted, returns codecvt_base::ok.  If no
+       *  conversion is necessary, returns codecvt_base::noconv.  If
+       *  the input ends early or there is insufficient space in the
+       *  output, returns codecvt_base::partial.  Otherwise the
+       *  conversion failed and codecvt_base::error is returned.
+       *
+       *  @param  state  Persistent conversion state data.
+       *  @param  from  Start of input.
+       *  @param  from_end  End of input.
+       *  @param  from_next  Returns start of unconverted data.
+       *  @param  to  Start of output buffer.
+       *  @param  to_end  End of output buffer.
+       *  @param  to_next  Returns start of unused output area.
+       *  @return  codecvt_base::result.
+      */
+      result
+      in(state_type& __state, const extern_type* __from,
+  const extern_type* __from_end, const extern_type*& __from_next,
+  intern_type* __to, intern_type* __to_end,
+  intern_type*& __to_next) const
+      {
+ return this->do_in(__state, __from, __from_end, __from_next,
+      __to, __to_end, __to_next);
+      }
+#pragma empty_line
+      int
+      encoding() const throw()
+      { return this->do_encoding(); }
+#pragma empty_line
+      bool
+      always_noconv() const throw()
+      { return this->do_always_noconv(); }
+#pragma empty_line
+      int
+      length(state_type& __state, const extern_type* __from,
+      const extern_type* __end, size_t __max) const
+      { return this->do_length(__state, __from, __end, __max); }
+#pragma empty_line
+      int
+      max_length() const throw()
+      { return this->do_max_length(); }
+#pragma empty_line
+    protected:
+      explicit
+      __codecvt_abstract_base(size_t __refs = 0) : locale::facet(__refs) { }
+#pragma empty_line
+      virtual
+      ~__codecvt_abstract_base() { }
+#pragma empty_line
+      /**
+       *  @brief  Convert from internal to external character set.
+       *
+       *  Converts input string of intern_type to output string of
+       *  extern_type.  This function is a hook for derived classes to change
+       *  the value returned.  @see out for more information.
+      */
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const = 0;
+#pragma empty_line
+      virtual result
+      do_unshift(state_type& __state, extern_type* __to,
+   extern_type* __to_end, extern_type*& __to_next) const = 0;
+#pragma empty_line
+      virtual result
+      do_in(state_type& __state, const extern_type* __from,
+     const extern_type* __from_end, const extern_type*& __from_next,
+     intern_type* __to, intern_type* __to_end,
+     intern_type*& __to_next) const = 0;
+#pragma empty_line
+      virtual int
+      do_encoding() const throw() = 0;
+#pragma empty_line
+      virtual bool
+      do_always_noconv() const throw() = 0;
+#pragma empty_line
+      virtual int
+      do_length(state_type&, const extern_type* __from,
+  const extern_type* __end, size_t __max) const = 0;
+#pragma empty_line
+      virtual int
+      do_max_length() const throw() = 0;
+    };
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  /**
+   *  @brief  Primary class template codecvt.
+   *  @ingroup locales
+   *
+   *  NB: Generic, mostly useless implementation.
+   *
+  */
+   template<typename _InternT, typename _ExternT, typename _StateT>
+    class codecvt
+    : public __codecvt_abstract_base<_InternT, _ExternT, _StateT>
+    {
+    public:
+      // Types:
+      typedef codecvt_base::result result;
+      typedef _InternT intern_type;
+      typedef _ExternT extern_type;
+      typedef _StateT state_type;
+#pragma empty_line
+    protected:
+      __c_locale _M_c_locale_codecvt;
+#pragma empty_line
+    public:
+      static locale::id id;
+#pragma empty_line
+      explicit
+      codecvt(size_t __refs = 0)
+      : __codecvt_abstract_base<_InternT, _ExternT, _StateT> (__refs) { }
+#pragma empty_line
+      explicit
+      codecvt(__c_locale __cloc, size_t __refs = 0);
+#pragma empty_line
+    protected:
+      virtual
+      ~codecvt() { }
+#pragma empty_line
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const;
+#pragma empty_line
+      virtual result
+      do_unshift(state_type& __state, extern_type* __to,
+   extern_type* __to_end, extern_type*& __to_next) const;
+#pragma empty_line
+      virtual result
+      do_in(state_type& __state, const extern_type* __from,
+     const extern_type* __from_end, const extern_type*& __from_next,
+     intern_type* __to, intern_type* __to_end,
+     intern_type*& __to_next) const;
+#pragma empty_line
+      virtual int
+      do_encoding() const throw();
+#pragma empty_line
+      virtual bool
+      do_always_noconv() const throw();
+#pragma empty_line
+      virtual int
+      do_length(state_type&, const extern_type* __from,
+  const extern_type* __end, size_t __max) const;
+#pragma empty_line
+      virtual int
+      do_max_length() const throw();
+    };
+#pragma empty_line
+  template<typename _InternT, typename _ExternT, typename _StateT>
+    locale::id codecvt<_InternT, _ExternT, _StateT>::id;
+#pragma empty_line
+  /// class codecvt<char, char, mbstate_t> specialization.
+  template<>
+    class codecvt<char, char, mbstate_t>
+    : public __codecvt_abstract_base<char, char, mbstate_t>
+    {
+    public:
+      // Types:
+      typedef char intern_type;
+      typedef char extern_type;
+      typedef mbstate_t state_type;
+#pragma empty_line
+    protected:
+      __c_locale _M_c_locale_codecvt;
+#pragma empty_line
+    public:
+      static locale::id id;
+#pragma empty_line
+      explicit
+      codecvt(size_t __refs = 0);
+#pragma empty_line
+      explicit
+      codecvt(__c_locale __cloc, size_t __refs = 0);
+#pragma empty_line
+    protected:
+      virtual
+      ~codecvt();
+#pragma empty_line
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const;
+#pragma empty_line
+      virtual result
+      do_unshift(state_type& __state, extern_type* __to,
+   extern_type* __to_end, extern_type*& __to_next) const;
+#pragma empty_line
+      virtual result
+      do_in(state_type& __state, const extern_type* __from,
+     const extern_type* __from_end, const extern_type*& __from_next,
+     intern_type* __to, intern_type* __to_end,
+     intern_type*& __to_next) const;
+#pragma empty_line
+      virtual int
+      do_encoding() const throw();
+#pragma empty_line
+      virtual bool
+      do_always_noconv() const throw();
+#pragma empty_line
+      virtual int
+      do_length(state_type&, const extern_type* __from,
+  const extern_type* __end, size_t __max) const;
+#pragma empty_line
+      virtual int
+      do_max_length() const throw();
+  };
+#pragma empty_line
+#pragma empty_line
+  /// class codecvt<wchar_t, char, mbstate_t> specialization.
+  template<>
+    class codecvt<wchar_t, char, mbstate_t>
+    : public __codecvt_abstract_base<wchar_t, char, mbstate_t>
+    {
+    public:
+      // Types:
+      typedef wchar_t intern_type;
+      typedef char extern_type;
+      typedef mbstate_t state_type;
+#pragma empty_line
+    protected:
+      __c_locale _M_c_locale_codecvt;
+#pragma empty_line
+    public:
+      static locale::id id;
+#pragma empty_line
+      explicit
+      codecvt(size_t __refs = 0);
+#pragma empty_line
+      explicit
+      codecvt(__c_locale __cloc, size_t __refs = 0);
+#pragma empty_line
+    protected:
+      virtual
+      ~codecvt();
+#pragma empty_line
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const;
+#pragma empty_line
+      virtual result
+      do_unshift(state_type& __state,
+   extern_type* __to, extern_type* __to_end,
+   extern_type*& __to_next) const;
+#pragma empty_line
+      virtual result
+      do_in(state_type& __state,
+      const extern_type* __from, const extern_type* __from_end,
+      const extern_type*& __from_next,
+      intern_type* __to, intern_type* __to_end,
+      intern_type*& __to_next) const;
+#pragma empty_line
+      virtual
+      int do_encoding() const throw();
+#pragma empty_line
+      virtual
+      bool do_always_noconv() const throw();
+#pragma empty_line
+      virtual
+      int do_length(state_type&, const extern_type* __from,
+      const extern_type* __end, size_t __max) const;
+#pragma empty_line
+      virtual int
+      do_max_length() const throw();
+    };
+#pragma empty_line
+#pragma empty_line
+  /// class codecvt_byname [22.2.1.6].
+  template<typename _InternT, typename _ExternT, typename _StateT>
+    class codecvt_byname : public codecvt<_InternT, _ExternT, _StateT>
+    {
+    public:
+      explicit
+      codecvt_byname(const char* __s, size_t __refs = 0)
+      : codecvt<_InternT, _ExternT, _StateT>(__refs)
+      {
+ if (__builtin_strcmp(__s, "C") != 0
+     && __builtin_strcmp(__s, "POSIX") != 0)
+   {
+     this->_S_destroy_c_locale(this->_M_c_locale_codecvt);
+     this->_S_create_c_locale(this->_M_c_locale_codecvt, __s);
+   }
+      }
+#pragma empty_line
+    protected:
+      virtual
+      ~codecvt_byname() { }
+    };
+#pragma empty_line
+  // Inhibit implicit instantiations for required instantiations,
+  // which are defined via explicit instantiations elsewhere.
+#pragma empty_line
+  extern template class codecvt_byname<char, char, mbstate_t>;
+#pragma empty_line
+  extern template
+    const codecvt<char, char, mbstate_t>&
+    use_facet<codecvt<char, char, mbstate_t> >(const locale&);
+#pragma empty_line
+  extern template
+    bool
+    has_facet<codecvt<char, char, mbstate_t> >(const locale&);
+#pragma empty_line
+#pragma empty_line
+  extern template class codecvt_byname<wchar_t, char, mbstate_t>;
+#pragma empty_line
+  extern template
+    const codecvt<wchar_t, char, mbstate_t>&
+    use_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
+#pragma empty_line
+  extern template
+    bool
+    has_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+} // namespace std
+#pragma line 42 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
+// -*- C++ -*- forwarding header.
+#pragma empty_line
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+/** @file include/cstdio
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c stdio.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+#pragma empty_line
+//
+// ISO C++ 14882: 27.8.2  C Library files
+//
+#pragma empty_line
+#pragma empty_line
+#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/usr/include/stdio.h" 1 3 4
+/* Define ISO C stdio on top of C++ iostreams.
+   Copyright (C) 1991, 1994-2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+/*
+ *	ISO C99 Standard: 7.19 Input/output	<stdio.h>
+ */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern "C" {
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+#pragma line 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+#pragma line 34 "/usr/include/stdio.h" 2 3 4
+#pragma line 74 "/usr/include/stdio.h" 3 4
+#pragma line 1 "/usr/include/libio.h" 1 3 4
+/* Copyright (C) 1991-1995,1997-2007,2009,2011,2012
+   Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+   Written by Per Bothner <bothner@cygnus.com>.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.
+#pragma empty_line
+   As a special exception, if you link the code in this file with
+   files compiled with a GNU compiler to produce an executable,
+   that does not cause the resulting executable to be covered by
+   the GNU Lesser General Public License.  This exception does not
+   however invalidate any other reasons why the executable file
+   might be covered by the GNU Lesser General Public License.
+   This exception applies to code released by its copyright holders
+   in files containing the exception.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/usr/include/_G_config.h" 1 3 4
+/* This file is needed by libio to define various configuration parameters.
+   These are always the same in the GNU C library.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Define types for libio in terms of the standard internal type names.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+#pragma line 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+#pragma line 16 "/usr/include/_G_config.h" 2 3 4
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/usr/include/wchar.h" 1 3 4
+/* Copyright (C) 1995-2008, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+/*
+ *      ISO C99 Standard: 7.24
+ *	Extended multibyte and wide character utilities	<wchar.h>
+ */
+#pragma line 897 "/usr/include/wchar.h" 3 4
+/* Undefine all __need_* constants in case we are included to get those
+   constants but the whole file was already read.  */
+#pragma line 21 "/usr/include/_G_config.h" 2 3 4
+typedef struct
+{
+  __off_t __pos;
+  __mbstate_t __state;
+} _G_fpos_t;
+typedef struct
+{
+  __off64_t __pos;
+  __mbstate_t __state;
+} _G_fpos64_t;
+#pragma line 45 "/usr/include/_G_config.h" 3 4
+/* These library features are always available in the GNU C library.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* This is defined by <bits/stat.h> if `st_blksize' exists.  */
+#pragma line 33 "/usr/include/libio.h" 2 3 4
+/* ALL of these should be defined in _G_config.h */
+#pragma line 48 "/usr/include/libio.h" 3 4
+/* This define avoids name pollution if we're using GNU stdarg.h */
+#pragma line 87 "/usr/include/libio.h" 3 4
+/* Magic numbers and bits for the _flags field.
+   The magic numbers use the high-order bits of _flags;
+   the remaining bits are available for variable flags.
+   Note: The magic numbers must all be negative if stdio
+   emulation is desired. */
+#pragma line 125 "/usr/include/libio.h" 3 4
+/* These are "formatting flags" matching the iostream fmtflags enum values. */
+#pragma line 145 "/usr/include/libio.h" 3 4
+struct _IO_jump_t; struct _IO_FILE;
+#pragma empty_line
+/* Handle lock.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+typedef void _IO_lock_t;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* A streammarker remembers a position in a buffer. */
+#pragma empty_line
+struct _IO_marker {
+  struct _IO_marker *_next;
+  struct _IO_FILE *_sbuf;
+  /* If _pos >= 0
+ it points to _buf->Gbase()+_pos. FIXME comment */
+  /* if _pos < 0, it points to _buf->eBptr()+_pos. FIXME comment */
+  int _pos;
+#pragma line 178 "/usr/include/libio.h" 3 4
+};
+#pragma empty_line
+/* This is the structure from the libstdc++ codecvt class.  */
+enum __codecvt_result
+{
+  __codecvt_ok,
+  __codecvt_partial,
+  __codecvt_error,
+  __codecvt_noconv
+};
+#pragma line 246 "/usr/include/libio.h" 3 4
+struct _IO_FILE {
+  int _flags; /* High-order word is _IO_MAGIC; rest is flags. */
+#pragma empty_line
+#pragma empty_line
+  /* The following pointers correspond to the C++ streambuf protocol. */
+  /* Note:  Tk uses the _IO_read_ptr and _IO_read_end fields directly. */
+  char* _IO_read_ptr; /* Current read pointer */
+  char* _IO_read_end; /* End of get area. */
+  char* _IO_read_base; /* Start of putback+get area. */
+  char* _IO_write_base; /* Start of put area. */
+  char* _IO_write_ptr; /* Current put pointer. */
+  char* _IO_write_end; /* End of put area. */
+  char* _IO_buf_base; /* Start of reserve area. */
+  char* _IO_buf_end; /* End of reserve area. */
+  /* The following fields are used to support backing up and undo. */
+  char *_IO_save_base; /* Pointer to start of non-current get area. */
+  char *_IO_backup_base; /* Pointer to first valid character of backup area */
+  char *_IO_save_end; /* Pointer to end of non-current get area. */
+#pragma empty_line
+  struct _IO_marker *_markers;
+#pragma empty_line
+  struct _IO_FILE *_chain;
+#pragma empty_line
+  int _fileno;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  int _flags2;
+#pragma empty_line
+  __off_t _old_offset; /* This used to be _offset but it's too small.  */
+#pragma empty_line
+#pragma empty_line
+  /* 1+column number of pbase(); 0 is unknown. */
+  unsigned short _cur_column;
+  signed char _vtable_offset;
+  char _shortbuf[1];
+#pragma empty_line
+  /*  char* _save_gptr;  char* _save_egptr; */
+#pragma empty_line
+  _IO_lock_t *_lock;
+#pragma line 294 "/usr/include/libio.h" 3 4
+  __off64_t _offset;
+#pragma line 303 "/usr/include/libio.h" 3 4
+  void *__pad1;
+  void *__pad2;
+  void *__pad3;
+  void *__pad4;
+  size_t __pad5;
+#pragma empty_line
+  int _mode;
+  /* Make sure we don't get into trouble again.  */
+  char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
+#pragma empty_line
+};
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+struct _IO_FILE_plus;
+#pragma empty_line
+extern struct _IO_FILE_plus _IO_2_1_stdin_;
+extern struct _IO_FILE_plus _IO_2_1_stdout_;
+extern struct _IO_FILE_plus _IO_2_1_stderr_;
+#pragma line 335 "/usr/include/libio.h" 3 4
+/* Functions to do I/O and file management for a stream.  */
+#pragma empty_line
+/* Read NBYTES bytes from COOKIE into a buffer pointed to by BUF.
+   Return number of bytes read.  */
+typedef __ssize_t __io_read_fn (void *__cookie, char *__buf, size_t __nbytes);
+#pragma empty_line
+/* Write N bytes pointed to by BUF to COOKIE.  Write all N bytes
+   unless there is an error.  Return number of bytes written.  If
+   there is an error, return 0 and do not write anything.  If the file
+   has been opened for append (__mode.__append set), then set the file
+   pointer to the end of the file and then do the write; if not, just
+   write at the current file pointer.  */
+typedef __ssize_t __io_write_fn (void *__cookie, const char *__buf,
+     size_t __n);
+#pragma empty_line
+/* Move COOKIE's file position to *POS bytes from the
+   beginning of the file (if W is SEEK_SET),
+   the current position (if W is SEEK_CUR),
+   or the end of the file (if W is SEEK_END).
+   Set *POS to the new file position.
+   Returns zero if successful, nonzero if not.  */
+typedef int __io_seek_fn (void *__cookie, __off64_t *__pos, int __w);
+#pragma empty_line
+/* Close COOKIE.  */
+typedef int __io_close_fn (void *__cookie);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* User-visible names for the above.  */
+typedef __io_read_fn cookie_read_function_t;
+typedef __io_write_fn cookie_write_function_t;
+typedef __io_seek_fn cookie_seek_function_t;
+typedef __io_close_fn cookie_close_function_t;
+#pragma empty_line
+/* The structure with the cookie function pointers.  */
+typedef struct
+{
+  __io_read_fn *read; /* Read bytes.  */
+  __io_write_fn *write; /* Write bytes.  */
+  __io_seek_fn *seek; /* Seek/tell file position.  */
+  __io_close_fn *close; /* Close file.  */
+} _IO_cookie_io_functions_t;
+typedef _IO_cookie_io_functions_t cookie_io_functions_t;
+#pragma empty_line
+struct _IO_cookie_file;
+#pragma empty_line
+/* Initialize one of those.  */
+extern void _IO_cookie_init (struct _IO_cookie_file *__cfile, int __read_write,
+        void *__cookie, _IO_cookie_io_functions_t __fns);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern "C" {
+#pragma empty_line
+#pragma empty_line
+extern int __underflow (_IO_FILE *);
+extern int __uflow (_IO_FILE *);
+extern int __overflow (_IO_FILE *, int);
+#pragma line 435 "/usr/include/libio.h" 3 4
+extern int _IO_getc (_IO_FILE *__fp);
+extern int _IO_putc (int __c, _IO_FILE *__fp);
+extern int _IO_feof (_IO_FILE *__fp) throw ();
+extern int _IO_ferror (_IO_FILE *__fp) throw ();
+#pragma empty_line
+extern int _IO_peekc_locked (_IO_FILE *__fp);
+#pragma empty_line
+/* This one is for Emacs. */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+extern void _IO_flockfile (_IO_FILE *) throw ();
+extern void _IO_funlockfile (_IO_FILE *) throw ();
+extern int _IO_ftrylockfile (_IO_FILE *) throw ();
+#pragma line 465 "/usr/include/libio.h" 3 4
+extern int _IO_vfscanf (_IO_FILE * __restrict, const char * __restrict,
+   __gnuc_va_list, int *__restrict);
+extern int _IO_vfprintf (_IO_FILE *__restrict, const char *__restrict,
+    __gnuc_va_list);
+extern __ssize_t _IO_padn (_IO_FILE *, int, __ssize_t);
+extern size_t _IO_sgetn (_IO_FILE *, void *, size_t);
+#pragma empty_line
+extern __off64_t _IO_seekoff (_IO_FILE *, __off64_t, int, int);
+extern __off64_t _IO_seekpos (_IO_FILE *, __off64_t, int);
+#pragma empty_line
+extern void _IO_free_backup_area (_IO_FILE *) throw ();
+#pragma line 527 "/usr/include/libio.h" 3 4
+}
+#pragma line 75 "/usr/include/stdio.h" 2 3 4
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+typedef __gnuc_va_list va_list;
+#pragma line 107 "/usr/include/stdio.h" 3 4
+/* The type of the second argument to `fgetpos' and `fsetpos'.  */
+#pragma empty_line
+#pragma empty_line
+typedef _G_fpos_t fpos_t;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+typedef _G_fpos64_t fpos64_t;
+#pragma empty_line
+#pragma empty_line
+/* The possibilities for the third argument to `setvbuf'.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Default buffer size.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* End of file character.
+   Some things throughout the library rely on this being -1.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* The possibilities for the third argument to `fseek'.
+   These values should not be changed.  */
+#pragma line 150 "/usr/include/stdio.h" 3 4
+/* Default path prefix for `tempnam' and `tmpnam'.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Get the values:
+   L_tmpnam	How long an array of chars must be to be passed to `tmpnam'.
+   TMP_MAX	The minimum number of unique filenames generated by tmpnam
+		(and tempnam when it uses tmpnam's name space),
+		or tempnam (the two are separate).
+   L_ctermid	How long an array to pass to `ctermid'.
+   L_cuserid	How long an array to pass to `cuserid'.
+   FOPEN_MAX	Minimum number of files that can be open at once.
+   FILENAME_MAX	Maximum length of a filename.  */
+#pragma empty_line
+#pragma line 1 "/usr/include/bits/stdio_lim.h" 1 3 4
+/* Copyright (C) 1994, 1997, 1998, 1999, 2009 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma line 165 "/usr/include/stdio.h" 2 3 4
+#pragma empty_line
+#pragma empty_line
+/* Standard streams.  */
+extern struct _IO_FILE *stdin; /* Standard input stream.  */
+extern struct _IO_FILE *stdout; /* Standard output stream.  */
+extern struct _IO_FILE *stderr; /* Standard error output stream.  */
+/* C89/C99 say they're macros.  Make them happy.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Remove file FILENAME.  */
+extern int remove (const char *__filename) throw ();
+/* Rename file OLD to NEW.  */
+extern int rename (const char *__old, const char *__new) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Rename file OLD relative to OLDFD to NEW relative to NEWFD.  */
+extern int renameat (int __oldfd, const char *__old, int __newfd,
+       const char *__new) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Create a temporary file and open it read/write.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+#pragma empty_line
+extern FILE *tmpfile (void) /* Ignore */;
+#pragma line 205 "/usr/include/stdio.h" 3 4
+extern FILE *tmpfile64 (void) /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+/* Generate a temporary filename.  */
+extern char *tmpnam (char *__s) throw () /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* This is the reentrant variant of `tmpnam'.  The only difference is
+   that it does not allow S to be NULL.  */
+extern char *tmpnam_r (char *__s) throw () /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Generate a unique temporary filename using up to five characters of PFX
+   if it is not NULL.  The directory to put this file in is searched for
+   as follows: First the environment variable "TMPDIR" is checked.
+   If it contains the name of a writable directory, that directory is used.
+   If not and if DIR is not NULL, that value is checked.  If that fails,
+   P_tmpdir is tried and finally "/tmp".  The storage for the filename
+   is allocated by `malloc'.  */
+extern char *tempnam (const char *__dir, const char *__pfx)
+     throw () __attribute__ ((__malloc__)) /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Close STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fclose (FILE *__stream);
+/* Flush STREAM, or all streams if STREAM is NULL.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fflush (FILE *__stream);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Faster versions when locking is not required.
+#pragma empty_line
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern int fflush_unlocked (FILE *__stream);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Close all streams.
+#pragma empty_line
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern int fcloseall (void);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Open a file and create a new stream for it.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern FILE *fopen (const char *__restrict __filename,
+      const char *__restrict __modes) /* Ignore */;
+/* Open a file, replacing an existing stream with it.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern FILE *freopen (const char *__restrict __filename,
+        const char *__restrict __modes,
+        FILE *__restrict __stream) /* Ignore */;
+#pragma line 297 "/usr/include/stdio.h" 3 4
+extern FILE *fopen64 (const char *__restrict __filename,
+        const char *__restrict __modes) /* Ignore */;
+extern FILE *freopen64 (const char *__restrict __filename,
+   const char *__restrict __modes,
+   FILE *__restrict __stream) /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Create a new stream that refers to an existing system file descriptor.  */
+extern FILE *fdopen (int __fd, const char *__modes) throw () /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Create a new stream that refers to the given magic cookie,
+   and uses the given functions for input and output.  */
+extern FILE *fopencookie (void *__restrict __magic_cookie,
+     const char *__restrict __modes,
+     _IO_cookie_io_functions_t __io_funcs) throw () /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Create a new stream that refers to a memory buffer.  */
+extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
+  throw () /* Ignore */;
+#pragma empty_line
+/* Open a stream that writes into a malloc'd buffer that is expanded as
+   necessary.  *BUFLOC and *SIZELOC are updated with the buffer's location
+   and the number of characters written on fflush or fclose.  */
+extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) throw () /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* If BUF is NULL, make STREAM unbuffered.
+   Else make it use buffer BUF, of size BUFSIZ.  */
+extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) throw ();
+/* Make STREAM use buffering mode MODE.
+   If BUF is not NULL, use N bytes of it for buffering;
+   else allocate an internal buffer N bytes long.  */
+extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,
+      int __modes, size_t __n) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* If BUF is NULL, make STREAM unbuffered.
+   Else make it use SIZE bytes of BUF for buffering.  */
+extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,
+         size_t __size) throw ();
+#pragma empty_line
+/* Make STREAM line-buffered.  */
+extern void setlinebuf (FILE *__stream) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Write formatted output to STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fprintf (FILE *__restrict __stream,
+      const char *__restrict __format, ...);
+/* Write formatted output to stdout.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int printf (const char *__restrict __format, ...);
+/* Write formatted output to S.  */
+extern int sprintf (char *__restrict __s,
+      const char *__restrict __format, ...) throw ();
+#pragma empty_line
+/* Write formatted output to S from argument list ARG.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg);
+/* Write formatted output to stdout from argument list ARG.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int vprintf (const char *__restrict __format, __gnuc_va_list __arg);
+/* Write formatted output to S from argument list ARG.  */
+extern int vsprintf (char *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Maximum chars of output to write in MAXLEN.  */
+extern int snprintf (char *__restrict __s, size_t __maxlen,
+       const char *__restrict __format, ...)
+     throw () __attribute__ ((__format__ (__printf__, 3, 4)));
+#pragma empty_line
+extern int vsnprintf (char *__restrict __s, size_t __maxlen,
+        const char *__restrict __format, __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__printf__, 3, 0)));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Write formatted output to a string dynamically allocated with `malloc'.
+   Store the address of the string in *PTR.  */
+extern int vasprintf (char **__restrict __ptr, const char *__restrict __f,
+        __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__printf__, 2, 0))) /* Ignore */;
+extern int __asprintf (char **__restrict __ptr,
+         const char *__restrict __fmt, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3))) /* Ignore */;
+extern int asprintf (char **__restrict __ptr,
+       const char *__restrict __fmt, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3))) /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Write formatted output to a file descriptor.  */
+extern int vdprintf (int __fd, const char *__restrict __fmt,
+       __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__printf__, 2, 0)));
+extern int dprintf (int __fd, const char *__restrict __fmt, ...)
+     __attribute__ ((__format__ (__printf__, 2, 3)));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Read formatted input from STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fscanf (FILE *__restrict __stream,
+     const char *__restrict __format, ...) /* Ignore */;
+/* Read formatted input from stdin.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int scanf (const char *__restrict __format, ...) /* Ignore */;
+/* Read formatted input from S.  */
+extern int sscanf (const char *__restrict __s,
+     const char *__restrict __format, ...) throw ();
+#pragma line 467 "/usr/include/stdio.h" 3 4
+/* Read formatted input from S into argument list ARG.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int vfscanf (FILE *__restrict __s, const char *__restrict __format,
+      __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__scanf__, 2, 0))) /* Ignore */;
+#pragma empty_line
+/* Read formatted input from stdin into argument list ARG.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__scanf__, 1, 0))) /* Ignore */;
+#pragma empty_line
+/* Read formatted input from S into argument list ARG.  */
+extern int vsscanf (const char *__restrict __s,
+      const char *__restrict __format, __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__scanf__, 2, 0)));
+#pragma line 527 "/usr/include/stdio.h" 3 4
+/* Read a character from STREAM.
+#pragma empty_line
+   These functions are possible cancellation points and therefore not
+   marked with __THROW.  */
+extern int fgetc (FILE *__stream);
+extern int getc (FILE *__stream);
+#pragma empty_line
+/* Read a character from stdin.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int getchar (void);
+#pragma empty_line
+#pragma empty_line
+/* The C standard explicitly says this is a macro, so we always do the
+   optimization for it.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* These are defined in POSIX.1:1996.
+#pragma empty_line
+   These functions are possible cancellation points and therefore not
+   marked with __THROW.  */
+extern int getc_unlocked (FILE *__stream);
+extern int getchar_unlocked (void);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Faster version when locking is not necessary.
+#pragma empty_line
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern int fgetc_unlocked (FILE *__stream);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Write a character to STREAM.
+#pragma empty_line
+   These functions are possible cancellation points and therefore not
+   marked with __THROW.
+#pragma empty_line
+   These functions is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fputc (int __c, FILE *__stream);
+extern int putc (int __c, FILE *__stream);
+#pragma empty_line
+/* Write a character to stdout.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int putchar (int __c);
+#pragma empty_line
+#pragma empty_line
+/* The C standard explicitly says this can be a macro,
+   so we always do the optimization for it.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Faster version when locking is not necessary.
+#pragma empty_line
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern int fputc_unlocked (int __c, FILE *__stream);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* These are defined in POSIX.1:1996.
+#pragma empty_line
+   These functions are possible cancellation points and therefore not
+   marked with __THROW.  */
+extern int putc_unlocked (int __c, FILE *__stream);
+extern int putchar_unlocked (int __c);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Get a word (int) from STREAM.  */
+extern int getw (FILE *__stream);
+#pragma empty_line
+/* Write a word (int) to STREAM.  */
+extern int putw (int __w, FILE *__stream);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Get a newline-terminated string of finite length from STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+     /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Get a newline-terminated string from stdin, removing the newline.
+   DO NOT USE THIS FUNCTION!!  There is no limit on how much it will read.
+#pragma empty_line
+   The function has been officially removed in ISO C11.  This opportunity
+   is used to also remove it from the GNU feature list.  It is now only
+   available when explicitly using an old ISO C, Unix, or POSIX standard.
+   GCC defines _GNU_SOURCE when building C++ code and the function is still
+   in C++11, so it is also available for C++.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern char *gets (char *__s) /* Ignore */ __attribute__ ((__deprecated__));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* This function does the same as `fgets' but does not lock the stream.
+#pragma empty_line
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern char *fgets_unlocked (char *__restrict __s, int __n,
+        FILE *__restrict __stream) /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Read up to (and including) a DELIMITER from STREAM into *LINEPTR
+   (and null-terminate it). *LINEPTR is a pointer returned from malloc (or
+   NULL), pointing to *N characters of space.  It is realloc'd as
+   necessary.  Returns the number of characters read (not including the
+   null terminator), or -1 on error or EOF.
+#pragma empty_line
+   These functions are not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation they are cancellation points and
+   therefore not marked with __THROW.  */
+extern __ssize_t __getdelim (char **__restrict __lineptr,
+          size_t *__restrict __n, int __delimiter,
+          FILE *__restrict __stream) /* Ignore */;
+extern __ssize_t getdelim (char **__restrict __lineptr,
+        size_t *__restrict __n, int __delimiter,
+        FILE *__restrict __stream) /* Ignore */;
+#pragma empty_line
+/* Like `getdelim', but reads up to a newline.
+#pragma empty_line
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern __ssize_t getline (char **__restrict __lineptr,
+       size_t *__restrict __n,
+       FILE *__restrict __stream) /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Write a string to STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
+#pragma empty_line
+/* Write a string, followed by a newline, to stdout.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int puts (const char *__s);
+#pragma empty_line
+#pragma empty_line
+/* Push a character back onto the input buffer of STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int ungetc (int __c, FILE *__stream);
+#pragma empty_line
+#pragma empty_line
+/* Read chunks of generic data from STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern size_t fread (void *__restrict __ptr, size_t __size,
+       size_t __n, FILE *__restrict __stream) /* Ignore */;
+/* Write chunks of generic data to STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern size_t fwrite (const void *__restrict __ptr, size_t __size,
+        size_t __n, FILE *__restrict __s);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* This function does the same as `fputs' but does not lock the stream.
+#pragma empty_line
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern int fputs_unlocked (const char *__restrict __s,
+      FILE *__restrict __stream);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Faster versions when locking is not necessary.
+#pragma empty_line
+   These functions are not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation they are cancellation points and
+   therefore not marked with __THROW.  */
+extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
+         size_t __n, FILE *__restrict __stream) /* Ignore */;
+extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
+          size_t __n, FILE *__restrict __stream);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Seek to a certain position on STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fseek (FILE *__stream, long int __off, int __whence);
+/* Return the current position of STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern long int ftell (FILE *__stream) /* Ignore */;
+/* Rewind to the beginning of STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern void rewind (FILE *__stream);
+#pragma empty_line
+#pragma empty_line
+/* The Single Unix Specification, Version 2, specifies an alternative,
+   more adequate interface for the two functions above which deal with
+   file offset.  `long int' is not the right type.  These definitions
+   are originally defined in the Large File Support API.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Seek to a certain position on STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fseeko (FILE *__stream, __off_t __off, int __whence);
+/* Return the current position of STREAM.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern __off_t ftello (FILE *__stream) /* Ignore */;
+#pragma line 794 "/usr/include/stdio.h" 3 4
+/* Get STREAM's position.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);
+/* Set STREAM's position.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fsetpos (FILE *__stream, const fpos_t *__pos);
+#pragma line 818 "/usr/include/stdio.h" 3 4
+extern int fseeko64 (FILE *__stream, __off64_t __off, int __whence);
+extern __off64_t ftello64 (FILE *__stream) /* Ignore */;
+extern int fgetpos64 (FILE *__restrict __stream, fpos64_t *__restrict __pos);
+extern int fsetpos64 (FILE *__stream, const fpos64_t *__pos);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Clear the error and EOF indicators for STREAM.  */
+extern void clearerr (FILE *__stream) throw ();
+/* Return the EOF indicator for STREAM.  */
+extern int feof (FILE *__stream) throw () /* Ignore */;
+/* Return the error indicator for STREAM.  */
+extern int ferror (FILE *__stream) throw () /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Faster versions when locking is not required.  */
+extern void clearerr_unlocked (FILE *__stream) throw ();
+extern int feof_unlocked (FILE *__stream) throw () /* Ignore */;
+extern int ferror_unlocked (FILE *__stream) throw () /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Print a message describing the meaning of the value of errno.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern void perror (const char *__s);
+#pragma empty_line
+#pragma empty_line
+/* Provide the declarations for `sys_errlist' and `sys_nerr' if they
+   are available on this system.  Even if available, these variables
+   should not be used directly.  The `strerror' function provides
+   all the necessary functionality.  */
+#pragma empty_line
+#pragma line 1 "/usr/include/bits/sys_errlist.h" 1 3 4
+/* Declare sys_errlist and sys_nerr, or don't.  Compatibility (do) version.
+   Copyright (C) 2002, 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+#pragma empty_line
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+#pragma empty_line
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+#pragma empty_line
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* sys_errlist and sys_nerr are deprecated.  Use strerror instead.  */
+#pragma empty_line
+#pragma empty_line
+extern int sys_nerr;
+extern const char *const sys_errlist[];
+#pragma empty_line
+#pragma empty_line
+extern int _sys_nerr;
+extern const char *const _sys_errlist[];
+#pragma line 854 "/usr/include/stdio.h" 2 3 4
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return the system file descriptor for STREAM.  */
+extern int fileno (FILE *__stream) throw () /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Faster version when locking is not required.  */
+extern int fileno_unlocked (FILE *__stream) throw () /* Ignore */;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Create a new stream connected to a pipe running the given command.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern FILE *popen (const char *__command, const char *__modes) /* Ignore */;
+#pragma empty_line
+/* Close a stream opened by popen and return the status of its child.
+#pragma empty_line
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int pclose (FILE *__stream);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return the name of the controlling terminal.  */
+extern char *ctermid (char *__s) throw ();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* Return the name of the current user.  */
+extern char *cuserid (char *__s);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+struct obstack; /* See <obstack.h>.  */
+#pragma empty_line
+/* Write formatted output to an obstack.  */
+extern int obstack_printf (struct obstack *__restrict __obstack,
+      const char *__restrict __format, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3)));
+extern int obstack_vprintf (struct obstack *__restrict __obstack,
+       const char *__restrict __format,
+       __gnuc_va_list __args)
+     throw () __attribute__ ((__format__ (__printf__, 2, 0)));
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+/* These are defined in POSIX.1:1996.  */
+#pragma empty_line
+/* Acquire ownership of STREAM.  */
+extern void flockfile (FILE *__stream) throw ();
+#pragma empty_line
+/* Try to acquire ownership of STREAM but do not block if it is not
+   possible.  */
+extern int ftrylockfile (FILE *__stream) throw () /* Ignore */;
+#pragma empty_line
+/* Relinquish the ownership granted for STREAM.  */
+extern void funlockfile (FILE *__stream) throw ();
+#pragma line 931 "/usr/include/stdio.h" 3 4
+/* If we are compiling with optimizing read this file.  It contains
+   several optimizing inline functions and macros.  */
+#pragma line 943 "/usr/include/stdio.h" 3 4
+}
+#pragma line 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 2 3
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+// Get rid of those macros defined in <stdio.h> in lieu of real functions.
+#pragma line 91 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+namespace std
+{
+  using ::FILE;
+  using ::fpos_t;
+#pragma empty_line
+  using ::clearerr;
+  using ::fclose;
+  using ::feof;
+  using ::ferror;
+  using ::fflush;
+  using ::fgetc;
+  using ::fgetpos;
+  using ::fgets;
+  using ::fopen;
+  using ::fprintf;
+  using ::fputc;
+  using ::fputs;
+  using ::fread;
+  using ::freopen;
+  using ::fscanf;
+  using ::fseek;
+  using ::fsetpos;
+  using ::ftell;
+  using ::fwrite;
+  using ::getc;
+  using ::getchar;
+  using ::gets;
+  using ::perror;
+  using ::printf;
+  using ::putc;
+  using ::putchar;
+  using ::puts;
+  using ::remove;
+  using ::rename;
+  using ::rewind;
+  using ::scanf;
+  using ::setbuf;
+  using ::setvbuf;
+  using ::sprintf;
+  using ::sscanf;
+  using ::tmpfile;
+  using ::tmpnam;
+  using ::ungetc;
+  using ::vfprintf;
+  using ::vprintf;
+  using ::vsprintf;
+} // namespace
+#pragma line 147 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+namespace __gnu_cxx
+{
+#pragma line 165 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+  using ::snprintf;
+  using ::vfscanf;
+  using ::vscanf;
+  using ::vsnprintf;
+  using ::vsscanf;
+#pragma empty_line
+} // namespace __gnu_cxx
+#pragma empty_line
+namespace std
+{
+  using ::__gnu_cxx::snprintf;
+  using ::__gnu_cxx::vfscanf;
+  using ::__gnu_cxx::vscanf;
+  using ::__gnu_cxx::vsnprintf;
+  using ::__gnu_cxx::vsscanf;
+} // namespace std
+#pragma line 43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 1 3
+// Wrapper of C-language FILE struct -*- C++ -*-
+#pragma empty_line
+// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+//
+// ISO C++ 14882: 27.8  File-based streams
+//
+#pragma empty_line
+/** @file bits/basic_file.h
+ *  This is an internal header file, included by other library headers.
+ *  Do not attempt to use it directly. @headername{ios}
+ */
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 1 3
+// Underlying io library details -*- C++ -*-
+#pragma empty_line
+// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+/** @file bits/c++io.h
+ *  This is an internal header file, included by other library headers.
+ *  Do not attempt to use it directly. @headername{ios}
+ */
+#pragma empty_line
+// c_io_stdio.h - Defines for using "C" stdio.h
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
+// -*- C++ -*- forwarding header.
+#pragma empty_line
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+/** @file include/cstdio
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c stdio.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+#pragma empty_line
+//
+// ISO C++ 14882: 27.8.2  C Library files
+//
+#pragma empty_line
+#pragma empty_line
+#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+#pragma line 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 2 3
+#pragma empty_line
+#pragma empty_line
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+#pragma empty_line
+#pragma empty_line
+  typedef __gthread_mutex_t __c_lock;
+#pragma empty_line
+  // for basic_file.h
+  typedef FILE __c_file;
+#pragma empty_line
+#pragma empty_line
+} // namespace
+#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 2 3
+#pragma empty_line
+#pragma empty_line
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+#pragma empty_line
+#pragma empty_line
+  // Generic declaration.
+  template<typename _CharT>
+    class __basic_file;
+#pragma empty_line
+  // Specialization.
+  template<>
+    class __basic_file<char>
+    {
+      // Underlying data source/sink.
+      __c_file* _M_cfile;
+#pragma empty_line
+      // True iff we opened _M_cfile, and thus must close it ourselves.
+      bool _M_cfile_created;
+#pragma empty_line
+    public:
+      __basic_file(__c_lock* __lock = 0) throw ();
+#pragma empty_line
+      __basic_file*
+      open(const char* __name, ios_base::openmode __mode, int __prot = 0664);
+#pragma empty_line
+      __basic_file*
+      sys_open(__c_file* __file, ios_base::openmode);
+#pragma empty_line
+      __basic_file*
+      sys_open(int __fd, ios_base::openmode __mode) throw ();
+#pragma empty_line
+      __basic_file*
+      close();
+#pragma empty_line
+      __attribute__ ((__pure__)) bool
+      is_open() const throw ();
+#pragma empty_line
+      __attribute__ ((__pure__)) int
+      fd() throw ();
+#pragma empty_line
+      __attribute__ ((__pure__)) __c_file*
+      file() throw ();
+#pragma empty_line
+      ~__basic_file();
+#pragma empty_line
+      streamsize
+      xsputn(const char* __s, streamsize __n);
+#pragma empty_line
+      streamsize
+      xsputn_2(const char* __s1, streamsize __n1,
+        const char* __s2, streamsize __n2);
+#pragma empty_line
+      streamsize
+      xsgetn(char* __s, streamsize __n);
+#pragma empty_line
+      streamoff
+      seekoff(streamoff __off, ios_base::seekdir __way) throw ();
+#pragma empty_line
+      int
+      sync();
+#pragma empty_line
+      streamsize
+      showmanyc();
+    };
+#pragma empty_line
+#pragma empty_line
+} // namespace
+#pragma line 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+#pragma empty_line
+#pragma empty_line
+  // [27.8.1.1] template class basic_filebuf
+  /**
+   *  @brief  The actual work of input and output (for files).
+   *  @ingroup io
+   *
+   *  This class associates both its input and output sequence with an
+   *  external disk file, and maintains a joint file position for both
+   *  sequences.  Many of its semantics are described in terms of similar
+   *  behavior in the Standard C Library's @c FILE streams.
+   */
+  // Requirements on traits_type, specific to this class:
+  // traits_type::pos_type must be fpos<traits_type::state_type>
+  // traits_type::off_type must be streamoff
+  // traits_type::state_type must be Assignable and DefaultConstructible,
+  // and traits_type::state_type() must be the initial state for codecvt.
+  template<typename _CharT, typename _Traits>
+    class basic_filebuf : public basic_streambuf<_CharT, _Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+#pragma empty_line
+      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef __basic_file<char> __file_type;
+      typedef typename traits_type::state_type __state_type;
+      typedef codecvt<char_type, char, __state_type> __codecvt_type;
+#pragma empty_line
+      friend class ios_base; // For sync_with_stdio.
+#pragma empty_line
+    protected:
+      // Data Members:
+      // MT lock inherited from libio or other low-level io library.
+      __c_lock _M_lock;
+#pragma empty_line
+      // External buffer.
+      __file_type _M_file;
+#pragma empty_line
+      /// Place to stash in || out || in | out settings for current filebuf.
+      ios_base::openmode _M_mode;
+#pragma empty_line
+      // Beginning state type for codecvt.
+      __state_type _M_state_beg;
+#pragma empty_line
+      // During output, the state that corresponds to pptr(),
+      // during input, the state that corresponds to egptr() and
+      // _M_ext_next.
+      __state_type _M_state_cur;
+#pragma empty_line
+      // Not used for output. During input, the state that corresponds
+      // to eback() and _M_ext_buf.
+      __state_type _M_state_last;
+#pragma empty_line
+      /// Pointer to the beginning of internal buffer.
+      char_type* _M_buf;
+#pragma empty_line
+      /**
+       *  Actual size of internal buffer. This number is equal to the size
+       *  of the put area + 1 position, reserved for the overflow char of
+       *  a full area.
+       */
+      size_t _M_buf_size;
+#pragma empty_line
+      // Set iff _M_buf is allocated memory from _M_allocate_internal_buffer.
+      bool _M_buf_allocated;
+#pragma empty_line
+      /**
+       *  _M_reading == false && _M_writing == false for @b uncommitted mode;
+       *  _M_reading == true for @b read mode;
+       *  _M_writing == true for @b write mode;
+       *
+       *  NB: _M_reading == true && _M_writing == true is unused.
+       */
+      bool _M_reading;
+      bool _M_writing;
+#pragma empty_line
+      //@{
+      /**
+       *  Necessary bits for putback buffer management.
+       *
+       *  @note pbacks of over one character are not currently supported.
+       */
+      char_type _M_pback;
+      char_type* _M_pback_cur_save;
+      char_type* _M_pback_end_save;
+      bool _M_pback_init;
+      //@}
+#pragma empty_line
+      // Cached codecvt facet.
+      const __codecvt_type* _M_codecvt;
+#pragma empty_line
+      /**
+       *  Buffer for external characters. Used for input when
+       *  codecvt::always_noconv() == false. When valid, this corresponds
+       *  to eback().
+       */
+      char* _M_ext_buf;
+#pragma empty_line
+      /**
+       *  Size of buffer held by _M_ext_buf.
+       */
+      streamsize _M_ext_buf_size;
+#pragma empty_line
+      /**
+       *  Pointers into the buffer held by _M_ext_buf that delimit a
+       *  subsequence of bytes that have been read but not yet converted.
+       *  When valid, _M_ext_next corresponds to egptr().
+       */
+      const char* _M_ext_next;
+      char* _M_ext_end;
+#pragma empty_line
+      /**
+       *  Initializes pback buffers, and moves normal buffers to safety.
+       *  Assumptions:
+       *  _M_in_cur has already been moved back
+       */
+      void
+      _M_create_pback()
+      {
+ if (!_M_pback_init)
+   {
+     _M_pback_cur_save = this->gptr();
+     _M_pback_end_save = this->egptr();
+     this->setg(&_M_pback, &_M_pback, &_M_pback + 1);
+     _M_pback_init = true;
+   }
+      }
+#pragma empty_line
+      /**
+       *  Deactivates pback buffer contents, and restores normal buffer.
+       *  Assumptions:
+       *  The pback buffer has only moved forward.
+       */
+      void
+      _M_destroy_pback() throw()
+      {
+ if (_M_pback_init)
+   {
+     // Length _M_in_cur moved in the pback buffer.
+     _M_pback_cur_save += this->gptr() != this->eback();
+     this->setg(_M_buf, _M_pback_cur_save, _M_pback_end_save);
+     _M_pback_init = false;
+   }
+      }
+#pragma empty_line
+    public:
+      // Constructors/destructor:
+      /**
+       *  @brief  Does not open any files.
+       *
+       *  The default constructor initializes the parent class using its
+       *  own default ctor.
+       */
+      basic_filebuf();
+#pragma empty_line
+      /**
+       *  @brief  The destructor closes the file first.
+       */
+      virtual
+      ~basic_filebuf()
+      { this->close(); }
+#pragma empty_line
+      // Members:
+      /**
+       *  @brief  Returns true if the external file is open.
+       */
+      bool
+      is_open() const throw()
+      { return _M_file.is_open(); }
+#pragma empty_line
+      /**
+       *  @brief  Opens an external file.
+       *  @param  s  The name of the file.
+       *  @param  mode  The open mode flags.
+       *  @return  @c this on success, NULL on failure
+       *
+       *  If a file is already open, this function immediately fails.
+       *  Otherwise it tries to open the file named @a s using the flags
+       *  given in @a mode.
+       *
+       *  Table 92, adapted here, gives the relation between openmode
+       *  combinations and the equivalent fopen() flags.
+       *  (NB: lines app, in|out|app, in|app, binary|app, binary|in|out|app,
+       *  and binary|in|app per DR 596)
+       *  +---------------------------------------------------------+
+       *  | ios_base Flag combination            stdio equivalent   |
+       *  |binary  in  out  trunc  app                              |
+       *  +---------------------------------------------------------+
+       *  |             +                        w                  |
+       *  |             +           +            a                  |
+       *  |                         +            a                  |
+       *  |             +     +                  w                  |
+       *  |         +                            r                  |
+       *  |         +   +                        r+                 |
+       *  |         +   +     +                  w+                 |
+       *  |         +   +           +            a+                 |
+       *  |         +               +            a+                 |
+       *  +---------------------------------------------------------+
+       *  |   +         +                        wb                 |
+       *  |   +         +           +            ab                 |
+       *  |   +                     +            ab                 |
+       *  |   +         +     +                  wb                 |
+       *  |   +     +                            rb                 |
+       *  |   +     +   +                        r+b                |
+       *  |   +     +   +     +                  w+b                |
+       *  |   +     +   +           +            a+b                |
+       *  |   +     +               +            a+b                |
+       *  +---------------------------------------------------------+
+       */
+      __filebuf_type*
+      open(const char* __s, ios_base::openmode __mode);
+#pragma line 280 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      /**
+       *  @brief  Closes the currently associated file.
+       *  @return  @c this on success, NULL on failure
+       *
+       *  If no file is currently open, this function immediately fails.
+       *
+       *  If a <em>put buffer area</em> exists, @c overflow(eof) is
+       *  called to flush all the characters.  The file is then
+       *  closed.
+       *
+       *  If any operations fail, this function also fails.
+       */
+      __filebuf_type*
+      close();
+#pragma empty_line
+    protected:
+      void
+      _M_allocate_internal_buffer();
+#pragma empty_line
+      void
+      _M_destroy_internal_buffer() throw();
+#pragma empty_line
+      // [27.8.1.4] overridden virtual functions
+      virtual streamsize
+      showmanyc();
+#pragma empty_line
+      // Stroustrup, 1998, p. 628
+      // underflow() and uflow() functions are called to get the next
+      // character from the real input source when the buffer is empty.
+      // Buffered input uses underflow()
+#pragma empty_line
+      virtual int_type
+      underflow();
+#pragma empty_line
+      virtual int_type
+      pbackfail(int_type __c = _Traits::eof());
+#pragma empty_line
+      // Stroustrup, 1998, p 648
+      // The overflow() function is called to transfer characters to the
+      // real output destination when the buffer is full. A call to
+      // overflow(c) outputs the contents of the buffer plus the
+      // character c.
+      // 27.5.2.4.5
+      // Consume some sequence of the characters in the pending sequence.
+      virtual int_type
+      overflow(int_type __c = _Traits::eof());
+#pragma empty_line
+      // Convert internal byte sequence to external, char-based
+      // sequence via codecvt.
+      bool
+      _M_convert_to_external(char_type*, streamsize);
+#pragma empty_line
+      /**
+       *  @brief  Manipulates the buffer.
+       *  @param  s  Pointer to a buffer area.
+       *  @param  n  Size of @a s.
+       *  @return  @c this
+       *
+       *  If no file has been opened, and both @a s and @a n are zero, then
+       *  the stream becomes unbuffered.  Otherwise, @c s is used as a
+       *  buffer; see
+       *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/bk01pt11ch25s02.html
+       *  for more.
+       */
+      virtual __streambuf_type*
+      setbuf(char_type* __s, streamsize __n);
+#pragma empty_line
+      virtual pos_type
+      seekoff(off_type __off, ios_base::seekdir __way,
+       ios_base::openmode __mode = ios_base::in | ios_base::out);
+#pragma empty_line
+      virtual pos_type
+      seekpos(pos_type __pos,
+       ios_base::openmode __mode = ios_base::in | ios_base::out);
+#pragma empty_line
+      // Common code for seekoff, seekpos, and overflow
+      pos_type
+      _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state);
+#pragma empty_line
+      int
+      _M_get_ext_pos(__state_type &__state);
+#pragma empty_line
+      virtual int
+      sync();
+#pragma empty_line
+      virtual void
+      imbue(const locale& __loc);
+#pragma empty_line
+      virtual streamsize
+      xsgetn(char_type* __s, streamsize __n);
+#pragma empty_line
+      virtual streamsize
+      xsputn(const char_type* __s, streamsize __n);
+#pragma empty_line
+      // Flushes output buffer, then writes unshift sequence.
+      bool
+      _M_terminate_output();
+#pragma empty_line
+      /**
+       *  This function sets the pointers of the internal buffer, both get
+       *  and put areas. Typically:
+       *
+       *   __off == egptr() - eback() upon underflow/uflow (@b read mode);
+       *   __off == 0 upon overflow (@b write mode);
+       *   __off == -1 upon open, setbuf, seekoff/pos (@b uncommitted mode).
+       *
+       *  NB: epptr() - pbase() == _M_buf_size - 1, since _M_buf_size
+       *  reflects the actual allocated memory and the last cell is reserved
+       *  for the overflow char of a full put area.
+       */
+      void
+      _M_set_buffer(streamsize __off)
+      {
+  const bool __testin = _M_mode & ios_base::in;
+  const bool __testout = _M_mode & ios_base::out;
+#pragma empty_line
+ if (__testin && __off > 0)
+   this->setg(_M_buf, _M_buf, _M_buf + __off);
+ else
+   this->setg(_M_buf, _M_buf, _M_buf);
+#pragma empty_line
+ if (__testout && __off == 0 && _M_buf_size > 1 )
+   this->setp(_M_buf, _M_buf + _M_buf_size - 1);
+ else
+   this->setp(0, 0);
+      }
+    };
+#pragma empty_line
+  // [27.8.1.5] Template class basic_ifstream
+  /**
+   *  @brief  Controlling input for files.
+   *  @ingroup io
+   *
+   *  This class supports reading from named files, using the inherited
+   *  functions from std::basic_istream.  To control the associated
+   *  sequence, an instance of std::basic_filebuf is used, which this page
+   *  refers to as @c sb.
+   */
+  template<typename _CharT, typename _Traits>
+    class basic_ifstream : public basic_istream<_CharT, _Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+#pragma empty_line
+      // Non-standard types:
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef basic_istream<char_type, traits_type> __istream_type;
+#pragma empty_line
+    private:
+      __filebuf_type _M_filebuf;
+#pragma empty_line
+    public:
+      // Constructors/Destructors:
+      /**
+       *  @brief  Default constructor.
+       *
+       *  Initializes @c sb using its default constructor, and passes
+       *  @c &sb to the base class initializer.  Does not open any files
+       *  (you haven't given it a filename to open).
+       */
+      basic_ifstream() : __istream_type(), _M_filebuf()
+      { this->init(&_M_filebuf); }
+#pragma empty_line
+      /**
+       *  @brief  Create an input file stream.
+       *  @param  s  Null terminated string specifying the filename.
+       *  @param  mode  Open file in specified mode (see std::ios_base).
+       *
+       *  @c ios_base::in is automatically included in @a mode.
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      explicit
+      basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
+      : __istream_type(), _M_filebuf()
+      {
+ this->init(&_M_filebuf);
+ this->open(__s, __mode);
+      }
+#pragma line 484 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      /**
+       *  @brief  The destructor does nothing.
+       *
+       *  The file is closed by the filebuf object, not the formatting
+       *  stream.
+       */
+      ~basic_ifstream()
+      { }
+#pragma empty_line
+      // Members:
+      /**
+       *  @brief  Accessing the underlying buffer.
+       *  @return  The current basic_filebuf buffer.
+       *
+       *  This hides both signatures of std::basic_ios::rdbuf().
+       */
+      __filebuf_type*
+      rdbuf() const
+      { return const_cast<__filebuf_type*>(&_M_filebuf); }
+#pragma empty_line
+      /**
+       *  @brief  Wrapper to test for an open file.
+       *  @return  @c rdbuf()->is_open()
+       */
+      bool
+      is_open()
+      { return _M_filebuf.is_open(); }
+#pragma empty_line
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // 365. Lack of const-qualification in clause 27
+      bool
+      is_open() const
+      { return _M_filebuf.is_open(); }
+#pragma empty_line
+      /**
+       *  @brief  Opens an external file.
+       *  @param  s  The name of the file.
+       *  @param  mode  The open mode flags.
+       *
+       *  Calls @c std::basic_filebuf::open(s,mode|in).  If that function
+       *  fails, @c failbit is set in the stream's error state.
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      void
+      open(const char* __s, ios_base::openmode __mode = ios_base::in)
+      {
+ if (!_M_filebuf.open(__s, __mode | ios_base::in))
+   this->setstate(ios_base::failbit);
+ else
+   // _GLIBCXX_RESOLVE_LIB_DEFECTS
+   // 409. Closing an fstream should clear error state
+   this->clear();
+      }
+#pragma line 561 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      /**
+       *  @brief  Close the file.
+       *
+       *  Calls @c std::basic_filebuf::close().  If that function
+       *  fails, @c failbit is set in the stream's error state.
+       */
+      void
+      close()
+      {
+ if (!_M_filebuf.close())
+   this->setstate(ios_base::failbit);
+      }
+    };
+#pragma empty_line
+#pragma empty_line
+  // [27.8.1.8] Template class basic_ofstream
+  /**
+   *  @brief  Controlling output for files.
+   *  @ingroup io
+   *
+   *  This class supports reading from named files, using the inherited
+   *  functions from std::basic_ostream.  To control the associated
+   *  sequence, an instance of std::basic_filebuf is used, which this page
+   *  refers to as @c sb.
+   */
+  template<typename _CharT, typename _Traits>
+    class basic_ofstream : public basic_ostream<_CharT,_Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+#pragma empty_line
+      // Non-standard types:
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef basic_ostream<char_type, traits_type> __ostream_type;
+#pragma empty_line
+    private:
+      __filebuf_type _M_filebuf;
+#pragma empty_line
+    public:
+      // Constructors:
+      /**
+       *  @brief  Default constructor.
+       *
+       *  Initializes @c sb using its default constructor, and passes
+       *  @c &sb to the base class initializer.  Does not open any files
+       *  (you haven't given it a filename to open).
+       */
+      basic_ofstream(): __ostream_type(), _M_filebuf()
+      { this->init(&_M_filebuf); }
+#pragma empty_line
+      /**
+       *  @brief  Create an output file stream.
+       *  @param  s  Null terminated string specifying the filename.
+       *  @param  mode  Open file in specified mode (see std::ios_base).
+       *
+       *  @c ios_base::out|ios_base::trunc is automatically included in
+       *  @a mode.
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      explicit
+      basic_ofstream(const char* __s,
+       ios_base::openmode __mode = ios_base::out|ios_base::trunc)
+      : __ostream_type(), _M_filebuf()
+      {
+ this->init(&_M_filebuf);
+ this->open(__s, __mode);
+      }
+#pragma line 655 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      /**
+       *  @brief  The destructor does nothing.
+       *
+       *  The file is closed by the filebuf object, not the formatting
+       *  stream.
+       */
+      ~basic_ofstream()
+      { }
+#pragma empty_line
+      // Members:
+      /**
+       *  @brief  Accessing the underlying buffer.
+       *  @return  The current basic_filebuf buffer.
+       *
+       *  This hides both signatures of std::basic_ios::rdbuf().
+       */
+      __filebuf_type*
+      rdbuf() const
+      { return const_cast<__filebuf_type*>(&_M_filebuf); }
+#pragma empty_line
+      /**
+       *  @brief  Wrapper to test for an open file.
+       *  @return  @c rdbuf()->is_open()
+       */
+      bool
+      is_open()
+      { return _M_filebuf.is_open(); }
+#pragma empty_line
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // 365. Lack of const-qualification in clause 27
+      bool
+      is_open() const
+      { return _M_filebuf.is_open(); }
+#pragma empty_line
+      /**
+       *  @brief  Opens an external file.
+       *  @param  s  The name of the file.
+       *  @param  mode  The open mode flags.
+       *
+       *  Calls @c std::basic_filebuf::open(s,mode|out|trunc).  If that
+       *  function fails, @c failbit is set in the stream's error state.
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      void
+      open(const char* __s,
+    ios_base::openmode __mode = ios_base::out | ios_base::trunc)
+      {
+ if (!_M_filebuf.open(__s, __mode | ios_base::out))
+   this->setstate(ios_base::failbit);
+ else
+   // _GLIBCXX_RESOLVE_LIB_DEFECTS
+   // 409. Closing an fstream should clear error state
+   this->clear();
+      }
+#pragma line 734 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      /**
+       *  @brief  Close the file.
+       *
+       *  Calls @c std::basic_filebuf::close().  If that function
+       *  fails, @c failbit is set in the stream's error state.
+       */
+      void
+      close()
+      {
+ if (!_M_filebuf.close())
+   this->setstate(ios_base::failbit);
+      }
+    };
+#pragma empty_line
+#pragma empty_line
+  // [27.8.1.11] Template class basic_fstream
+  /**
+   *  @brief  Controlling input and output for files.
+   *  @ingroup io
+   *
+   *  This class supports reading from and writing to named files, using
+   *  the inherited functions from std::basic_iostream.  To control the
+   *  associated sequence, an instance of std::basic_filebuf is used, which
+   *  this page refers to as @c sb.
+   */
+  template<typename _CharT, typename _Traits>
+    class basic_fstream : public basic_iostream<_CharT, _Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+#pragma empty_line
+      // Non-standard types:
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef basic_ios<char_type, traits_type> __ios_type;
+      typedef basic_iostream<char_type, traits_type> __iostream_type;
+#pragma empty_line
+    private:
+      __filebuf_type _M_filebuf;
+#pragma empty_line
+    public:
+      // Constructors/destructor:
+      /**
+       *  @brief  Default constructor.
+       *
+       *  Initializes @c sb using its default constructor, and passes
+       *  @c &sb to the base class initializer.  Does not open any files
+       *  (you haven't given it a filename to open).
+       */
+      basic_fstream()
+      : __iostream_type(), _M_filebuf()
+      { this->init(&_M_filebuf); }
+#pragma empty_line
+      /**
+       *  @brief  Create an input/output file stream.
+       *  @param  s  Null terminated string specifying the filename.
+       *  @param  mode  Open file in specified mode (see std::ios_base).
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      explicit
+      basic_fstream(const char* __s,
+      ios_base::openmode __mode = ios_base::in | ios_base::out)
+      : __iostream_type(0), _M_filebuf()
+      {
+ this->init(&_M_filebuf);
+ this->open(__s, __mode);
+      }
+#pragma line 824 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      /**
+       *  @brief  The destructor does nothing.
+       *
+       *  The file is closed by the filebuf object, not the formatting
+       *  stream.
+       */
+      ~basic_fstream()
+      { }
+#pragma empty_line
+      // Members:
+      /**
+       *  @brief  Accessing the underlying buffer.
+       *  @return  The current basic_filebuf buffer.
+       *
+       *  This hides both signatures of std::basic_ios::rdbuf().
+       */
+      __filebuf_type*
+      rdbuf() const
+      { return const_cast<__filebuf_type*>(&_M_filebuf); }
+#pragma empty_line
+      /**
+       *  @brief  Wrapper to test for an open file.
+       *  @return  @c rdbuf()->is_open()
+       */
+      bool
+      is_open()
+      { return _M_filebuf.is_open(); }
+#pragma empty_line
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // 365. Lack of const-qualification in clause 27
+      bool
+      is_open() const
+      { return _M_filebuf.is_open(); }
+#pragma empty_line
+      /**
+       *  @brief  Opens an external file.
+       *  @param  s  The name of the file.
+       *  @param  mode  The open mode flags.
+       *
+       *  Calls @c std::basic_filebuf::open(s,mode).  If that
+       *  function fails, @c failbit is set in the stream's error state.
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      void
+      open(const char* __s,
+    ios_base::openmode __mode = ios_base::in | ios_base::out)
+      {
+ if (!_M_filebuf.open(__s, __mode))
+   this->setstate(ios_base::failbit);
+ else
+   // _GLIBCXX_RESOLVE_LIB_DEFECTS
+   // 409. Closing an fstream should clear error state
+   this->clear();
+      }
+#pragma line 903 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+      /**
+       *  @brief  Close the file.
+       *
+       *  Calls @c std::basic_filebuf::close().  If that function
+       *  fails, @c failbit is set in the stream's error state.
+       */
+      void
+      close()
+      {
+ if (!_M_filebuf.close())
+   this->setstate(ios_base::failbit);
+      }
+    };
+#pragma empty_line
+#pragma empty_line
+} // namespace
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 1 3
+// File based streams -*- C++ -*-
+#pragma empty_line
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006,
+// 2007, 2008, 2009, 2010, 2011
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+/** @file bits/fstream.tcc
+ *  This is an internal header file, included by other library headers.
+ *  Do not attempt to use it directly. @headername{fstream}
+ */
+#pragma empty_line
+//
+// ISO C++ 14882: 27.8  File-based streams
+//
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+#pragma empty_line
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    void
+    basic_filebuf<_CharT, _Traits>::
+    _M_allocate_internal_buffer()
+    {
+      // Allocate internal buffer only if one doesn't already exist
+      // (either allocated or provided by the user via setbuf).
+      if (!_M_buf_allocated && !_M_buf)
+ {
+   _M_buf = new char_type[_M_buf_size];
+   _M_buf_allocated = true;
+ }
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    void
+    basic_filebuf<_CharT, _Traits>::
+    _M_destroy_internal_buffer() throw()
+    {
+      if (_M_buf_allocated)
+ {
+   delete [] _M_buf;
+   _M_buf = 0;
+   _M_buf_allocated = false;
+ }
+      delete [] _M_ext_buf;
+      _M_ext_buf = 0;
+      _M_ext_buf_size = 0;
+      _M_ext_next = 0;
+      _M_ext_end = 0;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    basic_filebuf<_CharT, _Traits>::
+    basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
+    _M_mode(ios_base::openmode(0)), _M_state_beg(), _M_state_cur(),
+    _M_state_last(), _M_buf(0), _M_buf_size(8192),
+    _M_buf_allocated(false), _M_reading(false), _M_writing(false), _M_pback(),
+    _M_pback_cur_save(0), _M_pback_end_save(0), _M_pback_init(false),
+    _M_codecvt(0), _M_ext_buf(0), _M_ext_buf_size(0), _M_ext_next(0),
+    _M_ext_end(0)
+    {
+      if (has_facet<__codecvt_type>(this->_M_buf_locale))
+ _M_codecvt = &use_facet<__codecvt_type>(this->_M_buf_locale);
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
+    basic_filebuf<_CharT, _Traits>::
+    open(const char* __s, ios_base::openmode __mode)
+    {
+      __filebuf_type *__ret = 0;
+      if (!this->is_open())
+ {
+   _M_file.open(__s, __mode);
+   if (this->is_open())
+     {
+       _M_allocate_internal_buffer();
+       _M_mode = __mode;
+#pragma empty_line
+       // Setup initial buffer to 'uncommitted' mode.
+       _M_reading = false;
+       _M_writing = false;
+       _M_set_buffer(-1);
+#pragma empty_line
+       // Reset to initial state.
+       _M_state_last = _M_state_cur = _M_state_beg;
+#pragma empty_line
+       // 27.8.1.3,4
+       if ((__mode & ios_base::ate)
+    && this->seekoff(0, ios_base::end, __mode)
+    == pos_type(off_type(-1)))
+  this->close();
+       else
+  __ret = this;
+     }
+ }
+      return __ret;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
+    basic_filebuf<_CharT, _Traits>::
+    close()
+    {
+      if (!this->is_open())
+ return 0;
+#pragma empty_line
+      bool __testfail = false;
+      {
+ // NB: Do this here so that re-opened filebufs will be cool...
+ struct __close_sentry
+ {
+   basic_filebuf *__fb;
+   __close_sentry (basic_filebuf *__fbi): __fb(__fbi) { }
+   ~__close_sentry ()
+   {
+     __fb->_M_mode = ios_base::openmode(0);
+     __fb->_M_pback_init = false;
+     __fb->_M_destroy_internal_buffer();
+     __fb->_M_reading = false;
+     __fb->_M_writing = false;
+     __fb->_M_set_buffer(-1);
+     __fb->_M_state_last = __fb->_M_state_cur = __fb->_M_state_beg;
+   }
+ } __cs (this);
+#pragma empty_line
+ if (true)
+   {
+     if (!_M_terminate_output())
+       __testfail = true;
+   }
+ if (false)
+   {
+     _M_file.close();
+                            ;
+   }
+ if (false)
+   { __testfail = true; }
+      }
+#pragma empty_line
+      if (!_M_file.close())
+ __testfail = true;
+#pragma empty_line
+      if (__testfail)
+ return 0;
+      else
+ return this;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    streamsize
+    basic_filebuf<_CharT, _Traits>::
+    showmanyc()
+    {
+      streamsize __ret = -1;
+      const bool __testin = _M_mode & ios_base::in;
+      if (__testin && this->is_open())
+ {
+   // For a stateful encoding (-1) the pending sequence might be just
+   // shift and unshift prefixes with no actual character.
+   __ret = this->egptr() - this->gptr();
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+   if (__check_facet(_M_codecvt).encoding() >= 0)
+#pragma empty_line
+     __ret += _M_file.showmanyc() / _M_codecvt->max_length();
+ }
+      return __ret;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::int_type
+    basic_filebuf<_CharT, _Traits>::
+    underflow()
+    {
+      int_type __ret = traits_type::eof();
+      const bool __testin = _M_mode & ios_base::in;
+      if (__testin)
+ {
+   if (_M_writing)
+     {
+       if (overflow() == traits_type::eof())
+  return __ret;
+       _M_set_buffer(-1);
+       _M_writing = false;
+     }
+   // Check for pback madness, and if so switch back to the
+   // normal buffers and jet outta here before expensive
+   // fileops happen...
+   _M_destroy_pback();
+#pragma empty_line
+   if (this->gptr() < this->egptr())
+     return traits_type::to_int_type(*this->gptr());
+#pragma empty_line
+   // Get and convert input sequence.
+   const size_t __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
+#pragma empty_line
+   // Will be set to true if ::read() returns 0 indicating EOF.
+   bool __got_eof = false;
+   // Number of internal characters produced.
+   streamsize __ilen = 0;
+   codecvt_base::result __r = codecvt_base::ok;
+   if (__check_facet(_M_codecvt).always_noconv())
+     {
+       __ilen = _M_file.xsgetn(reinterpret_cast<char*>(this->eback()),
+          __buflen);
+       if (__ilen == 0)
+  __got_eof = true;
+     }
+   else
+     {
+              // Worst-case number of external bytes.
+       // XXX Not done encoding() == -1.
+       const int __enc = _M_codecvt->encoding();
+       streamsize __blen; // Minimum buffer size.
+       streamsize __rlen; // Number of chars to read.
+       if (__enc > 0)
+  __blen = __rlen = __buflen * __enc;
+       else
+  {
+    __blen = __buflen + _M_codecvt->max_length() - 1;
+    __rlen = __buflen;
+  }
+       const streamsize __remainder = _M_ext_end - _M_ext_next;
+       __rlen = __rlen > __remainder ? __rlen - __remainder : 0;
+#pragma empty_line
+       // An imbue in 'read' mode implies first converting the external
+       // chars already present.
+       if (_M_reading && this->egptr() == this->eback() && __remainder)
+  __rlen = 0;
+#pragma empty_line
+       // Allocate buffer if necessary and move unconverted
+       // bytes to front.
+       if (_M_ext_buf_size < __blen)
+  {
+    char* __buf = new char[__blen];
+    if (__remainder)
+      __builtin_memcpy(__buf, _M_ext_next, __remainder);
+#pragma empty_line
+    delete [] _M_ext_buf;
+    _M_ext_buf = __buf;
+    _M_ext_buf_size = __blen;
+  }
+       else if (__remainder)
+  __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
+#pragma empty_line
+       _M_ext_next = _M_ext_buf;
+       _M_ext_end = _M_ext_buf + __remainder;
+       _M_state_last = _M_state_cur;
+#pragma empty_line
+       do
+  {
+    if (__rlen > 0)
+      {
+        // Sanity check!
+        // This may fail if the return value of
+        // codecvt::max_length() is bogus.
+        if (_M_ext_end - _M_ext_buf + __rlen > _M_ext_buf_size)
+   {
+     __throw_ios_failure(("basic_filebuf::underflow " "codecvt::max_length() " "is not valid"));
+#pragma empty_line
+#pragma empty_line
+   }
+        streamsize __elen = _M_file.xsgetn(_M_ext_end, __rlen);
+        if (__elen == 0)
+   __got_eof = true;
+        else if (__elen == -1)
+   break;
+        _M_ext_end += __elen;
+      }
+#pragma empty_line
+    char_type* __iend = this->eback();
+    if (_M_ext_next < _M_ext_end)
+      __r = _M_codecvt->in(_M_state_cur, _M_ext_next,
+      _M_ext_end, _M_ext_next,
+      this->eback(),
+      this->eback() + __buflen, __iend);
+    if (__r == codecvt_base::noconv)
+      {
+        size_t __avail = _M_ext_end - _M_ext_buf;
+        __ilen = std::min(__avail, __buflen);
+        traits_type::copy(this->eback(),
+     reinterpret_cast<char_type*>
+     (_M_ext_buf), __ilen);
+        _M_ext_next = _M_ext_buf + __ilen;
+      }
+    else
+      __ilen = __iend - this->eback();
+#pragma empty_line
+    // _M_codecvt->in may return error while __ilen > 0: this is
+    // ok, and actually occurs in case of mixed encodings (e.g.,
+    // XML files).
+    if (__r == codecvt_base::error)
+      break;
+#pragma empty_line
+    __rlen = 1;
+  }
+       while (__ilen == 0 && !__got_eof);
+     }
+#pragma empty_line
+   if (__ilen > 0)
+     {
+       _M_set_buffer(__ilen);
+       _M_reading = true;
+       __ret = traits_type::to_int_type(*this->gptr());
+     }
+   else if (__got_eof)
+     {
+       // If the actual end of file is reached, set 'uncommitted'
+       // mode, thus allowing an immediate write without an
+       // intervening seek.
+       _M_set_buffer(-1);
+       _M_reading = false;
+       // However, reaching it while looping on partial means that
+       // the file has got an incomplete character.
+       if (__r == codecvt_base::partial)
+  __throw_ios_failure(("basic_filebuf::underflow " "incomplete character in file"));
+#pragma empty_line
+     }
+   else if (__r == codecvt_base::error)
+     __throw_ios_failure(("basic_filebuf::underflow " "invalid byte sequence in file"));
+#pragma empty_line
+   else
+     __throw_ios_failure(("basic_filebuf::underflow " "error reading the file"));
+#pragma empty_line
+ }
+      return __ret;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::int_type
+    basic_filebuf<_CharT, _Traits>::
+    pbackfail(int_type __i)
+    {
+      int_type __ret = traits_type::eof();
+      const bool __testin = _M_mode & ios_base::in;
+      if (__testin)
+ {
+   if (_M_writing)
+     {
+       if (overflow() == traits_type::eof())
+  return __ret;
+       _M_set_buffer(-1);
+       _M_writing = false;
+     }
+   // Remember whether the pback buffer is active, otherwise below
+   // we may try to store in it a second char (libstdc++/9761).
+   const bool __testpb = _M_pback_init;
+   const bool __testeof = traits_type::eq_int_type(__i, __ret);
+   int_type __tmp;
+   if (this->eback() < this->gptr())
+     {
+       this->gbump(-1);
+       __tmp = traits_type::to_int_type(*this->gptr());
+     }
+   else if (this->seekoff(-1, ios_base::cur) != pos_type(off_type(-1)))
+     {
+       __tmp = this->underflow();
+       if (traits_type::eq_int_type(__tmp, __ret))
+  return __ret;
+     }
+   else
+     {
+       // At the beginning of the buffer, need to make a
+       // putback position available.  But the seek may fail
+       // (f.i., at the beginning of a file, see
+       // libstdc++/9439) and in that case we return
+       // traits_type::eof().
+       return __ret;
+     }
+#pragma empty_line
+   // Try to put back __i into input sequence in one of three ways.
+   // Order these tests done in is unspecified by the standard.
+   if (!__testeof && traits_type::eq_int_type(__i, __tmp))
+     __ret = __i;
+   else if (__testeof)
+     __ret = traits_type::not_eof(__i);
+   else if (!__testpb)
+     {
+       _M_create_pback();
+       _M_reading = true;
+       *this->gptr() = traits_type::to_char_type(__i);
+       __ret = __i;
+     }
+ }
+      return __ret;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::int_type
+    basic_filebuf<_CharT, _Traits>::
+    overflow(int_type __c)
+    {
+      int_type __ret = traits_type::eof();
+      const bool __testeof = traits_type::eq_int_type(__c, __ret);
+      const bool __testout = _M_mode & ios_base::out;
+      if (__testout)
+ {
+          if (_M_reading)
+            {
+              _M_destroy_pback();
+              const int __gptr_off = _M_get_ext_pos(_M_state_last);
+              if (_M_seek(__gptr_off, ios_base::cur, _M_state_last)
+                  == pos_type(off_type(-1)))
+                return __ret;
+            }
+   if (this->pbase() < this->pptr())
+     {
+       // If appropriate, append the overflow char.
+       if (!__testeof)
+  {
+    *this->pptr() = traits_type::to_char_type(__c);
+    this->pbump(1);
+  }
+#pragma empty_line
+       // Convert pending sequence to external representation,
+       // and output.
+       if (_M_convert_to_external(this->pbase(),
+      this->pptr() - this->pbase()))
+  {
+    _M_set_buffer(0);
+    __ret = traits_type::not_eof(__c);
+  }
+     }
+   else if (_M_buf_size > 1)
+     {
+       // Overflow in 'uncommitted' mode: set _M_writing, set
+       // the buffer to the initial 'write' mode, and put __c
+       // into the buffer.
+       _M_set_buffer(0);
+       _M_writing = true;
+       if (!__testeof)
+  {
+    *this->pptr() = traits_type::to_char_type(__c);
+    this->pbump(1);
+  }
+       __ret = traits_type::not_eof(__c);
+     }
+   else
+     {
+       // Unbuffered.
+       char_type __conv = traits_type::to_char_type(__c);
+       if (__testeof || _M_convert_to_external(&__conv, 1))
+  {
+    _M_writing = true;
+    __ret = traits_type::not_eof(__c);
+  }
+     }
+ }
+      return __ret;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    bool
+    basic_filebuf<_CharT, _Traits>::
+    _M_convert_to_external(_CharT* __ibuf, streamsize __ilen)
+    {
+      // Sizes of external and pending output.
+      streamsize __elen;
+      streamsize __plen;
+      if (__check_facet(_M_codecvt).always_noconv())
+ {
+   __elen = _M_file.xsputn(reinterpret_cast<char*>(__ibuf), __ilen);
+   __plen = __ilen;
+ }
+      else
+ {
+   // Worst-case number of external bytes needed.
+   // XXX Not done encoding() == -1.
+   streamsize __blen = __ilen * _M_codecvt->max_length();
+   char* __buf = static_cast<char*>(__builtin_alloca(__blen));
+#pragma empty_line
+   char* __bend;
+   const char_type* __iend;
+   codecvt_base::result __r;
+   __r = _M_codecvt->out(_M_state_cur, __ibuf, __ibuf + __ilen,
+    __iend, __buf, __buf + __blen, __bend);
+#pragma empty_line
+   if (__r == codecvt_base::ok || __r == codecvt_base::partial)
+     __blen = __bend - __buf;
+   else if (__r == codecvt_base::noconv)
+     {
+       // Same as the always_noconv case above.
+       __buf = reinterpret_cast<char*>(__ibuf);
+       __blen = __ilen;
+     }
+   else
+     __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error"));
+#pragma empty_line
+#pragma empty_line
+   __elen = _M_file.xsputn(__buf, __blen);
+   __plen = __blen;
+#pragma empty_line
+   // Try once more for partial conversions.
+   if (__r == codecvt_base::partial && __elen == __plen)
+     {
+       const char_type* __iresume = __iend;
+       streamsize __rlen = this->pptr() - __iend;
+       __r = _M_codecvt->out(_M_state_cur, __iresume,
+        __iresume + __rlen, __iend, __buf,
+        __buf + __blen, __bend);
+       if (__r != codecvt_base::error)
+  {
+    __rlen = __bend - __buf;
+    __elen = _M_file.xsputn(__buf, __rlen);
+    __plen = __rlen;
+  }
+       else
+  __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error"));
+#pragma empty_line
+     }
+ }
+      return __elen == __plen;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    streamsize
+    basic_filebuf<_CharT, _Traits>::
+    xsgetn(_CharT* __s, streamsize __n)
+    {
+      // Clear out pback buffer before going on to the real deal...
+      streamsize __ret = 0;
+      if (_M_pback_init)
+ {
+   if (__n > 0 && this->gptr() == this->eback())
+     {
+       *__s++ = *this->gptr(); // emulate non-underflowing sbumpc
+       this->gbump(1);
+       __ret = 1;
+       --__n;
+     }
+   _M_destroy_pback();
+ }
+      else if (_M_writing)
+ {
+    if (overflow() == traits_type::eof())
+      return __ret;
+    _M_set_buffer(-1);
+    _M_writing = false;
+  }
+#pragma empty_line
+      // Optimization in the always_noconv() case, to be generalized in the
+      // future: when __n > __buflen we read directly instead of using the
+      // buffer repeatedly.
+      const bool __testin = _M_mode & ios_base::in;
+      const streamsize __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
+#pragma empty_line
+      if (__n > __buflen && __check_facet(_M_codecvt).always_noconv()
+     && __testin)
+   {
+     // First, copy the chars already present in the buffer.
+     const streamsize __avail = this->egptr() - this->gptr();
+     if (__avail != 0)
+       {
+        traits_type::copy(__s, this->gptr(), __avail);
+         __s += __avail;
+        this->setg(this->eback(), this->gptr() + __avail,
+     this->egptr());
+        __ret += __avail;
+        __n -= __avail;
+       }
+#pragma empty_line
+     // Need to loop in case of short reads (relatively common
+     // with pipes).
+     streamsize __len;
+     for (;;)
+       {
+         __len = _M_file.xsgetn(reinterpret_cast<char*>(__s),
+           __n);
+         if (__len == -1)
+    __throw_ios_failure(("basic_filebuf::xsgetn " "error reading the file"));
+#pragma empty_line
+         if (__len == 0)
+    break;
+#pragma empty_line
+         __n -= __len;
+         __ret += __len;
+         if (__n == 0)
+    break;
+#pragma empty_line
+         __s += __len;
+       }
+#pragma empty_line
+     if (__n == 0)
+       {
+         _M_set_buffer(0);
+         _M_reading = true;
+       }
+     else if (__len == 0)
+       {
+         // If end of file is reached, set 'uncommitted'
+         // mode, thus allowing an immediate write without
+         // an intervening seek.
+         _M_set_buffer(-1);
+         _M_reading = false;
+       }
+   }
+      else
+   __ret += __streambuf_type::xsgetn(__s, __n);
+#pragma empty_line
+      return __ret;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    streamsize
+    basic_filebuf<_CharT, _Traits>::
+    xsputn(const _CharT* __s, streamsize __n)
+    {
+      streamsize __ret = 0;
+      // Optimization in the always_noconv() case, to be generalized in the
+      // future: when __n is sufficiently large we write directly instead of
+      // using the buffer.
+      const bool __testout = _M_mode & ios_base::out;
+      if (__check_facet(_M_codecvt).always_noconv()
+     && __testout && !_M_reading)
+ {
+   // Measurement would reveal the best choice.
+   const streamsize __chunk = 1ul << 10;
+   streamsize __bufavail = this->epptr() - this->pptr();
+#pragma empty_line
+   // Don't mistake 'uncommitted' mode buffered with unbuffered.
+   if (!_M_writing && _M_buf_size > 1)
+     __bufavail = _M_buf_size - 1;
+#pragma empty_line
+   const streamsize __limit = std::min(__chunk, __bufavail);
+   if (__n >= __limit)
+     {
+       const streamsize __buffill = this->pptr() - this->pbase();
+       const char* __buf = reinterpret_cast<const char*>(this->pbase());
+       __ret = _M_file.xsputn_2(__buf, __buffill,
+           reinterpret_cast<const char*>(__s),
+           __n);
+       if (__ret == __buffill + __n)
+  {
+    _M_set_buffer(0);
+    _M_writing = true;
+  }
+       if (__ret > __buffill)
+  __ret -= __buffill;
+       else
+  __ret = 0;
+     }
+   else
+     __ret = __streambuf_type::xsputn(__s, __n);
+ }
+       else
+  __ret = __streambuf_type::xsputn(__s, __n);
+       return __ret;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::__streambuf_type*
+    basic_filebuf<_CharT, _Traits>::
+    setbuf(char_type* __s, streamsize __n)
+    {
+      if (!this->is_open())
+ {
+   if (__s == 0 && __n == 0)
+     _M_buf_size = 1;
+   else if (__s && __n > 0)
+     {
+       // This is implementation-defined behavior, and assumes that
+       // an external char_type array of length __n exists and has
+       // been pre-allocated. If this is not the case, things will
+       // quickly blow up. When __n > 1, __n - 1 positions will be
+       // used for the get area, __n - 1 for the put area and 1
+       // position to host the overflow char of a full put area.
+       // When __n == 1, 1 position will be used for the get area
+       // and 0 for the put area, as in the unbuffered case above.
+       _M_buf = __s;
+       _M_buf_size = __n;
+     }
+ }
+      return this;
+    }
+#pragma empty_line
+#pragma empty_line
+  // According to 27.8.1.4 p11 - 13, seekoff should ignore the last
+  // argument (of type openmode).
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::pos_type
+    basic_filebuf<_CharT, _Traits>::
+    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode)
+    {
+      int __width = 0;
+      if (_M_codecvt)
+ __width = _M_codecvt->encoding();
+      if (__width < 0)
+ __width = 0;
+#pragma empty_line
+      pos_type __ret = pos_type(off_type(-1));
+      const bool __testfail = __off != 0 && __width <= 0;
+      if (this->is_open() && !__testfail)
+ {
+   // tellg and tellp queries do not affect any state, unless
+   // ! always_noconv and the put sequence is not empty.
+   // In that case, determining the position requires converting the
+   // put sequence. That doesn't use ext_buf, so requires a flush.
+   bool __no_movement = __way == ios_base::cur && __off == 0
+     && (!_M_writing || _M_codecvt->always_noconv());
+#pragma empty_line
+   // Ditch any pback buffers to avoid confusion.
+   if (!__no_movement)
+     _M_destroy_pback();
+#pragma empty_line
+   // Correct state at destination. Note that this is the correct
+   // state for the current position during output, because
+   // codecvt::unshift() returns the state to the initial state.
+   // This is also the correct state at the end of the file because
+   // an unshift sequence should have been written at the end.
+   __state_type __state = _M_state_beg;
+   off_type __computed_off = __off * __width;
+   if (_M_reading && __way == ios_base::cur)
+     {
+       __state = _M_state_last;
+       __computed_off += _M_get_ext_pos(__state);
+     }
+   if (!__no_movement)
+     __ret = _M_seek(__computed_off, __way, __state);
+   else
+     {
+       if (_M_writing)
+  __computed_off = this->pptr() - this->pbase();
+#pragma empty_line
+        off_type __file_off = _M_file.seekoff(0, ios_base::cur);
+        if (__file_off != off_type(-1))
+  {
+    __ret = __file_off + __computed_off;
+    __ret.state(__state);
+  }
+     }
+ }
+      return __ret;
+    }
+#pragma empty_line
+  // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  // 171. Strange seekpos() semantics due to joint position
+  // According to the resolution of DR 171, seekpos should ignore the last
+  // argument (of type openmode).
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::pos_type
+    basic_filebuf<_CharT, _Traits>::
+    seekpos(pos_type __pos, ios_base::openmode)
+    {
+      pos_type __ret = pos_type(off_type(-1));
+      if (this->is_open())
+ {
+   // Ditch any pback buffers to avoid confusion.
+   _M_destroy_pback();
+   __ret = _M_seek(off_type(__pos), ios_base::beg, __pos.state());
+ }
+      return __ret;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::pos_type
+    basic_filebuf<_CharT, _Traits>::
+    _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state)
+    {
+      pos_type __ret = pos_type(off_type(-1));
+      if (_M_terminate_output())
+ {
+   off_type __file_off = _M_file.seekoff(__off, __way);
+   if (__file_off != off_type(-1))
+     {
+       _M_reading = false;
+       _M_writing = false;
+       _M_ext_next = _M_ext_end = _M_ext_buf;
+       _M_set_buffer(-1);
+       _M_state_cur = __state;
+       __ret = __file_off;
+       __ret.state(_M_state_cur);
+     }
+ }
+      return __ret;
+    }
+#pragma empty_line
+  // Returns the distance from the end of the ext buffer to the point
+  // corresponding to gptr(). This is a negative value. Updates __state
+  // from eback() correspondence to gptr().
+  template<typename _CharT, typename _Traits>
+    int basic_filebuf<_CharT, _Traits>::
+    _M_get_ext_pos(__state_type& __state)
+    {
+      if (_M_codecvt->always_noconv())
+        return this->gptr() - this->egptr();
+      else
+        {
+          // Calculate offset from _M_ext_buf that corresponds to
+          // gptr(). Precondition: __state == _M_state_last, which
+          // corresponds to eback().
+          const int __gptr_off =
+            _M_codecvt->length(__state, _M_ext_buf, _M_ext_next,
+                               this->gptr() - this->eback());
+          return _M_ext_buf + __gptr_off - _M_ext_end;
+        }
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    bool
+    basic_filebuf<_CharT, _Traits>::
+    _M_terminate_output()
+    {
+      // Part one: update the output sequence.
+      bool __testvalid = true;
+      if (this->pbase() < this->pptr())
+ {
+   const int_type __tmp = this->overflow();
+   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
+     __testvalid = false;
+ }
+#pragma empty_line
+      // Part two: output unshift sequence.
+      if (_M_writing && !__check_facet(_M_codecvt).always_noconv()
+   && __testvalid)
+ {
+   // Note: this value is arbitrary, since there is no way to
+   // get the length of the unshift sequence from codecvt,
+   // without calling unshift.
+   const size_t __blen = 128;
+   char __buf[__blen];
+   codecvt_base::result __r;
+   streamsize __ilen = 0;
+#pragma empty_line
+   do
+     {
+       char* __next;
+       __r = _M_codecvt->unshift(_M_state_cur, __buf,
+     __buf + __blen, __next);
+       if (__r == codecvt_base::error)
+  __testvalid = false;
+       else if (__r == codecvt_base::ok ||
+         __r == codecvt_base::partial)
+  {
+    __ilen = __next - __buf;
+    if (__ilen > 0)
+      {
+        const streamsize __elen = _M_file.xsputn(__buf, __ilen);
+        if (__elen != __ilen)
+   __testvalid = false;
+      }
+  }
+     }
+   while (__r == codecvt_base::partial && __ilen > 0 && __testvalid);
+#pragma empty_line
+   if (__testvalid)
+     {
+       // This second call to overflow() is required by the standard,
+       // but it's not clear why it's needed, since the output buffer
+       // should be empty by this point (it should have been emptied
+       // in the first call to overflow()).
+       const int_type __tmp = this->overflow();
+       if (traits_type::eq_int_type(__tmp, traits_type::eof()))
+  __testvalid = false;
+     }
+ }
+      return __testvalid;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    int
+    basic_filebuf<_CharT, _Traits>::
+    sync()
+    {
+      // Make sure that the internal buffer resyncs its idea of
+      // the file position with the external file.
+      int __ret = 0;
+      if (this->pbase() < this->pptr())
+ {
+   const int_type __tmp = this->overflow();
+   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
+     __ret = -1;
+ }
+      return __ret;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    void
+    basic_filebuf<_CharT, _Traits>::
+    imbue(const locale& __loc)
+    {
+      bool __testvalid = true;
+#pragma empty_line
+      const __codecvt_type* _M_codecvt_tmp = 0;
+      if (__builtin_expect(has_facet<__codecvt_type>(__loc), true))
+ _M_codecvt_tmp = &use_facet<__codecvt_type>(__loc);
+#pragma empty_line
+      if (this->is_open())
+ {
+   // encoding() == -1 is ok only at the beginning.
+   if ((_M_reading || _M_writing)
+       && __check_facet(_M_codecvt).encoding() == -1)
+     __testvalid = false;
+   else
+     {
+       if (_M_reading)
+  {
+    if (__check_facet(_M_codecvt).always_noconv())
+      {
+        if (_M_codecvt_tmp
+     && !__check_facet(_M_codecvt_tmp).always_noconv())
+   __testvalid = this->seekoff(0, ios_base::cur, _M_mode)
+                 != pos_type(off_type(-1));
+      }
+    else
+      {
+        // External position corresponding to gptr().
+        _M_ext_next = _M_ext_buf
+   + _M_codecvt->length(_M_state_last, _M_ext_buf,
+          _M_ext_next,
+          this->gptr() - this->eback());
+        const streamsize __remainder = _M_ext_end - _M_ext_next;
+        if (__remainder)
+   __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
+#pragma empty_line
+        _M_ext_next = _M_ext_buf;
+        _M_ext_end = _M_ext_buf + __remainder;
+        _M_set_buffer(-1);
+        _M_state_last = _M_state_cur = _M_state_beg;
+      }
+  }
+       else if (_M_writing && (__testvalid = _M_terminate_output()))
+  _M_set_buffer(-1);
+     }
+ }
+#pragma empty_line
+      if (__testvalid)
+ _M_codecvt = _M_codecvt_tmp;
+      else
+ _M_codecvt = 0;
+    }
+#pragma empty_line
+  // Inhibit implicit instantiations for required instantiations,
+  // which are defined via explicit instantiations elsewhere.
+#pragma empty_line
+  extern template class basic_filebuf<char>;
+  extern template class basic_ifstream<char>;
+  extern template class basic_ofstream<char>;
+  extern template class basic_fstream<char>;
+#pragma empty_line
+#pragma empty_line
+  extern template class basic_filebuf<wchar_t>;
+  extern template class basic_ifstream<wchar_t>;
+  extern template class basic_ofstream<wchar_t>;
+  extern template class basic_fstream<wchar_t>;
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+} // namespace std
+#pragma line 921 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+#pragma line 8 "dut.cpp" 2
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3
+// Standard iostream objects -*- C++ -*-
+#pragma empty_line
+// Copyright (C) 1997, 1998, 1999, 2001, 2002, 2005, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+/** @file include/iostream
+ *  This is a Standard C++ Library header.
+ */
+#pragma empty_line
+//
+// ISO C++ 14882: 27.3  Standard iostream objects
+//
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
 #pragma empty_line
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -30505,7 +34129,484 @@ namespace std __attribute__ ((__visibility__ ("default")))
 #pragma empty_line
 #pragma empty_line
 } // namespace
-#pragma line 69 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h" 2
+#pragma line 9 "dut.cpp" 2
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 1 3
+// Standard stream manipulators -*- C++ -*-
+#pragma empty_line
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+#pragma empty_line
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+#pragma empty_line
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+#pragma empty_line
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+#pragma empty_line
+/** @file include/iomanip
+ *  This is a Standard C++ Library header.
+ */
+#pragma empty_line
+//
+// ISO C++ 14882: 27.6.3  Standard manipulators
+//
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+#pragma line 47 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+#pragma empty_line
+#pragma empty_line
+  // [27.6.3] standard manipulators
+  // Also see DR 183.
+#pragma empty_line
+  struct _Resetiosflags { ios_base::fmtflags _M_mask; };
+#pragma empty_line
+  /**
+   *  @brief  Manipulator for @c setf.
+   *  @param  mask  A format flags mask.
+   *
+   *  Sent to a stream object, this manipulator resets the specified flags,
+   *  via @e stream.setf(0,mask).
+  */
+  inline _Resetiosflags
+  resetiosflags(ios_base::fmtflags __mask)
+  { return { __mask }; }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Resetiosflags __f)
+    {
+      __is.setf(ios_base::fmtflags(0), __f._M_mask);
+      return __is;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+    {
+      __os.setf(ios_base::fmtflags(0), __f._M_mask);
+      return __os;
+    }
+#pragma empty_line
+#pragma empty_line
+  struct _Setiosflags { ios_base::fmtflags _M_mask; };
+#pragma empty_line
+  /**
+   *  @brief  Manipulator for @c setf.
+   *  @param  mask  A format flags mask.
+   *
+   *  Sent to a stream object, this manipulator sets the format flags
+   *  to @a mask.
+  */
+  inline _Setiosflags
+  setiosflags(ios_base::fmtflags __mask)
+  { return { __mask }; }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setiosflags __f)
+    {
+      __is.setf(__f._M_mask);
+      return __is;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+    {
+      __os.setf(__f._M_mask);
+      return __os;
+    }
+#pragma empty_line
+#pragma empty_line
+  struct _Setbase { int _M_base; };
+#pragma empty_line
+  /**
+   *  @brief  Manipulator for @c setf.
+   *  @param  base  A numeric base.
+   *
+   *  Sent to a stream object, this manipulator changes the
+   *  @c ios_base::basefield flags to @c oct, @c dec, or @c hex when @a base
+   *  is 8, 10, or 16, accordingly, and to 0 if @a base is any other value.
+  */
+  inline _Setbase
+  setbase(int __base)
+  { return { __base }; }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setbase __f)
+    {
+      __is.setf(__f._M_base == 8 ? ios_base::oct :
+  __f._M_base == 10 ? ios_base::dec :
+  __f._M_base == 16 ? ios_base::hex :
+  ios_base::fmtflags(0), ios_base::basefield);
+      return __is;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+    {
+      __os.setf(__f._M_base == 8 ? ios_base::oct :
+  __f._M_base == 10 ? ios_base::dec :
+  __f._M_base == 16 ? ios_base::hex :
+  ios_base::fmtflags(0), ios_base::basefield);
+      return __os;
+    }
+#pragma empty_line
+#pragma empty_line
+  template<typename _CharT>
+    struct _Setfill { _CharT _M_c; };
+#pragma empty_line
+  /**
+   *  @brief  Manipulator for @c fill.
+   *  @param  c  The new fill character.
+   *
+   *  Sent to a stream object, this manipulator calls @c fill(c) for that
+   *  object.
+  */
+  template<typename _CharT>
+    inline _Setfill<_CharT>
+    setfill(_CharT __c)
+    { return { __c }; }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setfill<_CharT> __f)
+    {
+      __is.fill(__f._M_c);
+      return __is;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+    {
+      __os.fill(__f._M_c);
+      return __os;
+    }
+#pragma empty_line
+#pragma empty_line
+  struct _Setprecision { int _M_n; };
+#pragma empty_line
+  /**
+   *  @brief  Manipulator for @c precision.
+   *  @param  n  The new precision.
+   *
+   *  Sent to a stream object, this manipulator calls @c precision(n) for
+   *  that object.
+  */
+  inline _Setprecision
+  setprecision(int __n)
+  { return { __n }; }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setprecision __f)
+    {
+      __is.precision(__f._M_n);
+      return __is;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+    {
+      __os.precision(__f._M_n);
+      return __os;
+    }
+#pragma empty_line
+#pragma empty_line
+  struct _Setw { int _M_n; };
+#pragma empty_line
+  /**
+   *  @brief  Manipulator for @c width.
+   *  @param  n  The new width.
+   *
+   *  Sent to a stream object, this manipulator calls @c width(n) for
+   *  that object.
+  */
+  inline _Setw
+  setw(int __n)
+  { return { __n }; }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setw __f)
+    {
+      __is.width(__f._M_n);
+      return __is;
+    }
+#pragma empty_line
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+    {
+      __os.width(__f._M_n);
+      return __os;
+    }
+#pragma line 315 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+  // Inhibit implicit instantiations for required instantiations,
+  // which are defined via explicit instantiations elsewhere.  
+  // NB:  This syntax is a GNU extension.
+#pragma empty_line
+  extern template ostream& operator<<(ostream&, _Setfill<char>);
+  extern template ostream& operator<<(ostream&, _Setiosflags);
+  extern template ostream& operator<<(ostream&, _Resetiosflags);
+  extern template ostream& operator<<(ostream&, _Setbase);
+  extern template ostream& operator<<(ostream&, _Setprecision);
+  extern template ostream& operator<<(ostream&, _Setw);
+  extern template istream& operator>>(istream&, _Setfill<char>);
+  extern template istream& operator>>(istream&, _Setiosflags);
+  extern template istream& operator>>(istream&, _Resetiosflags);
+  extern template istream& operator>>(istream&, _Setbase);
+  extern template istream& operator>>(istream&, _Setprecision);
+  extern template istream& operator>>(istream&, _Setw);
+#pragma empty_line
+#pragma empty_line
+  extern template wostream& operator<<(wostream&, _Setfill<wchar_t>);
+  extern template wostream& operator<<(wostream&, _Setiosflags);
+  extern template wostream& operator<<(wostream&, _Resetiosflags);
+  extern template wostream& operator<<(wostream&, _Setbase);
+  extern template wostream& operator<<(wostream&, _Setprecision);
+  extern template wostream& operator<<(wostream&, _Setw);
+  extern template wistream& operator>>(wistream&, _Setfill<wchar_t>);
+  extern template wistream& operator>>(wistream&, _Setiosflags);
+  extern template wistream& operator>>(wistream&, _Resetiosflags);
+  extern template wistream& operator>>(wistream&, _Setbase);
+  extern template wistream& operator>>(wistream&, _Setprecision);
+  extern template wistream& operator>>(wistream&, _Setw);
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+} // namespace
+#pragma line 10 "dut.cpp" 2
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 1
+/*****************************************************************************
+ *
+ *     Author: Xilinx, Inc.
+ *
+ *     This text contains proprietary, confidential information of
+ *     Xilinx, Inc. , is distributed by under license from Xilinx,
+ *     Inc., and may be used, copied and/or disclosed only pursuant to
+ *     the terms of a valid license agreement with Xilinx, Inc.
+ *
+ *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
+ *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
+ *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
+ *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
+ *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
+ *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
+ *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
+ *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
+ *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
+ *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
+ *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
+ *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ *     FOR A PARTICULAR PURPOSE.
+ *
+ *     Xilinx products are not intended for use in life support appliances,
+ *     devices, or systems. Use in such applications is expressly prohibited.
+ *
+ *     (c) Copyright 2011-2014 Xilinx Inc.
+ *     All rights reserved.
+ *
+ *****************************************************************************/
+#pragma empty_line
+/*
+ * HLS Linear Algebra Library Header File
+ */
+#pragma line 43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h"
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h" 1
+/*****************************************************************************
+ *
+ *     Author: Xilinx, Inc.
+ *
+ *     This text contains proprietary, confidential information of
+ *     Xilinx, Inc. , is distributed by under license from Xilinx,
+ *     Inc., and may be used, copied and/or disclosed only pursuant to
+ *     the terms of a valid license agreement with Xilinx, Inc.
+ *
+ *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
+ *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
+ *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
+ *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
+ *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
+ *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
+ *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
+ *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
+ *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
+ *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
+ *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
+ *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ *     FOR A PARTICULAR PURPOSE.
+ *
+ *     Xilinx products are not intended for use in life support appliances,
+ *     devices, or systems. Use in such applications is expressly prohibited.
+ *
+ *     (c) Copyright 2014-2015 Xilinx Inc.
+ *     All rights reserved.
+ *
+ *****************************************************************************/
+#pragma empty_line
+// Matrix Multiply functions
+// -------------------------
+// MATRIX_MULTIPLY           : Entry point function.
+// MATRIX_MULTIPLY_TOP       : Top level function that selects implementation architecture and internal types based on traits class.
+// MATRIX_MULTIPLY_DEFAULT   : Default architecture.
+// MATRIX_MULTIPLY_ALT1      : Improved throughput for rolled floating point implementations at the expense of an additional memory.
+// MATRIX_MULTIPLY_ALT2      : Further rolled floating point throughput improvement for small matrix sizes. Requires larger internal memory.
+// MATRIX_MULTIPLY_ADD_TREE  : Architecture using an adder tree for fully unrolled floating point implementations.
+// MATRIX_MULTIPLY_FULL      : Default architecture including directives to fully unroll inner loop, fixed point implementations
+#pragma empty_line
+// Change Log
+// ----------
+// 2015.3:
+//  * Default architecture selected based on data type
+//  * Removed default architecture choice macros
+//  * Added default inner loop pipelining value set via configuration traits class
+//  * Correction to internal ap_fixed types bit width
+//  * Added MATRIX_MULTIPLY_FULL architecture
+// 
+// 2015.1:
+//  * Linear Algebra Library update.
+//  * No changes
+// 
+// 2014.1:
+//  * Initial release
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h" 1
+// -*- c++ -*-
+/*
+#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
+#-
+#-  This file contains confidential and proprietary information
+#-  of Xilinx, Inc. and is protected under U.S. and
+#-  international copyright and other intellectual property
+#-  laws.
+#-
+#-  DISCLAIMER
+#-  This disclaimer is not a license and does not grant any
+#-  rights to the materials distributed herewith. Except as
+#-  otherwise provided in a valid license issued to you by
+#-  Xilinx, and to the maximum extent permitted by applicable
+#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+#-  (2) Xilinx shall not be liable (whether in contract or tort,
+#-  including negligence, or under any other theory of
+#-  liability) for any loss or damage of any kind or nature
+#-  related to, arising under or in connection with these
+#-  materials, including for any direct, or any indirect,
+#-  special, incidental, or consequential loss or damage
+#-  (including loss of data, profits, goodwill, or any type of
+#-  loss or damage suffered as a result of any action brought
+#-  by a third party) even if such damage or loss was
+#-  reasonably foreseeable or Xilinx had been advised of the
+#-  possibility of the same.
+#-
+#-  CRITICAL APPLICATIONS
+#-  Xilinx products are not designed or intended to be fail-
+#-  safe, or for use in any application requiring fail-safe
+#-  performance, such as life-support or safety devices or
+#-  systems, Class III medical devices, nuclear facilities,
+#-  applications related to the deployment of airbags, or any
+#-  other applications that could lead to death, personal
+#-  injury, or severe property or environmental damage
+#-  (individually and collectively, "Critical
+#-  Applications"). Customer assumes the sole risk and
+#-  liability of any use of Xilinx products in Critical
+#-  Applications, subject only to applicable laws and
+#-  regulations governing limitations on product liability.
+#-
+#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+#-  PART OF THIS FILE AT ALL TIMES. 
+#- ************************************************************************
+#pragma empty_line
+ *
+ */
+#pragma line 60 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h"
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h" 1
+/* -*- c++ -*-*/
+/*
+#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
+#-
+#-  This file contains confidential and proprietary information
+#-  of Xilinx, Inc. and is protected under U.S. and
+#-  international copyright and other intellectual property
+#-  laws.
+#-
+#-  DISCLAIMER
+#-  This disclaimer is not a license and does not grant any
+#-  rights to the materials distributed herewith. Except as
+#-  otherwise provided in a valid license issued to you by
+#-  Xilinx, and to the maximum extent permitted by applicable
+#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+#-  (2) Xilinx shall not be liable (whether in contract or tort,
+#-  including negligence, or under any other theory of
+#-  liability) for any loss or damage of any kind or nature
+#-  related to, arising under or in connection with these
+#-  materials, including for any direct, or any indirect,
+#-  special, incidental, or consequential loss or damage
+#-  (including loss of data, profits, goodwill, or any type of
+#-  loss or damage suffered as a result of any action brought
+#-  by a third party) even if such damage or loss was
+#-  reasonably foreseeable or Xilinx had been advised of the
+#-  possibility of the same.
+#-
+#-  CRITICAL APPLICATIONS
+#-  Xilinx products are not designed or intended to be fail-
+#-  safe, or for use in any application requiring fail-safe
+#-  performance, such as life-support or safety devices or
+#-  systems, Class III medical devices, nuclear facilities,
+#-  applications related to the deployment of airbags, or any
+#-  other applications that could lead to death, personal
+#-  injury, or severe property or environmental damage
+#-  (individually and collectively, "Critical
+#-  Applications"). Customer assumes the sole risk and
+#-  liability of any use of Xilinx products in Critical
+#-  Applications, subject only to applicable laws and
+#-  regulations governing limitations on product liability.
+#-
+#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+#-  PART OF THIS FILE AT ALL TIMES. 
+#- ************************************************************************
+#pragma empty_line
+ *
+ */
+#pragma line 69 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h"
 extern "C" {
 #pragma line 1 "/usr/include/math.h" 1 3 4
 /* Declarations for math functions.
@@ -39005,4147 +43106,7 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
 #pragma empty_line
 #pragma empty_line
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#pragma line 10 "./typedefs.h" 2
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#pragma line 11 "./typedefs.h" 2
-#pragma empty_line
-typedef bool bit;
-typedef ap_int<8> bit8_t;
-typedef ap_uint<2> bit2_t;
-typedef ap_uint<32> bit32_t;
-#pragma empty_line
-typedef float fix32_t;
-//typedef ap_fixed<16,16> fix32_t;
-#pragma line 9 "./pca.h" 2
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3
-// File based streams -*- C++ -*-
-#pragma empty_line
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-/** @file include/fstream
- *  This is a Standard C++ Library header.
- */
-#pragma empty_line
-//
-// ISO C++ 14882: 27.8  File-based streams
-//
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 1 3
-// Locale support (codecvt) -*- C++ -*-
-#pragma empty_line
-// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008,
-// 2009, 2010, 2011  Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-/** @file bits/codecvt.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{locale}
- */
-#pragma empty_line
-//
-// ISO C++ 14882: 22.2.1.5 Template class codecvt
-//
-#pragma empty_line
-// Written by Benjamin Kosnik <bkoz@redhat.com>
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-#pragma empty_line
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-  /// Empty base class for codecvt facet [22.2.1.5].
-  class codecvt_base
-  {
-  public:
-    enum result
-    {
-      ok,
-      partial,
-      error,
-      noconv
-    };
-  };
-#pragma empty_line
-  /**
-   *  @brief  Common base for codecvt functions.
-   *
-   *  This template class provides implementations of the public functions
-   *  that forward to the protected virtual functions.
-   *
-   *  This template also provides abstract stubs for the protected virtual
-   *  functions.
-  */
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    class __codecvt_abstract_base
-    : public locale::facet, public codecvt_base
-    {
-    public:
-      // Types:
-      typedef codecvt_base::result result;
-      typedef _InternT intern_type;
-      typedef _ExternT extern_type;
-      typedef _StateT state_type;
-#pragma empty_line
-      // 22.2.1.5.1 codecvt members
-      /**
-       *  @brief  Convert from internal to external character set.
-       *
-       *  Converts input string of intern_type to output string of
-       *  extern_type.  This is analogous to wcsrtombs.  It does this by
-       *  calling codecvt::do_out.
-       *
-       *  The source and destination character sets are determined by the
-       *  facet's locale, internal and external types.
-       *
-       *  The characters in [from,from_end) are converted and written to
-       *  [to,to_end).  from_next and to_next are set to point to the
-       *  character following the last successfully converted character,
-       *  respectively.  If the result needed no conversion, from_next and
-       *  to_next are not affected.
-       *
-       *  The @a state argument should be initialized if the input is at the
-       *  beginning and carried from a previous call if continuing
-       *  conversion.  There are no guarantees about how @a state is used.
-       *
-       *  The result returned is a member of codecvt_base::result.  If
-       *  all the input is converted, returns codecvt_base::ok.  If no
-       *  conversion is necessary, returns codecvt_base::noconv.  If
-       *  the input ends early or there is insufficient space in the
-       *  output, returns codecvt_base::partial.  Otherwise the
-       *  conversion failed and codecvt_base::error is returned.
-       *
-       *  @param  state  Persistent conversion state data.
-       *  @param  from  Start of input.
-       *  @param  from_end  End of input.
-       *  @param  from_next  Returns start of unconverted data.
-       *  @param  to  Start of output buffer.
-       *  @param  to_end  End of output buffer.
-       *  @param  to_next  Returns start of unused output area.
-       *  @return  codecvt_base::result.
-      */
-      result
-      out(state_type& __state, const intern_type* __from,
-   const intern_type* __from_end, const intern_type*& __from_next,
-   extern_type* __to, extern_type* __to_end,
-   extern_type*& __to_next) const
-      {
- return this->do_out(__state, __from, __from_end, __from_next,
-       __to, __to_end, __to_next);
-      }
-#pragma empty_line
-      /**
-       *  @brief  Reset conversion state.
-       *
-       *  Writes characters to output that would restore @a state to initial
-       *  conditions.  The idea is that if a partial conversion occurs, then
-       *  the converting the characters written by this function would leave
-       *  the state in initial conditions, rather than partial conversion
-       *  state.  It does this by calling codecvt::do_unshift().
-       *
-       *  For example, if 4 external characters always converted to 1 internal
-       *  character, and input to in() had 6 external characters with state
-       *  saved, this function would write two characters to the output and
-       *  set the state to initialized conditions.
-       *
-       *  The source and destination character sets are determined by the
-       *  facet's locale, internal and external types.
-       *
-       *  The result returned is a member of codecvt_base::result.  If the
-       *  state could be reset and data written, returns codecvt_base::ok.  If
-       *  no conversion is necessary, returns codecvt_base::noconv.  If the
-       *  output has insufficient space, returns codecvt_base::partial.
-       *  Otherwise the reset failed and codecvt_base::error is returned.
-       *
-       *  @param  state  Persistent conversion state data.
-       *  @param  to  Start of output buffer.
-       *  @param  to_end  End of output buffer.
-       *  @param  to_next  Returns start of unused output area.
-       *  @return  codecvt_base::result.
-      */
-      result
-      unshift(state_type& __state, extern_type* __to, extern_type* __to_end,
-       extern_type*& __to_next) const
-      { return this->do_unshift(__state, __to,__to_end,__to_next); }
-#pragma empty_line
-      /**
-       *  @brief  Convert from external to internal character set.
-       *
-       *  Converts input string of extern_type to output string of
-       *  intern_type.  This is analogous to mbsrtowcs.  It does this by
-       *  calling codecvt::do_in.
-       *
-       *  The source and destination character sets are determined by the
-       *  facet's locale, internal and external types.
-       *
-       *  The characters in [from,from_end) are converted and written to
-       *  [to,to_end).  from_next and to_next are set to point to the
-       *  character following the last successfully converted character,
-       *  respectively.  If the result needed no conversion, from_next and
-       *  to_next are not affected.
-       *
-       *  The @a state argument should be initialized if the input is at the
-       *  beginning and carried from a previous call if continuing
-       *  conversion.  There are no guarantees about how @a state is used.
-       *
-       *  The result returned is a member of codecvt_base::result.  If
-       *  all the input is converted, returns codecvt_base::ok.  If no
-       *  conversion is necessary, returns codecvt_base::noconv.  If
-       *  the input ends early or there is insufficient space in the
-       *  output, returns codecvt_base::partial.  Otherwise the
-       *  conversion failed and codecvt_base::error is returned.
-       *
-       *  @param  state  Persistent conversion state data.
-       *  @param  from  Start of input.
-       *  @param  from_end  End of input.
-       *  @param  from_next  Returns start of unconverted data.
-       *  @param  to  Start of output buffer.
-       *  @param  to_end  End of output buffer.
-       *  @param  to_next  Returns start of unused output area.
-       *  @return  codecvt_base::result.
-      */
-      result
-      in(state_type& __state, const extern_type* __from,
-  const extern_type* __from_end, const extern_type*& __from_next,
-  intern_type* __to, intern_type* __to_end,
-  intern_type*& __to_next) const
-      {
- return this->do_in(__state, __from, __from_end, __from_next,
-      __to, __to_end, __to_next);
-      }
-#pragma empty_line
-      int
-      encoding() const throw()
-      { return this->do_encoding(); }
-#pragma empty_line
-      bool
-      always_noconv() const throw()
-      { return this->do_always_noconv(); }
-#pragma empty_line
-      int
-      length(state_type& __state, const extern_type* __from,
-      const extern_type* __end, size_t __max) const
-      { return this->do_length(__state, __from, __end, __max); }
-#pragma empty_line
-      int
-      max_length() const throw()
-      { return this->do_max_length(); }
-#pragma empty_line
-    protected:
-      explicit
-      __codecvt_abstract_base(size_t __refs = 0) : locale::facet(__refs) { }
-#pragma empty_line
-      virtual
-      ~__codecvt_abstract_base() { }
-#pragma empty_line
-      /**
-       *  @brief  Convert from internal to external character set.
-       *
-       *  Converts input string of intern_type to output string of
-       *  extern_type.  This function is a hook for derived classes to change
-       *  the value returned.  @see out for more information.
-      */
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const = 0;
-#pragma empty_line
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const = 0;
-#pragma empty_line
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const = 0;
-#pragma empty_line
-      virtual int
-      do_encoding() const throw() = 0;
-#pragma empty_line
-      virtual bool
-      do_always_noconv() const throw() = 0;
-#pragma empty_line
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const = 0;
-#pragma empty_line
-      virtual int
-      do_max_length() const throw() = 0;
-    };
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  /**
-   *  @brief  Primary class template codecvt.
-   *  @ingroup locales
-   *
-   *  NB: Generic, mostly useless implementation.
-   *
-  */
-   template<typename _InternT, typename _ExternT, typename _StateT>
-    class codecvt
-    : public __codecvt_abstract_base<_InternT, _ExternT, _StateT>
-    {
-    public:
-      // Types:
-      typedef codecvt_base::result result;
-      typedef _InternT intern_type;
-      typedef _ExternT extern_type;
-      typedef _StateT state_type;
-#pragma empty_line
-    protected:
-      __c_locale _M_c_locale_codecvt;
-#pragma empty_line
-    public:
-      static locale::id id;
-#pragma empty_line
-      explicit
-      codecvt(size_t __refs = 0)
-      : __codecvt_abstract_base<_InternT, _ExternT, _StateT> (__refs) { }
-#pragma empty_line
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-#pragma empty_line
-    protected:
-      virtual
-      ~codecvt() { }
-#pragma empty_line
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const;
-#pragma empty_line
-      virtual int
-      do_encoding() const throw();
-#pragma empty_line
-      virtual bool
-      do_always_noconv() const throw();
-#pragma empty_line
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const;
-#pragma empty_line
-      virtual int
-      do_max_length() const throw();
-    };
-#pragma empty_line
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    locale::id codecvt<_InternT, _ExternT, _StateT>::id;
-#pragma empty_line
-  /// class codecvt<char, char, mbstate_t> specialization.
-  template<>
-    class codecvt<char, char, mbstate_t>
-    : public __codecvt_abstract_base<char, char, mbstate_t>
-    {
-    public:
-      // Types:
-      typedef char intern_type;
-      typedef char extern_type;
-      typedef mbstate_t state_type;
-#pragma empty_line
-    protected:
-      __c_locale _M_c_locale_codecvt;
-#pragma empty_line
-    public:
-      static locale::id id;
-#pragma empty_line
-      explicit
-      codecvt(size_t __refs = 0);
-#pragma empty_line
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-#pragma empty_line
-    protected:
-      virtual
-      ~codecvt();
-#pragma empty_line
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const;
-#pragma empty_line
-      virtual int
-      do_encoding() const throw();
-#pragma empty_line
-      virtual bool
-      do_always_noconv() const throw();
-#pragma empty_line
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const;
-#pragma empty_line
-      virtual int
-      do_max_length() const throw();
-  };
-#pragma empty_line
-#pragma empty_line
-  /// class codecvt<wchar_t, char, mbstate_t> specialization.
-  template<>
-    class codecvt<wchar_t, char, mbstate_t>
-    : public __codecvt_abstract_base<wchar_t, char, mbstate_t>
-    {
-    public:
-      // Types:
-      typedef wchar_t intern_type;
-      typedef char extern_type;
-      typedef mbstate_t state_type;
-#pragma empty_line
-    protected:
-      __c_locale _M_c_locale_codecvt;
-#pragma empty_line
-    public:
-      static locale::id id;
-#pragma empty_line
-      explicit
-      codecvt(size_t __refs = 0);
-#pragma empty_line
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-#pragma empty_line
-    protected:
-      virtual
-      ~codecvt();
-#pragma empty_line
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_unshift(state_type& __state,
-   extern_type* __to, extern_type* __to_end,
-   extern_type*& __to_next) const;
-#pragma empty_line
-      virtual result
-      do_in(state_type& __state,
-      const extern_type* __from, const extern_type* __from_end,
-      const extern_type*& __from_next,
-      intern_type* __to, intern_type* __to_end,
-      intern_type*& __to_next) const;
-#pragma empty_line
-      virtual
-      int do_encoding() const throw();
-#pragma empty_line
-      virtual
-      bool do_always_noconv() const throw();
-#pragma empty_line
-      virtual
-      int do_length(state_type&, const extern_type* __from,
-      const extern_type* __end, size_t __max) const;
-#pragma empty_line
-      virtual int
-      do_max_length() const throw();
-    };
-#pragma empty_line
-#pragma empty_line
-  /// class codecvt_byname [22.2.1.6].
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    class codecvt_byname : public codecvt<_InternT, _ExternT, _StateT>
-    {
-    public:
-      explicit
-      codecvt_byname(const char* __s, size_t __refs = 0)
-      : codecvt<_InternT, _ExternT, _StateT>(__refs)
-      {
- if (__builtin_strcmp(__s, "C") != 0
-     && __builtin_strcmp(__s, "POSIX") != 0)
-   {
-     this->_S_destroy_c_locale(this->_M_c_locale_codecvt);
-     this->_S_create_c_locale(this->_M_c_locale_codecvt, __s);
-   }
-      }
-#pragma empty_line
-    protected:
-      virtual
-      ~codecvt_byname() { }
-    };
-#pragma empty_line
-  // Inhibit implicit instantiations for required instantiations,
-  // which are defined via explicit instantiations elsewhere.
-#pragma empty_line
-  extern template class codecvt_byname<char, char, mbstate_t>;
-#pragma empty_line
-  extern template
-    const codecvt<char, char, mbstate_t>&
-    use_facet<codecvt<char, char, mbstate_t> >(const locale&);
-#pragma empty_line
-  extern template
-    bool
-    has_facet<codecvt<char, char, mbstate_t> >(const locale&);
-#pragma empty_line
-#pragma empty_line
-  extern template class codecvt_byname<wchar_t, char, mbstate_t>;
-#pragma empty_line
-  extern template
-    const codecvt<wchar_t, char, mbstate_t>&
-    use_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
-#pragma empty_line
-  extern template
-    bool
-    has_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-} // namespace std
-#pragma line 42 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
-// -*- C++ -*- forwarding header.
-#pragma empty_line
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-/** @file include/cstdio
- *  This is a Standard C++ Library file.  You should @c \#include this file
- *  in your programs, rather than any of the @a *.h implementation files.
- *
- *  This is the C++ version of the Standard C Library header @c stdio.h,
- *  and its contents are (mostly) the same as that header, but are all
- *  contained in the namespace @c std (except for names which are defined
- *  as macros in C).
- */
-#pragma empty_line
-//
-// ISO C++ 14882: 27.8.2  C Library files
-//
-#pragma empty_line
-#pragma empty_line
-#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/stdio.h" 1 3 4
-/* Define ISO C stdio on top of C++ iostreams.
-   Copyright (C) 1991, 1994-2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-#pragma empty_line
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-#pragma empty_line
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-#pragma empty_line
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-#pragma empty_line
-/*
- *	ISO C99 Standard: 7.19 Input/output	<stdio.h>
- */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern "C" {
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
- */
-#pragma line 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-#pragma line 34 "/usr/include/stdio.h" 2 3 4
-#pragma line 74 "/usr/include/stdio.h" 3 4
-#pragma line 1 "/usr/include/libio.h" 1 3 4
-/* Copyright (C) 1991-1995,1997-2007,2009,2011,2012
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-   Written by Per Bothner <bothner@cygnus.com>.
-#pragma empty_line
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-#pragma empty_line
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-#pragma empty_line
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.
-#pragma empty_line
-   As a special exception, if you link the code in this file with
-   files compiled with a GNU compiler to produce an executable,
-   that does not cause the resulting executable to be covered by
-   the GNU Lesser General Public License.  This exception does not
-   however invalidate any other reasons why the executable file
-   might be covered by the GNU Lesser General Public License.
-   This exception applies to code released by its copyright holders
-   in files containing the exception.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/_G_config.h" 1 3 4
-/* This file is needed by libio to define various configuration parameters.
-   These are always the same in the GNU C library.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Define types for libio in terms of the standard internal type names.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
- */
-#pragma line 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-#pragma line 16 "/usr/include/_G_config.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/usr/include/wchar.h" 1 3 4
-/* Copyright (C) 1995-2008, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-#pragma empty_line
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-#pragma empty_line
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-#pragma empty_line
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-#pragma empty_line
-/*
- *      ISO C99 Standard: 7.24
- *	Extended multibyte and wide character utilities	<wchar.h>
- */
-#pragma line 897 "/usr/include/wchar.h" 3 4
-/* Undefine all __need_* constants in case we are included to get those
-   constants but the whole file was already read.  */
-#pragma line 21 "/usr/include/_G_config.h" 2 3 4
-typedef struct
-{
-  __off_t __pos;
-  __mbstate_t __state;
-} _G_fpos_t;
-typedef struct
-{
-  __off64_t __pos;
-  __mbstate_t __state;
-} _G_fpos64_t;
-#pragma line 45 "/usr/include/_G_config.h" 3 4
-/* These library features are always available in the GNU C library.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* This is defined by <bits/stat.h> if `st_blksize' exists.  */
-#pragma line 33 "/usr/include/libio.h" 2 3 4
-/* ALL of these should be defined in _G_config.h */
-#pragma line 48 "/usr/include/libio.h" 3 4
-/* This define avoids name pollution if we're using GNU stdarg.h */
-#pragma line 87 "/usr/include/libio.h" 3 4
-/* Magic numbers and bits for the _flags field.
-   The magic numbers use the high-order bits of _flags;
-   the remaining bits are available for variable flags.
-   Note: The magic numbers must all be negative if stdio
-   emulation is desired. */
-#pragma line 125 "/usr/include/libio.h" 3 4
-/* These are "formatting flags" matching the iostream fmtflags enum values. */
-#pragma line 145 "/usr/include/libio.h" 3 4
-struct _IO_jump_t; struct _IO_FILE;
-#pragma empty_line
-/* Handle lock.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-typedef void _IO_lock_t;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* A streammarker remembers a position in a buffer. */
-#pragma empty_line
-struct _IO_marker {
-  struct _IO_marker *_next;
-  struct _IO_FILE *_sbuf;
-  /* If _pos >= 0
- it points to _buf->Gbase()+_pos. FIXME comment */
-  /* if _pos < 0, it points to _buf->eBptr()+_pos. FIXME comment */
-  int _pos;
-#pragma line 178 "/usr/include/libio.h" 3 4
-};
-#pragma empty_line
-/* This is the structure from the libstdc++ codecvt class.  */
-enum __codecvt_result
-{
-  __codecvt_ok,
-  __codecvt_partial,
-  __codecvt_error,
-  __codecvt_noconv
-};
-#pragma line 246 "/usr/include/libio.h" 3 4
-struct _IO_FILE {
-  int _flags; /* High-order word is _IO_MAGIC; rest is flags. */
-#pragma empty_line
-#pragma empty_line
-  /* The following pointers correspond to the C++ streambuf protocol. */
-  /* Note:  Tk uses the _IO_read_ptr and _IO_read_end fields directly. */
-  char* _IO_read_ptr; /* Current read pointer */
-  char* _IO_read_end; /* End of get area. */
-  char* _IO_read_base; /* Start of putback+get area. */
-  char* _IO_write_base; /* Start of put area. */
-  char* _IO_write_ptr; /* Current put pointer. */
-  char* _IO_write_end; /* End of put area. */
-  char* _IO_buf_base; /* Start of reserve area. */
-  char* _IO_buf_end; /* End of reserve area. */
-  /* The following fields are used to support backing up and undo. */
-  char *_IO_save_base; /* Pointer to start of non-current get area. */
-  char *_IO_backup_base; /* Pointer to first valid character of backup area */
-  char *_IO_save_end; /* Pointer to end of non-current get area. */
-#pragma empty_line
-  struct _IO_marker *_markers;
-#pragma empty_line
-  struct _IO_FILE *_chain;
-#pragma empty_line
-  int _fileno;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-  int _flags2;
-#pragma empty_line
-  __off_t _old_offset; /* This used to be _offset but it's too small.  */
-#pragma empty_line
-#pragma empty_line
-  /* 1+column number of pbase(); 0 is unknown. */
-  unsigned short _cur_column;
-  signed char _vtable_offset;
-  char _shortbuf[1];
-#pragma empty_line
-  /*  char* _save_gptr;  char* _save_egptr; */
-#pragma empty_line
-  _IO_lock_t *_lock;
-#pragma line 294 "/usr/include/libio.h" 3 4
-  __off64_t _offset;
-#pragma line 303 "/usr/include/libio.h" 3 4
-  void *__pad1;
-  void *__pad2;
-  void *__pad3;
-  void *__pad4;
-  size_t __pad5;
-#pragma empty_line
-  int _mode;
-  /* Make sure we don't get into trouble again.  */
-  char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
-#pragma empty_line
-};
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-struct _IO_FILE_plus;
-#pragma empty_line
-extern struct _IO_FILE_plus _IO_2_1_stdin_;
-extern struct _IO_FILE_plus _IO_2_1_stdout_;
-extern struct _IO_FILE_plus _IO_2_1_stderr_;
-#pragma line 335 "/usr/include/libio.h" 3 4
-/* Functions to do I/O and file management for a stream.  */
-#pragma empty_line
-/* Read NBYTES bytes from COOKIE into a buffer pointed to by BUF.
-   Return number of bytes read.  */
-typedef __ssize_t __io_read_fn (void *__cookie, char *__buf, size_t __nbytes);
-#pragma empty_line
-/* Write N bytes pointed to by BUF to COOKIE.  Write all N bytes
-   unless there is an error.  Return number of bytes written.  If
-   there is an error, return 0 and do not write anything.  If the file
-   has been opened for append (__mode.__append set), then set the file
-   pointer to the end of the file and then do the write; if not, just
-   write at the current file pointer.  */
-typedef __ssize_t __io_write_fn (void *__cookie, const char *__buf,
-     size_t __n);
-#pragma empty_line
-/* Move COOKIE's file position to *POS bytes from the
-   beginning of the file (if W is SEEK_SET),
-   the current position (if W is SEEK_CUR),
-   or the end of the file (if W is SEEK_END).
-   Set *POS to the new file position.
-   Returns zero if successful, nonzero if not.  */
-typedef int __io_seek_fn (void *__cookie, __off64_t *__pos, int __w);
-#pragma empty_line
-/* Close COOKIE.  */
-typedef int __io_close_fn (void *__cookie);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* User-visible names for the above.  */
-typedef __io_read_fn cookie_read_function_t;
-typedef __io_write_fn cookie_write_function_t;
-typedef __io_seek_fn cookie_seek_function_t;
-typedef __io_close_fn cookie_close_function_t;
-#pragma empty_line
-/* The structure with the cookie function pointers.  */
-typedef struct
-{
-  __io_read_fn *read; /* Read bytes.  */
-  __io_write_fn *write; /* Write bytes.  */
-  __io_seek_fn *seek; /* Seek/tell file position.  */
-  __io_close_fn *close; /* Close file.  */
-} _IO_cookie_io_functions_t;
-typedef _IO_cookie_io_functions_t cookie_io_functions_t;
-#pragma empty_line
-struct _IO_cookie_file;
-#pragma empty_line
-/* Initialize one of those.  */
-extern void _IO_cookie_init (struct _IO_cookie_file *__cfile, int __read_write,
-        void *__cookie, _IO_cookie_io_functions_t __fns);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern "C" {
-#pragma empty_line
-#pragma empty_line
-extern int __underflow (_IO_FILE *);
-extern int __uflow (_IO_FILE *);
-extern int __overflow (_IO_FILE *, int);
-#pragma line 435 "/usr/include/libio.h" 3 4
-extern int _IO_getc (_IO_FILE *__fp);
-extern int _IO_putc (int __c, _IO_FILE *__fp);
-extern int _IO_feof (_IO_FILE *__fp) throw ();
-extern int _IO_ferror (_IO_FILE *__fp) throw ();
-#pragma empty_line
-extern int _IO_peekc_locked (_IO_FILE *__fp);
-#pragma empty_line
-/* This one is for Emacs. */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-extern void _IO_flockfile (_IO_FILE *) throw ();
-extern void _IO_funlockfile (_IO_FILE *) throw ();
-extern int _IO_ftrylockfile (_IO_FILE *) throw ();
-#pragma line 465 "/usr/include/libio.h" 3 4
-extern int _IO_vfscanf (_IO_FILE * __restrict, const char * __restrict,
-   __gnuc_va_list, int *__restrict);
-extern int _IO_vfprintf (_IO_FILE *__restrict, const char *__restrict,
-    __gnuc_va_list);
-extern __ssize_t _IO_padn (_IO_FILE *, int, __ssize_t);
-extern size_t _IO_sgetn (_IO_FILE *, void *, size_t);
-#pragma empty_line
-extern __off64_t _IO_seekoff (_IO_FILE *, __off64_t, int, int);
-extern __off64_t _IO_seekpos (_IO_FILE *, __off64_t, int);
-#pragma empty_line
-extern void _IO_free_backup_area (_IO_FILE *) throw ();
-#pragma line 527 "/usr/include/libio.h" 3 4
-}
-#pragma line 75 "/usr/include/stdio.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-typedef __gnuc_va_list va_list;
-#pragma line 107 "/usr/include/stdio.h" 3 4
-/* The type of the second argument to `fgetpos' and `fsetpos'.  */
-#pragma empty_line
-#pragma empty_line
-typedef _G_fpos_t fpos_t;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-typedef _G_fpos64_t fpos64_t;
-#pragma empty_line
-#pragma empty_line
-/* The possibilities for the third argument to `setvbuf'.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Default buffer size.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* End of file character.
-   Some things throughout the library rely on this being -1.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* The possibilities for the third argument to `fseek'.
-   These values should not be changed.  */
-#pragma line 150 "/usr/include/stdio.h" 3 4
-/* Default path prefix for `tempnam' and `tmpnam'.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Get the values:
-   L_tmpnam	How long an array of chars must be to be passed to `tmpnam'.
-   TMP_MAX	The minimum number of unique filenames generated by tmpnam
-		(and tempnam when it uses tmpnam's name space),
-		or tempnam (the two are separate).
-   L_ctermid	How long an array to pass to `ctermid'.
-   L_cuserid	How long an array to pass to `cuserid'.
-   FOPEN_MAX	Minimum number of files that can be open at once.
-   FILENAME_MAX	Maximum length of a filename.  */
-#pragma empty_line
-#pragma line 1 "/usr/include/bits/stdio_lim.h" 1 3 4
-/* Copyright (C) 1994, 1997, 1998, 1999, 2009 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-#pragma empty_line
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-#pragma empty_line
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-#pragma empty_line
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-#pragma line 165 "/usr/include/stdio.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-/* Standard streams.  */
-extern struct _IO_FILE *stdin; /* Standard input stream.  */
-extern struct _IO_FILE *stdout; /* Standard output stream.  */
-extern struct _IO_FILE *stderr; /* Standard error output stream.  */
-/* C89/C99 say they're macros.  Make them happy.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Remove file FILENAME.  */
-extern int remove (const char *__filename) throw ();
-/* Rename file OLD to NEW.  */
-extern int rename (const char *__old, const char *__new) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Rename file OLD relative to OLDFD to NEW relative to NEWFD.  */
-extern int renameat (int __oldfd, const char *__old, int __newfd,
-       const char *__new) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Create a temporary file and open it read/write.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-#pragma empty_line
-extern FILE *tmpfile (void) /* Ignore */;
-#pragma line 205 "/usr/include/stdio.h" 3 4
-extern FILE *tmpfile64 (void) /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-/* Generate a temporary filename.  */
-extern char *tmpnam (char *__s) throw () /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* This is the reentrant variant of `tmpnam'.  The only difference is
-   that it does not allow S to be NULL.  */
-extern char *tmpnam_r (char *__s) throw () /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Generate a unique temporary filename using up to five characters of PFX
-   if it is not NULL.  The directory to put this file in is searched for
-   as follows: First the environment variable "TMPDIR" is checked.
-   If it contains the name of a writable directory, that directory is used.
-   If not and if DIR is not NULL, that value is checked.  If that fails,
-   P_tmpdir is tried and finally "/tmp".  The storage for the filename
-   is allocated by `malloc'.  */
-extern char *tempnam (const char *__dir, const char *__pfx)
-     throw () __attribute__ ((__malloc__)) /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Close STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fclose (FILE *__stream);
-/* Flush STREAM, or all streams if STREAM is NULL.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fflush (FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Faster versions when locking is not required.
-#pragma empty_line
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int fflush_unlocked (FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Close all streams.
-#pragma empty_line
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int fcloseall (void);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Open a file and create a new stream for it.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern FILE *fopen (const char *__restrict __filename,
-      const char *__restrict __modes) /* Ignore */;
-/* Open a file, replacing an existing stream with it.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern FILE *freopen (const char *__restrict __filename,
-        const char *__restrict __modes,
-        FILE *__restrict __stream) /* Ignore */;
-#pragma line 297 "/usr/include/stdio.h" 3 4
-extern FILE *fopen64 (const char *__restrict __filename,
-        const char *__restrict __modes) /* Ignore */;
-extern FILE *freopen64 (const char *__restrict __filename,
-   const char *__restrict __modes,
-   FILE *__restrict __stream) /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Create a new stream that refers to an existing system file descriptor.  */
-extern FILE *fdopen (int __fd, const char *__modes) throw () /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Create a new stream that refers to the given magic cookie,
-   and uses the given functions for input and output.  */
-extern FILE *fopencookie (void *__restrict __magic_cookie,
-     const char *__restrict __modes,
-     _IO_cookie_io_functions_t __io_funcs) throw () /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Create a new stream that refers to a memory buffer.  */
-extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
-  throw () /* Ignore */;
-#pragma empty_line
-/* Open a stream that writes into a malloc'd buffer that is expanded as
-   necessary.  *BUFLOC and *SIZELOC are updated with the buffer's location
-   and the number of characters written on fflush or fclose.  */
-extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) throw () /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* If BUF is NULL, make STREAM unbuffered.
-   Else make it use buffer BUF, of size BUFSIZ.  */
-extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) throw ();
-/* Make STREAM use buffering mode MODE.
-   If BUF is not NULL, use N bytes of it for buffering;
-   else allocate an internal buffer N bytes long.  */
-extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,
-      int __modes, size_t __n) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* If BUF is NULL, make STREAM unbuffered.
-   Else make it use SIZE bytes of BUF for buffering.  */
-extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,
-         size_t __size) throw ();
-#pragma empty_line
-/* Make STREAM line-buffered.  */
-extern void setlinebuf (FILE *__stream) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Write formatted output to STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fprintf (FILE *__restrict __stream,
-      const char *__restrict __format, ...);
-/* Write formatted output to stdout.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int printf (const char *__restrict __format, ...);
-/* Write formatted output to S.  */
-extern int sprintf (char *__restrict __s,
-      const char *__restrict __format, ...) throw ();
-#pragma empty_line
-/* Write formatted output to S from argument list ARG.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,
-       __gnuc_va_list __arg);
-/* Write formatted output to stdout from argument list ARG.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vprintf (const char *__restrict __format, __gnuc_va_list __arg);
-/* Write formatted output to S from argument list ARG.  */
-extern int vsprintf (char *__restrict __s, const char *__restrict __format,
-       __gnuc_va_list __arg) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Maximum chars of output to write in MAXLEN.  */
-extern int snprintf (char *__restrict __s, size_t __maxlen,
-       const char *__restrict __format, ...)
-     throw () __attribute__ ((__format__ (__printf__, 3, 4)));
-#pragma empty_line
-extern int vsnprintf (char *__restrict __s, size_t __maxlen,
-        const char *__restrict __format, __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__printf__, 3, 0)));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Write formatted output to a string dynamically allocated with `malloc'.
-   Store the address of the string in *PTR.  */
-extern int vasprintf (char **__restrict __ptr, const char *__restrict __f,
-        __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__printf__, 2, 0))) /* Ignore */;
-extern int __asprintf (char **__restrict __ptr,
-         const char *__restrict __fmt, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3))) /* Ignore */;
-extern int asprintf (char **__restrict __ptr,
-       const char *__restrict __fmt, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3))) /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Write formatted output to a file descriptor.  */
-extern int vdprintf (int __fd, const char *__restrict __fmt,
-       __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__printf__, 2, 0)));
-extern int dprintf (int __fd, const char *__restrict __fmt, ...)
-     __attribute__ ((__format__ (__printf__, 2, 3)));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Read formatted input from STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fscanf (FILE *__restrict __stream,
-     const char *__restrict __format, ...) /* Ignore */;
-/* Read formatted input from stdin.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int scanf (const char *__restrict __format, ...) /* Ignore */;
-/* Read formatted input from S.  */
-extern int sscanf (const char *__restrict __s,
-     const char *__restrict __format, ...) throw ();
-#pragma line 467 "/usr/include/stdio.h" 3 4
-/* Read formatted input from S into argument list ARG.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vfscanf (FILE *__restrict __s, const char *__restrict __format,
-      __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__scanf__, 2, 0))) /* Ignore */;
-#pragma empty_line
-/* Read formatted input from stdin into argument list ARG.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__scanf__, 1, 0))) /* Ignore */;
-#pragma empty_line
-/* Read formatted input from S into argument list ARG.  */
-extern int vsscanf (const char *__restrict __s,
-      const char *__restrict __format, __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__scanf__, 2, 0)));
-#pragma line 527 "/usr/include/stdio.h" 3 4
-/* Read a character from STREAM.
-#pragma empty_line
-   These functions are possible cancellation points and therefore not
-   marked with __THROW.  */
-extern int fgetc (FILE *__stream);
-extern int getc (FILE *__stream);
-#pragma empty_line
-/* Read a character from stdin.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int getchar (void);
-#pragma empty_line
-#pragma empty_line
-/* The C standard explicitly says this is a macro, so we always do the
-   optimization for it.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* These are defined in POSIX.1:1996.
-#pragma empty_line
-   These functions are possible cancellation points and therefore not
-   marked with __THROW.  */
-extern int getc_unlocked (FILE *__stream);
-extern int getchar_unlocked (void);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Faster version when locking is not necessary.
-#pragma empty_line
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int fgetc_unlocked (FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Write a character to STREAM.
-#pragma empty_line
-   These functions are possible cancellation points and therefore not
-   marked with __THROW.
-#pragma empty_line
-   These functions is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fputc (int __c, FILE *__stream);
-extern int putc (int __c, FILE *__stream);
-#pragma empty_line
-/* Write a character to stdout.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int putchar (int __c);
-#pragma empty_line
-#pragma empty_line
-/* The C standard explicitly says this can be a macro,
-   so we always do the optimization for it.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Faster version when locking is not necessary.
-#pragma empty_line
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int fputc_unlocked (int __c, FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* These are defined in POSIX.1:1996.
-#pragma empty_line
-   These functions are possible cancellation points and therefore not
-   marked with __THROW.  */
-extern int putc_unlocked (int __c, FILE *__stream);
-extern int putchar_unlocked (int __c);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Get a word (int) from STREAM.  */
-extern int getw (FILE *__stream);
-#pragma empty_line
-/* Write a word (int) to STREAM.  */
-extern int putw (int __w, FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Get a newline-terminated string of finite length from STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
-     /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Get a newline-terminated string from stdin, removing the newline.
-   DO NOT USE THIS FUNCTION!!  There is no limit on how much it will read.
-#pragma empty_line
-   The function has been officially removed in ISO C11.  This opportunity
-   is used to also remove it from the GNU feature list.  It is now only
-   available when explicitly using an old ISO C, Unix, or POSIX standard.
-   GCC defines _GNU_SOURCE when building C++ code and the function is still
-   in C++11, so it is also available for C++.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern char *gets (char *__s) /* Ignore */ __attribute__ ((__deprecated__));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* This function does the same as `fgets' but does not lock the stream.
-#pragma empty_line
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern char *fgets_unlocked (char *__restrict __s, int __n,
-        FILE *__restrict __stream) /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Read up to (and including) a DELIMITER from STREAM into *LINEPTR
-   (and null-terminate it). *LINEPTR is a pointer returned from malloc (or
-   NULL), pointing to *N characters of space.  It is realloc'd as
-   necessary.  Returns the number of characters read (not including the
-   null terminator), or -1 on error or EOF.
-#pragma empty_line
-   These functions are not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation they are cancellation points and
-   therefore not marked with __THROW.  */
-extern __ssize_t __getdelim (char **__restrict __lineptr,
-          size_t *__restrict __n, int __delimiter,
-          FILE *__restrict __stream) /* Ignore */;
-extern __ssize_t getdelim (char **__restrict __lineptr,
-        size_t *__restrict __n, int __delimiter,
-        FILE *__restrict __stream) /* Ignore */;
-#pragma empty_line
-/* Like `getdelim', but reads up to a newline.
-#pragma empty_line
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern __ssize_t getline (char **__restrict __lineptr,
-       size_t *__restrict __n,
-       FILE *__restrict __stream) /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Write a string to STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
-#pragma empty_line
-/* Write a string, followed by a newline, to stdout.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int puts (const char *__s);
-#pragma empty_line
-#pragma empty_line
-/* Push a character back onto the input buffer of STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int ungetc (int __c, FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-/* Read chunks of generic data from STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern size_t fread (void *__restrict __ptr, size_t __size,
-       size_t __n, FILE *__restrict __stream) /* Ignore */;
-/* Write chunks of generic data to STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern size_t fwrite (const void *__restrict __ptr, size_t __size,
-        size_t __n, FILE *__restrict __s);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* This function does the same as `fputs' but does not lock the stream.
-#pragma empty_line
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int fputs_unlocked (const char *__restrict __s,
-      FILE *__restrict __stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Faster versions when locking is not necessary.
-#pragma empty_line
-   These functions are not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation they are cancellation points and
-   therefore not marked with __THROW.  */
-extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
-         size_t __n, FILE *__restrict __stream) /* Ignore */;
-extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
-          size_t __n, FILE *__restrict __stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Seek to a certain position on STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fseek (FILE *__stream, long int __off, int __whence);
-/* Return the current position of STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern long int ftell (FILE *__stream) /* Ignore */;
-/* Rewind to the beginning of STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern void rewind (FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-/* The Single Unix Specification, Version 2, specifies an alternative,
-   more adequate interface for the two functions above which deal with
-   file offset.  `long int' is not the right type.  These definitions
-   are originally defined in the Large File Support API.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Seek to a certain position on STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fseeko (FILE *__stream, __off_t __off, int __whence);
-/* Return the current position of STREAM.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern __off_t ftello (FILE *__stream) /* Ignore */;
-#pragma line 794 "/usr/include/stdio.h" 3 4
-/* Get STREAM's position.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);
-/* Set STREAM's position.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fsetpos (FILE *__stream, const fpos_t *__pos);
-#pragma line 818 "/usr/include/stdio.h" 3 4
-extern int fseeko64 (FILE *__stream, __off64_t __off, int __whence);
-extern __off64_t ftello64 (FILE *__stream) /* Ignore */;
-extern int fgetpos64 (FILE *__restrict __stream, fpos64_t *__restrict __pos);
-extern int fsetpos64 (FILE *__stream, const fpos64_t *__pos);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Clear the error and EOF indicators for STREAM.  */
-extern void clearerr (FILE *__stream) throw ();
-/* Return the EOF indicator for STREAM.  */
-extern int feof (FILE *__stream) throw () /* Ignore */;
-/* Return the error indicator for STREAM.  */
-extern int ferror (FILE *__stream) throw () /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Faster versions when locking is not required.  */
-extern void clearerr_unlocked (FILE *__stream) throw ();
-extern int feof_unlocked (FILE *__stream) throw () /* Ignore */;
-extern int ferror_unlocked (FILE *__stream) throw () /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Print a message describing the meaning of the value of errno.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern void perror (const char *__s);
-#pragma empty_line
-#pragma empty_line
-/* Provide the declarations for `sys_errlist' and `sys_nerr' if they
-   are available on this system.  Even if available, these variables
-   should not be used directly.  The `strerror' function provides
-   all the necessary functionality.  */
-#pragma empty_line
-#pragma line 1 "/usr/include/bits/sys_errlist.h" 1 3 4
-/* Declare sys_errlist and sys_nerr, or don't.  Compatibility (do) version.
-   Copyright (C) 2002, 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-#pragma empty_line
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-#pragma empty_line
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-#pragma empty_line
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* sys_errlist and sys_nerr are deprecated.  Use strerror instead.  */
-#pragma empty_line
-#pragma empty_line
-extern int sys_nerr;
-extern const char *const sys_errlist[];
-#pragma empty_line
-#pragma empty_line
-extern int _sys_nerr;
-extern const char *const _sys_errlist[];
-#pragma line 854 "/usr/include/stdio.h" 2 3 4
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Return the system file descriptor for STREAM.  */
-extern int fileno (FILE *__stream) throw () /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Faster version when locking is not required.  */
-extern int fileno_unlocked (FILE *__stream) throw () /* Ignore */;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Create a new stream connected to a pipe running the given command.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern FILE *popen (const char *__command, const char *__modes) /* Ignore */;
-#pragma empty_line
-/* Close a stream opened by popen and return the status of its child.
-#pragma empty_line
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int pclose (FILE *__stream);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Return the name of the controlling terminal.  */
-extern char *ctermid (char *__s) throw ();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* Return the name of the current user.  */
-extern char *cuserid (char *__s);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-struct obstack; /* See <obstack.h>.  */
-#pragma empty_line
-/* Write formatted output to an obstack.  */
-extern int obstack_printf (struct obstack *__restrict __obstack,
-      const char *__restrict __format, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3)));
-extern int obstack_vprintf (struct obstack *__restrict __obstack,
-       const char *__restrict __format,
-       __gnuc_va_list __args)
-     throw () __attribute__ ((__format__ (__printf__, 2, 0)));
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-/* These are defined in POSIX.1:1996.  */
-#pragma empty_line
-/* Acquire ownership of STREAM.  */
-extern void flockfile (FILE *__stream) throw ();
-#pragma empty_line
-/* Try to acquire ownership of STREAM but do not block if it is not
-   possible.  */
-extern int ftrylockfile (FILE *__stream) throw () /* Ignore */;
-#pragma empty_line
-/* Relinquish the ownership granted for STREAM.  */
-extern void funlockfile (FILE *__stream) throw ();
-#pragma line 931 "/usr/include/stdio.h" 3 4
-/* If we are compiling with optimizing read this file.  It contains
-   several optimizing inline functions and macros.  */
-#pragma line 943 "/usr/include/stdio.h" 3 4
-}
-#pragma line 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 2 3
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-// Get rid of those macros defined in <stdio.h> in lieu of real functions.
-#pragma line 91 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-namespace std
-{
-  using ::FILE;
-  using ::fpos_t;
-#pragma empty_line
-  using ::clearerr;
-  using ::fclose;
-  using ::feof;
-  using ::ferror;
-  using ::fflush;
-  using ::fgetc;
-  using ::fgetpos;
-  using ::fgets;
-  using ::fopen;
-  using ::fprintf;
-  using ::fputc;
-  using ::fputs;
-  using ::fread;
-  using ::freopen;
-  using ::fscanf;
-  using ::fseek;
-  using ::fsetpos;
-  using ::ftell;
-  using ::fwrite;
-  using ::getc;
-  using ::getchar;
-  using ::gets;
-  using ::perror;
-  using ::printf;
-  using ::putc;
-  using ::putchar;
-  using ::puts;
-  using ::remove;
-  using ::rename;
-  using ::rewind;
-  using ::scanf;
-  using ::setbuf;
-  using ::setvbuf;
-  using ::sprintf;
-  using ::sscanf;
-  using ::tmpfile;
-  using ::tmpnam;
-  using ::ungetc;
-  using ::vfprintf;
-  using ::vprintf;
-  using ::vsprintf;
-} // namespace
-#pragma line 147 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-namespace __gnu_cxx
-{
-#pragma line 165 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-  using ::snprintf;
-  using ::vfscanf;
-  using ::vscanf;
-  using ::vsnprintf;
-  using ::vsscanf;
-#pragma empty_line
-} // namespace __gnu_cxx
-#pragma empty_line
-namespace std
-{
-  using ::__gnu_cxx::snprintf;
-  using ::__gnu_cxx::vfscanf;
-  using ::__gnu_cxx::vscanf;
-  using ::__gnu_cxx::vsnprintf;
-  using ::__gnu_cxx::vsscanf;
-} // namespace std
-#pragma line 43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 1 3
-// Wrapper of C-language FILE struct -*- C++ -*-
-#pragma empty_line
-// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-//
-// ISO C++ 14882: 27.8  File-based streams
-//
-#pragma empty_line
-/** @file bits/basic_file.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{ios}
- */
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 1 3
-// Underlying io library details -*- C++ -*-
-#pragma empty_line
-// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-/** @file bits/c++io.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{ios}
- */
-#pragma empty_line
-// c_io_stdio.h - Defines for using "C" stdio.h
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
-// -*- C++ -*- forwarding header.
-#pragma empty_line
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-/** @file include/cstdio
- *  This is a Standard C++ Library file.  You should @c \#include this file
- *  in your programs, rather than any of the @a *.h implementation files.
- *
- *  This is the C++ version of the Standard C Library header @c stdio.h,
- *  and its contents are (mostly) the same as that header, but are all
- *  contained in the namespace @c std (except for names which are defined
- *  as macros in C).
- */
-#pragma empty_line
-//
-// ISO C++ 14882: 27.8.2  C Library files
-//
-#pragma empty_line
-#pragma empty_line
-#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-#pragma line 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 2 3
-#pragma empty_line
-#pragma empty_line
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-  typedef __gthread_mutex_t __c_lock;
-#pragma empty_line
-  // for basic_file.h
-  typedef FILE __c_file;
-#pragma empty_line
-#pragma empty_line
-} // namespace
-#pragma line 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 2 3
-#pragma empty_line
-#pragma empty_line
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-  // Generic declaration.
-  template<typename _CharT>
-    class __basic_file;
-#pragma empty_line
-  // Specialization.
-  template<>
-    class __basic_file<char>
-    {
-      // Underlying data source/sink.
-      __c_file* _M_cfile;
-#pragma empty_line
-      // True iff we opened _M_cfile, and thus must close it ourselves.
-      bool _M_cfile_created;
-#pragma empty_line
-    public:
-      __basic_file(__c_lock* __lock = 0) throw ();
-#pragma empty_line
-      __basic_file*
-      open(const char* __name, ios_base::openmode __mode, int __prot = 0664);
-#pragma empty_line
-      __basic_file*
-      sys_open(__c_file* __file, ios_base::openmode);
-#pragma empty_line
-      __basic_file*
-      sys_open(int __fd, ios_base::openmode __mode) throw ();
-#pragma empty_line
-      __basic_file*
-      close();
-#pragma empty_line
-      __attribute__ ((__pure__)) bool
-      is_open() const throw ();
-#pragma empty_line
-      __attribute__ ((__pure__)) int
-      fd() throw ();
-#pragma empty_line
-      __attribute__ ((__pure__)) __c_file*
-      file() throw ();
-#pragma empty_line
-      ~__basic_file();
-#pragma empty_line
-      streamsize
-      xsputn(const char* __s, streamsize __n);
-#pragma empty_line
-      streamsize
-      xsputn_2(const char* __s1, streamsize __n1,
-        const char* __s2, streamsize __n2);
-#pragma empty_line
-      streamsize
-      xsgetn(char* __s, streamsize __n);
-#pragma empty_line
-      streamoff
-      seekoff(streamoff __off, ios_base::seekdir __way) throw ();
-#pragma empty_line
-      int
-      sync();
-#pragma empty_line
-      streamsize
-      showmanyc();
-    };
-#pragma empty_line
-#pragma empty_line
-} // namespace
-#pragma line 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-  // [27.8.1.1] template class basic_filebuf
-  /**
-   *  @brief  The actual work of input and output (for files).
-   *  @ingroup io
-   *
-   *  This class associates both its input and output sequence with an
-   *  external disk file, and maintains a joint file position for both
-   *  sequences.  Many of its semantics are described in terms of similar
-   *  behavior in the Standard C Library's @c FILE streams.
-   */
-  // Requirements on traits_type, specific to this class:
-  // traits_type::pos_type must be fpos<traits_type::state_type>
-  // traits_type::off_type must be streamoff
-  // traits_type::state_type must be Assignable and DefaultConstructible,
-  // and traits_type::state_type() must be the initial state for codecvt.
-  template<typename _CharT, typename _Traits>
-    class basic_filebuf : public basic_streambuf<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-#pragma empty_line
-      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef __basic_file<char> __file_type;
-      typedef typename traits_type::state_type __state_type;
-      typedef codecvt<char_type, char, __state_type> __codecvt_type;
-#pragma empty_line
-      friend class ios_base; // For sync_with_stdio.
-#pragma empty_line
-    protected:
-      // Data Members:
-      // MT lock inherited from libio or other low-level io library.
-      __c_lock _M_lock;
-#pragma empty_line
-      // External buffer.
-      __file_type _M_file;
-#pragma empty_line
-      /// Place to stash in || out || in | out settings for current filebuf.
-      ios_base::openmode _M_mode;
-#pragma empty_line
-      // Beginning state type for codecvt.
-      __state_type _M_state_beg;
-#pragma empty_line
-      // During output, the state that corresponds to pptr(),
-      // during input, the state that corresponds to egptr() and
-      // _M_ext_next.
-      __state_type _M_state_cur;
-#pragma empty_line
-      // Not used for output. During input, the state that corresponds
-      // to eback() and _M_ext_buf.
-      __state_type _M_state_last;
-#pragma empty_line
-      /// Pointer to the beginning of internal buffer.
-      char_type* _M_buf;
-#pragma empty_line
-      /**
-       *  Actual size of internal buffer. This number is equal to the size
-       *  of the put area + 1 position, reserved for the overflow char of
-       *  a full area.
-       */
-      size_t _M_buf_size;
-#pragma empty_line
-      // Set iff _M_buf is allocated memory from _M_allocate_internal_buffer.
-      bool _M_buf_allocated;
-#pragma empty_line
-      /**
-       *  _M_reading == false && _M_writing == false for @b uncommitted mode;
-       *  _M_reading == true for @b read mode;
-       *  _M_writing == true for @b write mode;
-       *
-       *  NB: _M_reading == true && _M_writing == true is unused.
-       */
-      bool _M_reading;
-      bool _M_writing;
-#pragma empty_line
-      //@{
-      /**
-       *  Necessary bits for putback buffer management.
-       *
-       *  @note pbacks of over one character are not currently supported.
-       */
-      char_type _M_pback;
-      char_type* _M_pback_cur_save;
-      char_type* _M_pback_end_save;
-      bool _M_pback_init;
-      //@}
-#pragma empty_line
-      // Cached codecvt facet.
-      const __codecvt_type* _M_codecvt;
-#pragma empty_line
-      /**
-       *  Buffer for external characters. Used for input when
-       *  codecvt::always_noconv() == false. When valid, this corresponds
-       *  to eback().
-       */
-      char* _M_ext_buf;
-#pragma empty_line
-      /**
-       *  Size of buffer held by _M_ext_buf.
-       */
-      streamsize _M_ext_buf_size;
-#pragma empty_line
-      /**
-       *  Pointers into the buffer held by _M_ext_buf that delimit a
-       *  subsequence of bytes that have been read but not yet converted.
-       *  When valid, _M_ext_next corresponds to egptr().
-       */
-      const char* _M_ext_next;
-      char* _M_ext_end;
-#pragma empty_line
-      /**
-       *  Initializes pback buffers, and moves normal buffers to safety.
-       *  Assumptions:
-       *  _M_in_cur has already been moved back
-       */
-      void
-      _M_create_pback()
-      {
- if (!_M_pback_init)
-   {
-     _M_pback_cur_save = this->gptr();
-     _M_pback_end_save = this->egptr();
-     this->setg(&_M_pback, &_M_pback, &_M_pback + 1);
-     _M_pback_init = true;
-   }
-      }
-#pragma empty_line
-      /**
-       *  Deactivates pback buffer contents, and restores normal buffer.
-       *  Assumptions:
-       *  The pback buffer has only moved forward.
-       */
-      void
-      _M_destroy_pback() throw()
-      {
- if (_M_pback_init)
-   {
-     // Length _M_in_cur moved in the pback buffer.
-     _M_pback_cur_save += this->gptr() != this->eback();
-     this->setg(_M_buf, _M_pback_cur_save, _M_pback_end_save);
-     _M_pback_init = false;
-   }
-      }
-#pragma empty_line
-    public:
-      // Constructors/destructor:
-      /**
-       *  @brief  Does not open any files.
-       *
-       *  The default constructor initializes the parent class using its
-       *  own default ctor.
-       */
-      basic_filebuf();
-#pragma empty_line
-      /**
-       *  @brief  The destructor closes the file first.
-       */
-      virtual
-      ~basic_filebuf()
-      { this->close(); }
-#pragma empty_line
-      // Members:
-      /**
-       *  @brief  Returns true if the external file is open.
-       */
-      bool
-      is_open() const throw()
-      { return _M_file.is_open(); }
-#pragma empty_line
-      /**
-       *  @brief  Opens an external file.
-       *  @param  s  The name of the file.
-       *  @param  mode  The open mode flags.
-       *  @return  @c this on success, NULL on failure
-       *
-       *  If a file is already open, this function immediately fails.
-       *  Otherwise it tries to open the file named @a s using the flags
-       *  given in @a mode.
-       *
-       *  Table 92, adapted here, gives the relation between openmode
-       *  combinations and the equivalent fopen() flags.
-       *  (NB: lines app, in|out|app, in|app, binary|app, binary|in|out|app,
-       *  and binary|in|app per DR 596)
-       *  +---------------------------------------------------------+
-       *  | ios_base Flag combination            stdio equivalent   |
-       *  |binary  in  out  trunc  app                              |
-       *  +---------------------------------------------------------+
-       *  |             +                        w                  |
-       *  |             +           +            a                  |
-       *  |                         +            a                  |
-       *  |             +     +                  w                  |
-       *  |         +                            r                  |
-       *  |         +   +                        r+                 |
-       *  |         +   +     +                  w+                 |
-       *  |         +   +           +            a+                 |
-       *  |         +               +            a+                 |
-       *  +---------------------------------------------------------+
-       *  |   +         +                        wb                 |
-       *  |   +         +           +            ab                 |
-       *  |   +                     +            ab                 |
-       *  |   +         +     +                  wb                 |
-       *  |   +     +                            rb                 |
-       *  |   +     +   +                        r+b                |
-       *  |   +     +   +     +                  w+b                |
-       *  |   +     +   +           +            a+b                |
-       *  |   +     +               +            a+b                |
-       *  +---------------------------------------------------------+
-       */
-      __filebuf_type*
-      open(const char* __s, ios_base::openmode __mode);
-#pragma line 280 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      /**
-       *  @brief  Closes the currently associated file.
-       *  @return  @c this on success, NULL on failure
-       *
-       *  If no file is currently open, this function immediately fails.
-       *
-       *  If a <em>put buffer area</em> exists, @c overflow(eof) is
-       *  called to flush all the characters.  The file is then
-       *  closed.
-       *
-       *  If any operations fail, this function also fails.
-       */
-      __filebuf_type*
-      close();
-#pragma empty_line
-    protected:
-      void
-      _M_allocate_internal_buffer();
-#pragma empty_line
-      void
-      _M_destroy_internal_buffer() throw();
-#pragma empty_line
-      // [27.8.1.4] overridden virtual functions
-      virtual streamsize
-      showmanyc();
-#pragma empty_line
-      // Stroustrup, 1998, p. 628
-      // underflow() and uflow() functions are called to get the next
-      // character from the real input source when the buffer is empty.
-      // Buffered input uses underflow()
-#pragma empty_line
-      virtual int_type
-      underflow();
-#pragma empty_line
-      virtual int_type
-      pbackfail(int_type __c = _Traits::eof());
-#pragma empty_line
-      // Stroustrup, 1998, p 648
-      // The overflow() function is called to transfer characters to the
-      // real output destination when the buffer is full. A call to
-      // overflow(c) outputs the contents of the buffer plus the
-      // character c.
-      // 27.5.2.4.5
-      // Consume some sequence of the characters in the pending sequence.
-      virtual int_type
-      overflow(int_type __c = _Traits::eof());
-#pragma empty_line
-      // Convert internal byte sequence to external, char-based
-      // sequence via codecvt.
-      bool
-      _M_convert_to_external(char_type*, streamsize);
-#pragma empty_line
-      /**
-       *  @brief  Manipulates the buffer.
-       *  @param  s  Pointer to a buffer area.
-       *  @param  n  Size of @a s.
-       *  @return  @c this
-       *
-       *  If no file has been opened, and both @a s and @a n are zero, then
-       *  the stream becomes unbuffered.  Otherwise, @c s is used as a
-       *  buffer; see
-       *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/bk01pt11ch25s02.html
-       *  for more.
-       */
-      virtual __streambuf_type*
-      setbuf(char_type* __s, streamsize __n);
-#pragma empty_line
-      virtual pos_type
-      seekoff(off_type __off, ios_base::seekdir __way,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-#pragma empty_line
-      virtual pos_type
-      seekpos(pos_type __pos,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-#pragma empty_line
-      // Common code for seekoff, seekpos, and overflow
-      pos_type
-      _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state);
-#pragma empty_line
-      int
-      _M_get_ext_pos(__state_type &__state);
-#pragma empty_line
-      virtual int
-      sync();
-#pragma empty_line
-      virtual void
-      imbue(const locale& __loc);
-#pragma empty_line
-      virtual streamsize
-      xsgetn(char_type* __s, streamsize __n);
-#pragma empty_line
-      virtual streamsize
-      xsputn(const char_type* __s, streamsize __n);
-#pragma empty_line
-      // Flushes output buffer, then writes unshift sequence.
-      bool
-      _M_terminate_output();
-#pragma empty_line
-      /**
-       *  This function sets the pointers of the internal buffer, both get
-       *  and put areas. Typically:
-       *
-       *   __off == egptr() - eback() upon underflow/uflow (@b read mode);
-       *   __off == 0 upon overflow (@b write mode);
-       *   __off == -1 upon open, setbuf, seekoff/pos (@b uncommitted mode).
-       *
-       *  NB: epptr() - pbase() == _M_buf_size - 1, since _M_buf_size
-       *  reflects the actual allocated memory and the last cell is reserved
-       *  for the overflow char of a full put area.
-       */
-      void
-      _M_set_buffer(streamsize __off)
-      {
-  const bool __testin = _M_mode & ios_base::in;
-  const bool __testout = _M_mode & ios_base::out;
-#pragma empty_line
- if (__testin && __off > 0)
-   this->setg(_M_buf, _M_buf, _M_buf + __off);
- else
-   this->setg(_M_buf, _M_buf, _M_buf);
-#pragma empty_line
- if (__testout && __off == 0 && _M_buf_size > 1 )
-   this->setp(_M_buf, _M_buf + _M_buf_size - 1);
- else
-   this->setp(0, 0);
-      }
-    };
-#pragma empty_line
-  // [27.8.1.5] Template class basic_ifstream
-  /**
-   *  @brief  Controlling input for files.
-   *  @ingroup io
-   *
-   *  This class supports reading from named files, using the inherited
-   *  functions from std::basic_istream.  To control the associated
-   *  sequence, an instance of std::basic_filebuf is used, which this page
-   *  refers to as @c sb.
-   */
-  template<typename _CharT, typename _Traits>
-    class basic_ifstream : public basic_istream<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-#pragma empty_line
-      // Non-standard types:
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_istream<char_type, traits_type> __istream_type;
-#pragma empty_line
-    private:
-      __filebuf_type _M_filebuf;
-#pragma empty_line
-    public:
-      // Constructors/Destructors:
-      /**
-       *  @brief  Default constructor.
-       *
-       *  Initializes @c sb using its default constructor, and passes
-       *  @c &sb to the base class initializer.  Does not open any files
-       *  (you haven't given it a filename to open).
-       */
-      basic_ifstream() : __istream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-#pragma empty_line
-      /**
-       *  @brief  Create an input file stream.
-       *  @param  s  Null terminated string specifying the filename.
-       *  @param  mode  Open file in specified mode (see std::ios_base).
-       *
-       *  @c ios_base::in is automatically included in @a mode.
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      explicit
-      basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
-      : __istream_type(), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-#pragma line 484 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The file is closed by the filebuf object, not the formatting
-       *  stream.
-       */
-      ~basic_ifstream()
-      { }
-#pragma empty_line
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_filebuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-       */
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-#pragma empty_line
-      /**
-       *  @brief  Wrapper to test for an open file.
-       *  @return  @c rdbuf()->is_open()
-       */
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-#pragma empty_line
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 365. Lack of const-qualification in clause 27
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-#pragma empty_line
-      /**
-       *  @brief  Opens an external file.
-       *  @param  s  The name of the file.
-       *  @param  mode  The open mode flags.
-       *
-       *  Calls @c std::basic_filebuf::open(s,mode|in).  If that function
-       *  fails, @c failbit is set in the stream's error state.
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      void
-      open(const char* __s, ios_base::openmode __mode = ios_base::in)
-      {
- if (!_M_filebuf.open(__s, __mode | ios_base::in))
-   this->setstate(ios_base::failbit);
- else
-   // _GLIBCXX_RESOLVE_LIB_DEFECTS
-   // 409. Closing an fstream should clear error state
-   this->clear();
-      }
-#pragma line 561 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      /**
-       *  @brief  Close the file.
-       *
-       *  Calls @c std::basic_filebuf::close().  If that function
-       *  fails, @c failbit is set in the stream's error state.
-       */
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-#pragma empty_line
-#pragma empty_line
-  // [27.8.1.8] Template class basic_ofstream
-  /**
-   *  @brief  Controlling output for files.
-   *  @ingroup io
-   *
-   *  This class supports reading from named files, using the inherited
-   *  functions from std::basic_ostream.  To control the associated
-   *  sequence, an instance of std::basic_filebuf is used, which this page
-   *  refers to as @c sb.
-   */
-  template<typename _CharT, typename _Traits>
-    class basic_ofstream : public basic_ostream<_CharT,_Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-#pragma empty_line
-      // Non-standard types:
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_ostream<char_type, traits_type> __ostream_type;
-#pragma empty_line
-    private:
-      __filebuf_type _M_filebuf;
-#pragma empty_line
-    public:
-      // Constructors:
-      /**
-       *  @brief  Default constructor.
-       *
-       *  Initializes @c sb using its default constructor, and passes
-       *  @c &sb to the base class initializer.  Does not open any files
-       *  (you haven't given it a filename to open).
-       */
-      basic_ofstream(): __ostream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-#pragma empty_line
-      /**
-       *  @brief  Create an output file stream.
-       *  @param  s  Null terminated string specifying the filename.
-       *  @param  mode  Open file in specified mode (see std::ios_base).
-       *
-       *  @c ios_base::out|ios_base::trunc is automatically included in
-       *  @a mode.
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      explicit
-      basic_ofstream(const char* __s,
-       ios_base::openmode __mode = ios_base::out|ios_base::trunc)
-      : __ostream_type(), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-#pragma line 655 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The file is closed by the filebuf object, not the formatting
-       *  stream.
-       */
-      ~basic_ofstream()
-      { }
-#pragma empty_line
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_filebuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-       */
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-#pragma empty_line
-      /**
-       *  @brief  Wrapper to test for an open file.
-       *  @return  @c rdbuf()->is_open()
-       */
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-#pragma empty_line
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 365. Lack of const-qualification in clause 27
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-#pragma empty_line
-      /**
-       *  @brief  Opens an external file.
-       *  @param  s  The name of the file.
-       *  @param  mode  The open mode flags.
-       *
-       *  Calls @c std::basic_filebuf::open(s,mode|out|trunc).  If that
-       *  function fails, @c failbit is set in the stream's error state.
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      void
-      open(const char* __s,
-    ios_base::openmode __mode = ios_base::out | ios_base::trunc)
-      {
- if (!_M_filebuf.open(__s, __mode | ios_base::out))
-   this->setstate(ios_base::failbit);
- else
-   // _GLIBCXX_RESOLVE_LIB_DEFECTS
-   // 409. Closing an fstream should clear error state
-   this->clear();
-      }
-#pragma line 734 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      /**
-       *  @brief  Close the file.
-       *
-       *  Calls @c std::basic_filebuf::close().  If that function
-       *  fails, @c failbit is set in the stream's error state.
-       */
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-#pragma empty_line
-#pragma empty_line
-  // [27.8.1.11] Template class basic_fstream
-  /**
-   *  @brief  Controlling input and output for files.
-   *  @ingroup io
-   *
-   *  This class supports reading from and writing to named files, using
-   *  the inherited functions from std::basic_iostream.  To control the
-   *  associated sequence, an instance of std::basic_filebuf is used, which
-   *  this page refers to as @c sb.
-   */
-  template<typename _CharT, typename _Traits>
-    class basic_fstream : public basic_iostream<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-#pragma empty_line
-      // Non-standard types:
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_ios<char_type, traits_type> __ios_type;
-      typedef basic_iostream<char_type, traits_type> __iostream_type;
-#pragma empty_line
-    private:
-      __filebuf_type _M_filebuf;
-#pragma empty_line
-    public:
-      // Constructors/destructor:
-      /**
-       *  @brief  Default constructor.
-       *
-       *  Initializes @c sb using its default constructor, and passes
-       *  @c &sb to the base class initializer.  Does not open any files
-       *  (you haven't given it a filename to open).
-       */
-      basic_fstream()
-      : __iostream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-#pragma empty_line
-      /**
-       *  @brief  Create an input/output file stream.
-       *  @param  s  Null terminated string specifying the filename.
-       *  @param  mode  Open file in specified mode (see std::ios_base).
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      explicit
-      basic_fstream(const char* __s,
-      ios_base::openmode __mode = ios_base::in | ios_base::out)
-      : __iostream_type(0), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-#pragma line 824 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The file is closed by the filebuf object, not the formatting
-       *  stream.
-       */
-      ~basic_fstream()
-      { }
-#pragma empty_line
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_filebuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-       */
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-#pragma empty_line
-      /**
-       *  @brief  Wrapper to test for an open file.
-       *  @return  @c rdbuf()->is_open()
-       */
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-#pragma empty_line
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 365. Lack of const-qualification in clause 27
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-#pragma empty_line
-      /**
-       *  @brief  Opens an external file.
-       *  @param  s  The name of the file.
-       *  @param  mode  The open mode flags.
-       *
-       *  Calls @c std::basic_filebuf::open(s,mode).  If that
-       *  function fails, @c failbit is set in the stream's error state.
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      void
-      open(const char* __s,
-    ios_base::openmode __mode = ios_base::in | ios_base::out)
-      {
- if (!_M_filebuf.open(__s, __mode))
-   this->setstate(ios_base::failbit);
- else
-   // _GLIBCXX_RESOLVE_LIB_DEFECTS
-   // 409. Closing an fstream should clear error state
-   this->clear();
-      }
-#pragma line 903 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-      /**
-       *  @brief  Close the file.
-       *
-       *  Calls @c std::basic_filebuf::close().  If that function
-       *  fails, @c failbit is set in the stream's error state.
-       */
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-#pragma empty_line
-#pragma empty_line
-} // namespace
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 1 3
-// File based streams -*- C++ -*-
-#pragma empty_line
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006,
-// 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-/** @file bits/fstream.tcc
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{fstream}
- */
-#pragma empty_line
-//
-// ISO C++ 14882: 27.8  File-based streams
-//
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    _M_allocate_internal_buffer()
-    {
-      // Allocate internal buffer only if one doesn't already exist
-      // (either allocated or provided by the user via setbuf).
-      if (!_M_buf_allocated && !_M_buf)
- {
-   _M_buf = new char_type[_M_buf_size];
-   _M_buf_allocated = true;
- }
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    _M_destroy_internal_buffer() throw()
-    {
-      if (_M_buf_allocated)
- {
-   delete [] _M_buf;
-   _M_buf = 0;
-   _M_buf_allocated = false;
- }
-      delete [] _M_ext_buf;
-      _M_ext_buf = 0;
-      _M_ext_buf_size = 0;
-      _M_ext_next = 0;
-      _M_ext_end = 0;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    basic_filebuf<_CharT, _Traits>::
-    basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
-    _M_mode(ios_base::openmode(0)), _M_state_beg(), _M_state_cur(),
-    _M_state_last(), _M_buf(0), _M_buf_size(8192),
-    _M_buf_allocated(false), _M_reading(false), _M_writing(false), _M_pback(),
-    _M_pback_cur_save(0), _M_pback_end_save(0), _M_pback_init(false),
-    _M_codecvt(0), _M_ext_buf(0), _M_ext_buf_size(0), _M_ext_next(0),
-    _M_ext_end(0)
-    {
-      if (has_facet<__codecvt_type>(this->_M_buf_locale))
- _M_codecvt = &use_facet<__codecvt_type>(this->_M_buf_locale);
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    open(const char* __s, ios_base::openmode __mode)
-    {
-      __filebuf_type *__ret = 0;
-      if (!this->is_open())
- {
-   _M_file.open(__s, __mode);
-   if (this->is_open())
-     {
-       _M_allocate_internal_buffer();
-       _M_mode = __mode;
-#pragma empty_line
-       // Setup initial buffer to 'uncommitted' mode.
-       _M_reading = false;
-       _M_writing = false;
-       _M_set_buffer(-1);
-#pragma empty_line
-       // Reset to initial state.
-       _M_state_last = _M_state_cur = _M_state_beg;
-#pragma empty_line
-       // 27.8.1.3,4
-       if ((__mode & ios_base::ate)
-    && this->seekoff(0, ios_base::end, __mode)
-    == pos_type(off_type(-1)))
-  this->close();
-       else
-  __ret = this;
-     }
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    close()
-    {
-      if (!this->is_open())
- return 0;
-#pragma empty_line
-      bool __testfail = false;
-      {
- // NB: Do this here so that re-opened filebufs will be cool...
- struct __close_sentry
- {
-   basic_filebuf *__fb;
-   __close_sentry (basic_filebuf *__fbi): __fb(__fbi) { }
-   ~__close_sentry ()
-   {
-     __fb->_M_mode = ios_base::openmode(0);
-     __fb->_M_pback_init = false;
-     __fb->_M_destroy_internal_buffer();
-     __fb->_M_reading = false;
-     __fb->_M_writing = false;
-     __fb->_M_set_buffer(-1);
-     __fb->_M_state_last = __fb->_M_state_cur = __fb->_M_state_beg;
-   }
- } __cs (this);
-#pragma empty_line
- if (true)
-   {
-     if (!_M_terminate_output())
-       __testfail = true;
-   }
- if (false)
-   {
-     _M_file.close();
-                            ;
-   }
- if (false)
-   { __testfail = true; }
-      }
-#pragma empty_line
-      if (!_M_file.close())
- __testfail = true;
-#pragma empty_line
-      if (__testfail)
- return 0;
-      else
- return this;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    showmanyc()
-    {
-      streamsize __ret = -1;
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin && this->is_open())
- {
-   // For a stateful encoding (-1) the pending sequence might be just
-   // shift and unshift prefixes with no actual character.
-   __ret = this->egptr() - this->gptr();
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-   if (__check_facet(_M_codecvt).encoding() >= 0)
-#pragma empty_line
-     __ret += _M_file.showmanyc() / _M_codecvt->max_length();
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    underflow()
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin)
- {
-   if (_M_writing)
-     {
-       if (overflow() == traits_type::eof())
-  return __ret;
-       _M_set_buffer(-1);
-       _M_writing = false;
-     }
-   // Check for pback madness, and if so switch back to the
-   // normal buffers and jet outta here before expensive
-   // fileops happen...
-   _M_destroy_pback();
-#pragma empty_line
-   if (this->gptr() < this->egptr())
-     return traits_type::to_int_type(*this->gptr());
-#pragma empty_line
-   // Get and convert input sequence.
-   const size_t __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
-#pragma empty_line
-   // Will be set to true if ::read() returns 0 indicating EOF.
-   bool __got_eof = false;
-   // Number of internal characters produced.
-   streamsize __ilen = 0;
-   codecvt_base::result __r = codecvt_base::ok;
-   if (__check_facet(_M_codecvt).always_noconv())
-     {
-       __ilen = _M_file.xsgetn(reinterpret_cast<char*>(this->eback()),
-          __buflen);
-       if (__ilen == 0)
-  __got_eof = true;
-     }
-   else
-     {
-              // Worst-case number of external bytes.
-       // XXX Not done encoding() == -1.
-       const int __enc = _M_codecvt->encoding();
-       streamsize __blen; // Minimum buffer size.
-       streamsize __rlen; // Number of chars to read.
-       if (__enc > 0)
-  __blen = __rlen = __buflen * __enc;
-       else
-  {
-    __blen = __buflen + _M_codecvt->max_length() - 1;
-    __rlen = __buflen;
-  }
-       const streamsize __remainder = _M_ext_end - _M_ext_next;
-       __rlen = __rlen > __remainder ? __rlen - __remainder : 0;
-#pragma empty_line
-       // An imbue in 'read' mode implies first converting the external
-       // chars already present.
-       if (_M_reading && this->egptr() == this->eback() && __remainder)
-  __rlen = 0;
-#pragma empty_line
-       // Allocate buffer if necessary and move unconverted
-       // bytes to front.
-       if (_M_ext_buf_size < __blen)
-  {
-    char* __buf = new char[__blen];
-    if (__remainder)
-      __builtin_memcpy(__buf, _M_ext_next, __remainder);
-#pragma empty_line
-    delete [] _M_ext_buf;
-    _M_ext_buf = __buf;
-    _M_ext_buf_size = __blen;
-  }
-       else if (__remainder)
-  __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
-#pragma empty_line
-       _M_ext_next = _M_ext_buf;
-       _M_ext_end = _M_ext_buf + __remainder;
-       _M_state_last = _M_state_cur;
-#pragma empty_line
-       do
-  {
-    if (__rlen > 0)
-      {
-        // Sanity check!
-        // This may fail if the return value of
-        // codecvt::max_length() is bogus.
-        if (_M_ext_end - _M_ext_buf + __rlen > _M_ext_buf_size)
-   {
-     __throw_ios_failure(("basic_filebuf::underflow " "codecvt::max_length() " "is not valid"));
-#pragma empty_line
-#pragma empty_line
-   }
-        streamsize __elen = _M_file.xsgetn(_M_ext_end, __rlen);
-        if (__elen == 0)
-   __got_eof = true;
-        else if (__elen == -1)
-   break;
-        _M_ext_end += __elen;
-      }
-#pragma empty_line
-    char_type* __iend = this->eback();
-    if (_M_ext_next < _M_ext_end)
-      __r = _M_codecvt->in(_M_state_cur, _M_ext_next,
-      _M_ext_end, _M_ext_next,
-      this->eback(),
-      this->eback() + __buflen, __iend);
-    if (__r == codecvt_base::noconv)
-      {
-        size_t __avail = _M_ext_end - _M_ext_buf;
-        __ilen = std::min(__avail, __buflen);
-        traits_type::copy(this->eback(),
-     reinterpret_cast<char_type*>
-     (_M_ext_buf), __ilen);
-        _M_ext_next = _M_ext_buf + __ilen;
-      }
-    else
-      __ilen = __iend - this->eback();
-#pragma empty_line
-    // _M_codecvt->in may return error while __ilen > 0: this is
-    // ok, and actually occurs in case of mixed encodings (e.g.,
-    // XML files).
-    if (__r == codecvt_base::error)
-      break;
-#pragma empty_line
-    __rlen = 1;
-  }
-       while (__ilen == 0 && !__got_eof);
-     }
-#pragma empty_line
-   if (__ilen > 0)
-     {
-       _M_set_buffer(__ilen);
-       _M_reading = true;
-       __ret = traits_type::to_int_type(*this->gptr());
-     }
-   else if (__got_eof)
-     {
-       // If the actual end of file is reached, set 'uncommitted'
-       // mode, thus allowing an immediate write without an
-       // intervening seek.
-       _M_set_buffer(-1);
-       _M_reading = false;
-       // However, reaching it while looping on partial means that
-       // the file has got an incomplete character.
-       if (__r == codecvt_base::partial)
-  __throw_ios_failure(("basic_filebuf::underflow " "incomplete character in file"));
-#pragma empty_line
-     }
-   else if (__r == codecvt_base::error)
-     __throw_ios_failure(("basic_filebuf::underflow " "invalid byte sequence in file"));
-#pragma empty_line
-   else
-     __throw_ios_failure(("basic_filebuf::underflow " "error reading the file"));
-#pragma empty_line
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    pbackfail(int_type __i)
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin)
- {
-   if (_M_writing)
-     {
-       if (overflow() == traits_type::eof())
-  return __ret;
-       _M_set_buffer(-1);
-       _M_writing = false;
-     }
-   // Remember whether the pback buffer is active, otherwise below
-   // we may try to store in it a second char (libstdc++/9761).
-   const bool __testpb = _M_pback_init;
-   const bool __testeof = traits_type::eq_int_type(__i, __ret);
-   int_type __tmp;
-   if (this->eback() < this->gptr())
-     {
-       this->gbump(-1);
-       __tmp = traits_type::to_int_type(*this->gptr());
-     }
-   else if (this->seekoff(-1, ios_base::cur) != pos_type(off_type(-1)))
-     {
-       __tmp = this->underflow();
-       if (traits_type::eq_int_type(__tmp, __ret))
-  return __ret;
-     }
-   else
-     {
-       // At the beginning of the buffer, need to make a
-       // putback position available.  But the seek may fail
-       // (f.i., at the beginning of a file, see
-       // libstdc++/9439) and in that case we return
-       // traits_type::eof().
-       return __ret;
-     }
-#pragma empty_line
-   // Try to put back __i into input sequence in one of three ways.
-   // Order these tests done in is unspecified by the standard.
-   if (!__testeof && traits_type::eq_int_type(__i, __tmp))
-     __ret = __i;
-   else if (__testeof)
-     __ret = traits_type::not_eof(__i);
-   else if (!__testpb)
-     {
-       _M_create_pback();
-       _M_reading = true;
-       *this->gptr() = traits_type::to_char_type(__i);
-       __ret = __i;
-     }
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    overflow(int_type __c)
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testeof = traits_type::eq_int_type(__c, __ret);
-      const bool __testout = _M_mode & ios_base::out;
-      if (__testout)
- {
-          if (_M_reading)
-            {
-              _M_destroy_pback();
-              const int __gptr_off = _M_get_ext_pos(_M_state_last);
-              if (_M_seek(__gptr_off, ios_base::cur, _M_state_last)
-                  == pos_type(off_type(-1)))
-                return __ret;
-            }
-   if (this->pbase() < this->pptr())
-     {
-       // If appropriate, append the overflow char.
-       if (!__testeof)
-  {
-    *this->pptr() = traits_type::to_char_type(__c);
-    this->pbump(1);
-  }
-#pragma empty_line
-       // Convert pending sequence to external representation,
-       // and output.
-       if (_M_convert_to_external(this->pbase(),
-      this->pptr() - this->pbase()))
-  {
-    _M_set_buffer(0);
-    __ret = traits_type::not_eof(__c);
-  }
-     }
-   else if (_M_buf_size > 1)
-     {
-       // Overflow in 'uncommitted' mode: set _M_writing, set
-       // the buffer to the initial 'write' mode, and put __c
-       // into the buffer.
-       _M_set_buffer(0);
-       _M_writing = true;
-       if (!__testeof)
-  {
-    *this->pptr() = traits_type::to_char_type(__c);
-    this->pbump(1);
-  }
-       __ret = traits_type::not_eof(__c);
-     }
-   else
-     {
-       // Unbuffered.
-       char_type __conv = traits_type::to_char_type(__c);
-       if (__testeof || _M_convert_to_external(&__conv, 1))
-  {
-    _M_writing = true;
-    __ret = traits_type::not_eof(__c);
-  }
-     }
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    bool
-    basic_filebuf<_CharT, _Traits>::
-    _M_convert_to_external(_CharT* __ibuf, streamsize __ilen)
-    {
-      // Sizes of external and pending output.
-      streamsize __elen;
-      streamsize __plen;
-      if (__check_facet(_M_codecvt).always_noconv())
- {
-   __elen = _M_file.xsputn(reinterpret_cast<char*>(__ibuf), __ilen);
-   __plen = __ilen;
- }
-      else
- {
-   // Worst-case number of external bytes needed.
-   // XXX Not done encoding() == -1.
-   streamsize __blen = __ilen * _M_codecvt->max_length();
-   char* __buf = static_cast<char*>(__builtin_alloca(__blen));
-#pragma empty_line
-   char* __bend;
-   const char_type* __iend;
-   codecvt_base::result __r;
-   __r = _M_codecvt->out(_M_state_cur, __ibuf, __ibuf + __ilen,
-    __iend, __buf, __buf + __blen, __bend);
-#pragma empty_line
-   if (__r == codecvt_base::ok || __r == codecvt_base::partial)
-     __blen = __bend - __buf;
-   else if (__r == codecvt_base::noconv)
-     {
-       // Same as the always_noconv case above.
-       __buf = reinterpret_cast<char*>(__ibuf);
-       __blen = __ilen;
-     }
-   else
-     __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error"));
-#pragma empty_line
-#pragma empty_line
-   __elen = _M_file.xsputn(__buf, __blen);
-   __plen = __blen;
-#pragma empty_line
-   // Try once more for partial conversions.
-   if (__r == codecvt_base::partial && __elen == __plen)
-     {
-       const char_type* __iresume = __iend;
-       streamsize __rlen = this->pptr() - __iend;
-       __r = _M_codecvt->out(_M_state_cur, __iresume,
-        __iresume + __rlen, __iend, __buf,
-        __buf + __blen, __bend);
-       if (__r != codecvt_base::error)
-  {
-    __rlen = __bend - __buf;
-    __elen = _M_file.xsputn(__buf, __rlen);
-    __plen = __rlen;
-  }
-       else
-  __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error"));
-#pragma empty_line
-     }
- }
-      return __elen == __plen;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    xsgetn(_CharT* __s, streamsize __n)
-    {
-      // Clear out pback buffer before going on to the real deal...
-      streamsize __ret = 0;
-      if (_M_pback_init)
- {
-   if (__n > 0 && this->gptr() == this->eback())
-     {
-       *__s++ = *this->gptr(); // emulate non-underflowing sbumpc
-       this->gbump(1);
-       __ret = 1;
-       --__n;
-     }
-   _M_destroy_pback();
- }
-      else if (_M_writing)
- {
-    if (overflow() == traits_type::eof())
-      return __ret;
-    _M_set_buffer(-1);
-    _M_writing = false;
-  }
-#pragma empty_line
-      // Optimization in the always_noconv() case, to be generalized in the
-      // future: when __n > __buflen we read directly instead of using the
-      // buffer repeatedly.
-      const bool __testin = _M_mode & ios_base::in;
-      const streamsize __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
-#pragma empty_line
-      if (__n > __buflen && __check_facet(_M_codecvt).always_noconv()
-     && __testin)
-   {
-     // First, copy the chars already present in the buffer.
-     const streamsize __avail = this->egptr() - this->gptr();
-     if (__avail != 0)
-       {
-        traits_type::copy(__s, this->gptr(), __avail);
-         __s += __avail;
-        this->setg(this->eback(), this->gptr() + __avail,
-     this->egptr());
-        __ret += __avail;
-        __n -= __avail;
-       }
-#pragma empty_line
-     // Need to loop in case of short reads (relatively common
-     // with pipes).
-     streamsize __len;
-     for (;;)
-       {
-         __len = _M_file.xsgetn(reinterpret_cast<char*>(__s),
-           __n);
-         if (__len == -1)
-    __throw_ios_failure(("basic_filebuf::xsgetn " "error reading the file"));
-#pragma empty_line
-         if (__len == 0)
-    break;
-#pragma empty_line
-         __n -= __len;
-         __ret += __len;
-         if (__n == 0)
-    break;
-#pragma empty_line
-         __s += __len;
-       }
-#pragma empty_line
-     if (__n == 0)
-       {
-         _M_set_buffer(0);
-         _M_reading = true;
-       }
-     else if (__len == 0)
-       {
-         // If end of file is reached, set 'uncommitted'
-         // mode, thus allowing an immediate write without
-         // an intervening seek.
-         _M_set_buffer(-1);
-         _M_reading = false;
-       }
-   }
-      else
-   __ret += __streambuf_type::xsgetn(__s, __n);
-#pragma empty_line
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    xsputn(const _CharT* __s, streamsize __n)
-    {
-      streamsize __ret = 0;
-      // Optimization in the always_noconv() case, to be generalized in the
-      // future: when __n is sufficiently large we write directly instead of
-      // using the buffer.
-      const bool __testout = _M_mode & ios_base::out;
-      if (__check_facet(_M_codecvt).always_noconv()
-     && __testout && !_M_reading)
- {
-   // Measurement would reveal the best choice.
-   const streamsize __chunk = 1ul << 10;
-   streamsize __bufavail = this->epptr() - this->pptr();
-#pragma empty_line
-   // Don't mistake 'uncommitted' mode buffered with unbuffered.
-   if (!_M_writing && _M_buf_size > 1)
-     __bufavail = _M_buf_size - 1;
-#pragma empty_line
-   const streamsize __limit = std::min(__chunk, __bufavail);
-   if (__n >= __limit)
-     {
-       const streamsize __buffill = this->pptr() - this->pbase();
-       const char* __buf = reinterpret_cast<const char*>(this->pbase());
-       __ret = _M_file.xsputn_2(__buf, __buffill,
-           reinterpret_cast<const char*>(__s),
-           __n);
-       if (__ret == __buffill + __n)
-  {
-    _M_set_buffer(0);
-    _M_writing = true;
-  }
-       if (__ret > __buffill)
-  __ret -= __buffill;
-       else
-  __ret = 0;
-     }
-   else
-     __ret = __streambuf_type::xsputn(__s, __n);
- }
-       else
-  __ret = __streambuf_type::xsputn(__s, __n);
-       return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__streambuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    setbuf(char_type* __s, streamsize __n)
-    {
-      if (!this->is_open())
- {
-   if (__s == 0 && __n == 0)
-     _M_buf_size = 1;
-   else if (__s && __n > 0)
-     {
-       // This is implementation-defined behavior, and assumes that
-       // an external char_type array of length __n exists and has
-       // been pre-allocated. If this is not the case, things will
-       // quickly blow up. When __n > 1, __n - 1 positions will be
-       // used for the get area, __n - 1 for the put area and 1
-       // position to host the overflow char of a full put area.
-       // When __n == 1, 1 position will be used for the get area
-       // and 0 for the put area, as in the unbuffered case above.
-       _M_buf = __s;
-       _M_buf_size = __n;
-     }
- }
-      return this;
-    }
-#pragma empty_line
-#pragma empty_line
-  // According to 27.8.1.4 p11 - 13, seekoff should ignore the last
-  // argument (of type openmode).
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode)
-    {
-      int __width = 0;
-      if (_M_codecvt)
- __width = _M_codecvt->encoding();
-      if (__width < 0)
- __width = 0;
-#pragma empty_line
-      pos_type __ret = pos_type(off_type(-1));
-      const bool __testfail = __off != 0 && __width <= 0;
-      if (this->is_open() && !__testfail)
- {
-   // tellg and tellp queries do not affect any state, unless
-   // ! always_noconv and the put sequence is not empty.
-   // In that case, determining the position requires converting the
-   // put sequence. That doesn't use ext_buf, so requires a flush.
-   bool __no_movement = __way == ios_base::cur && __off == 0
-     && (!_M_writing || _M_codecvt->always_noconv());
-#pragma empty_line
-   // Ditch any pback buffers to avoid confusion.
-   if (!__no_movement)
-     _M_destroy_pback();
-#pragma empty_line
-   // Correct state at destination. Note that this is the correct
-   // state for the current position during output, because
-   // codecvt::unshift() returns the state to the initial state.
-   // This is also the correct state at the end of the file because
-   // an unshift sequence should have been written at the end.
-   __state_type __state = _M_state_beg;
-   off_type __computed_off = __off * __width;
-   if (_M_reading && __way == ios_base::cur)
-     {
-       __state = _M_state_last;
-       __computed_off += _M_get_ext_pos(__state);
-     }
-   if (!__no_movement)
-     __ret = _M_seek(__computed_off, __way, __state);
-   else
-     {
-       if (_M_writing)
-  __computed_off = this->pptr() - this->pbase();
-#pragma empty_line
-        off_type __file_off = _M_file.seekoff(0, ios_base::cur);
-        if (__file_off != off_type(-1))
-  {
-    __ret = __file_off + __computed_off;
-    __ret.state(__state);
-  }
-     }
- }
-      return __ret;
-    }
-#pragma empty_line
-  // _GLIBCXX_RESOLVE_LIB_DEFECTS
-  // 171. Strange seekpos() semantics due to joint position
-  // According to the resolution of DR 171, seekpos should ignore the last
-  // argument (of type openmode).
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    seekpos(pos_type __pos, ios_base::openmode)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      if (this->is_open())
- {
-   // Ditch any pback buffers to avoid confusion.
-   _M_destroy_pback();
-   __ret = _M_seek(off_type(__pos), ios_base::beg, __pos.state());
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      if (_M_terminate_output())
- {
-   off_type __file_off = _M_file.seekoff(__off, __way);
-   if (__file_off != off_type(-1))
-     {
-       _M_reading = false;
-       _M_writing = false;
-       _M_ext_next = _M_ext_end = _M_ext_buf;
-       _M_set_buffer(-1);
-       _M_state_cur = __state;
-       __ret = __file_off;
-       __ret.state(_M_state_cur);
-     }
- }
-      return __ret;
-    }
-#pragma empty_line
-  // Returns the distance from the end of the ext buffer to the point
-  // corresponding to gptr(). This is a negative value. Updates __state
-  // from eback() correspondence to gptr().
-  template<typename _CharT, typename _Traits>
-    int basic_filebuf<_CharT, _Traits>::
-    _M_get_ext_pos(__state_type& __state)
-    {
-      if (_M_codecvt->always_noconv())
-        return this->gptr() - this->egptr();
-      else
-        {
-          // Calculate offset from _M_ext_buf that corresponds to
-          // gptr(). Precondition: __state == _M_state_last, which
-          // corresponds to eback().
-          const int __gptr_off =
-            _M_codecvt->length(__state, _M_ext_buf, _M_ext_next,
-                               this->gptr() - this->eback());
-          return _M_ext_buf + __gptr_off - _M_ext_end;
-        }
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    bool
-    basic_filebuf<_CharT, _Traits>::
-    _M_terminate_output()
-    {
-      // Part one: update the output sequence.
-      bool __testvalid = true;
-      if (this->pbase() < this->pptr())
- {
-   const int_type __tmp = this->overflow();
-   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-     __testvalid = false;
- }
-#pragma empty_line
-      // Part two: output unshift sequence.
-      if (_M_writing && !__check_facet(_M_codecvt).always_noconv()
-   && __testvalid)
- {
-   // Note: this value is arbitrary, since there is no way to
-   // get the length of the unshift sequence from codecvt,
-   // without calling unshift.
-   const size_t __blen = 128;
-   char __buf[__blen];
-   codecvt_base::result __r;
-   streamsize __ilen = 0;
-#pragma empty_line
-   do
-     {
-       char* __next;
-       __r = _M_codecvt->unshift(_M_state_cur, __buf,
-     __buf + __blen, __next);
-       if (__r == codecvt_base::error)
-  __testvalid = false;
-       else if (__r == codecvt_base::ok ||
-         __r == codecvt_base::partial)
-  {
-    __ilen = __next - __buf;
-    if (__ilen > 0)
-      {
-        const streamsize __elen = _M_file.xsputn(__buf, __ilen);
-        if (__elen != __ilen)
-   __testvalid = false;
-      }
-  }
-     }
-   while (__r == codecvt_base::partial && __ilen > 0 && __testvalid);
-#pragma empty_line
-   if (__testvalid)
-     {
-       // This second call to overflow() is required by the standard,
-       // but it's not clear why it's needed, since the output buffer
-       // should be empty by this point (it should have been emptied
-       // in the first call to overflow()).
-       const int_type __tmp = this->overflow();
-       if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-  __testvalid = false;
-     }
- }
-      return __testvalid;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    int
-    basic_filebuf<_CharT, _Traits>::
-    sync()
-    {
-      // Make sure that the internal buffer resyncs its idea of
-      // the file position with the external file.
-      int __ret = 0;
-      if (this->pbase() < this->pptr())
- {
-   const int_type __tmp = this->overflow();
-   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-     __ret = -1;
- }
-      return __ret;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    imbue(const locale& __loc)
-    {
-      bool __testvalid = true;
-#pragma empty_line
-      const __codecvt_type* _M_codecvt_tmp = 0;
-      if (__builtin_expect(has_facet<__codecvt_type>(__loc), true))
- _M_codecvt_tmp = &use_facet<__codecvt_type>(__loc);
-#pragma empty_line
-      if (this->is_open())
- {
-   // encoding() == -1 is ok only at the beginning.
-   if ((_M_reading || _M_writing)
-       && __check_facet(_M_codecvt).encoding() == -1)
-     __testvalid = false;
-   else
-     {
-       if (_M_reading)
-  {
-    if (__check_facet(_M_codecvt).always_noconv())
-      {
-        if (_M_codecvt_tmp
-     && !__check_facet(_M_codecvt_tmp).always_noconv())
-   __testvalid = this->seekoff(0, ios_base::cur, _M_mode)
-                 != pos_type(off_type(-1));
-      }
-    else
-      {
-        // External position corresponding to gptr().
-        _M_ext_next = _M_ext_buf
-   + _M_codecvt->length(_M_state_last, _M_ext_buf,
-          _M_ext_next,
-          this->gptr() - this->eback());
-        const streamsize __remainder = _M_ext_end - _M_ext_next;
-        if (__remainder)
-   __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
-#pragma empty_line
-        _M_ext_next = _M_ext_buf;
-        _M_ext_end = _M_ext_buf + __remainder;
-        _M_set_buffer(-1);
-        _M_state_last = _M_state_cur = _M_state_beg;
-      }
-  }
-       else if (_M_writing && (__testvalid = _M_terminate_output()))
-  _M_set_buffer(-1);
-     }
- }
-#pragma empty_line
-      if (__testvalid)
- _M_codecvt = _M_codecvt_tmp;
-      else
- _M_codecvt = 0;
-    }
-#pragma empty_line
-  // Inhibit implicit instantiations for required instantiations,
-  // which are defined via explicit instantiations elsewhere.
-#pragma empty_line
-  extern template class basic_filebuf<char>;
-  extern template class basic_ifstream<char>;
-  extern template class basic_ofstream<char>;
-  extern template class basic_fstream<char>;
-#pragma empty_line
-#pragma empty_line
-  extern template class basic_filebuf<wchar_t>;
-  extern template class basic_ifstream<wchar_t>;
-  extern template class basic_ofstream<wchar_t>;
-  extern template class basic_fstream<wchar_t>;
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-} // namespace std
-#pragma line 921 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-#pragma line 10 "./pca.h" 2
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 1 3
-// Standard stream manipulators -*- C++ -*-
-#pragma empty_line
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005
-// 2006, 2007, 2008, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-#pragma empty_line
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-#pragma empty_line
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-#pragma empty_line
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-#pragma empty_line
-/** @file include/iomanip
- *  This is a Standard C++ Library header.
- */
-#pragma empty_line
-//
-// ISO C++ 14882: 27.6.3  Standard manipulators
-//
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
-#pragma line 47 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-#pragma empty_line
-#pragma empty_line
-  // [27.6.3] standard manipulators
-  // Also see DR 183.
-#pragma empty_line
-  struct _Resetiosflags { ios_base::fmtflags _M_mask; };
-#pragma empty_line
-  /**
-   *  @brief  Manipulator for @c setf.
-   *  @param  mask  A format flags mask.
-   *
-   *  Sent to a stream object, this manipulator resets the specified flags,
-   *  via @e stream.setf(0,mask).
-  */
-  inline _Resetiosflags
-  resetiosflags(ios_base::fmtflags __mask)
-  { return { __mask }; }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Resetiosflags __f)
-    {
-      __is.setf(ios_base::fmtflags(0), __f._M_mask);
-      return __is;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
-    {
-      __os.setf(ios_base::fmtflags(0), __f._M_mask);
-      return __os;
-    }
-#pragma empty_line
-#pragma empty_line
-  struct _Setiosflags { ios_base::fmtflags _M_mask; };
-#pragma empty_line
-  /**
-   *  @brief  Manipulator for @c setf.
-   *  @param  mask  A format flags mask.
-   *
-   *  Sent to a stream object, this manipulator sets the format flags
-   *  to @a mask.
-  */
-  inline _Setiosflags
-  setiosflags(ios_base::fmtflags __mask)
-  { return { __mask }; }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setiosflags __f)
-    {
-      __is.setf(__f._M_mask);
-      return __is;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
-    {
-      __os.setf(__f._M_mask);
-      return __os;
-    }
-#pragma empty_line
-#pragma empty_line
-  struct _Setbase { int _M_base; };
-#pragma empty_line
-  /**
-   *  @brief  Manipulator for @c setf.
-   *  @param  base  A numeric base.
-   *
-   *  Sent to a stream object, this manipulator changes the
-   *  @c ios_base::basefield flags to @c oct, @c dec, or @c hex when @a base
-   *  is 8, 10, or 16, accordingly, and to 0 if @a base is any other value.
-  */
-  inline _Setbase
-  setbase(int __base)
-  { return { __base }; }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setbase __f)
-    {
-      __is.setf(__f._M_base == 8 ? ios_base::oct :
-  __f._M_base == 10 ? ios_base::dec :
-  __f._M_base == 16 ? ios_base::hex :
-  ios_base::fmtflags(0), ios_base::basefield);
-      return __is;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
-    {
-      __os.setf(__f._M_base == 8 ? ios_base::oct :
-  __f._M_base == 10 ? ios_base::dec :
-  __f._M_base == 16 ? ios_base::hex :
-  ios_base::fmtflags(0), ios_base::basefield);
-      return __os;
-    }
-#pragma empty_line
-#pragma empty_line
-  template<typename _CharT>
-    struct _Setfill { _CharT _M_c; };
-#pragma empty_line
-  /**
-   *  @brief  Manipulator for @c fill.
-   *  @param  c  The new fill character.
-   *
-   *  Sent to a stream object, this manipulator calls @c fill(c) for that
-   *  object.
-  */
-  template<typename _CharT>
-    inline _Setfill<_CharT>
-    setfill(_CharT __c)
-    { return { __c }; }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setfill<_CharT> __f)
-    {
-      __is.fill(__f._M_c);
-      return __is;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
-    {
-      __os.fill(__f._M_c);
-      return __os;
-    }
-#pragma empty_line
-#pragma empty_line
-  struct _Setprecision { int _M_n; };
-#pragma empty_line
-  /**
-   *  @brief  Manipulator for @c precision.
-   *  @param  n  The new precision.
-   *
-   *  Sent to a stream object, this manipulator calls @c precision(n) for
-   *  that object.
-  */
-  inline _Setprecision
-  setprecision(int __n)
-  { return { __n }; }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setprecision __f)
-    {
-      __is.precision(__f._M_n);
-      return __is;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
-    {
-      __os.precision(__f._M_n);
-      return __os;
-    }
-#pragma empty_line
-#pragma empty_line
-  struct _Setw { int _M_n; };
-#pragma empty_line
-  /**
-   *  @brief  Manipulator for @c width.
-   *  @param  n  The new width.
-   *
-   *  Sent to a stream object, this manipulator calls @c width(n) for
-   *  that object.
-  */
-  inline _Setw
-  setw(int __n)
-  { return { __n }; }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setw __f)
-    {
-      __is.width(__f._M_n);
-      return __is;
-    }
-#pragma empty_line
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
-    {
-      __os.width(__f._M_n);
-      return __os;
-    }
-#pragma line 315 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
-  // Inhibit implicit instantiations for required instantiations,
-  // which are defined via explicit instantiations elsewhere.  
-  // NB:  This syntax is a GNU extension.
-#pragma empty_line
-  extern template ostream& operator<<(ostream&, _Setfill<char>);
-  extern template ostream& operator<<(ostream&, _Setiosflags);
-  extern template ostream& operator<<(ostream&, _Resetiosflags);
-  extern template ostream& operator<<(ostream&, _Setbase);
-  extern template ostream& operator<<(ostream&, _Setprecision);
-  extern template ostream& operator<<(ostream&, _Setw);
-  extern template istream& operator>>(istream&, _Setfill<char>);
-  extern template istream& operator>>(istream&, _Setiosflags);
-  extern template istream& operator>>(istream&, _Resetiosflags);
-  extern template istream& operator>>(istream&, _Setbase);
-  extern template istream& operator>>(istream&, _Setprecision);
-  extern template istream& operator>>(istream&, _Setw);
-#pragma empty_line
-#pragma empty_line
-  extern template wostream& operator<<(wostream&, _Setfill<wchar_t>);
-  extern template wostream& operator<<(wostream&, _Setiosflags);
-  extern template wostream& operator<<(wostream&, _Resetiosflags);
-  extern template wostream& operator<<(wostream&, _Setbase);
-  extern template wostream& operator<<(wostream&, _Setprecision);
-  extern template wostream& operator<<(wostream&, _Setw);
-  extern template wistream& operator>>(wistream&, _Setfill<wchar_t>);
-  extern template wistream& operator>>(wistream&, _Setiosflags);
-  extern template wistream& operator>>(wistream&, _Resetiosflags);
-  extern template wistream& operator>>(wistream&, _Setbase);
-  extern template wistream& operator>>(wistream&, _Setprecision);
-  extern template wistream& operator>>(wistream&, _Setw);
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-} // namespace
-#pragma line 12 "./pca.h" 2
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2011-2014 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-#pragma empty_line
-/*
- * HLS Linear Algebra Library Header File
- */
-#pragma line 43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h"
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2014-2015 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-#pragma empty_line
-// Matrix Multiply functions
-// -------------------------
-// MATRIX_MULTIPLY           : Entry point function.
-// MATRIX_MULTIPLY_TOP       : Top level function that selects implementation architecture and internal types based on traits class.
-// MATRIX_MULTIPLY_DEFAULT   : Default architecture.
-// MATRIX_MULTIPLY_ALT1      : Improved throughput for rolled floating point implementations at the expense of an additional memory.
-// MATRIX_MULTIPLY_ALT2      : Further rolled floating point throughput improvement for small matrix sizes. Requires larger internal memory.
-// MATRIX_MULTIPLY_ADD_TREE  : Architecture using an adder tree for fully unrolled floating point implementations.
-// MATRIX_MULTIPLY_FULL      : Default architecture including directives to fully unroll inner loop, fixed point implementations
-#pragma empty_line
-// Change Log
-// ----------
-// 2015.3:
-//  * Default architecture selected based on data type
-//  * Removed default architecture choice macros
-//  * Added default inner loop pipelining value set via configuration traits class
-//  * Correction to internal ap_fixed types bit width
-//  * Added MATRIX_MULTIPLY_FULL architecture
-// 
-// 2015.1:
-//  * Linear Algebra Library update.
-//  * No changes
-// 
-// 2014.1:
-//  * Initial release
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-#pragma empty_line
+#pragma line 2 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 2
 #pragma empty_line
 #pragma empty_line
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
@@ -60521,9 +60482,6 @@ inline __attribute__((always_inline)) svd_traits() { _ssdm_SpecConstant(&NUM_SWE
                        OutputType U[RowsA][RowsA],
                        OutputType V[ColsA][ColsA] )
   {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
-#pragma HLS ALLOCATION instances=vm2x1_base limit=1 function
-#pragma line 791 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h"
-
     // Initially only supporting square matrix
     ((RowsA==ColsA) ? static_cast<void> (0) : __assert_fail ("RowsA==ColsA", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h", 793, __PRETTY_FUNCTION__));
 #pragma empty_line
@@ -61032,12 +60990,7 @@ inline __attribute__((always_inline)) svd_traits() { _ssdm_SpecConstant(&NUM_SWE
 #pragma empty_line
 #pragma empty_line
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#pragma line 13 "./pca.h" 2
-#pragma empty_line
-#pragma line 1 "./svd.h" 1
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
+#pragma line 11 "dut.cpp" 2
 #pragma line 1 "./dut.h" 1
 //===========================================================================
 // dut.h
@@ -61047,28 +61000,44 @@ inline __attribute__((always_inline)) svd_traits() { _ssdm_SpecConstant(&NUM_SWE
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma line 1 "./pca.h" 1
+#pragma line 1 "./typedefs.h" 1
 //===========================================================================
-// pca.h
+// typedefs.h
 //===========================================================================
-// @brief: TODO
-#pragma line 10 "./dut.h" 2
+// @brief: This header defines the shorthand of several ap_uint data types.
 #pragma empty_line
 #pragma empty_line
-// Top function for synthesis
-void dut (
-  hls::stream<float> &strm_in,
-  hls::stream<float> &strm_out
-);
-#pragma line 5 "./svd.h" 2
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
 #pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#pragma line 6 "./svd.h" 2
+#pragma line 11 "./typedefs.h" 2
+#pragma empty_line
+typedef bool bit;
+typedef ap_int<8> bit8_t;
+typedef ap_uint<2> bit2_t;
+typedef ap_uint<32> bit32_t;
+#pragma empty_line
+typedef float fix32_t;
+//typedef ap_fixed<16,16> fix32_t;
+#pragma line 8 "./dut.h" 2
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "./svd.h" 1
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
+#pragma line 5 "./svd.h" 2
 #pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 1 3
 // The template and inlines for the -*- C++ -*- complex number classes.
 #pragma empty_line
@@ -64011,7 +63980,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 #pragma empty_line
 #pragma empty_line
 } // namespace
-#pragma line 7 "./svd.h" 2
+#pragma line 6 "./svd.h" 2
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
@@ -64069,10 +64038,7 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
    This is broken in G++ before version 2.6.
    C9x has a similar variable called __func__, but prefer the GCC one since
    it demangles C++ function names.  */
-#pragma line 11 "./svd.h" 2
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
+#pragma line 10 "./svd.h" 2
 #pragma empty_line
 namespace svd {
  // ===================================================================================================================
@@ -64098,7 +64064,7 @@ namespace svd {
   
 public :
 inline __attribute__((always_inline)) svd_traits() { _ssdm_SpecConstant(&NUM_SWEEPS); _ssdm_SpecConstant(&MIN_DIM); _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&OFF_DIAG_II); _ssdm_SpecConstant(&DIAG_II);  }
-#pragma line 36 "./svd.h"
+#pragma line 32 "./svd.h"
 };
 #pragma empty_line
   // ===================================================================================================================
@@ -64331,149 +64297,6 @@ inline __attribute__((always_inline)) svd_traits() { _ssdm_SpecConstant(&NUM_SWE
   }
 #pragma empty_line
 #pragma empty_line
-  template<
-  int RowsA,
-  int ColsA,
-  class SVDTraits>
-  void calc_svd_update_on_diag_s_off_diag_vd( int top_left, int bottom_right,
-                                              float s_temp[2][2],
-                                              float u_temp[2][2],
-                                              float v_temp[2][2],
-                                              float u_row_temp[RowsA][2],
-                                              float v_row_temp[RowsA][2],
-                                              float new_j[2][2],
-                                              float new_k[2][2]){_ssdm_SpecArrayDimSize(v_temp,2);_ssdm_SpecArrayDimSize(new_k,2);_ssdm_SpecArrayDimSize(u_row_temp,RowsA);_ssdm_SpecArrayDimSize(new_j,2);_ssdm_SpecArrayDimSize(v_row_temp,RowsA);_ssdm_SpecArrayDimSize(u_temp,2);_ssdm_SpecArrayDimSize(s_temp,2);
-#pragma empty_line
-    // Internal memories for partial results
-    typename SVDTraits::SIntType s_in[RowsA][ColsA];
-    typename SVDTraits::UIntType u_in[RowsA][ColsA];
-    typename SVDTraits::VIntType v_in[RowsA][ColsA];
-#pragma empty_line
-    // Current S,U,V values being worked on
-    typename SVDTraits::SIntType w_in, x_in, y_in, z_in;
-    typename SVDTraits::SIntType w_out, x_out, y_out, z_out;
-    typename SVDTraits::UIntType uw_in, ux_in, uy_in, uz_in;
-    typename SVDTraits::UIntType uw_out, ux_out, uy_out, uz_out;
-    typename SVDTraits::VIntType vw_in, vx_in, vy_in, vz_in;
-    typename SVDTraits::VIntType vw_out, vx_out, vy_out, vz_out;
-#pragma empty_line
-    // 2x2 Rotation values
-    typename SVDTraits::CSIntType uw_new, ux_new, uy_new, uz_new;
-    typename SVDTraits::CSIntType vw_new, vx_new, vy_new, vz_new;
-#pragma empty_line
-    //calc
-    w_in =s_temp[0][0];
-    x_in =s_temp[0][1];
-    y_in =s_temp[1][0];
-    z_in =s_temp[1][1];
-#pragma empty_line
-    svd2x2(w_in, x_in, y_in, z_in, uw_new, ux_new, uy_new, uz_new, vw_new, vx_new, vy_new, vz_new, w_out, x_out, y_out, z_out);
-#pragma empty_line
-    s_temp[0][0] = w_out;
-    s_temp[0][1] = x_out;
-    s_temp[1][0] = y_out;
-    s_temp[1][1] = z_out;
-#pragma empty_line
-    new_j[0][0] = uw_new;
-    new_j[0][1] = ux_new;
-    new_j[1][0] = uy_new;
-    new_j[1][1] = uz_new;
-#pragma empty_line
-    new_k[0][0] = vw_new;
-    new_k[0][1] = vx_new;
-    new_k[1][0] = vy_new;
-    new_k[1][1] = vz_new;
-#pragma empty_line
-    uw_in = u_temp[0][0];
-    ux_in = u_temp[0][1];
-    uy_in = u_temp[1][0];
-    uz_in = u_temp[1][1];
-#pragma empty_line
-    vw_in = v_temp[0][0];
-    vx_in = v_temp[0][1];
-    vy_in = v_temp[1][0];
-    vz_in = v_temp[1][1];
-#pragma empty_line
-    mm2x2(uw_in, ux_in, uy_in, uz_in, uw_new, ux_new, uy_new, uz_new, uw_out, ux_out, uy_out, uz_out);
-    mm2x2(vw_in, vx_in, vy_in, vz_in, vw_new, vx_new, vy_new, vz_new, vw_out, vx_out, vy_out, vz_out);
-#pragma empty_line
-    u_temp[0][0] = uw_out;
-    u_temp[0][1] = ux_out;
-    u_temp[1][0] = uy_out;
-    u_temp[1][1] = uz_out;
-    v_temp[0][0] = vw_out;
-    v_temp[0][1] = vx_out;
-    v_temp[1][0] = vy_out;
-    v_temp[1][1] = vz_out;
-#pragma empty_line
-    off_row_uv: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-      if (off_row == bottom_right || off_row == top_left) continue;
-#pragma empty_line
-      vx_in = v_row_temp[off_row][1];
-      ux_in = u_row_temp[off_row][1];
-      vw_in = v_row_temp[off_row][0];
-      uw_in = u_row_temp[off_row][0];
-#pragma empty_line
-      vm2x1(vw_in,vw_new,vx_in,vy_new,vw_out);
-      vm2x1(vw_in,vx_new,vx_in,vz_new,vx_out);
-#pragma empty_line
-      vm2x1(uw_in,uw_new,ux_in,uy_new,uw_out);
-      vm2x1(uw_in,ux_new,ux_in,uz_new,ux_out);
-#pragma empty_line
-      v_row_temp[off_row][0] = vw_out;
-      v_row_temp[off_row][1] = vx_out;
-      u_row_temp[off_row][0] = uw_out;
-      u_row_temp[off_row][1] = ux_out;
-    }
-#pragma empty_line
-  }
-#pragma empty_line
-template<
-int RowsA,
-int ColsA,
-class SVDTraits>
-void update_off_diag_s(int top_left, int bottom_right, float new_j[2][2],float new_k[2][2], float s_col_temp[2][ColsA],float s_row_temp[RowsA][2]){_ssdm_SpecArrayDimSize(new_k,2);_ssdm_SpecArrayDimSize(new_j,2);_ssdm_SpecArrayDimSize(s_col_temp,2);_ssdm_SpecArrayDimSize(s_row_temp,RowsA);
-  float w_in,x_in,y_in;
-  float w_out,x_out,y_out;
-#pragma empty_line
-  float uw_new = new_j[0][0];
-  float ux_new = new_j[0][1];
-  float uy_new = new_j[1][0];
-  float uz_new = new_j[1][1];
-#pragma empty_line
-  float vw_new = new_k[0][0];
-  float vx_new = new_k[0][1];
-  float vy_new = new_k[1][0];
-  float vz_new = new_k[1][1];
-#pragma empty_line
-#pragma empty_line
-  off_col_s: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
-    if (off_col == bottom_right || off_col == top_left) continue;
-#pragma empty_line
-    w_in =s_col_temp[0][off_col];
-    y_in =s_col_temp[1][off_col];
-#pragma empty_line
-    vm2x1(uw_new,w_in,uy_new,y_in,w_out);
-    vm2x1(ux_new,w_in,uz_new,y_in,y_out);
-#pragma empty_line
-    s_col_temp[0][off_col] = w_out;
-    s_col_temp[1][off_col] = y_out;
-#pragma empty_line
-  }
-#pragma empty_line
-  off_row_s: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-    if (off_row == bottom_right || off_row == top_left) continue;
-      w_in = s_row_temp[off_row][0];
-#pragma empty_line
-      x_in = s_row_temp[off_row][1];
-#pragma empty_line
-      vm2x1(w_in,vw_new,x_in,vy_new,w_out);
-      vm2x1(w_in,vx_new,x_in,vz_new,x_out);
-#pragma empty_line
-      s_row_temp[off_row][0] = w_out;
-      s_row_temp[off_row][1] = x_out;
-  }
-}
 #pragma empty_line
 // ===================================================================================================================
 // SVD_BASIC: Top level function taking a SVDTraits template parameter to defines internal types
@@ -64484,10 +64307,9 @@ void update_off_diag_s(int top_left, int bottom_right, float new_j[2][2],float n
   typename InputType,
   typename OutputType>
   void svd_basic( const InputType A[RowsA][ColsA],
-                  OutputType S[RowsA][ColsA],
-                  OutputType U[RowsA][RowsA],
-                  OutputType V[ColsA][ColsA],
-                  hls::stream<float> & pca_in, hls::stream<float> & pca_out)
+                      OutputType S[RowsA][ColsA],
+                      OutputType U[RowsA][RowsA],
+                      OutputType V[ColsA][ColsA] )
   {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
   // Initially only supporting square matrix
 #pragma empty_line
@@ -64511,143 +64333,526 @@ void update_off_diag_s(int top_left, int bottom_right, float new_j[2][2],float n
   typename SVDTraits::CSIntType uw_new, ux_new, uy_new, uz_new;
   typename SVDTraits::CSIntType vw_new, vx_new, vy_new, vz_new;
 #pragma empty_line
-  for(int i=0; i<RowsA; i++){
-    for(int j=0; j<ColsA; j++){
-      U[i][j] = i==j?1:0;
-      V[i][j] = i==j?1:0;
-      S[i][j] = A[i][j];
-    }
-  }
-#pragma empty_line
   sweep_loop: for(int sweepnum = 0; sweepnum < SVDTraits::NUM_SWEEPS; sweepnum++) {
-      for (int distance = 2; distance < RowsA+1; distance ++){
-        for (int offset = 0; offset < distance; offset ++){
-          float new_j[RowsA][2][2];
-          float new_k[RowsA][2][2];
-#pragma empty_line
-          //diag
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            int bottom_right = top_left + distance - 1;
-#pragma empty_line
-            pca_in.write(1);
-#pragma empty_line
-            //std::cout << "write to fpga" << std::endl;
-            pca_in.write((float)top_left);
-            pca_in.write((float)bottom_right);
-            pca_in.write(S[top_left] [top_left] );
-            pca_in.write(S[top_left] [bottom_right]);
-            pca_in.write(S[bottom_right][top_left] );
-            pca_in.write(S[bottom_right][bottom_right]);
-            pca_in.write(U[top_left] [top_left] );
-            pca_in.write(U[top_left] [bottom_right]);
-            pca_in.write(U[bottom_right][top_left] );
-            pca_in.write(U[bottom_right][bottom_right]);
-            pca_in.write(V[top_left] [top_left] );
-            pca_in.write(V[top_left] [bottom_right]);
-            pca_in.write(V[bottom_right][top_left] );
-            pca_in.write(V[bottom_right][bottom_right]);
-#pragma empty_line
-            for(int i=0;i<RowsA;i++){
-              pca_in.write(U[i][top_left] );
-              pca_in.write(U[i][bottom_right]);
-              pca_in.write(V[i][top_left] );
-              pca_in.write(V[i][bottom_right]);
+      // NOTE: Using the minimum dimension. i.e. will process a square matrix
+      row_loop: for(int top_left = 0; top_left < SVDTraits::MIN_DIM; top_left++) {
+        col_loop: for(int bottom_right = top_left+1; bottom_right< SVDTraits::MIN_DIM; bottom_right++) {
+          // Fetch w,x,y,z values
+          if (sweepnum == 0 && top_left == 0) {
+            if (bottom_right == 1) {
+            w_in =A[top_left] [top_left];
+            x_in =A[top_left] [bottom_right];
+            y_in =A[bottom_right][top_left];
+            } else {
+            // Now revist values already updated in first diagonal pass
+            w_in =s_in[top_left] [top_left];
+            x_in =s_in[top_left] [bottom_right];
+            y_in =s_in[bottom_right][top_left];
             }
+            z_in =A[bottom_right][bottom_right];
+          } else {
+            w_in =s_in[top_left] [top_left];
+            x_in =s_in[top_left] [bottom_right];
+            y_in =s_in[bottom_right][top_left];
+            z_in =s_in[bottom_right][bottom_right];
           }
 #pragma empty_line
-          //std::cout << "run dut" << std::endl;
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            dut(pca_in, pca_out);
+          // Diagonal
+          svd2x2(w_in, x_in, y_in, z_in, uw_new, ux_new, uy_new, uz_new, vw_new, vx_new, vy_new, vz_new, w_out, x_out, y_out, z_out);
+#pragma empty_line
+          // Update S on diagonal
+          s_in[top_left] [top_left] = w_out;
+          s_in[top_left] [bottom_right] = x_out;
+          s_in[bottom_right][top_left] = y_out;
+          s_in[bottom_right][bottom_right] = z_out;
+          if (sweepnum == SVDTraits::NUM_SWEEPS-1) {
+            S[top_left] [top_left] = w_out;
+            S[top_left] [bottom_right] = x_out;
+            S[bottom_right][top_left] = y_out;
+            S[bottom_right][bottom_right] = z_out;
           }
 #pragma empty_line
-          //wb
-          //std::cout << "read from fpga" << std::endl;
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            int bottom_right = top_left + distance - 1;
-#pragma empty_line
-            S[top_left] [top_left] = pca_out.read();
-            S[top_left] [bottom_right] = pca_out.read();
-            S[bottom_right][top_left] = pca_out.read();
-            S[bottom_right][bottom_right] = pca_out.read();
-            U[top_left] [top_left] = pca_out.read();
-            U[top_left] [bottom_right] = pca_out.read();
-            U[bottom_right][top_left] = pca_out.read();
-            U[bottom_right][bottom_right] = pca_out.read();
-            V[top_left] [top_left] = pca_out.read();
-            V[top_left] [bottom_right] = pca_out.read();
-            V[bottom_right][top_left] = pca_out.read();
-            V[bottom_right][bottom_right] = pca_out.read();
-            //exit(0);
-            for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-              if (off_row == top_left || off_row == bottom_right) continue;
-              V[off_row][top_left] = pca_out.read();
-              V[off_row][bottom_right] = pca_out.read();
-              U[off_row][top_left] = pca_out.read();
-              U[off_row][bottom_right] = pca_out.read();
+          // Update U & V
+          // o On the diagonal use a 2x2 as per the sigma
+          // o Need to create the indentity in U & V at the start
+          if (sweepnum == 0 && top_left == 0) {
+            if (bottom_right==1) {
+            uw_in = 1;
+            vw_in = 1;
+            } else {
+            // Now re-visiting diagonal values where I has been set
+            uw_in = u_in[top_left][top_left];
+            vw_in = v_in[top_left][top_left];
             }
 #pragma empty_line
+            ux_in = 0;
+            uy_in = 0;
+            uz_in = 1;
 #pragma empty_line
-            new_j[top_left][0][0] = pca_out.read();
-            new_j[top_left][0][1] = pca_out.read();
-            new_j[top_left][1][0] = pca_out.read();
-            new_j[top_left][1][1] = pca_out.read();
-#pragma empty_line
-            new_k[top_left][0][0] = pca_out.read();
-            new_k[top_left][0][1] = pca_out.read();
-            new_k[top_left][1][0] = pca_out.read();
-            new_k[top_left][1][1] = pca_out.read();
-#pragma empty_line
-#pragma empty_line
+            vx_in = 0;
+            vy_in = 0;
+            vz_in = 1;
+          } else {
+            uw_in = u_in[top_left] [top_left];
+            ux_in = u_in[top_left] [bottom_right];
+            uy_in = u_in[bottom_right][top_left];
+            uz_in = u_in[bottom_right][bottom_right];
+            vw_in = v_in[top_left] [top_left];
+            vx_in = v_in[top_left] [bottom_right];
+            vy_in = v_in[bottom_right][top_left];
+            vz_in = v_in[bottom_right][bottom_right];
           }
 #pragma empty_line
-          //off diag
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            int bottom_right = top_left + distance - 1;
+          mm2x2(uw_in, ux_in, uy_in, uz_in, uw_new, ux_new, uy_new, uz_new, uw_out, ux_out, uy_out, uz_out);
+          mm2x2(vw_in, vx_in, vy_in, vz_in, vw_new, vx_new, vy_new, vz_new, vw_out, vx_out, vy_out, vz_out);
 #pragma empty_line
-            pca_in.write(2);
-            pca_in.write((float)top_left);
-            pca_in.write((float)bottom_right);
+          u_in[top_left] [top_left] = uw_out;
+          u_in[top_left] [bottom_right] = ux_out;
+          u_in[bottom_right][top_left] = uy_out;
+          u_in[bottom_right][bottom_right] = uz_out;
+          v_in[top_left] [top_left] = vw_out;
+          v_in[top_left] [bottom_right] = vx_out;
+          v_in[bottom_right][top_left] = vy_out;
+          v_in[bottom_right][bottom_right] = vz_out;
+          if (sweepnum == SVDTraits::NUM_SWEEPS-1) {
+            U[top_left] [top_left] = uw_out;
+            U[top_left] [bottom_right] = ux_out;
+            U[bottom_right][top_left] = uy_out;
+            U[bottom_right][bottom_right] = uz_out;
+            V[top_left] [top_left] = vw_out;
+            V[top_left] [bottom_right] = vx_out;
+            V[bottom_right][top_left] = vy_out;
+            V[bottom_right][bottom_right] = vz_out;
+          }
 #pragma empty_line
-            //init
-            float s_col_temp[2][ColsA];
-            for(int i=0;i<ColsA;i++){
-              pca_in.write(S[top_left] [i]);
-              pca_in.write(S[bottom_right][i]);
+          // Off-diagonal
+          // Col updates
+          off_col: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
+#pragma HLS PIPELINE /*II = SVDTraits::OFF_DIAG_II*/
+ if (off_col != bottom_right && off_col != top_left) {
+              if (sweepnum == 0 && top_left == 0 && bottom_right == 1) {
+              w_in =A[top_left][off_col];
+              } else {
+              w_in =s_in[top_left][off_col];
+              }
+              if (sweepnum == 0 && top_left == 0 && off_col > bottom_right) {
+              y_in =A[bottom_right][off_col];
+              } else {
+              y_in =s_in[bottom_right][off_col];
+              }
+#pragma empty_line
+              // U must be Hermitian transposed before it is applied to A
+              vm2x1(hls::x_conj(uw_new),w_in,hls::x_conj(uy_new),y_in,w_out);
+              vm2x1(hls::x_conj(ux_new),w_in,hls::x_conj(uz_new),y_in,y_out);
+#pragma empty_line
+              //Store off-diagonal updates
+              s_in[top_left] [off_col] = w_out;
+              s_in[bottom_right][off_col] = y_out;
+              if (sweepnum == SVDTraits::NUM_SWEEPS-1) {
+              S[top_left] [off_col] = w_out;
+              S[bottom_right][off_col] = y_out;
+              }
             }
+          }
+          // Row update
+          off_row: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
+#pragma HLS PIPELINE /*II = SVDTraits::OFF_DIAG_II*/
+ if (off_row != bottom_right && off_row != top_left) {
+              if (sweepnum == 0 && top_left== 0 && bottom_right == 1) {
+                w_in =A[off_row][top_left];
+                vw_in = 0;
+                uw_in = 0;
+              } else {
+                w_in = s_in[off_row][top_left];
+                vw_in = v_in[off_row][top_left];
+                uw_in = u_in[off_row][top_left];
+              }
+              if (sweepnum == 0 && top_left == 0 && off_row > bottom_right) {
+                x_in = A[off_row][bottom_right];
+              } else {
+                x_in = s_in[off_row][bottom_right];
+              }
+              if (sweepnum == 0 && top_left == 0) {
+                vx_in = 0;
+                ux_in = 0;
+              } else {
+                vx_in = v_in[off_row][bottom_right];
+                ux_in = u_in[off_row][bottom_right];
+              }
 #pragma empty_line
-            float s_row_temp[RowsA][2];
-            for(int i=0;i<RowsA;i++){
-              pca_in.write(S[i][top_left] );
-              pca_in.write(S[i][bottom_right]);
-            }
+              vm2x1(w_in,vw_new,x_in,vy_new,w_out);
+              vm2x1(w_in,vx_new,x_in,vz_new,x_out);
 #pragma empty_line
-            pca_in.write(new_j[top_left][0][0]);
-            pca_in.write(new_j[top_left][0][1]);
-            pca_in.write(new_j[top_left][1][0]);
-            pca_in.write(new_j[top_left][1][1]);
+              vm2x1(vw_in,vw_new,vx_in,vy_new,vw_out);
+              vm2x1(vw_in,vx_new,vx_in,vz_new,vx_out);
 #pragma empty_line
-            pca_in.write(new_k[top_left][0][0]);
-            pca_in.write(new_k[top_left][0][1]);
-            pca_in.write(new_k[top_left][1][0]);
-            pca_in.write(new_k[top_left][1][1]);
+              vm2x1(uw_in,uw_new,ux_in,uy_new,uw_out);
+              vm2x1(uw_in,ux_new,ux_in,uz_new,ux_out);
 #pragma empty_line
-            dut(pca_in, pca_out);
-#pragma empty_line
-            //wb
-            off_col_wb: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
-              if (off_col == top_left || off_col == bottom_right) continue;
-              S[top_left][off_col] = pca_out.read();
-              S[bottom_right][off_col] = pca_out.read();
-            }
-#pragma empty_line
-#pragma empty_line
-            off_row_wb_s: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-              if (off_row == top_left || off_row == bottom_right) continue;
-              S[off_row][top_left] = pca_out.read();
-              S[off_row][bottom_right] = pca_out.read();
+              //Store off-diagonal updates
+              s_in[off_row][top_left] = w_out;
+              s_in[off_row][bottom_right] = x_out;
+              v_in[off_row][top_left] = vw_out;
+              v_in[off_row][bottom_right] = vx_out;
+              u_in[off_row][top_left] = uw_out;
+              u_in[off_row][bottom_right] = ux_out;
+              if (sweepnum==SVDTraits::NUM_SWEEPS-1) {
+                S[off_row][top_left] = w_out;
+                S[off_row][bottom_right] = x_out;
+                V[off_row][top_left] = vw_out;
+                V[off_row][bottom_right] = vx_out;
+                U[off_row][top_left] = uw_out;
+                U[off_row][bottom_right] = ux_out;
+              }
             }
           }
         }
+      }
+    }
+  }
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+  template<
+  int RowsA,
+  int ColsA,
+  class SVDTraits,
+  typename InputType,
+  typename OutputType>
+  void svd_alt( const InputType A[RowsA][ColsA],
+                      OutputType S[RowsA][ColsA],
+                      OutputType U[RowsA][RowsA],
+                      OutputType V[ColsA][ColsA] )
+  {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
+    // Initially only supporting square matrix
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+    // Internal memories for partial results
+    typename SVDTraits::SIntType s_in[RowsA][ColsA];
+    typename SVDTraits::UIntType u_in[RowsA][ColsA];
+    typename SVDTraits::VIntType v_in[RowsA][ColsA];
+#pragma empty_line
+    // Current S,U,V values being worked on
+    typename SVDTraits::SIntType w_in, x_in, y_in, z_in;
+    typename SVDTraits::SIntType w_out, x_out, y_out, z_out;
+    typename SVDTraits::UIntType uw_in, ux_in, uy_in, uz_in;
+    typename SVDTraits::UIntType uw_out, ux_out, uy_out, uz_out;
+    typename SVDTraits::VIntType vw_in, vx_in, vy_in, vz_in;
+    typename SVDTraits::VIntType vw_out, vx_out, vy_out, vz_out;
+#pragma empty_line
+    // 2x2 Rotation values
+    typename SVDTraits::CSIntType uw_new, ux_new, uy_new, uz_new;
+    typename SVDTraits::CSIntType vw_new, vx_new, vy_new, vz_new;
+#pragma empty_line
+    const int is_odd = ColsA % 2 == 0 ? 0 : 1;
+    const int n_proc = (RowsA+is_odd)/2;
+#pragma empty_line
+    OutputType S_temp[RowsA][ColsA];
+    OutputType U_temp[RowsA][RowsA];
+    OutputType V_temp[ColsA][ColsA];
+#pragma empty_line
+    for(int i=0; i<RowsA; i++){
+      for(int j=0; j<ColsA; j++){
+        S_temp[i][j] = A[i][j];
+        U_temp[i][j] = i==j?1:0;
+        V_temp[i][j] = i==j?1:0;
+      }
+    }
+#pragma empty_line
+    sweep_loop: for(int sweepnum = 0; sweepnum < SVDTraits::NUM_SWEEPS; sweepnum++) {
+      // NOTE: Using the minimum dimension. i.e. will process a square matrix
+#pragma empty_line
+      //loop index (round-robin ordering)
+      int diag_1[n_proc];
+      int diag_2[n_proc];
+#pragma empty_line
+      //init ordering
+      for (int proc = 0; proc < n_proc; proc++){
+        diag_1[proc] = 2*proc;
+        diag_2[proc] = 2*proc+1;
+      }
+#pragma empty_line
+      for (int step = 0; step < RowsA-1; step ++){
+        //init buffers
+        InputType S_block_buffer[n_proc][2][2];
+        InputType U_block_buffer[n_proc][2][2];
+        InputType V_block_buffer[n_proc][2][2];
+#pragma empty_line
+        InputType S_r_buffer[n_proc][2][ColsA];
+#pragma empty_line
+        InputType S_c_buffer[n_proc][RowsA][2];
+        InputType U_c_buffer[n_proc][RowsA][2];
+        InputType V_c_buffer[n_proc][RowsA][2];
+#pragma empty_line
+        InputType J2x2[n_proc][2][2];
+#pragma empty_line
+        //update loop sequence
+        int temp_diag = diag_1[1];
+        for (int proc = 1; proc < n_proc-1; proc++){
+          diag_1[proc] = diag_1[proc+1];
+        }
+        diag_1[n_proc-1] = diag_2[n_proc-1];
+        for (int proc = n_proc-1; proc > 0; proc--){
+          diag_2[proc] = diag_2[proc-1];
+        }
+        diag_2[0] = temp_diag;
+#pragma empty_line
+        //read diag and cols
+        svd_rd_1:for (int proc = 0; proc < n_proc; proc++){
+#pragma empty_line
+          int top_left = diag_1[proc];
+          int bottom_right = diag_2[proc];
+          if (top_left == RowsA || bottom_right == RowsA) continue;
+#pragma empty_line
+          if (top_left > bottom_right){
+            int temp = bottom_right;
+            bottom_right = top_left;
+            top_left = temp;
+          }
+#pragma empty_line
+          S_block_buffer[proc][0][0] = S_temp[top_left][top_left];
+          U_block_buffer[proc][0][0] = U_temp[top_left][top_left];
+          V_block_buffer[proc][0][0] = V_temp[top_left][top_left];
+#pragma empty_line
+          S_block_buffer[proc][0][1] = S_temp[top_left][bottom_right];
+          U_block_buffer[proc][0][1] = U_temp[top_left][bottom_right];
+          V_block_buffer[proc][0][1] = V_temp[top_left][bottom_right];
+#pragma empty_line
+          S_block_buffer[proc][1][0] = S_temp[bottom_right][top_left];
+          U_block_buffer[proc][1][0] = U_temp[bottom_right][top_left];
+          V_block_buffer[proc][1][0] = V_temp[bottom_right][top_left];
+#pragma empty_line
+          S_block_buffer[proc][1][1] = S_temp[bottom_right][bottom_right];
+          U_block_buffer[proc][1][1] = U_temp[bottom_right][bottom_right];
+          V_block_buffer[proc][1][1] = V_temp[bottom_right][bottom_right];
+#pragma empty_line
+          for (int i=0; i<ColsA; i++){
+            if (i != bottom_right && i != top_left) {
+              S_c_buffer[proc][i][0] = S_temp[i][top_left];
+              U_c_buffer[proc][i][0] = U_temp[i][top_left];
+              V_c_buffer[proc][i][0] = V_temp[i][top_left];
+              S_c_buffer[proc][i][1] = S_temp[i][bottom_right];
+              U_c_buffer[proc][i][1] = U_temp[i][bottom_right];
+              V_c_buffer[proc][i][1] = V_temp[i][bottom_right];
+            }
+          }
+        }
+#pragma empty_line
+        //calc svd, update col
+        svd_calc_1:for (int proc = 0; proc < n_proc; proc++){
+#pragma HLS UNROLL
+#pragma line 608 "./svd.h"
+
+          int top_left = diag_1[proc];
+          int bottom_right = diag_2[proc];
+          if (top_left == RowsA || bottom_right == RowsA) continue;
+          if (top_left > bottom_right){
+            int temp = bottom_right;
+            bottom_right = top_left;
+            top_left = temp;
+          }
+#pragma empty_line
+          // Fetch w,x,y,z values
+          w_in =S_block_buffer[proc][0][0];
+          x_in =S_block_buffer[proc][0][1];
+          y_in =S_block_buffer[proc][1][0];
+          z_in =S_block_buffer[proc][1][1];
+#pragma empty_line
+          // Diagonal
+          svd2x2(w_in, x_in, y_in, z_in, uw_new, ux_new, uy_new, uz_new, vw_new, vx_new, vy_new, vz_new, w_out, x_out, y_out, z_out);
+#pragma empty_line
+          // Update S on diagonal
+          S_block_buffer[proc][0][0] = w_out;
+          S_block_buffer[proc][0][1] = x_out;
+          S_block_buffer[proc][1][0] = y_out;
+          S_block_buffer[proc][1][1] = z_out;
+#pragma empty_line
+          //log J
+          J2x2[proc][0][0] = uw_new;
+          J2x2[proc][0][1] = ux_new;
+          J2x2[proc][1][0] = uy_new;
+          J2x2[proc][1][1] = uz_new;
+#pragma empty_line
+          // Update U & V
+          // o On the diagonal use a 2x2 as per the sigma
+          // o Need to create the indentity in U & V at the start
+#pragma empty_line
+          uw_in = U_block_buffer[proc][0][0];
+          ux_in = U_block_buffer[proc][0][1];
+          uy_in = U_block_buffer[proc][1][0];
+          uz_in = U_block_buffer[proc][1][1];
+          vw_in = V_block_buffer[proc][0][0];
+          vx_in = V_block_buffer[proc][0][1];
+          vy_in = V_block_buffer[proc][1][0];
+          vz_in = V_block_buffer[proc][1][1];
+#pragma empty_line
+          mm2x2(uw_in, ux_in, uy_in, uz_in, uw_new, ux_new, uy_new, uz_new, uw_out, ux_out, uy_out, uz_out);
+          mm2x2(vw_in, vx_in, vy_in, vz_in, vw_new, vx_new, vy_new, vz_new, vw_out, vx_out, vy_out, vz_out);
+#pragma empty_line
+          U_block_buffer[proc][0][0] = uw_out;
+          U_block_buffer[proc][0][1] = ux_out;
+          U_block_buffer[proc][1][0] = uy_out;
+          U_block_buffer[proc][1][1] = uz_out;
+          V_block_buffer[proc][0][0] = vw_out;
+          V_block_buffer[proc][0][1] = vx_out;
+          V_block_buffer[proc][1][0] = vy_out;
+          V_block_buffer[proc][1][1] = vz_out;
+#pragma empty_line
+          // Row update
+          off_row: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
+            //#pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
+            if (off_row != bottom_right && off_row != top_left) {
+              w_in = S_c_buffer[proc][off_row][0];
+              vw_in = V_c_buffer[proc][off_row][0];
+              uw_in = U_c_buffer[proc][off_row][0];
+              x_in = S_c_buffer[proc][off_row][1];
+              vx_in = V_c_buffer[proc][off_row][1];
+              ux_in = U_c_buffer[proc][off_row][1];
+#pragma empty_line
+              vm2x1(w_in,vw_new,x_in,vy_new,w_out);
+              vm2x1(w_in,vx_new,x_in,vz_new,x_out);
+#pragma empty_line
+              vm2x1(vw_in,vw_new,vx_in,vy_new,vw_out);
+              vm2x1(vw_in,vx_new,vx_in,vz_new,vx_out);
+#pragma empty_line
+              vm2x1(uw_in,uw_new,ux_in,uy_new,uw_out);
+              vm2x1(uw_in,ux_new,ux_in,uz_new,ux_out);
+#pragma empty_line
+              //Store off-diagonal updates
+              S_c_buffer[proc][off_row][0] = w_out;
+              S_c_buffer[proc][off_row][1] = x_out;
+              V_c_buffer[proc][off_row][0] = vw_out;
+              V_c_buffer[proc][off_row][1] = vx_out;
+              U_c_buffer[proc][off_row][0] = uw_out;
+              U_c_buffer[proc][off_row][1] = ux_out;
+            }
+          }
+        }
+#pragma empty_line
+        //write back diag and cols
+        svd_wb_1:for (int proc = 0; proc < n_proc; proc++){
+          int top_left = diag_1[proc];
+          int bottom_right = diag_2[proc];
+          if (top_left == RowsA || bottom_right == RowsA) continue;
+          if (top_left > bottom_right){
+            int temp = bottom_right;
+            bottom_right = top_left;
+            top_left = temp;
+          }
+#pragma empty_line
+          S_temp[top_left][top_left] = S_block_buffer[proc][0][0];
+          U_temp[top_left][top_left] = U_block_buffer[proc][0][0];
+          V_temp[top_left][top_left] = V_block_buffer[proc][0][0];
+#pragma empty_line
+          S_temp[top_left][bottom_right] = S_block_buffer[proc][0][1];
+          U_temp[top_left][bottom_right] = U_block_buffer[proc][0][1];
+          V_temp[top_left][bottom_right] = V_block_buffer[proc][0][1];
+#pragma empty_line
+          S_temp[bottom_right][top_left] = S_block_buffer[proc][1][0];
+          U_temp[bottom_right][top_left] = U_block_buffer[proc][1][0];
+          V_temp[bottom_right][top_left] = V_block_buffer[proc][1][0];
+#pragma empty_line
+          S_temp[bottom_right][bottom_right] = S_block_buffer[proc][1][1];
+          U_temp[bottom_right][bottom_right] = U_block_buffer[proc][1][1];
+          V_temp[bottom_right][bottom_right] = V_block_buffer[proc][1][1];
+#pragma empty_line
+          for (int i=0; i<ColsA; i++){
+            if (i != bottom_right && i != top_left) {
+              S_temp[i][top_left] = S_c_buffer[proc][i][0];
+              U_temp[i][top_left] = U_c_buffer[proc][i][0];
+              V_temp[i][top_left] = V_c_buffer[proc][i][0];
+              S_temp[i][bottom_right] = S_c_buffer[proc][i][1];
+              U_temp[i][bottom_right] = U_c_buffer[proc][i][1];
+              V_temp[i][bottom_right] = V_c_buffer[proc][i][1];
+            }
+          }
+        }
+#pragma empty_line
+        //read rows
+        svd_rd_2:for (int proc = 0; proc < n_proc; proc++){
+          int top_left = diag_1[proc];
+          int bottom_right = diag_2[proc];
+          if (top_left == RowsA || bottom_right == RowsA) continue;
+          if (top_left > bottom_right){
+            int temp = bottom_right;
+            bottom_right = top_left;
+            top_left = temp;
+          }
+#pragma empty_line
+          for (int i=0; i<ColsA; i++){
+            if (i != bottom_right && i != top_left) {
+              S_r_buffer[proc][0][i] = S_temp[top_left] [i];
+              S_r_buffer[proc][1][i] = S_temp[bottom_right][i];
+            }
+          }
+        }
+#pragma empty_line
+        //update rows
+        svd_calc_2:for (int proc = 0; proc < n_proc; proc++){
+#pragma HLS UNROLL
+#pragma line 754 "./svd.h"
+
+          int top_left = diag_1[proc];
+          int bottom_right = diag_2[proc];
+          if (top_left == RowsA || bottom_right == RowsA) continue;
+          if (top_left > bottom_right){
+            int temp = bottom_right;
+            bottom_right = top_left;
+            top_left = temp;
+          }
+          // Off-diagonal
+          // Col updates
+          off_col: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
+            //#pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
+            if (off_col != bottom_right && off_col != top_left) {
+#pragma empty_line
+              uw_new = J2x2[proc][0][0];
+              ux_new = J2x2[proc][0][1];
+              uy_new = J2x2[proc][1][0];
+              uz_new = J2x2[proc][1][1];
+#pragma empty_line
+              w_in = S_r_buffer[proc][0][off_col];
+              y_in = S_r_buffer[proc][1][off_col];
+#pragma empty_line
+              // U must be Hermitian transposed before it is applied to A
+              vm2x1(hls::x_conj(uw_new),w_in,hls::x_conj(uy_new),y_in,w_out);
+              vm2x1(hls::x_conj(ux_new),w_in,hls::x_conj(uz_new),y_in,y_out);
+#pragma empty_line
+              //Store off-diagonal updates
+              S_r_buffer[proc][0][off_col] = w_out;
+              S_r_buffer[proc][1][off_col] = y_out;
+            }
+          }
+        }
+#pragma empty_line
+        //write back rows
+        svd_wb_2:for (int proc = 0; proc < n_proc; proc++){
+          int top_left = diag_1[proc];
+          int bottom_right = diag_2[proc];
+          if (top_left == RowsA || bottom_right == RowsA) continue;
+          if (top_left > bottom_right){
+            int temp = bottom_right;
+            bottom_right = top_left;
+            top_left = temp;
+          }
+#pragma empty_line
+          for (int i=0; i<ColsA; i++){
+            if (i != bottom_right && i != top_left) {
+              S_temp[top_left] [i] = S_r_buffer[proc][0][i];
+              S_temp[bottom_right][i] = S_r_buffer[proc][1][i];
+            }
+          }
+        }
+      }
+    }
+#pragma empty_line
+    for(int i=0; i<RowsA; i++){
+      for(int j=0; j<ColsA; j++){
+        S[i][j] =S_temp[i][j];
+        U[i][j] =U_temp[i][j];
+        V[i][j] =V_temp[i][j];
       }
     }
   }
@@ -64665,15 +64870,21 @@ void update_off_diag_s(int top_left, int bottom_right, float new_j[2][2],float n
   void svd_top( const InputType A[RowsA][ColsA],
                       OutputType S[RowsA][ColsA],
                       OutputType U[RowsA][RowsA],
-                      OutputType V[ColsA][ColsA],
-                      hls::stream<float> & pca_in, hls::stream<float> & pca_out) {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
-#pragma empty_line
-    svd_basic<RowsA,ColsA,SVDTraits,InputType,OutputType>
-    (A,S,U,V,pca_in,pca_out);
-#pragma empty_line
+                      OutputType V[ColsA][ColsA] ) {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
+    switch(SVDTraits::ARCH) {
+    case 0:
+      svd_basic<RowsA,ColsA,SVDTraits,InputType,OutputType>(A,S,U,V);
+      break;
+    case 1:
+      svd_basic<RowsA,ColsA,SVDTraits,InputType,OutputType>(A,S,U,V);
+      break;
+    default:
+      svd_basic<RowsA,ColsA,SVDTraits,InputType,OutputType>(A,S,U,V);
+      break;
+    }
   }
 }
-#pragma line 14 "./pca.h" 2
+#pragma line 10 "./dut.h" 2
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
@@ -64682,40 +64893,11 @@ void update_off_diag_s(int top_left, int bottom_right, float new_j[2][2],float n
 #pragma empty_line
 const int VEC_SIZ = 28 * 28;
 #pragma empty_line
-class PCA {
-  public:
-  /*
-  fix32_t X[VEC_SIZ][IMG_NUM];
-  fix32_t Y[K][IMG_NUM];
-  fix32_t V[VEC_SIZ][VEC_SIZ];
-  fix32_t S[IMG_NUM][VEC_SIZ];
-  fix32_t tsf_mat[K][VEC_SIZ];*/
-#pragma empty_line
-  int vec_size;
-  int vec_num;
-  int k;
-  hls::stream<float> *pca_in;
-  hls::stream<float> *pca_out;
-#pragma empty_line
-  //PCA(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[VEC_SIZ][IMG_NUM], fix32_t tsf_mat[K][VEC_SIZ], int VEC_SIZ, int VEC_NUM, int k);
-  PCA(int VEC_SIZ, int VEC_NUM, int k, hls::stream<float> & pca_in_, hls::stream<float> & pca_out_);
-  ~PCA();
-#pragma empty_line
-  void normalize(fix32_t X[VEC_SIZ][100], fix32_t mean[VEC_SIZ]);
-  void cov(fix32_t X[VEC_SIZ][100], fix32_t XXT[VEC_SIZ][VEC_SIZ]);
-  void apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],fix32_t U[VEC_SIZ][VEC_SIZ],fix32_t V[VEC_SIZ][VEC_SIZ]);
-  bool cmp(int a, int b);
-  void rank(fix32_t tsf_mat[10][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t V[VEC_SIZ][VEC_SIZ]);
-  void back_pjt(fix32_t tsf_mat[10][VEC_SIZ], fix32_t X[VEC_SIZ][100], fix32_t Y[10][100]);
-#pragma empty_line
-  private:
-  //fix32_t A[IMG_NUM][VEC_SIZ];
-  int sorted_idx[VEC_SIZ];
-  void find_max(fix32_t S[VEC_SIZ][VEC_SIZ]);
-  void swap(int* a, int* b);
-  int partition(int arr[], int l, int h, fix32_t S[VEC_SIZ][VEC_SIZ]);
-  void quickSort(int arr[], int l, int h, fix32_t S[VEC_SIZ][VEC_SIZ]);
-};
+// Top function for synthesis
+void dut (
+  hls::stream<float> &strm_in,
+  hls::stream<float> &strm_out
+);
 #pragma empty_line
 struct MY_CONFIG_SVD : svd::svd_traits<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>{
  static const int NUM_SWEEPS = 6;
@@ -64725,236 +64907,47 @@ struct MY_CONFIG_SVD : svd::svd_traits<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>{
 
 public :
 inline __attribute__((always_inline)) MY_CONFIG_SVD() { _ssdm_SpecConstant(&NUM_SWEEPS); _ssdm_SpecConstant(&DIAG_II); _ssdm_SpecConstant(&OFF_DIAG_II); _ssdm_SpecConstant(&ARCH);  }
-#pragma line 62 "./pca.h"
+#pragma line 29 "./dut.h"
 };
-#pragma empty_line
-struct MY_CONFIG_MULT: hls::matrix_multiply_traits<hls::NoTranspose,
- hls::NoTranspose,
- 10,
- VEC_SIZ,
- VEC_SIZ,
- 100,
- fix32_t,
- fix32_t>{
- static const int ARCH = 2;
- static const int INNER_II = 100;
- static const int UNROLL_FACTOR = 1;
-
-public :
-inline __attribute__((always_inline)) MY_CONFIG_MULT() { _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&UNROLL_FACTOR);  }
-#pragma line 75 "./pca.h"
-};
-#pragma line 7 "dut.cpp" 2
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
-#pragma empty_line
+#pragma line 12 "dut.cpp" 2
 #pragma empty_line
 using namespace std;
+#pragma empty_line
 #pragma empty_line
 //----------------------------------------------------------
 // Top function
 //----------------------------------------------------------
 #pragma empty_line
 void dut(
-    hls::stream<fix32_t> &strm_in,
-    hls::stream<fix32_t> &strm_out
+    hls::stream<float> &strm_in,
+    hls::stream<float> &strm_out
 )
 {
-  float input_l;
-  input_l = strm_in.read();
-  //1 = svd,
-  switch ((int)input_l){
-    case 1:{
-    float top_left = strm_in.read();
-    float bottom_right = strm_in.read();
+  float XXT[VEC_SIZ][VEC_SIZ];
+  float S[VEC_SIZ][VEC_SIZ];
+  float U[VEC_SIZ][VEC_SIZ];
+  float V[VEC_SIZ][VEC_SIZ];
 #pragma empty_line
-    float s_temp[2][2];
-    float u_temp[2][2];
-    float v_temp[2][2];
-    s_temp[0][0] = strm_in.read();
-    s_temp[0][1] = strm_in.read();
-    s_temp[1][0] = strm_in.read();
-    s_temp[1][1] = strm_in.read();
-    u_temp[0][0] = strm_in.read();
-    u_temp[0][1] = strm_in.read();
-    u_temp[1][0] = strm_in.read();
-    u_temp[1][1] = strm_in.read();
-    v_temp[0][0] = strm_in.read();
-    v_temp[0][1] = strm_in.read();
-    v_temp[1][0] = strm_in.read();
-    v_temp[1][1] = strm_in.read();
-#pragma empty_line
-    float u_row_temp[VEC_SIZ][2];
-    float v_row_temp[VEC_SIZ][2];
-    for(int i=0;i<VEC_SIZ;i++){
-      u_row_temp[i][0] = strm_in.read();
-      u_row_temp[i][1] = strm_in.read();
-      v_row_temp[i][0] = strm_in.read();
-      v_row_temp[i][1] = strm_in.read();
-    }
-#pragma empty_line
-    float new_j[2][2];
-    float new_k[2][2];
-    svd::calc_svd_update_on_diag_s_off_diag_vd
-    <VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD>
-    (top_left, bottom_right,
-    s_temp, u_temp, v_temp,
-    u_row_temp, v_row_temp,
-    new_j, new_k);
-#pragma empty_line
-    //wb to buffer
-    strm_out.write(s_temp[0][0]);
-    strm_out.write(s_temp[0][1]);
-    strm_out.write(s_temp[1][0]);
-    strm_out.write(s_temp[1][1]);
-    strm_out.write(u_temp[0][0]);
-    strm_out.write(u_temp[0][1]);
-    strm_out.write(u_temp[1][0]);
-    strm_out.write(u_temp[1][1]);
-    strm_out.write(v_temp[0][0]);
-    strm_out.write(v_temp[0][1]);
-    strm_out.write(v_temp[1][0]);
-    strm_out.write(v_temp[1][1]);
-#pragma empty_line
-    off_row_wb_uv: for (int off_row = 0; off_row < VEC_SIZ; off_row++) {
-      if (off_row == top_left || off_row == bottom_right) continue;
-      strm_out.write(v_row_temp[off_row][0]);
-      strm_out.write(v_row_temp[off_row][1]);
-      strm_out.write(u_row_temp[off_row][0]);
-      strm_out.write(u_row_temp[off_row][1]);
-    }
-#pragma empty_line
-    strm_out.write(new_j[0][0]);
-    strm_out.write(new_j[0][1]);
-    strm_out.write(new_j[1][0]);
-    strm_out.write(new_j[1][1]);
-#pragma empty_line
-    strm_out.write(new_k[0][0]);
-    strm_out.write(new_k[0][1]);
-    strm_out.write(new_k[1][0]);
-    strm_out.write(new_k[1][1]);
-    break;
-    }
-    case 2:{
-    float top_left = strm_in.read();
-    float bottom_right = strm_in.read();
-#pragma empty_line
-    float new_j[2][2];
-    float new_k[2][2];
-#pragma empty_line
-    float s_col_temp[2][VEC_SIZ];
-    for(int i=0;i<VEC_SIZ;i++){
-      s_col_temp[0][i] = strm_in.read();
-      s_col_temp[1][i] = strm_in.read();
-    }
-#pragma empty_line
-    float s_row_temp[VEC_SIZ][2];
-    for(int i=0;i<VEC_SIZ;i++){
-      s_row_temp[i][0] = strm_in.read();
-      s_row_temp[i][1] = strm_in.read();
-    }
-#pragma empty_line
-    new_j[0][0] = strm_in.read();
-    new_j[0][1] = strm_in.read();
-    new_j[1][0] = strm_in.read();
-    new_j[1][1] = strm_in.read();
-#pragma empty_line
-    new_k[0][0] = strm_in.read();
-    new_k[0][1] = strm_in.read();
-    new_k[1][0] = strm_in.read();
-    new_k[1][1] = strm_in.read();
-#pragma empty_line
-    svd::update_off_diag_s<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD>
-    (top_left, bottom_right, new_j,new_k, s_col_temp,s_row_temp);
-#pragma empty_line
-    //wb
-    off_col_wb: for (int off_col = 0; off_col < VEC_SIZ; off_col++) {
-      if (off_col == top_left || off_col == bottom_right) continue;
-      strm_out.write(s_col_temp[0][off_col]);
-      strm_out.write(s_col_temp[1][off_col]);
-    }
-#pragma empty_line
-#pragma empty_line
-    off_row_wb_s: for (int off_row = 0; off_row < VEC_SIZ; off_row++) {
-      if (off_row == top_left || off_row == bottom_right) continue;
-      strm_out.write(s_row_temp[off_row][0]);
-      strm_out.write(s_row_temp[off_row][1]);
-    }
-    break;
-    }
-    default:
-    break;
-  }
-  /*
-  fix32_t X[VEC_SIZ][IMG_NUM];
-  bit32_t input_l;
-  fix32_t Y[K][IMG_NUM];
-  fix32_t tsf_mat[K][VEC_SIZ];
-  int counter = 0;
-  // read one test image into digit
-  for (int test = 0; test < IMG_NUM; test++) {
-    for (int i = 0; i < 28*28/4; i++) {
-      input_l = strm_in.read();
-      counter++;
-      //cout<<"dut "<<counter<<endl;
-      for (int j = 0; j < 4; j++) {
-        //X[i*4+j][test] = 0;
-        //X[i*4+j][test](31,16) = input_l(j*8+7,j*8);
-        X[i*4+j][test] = (float)input_l(j*8+7,j*8);
-      }
+  for (int i=0; i<VEC_SIZ; i++){
+    for (int j=0; j<VEC_SIZ; j++){
+      XXT[i][j] = strm_in.read();
     }
   }
 #pragma empty_line
-  // call pca
-  PCA pca(VEC_SIZ, IMG_NUM, K);
-  fix32_t S[VEC_SIZ][VEC_SIZ];
-  fix32_t U[VEC_SIZ][VEC_SIZ];
-  fix32_t V[VEC_SIZ][VEC_SIZ];
-  fix32_t XXT[VEC_SIZ][VEC_SIZ];
-  fix32_t mean[VEC_SIZ];
-  for (int i = 0; i < VEC_SIZ; i++) {
-    for (int j = 0; j < VEC_SIZ; j++) {
-      S[i][j] = 0;
-      U[i][j] = 0;
-      V[i][j] = 0;
-      XXT[i][j] = 0;
-    }
-  }
-  //cout << "norm" << endl;
-  pca.normalize(X, mean);
-  //cout << "cov" << endl;
-  pca.cov(X, XXT);
-  //cout << "svd" << endl;
-  pca.apply_svd(XXT,S,U,V);
-  //cout << "rank" << endl;
-  pca.rank(tsf_mat, S, U);
-  //cout << "back_pjt" << endl;
-  pca.back_pjt(tsf_mat, X, Y);
-  //cout << "transfer output" << endl;
+  svd::svd_alt<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD,float,float>(XXT,S,U,V);
 #pragma empty_line
-  for (int i = 0; i < K; i++) {
-    for (int j = 0; j < IMG_NUM; j++) {
-      strm_out.write(Y[i][j]);
+  for (int i=0; i<VEC_SIZ; i++){
+    for (int j=0; j<VEC_SIZ; j++){
+      strm_out.write(S[i][j]);
     }
   }
 #pragma empty_line
-  for (int i = 0; i < K; i++) {
-    for (int j = 0; j < VEC_SIZ; j++) {
-      strm_out.write(tsf_mat[i][j]);
-      //cout << tsf_mat[i][j] << '\t';
+  for (int i=0; i<VEC_SIZ; i++){
+    for (int j=0; j<VEC_SIZ; j++){
+      strm_out.write(U[i][j]);
     }
-    //cout << endl;
   }
 #pragma empty_line
-  for (int i = 0; i<VEC_SIZ; i++){
-    strm_out.write(mean[i]);
-#pragma empty_line
-  }
-#pragma empty_line
-  // cout<< "end" <<endl;
-  */
 #pragma empty_line
 }
 

@@ -8,7 +8,6 @@
         <file name="../../data" sc="0" tb="1" cflags=" "/>
         <file name="../../pca_test.cpp" sc="0" tb="1" cflags=" "/>
         <file name="dut.cpp" sc="0" tb="false" cflags=""/>
-        <file name="pca.cpp" sc="0" tb="false" cflags=""/>
     </files>
     <solutions>
         <solution name="solution1" status=""/>

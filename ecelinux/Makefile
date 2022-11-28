@@ -16,7 +16,7 @@ CFLAGS = -g -I${VHLS_INC} -DHLS_NO_XIL_FPO_LIB
 
 all: csim
 
-csim: pca.cpp pca_test.cpp dut.cpp
+csim: pca_test.cpp dut.cpp
 	@echo "Compiling & simulating pca on amdpool ..."
 	g++ ${CFLAGS} $^ -o pca -lrt
 	./pca

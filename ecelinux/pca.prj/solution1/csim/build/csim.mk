@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../pca_test.cpp ../../../../dut.cpp ../../../../pca.cpp
+HLS_SOURCES = ../../../../pca_test.cpp ../../../../dut.cpp
 
 TARGET := csim.exe
 
@@ -80,9 +80,3 @@ $(ObjDir)/dut.o: ../../../../dut.cpp $(ObjDir)/.dir
 	$(Verb)  $(CC) -c -MMD  $(IFLAG) $(DFLAG) -O1 -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/dut.d
-
-$(ObjDir)/pca.o: ../../../../pca.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../pca.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) -c -MMD  $(IFLAG) $(DFLAG) -O1 -DNDEBUG $< -o $@ ; \
-
--include $(ObjDir)/pca.d

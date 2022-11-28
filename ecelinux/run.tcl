@@ -13,7 +13,7 @@ open_project ${hls_prj} -reset
 set_top dut
 
 # Add design and testbench files
-add_files pca.cpp
+#add_files pca.cpp
 add_files dut.cpp
 add_files -tb pca_test.cpp
 add_files -tb data
@@ -28,8 +28,13 @@ create_clock -period 10
 ### You can insert your own directives here ###
 
 set_directive_inline -off "vm2x1_base"
-set_directive_allocation -limit 1 -type function "svd_pairs" vm2x1_base
+##set_directive_allocation -limit 1 -type function "svd_pairs" vm2x1_base
 
+##set_directive_pipeline svd_alt/svd_rd_1
+##set_directive_pipeline svd_alt/svd_rd_2
+
+set_directive_unroll svd_alt/svd_calc_1
+set_directive_unroll svd_alt/svd_calc_2
 
 ############################################
 

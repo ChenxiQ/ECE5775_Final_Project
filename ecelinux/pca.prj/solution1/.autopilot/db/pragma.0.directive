@@ -368,5 +368,11 @@
 <directive functionLabel="" functionName="svd2x2" label="">
 <pragma name="INLINE"/>
 </directive>
+<directive functionLabel="" functionName="svd_basic" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="svd_basic" label="">
+<pragma name="PIPELINE"/>
+</directive>
 </sourceFile>
 </AutoPilot:ProjectResources>
