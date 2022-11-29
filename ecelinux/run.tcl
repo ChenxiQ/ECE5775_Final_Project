@@ -33,8 +33,23 @@ set_directive_inline -off "vm2x1_base"
 ##set_directive_pipeline svd_alt/svd_rd_1
 ##set_directive_pipeline svd_alt/svd_rd_2
 
-set_directive_unroll svd_alt/svd_calc_1
-set_directive_unroll svd_alt/svd_calc_2
+set_directive_pipeline svd_alt/rd_buffer
+set_directive_pipeline svd_alt/svd_rd_diag
+set_directive_pipeline svd_alt/svd_calc_diag
+set_directive_pipeline svd_alt/svd_wb_diag
+set_directive_pipeline svd_alt/svd_rd_off_r
+set_directive_pipeline svd_alt/svd_calc_off_r
+set_directive_pipeline svd_alt/svd_wb_off_r
+set_directive_pipeline svd_alt/svd_rd_off_c
+set_directive_pipeline svd_alt/svd_calc_off_c
+set_directive_pipeline svd_alt/svd_wb_off_c
+set_directive_pipeline svd_alt/wb_buffer
+
+#set_directive_array_partition svd_alt output -type cyclic -factor 16
+#set_directive_array_partition svd_alt output -type cyclic -factor 16
+
+#set_directive_dependence svd_alt/svd_calc_1 -dependent false
+#set_directive_dependence svd_alt/svd_calc_2 -dependent false
 
 ############################################
 
@@ -43,5 +58,5 @@ csim_design -O
 # Synthesize the design
 csynth_design
 # Co-simulate the design
-#cosim_design
+cosim_design
 exit

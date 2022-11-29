@@ -225,6 +225,7 @@ int main(){
   int counter=0;
   for(int i=0;i<10;i++){
     if (abs((S[sorted_idx[i]][sorted_idx[i]] - S_test[i])/(S[sorted_idx[i]][sorted_idx[i]]))>0.01) counter ++;
+    
   }
 
   timer.stop();

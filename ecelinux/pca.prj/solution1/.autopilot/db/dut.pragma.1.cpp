@@ -64511,7 +64511,16 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");/*II = SVDTraits::OFF_DIAG_II*/
     }
   }
 
+  inline void init_block_index(int & top_left, int & bottom_right, int idx1, int idx2){
+    top_left = idx1;
+    bottom_right = idx2;
 
+    if (top_left > bottom_right){
+      int temp = bottom_right;
+      bottom_right = top_left;
+      top_left = temp;
+    }
+  }
 
   template<
   int RowsA,
@@ -64548,16 +64557,20 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");/*II = SVDTraits::OFF_DIAG_II*/
 
     const int is_odd = ColsA % 2 == 0 ? 0 : 1;
     const int n_proc = (RowsA+is_odd)/2;
-
+    /*
     OutputType S_temp[RowsA][ColsA];
     OutputType U_temp[RowsA][RowsA];
     OutputType V_temp[ColsA][ColsA];
+    */
 
     for(int i=0; i<RowsA; i++){
-      for(int j=0; j<ColsA; j++){
-        S_temp[i][j] = A[i][j];
-        U_temp[i][j] = i==j?1:0;
-        V_temp[i][j] = i==j?1:0;
+      rd_buffer:for(int j=0; j<ColsA; j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+#531 "./svd.h"
+
+        S[i][j] = A[i][j];
+        U[i][j] = i==j?1:0;
+        V[i][j] = i==j?1:0;
       }
     }
 
@@ -64587,6 +64600,10 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");/*II = SVDTraits::OFF_DIAG_II*/
         InputType V_c_buffer[n_proc][RowsA][2];
 
         InputType J2x2[n_proc][2][2];
+        InputType K2x2[n_proc][2][2];
+
+        int top_left;
+        int bottom_right;
 
         //update loop sequence
         int temp_diag = diag_1[1];
@@ -64599,60 +64616,39 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");/*II = SVDTraits::OFF_DIAG_II*/
         }
         diag_2[0] = temp_diag;
 
-        //read diag and cols
-        svd_rd_1:for (int proc = 0; proc < n_proc; proc++){
+        //read diag
+        svd_rd_diag:for (int proc = 0; proc < n_proc; proc++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+#581 "./svd.h"
 
-          int top_left = diag_1[proc];
-          int bottom_right = diag_2[proc];
+          init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+
           if (top_left == RowsA || bottom_right == RowsA) continue;
 
-          if (top_left > bottom_right){
-            int temp = bottom_right;
-            bottom_right = top_left;
-            top_left = temp;
-          }
+          S_block_buffer[proc][0][0] = S[top_left][top_left];
+          U_block_buffer[proc][0][0] = U[top_left][top_left];
+          V_block_buffer[proc][0][0] = V[top_left][top_left];
 
-          S_block_buffer[proc][0][0] = S_temp[top_left][top_left];
-          U_block_buffer[proc][0][0] = U_temp[top_left][top_left];
-          V_block_buffer[proc][0][0] = V_temp[top_left][top_left];
+          S_block_buffer[proc][0][1] = S[top_left][bottom_right];
+          U_block_buffer[proc][0][1] = U[top_left][bottom_right];
+          V_block_buffer[proc][0][1] = V[top_left][bottom_right];
 
-          S_block_buffer[proc][0][1] = S_temp[top_left][bottom_right];
-          U_block_buffer[proc][0][1] = U_temp[top_left][bottom_right];
-          V_block_buffer[proc][0][1] = V_temp[top_left][bottom_right];
+          S_block_buffer[proc][1][0] = S[bottom_right][top_left];
+          U_block_buffer[proc][1][0] = U[bottom_right][top_left];
+          V_block_buffer[proc][1][0] = V[bottom_right][top_left];
 
-          S_block_buffer[proc][1][0] = S_temp[bottom_right][top_left];
-          U_block_buffer[proc][1][0] = U_temp[bottom_right][top_left];
-          V_block_buffer[proc][1][0] = V_temp[bottom_right][top_left];
-
-          S_block_buffer[proc][1][1] = S_temp[bottom_right][bottom_right];
-          U_block_buffer[proc][1][1] = U_temp[bottom_right][bottom_right];
-          V_block_buffer[proc][1][1] = V_temp[bottom_right][bottom_right];
-
-          for (int i=0; i<ColsA; i++){
-            if (i != bottom_right && i != top_left) {
-              S_c_buffer[proc][i][0] = S_temp[i][top_left];
-              U_c_buffer[proc][i][0] = U_temp[i][top_left];
-              V_c_buffer[proc][i][0] = V_temp[i][top_left];
-              S_c_buffer[proc][i][1] = S_temp[i][bottom_right];
-              U_c_buffer[proc][i][1] = U_temp[i][bottom_right];
-              V_c_buffer[proc][i][1] = V_temp[i][bottom_right];
-            }
-          }
+          S_block_buffer[proc][1][1] = S[bottom_right][bottom_right];
+          U_block_buffer[proc][1][1] = U[bottom_right][bottom_right];
+          V_block_buffer[proc][1][1] = V[bottom_right][bottom_right];
         }
 
         //calc svd, update col
-        svd_calc_1:for (int proc = 0; proc < n_proc; proc++){
-_ssdm_Unroll(0,0,0, "");
-#608 "./svd.h"
+        svd_calc_diag:for (int proc = 0; proc < n_proc; proc++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+#604 "./svd.h"
 
-          int top_left = diag_1[proc];
-          int bottom_right = diag_2[proc];
+          init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
           if (top_left == RowsA || bottom_right == RowsA) continue;
-          if (top_left > bottom_right){
-            int temp = bottom_right;
-            bottom_right = top_left;
-            top_left = temp;
-          }
 
           // Fetch w,x,y,z values
           w_in =S_block_buffer[proc][0][0];
@@ -64669,11 +64665,16 @@ _ssdm_Unroll(0,0,0, "");
           S_block_buffer[proc][1][0] = y_out;
           S_block_buffer[proc][1][1] = z_out;
 
-          //log J
+          //log J,k
           J2x2[proc][0][0] = uw_new;
           J2x2[proc][0][1] = ux_new;
           J2x2[proc][1][0] = uy_new;
           J2x2[proc][1][1] = uz_new;
+
+          K2x2[proc][0][0] = vw_new;
+          K2x2[proc][0][1] = vx_new;
+          K2x2[proc][1][0] = vy_new;
+          K2x2[proc][1][1] = vz_new;
 
           // Update U & V
           // o On the diagonal use a 2x2 as per the sigma
@@ -64700,9 +64701,63 @@ _ssdm_Unroll(0,0,0, "");
           V_block_buffer[proc][1][0] = vy_out;
           V_block_buffer[proc][1][1] = vz_out;
 
-          // Row update
-          off_row: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
+        }
+
+        //write back diag and cols
+        svd_wb_diag:for (int proc = 0; proc < n_proc; proc++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+#662 "./svd.h"
+
+          init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+          if (top_left == RowsA || bottom_right == RowsA) continue;
+
+          S[top_left][top_left] = S_block_buffer[proc][0][0];
+          U[top_left][top_left] = U_block_buffer[proc][0][0];
+          V[top_left][top_left] = V_block_buffer[proc][0][0];
+
+          S[top_left][bottom_right] = S_block_buffer[proc][0][1];
+          U[top_left][bottom_right] = U_block_buffer[proc][0][1];
+          V[top_left][bottom_right] = V_block_buffer[proc][0][1];
+
+          S[bottom_right][top_left] = S_block_buffer[proc][1][0];
+          U[bottom_right][top_left] = U_block_buffer[proc][1][0];
+          V[bottom_right][top_left] = V_block_buffer[proc][1][0];
+
+          S[bottom_right][bottom_right] = S_block_buffer[proc][1][1];
+          U[bottom_right][bottom_right] = U_block_buffer[proc][1][1];
+          V[bottom_right][bottom_right] = V_block_buffer[proc][1][1];
+
+        }
+
+        //read col
+        for (int proc = 0; proc < n_proc; proc++){
+          svd_rd_off_r:for (int i=0; i<ColsA; i++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+#686 "./svd.h"
+
+            if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            if (top_left == RowsA || bottom_right == RowsA) continue;
+            if (i != bottom_right && i != top_left) {
+              S_c_buffer[proc][i][0] = S[i][top_left];
+              U_c_buffer[proc][i][0] = U[i][top_left];
+              V_c_buffer[proc][i][0] = V[i][top_left];
+              S_c_buffer[proc][i][1] = S[i][bottom_right];
+              U_c_buffer[proc][i][1] = U[i][bottom_right];
+              V_c_buffer[proc][i][1] = V[i][bottom_right];
+            }
+          }
+        }
+
+        //update 2 cols
+        for (int proc = 0; proc < n_proc; proc++){
+          // 2 cols update
+          svd_calc_off_r:for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+#703 "./svd.h"
+
             //#pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
+            if (off_row == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            if (top_left == RowsA || bottom_right == RowsA) continue;
             if (off_row != bottom_right && off_row != top_left) {
               w_in = S_c_buffer[proc][off_row][0];
               vw_in = V_c_buffer[proc][off_row][0];
@@ -64710,6 +64765,16 @@ _ssdm_Unroll(0,0,0, "");
               x_in = S_c_buffer[proc][off_row][1];
               vx_in = V_c_buffer[proc][off_row][1];
               ux_in = U_c_buffer[proc][off_row][1];
+
+              vw_new = K2x2[proc][0][0];
+              vx_new = K2x2[proc][0][1];
+              vy_new = K2x2[proc][1][0];
+              vz_new = K2x2[proc][1][1];
+
+              uw_new = J2x2[proc][0][0];
+              ux_new = J2x2[proc][0][1];
+              uy_new = J2x2[proc][1][0];
+              uz_new = J2x2[proc][1][1];
 
               vm2x1(w_in,vw_new,x_in,vy_new,w_out);
               vm2x1(w_in,vx_new,x_in,vz_new,x_out);
@@ -64731,80 +64796,50 @@ _ssdm_Unroll(0,0,0, "");
           }
         }
 
-        //write back diag and cols
-        svd_wb_1:for (int proc = 0; proc < n_proc; proc++){
-          int top_left = diag_1[proc];
-          int bottom_right = diag_2[proc];
-          if (top_left == RowsA || bottom_right == RowsA) continue;
-          if (top_left > bottom_right){
-            int temp = bottom_right;
-            bottom_right = top_left;
-            top_left = temp;
-          }
+        //write back 2 cols
+        for (int proc = 0; proc < n_proc; proc++){
+          svd_wb_off_r:for (int i=0; i<ColsA; i++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+#747 "./svd.h"
 
-          S_temp[top_left][top_left] = S_block_buffer[proc][0][0];
-          U_temp[top_left][top_left] = U_block_buffer[proc][0][0];
-          V_temp[top_left][top_left] = V_block_buffer[proc][0][0];
-
-          S_temp[top_left][bottom_right] = S_block_buffer[proc][0][1];
-          U_temp[top_left][bottom_right] = U_block_buffer[proc][0][1];
-          V_temp[top_left][bottom_right] = V_block_buffer[proc][0][1];
-
-          S_temp[bottom_right][top_left] = S_block_buffer[proc][1][0];
-          U_temp[bottom_right][top_left] = U_block_buffer[proc][1][0];
-          V_temp[bottom_right][top_left] = V_block_buffer[proc][1][0];
-
-          S_temp[bottom_right][bottom_right] = S_block_buffer[proc][1][1];
-          U_temp[bottom_right][bottom_right] = U_block_buffer[proc][1][1];
-          V_temp[bottom_right][bottom_right] = V_block_buffer[proc][1][1];
-
-          for (int i=0; i<ColsA; i++){
+            if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            if (top_left == RowsA || bottom_right == RowsA) continue;
             if (i != bottom_right && i != top_left) {
-              S_temp[i][top_left] = S_c_buffer[proc][i][0];
-              U_temp[i][top_left] = U_c_buffer[proc][i][0];
-              V_temp[i][top_left] = V_c_buffer[proc][i][0];
-              S_temp[i][bottom_right] = S_c_buffer[proc][i][1];
-              U_temp[i][bottom_right] = U_c_buffer[proc][i][1];
-              V_temp[i][bottom_right] = V_c_buffer[proc][i][1];
+              S[i][top_left] = S_c_buffer[proc][i][0];
+              U[i][top_left] = U_c_buffer[proc][i][0];
+              V[i][top_left] = V_c_buffer[proc][i][0];
+              S[i][bottom_right] = S_c_buffer[proc][i][1];
+              U[i][bottom_right] = U_c_buffer[proc][i][1];
+              V[i][bottom_right] = V_c_buffer[proc][i][1];
             }
           }
         }
 
-        //read rows
-        svd_rd_2:for (int proc = 0; proc < n_proc; proc++){
-          int top_left = diag_1[proc];
-          int bottom_right = diag_2[proc];
-          if (top_left == RowsA || bottom_right == RowsA) continue;
-          if (top_left > bottom_right){
-            int temp = bottom_right;
-            bottom_right = top_left;
-            top_left = temp;
-          }
+        //read 2 rows
+        for (int proc = 0; proc < n_proc; proc++){
+          svd_rd_off_c:for (int i=0; i<ColsA; i++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+#763 "./svd.h"
 
-          for (int i=0; i<ColsA; i++){
+            if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            if (top_left == RowsA || bottom_right == RowsA) continue;
             if (i != bottom_right && i != top_left) {
-              S_r_buffer[proc][0][i] = S_temp[top_left] [i];
-              S_r_buffer[proc][1][i] = S_temp[bottom_right][i];
+              S_r_buffer[proc][0][i] = S[top_left] [i];
+              S_r_buffer[proc][1][i] = S[bottom_right][i];
             }
           }
         }
 
-        //update rows
-        svd_calc_2:for (int proc = 0; proc < n_proc; proc++){
-_ssdm_Unroll(0,0,0, "");
-#754 "./svd.h"
-
-          int top_left = diag_1[proc];
-          int bottom_right = diag_2[proc];
-          if (top_left == RowsA || bottom_right == RowsA) continue;
-          if (top_left > bottom_right){
-            int temp = bottom_right;
-            bottom_right = top_left;
-            top_left = temp;
-          }
+        //update 2 rows
+        for (int proc = 0; proc < n_proc; proc++){
           // Off-diagonal
-          // Col updates
-          off_col: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
+          // 2 rows updates
+          svd_calc_off_c:for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+#777 "./svd.h"
+
+            if (off_col == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            if (top_left == RowsA || bottom_right == RowsA) continue;
             //#pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
             if (off_col != bottom_right && off_col != top_left) {
 
@@ -64827,34 +64862,30 @@ _ssdm_Unroll(0,0,0, "");
           }
         }
 
-        //write back rows
-        svd_wb_2:for (int proc = 0; proc < n_proc; proc++){
-          int top_left = diag_1[proc];
-          int bottom_right = diag_2[proc];
-          if (top_left == RowsA || bottom_right == RowsA) continue;
-          if (top_left > bottom_right){
-            int temp = bottom_right;
-            bottom_right = top_left;
-            top_left = temp;
-          }
+        //write back 2 rows
+        for (int proc = 0; proc < n_proc; proc++){
+          svd_wb_off_c:for (int i=0; i<ColsA; i++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+#804 "./svd.h"
 
-          for (int i=0; i<ColsA; i++){
+            if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            if (top_left == RowsA || bottom_right == RowsA) continue;
             if (i != bottom_right && i != top_left) {
-              S_temp[top_left] [i] = S_r_buffer[proc][0][i];
-              S_temp[bottom_right][i] = S_r_buffer[proc][1][i];
+              S[top_left] [i] = S_r_buffer[proc][0][i];
+              S[bottom_right][i] = S_r_buffer[proc][1][i];
             }
           }
         }
       }
     }
-
+    /*
     for(int i=0; i<RowsA; i++){
-      for(int j=0; j<ColsA; j++){
+      wb_buffer:for(int j=0; j<ColsA; j++){
         S[i][j] =S_temp[i][j];
         U[i][j] =U_temp[i][j];
         V[i][j] =V_temp[i][j];
       }
-    }
+    }*/
   }
 
   // ===================================================================================================================
@@ -64891,7 +64922,7 @@ _ssdm_Unroll(0,0,0, "");
 
 
 
-const int VEC_SIZ = 28 * 28;
+const int VEC_SIZ = 4 * 4;
 
 // Top function for synthesis
 void dut (

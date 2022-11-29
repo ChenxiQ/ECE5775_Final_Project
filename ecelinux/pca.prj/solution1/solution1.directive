@@ -5,11 +5,38 @@
                 <option name="off" value="" positionalBoolean="1"/>
             </pragma>
         </directive>
-        <directive functionName="svd_alt" label="svd_calc_1" functionLabel="">
-            <pragma name="UNROLL"/>
+        <directive functionName="svd_alt" label="rd_buffer" functionLabel="">
+            <pragma name="PIPELINE"/>
         </directive>
-        <directive functionName="svd_alt" label="svd_calc_2" functionLabel="">
-            <pragma name="UNROLL"/>
+        <directive functionName="svd_alt" label="svd_rd_diag" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_calc_diag" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_wb_diag" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_rd_off_r" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_calc_off_r" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_wb_off_r" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_rd_off_c" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_calc_off_c" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_wb_off_c" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="wb_buffer" functionLabel="">
+            <pragma name="PIPELINE"/>
         </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>

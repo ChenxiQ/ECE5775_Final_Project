@@ -1,0 +1,15 @@
+dut_fadd_32ns_32ns_32_5_full_dsp
+dut_faddfsub_32ns_32ns_32_5_full_dsp
+dut_fmul_32ns_32ns_32_4_max_dsp
+dut_fdiv_32ns_32ns_32_16
+dut_frsqrt_32ns_32ns_32_11_full_dsp
+dut_sitofp_32ns_32_6
+dut_svd_alt_diag_1
+dut_svd_alt_S_block_buffer_0_0
+dut_svd_alt_S_r_buffer_0
+dut_svd_alt_J2x2_0_0
+dut_XXT
+dut_S
+dut_calc_angle_float_float_s
+dut_svd_alt
+dut

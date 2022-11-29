@@ -1008,8 +1008,16 @@
 #pragma line 98 "/usr/include/assert.h" 3 4 ::: 64024
 #pragma line 10 "./svd.h" 2 ::: 64030
 #pragma line 32 "./svd.h" ::: 64056
-#pragma line 608 "./svd.h" ::: 64635
-#pragma line 754 "./svd.h" ::: 64784
-#pragma line 10 "./dut.h" 2 ::: 64876
-#pragma line 29 "./dut.h" ::: 64899
-#pragma line 12 "dut.cpp" 2 ::: 64901
+#pragma line 531 "./svd.h" ::: 64558
+#pragma line 581 "./svd.h" ::: 64611
+#pragma line 604 "./svd.h" ::: 64637
+#pragma line 662 "./svd.h" ::: 64698
+#pragma line 686 "./svd.h" ::: 64725
+#pragma line 703 "./svd.h" ::: 64745
+#pragma line 747 "./svd.h" ::: 64792
+#pragma line 763 "./svd.h" ::: 64811
+#pragma line 777 "./svd.h" ::: 64828
+#pragma line 804 "./svd.h" ::: 64858
+#pragma line 10 "./dut.h" 2 ::: 64907
+#pragma line 29 "./dut.h" ::: 64930
+#pragma line 12 "dut.cpp" 2 ::: 64932
