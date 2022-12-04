@@ -10,7 +10,7 @@
 
 module dut_fdiv_32ns_32ns_32_16
 #(parameter
-    ID         = 13,
+    ID         = 18,
     NUM_STAGE  = 16,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

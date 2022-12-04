@@ -68682,6 +68682,8 @@ void dut (
   hls::stream<float> &strm_in,
   hls::stream<float> &strm_out
 );
+#pragma empty_line
+void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
 #pragma line 5 "./svd.h" 2
 #pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
 #pragma empty_line
@@ -72328,15 +72330,36 @@ void PCA::cov(fix32_t X[VEC_SIZ][100], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
       XT[j][i] = X[i][j];
     }
   }
-  hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,VEC_SIZ,
-  100,100,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
 #pragma empty_line
-#pragma empty_line
-  for(int i=0;i<VEC_SIZ;i++){
-    for(int j=0; j<VEC_SIZ;j++){
-      XXT[i][j] = XXT[i][j]/(100 -1);
+  pca_in->write(4);
+  for (int i = 0; i < 784; i++) {
+    for (int m = 0; m < 100; m++) {
+      pca_in->write(X[i][m]);
+    }
+    for (int j = 0; j < 784; j++) {
+      for (int n = 0; n < 100; n++) {
+        pca_in->write(XT[n][j]);
+      }
     }
   }
+#pragma empty_line
+  dut(*pca_in, *pca_out);
+#pragma empty_line
+  for (int i = 0; i < 784; i++) {
+    for (int j = 0; j < 784; j++) {
+      XXT[i][j] = pca_out->read()/(100 -1);
+    }
+  }
+#pragma empty_line
+  // hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,VEC_SIZ,
+  // IMG_NUM,IMG_NUM,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
+#pragma empty_line
+#pragma empty_line
+  // for(int i=0;i<VEC_SIZ;i++){
+  //   for(int j=0; j<VEC_SIZ;j++){
+  //     XXT[i][j] = XXT[i][j]/(IMG_NUM-1);
+  //   }
+  // }
 #pragma empty_line
 #pragma empty_line
   std::ofstream fxxt("data/xxt.dat", ios_base::out);

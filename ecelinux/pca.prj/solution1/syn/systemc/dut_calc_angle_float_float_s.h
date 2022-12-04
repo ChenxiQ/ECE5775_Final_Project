@@ -40,18 +40,18 @@ struct dut_calc_angle_float_float_s : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    dut_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* dut_fadd_32ns_32ns_32_5_full_dsp_U5;
-    dut_faddfsub_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* dut_faddfsub_32ns_32ns_32_5_full_dsp_U6;
-    dut_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* dut_fadd_32ns_32ns_32_5_full_dsp_U7;
-    dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* dut_fmul_32ns_32ns_32_4_max_dsp_U8;
-    dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* dut_fmul_32ns_32ns_32_4_max_dsp_U9;
-    dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* dut_fmul_32ns_32ns_32_4_max_dsp_U10;
-    dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* dut_fmul_32ns_32ns_32_4_max_dsp_U11;
-    dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* dut_fmul_32ns_32ns_32_4_max_dsp_U12;
-    dut_fdiv_32ns_32ns_32_16<1,16,32,32,32>* dut_fdiv_32ns_32ns_32_16_U13;
-    dut_fdiv_32ns_32ns_32_16<1,16,32,32,32>* dut_fdiv_32ns_32ns_32_16_U14;
-    dut_frsqrt_32ns_32ns_32_11_full_dsp<1,11,32,32,32>* dut_frsqrt_32ns_32ns_32_11_full_dsp_U15;
-    dut_frsqrt_32ns_32ns_32_11_full_dsp<1,11,32,32,32>* dut_frsqrt_32ns_32ns_32_11_full_dsp_U16;
+    dut_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* dut_fadd_32ns_32ns_32_5_full_dsp_U10;
+    dut_faddfsub_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* dut_faddfsub_32ns_32ns_32_5_full_dsp_U11;
+    dut_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* dut_fadd_32ns_32ns_32_5_full_dsp_U12;
+    dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* dut_fmul_32ns_32ns_32_4_max_dsp_U13;
+    dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* dut_fmul_32ns_32ns_32_4_max_dsp_U14;
+    dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* dut_fmul_32ns_32ns_32_4_max_dsp_U15;
+    dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* dut_fmul_32ns_32ns_32_4_max_dsp_U16;
+    dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* dut_fmul_32ns_32ns_32_4_max_dsp_U17;
+    dut_fdiv_32ns_32ns_32_16<1,16,32,32,32>* dut_fdiv_32ns_32ns_32_16_U18;
+    dut_fdiv_32ns_32ns_32_16<1,16,32,32,32>* dut_fdiv_32ns_32ns_32_16_U19;
+    dut_frsqrt_32ns_32ns_32_11_full_dsp<1,11,32,32,32>* dut_frsqrt_32ns_32ns_32_11_full_dsp_U20;
+    dut_frsqrt_32ns_32ns_32_11_full_dsp<1,11,32,32,32>* dut_frsqrt_32ns_32ns_32_11_full_dsp_U21;
     sc_signal< sc_lv<32> > tanThetaAdiv_reg_48;
     sc_signal< sc_lv<32> > ap_reg_ppstg_tanThetaAdiv_reg_48_pp0_iter62;
     sc_signal< sc_lv<32> > ap_reg_ppstg_tanThetaAdiv_reg_48_pp0_iter63;

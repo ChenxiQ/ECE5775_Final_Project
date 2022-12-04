@@ -171,7 +171,7 @@ dut_fadd_32ns_32ns_32_5_full_dsp #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-dut_fadd_32ns_32ns_32_5_full_dsp_U1(
+dut_fadd_32ns_32ns_32_5_full_dsp_U6(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_72_p0),
@@ -186,7 +186,7 @@ dut_fmul_32ns_32ns_32_4_max_dsp #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-dut_fmul_32ns_32ns_32_4_max_dsp_U2(
+dut_fmul_32ns_32ns_32_4_max_dsp_U7(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_76_p0),

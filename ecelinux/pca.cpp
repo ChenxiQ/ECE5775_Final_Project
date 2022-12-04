@@ -87,15 +87,36 @@ void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
       XT[j][i] = X[i][j];
     }
   }
-  hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,VEC_SIZ,
-  IMG_NUM,IMG_NUM,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
 
-
-  for(int i=0;i<VEC_SIZ;i++){
-    for(int j=0; j<VEC_SIZ;j++){
-      XXT[i][j] = XXT[i][j]/(IMG_NUM-1);
+  pca_in->write(4);
+  for (int i = 0; i < 784; i++) {
+    for (int m = 0; m < 100; m++) {
+      pca_in->write(X[i][m]);
+    }
+    for (int j = 0; j < 784; j++) {
+      for (int n = 0; n < 100; n++) {
+        pca_in->write(XT[n][j]);
+      }
     }
   }
+
+  dut(*pca_in, *pca_out);
+
+  for (int i = 0; i < 784; i++) {
+    for (int j = 0; j < 784; j++) {
+      XXT[i][j] = pca_out->read()/(IMG_NUM-1);
+    }
+  }
+
+  // hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,VEC_SIZ,
+  // IMG_NUM,IMG_NUM,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
+
+
+  // for(int i=0;i<VEC_SIZ;i++){
+  //   for(int j=0; j<VEC_SIZ;j++){
+  //     XXT[i][j] = XXT[i][j]/(IMG_NUM-1);
+  //   }
+  // }
 
   
   std::ofstream fxxt("data/xxt.dat", ios_base::out);

@@ -5,24 +5,24 @@
   Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 ================================================================
 INFO: [HLS 200-10] Running '/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'yx388' on host 'en-ec-ecelinux-16.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Sun Dec 04 03:34:55 EST 2022
+INFO: [HLS 200-10] For user 'yl3524' on host 'en-ec-ecelinux-15.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Sun Dec 04 17:56:02 EST 2022
 INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
-INFO: [HLS 200-10] In directory '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux'
-INFO: [HLS 200-10] Opening and resetting project '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj'.
+INFO: [HLS 200-10] In directory '/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux'
+INFO: [HLS 200-10] Opening and resetting project '/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj'.
 INFO: [HLS 200-10] Adding design file 'pca.cpp' to the project
 INFO: [HLS 200-10] Adding design file 'dut.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'pca_test.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'data' to the project
-INFO: [HLS 200-10] Opening and resetting solution '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1'.
+INFO: [HLS 200-10] Opening and resetting solution '/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1'.
 INFO: [HLS 200-10] Cleaning up the solution database.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-make[1]: Entering directory `/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
+make[1]: Entering directory `/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
    Compiling ../../../../pca_test.cpp in release mode
    Compiling ../../../../dut.cpp in release mode
    Compiling ../../../../pca.cpp in release mode
    Generating csim.exe
-make[1]: Leaving directory `/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
+make[1]: Leaving directory `/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
 calculating norm...
 calculating cov...
 calculating svd...
@@ -33,50 +33,50 @@ writing files...
 write y
 write tsf
 write mean
-pca                 :      1 calls; 346303.906 msecs total time
+pca                 :      1 calls; 404012.375 msecs total time
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [HLS 200-10] Analyzing design file 'dut.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'pca.cpp' ... 
 INFO: [HLS 200-10] Validating synthesis directives ...
 WARNING: [HLS 200-40] Directive 'INLINE' for location 'vm2x1_base' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/rd_buffer' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_diag' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'calc_svd/svd_calc_diag' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_wb_diag' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_off_r' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'update_off_diag_r/svd_calc_off_r' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_wb_off_r' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_off_c' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'update_off_diag_c/svd_calc_off_c' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Label 'svd_wb_off_c' does not exist in function 'svd_alt'. 
 WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Label 'wb_buffer' does not exist in function 'svd_alt'. 
@@ -106,7 +106,7 @@ INFO: [XFORM 203-602] Inlining function 'svd::mm2x2<float, float, float>' into '
 INFO: [XFORM 203-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::update_off_diag_r<784, 784, MY_CONFIG_SVD>' (./svd.h:393) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::x_conj<float>' into 'svd::update_off_diag_c<784, 784, MY_CONFIG_SVD>' (./svd.h:450) automatically.
 INFO: [XFORM 203-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::update_off_diag_c<784, 784, MY_CONFIG_SVD>' (./svd.h:450) automatically.
-INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:27) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:28) automatically.
 INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:368) automatically.
 INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371) automatically.
 INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:383) automatically.
@@ -128,19 +128,34 @@ INFO: [XFORM 203-602] Inlining function 'svd::mm2x2<float, float, float>' into '
 INFO: [XFORM 203-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::update_off_diag_r<784, 784, MY_CONFIG_SVD>' (./svd.h:393) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::x_conj<float>' into 'svd::update_off_diag_c<784, 784, MY_CONFIG_SVD>' (./svd.h:450) automatically.
 INFO: [XFORM 203-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::update_off_diag_c<784, 784, MY_CONFIG_SVD>' (./svd.h:450) automatically.
-INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:27) automatically.
-INFO: [XFORM 203-602] Inlining function 'svd::update_off_diag_c<784, 784, MY_CONFIG_SVD>' into 'dut' (dut.cpp:39) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:28) automatically.
+INFO: [XFORM 203-602] Inlining function 'svd::update_off_diag_c<784, 784, MY_CONFIG_SVD>' into 'dut' (dut.cpp:40) automatically.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./svd.h:290:70) to (./svd.h:290:62) in function 'svd::calc_svd<784, 784, MY_CONFIG_SVD>'... converting 5 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (dut.cpp:27:3) in function 'dut'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (dut.cpp:28:3) in function 'dut'... converting 4 basic blocks.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (./svd.h:372:22) in function 'svd::update_off_diag_r<784, 784, MY_CONFIG_SVD>'.
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (./svd.h:436:22) in function 'dut'.
 WARNING: [XFORM 203-631] Renaming function 'svd::update_off_diag_r<784, 784, MY_CONFIG_SVD>' (./svd.h:64:78) into update_off_diag_r.
 WARNING: [XFORM 203-631] Renaming function 'svd::calc_svd<784, 784, MY_CONFIG_SVD>' (./svd.h:64:62) into calc_svd.
 WARNING: [XFORM 203-631] Renaming function 'svd::calc_angle<float, float>' (./svd.h:48:7) into calc_angle<float, float>.
-INFO: [HLS 200-111] Elapsed time: 17.97 seconds; current memory usage: 579 MB.
+INFO: [HLS 200-111] Elapsed time: 19.74 seconds; current memory usage: 589 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'dut' ...
 WARNING: [SYN 201-103] Legalizing function name 'dut_calc_angle<float, float>' to 'dut_calc_angle_float_float_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Scheduling module 'dut_matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Elapsed time: 0.15 seconds; current memory usage: 590 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Elapsed time: 0.05 seconds; current memory usage: 590 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Scheduling module 'dut_update_off_diag_r' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -160,7 +175,7 @@ WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 
    between fifo read on port 'strm_in_V' (./svd.h:391) and fifo read on port 'strm_in_V' (./svd.h:375).
 INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 14, Depth: 29.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 0.57 seconds; current memory usage: 580 MB.
+INFO: [HLS 200-111] Elapsed time: 0.63 seconds; current memory usage: 591 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_update_off_diag_r' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -169,7 +184,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 0.07 seconds; current memory usage: 580 MB.
+INFO: [HLS 200-111] Elapsed time: 0.07 seconds; current memory usage: 591 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Scheduling module 'dut_calc_angle_float_float_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -177,7 +192,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dut_calc_angle<float, float>'.
 INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 85.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 0.11 seconds; current memory usage: 581 MB.
+INFO: [HLS 200-111] Elapsed time: 0.16 seconds; current memory usage: 592 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_calc_angle_float_float_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -186,7 +201,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 0.07 seconds; current memory usage: 582 MB.
+INFO: [HLS 200-111] Elapsed time: 0.07 seconds; current memory usage: 593 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Scheduling module 'dut_calc_svd' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -204,7 +219,7 @@ WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 
    between fifo write on port 'strm_out_V' (./svd.h:340) and fifo write on port 'strm_out_V' (./svd.h:301).
 INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 20, Depth: 154.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 1.1 seconds; current memory usage: 583 MB.
+INFO: [HLS 200-111] Elapsed time: 1.18 seconds; current memory usage: 594 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_calc_svd' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -213,25 +228,25 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 0.27 seconds; current memory usage: 585 MB.
+INFO: [HLS 200-111] Elapsed time: 0.32 seconds; current memory usage: 596 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Scheduling module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'L_svd_calc_off_c'.
 WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
-   between fifo read on port 'strm_in_V' (./svd.h:442->dut.cpp:39) and fifo read on port 'strm_in_V' (./svd.h:441->dut.cpp:39).
+   between fifo read on port 'strm_in_V' (./svd.h:442->dut.cpp:40) and fifo read on port 'strm_in_V' (./svd.h:441->dut.cpp:40).
 WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)
-   between fifo read on port 'strm_in_V' (./svd.h:443->dut.cpp:39) and fifo read on port 'strm_in_V' (./svd.h:441->dut.cpp:39).
+   between fifo read on port 'strm_in_V' (./svd.h:443->dut.cpp:40) and fifo read on port 'strm_in_V' (./svd.h:441->dut.cpp:40).
 WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)
-   between fifo read on port 'strm_in_V' (./svd.h:444->dut.cpp:39) and fifo read on port 'strm_in_V' (./svd.h:441->dut.cpp:39).
+   between fifo read on port 'strm_in_V' (./svd.h:444->dut.cpp:40) and fifo read on port 'strm_in_V' (./svd.h:441->dut.cpp:40).
 WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 4, distance = 1)
-   between fifo read on port 'strm_in_V' (./svd.h:446->dut.cpp:39) and fifo read on port 'strm_in_V' (./svd.h:441->dut.cpp:39).
+   between fifo read on port 'strm_in_V' (./svd.h:446->dut.cpp:40) and fifo read on port 'strm_in_V' (./svd.h:441->dut.cpp:40).
 WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 5, distance = 1)
-   between fifo read on port 'strm_in_V' (./svd.h:447->dut.cpp:39) and fifo read on port 'strm_in_V' (./svd.h:441->dut.cpp:39).
+   between fifo read on port 'strm_in_V' (./svd.h:447->dut.cpp:40) and fifo read on port 'strm_in_V' (./svd.h:441->dut.cpp:40).
 INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 6, Depth: 19.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 0.37 seconds; current memory usage: 585 MB.
+INFO: [HLS 200-111] Elapsed time: 0.48 seconds; current memory usage: 596 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -240,14 +255,21 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 0.09 seconds; current memory usage: 586 MB.
+INFO: [HLS 200-111] Elapsed time: 0.14 seconds; current memory usage: 597 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_matmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'dut_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_matmul'.
+INFO: [HLS 200-111] Elapsed time: 0.16 seconds; current memory usage: 597 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut_update_off_diag_r' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'dut_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_update_off_diag_r'.
-INFO: [HLS 200-111] Elapsed time: 0.19 seconds; current memory usage: 586 MB.
+INFO: [HLS 200-111] Elapsed time: 0.18 seconds; current memory usage: 599 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut_calc_angle_float_float_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -257,14 +279,14 @@ INFO: [RTGEN 206-100] Generating core module 'dut_fdiv_32ns_32ns_32_16': 2 insta
 INFO: [RTGEN 206-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 5 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dut_frsqrt_32ns_32ns_32_11_full_dsp': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_calc_angle_float_float_s'.
-INFO: [HLS 200-111] Elapsed time: 0.25 seconds; current memory usage: 589 MB.
+INFO: [HLS 200-111] Elapsed time: 0.26 seconds; current memory usage: 601 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut_calc_svd' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'dut_faddfsub_32ns_32ns_32_5_full_dsp': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_calc_svd'.
-INFO: [HLS 200-111] Elapsed time: 0.46 seconds; current memory usage: 591 MB.
+INFO: [HLS 200-111] Elapsed time: 0.42 seconds; current memory usage: 604 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -274,9 +296,10 @@ INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Generating core module 'dut_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
-INFO: [HLS 200-111] Elapsed time: 0.41 seconds; current memory usage: 595 MB.
+INFO: [HLS 200-111] Elapsed time: 0.41 seconds; current memory usage: 607 MB.
+INFO: [RTMG 210-278] Implementing memory 'dut_matmul_A_ram' using block RAMs.
 INFO: [HLS 200-10] Finished generating all RTL models.
 INFO: [SYSC 207-301] Generating SystemC RTL for dut.
 INFO: [VHDL 208-304] Generating VHDL RTL for dut.
 INFO: [VLOG 209-307] Generating Verilog RTL for dut.
-INFO: [HLS 200-112] Total elapsed time: 501.221 seconds; peak memory usage: 595 MB.
+INFO: [HLS 200-112] Total elapsed time: 580.410 seconds; peak memory usage: 607 MB.

@@ -53,20 +53,20 @@ const sc_lv<19> dut_update_off_diag_r::ap_const_lv19_1 = "1";
 const sc_lv<32> dut_update_off_diag_r::ap_const_lv32_F = "1111";
 
 dut_update_off_diag_r::dut_update_off_diag_r(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    dut_fadd_32ns_32ns_32_5_full_dsp_U1 = new dut_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>("dut_fadd_32ns_32ns_32_5_full_dsp_U1");
-    dut_fadd_32ns_32ns_32_5_full_dsp_U1->clk(ap_clk);
-    dut_fadd_32ns_32ns_32_5_full_dsp_U1->reset(ap_rst);
-    dut_fadd_32ns_32ns_32_5_full_dsp_U1->din0(grp_fu_72_p0);
-    dut_fadd_32ns_32ns_32_5_full_dsp_U1->din1(grp_fu_72_p1);
-    dut_fadd_32ns_32ns_32_5_full_dsp_U1->ce(grp_fu_72_ce);
-    dut_fadd_32ns_32ns_32_5_full_dsp_U1->dout(grp_fu_72_p2);
-    dut_fmul_32ns_32ns_32_4_max_dsp_U2 = new dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>("dut_fmul_32ns_32ns_32_4_max_dsp_U2");
-    dut_fmul_32ns_32ns_32_4_max_dsp_U2->clk(ap_clk);
-    dut_fmul_32ns_32ns_32_4_max_dsp_U2->reset(ap_rst);
-    dut_fmul_32ns_32ns_32_4_max_dsp_U2->din0(grp_fu_76_p0);
-    dut_fmul_32ns_32ns_32_4_max_dsp_U2->din1(grp_fu_76_p1);
-    dut_fmul_32ns_32ns_32_4_max_dsp_U2->ce(grp_fu_76_ce);
-    dut_fmul_32ns_32ns_32_4_max_dsp_U2->dout(grp_fu_76_p2);
+    dut_fadd_32ns_32ns_32_5_full_dsp_U6 = new dut_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>("dut_fadd_32ns_32ns_32_5_full_dsp_U6");
+    dut_fadd_32ns_32ns_32_5_full_dsp_U6->clk(ap_clk);
+    dut_fadd_32ns_32ns_32_5_full_dsp_U6->reset(ap_rst);
+    dut_fadd_32ns_32ns_32_5_full_dsp_U6->din0(grp_fu_72_p0);
+    dut_fadd_32ns_32ns_32_5_full_dsp_U6->din1(grp_fu_72_p1);
+    dut_fadd_32ns_32ns_32_5_full_dsp_U6->ce(grp_fu_72_ce);
+    dut_fadd_32ns_32ns_32_5_full_dsp_U6->dout(grp_fu_72_p2);
+    dut_fmul_32ns_32ns_32_4_max_dsp_U7 = new dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>("dut_fmul_32ns_32ns_32_4_max_dsp_U7");
+    dut_fmul_32ns_32ns_32_4_max_dsp_U7->clk(ap_clk);
+    dut_fmul_32ns_32ns_32_4_max_dsp_U7->reset(ap_rst);
+    dut_fmul_32ns_32ns_32_4_max_dsp_U7->din0(grp_fu_76_p0);
+    dut_fmul_32ns_32ns_32_4_max_dsp_U7->din1(grp_fu_76_p1);
+    dut_fmul_32ns_32ns_32_4_max_dsp_U7->ce(grp_fu_76_ce);
+    dut_fmul_32ns_32ns_32_4_max_dsp_U7->dout(grp_fu_76_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -532,8 +532,8 @@ dut_update_off_diag_r::~dut_update_off_diag_r() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete dut_fadd_32ns_32ns_32_5_full_dsp_U1;
-    delete dut_fmul_32ns_32ns_32_4_max_dsp_U2;
+    delete dut_fadd_32ns_32ns_32_5_full_dsp_U6;
+    delete dut_fmul_32ns_32ns_32_4_max_dsp_U7;
 }
 
 void dut_update_off_diag_r::thread_ap_clk_no_reset_() {

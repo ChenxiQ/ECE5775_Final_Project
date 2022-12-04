@@ -185,7 +185,7 @@ architecture behav of dut_update_off_diag_r is
 
 
 begin
-    dut_fadd_32ns_32ns_32_5_full_dsp_U1 : component dut_fadd_32ns_32ns_32_5_full_dsp
+    dut_fadd_32ns_32ns_32_5_full_dsp_U6 : component dut_fadd_32ns_32ns_32_5_full_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -200,7 +200,7 @@ begin
         ce => grp_fu_72_ce,
         dout => grp_fu_72_p2);
 
-    dut_fmul_32ns_32ns_32_4_max_dsp_U2 : component dut_fmul_32ns_32ns_32_4_max_dsp
+    dut_fmul_32ns_32ns_32_4_max_dsp_U7 : component dut_fmul_32ns_32ns_32_4_max_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 4,

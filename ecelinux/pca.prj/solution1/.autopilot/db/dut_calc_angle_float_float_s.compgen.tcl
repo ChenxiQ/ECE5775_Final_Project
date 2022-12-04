@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 6
+set id 11
 set name dut_faddfsub_32ns_32ns_32_5_full_dsp
 set corename simcore_faddfsub
 set op faddfsub
@@ -70,7 +70,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 13
+set id 18
 set name dut_fdiv_32ns_32ns_32_16
 set corename simcore_fdiv
 set op fdiv
@@ -137,7 +137,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 15
+set id 20
 set name dut_frsqrt_32ns_32ns_32_11_full_dsp
 set corename simcore_frsqrt
 set op frsqrt
@@ -217,7 +217,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 17 \
+    id 22 \
     name A_M_real \
     type other \
     dir I \
@@ -232,7 +232,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 18 \
+    id 23 \
     name A_M_imag \
     type other \
     dir I \

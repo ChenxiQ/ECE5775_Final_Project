@@ -1,5 +1,5 @@
-# 1 "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp"
-# 1 "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp" 1
+# 1 "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp"
+# 1 "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -203,7 +203,7 @@ extern "C" {
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp" 2
+# 1 "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp" 2
 # 1 "pca.cpp"
 # 1 "pca.cpp" 1
 # 1 "<built-in>" 1
@@ -68995,6 +68995,8 @@ void dut (
   hls::stream<float> &strm_in,
   hls::stream<float> &strm_out
 );
+
+void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
 # 5 "./svd.h" 2
 # 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
 
@@ -72664,15 +72666,36 @@ void PCA::cov(fix32_t X[VEC_SIZ][100], fix32_t XXT[VEC_SIZ][VEC_SIZ]){_ssdm_Spec
       XT[j][i] = X[i][j];
     }
   }
-  hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,VEC_SIZ,
-  100,100,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
 
-
-  for(int i=0;i<VEC_SIZ;i++){
-    for(int j=0; j<VEC_SIZ;j++){
-      XXT[i][j] = XXT[i][j]/(100 -1);
+  pca_in->write(4);
+  for (int i = 0; i < 784; i++) {
+    for (int m = 0; m < 100; m++) {
+      pca_in->write(X[i][m]);
+    }
+    for (int j = 0; j < 784; j++) {
+      for (int n = 0; n < 100; n++) {
+        pca_in->write(XT[n][j]);
+      }
     }
   }
+
+  dut(*pca_in, *pca_out);
+
+  for (int i = 0; i < 784; i++) {
+    for (int j = 0; j < 784; j++) {
+      XXT[i][j] = pca_out->read()/(100 -1);
+    }
+  }
+
+  // hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,VEC_SIZ,
+  // IMG_NUM,IMG_NUM,VEC_SIZ,VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(X,XT,XXT);
+
+
+  // for(int i=0;i<VEC_SIZ;i++){
+  //   for(int j=0; j<VEC_SIZ;j++){
+  //     XXT[i][j] = XXT[i][j]/(IMG_NUM-1);
+  //   }
+  // }
 
 
   std::ofstream fxxt("data/xxt.dat", ios_base::out);
