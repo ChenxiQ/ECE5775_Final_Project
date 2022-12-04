@@ -31,6 +31,15 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yx388/ece5775/final_project/E
 INFO: [VRFC 10-311] analyzing module dut_frsqrt_32ns_32ns_32_11_full_dsp
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/sim/verilog/dut_sitofp_32ns_32_6.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dut_sitofp_32ns_32_6
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/sim/verilog/dut_mac_muladd_10ns_11ns_10ns_20_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_mac_muladd_10ns_11ns_10ns_20_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module dut_mac_muladd_10ns_11ns_10ns_20_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/sim/verilog/dut_mul_mul_11ns_21s_21_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_mul_mul_11ns_21s_21_1_DSP48_1
+INFO: [VRFC 10-311] analyzing module dut_mul_mul_11ns_21s_21_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/sim/verilog/dut_mac_muladd_11ns_21s_10ns_21_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dut_mac_muladd_11ns_21s_10ns_21_1_DSP48_2
+INFO: [VRFC 10-311] analyzing module dut_mac_muladd_11ns_21s_10ns_21_1
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/sim/verilog/dut_svd_alt_diag_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dut_svd_alt_diag_1_ram
 INFO: [VRFC 10-311] analyzing module dut_svd_alt_diag_1
@@ -466,6 +475,12 @@ Compiling architecture xilinx of entity floating_point_v7_1_2.floating_point_v7_
 Compiling architecture xilinx of entity floating_point_v7_1_2.floating_point_v7_1_2 [\floating_point_v7_1_2(c_xdevice...]
 Compiling architecture dut_ap_sitofp_4_no_dsp_32_arch of entity xil_defaultlib.dut_ap_sitofp_4_no_dsp_32 [dut_ap_sitofp_4_no_dsp_32_defaul...]
 Compiling module xil_defaultlib.dut_sitofp_32ns_32_6(ID=1)
+Compiling module xil_defaultlib.dut_mac_muladd_10ns_11ns_10ns_20...
+Compiling module xil_defaultlib.dut_mac_muladd_10ns_11ns_10ns_20...
+Compiling module xil_defaultlib.dut_mul_mul_11ns_21s_21_1_DSP48_...
+Compiling module xil_defaultlib.dut_mul_mul_11ns_21s_21_1(ID=1,N...
+Compiling module xil_defaultlib.dut_mac_muladd_11ns_21s_10ns_21_...
+Compiling module xil_defaultlib.dut_mac_muladd_11ns_21s_10ns_21_...
 Compiling module xil_defaultlib.dut_svd_alt
 Compiling module xil_defaultlib.dut
 Compiling module xil_defaultlib.AESL_autofifo_strm_in_V

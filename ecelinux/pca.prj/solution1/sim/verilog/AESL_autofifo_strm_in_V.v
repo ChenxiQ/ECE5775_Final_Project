@@ -26,8 +26,8 @@ localparam
 
 //------------------------Local signal-------------------
 parameter DATA_WIDTH = 32'd 32;
-parameter ADDR_WIDTH = 32'd 9;
-parameter DEPTH = 32'd 256;
+parameter ADDR_WIDTH = 32'd 21;
+parameter DEPTH = 32'd 614656;
 
 // Input and Output
 input clk;

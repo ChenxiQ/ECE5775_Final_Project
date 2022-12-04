@@ -1,21 +1,21 @@
 # This script segment is generated automatically by AutoPilot
 
 # Memory (RAM/ROM)  definition:
-set ID 80
+set ID 89
 set MemName dut_XXT
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 32
-set AddrRange 256
-set AddrWd 8
+set AddrRange 614656
+set AddrWd 20
 set impl_style block
 set TrueReset 0
 set HasInitializer 0
 set IsROM 0
 set ROMData {}
-set NumOfStage 2
+set NumOfStage 4
 set MaxLatency -1
-set DelayBudget 2.71
+set DelayBudget 2.61
 set ClkPeriod 10
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -83,21 +83,21 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 81
+set ID 90
 set MemName dut_S
 set CoreName ap_simcore_mem
 set PortList { 2 2 }
 set DataWd 32
-set AddrRange 256
-set AddrWd 8
+set AddrRange 614656
+set AddrWd 20
 set impl_style block
 set TrueReset 0
 set HasInitializer 0
 set IsROM 0
 set ROMData {}
-set NumOfStage 2
+set NumOfStage 4
 set MaxLatency -1
-set DelayBudget 2.71
+set DelayBudget 2.61
 set ClkPeriod 10
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -174,7 +174,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 82 \
+    id 91 \
     name strm_in_V \
     type fifo \
     dir I \
@@ -189,7 +189,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 83 \
+    id 92 \
     name strm_out_V \
     type fifo \
     dir O \

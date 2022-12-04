@@ -64590,7 +64590,7 @@ namespace svd {
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-const int VEC_SIZ = 4 * 4;
+const int VEC_SIZ = 28 * 28;
 #pragma empty_line
 // Top function for synthesis
 void dut (

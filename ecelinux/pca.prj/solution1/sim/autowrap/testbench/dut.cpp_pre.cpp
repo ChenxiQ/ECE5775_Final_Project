@@ -66095,7 +66095,7 @@ namespace svd {
 
 
 
-const int VEC_SIZ = 4 * 4;
+const int VEC_SIZ = 28 * 28;
 
 
 void dut (

@@ -22,12 +22,12 @@ using namespace sc_dt;
 struct dut_XXT_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 32;
-  static const unsigned AddressRange = 256;
-  static const unsigned AddressWidth = 8;
+  static const unsigned AddressRange = 614656;
+  static const unsigned AddressWidth = 20;
 
-//latency = 1
-//input_reg = 1
-//output_reg = 0
+//latency = 3
+//input_reg = 2
+//output_reg = 1
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in <sc_logic> ce0;
 sc_core::sc_out <sc_lv<DataWidth> > q0;
@@ -40,33 +40,65 @@ sc_core::sc_in<bool> clk;
 sc_lv<DataWidth> ram[AddressRange];
 
 
+sc_core::sc_signal<sc_lv<AddressWidth> > addr0_t0; 
+sc_core::sc_signal<sc_logic> ce0_t0; 
+sc_core::sc_signal<sc_lv<AddressWidth> > addr0_t1; 
+sc_core::sc_signal<sc_logic> ce0_t1; 
+sc_core::sc_signal<sc_lv<DataWidth> > d0_t0; 
+sc_core::sc_signal<sc_logic> we0_t0; 
+sc_core::sc_signal<sc_lv<DataWidth> > d0_t1; 
+sc_core::sc_signal<sc_logic> we0_t1; 
+sc_core::sc_signal<sc_lv<DataWidth> > q0_t0;
+sc_core::sc_signal<sc_lv<DataWidth> > q0_t1;
    SC_CTOR(dut_XXT_ram) {
+SC_METHOD(prc_comb_0);
+  sensitive<<address0<<ce0;
+  sensitive<<d0<<we0;
+  sensitive<<q0_t1;
+
+SC_METHOD(prc_seq);
+  sensitive<<clk.pos(); 
 
 
 SC_METHOD(prc_write_0);
   sensitive<<clk.pos();
    }
 
+void prc_comb_0() {
+  addr0_t0 = address0.read();
+  ce0_t0 = ce0.read();
+  d0_t0 = d0.read();
+  we0_t0 = we0.read();
+  q0 = q0_t1.read();
+}
+
+void prc_seq() { 
+    addr0_t1 = addr0_t0.read(); 
+    ce0_t1 = ce0_t0.read(); 
+    d0_t1 = d0_t0.read();
+    we0_t1 = we0_t0.read();
+    q0_t1 = q0_t0.read();
+}
 
 void prc_write_0()
 {
-    if (ce0.read() == sc_dt::Log_1) 
+    if (ce0_t1.read() == sc_dt::Log_1) 
     {
-        if (we0.read() == sc_dt::Log_1) 
+        if (we0_t1.read() == sc_dt::Log_1) 
         {
-           if(address0.read().is_01() && address0.read().to_uint()<AddressRange)
+           if(addr0_t1.read().is_01() && addr0_t1.read().to_uint()<AddressRange)
            {
-              ram[address0.read().to_uint()] = d0.read(); 
-              q0 = d0.read();
+              ram[addr0_t1.read().to_uint()] = d0_t1.read(); 
+              q0_t0 = d0_t1.read();
            }
            else
-              q0 = sc_lv<DataWidth>();
+              q0_t0 = sc_lv<DataWidth>();
         }
         else {
-            if(address0.read().is_01() && address0.read().to_uint()<AddressRange)
-              q0 = ram[address0.read().to_uint()];
+            if(addr0_t1.read().is_01() && addr0_t1.read().to_uint()<AddressRange)
+              q0_t0 = ram[addr0_t1.read().to_uint()];
             else
-              q0 = sc_lv<DataWidth>();
+              q0_t0 = sc_lv<DataWidth>();
         }
     }
 }
@@ -79,8 +111,8 @@ SC_MODULE(dut_XXT) {
 
 
 static const unsigned DataWidth = 32;
-static const unsigned AddressRange = 256;
-static const unsigned AddressWidth = 8;
+static const unsigned AddressRange = 614656;
+static const unsigned AddressWidth = 20;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;

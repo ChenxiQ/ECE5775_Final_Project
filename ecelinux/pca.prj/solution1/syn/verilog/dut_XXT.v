@@ -9,32 +9,55 @@
 module dut_XXT_ram (addr0, ce0, d0, we0, q0,  clk);
 
 parameter DWIDTH = 32;
-parameter AWIDTH = 8;
-parameter MEM_SIZE = 256;
+parameter AWIDTH = 20;
+parameter MEM_SIZE = 614656;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
 input[DWIDTH-1:0] d0;
 input we0;
-output reg[DWIDTH-1:0] q0;
+output wire[DWIDTH-1:0] q0;
 input clk;
 
 (* ram_style = "block" *)reg [DWIDTH-1:0] ram[MEM_SIZE-1:0];
+wire [AWIDTH-1:0] addr0_t0; 
+(* EQUIVALENT_REGISTER_REMOVAL="NO" *)reg [AWIDTH-1:0] addr0_t1; 
+wire [DWIDTH-1:0] d0_t0; 
+wire we0_t0; 
+(* EQUIVALENT_REGISTER_REMOVAL="NO" *)reg [DWIDTH-1:0] d0_t1; 
+(* EQUIVALENT_REGISTER_REMOVAL="NO" *)reg we0_t1; 
+reg [DWIDTH-1:0] q0_t0;
+reg [DWIDTH-1:0] q0_t1;
 
 
+assign addr0_t0 = addr0;
+assign d0_t0 = d0;
+assign we0_t0 = we0;
+assign q0 = q0_t1;
+
+always @(posedge clk)  
+begin
+    if (ce0) 
+    begin
+        addr0_t1 <= addr0_t0; 
+        d0_t1 <= d0_t0;
+        we0_t1 <= we0_t0;
+        q0_t1 <= q0_t0;
+    end
+end
 
 
 always @(posedge clk)  
 begin 
     if (ce0) 
     begin
-        if (we0) 
+        if (we0_t1) 
         begin 
-            ram[addr0] <= d0; 
-            q0 <= d0;
+            ram[addr0_t1] <= d0_t1; 
+            q0_t0 <= d0_t1;
         end 
         else 
-            q0 <= ram[addr0];
+            q0_t0 <= ram[addr0_t1];
     end
 end
 
@@ -53,8 +76,8 @@ module dut_XXT(
     q0);
 
 parameter DataWidth = 32'd32;
-parameter AddressRange = 32'd256;
-parameter AddressWidth = 32'd8;
+parameter AddressRange = 32'd614656;
+parameter AddressWidth = 32'd20;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

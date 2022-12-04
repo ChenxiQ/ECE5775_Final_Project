@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_svd_alt'" level="0">
-<item name = "Date">Tue Nov 29 10:24:23 2022
+<item name = "Date">Tue Nov 29 11:30:17 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.44, 1.25</column>
+<column name="ap_clk">10.00, 8.99, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">93031, 93031, 93031, 93031, none</column>
+<column name="">8684710304, 8684710304, 8684710304, 8684710304, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,21 +35,21 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- L_rd_buffer">262, 262, 8, 1, 1, 256, yes</column>
-<column name="- sweep_loop">92766, 92766, 15461, -, -, 6, no</column>
-<column name=" + sweep_loop.1">8, 8, 1, -, -, 8, no</column>
-<column name=" + sweep_loop.2">15450, 15450, 1030, -, -, 15, no</column>
-<column name="  ++ sweep_loop.2.1">12, 12, 2, -, -, 6, no</column>
-<column name="  ++ sweep_loop.2.2">14, 14, 2, -, -, 7, no</column>
-<column name="  ++ svd_rd_diag">18, 18, 5, 2, 1, 8, yes</column>
-<column name="  ++ svd_calc_diag">137, 137, 131, 1, 1, 8, yes</column>
-<column name="  ++ svd_wb_diag">34, 34, 7, 4, 1, 8, yes</column>
-<column name="  ++ L_svd_rd_off_r">130, 130, 4, 1, 1, 128, yes</column>
-<column name="  ++ L_svd_calc_off_r">139, 139, 13, 1, 1, 128, yes</column>
-<column name="  ++ L_svd_wb_off_r">131, 131, 5, 1, 1, 128, yes</column>
-<column name="  ++ L_svd_rd_off_c">130, 130, 4, 1, 1, 128, yes</column>
-<column name="  ++ L_svd_calc_off_c">139, 139, 13, 1, 1, 128, yes</column>
-<column name="  ++ L_svd_wb_off_c">131, 131, 5, 1, 1, 128, yes</column>
+<column name="- L_rd_buffer">614663, 614663, 9, 1, 1, 614656, yes</column>
+<column name="- sweep_loop">8684095638, 8684095638, 1447349273, -, -, 6, no</column>
+<column name=" + sweep_loop.1">392, 392, 1, -, -, 392, no</column>
+<column name=" + sweep_loop.2">1447348878, 1447348878, 1848466, -, -, 783, no</column>
+<column name="  ++ sweep_loop.2.1">780, 780, 2, -, -, 390, no</column>
+<column name="  ++ sweep_loop.2.2">782, 782, 2, -, -, 391, no</column>
+<column name="  ++ svd_rd_diag">789, 789, 8, 2, 1, 392, yes</column>
+<column name="  ++ svd_calc_diag">521, 521, 131, 1, 1, 392, yes</column>
+<column name="  ++ svd_wb_diag">1571, 1571, 8, 4, 1, 392, yes</column>
+<column name="  ++ L_svd_rd_off_r">307333, 307333, 7, 1, 1, 307328, yes</column>
+<column name="  ++ L_svd_calc_off_r">307339, 307339, 13, 1, 1, 307328, yes</column>
+<column name="  ++ L_svd_wb_off_r">307332, 307332, 6, 1, 1, 307328, yes</column>
+<column name="  ++ L_svd_rd_off_c">307333, 307333, 7, 1, 1, 307328, yes</column>
+<column name="  ++ L_svd_calc_off_c">307339, 307339, 13, 1, 1, 307328, yes</column>
+<column name="  ++ L_svd_wb_off_c">307332, 307332, 6, 1, 1, 307328, yes</column>
 </table>
 </item>
 </section>

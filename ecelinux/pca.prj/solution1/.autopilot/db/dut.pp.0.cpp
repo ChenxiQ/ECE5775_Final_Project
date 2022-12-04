@@ -64590,7 +64590,7 @@ namespace svd {
 
 
 
-const int VEC_SIZ = 4 * 4;
+const int VEC_SIZ = 28 * 28;
 
 // Top function for synthesis
 void dut (

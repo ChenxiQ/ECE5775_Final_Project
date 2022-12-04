@@ -14,8 +14,8 @@ entity dut_svd_alt_S_block_buffer_0_0_ram is
     generic(
             mem_type    : string := "block"; 
             dwidth     : integer := 32; 
-            awidth     : integer := 3; 
-            mem_size    : integer := 8
+            awidth     : integer := 9; 
+            mem_size    : integer := 392
     ); 
     port (
           addr0     : in std_logic_vector(awidth-1 downto 0); 
@@ -107,8 +107,8 @@ use IEEE.std_logic_1164.all;
 entity dut_svd_alt_S_block_buffer_0_0 is
     generic (
         DataWidth : INTEGER := 32;
-        AddressRange : INTEGER := 8;
-        AddressWidth : INTEGER := 3);
+        AddressRange : INTEGER := 392;
+        AddressWidth : INTEGER := 9);
     port (
         reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;

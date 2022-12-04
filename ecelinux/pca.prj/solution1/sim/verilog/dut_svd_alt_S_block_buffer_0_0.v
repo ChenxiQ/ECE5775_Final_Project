@@ -9,8 +9,8 @@
 module dut_svd_alt_S_block_buffer_0_0_ram (addr0, ce0, d0, we0, q0, addr1, ce1, d1, we1, q1,  clk);
 
 parameter DWIDTH = 32;
-parameter AWIDTH = 3;
-parameter MEM_SIZE = 8;
+parameter AWIDTH = 9;
+parameter MEM_SIZE = 392;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -78,8 +78,8 @@ module dut_svd_alt_S_block_buffer_0_0(
     q1);
 
 parameter DataWidth = 32'd32;
-parameter AddressRange = 32'd8;
-parameter AddressWidth = 32'd3;
+parameter AddressRange = 32'd392;
+parameter AddressWidth = 32'd9;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

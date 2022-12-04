@@ -14,8 +14,8 @@ entity dut_S_ram is
     generic(
             mem_type    : string := "block"; 
             dwidth     : integer := 32; 
-            awidth     : integer := 8; 
-            mem_size    : integer := 256
+            awidth     : integer := 20; 
+            mem_size    : integer := 614656
     ); 
     port (
           addr0     : in std_logic_vector(awidth-1 downto 0); 
@@ -35,8 +35,8 @@ end entity;
 
 architecture rtl of dut_S_ram is 
 
-signal addr0_tmp : std_logic_vector(awidth-1 downto 0); 
-signal addr1_tmp : std_logic_vector(awidth-1 downto 0); 
+signal addr0_t1_tmp : std_logic_vector(awidth-1 downto 0); 
+signal addr1_t1_tmp : std_logic_vector(awidth-1 downto 0); 
 type mem_array is array (0 to mem_size-1) of std_logic_vector (dwidth-1 downto 0); 
 shared variable ram : mem_array;
 
@@ -45,18 +45,68 @@ attribute syn_ramstyle of ram : variable is "block_ram";
 attribute ram_style : string;
 attribute ram_style of ram : variable is mem_type;
 attribute EQUIVALENT_REGISTER_REMOVAL : string;
+signal addr0_t0 : std_logic_vector(awidth-1 downto 0); 
+attribute EQUIVALENT_REGISTER_REMOVAL of addr0_t0 : signal is "NO";
+signal addr0_t1 : std_logic_vector(awidth-1 downto 0); 
+attribute EQUIVALENT_REGISTER_REMOVAL of addr0_t1 : signal is "NO";
+signal d0_t0 : std_logic_vector(dwidth-1 downto 0); 
+signal we0_t0 : std_logic; 
+attribute EQUIVALENT_REGISTER_REMOVAL of we0_t0 : signal is "NO";
+signal d0_t1 : std_logic_vector(dwidth-1 downto 0); 
+signal we0_t1 : std_logic; 
+attribute EQUIVALENT_REGISTER_REMOVAL of we0_t1 : signal is "NO";
+signal q0_t0 : std_logic_vector(dwidth-1 downto 0);
+signal q0_t1 : std_logic_vector(dwidth-1 downto 0);
+signal addr1_t0 : std_logic_vector(awidth-1 downto 0); 
+attribute EQUIVALENT_REGISTER_REMOVAL of addr1_t0 : signal is "NO";
+signal addr1_t1 : std_logic_vector(awidth-1 downto 0); 
+attribute EQUIVALENT_REGISTER_REMOVAL of addr1_t1 : signal is "NO";
+signal d1_t0 : std_logic_vector(dwidth-1 downto 0); 
+signal we1_t0 : std_logic; 
+attribute EQUIVALENT_REGISTER_REMOVAL of we1_t0 : signal is "NO";
+signal d1_t1 : std_logic_vector(dwidth-1 downto 0); 
+signal we1_t1 : std_logic; 
+attribute EQUIVALENT_REGISTER_REMOVAL of we1_t1 : signal is "NO";
+signal q1_t0 : std_logic_vector(dwidth-1 downto 0);
+signal q1_t1 : std_logic_vector(dwidth-1 downto 0);
 
 begin 
 
+addr0_t0 <= addr0;
+d0_t0 <= d0;
+we0_t0 <= we0;
+q0 <= q0_t1;
+addr1_t0 <= addr1;
+d1_t0 <= d1;
+we1_t0 <= we1;
+q1 <= q1_t1;
 
-memory_access_guard_0: process (addr0) 
+p_IO_pipeline_reg : process (clk)  
 begin
-      addr0_tmp <= addr0;
+    if (clk'event and clk = '1') then
+      if (ce0 = '1') then
+        addr0_t1 <= addr0_t0; 
+        d0_t1 <= d0_t0;
+        we0_t1 <= we0_t0;
+        q0_t1 <= q0_t0;
+      end if;
+      if (ce1 = '1') then
+        addr1_t1 <= addr1_t0; 
+        d1_t1 <= d1_t0;
+        we1_t1 <= we1_t0;
+        q1_t1 <= q1_t0;
+      end if;
+    end if;
+end process;
+
+memory_access_guard_0: process (addr0_t1) 
+begin
+      addr0_t1_tmp <= addr0_t1;
 --synthesis translate_off
-      if (CONV_INTEGER(addr0) > mem_size-1) then
-           addr0_tmp <= (others => '0');
+      if (CONV_INTEGER(addr0_t1) > mem_size-1) then
+           addr0_t1_tmp <= (others => '0');
       else 
-           addr0_tmp <= addr0;
+           addr0_t1_tmp <= addr0_t1;
       end if;
 --synthesis translate_on
 end process;
@@ -65,22 +115,22 @@ p_memory_access_0: process (clk)
 begin 
     if (clk'event and clk = '1') then
         if (ce0 = '1') then 
-            if (we0 = '1') then 
-                ram(CONV_INTEGER(addr0_tmp)) := d0; 
+            if (we0_t1 = '1') then 
+                ram(CONV_INTEGER(addr0_t1_tmp)) := d0_t1; 
             end if;
-            q0 <= ram(CONV_INTEGER(addr0_tmp)); 
+            q0_t0 <= ram(CONV_INTEGER(addr0_t1_tmp)); 
         end if;
     end if;
 end process;
 
-memory_access_guard_1: process (addr1) 
+memory_access_guard_1: process (addr1_t1) 
 begin
-      addr1_tmp <= addr1;
+      addr1_t1_tmp <= addr1_t1;
 --synthesis translate_off
-      if (CONV_INTEGER(addr1) > mem_size-1) then
-           addr1_tmp <= (others => '0');
+      if (CONV_INTEGER(addr1_t1) > mem_size-1) then
+           addr1_t1_tmp <= (others => '0');
       else 
-           addr1_tmp <= addr1;
+           addr1_t1_tmp <= addr1_t1;
       end if;
 --synthesis translate_on
 end process;
@@ -89,10 +139,10 @@ p_memory_access_1: process (clk)
 begin 
     if (clk'event and clk = '1') then
         if (ce1 = '1') then 
-            if (we1 = '1') then 
-                ram(CONV_INTEGER(addr1_tmp)) := d1; 
+            if (we1_t1 = '1') then 
+                ram(CONV_INTEGER(addr1_t1_tmp)) := d1_t1; 
             end if;
-            q1 <= ram(CONV_INTEGER(addr1_tmp)); 
+            q1_t0 <= ram(CONV_INTEGER(addr1_t1_tmp)); 
         end if;
     end if;
 end process;
@@ -107,8 +157,8 @@ use IEEE.std_logic_1164.all;
 entity dut_S is
     generic (
         DataWidth : INTEGER := 32;
-        AddressRange : INTEGER := 256;
-        AddressWidth : INTEGER := 8);
+        AddressRange : INTEGER := 614656;
+        AddressWidth : INTEGER := 20);
     port (
         reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;

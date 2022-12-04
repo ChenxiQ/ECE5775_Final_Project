@@ -31,9 +31,9 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 94411;
-parameter LENGTH_strm_in_V = 256;
-parameter LENGTH_strm_out_V = 512;
+parameter LATENCY_ESTIMATION = 2147483647;
+parameter LENGTH_strm_in_V = 614656;
+parameter LENGTH_strm_out_V = 1229312;
 
 task read_token;
     input integer fp;

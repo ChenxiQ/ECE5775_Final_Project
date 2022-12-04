@@ -12,10 +12,10 @@ use ieee.std_logic_unsigned.all;
 
 entity dut_svd_alt_diag_1_ram is 
     generic(
-            mem_type    : string := "distributed"; 
+            mem_type    : string := "block"; 
             dwidth     : integer := 32; 
-            awidth     : integer := 3; 
-            mem_size    : integer := 8
+            awidth     : integer := 9; 
+            mem_size    : integer := 392
     ); 
     port (
           addr0     : in std_logic_vector(awidth-1 downto 0); 
@@ -39,7 +39,7 @@ type mem_array is array (0 to mem_size-1) of std_logic_vector (dwidth-1 downto 0
 shared variable ram : mem_array;
 
 attribute syn_ramstyle : string; 
-attribute syn_ramstyle of ram : variable is "select_ram";
+attribute syn_ramstyle of ram : variable is "block_ram";
 attribute ram_style : string;
 attribute ram_style of ram : variable is mem_type;
 attribute EQUIVALENT_REGISTER_REMOVAL : string;
@@ -102,8 +102,8 @@ use IEEE.std_logic_1164.all;
 entity dut_svd_alt_diag_1 is
     generic (
         DataWidth : INTEGER := 32;
-        AddressRange : INTEGER := 8;
-        AddressWidth : INTEGER := 3);
+        AddressRange : INTEGER := 392;
+        AddressWidth : INTEGER := 9);
     port (
         reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;

@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Tue Nov 29 10:25:59 2022
-# Process ID: 11656
+# Start of session at: Tue Nov 29 11:35:05 2022
+# Process ID: 26802
 # Current directory: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/ip_tmp
 # Command line: vivado  -notrace -mode batch -source run_vivado.tcl
 # Log file: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/ip_tmp/vivado.log
@@ -25,4 +25,4 @@ INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'dut_ap_frsqrt_9_fu
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'dut_ap_frsqrt_9_full_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'dut_ap_sitofp_4_no_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'dut_ap_sitofp_4_no_dsp_32'...
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 29 10:26:22 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 29 11:35:29 2022...

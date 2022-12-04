@@ -9,8 +9,8 @@
 module dut_svd_alt_diag_1_ram (addr0, ce0, d0, we0, q0, addr1, ce1, q1,  clk);
 
 parameter DWIDTH = 32;
-parameter AWIDTH = 3;
-parameter MEM_SIZE = 8;
+parameter AWIDTH = 9;
+parameter MEM_SIZE = 392;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -22,7 +22,7 @@ input ce1;
 output reg[DWIDTH-1:0] q1;
 input clk;
 
-(* ram_style = "distributed" *)reg [DWIDTH-1:0] ram[MEM_SIZE-1:0];
+(* ram_style = "block" *)reg [DWIDTH-1:0] ram[MEM_SIZE-1:0];
 
 
 
@@ -68,8 +68,8 @@ module dut_svd_alt_diag_1(
     q1);
 
 parameter DataWidth = 32'd32;
-parameter AddressRange = 32'd8;
-parameter AddressWidth = 32'd3;
+parameter AddressRange = 32'd392;
+parameter AddressWidth = 32'd9;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

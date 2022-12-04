@@ -3,6 +3,6 @@ make[1]: Entering directory `/home/yx388/ece5775/final_project/ECE5775_Final_Pro
    Compiling ../../../../dut.cpp in release mode
    Generating csim.exe
 make[1]: Leaving directory `/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
-Number of Eigenvalues with error larger than 1%: 0
-svd                 :      1 calls;   5.619 msecs total time
+Number of Eigenvalues with error larger than 1%: 10
+svd                 :      1 calls; 86548.195 msecs total time
 INFO: [SIM 1] CSim done with 0 errors.

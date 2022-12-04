@@ -22,8 +22,8 @@ using namespace sc_dt;
 struct dut_svd_alt_S_r_buffer_0_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 32;
-  static const unsigned AddressRange = 128;
-  static const unsigned AddressWidth = 7;
+  static const unsigned AddressRange = 307328;
+  static const unsigned AddressWidth = 19;
 
 //latency = 1
 //input_reg = 1
@@ -112,8 +112,8 @@ SC_MODULE(dut_svd_alt_S_r_buffer_0) {
 
 
 static const unsigned DataWidth = 32;
-static const unsigned AddressRange = 128;
-static const unsigned AddressWidth = 7;
+static const unsigned AddressRange = 307328;
+static const unsigned AddressWidth = 19;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;

@@ -9,37 +9,79 @@
 module dut_S_ram (addr0, ce0, d0, we0, q0, addr1, ce1, d1, we1, q1,  clk);
 
 parameter DWIDTH = 32;
-parameter AWIDTH = 8;
-parameter MEM_SIZE = 256;
+parameter AWIDTH = 20;
+parameter MEM_SIZE = 614656;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
 input[DWIDTH-1:0] d0;
 input we0;
-output reg[DWIDTH-1:0] q0;
+output wire[DWIDTH-1:0] q0;
 input[AWIDTH-1:0] addr1;
 input ce1;
 input[DWIDTH-1:0] d1;
 input we1;
-output reg[DWIDTH-1:0] q1;
+output wire[DWIDTH-1:0] q1;
 input clk;
 
 (* ram_style = "block" *)reg [DWIDTH-1:0] ram[MEM_SIZE-1:0];
+wire [AWIDTH-1:0] addr0_t0; 
+(* EQUIVALENT_REGISTER_REMOVAL="NO" *)reg [AWIDTH-1:0] addr0_t1; 
+wire [DWIDTH-1:0] d0_t0; 
+wire we0_t0; 
+(* EQUIVALENT_REGISTER_REMOVAL="NO" *)reg [DWIDTH-1:0] d0_t1; 
+(* EQUIVALENT_REGISTER_REMOVAL="NO" *)reg we0_t1; 
+reg [DWIDTH-1:0] q0_t0;
+reg [DWIDTH-1:0] q0_t1;
+wire [AWIDTH-1:0] addr1_t0; 
+(* EQUIVALENT_REGISTER_REMOVAL="NO" *)reg [AWIDTH-1:0] addr1_t1; 
+wire [DWIDTH-1:0] d1_t0; 
+wire we1_t0; 
+(* EQUIVALENT_REGISTER_REMOVAL="NO" *)reg [DWIDTH-1:0] d1_t1; 
+(* EQUIVALENT_REGISTER_REMOVAL="NO" *)reg we1_t1; 
+reg [DWIDTH-1:0] q1_t0;
+reg [DWIDTH-1:0] q1_t1;
 
 
+assign addr0_t0 = addr0;
+assign d0_t0 = d0;
+assign we0_t0 = we0;
+assign q0 = q0_t1;
+assign addr1_t0 = addr1;
+assign d1_t0 = d1;
+assign we1_t0 = we1;
+assign q1 = q1_t1;
+
+always @(posedge clk)  
+begin
+    if (ce0) 
+    begin
+        addr0_t1 <= addr0_t0; 
+        d0_t1 <= d0_t0;
+        we0_t1 <= we0_t0;
+        q0_t1 <= q0_t0;
+    end
+    if (ce1) 
+    begin
+        addr1_t1 <= addr1_t0; 
+        d1_t1 <= d1_t0;
+        we1_t1 <= we1_t0;
+        q1_t1 <= q1_t0;
+    end
+end
 
 
 always @(posedge clk)  
 begin 
     if (ce0) 
     begin
-        if (we0) 
+        if (we0_t1) 
         begin 
-            ram[addr0] <= d0; 
-            q0 <= d0;
+            ram[addr0_t1] <= d0_t1; 
+            q0_t0 <= d0_t1;
         end 
         else 
-            q0 <= ram[addr0];
+            q0_t0 <= ram[addr0_t1];
     end
 end
 
@@ -48,13 +90,13 @@ always @(posedge clk)
 begin 
     if (ce1) 
     begin
-        if (we1) 
+        if (we1_t1) 
         begin 
-            ram[addr1] <= d1; 
-            q1 <= d1;
+            ram[addr1_t1] <= d1_t1; 
+            q1_t0 <= d1_t1;
         end 
         else 
-            q1 <= ram[addr1];
+            q1_t0 <= ram[addr1_t1];
     end
 end
 
@@ -78,8 +120,8 @@ module dut_S(
     q1);
 
 parameter DataWidth = 32'd32;
-parameter AddressRange = 32'd256;
-parameter AddressWidth = 32'd8;
+parameter AddressRange = 32'd614656;
+parameter AddressWidth = 32'd20;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;
