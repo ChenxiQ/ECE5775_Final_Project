@@ -26,123 +26,20 @@ void dut(
   //1 = svd,
   switch ((int)input_l){
     case 1:{
-    float top_left      = strm_in.read();
-    float bottom_right  = strm_in.read();
-
-    float s_temp[2][2];
-    float u_temp[2][2];
-    float v_temp[2][2];
-    s_temp[0][0] = strm_in.read();
-    s_temp[0][1] = strm_in.read();
-    s_temp[1][0] = strm_in.read();
-    s_temp[1][1] = strm_in.read();
-    u_temp[0][0] = strm_in.read();
-    u_temp[0][1] = strm_in.read();
-    u_temp[1][0] = strm_in.read();
-    u_temp[1][1] = strm_in.read();
-    v_temp[0][0] = strm_in.read();
-    v_temp[0][1] = strm_in.read();
-    v_temp[1][0] = strm_in.read();
-    v_temp[1][1] = strm_in.read();
-
-    float u_row_temp[VEC_SIZ][2];
-    float v_row_temp[VEC_SIZ][2];
-    for(int i=0;i<VEC_SIZ;i++){
-      u_row_temp[i][0] = strm_in.read();
-      u_row_temp[i][1] = strm_in.read();
-      v_row_temp[i][0] = strm_in.read();
-      v_row_temp[i][1] = strm_in.read();
-    }
-
-    float new_j[2][2];
-    float new_k[2][2];
-    svd::calc_svd_update_on_diag_s_off_diag_vd
-    <VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD>
-    (top_left, bottom_right, 
-    s_temp, u_temp, v_temp,
-    u_row_temp, v_row_temp,
-    new_j, new_k);
-
-    //wb to buffer
-    strm_out.write(s_temp[0][0]);
-    strm_out.write(s_temp[0][1]);
-    strm_out.write(s_temp[1][0]);
-    strm_out.write(s_temp[1][1]);
-    strm_out.write(u_temp[0][0]);
-    strm_out.write(u_temp[0][1]);
-    strm_out.write(u_temp[1][0]);
-    strm_out.write(u_temp[1][1]);
-    strm_out.write(v_temp[0][0]);
-    strm_out.write(v_temp[0][1]);
-    strm_out.write(v_temp[1][0]);
-    strm_out.write(v_temp[1][1]);
-
-    off_row_wb_uv: for (int off_row = 0; off_row < VEC_SIZ; off_row++) {
-      if (off_row == top_left || off_row == bottom_right) continue;
-      strm_out.write(v_row_temp[off_row][0]);
-      strm_out.write(v_row_temp[off_row][1]);
-      strm_out.write(u_row_temp[off_row][0]);
-      strm_out.write(u_row_temp[off_row][1]); 
-    }
-
-    strm_out.write(new_j[0][0]);
-    strm_out.write(new_j[0][1]);
-    strm_out.write(new_j[1][0]);
-    strm_out.write(new_j[1][1]);
-    
-    strm_out.write(new_k[0][0]);
-    strm_out.write(new_k[0][1]);
-    strm_out.write(new_k[1][0]);
-    strm_out.write(new_k[1][1]);
+      svd::calc_svd<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD>(strm_in, strm_out);
     break;
     }
+
     case 2:{
-    float top_left      = strm_in.read();
-    float bottom_right  = strm_in.read();
-
-    float new_j[2][2];
-    float new_k[2][2];
-
-    float s_col_temp[2][VEC_SIZ];
-    for(int i=0;i<VEC_SIZ;i++){
-      s_col_temp[0][i] = strm_in.read();
-      s_col_temp[1][i] = strm_in.read();
-    }
-
-    float s_row_temp[VEC_SIZ][2];
-    for(int i=0;i<VEC_SIZ;i++){
-      s_row_temp[i][0] = strm_in.read();
-      s_row_temp[i][1] = strm_in.read();
-    }
-
-    new_j[0][0] = strm_in.read();
-    new_j[0][1] = strm_in.read();
-    new_j[1][0] = strm_in.read();
-    new_j[1][1] = strm_in.read();
-    
-    new_k[0][0] = strm_in.read();
-    new_k[0][1] = strm_in.read();
-    new_k[1][0] = strm_in.read();
-    new_k[1][1] = strm_in.read();
-
-    svd::update_off_diag_s<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD>
-    (top_left, bottom_right, new_j,new_k, s_col_temp,s_row_temp);
-    
-    //wb
-    off_col_wb: for (int off_col = 0; off_col < VEC_SIZ; off_col++) {
-      if (off_col == top_left || off_col == bottom_right) continue;
-      strm_out.write(s_col_temp[0][off_col]);
-      strm_out.write(s_col_temp[1][off_col]);
-    }
-    
-    
-    off_row_wb_s: for (int off_row = 0; off_row < VEC_SIZ; off_row++) {
-      if (off_row == top_left || off_row == bottom_right) continue;
-      strm_out.write(s_row_temp[off_row][0]);
-      strm_out.write(s_row_temp[off_row][1]);
-    }
+    svd::update_off_diag_r<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD>(strm_in, strm_out);
     break;
     }
+    
+    case 3:{
+    svd::update_off_diag_c<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD>(strm_in, strm_out);
+    break;
+    }
+
     default:
     break;
   }

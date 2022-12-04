@@ -244,7 +244,7 @@
 					<Obj>
 						<type>0</type>
 						<id>7</id>
-						<name>p_Val2_33</name>
+						<name>p_Val2_9</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>309</lineNumber>
@@ -299,7 +299,7 @@
 					<Obj>
 						<type>0</type>
 						<id>8</id>
-						<name>loc_V_10</name>
+						<name>loc_V_2</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>316</lineNumber>
@@ -973,7 +973,7 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>p_Result_16</name>
+						<name>p_Result_8</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>315</lineNumber>
@@ -1037,7 +1037,7 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>p_Result_20</name>
+						<name>p_Result_12</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>334</lineNumber>
@@ -1184,7 +1184,7 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>tmp_2</name>
+						<name>tmp_5</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>144</lineNumber>
@@ -1408,7 +1408,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>p_Val2_36</name>
+						<name>p_Val2_12</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>309</lineNumber>
@@ -1463,7 +1463,7 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>p_Result_21</name>
+						<name>p_Result_13</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>315</lineNumber>
@@ -1563,7 +1563,7 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>tmp_1</name>
+						<name>tmp_3</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>155</lineNumber>
@@ -1829,7 +1829,7 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>tmp_3</name>
+						<name>tmp_4</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>157</lineNumber>
@@ -1969,7 +1969,7 @@
 					<Obj>
 						<type>0</type>
 						<id>48</id>
-						<name>tmp_5</name>
+						<name>tmp_7</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>160</lineNumber>
@@ -2038,7 +2038,7 @@
 					<Obj>
 						<type>0</type>
 						<id>51</id>
-						<name>p_Result_19</name>
+						<name>p_Result_11</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>315</lineNumber>
@@ -2236,7 +2236,7 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>cosThetaAdiv2</name>
+						<name>p_s</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>111</lineNumber>
@@ -2279,7 +2279,7 @@
 					<Obj>
 						<type>0</type>
 						<id>57</id>
-						<name>sinThetaAdiv2</name>
+						<name>p_1</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>111</lineNumber>
@@ -2325,7 +2325,7 @@
 						<name></name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>125</lineNumber>
+						<lineNumber>111</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2340,7 +2340,7 @@
 											<first>./svd.h</first>
 											<second>calc_angle&amp;lt;float, float&amp;gt;</second>
 										</first>
-										<second>125</second>
+										<second>111</second>
 									</item>
 								</second>
 							</item>
@@ -2398,7 +2398,7 @@
 						<name>sinThetaAdiv2_write_assign</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>111</lineNumber>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2413,7 +2413,7 @@
 											<first>./svd.h</first>
 											<second>calc_angle&amp;lt;float, float&amp;gt;</second>
 										</first>
-										<second>111</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -2442,24 +2442,38 @@
 						<type>0</type>
 						<id>62</id>
 						<name>newret</name>
-						<fileName>./svd.h</fileName>
+						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>111</lineNumber>
-						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
+						<lineNumber>760</lineNumber>
+						<contextFuncName>rsqrtf</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
 								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
-									<count>1</count>
+									<count>3</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
 											<first>./svd.h</first>
 											<second>calc_angle&amp;lt;float, float&amp;gt;</second>
 										</first>
-										<second>111</second>
+										<second>157</second>
+									</item>
+									<item>
+										<first>
+											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
+											<second>x_rsqrt</second>
+										</first>
+										<second>158</second>
+									</item>
+									<item>
+										<first>
+											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h</first>
+											<second>rsqrtf</second>
+										</first>
+										<second>760</second>
 									</item>
 								</second>
 							</item>
@@ -2484,24 +2498,38 @@
 						<type>0</type>
 						<id>63</id>
 						<name>newret2</name>
-						<fileName>./svd.h</fileName>
+						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>111</lineNumber>
-						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
+						<lineNumber>760</lineNumber>
+						<contextFuncName>rsqrtf</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
 								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
-									<count>1</count>
+									<count>3</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
 											<first>./svd.h</first>
 											<second>calc_angle&amp;lt;float, float&amp;gt;</second>
 										</first>
-										<second>111</second>
+										<second>157</second>
+									</item>
+									<item>
+										<first>
+											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
+											<second>x_rsqrt</second>
+										</first>
+										<second>158</second>
+									</item>
+									<item>
+										<first>
+											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h</first>
+											<second>rsqrtf</second>
+										</first>
+										<second>760</second>
 									</item>
 								</second>
 							</item>
@@ -2526,24 +2554,38 @@
 						<type>0</type>
 						<id>64</id>
 						<name></name>
-						<fileName>./svd.h</fileName>
+						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
-						<lineNumber>111</lineNumber>
-						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
+						<lineNumber>760</lineNumber>
+						<contextFuncName>rsqrtf</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
 								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
-									<count>1</count>
+									<count>3</count>
 									<item_version>0</item_version>
 									<item>
 										<first>
 											<first>./svd.h</first>
 											<second>calc_angle&amp;lt;float, float&amp;gt;</second>
 										</first>
-										<second>111</second>
+										<second>157</second>
+									</item>
+									<item>
+										<first>
+											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h</first>
+											<second>x_rsqrt</second>
+										</first>
+										<second>158</second>
+									</item>
+									<item>
+										<first>
+											<first>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h</first>
+											<second>rsqrtf</second>
+										</first>
+										<second>760</second>
 									</item>
 								</second>
 							</item>
@@ -3639,73 +3681,73 @@
 			<item class_id_reference="20" object_id="_170">
 				<id>185</id>
 				<edge_type>1</edge_type>
-				<source_obj>56</source_obj>
+				<source_obj>47</source_obj>
 				<sink_obj>60</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_171">
 				<id>186</id>
 				<edge_type>2</edge_type>
-				<source_obj>59</source_obj>
+				<source_obj>50</source_obj>
 				<sink_obj>60</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_172">
 				<id>187</id>
 				<edge_type>1</edge_type>
-				<source_obj>47</source_obj>
+				<source_obj>52</source_obj>
 				<sink_obj>60</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_173">
 				<id>188</id>
 				<edge_type>2</edge_type>
-				<source_obj>50</source_obj>
+				<source_obj>54</source_obj>
 				<sink_obj>60</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_174">
 				<id>189</id>
 				<edge_type>1</edge_type>
-				<source_obj>52</source_obj>
+				<source_obj>56</source_obj>
 				<sink_obj>60</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_175">
 				<id>190</id>
 				<edge_type>2</edge_type>
-				<source_obj>54</source_obj>
+				<source_obj>59</source_obj>
 				<sink_obj>60</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_176">
 				<id>191</id>
 				<edge_type>1</edge_type>
-				<source_obj>57</source_obj>
+				<source_obj>48</source_obj>
 				<sink_obj>61</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_177">
 				<id>192</id>
 				<edge_type>2</edge_type>
-				<source_obj>59</source_obj>
+				<source_obj>50</source_obj>
 				<sink_obj>61</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_178">
 				<id>193</id>
 				<edge_type>1</edge_type>
-				<source_obj>48</source_obj>
+				<source_obj>130</source_obj>
 				<sink_obj>61</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_179">
 				<id>194</id>
 				<edge_type>2</edge_type>
-				<source_obj>50</source_obj>
+				<source_obj>54</source_obj>
 				<sink_obj>61</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_180">
 				<id>195</id>
 				<edge_type>1</edge_type>
-				<source_obj>130</source_obj>
+				<source_obj>57</source_obj>
 				<sink_obj>61</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_181">
 				<id>196</id>
 				<edge_type>2</edge_type>
-				<source_obj>54</source_obj>
+				<source_obj>59</source_obj>
 				<sink_obj>61</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_182">
@@ -3830,11 +3872,11 @@
 				<item>59</item>
 				<item>65</item>
 			</basic_blocks>
-			<mII>-1</mII>
-			<mDepth>-1</mDepth>
+			<mII>1</mII>
+			<mDepth>85</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>87</mMinLatency>
+			<mMinLatency>84</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
@@ -4037,105 +4079,105 @@
 		<item>
 			<first>32</first>
 			<second>
-				<first>43</first>
+				<first>40</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>33</first>
 			<second>
-				<first>43</first>
+				<first>40</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>34</first>
 			<second>
-				<first>43</first>
+				<first>40</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>36</first>
 			<second>
-				<first>43</first>
+				<first>40</first>
 				<second>4</second>
 			</second>
 		</item>
 		<item>
 			<first>37</first>
 			<second>
-				<first>48</first>
+				<first>45</first>
 				<second>15</second>
 			</second>
 		</item>
 		<item>
 			<first>38</first>
 			<second>
-				<first>63</first>
+				<first>60</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>40</first>
 			<second>
-				<first>43</first>
+				<first>40</first>
 				<second>4</second>
 			</second>
 		</item>
 		<item>
 			<first>41</first>
 			<second>
-				<first>48</first>
+				<first>45</first>
 				<second>15</second>
 			</second>
 		</item>
 		<item>
 			<first>42</first>
 			<second>
-				<first>63</first>
+				<first>60</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>44</first>
 			<second>
-				<first>64</first>
+				<first>61</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>45</first>
 			<second>
-				<first>64</first>
+				<first>61</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>46</first>
 			<second>
-				<first>68</first>
+				<first>65</first>
 				<second>4</second>
 			</second>
 		</item>
 		<item>
 			<first>47</first>
 			<second>
-				<first>73</first>
+				<first>70</first>
 				<second>10</second>
 			</second>
 		</item>
 		<item>
 			<first>48</first>
 			<second>
-				<first>84</first>
+				<first>81</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
 			<first>49</first>
 			<second>
-				<first>87</first>
+				<first>84</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -4149,14 +4191,14 @@
 		<item>
 			<first>52</first>
 			<second>
-				<first>0</first>
+				<first>83</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>53</first>
 			<second>
-				<first>0</first>
+				<first>83</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -4170,56 +4212,56 @@
 		<item>
 			<first>56</first>
 			<second>
-				<first>0</first>
+				<first>83</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>57</first>
 			<second>
-				<first>0</first>
+				<first>83</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>58</first>
 			<second>
-				<first>0</first>
+				<first>83</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>60</first>
 			<second>
-				<first>87</first>
+				<first>84</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>61</first>
 			<second>
-				<first>87</first>
+				<first>84</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>62</first>
 			<second>
-				<first>87</first>
+				<first>84</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>63</first>
 			<second>
-				<first>87</first>
+				<first>84</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>64</first>
 			<second>
-				<first>87</first>
+				<first>84</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -4251,55 +4293,79 @@
 		<item>
 			<first>39</first>
 			<second>
-				<first>43</first>
-				<second>63</second>
+				<first>40</first>
+				<second>60</second>
 			</second>
 		</item>
 		<item>
 			<first>43</first>
 			<second>
-				<first>43</first>
-				<second>63</second>
+				<first>40</first>
+				<second>60</second>
 			</second>
 		</item>
 		<item>
 			<first>50</first>
 			<second>
-				<first>64</first>
-				<second>87</second>
+				<first>0</first>
+				<second>84</second>
 			</second>
 		</item>
 		<item>
 			<first>54</first>
 			<second>
 				<first>0</first>
-				<second>0</second>
+				<second>83</second>
 			</second>
 		</item>
 		<item>
 			<first>59</first>
 			<second>
 				<first>0</first>
-				<second>0</second>
+				<second>83</second>
 			</second>
 		</item>
 		<item>
 			<first>65</first>
 			<second>
-				<first>87</first>
-				<second>87</second>
+				<first>0</first>
+				<second>84</second>
 			</second>
 		</item>
 	</bblk_ent_exit>
 	<regions class_id="32" tracking_level="0" version="0">
-		<count>0</count>
+		<count>1</count>
 		<item_version>0</item_version>
+		<item class_id="33" tracking_level="1" version="0" object_id="_199">
+			<region_name>dut_calc_angle&lt;float, float&gt;</region_name>
+			<basic_blocks>
+				<count>9</count>
+				<item_version>0</item_version>
+				<item>16</item>
+				<item>22</item>
+				<item>35</item>
+				<item>39</item>
+				<item>43</item>
+				<item>50</item>
+				<item>54</item>
+				<item>59</item>
+				<item>65</item>
+			</basic_blocks>
+			<nodes>
+				<count>0</count>
+				<item_version>0</item_version>
+			</nodes>
+			<anchor_node>-1</anchor_node>
+			<region_type>8</region_type>
+			<interval>1</interval>
+			<pipe_depth>85</pipe_depth>
+		</item>
 	</regions>
-	<dp_fu_nodes class_id="33" tracking_level="0" version="0">
+	<dp_fu_nodes class_id="34" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_fu_nodes>
-	<dp_fu_nodes_expression class_id="34" tracking_level="0" version="0">
+	<dp_fu_nodes_expression class_id="35" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_fu_nodes_expression>
@@ -4315,7 +4381,7 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</return_ports>
-	<dp_mem_port_nodes class_id="35" tracking_level="0" version="0">
+	<dp_mem_port_nodes class_id="36" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_mem_port_nodes>
@@ -4335,11 +4401,11 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_regname_phi>
-	<dp_port_io_nodes class_id="36" tracking_level="0" version="0">
+	<dp_port_io_nodes class_id="37" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</dp_port_io_nodes>
-	<port2core class_id="37" tracking_level="0" version="0">
+	<port2core class_id="38" tracking_level="0" version="0">
 		<count>0</count>
 		<item_version>0</item_version>
 	</port2core>

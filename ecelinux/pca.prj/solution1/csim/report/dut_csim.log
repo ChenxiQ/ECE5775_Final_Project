@@ -14,5 +14,5 @@ writing files...
 write y
 write tsf
 write mean
-pca                 :      1 calls; 194028.031 msecs total time
+pca                 :      1 calls; 346303.906 msecs total time
 INFO: [SIM 1] CSim done with 0 errors.

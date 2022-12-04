@@ -28,7 +28,19 @@ create_clock -period 10
 ### You can insert your own directives here ###
 
 set_directive_inline -off "vm2x1_base"
-set_directive_allocation -limit 1 -type function "svd_pairs" vm2x1_base
+
+set_directive_pipeline svd_alt/rd_buffer
+set_directive_pipeline svd_alt/svd_rd_diag
+set_directive_pipeline calc_svd/svd_calc_diag
+set_directive_pipeline svd_alt/svd_wb_diag
+set_directive_pipeline svd_alt/svd_rd_off_r
+set_directive_pipeline update_off_diag_r/svd_calc_off_r
+set_directive_pipeline svd_alt/svd_wb_off_r
+set_directive_pipeline svd_alt/svd_rd_off_c
+set_directive_pipeline update_off_diag_c/svd_calc_off_c
+set_directive_pipeline svd_alt/svd_wb_off_c
+set_directive_pipeline svd_alt/wb_buffer
+
 
 
 ############################################

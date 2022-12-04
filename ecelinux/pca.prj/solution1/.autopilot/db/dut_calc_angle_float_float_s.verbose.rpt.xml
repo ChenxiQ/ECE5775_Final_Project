@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_calc_angle_float_float_s'" level="0">
-<item name = "Date">Tue Nov 15 03:39:08 2022
+<item name = "Date">Sun Dec  4 03:43:12 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 87, 1, 87, none</column>
+<column name="">84, 84, 1, 1, function</column>
 </table>
 </item>
 <item name = "Detail">
@@ -47,24 +47,32 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 124</column>
+<column name="Expression">-, -, 0, 127</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">-, 14, 1354, 2121</column>
+<column name="Instance">-, 39, 3342, 5595</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 624</column>
-<column name="Register">-, -, 431, -</column>
+<column name="Multiplexer">-, -, -, 290</column>
+<column name="Register">-, -, 454, 143</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">0, 6, 1, 5</specialColumn>
+<specialColumn name="Utilization (%)">0, 17, 3, 11</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="dut_faddfsub_32ns_32ns_32_5_full_dsp_U21">dut_faddfsub_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
-<column name="dut_fdiv_32ns_32ns_32_16_U23">dut_fdiv_32ns_32ns_32_16, 0, 0, 761, 994</column>
-<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U22">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
-<column name="dut_frsqrt_32ns_32ns_32_11_full_dsp_U24">dut_frsqrt_32ns_32ns_32_11_full_dsp, 0, 9, 245, 416</column>
+<column name="dut_fadd_32ns_32ns_32_5_full_dsp_U5">dut_fadd_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
+<column name="dut_fadd_32ns_32ns_32_5_full_dsp_U7">dut_fadd_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
+<column name="dut_faddfsub_32ns_32ns_32_5_full_dsp_U6">dut_faddfsub_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
+<column name="dut_fdiv_32ns_32ns_32_16_U13">dut_fdiv_32ns_32ns_32_16, 0, 0, 761, 994</column>
+<column name="dut_fdiv_32ns_32ns_32_16_U14">dut_fdiv_32ns_32ns_32_16, 0, 0, 761, 994</column>
+<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U8">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U9">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U10">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U11">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U12">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="dut_frsqrt_32ns_32ns_32_11_full_dsp_U15">dut_frsqrt_32ns_32ns_32_11_full_dsp, 0, 9, 245, 416</column>
+<column name="dut_frsqrt_32ns_32ns_32_11_full_dsp_U16">dut_frsqrt_32ns_32ns_32_11_full_dsp, 0, 9, 245, 416</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -81,53 +89,68 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="r_V_1_fu_203_p2">+, 0, 0, 9, 9, 5</column>
-<column name="r_V_fu_175_p2">+, 0, 0, 9, 9, 5</column>
-<column name="notrhs_i1_fu_215_p2">icmp, 0, 0, 3, 8, 1</column>
-<column name="notrhs_i_fu_191_p2">icmp, 0, 0, 3, 8, 1</column>
-<column name="ult3_fu_209_p2">icmp, 0, 0, 3, 9, 9</column>
-<column name="ult_fu_185_p2">icmp, 0, 0, 3, 9, 9</column>
-<column name="demorgan5_fu_221_p2">or, 0, 0, 1, 1, 1</column>
-<column name="demorgan_fu_197_p2">or, 0, 0, 1, 1, 1</column>
-<column name="cosThetaAdiv2_fu_243_p3">select, 0, 0, 30, 1, 1</column>
-<column name="sinThetaAdiv2_fu_251_p3">select, 0, 0, 30, 1, 30</column>
-<column name="storemerge1_fu_235_p3">select, 0, 0, 32, 1, 32</column>
+<column name="r_V_1_fu_222_p2">+, 0, 0, 9, 9, 5</column>
+<column name="r_V_fu_194_p2">+, 0, 0, 9, 9, 5</column>
+<column name="ap_sig_608">and, 0, 0, 1, 1, 1</column>
+<column name="ap_sig_694">and, 0, 0, 1, 1, 1</column>
+<column name="ap_sig_744">and, 0, 0, 1, 1, 1</column>
+<column name="notrhs_i1_fu_234_p2">icmp, 0, 0, 3, 8, 1</column>
+<column name="notrhs_i_fu_210_p2">icmp, 0, 0, 3, 8, 1</column>
+<column name="ult3_fu_228_p2">icmp, 0, 0, 3, 9, 9</column>
+<column name="ult_fu_204_p2">icmp, 0, 0, 3, 9, 9</column>
+<column name="demorgan5_fu_240_p2">or, 0, 0, 1, 1, 1</column>
+<column name="demorgan_fu_216_p2">or, 0, 0, 1, 1, 1</column>
+<column name="p_1_fu_291_p3">select, 0, 0, 30, 1, 30</column>
+<column name="p_s_fu_284_p3">select, 0, 0, 30, 1, 1</column>
+<column name="storemerge1_fu_277_p3">select, 0, 0, 32, 1, 32</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">238, 109, 1, 109</column>
-<column name="ap_return_0">32, 2, 32, 64</column>
-<column name="ap_return_1">32, 2, 32, 64</column>
+<column name="ap_reg_phiprechg_cosThetaAdiv2_write_assign_reg_58pp0_it84">32, 3, 32, 96</column>
+<column name="ap_reg_phiprechg_sinThetaAdiv2_write_assign_reg_69pp0_it84">32, 3, 32, 96</column>
+<column name="ap_reg_phiprechg_tanThetaAdiv_reg_48pp0_it61">32, 2, 32, 64</column>
 <column name="cosThetaAdiv2_write_assign_phi_fu_61_p6">32, 2, 32, 64</column>
-<column name="cosThetaAdiv2_write_assign_reg_58">32, 3, 32, 96</column>
-<column name="grp_fu_82_opcode">2, 3, 2, 6</column>
-<column name="grp_fu_82_p0">32, 3, 32, 96</column>
-<column name="grp_fu_82_p1">32, 3, 32, 96</column>
-<column name="grp_fu_88_p0">32, 6, 32, 192</column>
-<column name="grp_fu_88_p1">32, 5, 32, 160</column>
-<column name="grp_fu_96_p0">32, 4, 32, 128</column>
-<column name="grp_fu_96_p1">32, 4, 32, 128</column>
+<column name="grp_fu_128_p0">32, 3, 32, 96</column>
+<column name="grp_fu_128_p1">32, 3, 32, 96</column>
+<column name="grp_fu_87_opcode">2, 3, 2, 6</column>
+<column name="grp_fu_87_p0">32, 3, 32, 96</column>
+<column name="grp_fu_87_p1">32, 3, 32, 96</column>
 <column name="sinThetaAdiv2_write_assign_phi_fu_73_p6">32, 2, 32, 64</column>
-<column name="sinThetaAdiv2_write_assign_reg_69">32, 3, 32, 96</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">108, 0, 108, 0</column>
-<column name="ap_return_0_preg">32, 0, 32, 0</column>
-<column name="ap_return_1_preg">32, 0, 32, 0</column>
-<column name="cosThetaAdiv2_write_assign_reg_58">32, 0, 32, 0</column>
-<column name="demorgan5_reg_309">1, 0, 1, 0</column>
-<column name="demorgan_reg_305">1, 0, 1, 0</column>
-<column name="p_Result_16_reg_313">1, 0, 1, 0</column>
-<column name="reg_114">32, 0, 32, 0</column>
-<column name="reg_121">32, 0, 32, 0</column>
-<column name="reg_128">32, 0, 32, 0</column>
-<column name="reg_135">32, 0, 32, 0</column>
-<column name="sinThetaA_int_reg_338">32, 0, 32, 0</column>
-<column name="sinThetaAdiv2_write_assign_reg_69">32, 0, 32, 0</column>
+<column name="ap_reg_phiprechg_cosThetaAdiv2_write_assign_reg_58pp0_it84">32, 0, 32, 0</column>
+<column name="ap_reg_phiprechg_sinThetaAdiv2_write_assign_reg_69pp0_it84">32, 0, 32, 0</column>
+<column name="ap_reg_phiprechg_tanThetaAdiv_reg_48pp0_it61">32, 0, 32, 0</column>
+<column name="cosThetaA_int_reg_371">32, 0, 32, 0</column>
+<column name="cosThetaAdiv2_int_reg_399">32, 0, 32, 0</column>
+<column name="demorgan5_reg_324">1, 0, 1, 0</column>
+<column name="demorgan_reg_320">1, 0, 1, 0</column>
+<column name="p_Result_11_reg_333">1, 0, 1, 0</column>
+<column name="p_Result_13_reg_379">1, 0, 1, 0</column>
+<column name="p_Result_8_reg_328">1, 0, 1, 0</column>
+<column name="p_Result_s_reg_338">1, 0, 1, 0</column>
+<column name="reg_149">32, 0, 32, 0</column>
+<column name="sinThetaA_int_reg_383">32, 0, 32, 0</column>
+<column name="tanThetaA_reg_344">32, 0, 32, 0</column>
 <column name="tanThetaAdiv_reg_48">32, 0, 32, 0</column>
+<column name="tmp_4_reg_389">32, 0, 32, 0</column>
+<column name="tmp_5_reg_351">32, 0, 32, 0</column>
+<column name="tmp_i_i_reg_361">32, 0, 32, 0</column>
+<column name="x_assign_2_reg_394">32, 0, 32, 0</column>
+<column name="x_assign_reg_356">32, 0, 32, 0</column>
+<column name="cosThetaAdiv2_int_reg_399">0, 32, 32, 0</column>
+<column name="demorgan5_reg_324">0, 3, 1, 0</column>
+<column name="demorgan_reg_320">0, 3, 1, 0</column>
+<column name="p_Result_11_reg_333">0, 3, 1, 0</column>
+<column name="p_Result_13_reg_379">0, 1, 1, 0</column>
+<column name="p_Result_8_reg_328">0, 2, 1, 0</column>
+<column name="p_Result_s_reg_338">0, 3, 1, 0</column>
+<column name="sinThetaA_int_reg_383">0, 32, 32, 0</column>
+<column name="tanThetaA_reg_344">0, 32, 32, 0</column>
+<column name="tanThetaAdiv_reg_48">0, 32, 32, 0</column>
 </table>
 </item>
 </section>
@@ -139,12 +162,9 @@
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
 <column name="ap_clk">in, 1, ap_ctrl_hs, dut_calc_angle&lt;float, float&gt;, return value</column>
 <column name="ap_rst">in, 1, ap_ctrl_hs, dut_calc_angle&lt;float, float&gt;, return value</column>
-<column name="ap_start">in, 1, ap_ctrl_hs, dut_calc_angle&lt;float, float&gt;, return value</column>
-<column name="ap_done">out, 1, ap_ctrl_hs, dut_calc_angle&lt;float, float&gt;, return value</column>
-<column name="ap_idle">out, 1, ap_ctrl_hs, dut_calc_angle&lt;float, float&gt;, return value</column>
-<column name="ap_ready">out, 1, ap_ctrl_hs, dut_calc_angle&lt;float, float&gt;, return value</column>
 <column name="ap_return_0">out, 32, ap_ctrl_hs, dut_calc_angle&lt;float, float&gt;, return value</column>
 <column name="ap_return_1">out, 32, ap_ctrl_hs, dut_calc_angle&lt;float, float&gt;, return value</column>
+<column name="ap_ce">in, 1, ap_ctrl_hs, dut_calc_angle&lt;float, float&gt;, return value</column>
 <column name="A_M_real">in, 32, ap_none, A_M_real, scalar</column>
 <column name="A_M_imag">in, 32, ap_none, A_M_imag, scalar</column>
 </table>

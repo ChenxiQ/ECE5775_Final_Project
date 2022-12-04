@@ -1,0 +1,247 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'dut_calc_svd'" level="0">
+<item name = "Date">Sun Dec  4 03:43:13 2022
+</item>
+<item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
+<item name = "Project">pca.prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.38, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">7975, 7975, 7975, 7975, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_dut_calc_angle_float_float_s_fu_81">dut_calc_angle_float_float_s, 84, 84, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- svd_calc_diag">7973, 7973, 154, 20, 1, 392, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 523</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, 49, 4492, 7577</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 875</column>
+<column name="Register">-, -, 2129, 385</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 22, 6, 17</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_dut_calc_angle_float_float_s_fu_81">dut_calc_angle_float_float_s, 0, 39, 3796, 6155</column>
+<column name="dut_faddfsub_32ns_32ns_32_5_full_dsp_U19">dut_faddfsub_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
+<column name="dut_faddfsub_32ns_32ns_32_5_full_dsp_U20">dut_faddfsub_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
+<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U21">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U22">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="proc_1_fu_205_p2">+, 0, 0, 9, 9, 1</column>
+<column name="ap_sig_1100">and, 0, 0, 1, 1, 1</column>
+<column name="ap_sig_318">and, 0, 0, 1, 1, 1</column>
+<column name="ap_sig_326">and, 0, 0, 1, 1, 1</column>
+<column name="ap_sig_329">and, 0, 0, 1, 1, 1</column>
+<column name="exitcond_fu_199_p2">icmp, 0, 0, 3, 9, 8</column>
+<column name="vw_int_3_fu_311_p3">select, 0, 0, 32, 1, 32</column>
+<column name="vx_int_fu_319_p3">select, 0, 0, 32, 1, 32</column>
+<column name="vy_int_2_fu_356_p3">select, 0, 0, 32, 1, 32</column>
+<column name="vz_int_fu_362_p3">select, 0, 0, 32, 1, 32</column>
+<column name="w_out_3_fu_302_p3">select, 0, 0, 32, 1, 32</column>
+<column name="z_out_3_fu_348_p3">select, 0, 0, 32, 1, 32</column>
+<column name="tmp_4_neg_fu_214_p2">xor, 0, 0, 45, 32, 33</column>
+<column name="tmp_neg_fu_228_p2">xor, 0, 0, 45, 32, 33</column>
+<column name="uy_int_neg_fu_256_p2">xor, 0, 0, 45, 32, 33</column>
+<column name="vw_int_neg_fu_292_p2">xor, 0, 0, 45, 32, 33</column>
+<column name="vy_int_neg_fu_242_p2">xor, 0, 0, 45, 32, 33</column>
+<column name="w_out_1_neg_fu_279_p2">xor, 0, 0, 45, 32, 33</column>
+<column name="z_out_1_neg_fu_338_p2">xor, 0, 0, 45, 32, 33</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">18, 23, 1, 23</column>
+<column name="ap_reg_ppiten_pp0_it7">1, 2, 1, 2</column>
+<column name="grp_dut_calc_angle_float_float_s_fu_81_A_M_imag">32, 3, 32, 96</column>
+<column name="grp_dut_calc_angle_float_float_s_fu_81_A_M_real">32, 3, 32, 96</column>
+<column name="grp_fu_87_opcode">2, 3, 2, 6</column>
+<column name="grp_fu_87_p0">64, 11, 32, 352</column>
+<column name="grp_fu_87_p1">96, 13, 32, 416</column>
+<column name="grp_fu_91_opcode">2, 3, 2, 6</column>
+<column name="grp_fu_91_p0">32, 6, 32, 192</column>
+<column name="grp_fu_91_p1">32, 7, 32, 224</column>
+<column name="grp_fu_95_p0">96, 12, 32, 384</column>
+<column name="grp_fu_95_p1">96, 13, 32, 416</column>
+<column name="grp_fu_99_p0">96, 13, 32, 416</column>
+<column name="grp_fu_99_p1">96, 14, 32, 448</column>
+<column name="proc_phi_fu_74_p4">9, 2, 9, 18</column>
+<column name="proc_reg_70">9, 2, 9, 18</column>
+<column name="strm_in_V_blk_n">1, 2, 1, 2</column>
+<column name="strm_out_V_blk_n">1, 2, 1, 2</column>
+<column name="strm_out_V_din">160, 19, 32, 608</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">22, 0, 22, 0</column>
+<column name="ap_reg_ppiten_pp0_it0">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it1">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it2">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it3">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it4">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it5">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it6">1, 0, 1, 0</column>
+<column name="ap_reg_ppiten_pp0_it7">1, 0, 1, 0</column>
+<column name="ap_reg_ppstg_tmp_36_reg_505_pp0_iter6">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_tmp_37_reg_513_pp0_iter6">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_tmp_51_reg_540_pp0_iter6">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_tmp_52_reg_545_pp0_iter6">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_tmp_53_reg_550_pp0_iter7">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_tmp_54_reg_555_pp0_iter7">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_uy_int_reg_528_pp0_iter6">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_vy_int_1_reg_497_pp0_iter6">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_vy_int_reg_521_pp0_iter6">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_vz_int_1_reg_488_pp0_iter6">32, 0, 32, 0</column>
+<column name="cosA_half_reg_452">32, 0, 32, 0</column>
+<column name="cosB_half_reg_466">32, 0, 32, 0</column>
+<column name="exitcond_reg_369">1, 0, 1, 0</column>
+<column name="proc_1_reg_373">9, 0, 9, 0</column>
+<column name="proc_reg_70">9, 0, 9, 0</column>
+<column name="reg_111">32, 0, 32, 0</column>
+<column name="reg_117">32, 0, 32, 0</column>
+<column name="reg_123">32, 0, 32, 0</column>
+<column name="reg_130">32, 0, 32, 0</column>
+<column name="reg_135">32, 0, 32, 0</column>
+<column name="reg_141">32, 0, 32, 0</column>
+<column name="reg_147">32, 0, 32, 0</column>
+<column name="reg_153">32, 0, 32, 0</column>
+<column name="reg_159">32, 0, 32, 0</column>
+<column name="reg_165">32, 0, 32, 0</column>
+<column name="reg_170">32, 0, 32, 0</column>
+<column name="reg_176">32, 0, 32, 0</column>
+<column name="reg_182">32, 0, 32, 0</column>
+<column name="reg_188">32, 0, 32, 0</column>
+<column name="reg_193">32, 0, 32, 0</column>
+<column name="sinA_half_reg_459">32, 0, 32, 0</column>
+<column name="sinB_half_reg_472">32, 0, 32, 0</column>
+<column name="tmp_36_reg_505">32, 0, 32, 0</column>
+<column name="tmp_37_reg_513">32, 0, 32, 0</column>
+<column name="tmp_3_i2_i1_reg_595">32, 0, 32, 0</column>
+<column name="tmp_3_i5_i1_reg_605">32, 0, 32, 0</column>
+<column name="tmp_3_i8_i1_reg_615">32, 0, 32, 0</column>
+<column name="tmp_51_reg_540">32, 0, 32, 0</column>
+<column name="tmp_52_reg_545">32, 0, 32, 0</column>
+<column name="tmp_53_reg_550">32, 0, 32, 0</column>
+<column name="tmp_54_reg_555">32, 0, 32, 0</column>
+<column name="tmp_55_reg_590">32, 0, 32, 0</column>
+<column name="tmp_56_reg_620">32, 0, 32, 0</column>
+<column name="tmp_59_reg_378">32, 0, 32, 0</column>
+<column name="tmp_60_reg_385">32, 0, 32, 0</column>
+<column name="tmp_61_reg_392">32, 0, 32, 0</column>
+<column name="tmp_62_reg_399">32, 0, 32, 0</column>
+<column name="tmp_63_reg_416">32, 0, 32, 0</column>
+<column name="tmp_64_reg_421">32, 0, 32, 0</column>
+<column name="tmp_65_reg_426">32, 0, 32, 0</column>
+<column name="tmp_66_reg_431">32, 0, 32, 0</column>
+<column name="tmp_67_reg_437">32, 0, 32, 0</column>
+<column name="tmp_68_reg_442">32, 0, 32, 0</column>
+<column name="tmp_69_reg_447">32, 0, 32, 0</column>
+<column name="tmp_i4_i1_reg_600">32, 0, 32, 0</column>
+<column name="tmp_i7_i1_reg_610">32, 0, 32, 0</column>
+<column name="tmp_reg_411">32, 0, 32, 0</column>
+<column name="u1_1_reg_406">32, 0, 32, 0</column>
+<column name="uy_int_reg_528">32, 0, 32, 0</column>
+<column name="vw_int_3_reg_560">32, 0, 32, 0</column>
+<column name="vx_int_reg_566">32, 0, 32, 0</column>
+<column name="vy_int_1_reg_497">32, 0, 32, 0</column>
+<column name="vy_int_2_reg_577">32, 0, 32, 0</column>
+<column name="vy_int_reg_521">32, 0, 32, 0</column>
+<column name="vz_int_1_reg_488">32, 0, 32, 0</column>
+<column name="vz_int_reg_584">32, 0, 32, 0</column>
+<column name="z_out2_reg_535">32, 0, 32, 0</column>
+<column name="z_out_3_reg_572">32, 0, 32, 0</column>
+<column name="exitcond_reg_369">0, 1, 1, 0</column>
+<column name="tmp_59_reg_378">0, 32, 32, 0</column>
+<column name="tmp_60_reg_385">0, 32, 32, 0</column>
+<column name="tmp_61_reg_392">0, 32, 32, 0</column>
+<column name="tmp_62_reg_399">0, 32, 32, 0</column>
+<column name="tmp_63_reg_416">0, 32, 32, 0</column>
+<column name="tmp_64_reg_421">0, 32, 32, 0</column>
+<column name="tmp_65_reg_426">0, 32, 32, 0</column>
+<column name="tmp_66_reg_431">0, 32, 32, 0</column>
+<column name="tmp_67_reg_437">0, 32, 32, 0</column>
+<column name="tmp_68_reg_442">0, 32, 32, 0</column>
+<column name="tmp_69_reg_447">0, 32, 32, 0</column>
+<column name="tmp_reg_411">0, 32, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, dut_calc_svd, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, dut_calc_svd, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, dut_calc_svd, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, dut_calc_svd, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, dut_calc_svd, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, dut_calc_svd, return value</column>
+<column name="strm_in_V_dout">in, 32, ap_fifo, strm_in_V, pointer</column>
+<column name="strm_in_V_empty_n">in, 1, ap_fifo, strm_in_V, pointer</column>
+<column name="strm_in_V_read">out, 1, ap_fifo, strm_in_V, pointer</column>
+<column name="strm_out_V_din">out, 32, ap_fifo, strm_out_V, pointer</column>
+<column name="strm_out_V_full_n">in, 1, ap_fifo, strm_out_V, pointer</column>
+<column name="strm_out_V_write">out, 1, ap_fifo, strm_out_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

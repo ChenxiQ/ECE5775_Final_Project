@@ -50,123 +50,66 @@ set NewPortList {[
  	{ "name": "strm_out_V_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "strm_out_V", "role": "write" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "44", "51", "52", "53"], "CDFG" : "dut", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "19", "22", "23"], "CDFG" : "dut", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+		"Port" : [
+		{"Name" : "strm_in_V", "Type" : "Fifo", "Direction" : "I", "BlockSignal" : [
+			{"Name" : "strm_in_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : [
+			{"SubInst" : "grp_dut_calc_svd_fu_112", "Port" : "strm_in_V"}, 
+			{"SubInst" : "grp_dut_update_off_diag_r_fu_120", "Port" : "strm_in_V"}]}, 
+		{"Name" : "strm_out_V", "Type" : "Fifo", "Direction" : "O", "BlockSignal" : [
+			{"Name" : "strm_out_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : [
+			{"SubInst" : "grp_dut_calc_svd_fu_112", "Port" : "strm_out_V"}, 
+			{"SubInst" : "grp_dut_update_off_diag_r_fu_120", "Port" : "strm_out_V"}]}],
+		"WaitState" : [
+		{"State" : "ap_ST_st22_fsm_8", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_calc_svd_fu_112"},
+		{"State" : "ap_ST_st22_fsm_8", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_update_off_diag_r_fu_120"}],
+		"SubBlockPort" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112", "Parent" : "0", "Child" : ["2", "15", "16", "17", "18"], "CDFG" : "dut_calc_svd", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
 		{"Name" : "strm_in_V", "Type" : "Fifo", "Direction" : "I", "BlockSignal" : [
 			{"Name" : "strm_in_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}, 
 		{"Name" : "strm_out_V", "Type" : "Fifo", "Direction" : "O", "BlockSignal" : [
 			{"Name" : "strm_out_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}],
-		"WaitState" : [
-		{"State" : "ap_ST_st52_fsm_51", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_calc_svd_update_on_diag_s_off_s_fu_360"},
-		{"State" : "ap_ST_st15_fsm_14", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_update_off_diag_s_fu_382"}],
+		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.u_row_temp_0_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.u_row_temp_1_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.v_row_temp_0_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.v_row_temp_1_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.s_col_temp_0_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.s_col_temp_1_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.s_row_temp_0_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.s_row_temp_1_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360", "Parent" : "0", "Child" : ["10", "15", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43"], "CDFG" : "dut_calc_svd_update_on_diag_s_off_s", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
-		"Port" : [
-		{"Name" : "top_left", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "bottom_right", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "s_temp_0_0_read", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "s_temp_0_1_read", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "s_temp_1_0_read", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "s_temp_1_1_read", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read13", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read14", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read15", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read16", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read17", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read18", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read19", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "u_row_temp_0", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "u_row_temp_1", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "v_row_temp_0", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "v_row_temp_1", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}],
-		"WaitState" : [
-		{"State" : "ap_ST_st7_fsm_6", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_calc_angle_float_float_s_fu_209"},
-		{"State" : "ap_ST_st7_fsm_6", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_calc_angle_float_float_s_fu_215"}],
-		"SubBlockPort" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.grp_dut_calc_angle_float_float_s_fu_209", "Parent" : "9", "Child" : ["11", "12", "13", "14"], "CDFG" : "dut_calc_angle_float_float_s", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81", "Parent" : "1", "Child" : ["3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"], "CDFG" : "dut_calc_angle_float_float_s", "VariableLatency" : "0", "AlignedPipeline" : "1", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "0",
 		"Port" : [
 		{"Name" : "A_M_real", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
 		{"Name" : "A_M_imag", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
 		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.grp_dut_calc_angle_float_float_s_fu_209.dut_faddfsub_32ns_32ns_32_5_full_dsp_U21", "Parent" : "10", "Child" : []},
-	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.grp_dut_calc_angle_float_float_s_fu_209.dut_fmul_32ns_32ns_32_4_max_dsp_U22", "Parent" : "10", "Child" : []},
-	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.grp_dut_calc_angle_float_float_s_fu_209.dut_fdiv_32ns_32ns_32_16_U23", "Parent" : "10", "Child" : []},
-	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.grp_dut_calc_angle_float_float_s_fu_209.dut_frsqrt_32ns_32ns_32_11_full_dsp_U24", "Parent" : "10", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.grp_dut_calc_angle_float_float_s_fu_215", "Parent" : "9", "Child" : ["16", "17", "18", "19"], "CDFG" : "dut_calc_angle_float_float_s", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_fadd_32ns_32ns_32_5_full_dsp_U5", "Parent" : "2", "Child" : []},
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_faddfsub_32ns_32ns_32_5_full_dsp_U6", "Parent" : "2", "Child" : []},
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_fadd_32ns_32ns_32_5_full_dsp_U7", "Parent" : "2", "Child" : []},
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_fmul_32ns_32ns_32_4_max_dsp_U8", "Parent" : "2", "Child" : []},
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_fmul_32ns_32ns_32_4_max_dsp_U9", "Parent" : "2", "Child" : []},
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_fmul_32ns_32ns_32_4_max_dsp_U10", "Parent" : "2", "Child" : []},
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_fmul_32ns_32ns_32_4_max_dsp_U11", "Parent" : "2", "Child" : []},
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_fmul_32ns_32ns_32_4_max_dsp_U12", "Parent" : "2", "Child" : []},
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_fdiv_32ns_32ns_32_16_U13", "Parent" : "2", "Child" : []},
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_fdiv_32ns_32ns_32_16_U14", "Parent" : "2", "Child" : []},
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_frsqrt_32ns_32ns_32_11_full_dsp_U15", "Parent" : "2", "Child" : []},
+	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.grp_dut_calc_angle_float_float_s_fu_81.dut_frsqrt_32ns_32ns_32_11_full_dsp_U16", "Parent" : "2", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.dut_faddfsub_32ns_32ns_32_5_full_dsp_U19", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.dut_faddfsub_32ns_32ns_32_5_full_dsp_U20", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.dut_fmul_32ns_32ns_32_4_max_dsp_U21", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_112.dut_fmul_32ns_32ns_32_4_max_dsp_U22", "Parent" : "1", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_r_fu_120", "Parent" : "0", "Child" : ["20", "21"], "CDFG" : "dut_update_off_diag_r", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
-		{"Name" : "A_M_real", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "A_M_imag", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
+		{"Name" : "strm_in_V", "Type" : "Fifo", "Direction" : "I", "BlockSignal" : [
+			{"Name" : "strm_in_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}, 
+		{"Name" : "strm_out_V", "Type" : "Fifo", "Direction" : "O", "BlockSignal" : [
+			{"Name" : "strm_out_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}],
 		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.grp_dut_calc_angle_float_float_s_fu_215.dut_faddfsub_32ns_32ns_32_5_full_dsp_U21", "Parent" : "15", "Child" : []},
-	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.grp_dut_calc_angle_float_float_s_fu_215.dut_fmul_32ns_32ns_32_4_max_dsp_U22", "Parent" : "15", "Child" : []},
-	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.grp_dut_calc_angle_float_float_s_fu_215.dut_fdiv_32ns_32ns_32_16_U23", "Parent" : "15", "Child" : []},
-	{"Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.grp_dut_calc_angle_float_float_s_fu_215.dut_frsqrt_32ns_32ns_32_11_full_dsp_U24", "Parent" : "15", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_faddfsub_32ns_32ns_32_5_full_dsp_U27", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fadd_32ns_32ns_32_5_full_dsp_U28", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fadd_32ns_32ns_32_5_full_dsp_U29", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_faddfsub_32ns_32ns_32_5_full_dsp_U30", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fadd_32ns_32ns_32_5_full_dsp_U31", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fadd_32ns_32ns_32_5_full_dsp_U32", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fadd_32ns_32ns_32_5_full_dsp_U33", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fadd_32ns_32ns_32_5_full_dsp_U34", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U35", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U36", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U37", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U38", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U39", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U40", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U41", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U42", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U43", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U44", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U45", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U46", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U47", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U48", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U49", "Parent" : "9", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_update_on_diag_s_off_s_fu_360.dut_fmul_32ns_32ns_32_4_max_dsp_U50", "Parent" : "9", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_s_fu_382", "Parent" : "0", "Child" : ["45", "46", "47", "48", "49", "50"], "CDFG" : "dut_update_off_diag_s", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
-		"Port" : [
-		{"Name" : "top_left", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "bottom_right", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read1", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read2", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read3", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read4", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read5", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read6", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "p_read7", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "s_col_temp_0", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "s_col_temp_1", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "s_row_temp_0", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "s_row_temp_1", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}],
-		"WaitState" : [],
-		"SubBlockPort" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_s_fu_382.dut_fadd_32ns_32ns_32_5_full_dsp_U1", "Parent" : "44", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_s_fu_382.dut_fadd_32ns_32ns_32_5_full_dsp_U2", "Parent" : "44", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_s_fu_382.dut_fmul_32ns_32ns_32_4_max_dsp_U3", "Parent" : "44", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_s_fu_382.dut_fmul_32ns_32ns_32_4_max_dsp_U4", "Parent" : "44", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_s_fu_382.dut_fmul_32ns_32ns_32_4_max_dsp_U5", "Parent" : "44", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_s_fu_382.dut_fmul_32ns_32ns_32_4_max_dsp_U6", "Parent" : "44", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_sitofp_32ns_32_6_U69", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fcmp_32ns_32ns_1_1_U70", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fcmp_32ns_32ns_1_1_U71", "Parent" : "0", "Child" : []}]}
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_r_fu_120.dut_fadd_32ns_32ns_32_5_full_dsp_U1", "Parent" : "19", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_r_fu_120.dut_fmul_32ns_32ns_32_4_max_dsp_U2", "Parent" : "19", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fadd_32ns_32ns_32_5_full_dsp_U25", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fmul_32ns_32ns_32_4_max_dsp_U26", "Parent" : "0", "Child" : []}]}
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "2", "Max" : "34513"}
-	, {"Name" : "Interval", "Min" : "3", "Max" : "34514"}
+	{"Name" : "Latency", "Min" : "2", "Max" : "4291635"}
+	, {"Name" : "Interval", "Min" : "3", "Max" : "4291636"}
 ]}
 
 set Spec2ImplPortList { 
@@ -179,8 +122,8 @@ set busDeadlockParameterList {
 
 # RTL port scheduling information:
 set fifoSchedulingInfoList { 
-	strm_in_V { fifo_read 6297 has_conditional }
-	strm_out_V { fifo_write 6292 has_conditional }
+	strm_in_V { fifo_read 1839267 has_conditional }
+	strm_out_V { fifo_write 613090 has_conditional }
 }
 
 # RTL bus port read request latency information:

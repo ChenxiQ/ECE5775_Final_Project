@@ -71440,19 +71440,7 @@ namespace svd {
   int RowsA,
   int ColsA,
   class SVDTraits>
-  void calc_svd_update_on_diag_s_off_diag_vd( int top_left, int bottom_right,
-                                              float s_temp[2][2],
-                                              float u_temp[2][2],
-                                              float v_temp[2][2],
-                                              float u_row_temp[RowsA][2],
-                                              float v_row_temp[RowsA][2],
-                                              float new_j[2][2],
-                                              float new_k[2][2]){
-#pragma empty_line
-    // Internal memories for partial results
-    typename SVDTraits::SIntType s_in[RowsA][ColsA];
-    typename SVDTraits::UIntType u_in[RowsA][ColsA];
-    typename SVDTraits::VIntType v_in[RowsA][ColsA];
+  void calc_svd(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out){
 #pragma empty_line
     // Current S,U,V values being worked on
     typename SVDTraits::SIntType w_in, x_in, y_in, z_in;
@@ -71466,119 +71454,180 @@ namespace svd {
     typename SVDTraits::CSIntType uw_new, ux_new, uy_new, uz_new;
     typename SVDTraits::CSIntType vw_new, vx_new, vy_new, vz_new;
 #pragma empty_line
-    //calc
-    w_in =s_temp[0][0];
-    x_in =s_temp[0][1];
-    y_in =s_temp[1][0];
-    z_in =s_temp[1][1];
+    const int is_odd = ColsA % 2 == 0 ? 0 : 1;
+    const int n_proc = (RowsA+is_odd)/2;
 #pragma empty_line
-    svd2x2(w_in, x_in, y_in, z_in, uw_new, ux_new, uy_new, uz_new, vw_new, vx_new, vy_new, vz_new, w_out, x_out, y_out, z_out);
+    //calc svd, update col
+    svd_calc_diag:for (int proc = 0; proc < n_proc - is_odd; proc++){
+      // Fetch w,x,y,z values
+      w_in = strm_in.read();
+      x_in = strm_in.read();
+      y_in = strm_in.read();
+      z_in = strm_in.read();
 #pragma empty_line
-    s_temp[0][0] = w_out;
-    s_temp[0][1] = x_out;
-    s_temp[1][0] = y_out;
-    s_temp[1][1] = z_out;
+      // Diagonal
+      svd2x2(w_in, x_in, y_in, z_in, uw_new, ux_new, uy_new, uz_new, vw_new, vx_new, vy_new, vz_new, w_out, x_out, y_out, z_out);
 #pragma empty_line
-    new_j[0][0] = uw_new;
-    new_j[0][1] = ux_new;
-    new_j[1][0] = uy_new;
-    new_j[1][1] = uz_new;
+      // Update S on diagonal
+      strm_out.write(w_out);
+      strm_out.write(x_out);
+      strm_out.write(y_out);
+      strm_out.write(z_out);
 #pragma empty_line
-    new_k[0][0] = vw_new;
-    new_k[0][1] = vx_new;
-    new_k[1][0] = vy_new;
-    new_k[1][1] = vz_new;
+      //log J,k
+      strm_out.write(uw_new);
+      strm_out.write(ux_new);
+      strm_out.write(uy_new);
+      strm_out.write(uz_new);
 #pragma empty_line
-    uw_in = u_temp[0][0];
-    ux_in = u_temp[0][1];
-    uy_in = u_temp[1][0];
-    uz_in = u_temp[1][1];
+      strm_out.write(vw_new);
+      strm_out.write(vx_new);
+      strm_out.write(vy_new);
+      strm_out.write(vz_new);
 #pragma empty_line
-    vw_in = v_temp[0][0];
-    vx_in = v_temp[0][1];
-    vy_in = v_temp[1][0];
-    vz_in = v_temp[1][1];
+      // Update U & V
+      // o On the diagonal use a 2x2 as per the sigma
+      // o Need to create the indentity in U & V at the start
 #pragma empty_line
-    mm2x2(uw_in, ux_in, uy_in, uz_in, uw_new, ux_new, uy_new, uz_new, uw_out, ux_out, uy_out, uz_out);
-    mm2x2(vw_in, vx_in, vy_in, vz_in, vw_new, vx_new, vy_new, vz_new, vw_out, vx_out, vy_out, vz_out);
+      uw_in = strm_in.read();
+      ux_in = strm_in.read();
+      uy_in = strm_in.read();
+      uz_in = strm_in.read();
+      vw_in = strm_in.read();
+      vx_in = strm_in.read();
+      vy_in = strm_in.read();
+      vz_in = strm_in.read();
 #pragma empty_line
-    u_temp[0][0] = uw_out;
-    u_temp[0][1] = ux_out;
-    u_temp[1][0] = uy_out;
-    u_temp[1][1] = uz_out;
-    v_temp[0][0] = vw_out;
-    v_temp[0][1] = vx_out;
-    v_temp[1][0] = vy_out;
-    v_temp[1][1] = vz_out;
+      mm2x2(uw_in, ux_in, uy_in, uz_in, uw_new, ux_new, uy_new, uz_new, uw_out, ux_out, uy_out, uz_out);
+      mm2x2(vw_in, vx_in, vy_in, vz_in, vw_new, vx_new, vy_new, vz_new, vw_out, vx_out, vy_out, vz_out);
 #pragma empty_line
-    off_row_uv: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-      if (off_row == bottom_right || off_row == top_left) continue;
+      strm_out.write(uw_out);
+      strm_out.write(ux_out);
+      strm_out.write(uy_out);
+      strm_out.write(uz_out);
+      strm_out.write(vw_out);
+      strm_out.write(vx_out);
+      strm_out.write(vy_out);
+      strm_out.write(vz_out);
 #pragma empty_line
-      vx_in = v_row_temp[off_row][1];
-      ux_in = u_row_temp[off_row][1];
-      vw_in = v_row_temp[off_row][0];
-      uw_in = u_row_temp[off_row][0];
-#pragma empty_line
-      vm2x1(vw_in,vw_new,vx_in,vy_new,vw_out);
-      vm2x1(vw_in,vx_new,vx_in,vz_new,vx_out);
-#pragma empty_line
-      vm2x1(uw_in,uw_new,ux_in,uy_new,uw_out);
-      vm2x1(uw_in,ux_new,ux_in,uz_new,ux_out);
-#pragma empty_line
-      v_row_temp[off_row][0] = vw_out;
-      v_row_temp[off_row][1] = vx_out;
-      u_row_temp[off_row][0] = uw_out;
-      u_row_temp[off_row][1] = ux_out;
     }
 #pragma empty_line
   }
 #pragma empty_line
-template<
-int RowsA,
-int ColsA,
-class SVDTraits>
-void update_off_diag_s(int top_left, int bottom_right, float new_j[2][2],float new_k[2][2], float s_col_temp[2][ColsA],float s_row_temp[RowsA][2]){
-  float w_in,x_in,y_in;
-  float w_out,x_out,y_out;
+  template<
+  int RowsA,
+  int ColsA,
+  class SVDTraits>
+  void update_off_diag_r(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out){
+    float w_in,vw_in,uw_in;
+    float x_in,vx_in,ux_in;
+    float w_out,vw_out,uw_out;
+    float x_out,vx_out,ux_out;
 #pragma empty_line
-  float uw_new = new_j[0][0];
-  float ux_new = new_j[0][1];
-  float uy_new = new_j[1][0];
-  float uz_new = new_j[1][1];
+    float uw_new;
+    float ux_new;
+    float uy_new;
+    float uz_new;
 #pragma empty_line
-  float vw_new = new_k[0][0];
-  float vx_new = new_k[0][1];
-  float vy_new = new_k[1][0];
-  float vz_new = new_k[1][1];
+    float vw_new;
+    float vx_new;
+    float vy_new;
+    float vz_new;
 #pragma empty_line
+    int top_left;
+    int bottom_right;
 #pragma empty_line
-  off_col_s: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
-    if (off_col == bottom_right || off_col == top_left) continue;
+    const int is_odd = ColsA % 2 == 0 ? 0 : 1;
+    const int n_proc = (RowsA+is_odd)/2;
 #pragma empty_line
-    w_in =s_col_temp[0][off_col];
-    y_in =s_col_temp[1][off_col];
+    for (int proc = 0; proc < n_proc - is_odd; proc++){
+      // 2 cols update
+      svd_calc_off_r:for (int off_row = 0; off_row < SVDTraits::MIN_DIM - 2; off_row++) {
+        w_in = strm_in.read();
+        vw_in = strm_in.read();
+        uw_in = strm_in.read();
 #pragma empty_line
-    vm2x1(uw_new,w_in,uy_new,y_in,w_out);
-    vm2x1(ux_new,w_in,uz_new,y_in,y_out);
+        x_in = strm_in.read();
+        vx_in = strm_in.read();
+        ux_in = strm_in.read();
 #pragma empty_line
-    s_col_temp[0][off_col] = w_out;
-    s_col_temp[1][off_col] = y_out;
+        vw_new = strm_in.read();
+        vx_new = strm_in.read();
+        vy_new = strm_in.read();
+        vz_new = strm_in.read();
 #pragma empty_line
+        uw_new = strm_in.read();
+        ux_new = strm_in.read();
+        uy_new = strm_in.read();
+        uz_new = strm_in.read();
+#pragma empty_line
+        vm2x1(w_in,vw_new,x_in,vy_new,w_out);
+        vm2x1(w_in,vx_new,x_in,vz_new,x_out);
+#pragma empty_line
+        vm2x1(vw_in,vw_new,vx_in,vy_new,vw_out);
+        vm2x1(vw_in,vx_new,vx_in,vz_new,vx_out);
+#pragma empty_line
+        vm2x1(uw_in,uw_new,ux_in,uy_new,uw_out);
+        vm2x1(uw_in,ux_new,ux_in,uz_new,ux_out);
+#pragma empty_line
+        //Store off-diagonal updates
+        strm_out.write(w_out );
+        strm_out.write(x_out );
+        strm_out.write(vw_out);
+        strm_out.write(vx_out);
+        strm_out.write(uw_out);
+        strm_out.write(ux_out);
+#pragma empty_line
+      }
+    }
   }
 #pragma empty_line
-  off_row_s: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-    if (off_row == bottom_right || off_row == top_left) continue;
-      w_in = s_row_temp[off_row][0];
+  template<
+  int RowsA,
+  int ColsA,
+  class SVDTraits>
+  void update_off_diag_c(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out){
+    float w_in;
+    float y_in;
+    float w_out;
+    float y_out;
 #pragma empty_line
-      x_in = s_row_temp[off_row][1];
+    float uw_new;
+    float ux_new;
+    float uy_new;
+    float uz_new;
 #pragma empty_line
-      vm2x1(w_in,vw_new,x_in,vy_new,w_out);
-      vm2x1(w_in,vx_new,x_in,vz_new,x_out);
+    int top_left;
+    int bottom_right;
 #pragma empty_line
-      s_row_temp[off_row][0] = w_out;
-      s_row_temp[off_row][1] = x_out;
+    const int is_odd = ColsA % 2 == 0 ? 0 : 1;
+    const int n_proc = (RowsA+is_odd)/2;
+#pragma empty_line
+    //update 2 rows
+    for (int proc = 0; proc < n_proc - is_odd; proc++){
+      // Off-diagonal
+      // 2 rows updates
+      svd_calc_off_c:for (int off_col = 0; off_col < SVDTraits::MIN_DIM - 2; off_col++) {
+#pragma empty_line
+        uw_new = strm_in.read();
+        ux_new = strm_in.read();
+        uy_new = strm_in.read();
+        uz_new = strm_in.read();
+#pragma empty_line
+        w_in = strm_in.read();
+        y_in = strm_in.read();
+#pragma empty_line
+        // U must be Hermitian transposed before it is applied to A
+        vm2x1(hls::x_conj(uw_new),w_in,hls::x_conj(uy_new),y_in,w_out);
+        vm2x1(hls::x_conj(ux_new),w_in,hls::x_conj(uz_new),y_in,y_out);
+#pragma empty_line
+        //Store off-diagonal updates
+        strm_out.write(w_out);
+        strm_out.write(y_out);
+#pragma empty_line
+      }
+    }
   }
-}
 #pragma empty_line
 // ===================================================================================================================
 // SVD_BASIC: Top level function taking a SVDTraits template parameter to defines internal types
@@ -71757,6 +71806,365 @@ void update_off_diag_s(int top_left, int bottom_right, float new_j[2][2],float n
     }
   }
 #pragma empty_line
+#pragma empty_line
+  inline void init_block_index(int & top_left, int & bottom_right, int idx1, int idx2){
+    top_left = idx1;
+    bottom_right = idx2;
+#pragma empty_line
+    if (top_left > bottom_right){
+      int temp = bottom_right;
+      bottom_right = top_left;
+      top_left = temp;
+    }
+  }
+#pragma empty_line
+  template<
+  int RowsA,
+  int ColsA,
+  class SVDTraits,
+  typename InputType,
+  typename OutputType>
+  void svd_alt( const InputType A[RowsA][ColsA],
+                      OutputType S[RowsA][ColsA],
+                      OutputType U[RowsA][RowsA],
+                      OutputType V[ColsA][ColsA],
+                      hls::stream<float> & pca_in, hls::stream<float> & pca_out)
+  {
+    // Initially only supporting square matrix
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+#pragma empty_line
+    // Internal memories for partial results
+    typename SVDTraits::SIntType s_in[RowsA][ColsA];
+    typename SVDTraits::UIntType u_in[RowsA][ColsA];
+    typename SVDTraits::VIntType v_in[RowsA][ColsA];
+#pragma empty_line
+    // Current S,U,V values being worked on
+    typename SVDTraits::SIntType w_in, x_in, y_in, z_in;
+    typename SVDTraits::SIntType w_out, x_out, y_out, z_out;
+    typename SVDTraits::UIntType uw_in, ux_in, uy_in, uz_in;
+    typename SVDTraits::UIntType uw_out, ux_out, uy_out, uz_out;
+    typename SVDTraits::VIntType vw_in, vx_in, vy_in, vz_in;
+    typename SVDTraits::VIntType vw_out, vx_out, vy_out, vz_out;
+#pragma empty_line
+    // 2x2 Rotation values
+    typename SVDTraits::CSIntType uw_new, ux_new, uy_new, uz_new;
+    typename SVDTraits::CSIntType vw_new, vx_new, vy_new, vz_new;
+#pragma empty_line
+    const int is_odd = ColsA % 2 == 0 ? 0 : 1;
+    const int n_proc = (RowsA+is_odd)/2;
+#pragma empty_line
+#pragma empty_line
+    for(int i=0; i<RowsA; i++){
+      rd_buffer:for(int j=0; j<ColsA; j++){
+        S[i][j] = A[i][j];
+        U[i][j] = i==j?1:0;
+        V[i][j] = i==j?1:0;
+      }
+    }
+#pragma empty_line
+    sweep_loop: for(int sweepnum = 0; sweepnum < SVDTraits::NUM_SWEEPS; sweepnum++) {
+      // NOTE: Using the minimum dimension. i.e. will process a square matrix
+#pragma empty_line
+      //loop index (round-robin ordering)
+      int diag_1[n_proc];
+      int diag_2[n_proc];
+#pragma empty_line
+      //init ordering
+      for (int proc = 0; proc < n_proc; proc++){
+        diag_1[proc] = 2*proc;
+        diag_2[proc] = 2*proc+1;
+      }
+#pragma empty_line
+      for (int step = 0; step < RowsA-1; step ++){
+#pragma empty_line
+        //std::cout << sweepnum << " " << step << std::endl;
+        //init buffers
+        InputType S_block_buffer[n_proc][2][2];
+        InputType U_block_buffer[n_proc][2][2];
+        InputType V_block_buffer[n_proc][2][2];
+#pragma empty_line
+        InputType S_r_buffer[n_proc][2][ColsA];
+#pragma empty_line
+        InputType S_c_buffer[n_proc][RowsA][2];
+        InputType U_c_buffer[n_proc][RowsA][2];
+        InputType V_c_buffer[n_proc][RowsA][2];
+#pragma empty_line
+        InputType J2x2[n_proc][2][2];
+        InputType K2x2[n_proc][2][2];
+#pragma empty_line
+        int top_left;
+        int bottom_right;
+#pragma empty_line
+        //update loop sequence
+        int temp_diag = diag_1[1];
+        for (int proc = 1; proc < n_proc-1; proc++){
+          diag_1[proc] = diag_1[proc+1];
+        }
+        diag_1[n_proc-1] = diag_2[n_proc-1];
+        for (int proc = n_proc-1; proc > 0; proc--){
+          diag_2[proc] = diag_2[proc-1];
+        }
+        diag_2[0] = temp_diag;
+#pragma empty_line
+        //read diag
+        svd_rd_diag:for (int proc = 0; proc < n_proc; proc++){
+          init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+#pragma empty_line
+          if (top_left == RowsA || bottom_right == RowsA) continue;
+#pragma empty_line
+          S_block_buffer[proc][0][0] = S[top_left][top_left];
+          U_block_buffer[proc][0][0] = U[top_left][top_left];
+          V_block_buffer[proc][0][0] = V[top_left][top_left];
+#pragma empty_line
+          S_block_buffer[proc][0][1] = S[top_left][bottom_right];
+          U_block_buffer[proc][0][1] = U[top_left][bottom_right];
+          V_block_buffer[proc][0][1] = V[top_left][bottom_right];
+#pragma empty_line
+          S_block_buffer[proc][1][0] = S[bottom_right][top_left];
+          U_block_buffer[proc][1][0] = U[bottom_right][top_left];
+          V_block_buffer[proc][1][0] = V[bottom_right][top_left];
+#pragma empty_line
+          S_block_buffer[proc][1][1] = S[bottom_right][bottom_right];
+          U_block_buffer[proc][1][1] = U[bottom_right][bottom_right];
+          V_block_buffer[proc][1][1] = V[bottom_right][bottom_right];
+        }
+#pragma empty_line
+        //calc svd, update col
+        pca_in.write(1);
+        for (int proc = 0; proc < n_proc; proc++){
+          init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+          if (top_left == RowsA || bottom_right == RowsA) continue;
+#pragma empty_line
+          // Fetch w,x,y,z values
+          pca_in.write(S_block_buffer[proc][0][0]);
+          pca_in.write(S_block_buffer[proc][0][1]);
+          pca_in.write(S_block_buffer[proc][1][0]);
+          pca_in.write(S_block_buffer[proc][1][1]);
+#pragma empty_line
+          pca_in.write(U_block_buffer[proc][0][0]);
+          pca_in.write(U_block_buffer[proc][0][1]);
+          pca_in.write(U_block_buffer[proc][1][0]);
+          pca_in.write(U_block_buffer[proc][1][1]);
+          pca_in.write(V_block_buffer[proc][0][0]);
+          pca_in.write(V_block_buffer[proc][0][1]);
+          pca_in.write(V_block_buffer[proc][1][0]);
+          pca_in.write(V_block_buffer[proc][1][1]);
+        }
+#pragma empty_line
+        dut(pca_in, pca_out);
+#pragma empty_line
+        for (int proc = 0; proc < n_proc; proc++){
+          init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+          if (top_left == RowsA || bottom_right == RowsA) continue;
+#pragma empty_line
+          // Update S on diagonal
+          S_block_buffer[proc][0][0] = pca_out.read();
+          S_block_buffer[proc][0][1] = pca_out.read();
+          S_block_buffer[proc][1][0] = pca_out.read();
+          S_block_buffer[proc][1][1] = pca_out.read();
+#pragma empty_line
+          //log J,k
+          J2x2[proc][0][0] = pca_out.read();
+          J2x2[proc][0][1] = pca_out.read();
+          J2x2[proc][1][0] = pca_out.read();
+          J2x2[proc][1][1] = pca_out.read();
+#pragma empty_line
+          K2x2[proc][0][0] = pca_out.read();
+          K2x2[proc][0][1] = pca_out.read();
+          K2x2[proc][1][0] = pca_out.read();
+          K2x2[proc][1][1] = pca_out.read();
+#pragma empty_line
+          U_block_buffer[proc][0][0] = pca_out.read();
+          U_block_buffer[proc][0][1] = pca_out.read();
+          U_block_buffer[proc][1][0] = pca_out.read();
+          U_block_buffer[proc][1][1] = pca_out.read();
+          V_block_buffer[proc][0][0] = pca_out.read();
+          V_block_buffer[proc][0][1] = pca_out.read();
+          V_block_buffer[proc][1][0] = pca_out.read();
+          V_block_buffer[proc][1][1] = pca_out.read();
+#pragma empty_line
+        }
+#pragma empty_line
+        //write back diag and cols
+        svd_wb_diag:for (int proc = 0; proc < n_proc; proc++){
+          init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+          if (top_left == RowsA || bottom_right == RowsA) continue;
+#pragma empty_line
+          S[top_left][top_left] = S_block_buffer[proc][0][0];
+          U[top_left][top_left] = U_block_buffer[proc][0][0];
+          V[top_left][top_left] = V_block_buffer[proc][0][0];
+#pragma empty_line
+          S[top_left][bottom_right] = S_block_buffer[proc][0][1];
+          U[top_left][bottom_right] = U_block_buffer[proc][0][1];
+          V[top_left][bottom_right] = V_block_buffer[proc][0][1];
+#pragma empty_line
+          S[bottom_right][top_left] = S_block_buffer[proc][1][0];
+          U[bottom_right][top_left] = U_block_buffer[proc][1][0];
+          V[bottom_right][top_left] = V_block_buffer[proc][1][0];
+#pragma empty_line
+          S[bottom_right][bottom_right] = S_block_buffer[proc][1][1];
+          U[bottom_right][bottom_right] = U_block_buffer[proc][1][1];
+          V[bottom_right][bottom_right] = V_block_buffer[proc][1][1];
+#pragma empty_line
+        }
+#pragma empty_line
+        //read col
+        for (int proc = 0; proc < n_proc; proc++){
+          svd_rd_off_r:for (int i=0; i<ColsA; i++){
+            if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            if (top_left == RowsA || bottom_right == RowsA) continue;
+            if (i != bottom_right && i != top_left) {
+              S_c_buffer[proc][i][0] = S[i][top_left];
+              U_c_buffer[proc][i][0] = U[i][top_left];
+              V_c_buffer[proc][i][0] = V[i][top_left];
+              S_c_buffer[proc][i][1] = S[i][bottom_right];
+              U_c_buffer[proc][i][1] = U[i][bottom_right];
+              V_c_buffer[proc][i][1] = V[i][bottom_right];
+            }
+          }
+        }
+#pragma empty_line
+        //update 2 cols
+        pca_in.write(2);
+        for (int proc = 0; proc < n_proc; proc++){
+          // 2 cols update
+          for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
+            //#pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
+            if (off_row == 0) {
+              init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+              //pca_in.write((float)top_left);
+              //pca_in.write((float)bottom_right);
+            }
+            if (top_left == RowsA || bottom_right == RowsA) continue;
+            if (off_row != bottom_right && off_row != top_left) {
+              pca_in.write(S_c_buffer[proc][off_row][0]);
+              pca_in.write(V_c_buffer[proc][off_row][0]);
+              pca_in.write(U_c_buffer[proc][off_row][0]);
+              pca_in.write(S_c_buffer[proc][off_row][1]);
+              pca_in.write(V_c_buffer[proc][off_row][1]);
+              pca_in.write(U_c_buffer[proc][off_row][1]);
+#pragma empty_line
+              pca_in.write(K2x2[proc][0][0]);
+              pca_in.write(K2x2[proc][0][1]);
+              pca_in.write(K2x2[proc][1][0]);
+              pca_in.write(K2x2[proc][1][1]);
+#pragma empty_line
+              pca_in.write(J2x2[proc][0][0]);
+              pca_in.write(J2x2[proc][0][1]);
+              pca_in.write(J2x2[proc][1][0]);
+              pca_in.write(J2x2[proc][1][1]);
+            }
+          }
+        }
+        dut(pca_in, pca_out);
+        for (int proc = 0; proc < n_proc; proc++){
+          // 2 cols update
+          for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
+            //#pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
+            if (off_row == 0) {
+              init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            }
+            if (top_left == RowsA || bottom_right == RowsA) continue;
+            if (off_row != bottom_right && off_row != top_left) {
+              //Store off-diagonal updates
+              S_c_buffer[proc][off_row][0] = pca_out.read();
+              S_c_buffer[proc][off_row][1] = pca_out.read();
+              V_c_buffer[proc][off_row][0] = pca_out.read();
+              V_c_buffer[proc][off_row][1] = pca_out.read();
+              U_c_buffer[proc][off_row][0] = pca_out.read();
+              U_c_buffer[proc][off_row][1] = pca_out.read();
+            }
+          }
+        }
+#pragma empty_line
+        //write back 2 cols
+        for (int proc = 0; proc < n_proc; proc++){
+          svd_wb_off_r:for (int i=0; i<ColsA; i++){
+            if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            if (top_left == RowsA || bottom_right == RowsA) continue;
+            if (i != bottom_right && i != top_left) {
+              S[i][top_left] = S_c_buffer[proc][i][0];
+              U[i][top_left] = U_c_buffer[proc][i][0];
+              V[i][top_left] = V_c_buffer[proc][i][0];
+              S[i][bottom_right] = S_c_buffer[proc][i][1];
+              U[i][bottom_right] = U_c_buffer[proc][i][1];
+              V[i][bottom_right] = V_c_buffer[proc][i][1];
+            }
+          }
+        }
+#pragma empty_line
+        //read 2 rows
+        for (int proc = 0; proc < n_proc; proc++){
+          svd_rd_off_c:for (int i=0; i<ColsA; i++){
+            if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            if (top_left == RowsA || bottom_right == RowsA) continue;
+            if (i != bottom_right && i != top_left) {
+              S_r_buffer[proc][0][i] = S[top_left] [i];
+              S_r_buffer[proc][1][i] = S[bottom_right][i];
+            }
+          }
+        }
+#pragma empty_line
+        //update 2 rows
+        pca_in.write(3);
+        for (int proc = 0; proc < n_proc; proc++){
+          // Off-diagonal
+          // 2 rows updates
+          svd_calc_off_c:for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
+            if (off_col == 0) {
+              init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+              //pca_in.write((float)top_left);
+              //pca_in.write((float)bottom_right);
+            }
+            if (top_left == RowsA || bottom_right == RowsA) continue;
+            //#pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
+            if (off_col != bottom_right && off_col != top_left) {
+#pragma empty_line
+              pca_in.write(J2x2[proc][0][0]);
+              pca_in.write(J2x2[proc][0][1]);
+              pca_in.write(J2x2[proc][1][0]);
+              pca_in.write(J2x2[proc][1][1]);
+#pragma empty_line
+              pca_in.write(S_r_buffer[proc][0][off_col]);
+              pca_in.write(S_r_buffer[proc][1][off_col]);
+            }
+          }
+        }
+#pragma empty_line
+        dut(pca_in, pca_out);
+#pragma empty_line
+        for (int proc = 0; proc < n_proc; proc++){
+          // Off-diagonal
+          // 2 rows updates
+          for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
+            if (off_col == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            if (top_left == RowsA || bottom_right == RowsA) continue;
+            if (off_col != bottom_right && off_col != top_left) {
+              //Store off-diagonal updates
+              S_r_buffer[proc][0][off_col] = pca_out.read();
+              S_r_buffer[proc][1][off_col] = pca_out.read();
+            }
+          }
+        }
+#pragma empty_line
+        //write back 2 rows
+        for (int proc = 0; proc < n_proc; proc++){
+          for (int i=0; i<ColsA; i++){
+            if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
+            if (top_left == RowsA || bottom_right == RowsA) continue;
+            if (i != bottom_right && i != top_left) {
+              S[top_left] [i] = S_r_buffer[proc][0][i];
+              S[bottom_right][i] = S_r_buffer[proc][1][i];
+            }
+          }
+        }
+      }
+    }
+  }
+#pragma empty_line
+#pragma empty_line
   // ===================================================================================================================
   // SVD_TOP: Top level function that selects implementation architecture and internal types based on the 
   // traits class provided via the SVDTraits template parameter.
@@ -71773,8 +72181,7 @@ void update_off_diag_s(int top_left, int bottom_right, float new_j[2][2],float n
                       OutputType V[ColsA][ColsA],
                       hls::stream<float> & pca_in, hls::stream<float> & pca_out) {
 #pragma empty_line
-    svd_basic<RowsA,ColsA,SVDTraits,InputType,OutputType>
-    (A,S,U,V,pca_in,pca_out);
+    svd_alt<RowsA,ColsA,SVDTraits,InputType,OutputType>(A,S,U,V,pca_in,pca_out);
 #pragma empty_line
   }
 }
