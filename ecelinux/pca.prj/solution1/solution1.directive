@@ -38,6 +38,18 @@
         <directive functionName="svd_alt" label="wb_buffer" functionLabel="">
             <pragma name="PIPELINE"/>
         </directive>
+        <directive functionName="matmul" label="LOOP_ST_A" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="matmul" label="LOOP_COL" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="backproj" label="LOOP_ST_A" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="backproj" label="LOOP_DOT_PROD" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

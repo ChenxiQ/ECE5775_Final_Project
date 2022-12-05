@@ -41,7 +41,11 @@ set_directive_pipeline update_off_diag_c/svd_calc_off_c
 set_directive_pipeline svd_alt/svd_wb_off_c
 set_directive_pipeline svd_alt/wb_buffer
 
+set_directive_pipeline matmul/LOOP_ST_A
+set_directive_pipeline matmul/LOOP_COL
 
+set_directive_pipeline backproj/LOOP_ST_A
+set_directive_pipeline backproj/LOOP_DOT_PROD
 
 ############################################
 

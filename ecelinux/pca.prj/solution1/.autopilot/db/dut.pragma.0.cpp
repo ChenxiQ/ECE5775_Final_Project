@@ -61061,6 +61061,7 @@ void dut (
 );
 
 void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
+void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
 #5 "./svd.h" 2
 #1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
 
@@ -65221,6 +65222,11 @@ void dut(
       break;
     }
 
+    // Back projection
+    case 5:{
+      backproj(strm_in, strm_out);
+    }
+
     default:
     break;
   }
@@ -65299,27 +65305,36 @@ void dut(
 
 void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   float result = 0;
-  float A[100], B[100];
+  float A[100];
 
   LOOP_ROW:
   for (int i = 0; i < 784; i++) {
     // store A[i]
     LOOP_ST_A:
     for (int m = 0; m < 100; m++) {
+#pragma HLS PIPELINE
+#139 "dut.cpp"
+
       A[m] = strm_in.read();
     }
     LOOP_COL:
     for (int j = 0; j < 784; j++) {
-      // store B[j]
-      LOOP_ST_B:
-      for (int n = 0; n < 100; n++) {
-        B[n] = strm_in.read();
-      }
+#pragma HLS PIPELINE
+#143 "dut.cpp"
+
       // calculate A[j] dot B[j]
       LOOP_DOT_PROD:
       for (int k = 0; k < 100; k++) {
-        if (k == 0) result = 0;
-        result += A[k] * B[k];
+        if (k == 0) {
+          // // store B[j]
+          // LOOP_ST_B:
+          // for (int n = 0; n < 100; n++) {
+          //   B[n] = strm_in.read();
+          // }
+
+          result = 0;
+        }
+        result += A[k] * strm_in.read();
         // write back result XXT[i][j]
         if (k == 99) strm_out.write(result);
       }
@@ -65337,6 +65352,39 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   //   buffer += a * b;
   // }
   // strm_out.write(buffer);
+}
+
+void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
+  float result = 0;
+  float A[784];
+
+  LOOP_ROW:
+  for (int i = 0; i < 10; i++) {
+    // store A[i]
+    LOOP_ST_A:
+    for (int m = 0; m < 784; m++) {
+#pragma HLS PIPELINE
+#184 "dut.cpp"
+
+      A[m] = strm_in.read();
+    }
+    LOOP_COL:
+    for (int j = 0; j < 100; j++) {
+      // calculate A[j] dot B[j]
+      LOOP_DOT_PROD:
+      for (int k = 0; k < 784; k++) {
+#pragma HLS PIPELINE
+#191 "dut.cpp"
+
+        if (k == 0) {
+          result = 0;
+        }
+        result += A[k] * strm_in.read();
+        // write back result XXT[i][j]
+        if (k == 783) strm_out.write(result);
+      }
+    }
+  }
 }
 
 class ssdm_global_array_dutpp0cppaplinecpp {

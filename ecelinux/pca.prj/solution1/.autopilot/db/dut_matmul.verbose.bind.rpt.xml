@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_matmul'" level="0">
-<item name = "Date">Sun Dec  4 18:05:33 2022
+<item name = "Date">Sun Dec  4 22:47:12 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.63, 1.25</column>
+<column name="ap_clk">10.00, 9.54, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">739511921, 739511921, 739511921, 739511921, none</column>
+<column name="">61868577, 61868577, 61868577, 61868577, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,11 +35,9 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- LOOP_ROW">739511920, 739511920, 943255, -, -, 784, no</column>
-<column name=" + LOOP_ST_A">100, 100, 1, -, -, 100, no</column>
-<column name=" + LOOP_COL">943152, 943152, 1203, -, -, 784, no</column>
-<column name="  ++ LOOP_ST_B">100, 100, 1, -, -, 100, no</column>
-<column name="  ++ LOOP_DOT_PROD">1100, 1100, 11, -, -, 100, no</column>
+<column name="- LOOP_ROW">61868576, 61868576, 78914, -, -, 784, no</column>
+<column name=" + LOOP_ST_A">100, 100, 2, 1, 1, 100, yes</column>
+<column name=" + LOOP_COL">78810, 78810, 511, 100, 1, 784, yes</column>
 </table>
 </item>
 </section>

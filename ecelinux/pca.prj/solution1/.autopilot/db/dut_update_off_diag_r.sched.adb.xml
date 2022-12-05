@@ -1984,7 +1984,7 @@
 
 <node id="14" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.preheader.preheader:2  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1812) nounwind
+.preheader.preheader:2  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1811) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -2000,7 +2000,7 @@
 
 <node id="15" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-.preheader.preheader:3  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str1812)
+.preheader.preheader:3  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str1811)
 
 ]]></node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
@@ -2016,7 +2016,7 @@
 
 <node id="16" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-.preheader.preheader:4  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1811) nounwind
+.preheader.preheader:4  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1806) nounwind
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -2048,7 +2048,7 @@
 
 <node id="55" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-.preheader.preheader:43  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str1812, i32 %tmp_s)
+.preheader.preheader:43  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str1811, i32 %tmp_s)
 
 ]]></node>
 <StgValue><ssdm name="empty_10"/></StgValue>

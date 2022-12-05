@@ -202,8 +202,28 @@ void PCA::rank(fix32_t tsf_mat[K][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t
 }
 
 void PCA::back_pjt(fix32_t tsf_mat[K][VEC_SIZ], fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[K][IMG_NUM]){
-  hls::matrix_multiply_top<hls::NoTranspose,hls::NoTranspose,
-  K,VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,MY_CONFIG_MULT,fix32_t,fix32_t>(tsf_mat,X,Y);
+  pca_in->write(5);
+  for (int i = 0; i < 10; i++) {
+    for (int m = 0; m < 784; m++) {
+      pca_in->write(tsf_mat[i][m]);
+    }
+    for (int j = 0; j < 100; j++) {
+      for (int n = 0; n < 784; n++) {
+        pca_in->write(X[n][j]);
+      }
+    }
+  }
+
+  dut(*pca_in, *pca_out);
+
+  for (int i = 0; i < 10; i++) {
+    for (int j = 0; j < 100; j++) {
+      Y[i][j] = pca_out->read();
+    }
+  }
+  
+  // hls::matrix_multiply_top<hls::NoTranspose,hls::NoTranspose,
+  // K,VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,MY_CONFIG_MULT,fix32_t,fix32_t>(tsf_mat,X,Y);
   //hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,K,
   //VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,fix32_t,fix32_t>(tsf_mat,X,Y);
 }

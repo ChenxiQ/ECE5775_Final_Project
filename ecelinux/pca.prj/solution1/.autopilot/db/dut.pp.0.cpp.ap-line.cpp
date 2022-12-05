@@ -60763,6 +60763,7 @@ void dut (
 );
 #pragma empty_line
 void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
+void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
 #pragma line 5 "./svd.h" 2
 #pragma line 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
 #pragma empty_line
@@ -64884,6 +64885,11 @@ void dut(
       break;
     }
 #pragma empty_line
+    // Back projection
+    case 5:{
+      backproj(strm_in, strm_out);
+    }
+#pragma empty_line
     default:
     break;
   }
@@ -64962,7 +64968,7 @@ void dut(
 #pragma empty_line
 void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   float result = 0;
-  float A[100], B[100];
+  float A[100];
 #pragma empty_line
   LOOP_ROW:
   for (int i = 0; i < 784; i++) {
@@ -64973,16 +64979,19 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
     }
     LOOP_COL:
     for (int j = 0; j < 784; j++) {
-      // store B[j]
-      LOOP_ST_B:
-      for (int n = 0; n < 100; n++) {
-        B[n] = strm_in.read();
-      }
       // calculate A[j] dot B[j]
       LOOP_DOT_PROD:
       for (int k = 0; k < 100; k++) {
-        if (k == 0) result = 0;
-        result += A[k] * B[k];
+        if (k == 0) {
+          // // store B[j]
+          // LOOP_ST_B:
+          // for (int n = 0; n < 100; n++) {
+          //   B[n] = strm_in.read();
+          // }
+#pragma empty_line
+          result = 0;
+        }
+        result += A[k] * strm_in.read();
         // write back result XXT[i][j]
         if (k == 99) strm_out.write(result);
       }
@@ -65000,4 +65009,31 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   //   buffer += a * b;
   // }
   // strm_out.write(buffer);
+}
+#pragma empty_line
+void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
+  float result = 0;
+  float A[784];
+#pragma empty_line
+  LOOP_ROW:
+  for (int i = 0; i < 10; i++) {
+    // store A[i]
+    LOOP_ST_A:
+    for (int m = 0; m < 784; m++) {
+      A[m] = strm_in.read();
+    }
+    LOOP_COL:
+    for (int j = 0; j < 100; j++) {
+      // calculate A[j] dot B[j]
+      LOOP_DOT_PROD:
+      for (int k = 0; k < 784; k++) {
+        if (k == 0) {
+          result = 0;
+        }
+        result += A[k] * strm_in.read();
+        // write back result XXT[i][j]
+        if (k == 783) strm_out.write(result);
+      }
+    }
+  }
 }

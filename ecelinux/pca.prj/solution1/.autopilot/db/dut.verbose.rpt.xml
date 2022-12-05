@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut'" level="0">
-<item name = "Date">Sun Dec  4 18:05:38 2022
+<item name = "Date">Sun Dec  4 22:47:19 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 9.38, 1.25</column>
+<column name="ap_clk">10.00, 9.54, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,16 +24,17 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2, 739511924, 3, 739511925, none</column>
+<column name="">3, 61868580, 4, 61868581, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_dut_calc_svd_fu_116">dut_calc_svd, 7975, 7975, 7975, 7975, none</column>
-<column name="grp_dut_update_off_diag_r_fu_124">dut_update_off_diag_r, 4291632, 4291632, 4291632, 4291632, none</column>
-<column name="grp_dut_matmul_fu_132">dut_matmul, 739511921, 739511921, 739511921, 739511921, none</column>
+<column name="grp_dut_calc_svd_fu_120">dut_calc_svd, 7975, 7975, 7975, 7975, none</column>
+<column name="grp_dut_matmul_fu_128">dut_matmul, 61868577, 61868577, 61868577, 61868577, none</column>
+<column name="grp_dut_update_off_diag_r_fu_136">dut_update_off_diag_r, 4291632, 4291632, 4291632, 4291632, none</column>
+<column name="grp_dut_backproj_fu_144">dut_backproj, 3927941, 3927941, 3927941, 3927941, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -53,23 +54,24 @@
 <column name="DSP">-, -, -, -</column>
 <column name="Expression">-, -, 0, 453</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">2, 64, 8642, 11972</column>
+<column name="Instance">4, 69, 15135, 17227</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, 209</column>
-<column name="Register">-, -, 475, 1</column>
+<column name="Register">-, -, 476, 1</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">~0, 29, 8, 23</specialColumn>
+<specialColumn name="Utilization (%)">1, 31, 14, 33</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_dut_calc_svd_fu_116">dut_calc_svd, 0, 49, 6621, 9360</column>
-<column name="dut_fadd_32ns_32ns_32_5_full_dsp_U30">dut_fadd_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
-<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U31">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
-<column name="grp_dut_matmul_fu_132">dut_matmul, 2, 5, 530, 914</column>
-<column name="grp_dut_update_off_diag_r_fu_124">dut_update_off_diag_r, 0, 5, 1143, 987</column>
+<column name="grp_dut_backproj_fu_144">dut_backproj, 2, 5, 587, 949</column>
+<column name="grp_dut_calc_svd_fu_120">dut_calc_svd, 0, 49, 6621, 9360</column>
+<column name="dut_fadd_32ns_32ns_32_5_full_dsp_U35">dut_fadd_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
+<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U36">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="grp_dut_matmul_fu_128">dut_matmul, 2, 5, 6436, 5220</column>
+<column name="grp_dut_update_off_diag_r_fu_136">dut_update_off_diag_r, 0, 5, 1143, 987</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -86,68 +88,69 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="indvar_flatten_next_fu_296_p2">+, 0, 0, 19, 19, 1</column>
-<column name="sh_assign_fu_183_p2">+, 0, 0, 9, 8, 9</column>
-<column name="p_Val2_8_i_i_fu_277_p2">-, 0, 0, 32, 1, 32</column>
-<column name="tmp_22_i_i_fu_197_p2">-, 0, 0, 8, 7, 8</column>
+<column name="indvar_flatten_next_fu_308_p2">+, 0, 0, 19, 19, 1</column>
+<column name="sh_assign_fu_195_p2">+, 0, 0, 9, 8, 9</column>
+<column name="p_Val2_8_i_i_fu_289_p2">-, 0, 0, 32, 1, 32</column>
+<column name="tmp_17_i_i_fu_209_p2">-, 0, 0, 8, 7, 8</column>
 <column name="ap_sig_131">and, 0, 0, 1, 1, 1</column>
 <column name="ap_sig_165">and, 0, 0, 1, 1, 1</column>
-<column name="exitcond_flatten_fu_290_p2">icmp, 0, 0, 7, 19, 19</column>
-<column name="tmp_24_i_i_fu_236_p2">lshr, 0, 0, 63, 24, 24</column>
+<column name="exitcond_flatten_fu_302_p2">icmp, 0, 0, 7, 19, 19</column>
+<column name="tmp_19_i_i_fu_248_p2">lshr, 0, 0, 63, 24, 24</column>
 <column name="ap_sig_143">or, 0, 0, 1, 1, 1</column>
-<column name="p_Val2_3_fu_270_p3">select, 0, 0, 32, 1, 32</column>
-<column name="p_Val2_5_fu_283_p3">select, 0, 0, 32, 1, 32</column>
-<column name="sh_assign_1_fu_207_p3">select, 0, 0, 9, 1, 9</column>
-<column name="tmp_26_i_i_fu_242_p2">shl, 0, 0, 239, 78, 78</column>
+<column name="p_Val2_3_fu_282_p3">select, 0, 0, 32, 1, 32</column>
+<column name="p_Val2_5_fu_295_p3">select, 0, 0, 32, 1, 32</column>
+<column name="sh_assign_1_fu_219_p3">select, 0, 0, 9, 1, 9</column>
+<column name="tmp_21_i_i_fu_254_p2">shl, 0, 0, 239, 78, 78</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">6, 12, 1, 12</column>
 <column name="ap_reg_ppiten_pp0_it3">1, 2, 1, 2</column>
-<column name="grp_fu_140_p0">32, 3, 32, 96</column>
-<column name="grp_fu_140_p1">32, 3, 32, 96</column>
-<column name="grp_fu_144_p0">32, 5, 32, 160</column>
-<column name="grp_fu_144_p1">32, 3, 32, 96</column>
-<column name="indvar_flatten_phi_fu_109_p4">19, 2, 19, 38</column>
-<column name="indvar_flatten_reg_105">19, 2, 19, 38</column>
+<column name="grp_fu_152_p0">32, 3, 32, 96</column>
+<column name="grp_fu_152_p1">32, 3, 32, 96</column>
+<column name="grp_fu_156_p0">32, 5, 32, 160</column>
+<column name="grp_fu_156_p1">32, 3, 32, 96</column>
+<column name="indvar_flatten_phi_fu_113_p4">19, 2, 19, 38</column>
+<column name="indvar_flatten_reg_109">19, 2, 19, 38</column>
 <column name="strm_in_V_blk_n">1, 2, 1, 2</column>
-<column name="strm_in_V_read">1, 5, 1, 5</column>
+<column name="strm_in_V_read">1, 6, 1, 6</column>
 <column name="strm_out_V_blk_n">1, 2, 1, 2</column>
-<column name="strm_out_V_din">32, 4, 32, 128</column>
-<column name="strm_out_V_write">1, 5, 1, 5</column>
+<column name="strm_out_V_din">32, 5, 32, 160</column>
+<column name="strm_out_V_write">1, 6, 1, 6</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">11, 0, 11, 0</column>
-<column name="ap_reg_grp_dut_calc_svd_fu_116_ap_start">1, 0, 1, 0</column>
-<column name="ap_reg_grp_dut_matmul_fu_132_ap_start">1, 0, 1, 0</column>
-<column name="ap_reg_grp_dut_update_off_diag_r_fu_124_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_dut_backproj_fu_144_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_dut_calc_svd_fu_120_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_dut_matmul_fu_128_ap_start">1, 0, 1, 0</column>
+<column name="ap_reg_grp_dut_update_off_diag_r_fu_136_ap_start">1, 0, 1, 0</column>
 <column name="ap_reg_ppiten_pp0_it0">1, 0, 1, 0</column>
 <column name="ap_reg_ppiten_pp0_it1">1, 0, 1, 0</column>
 <column name="ap_reg_ppiten_pp0_it2">1, 0, 1, 0</column>
 <column name="ap_reg_ppiten_pp0_it3">1, 0, 1, 0</column>
-<column name="exitcond_flatten_reg_327">1, 0, 1, 0</column>
-<column name="indvar_flatten_next_reg_331">19, 0, 19, 0</column>
-<column name="indvar_flatten_reg_105">19, 0, 19, 0</column>
-<column name="isNeg_reg_312">1, 0, 1, 0</column>
-<column name="loc_V_1_reg_307">23, 0, 23, 0</column>
-<column name="p_Result_s_reg_302">1, 0, 1, 0</column>
-<column name="p_Val2_5_reg_323">32, 0, 32, 0</column>
-<column name="reg_148">32, 0, 32, 0</column>
-<column name="sh_assign_1_reg_317">9, 0, 9, 0</column>
-<column name="tmp_32_reg_336">32, 0, 32, 0</column>
-<column name="tmp_33_reg_341">32, 0, 32, 0</column>
-<column name="tmp_34_reg_346">32, 0, 32, 0</column>
-<column name="tmp_35_reg_351">32, 0, 32, 0</column>
-<column name="tmp_36_reg_356">32, 0, 32, 0</column>
-<column name="tmp_37_reg_361">32, 0, 32, 0</column>
-<column name="tmp_3_i11_i_reg_381">32, 0, 32, 0</column>
-<column name="tmp_3_i_i_reg_371">32, 0, 32, 0</column>
-<column name="tmp_i10_i_reg_376">32, 0, 32, 0</column>
-<column name="tmp_i_i_21_reg_366">32, 0, 32, 0</column>
-<column name="exitcond_flatten_reg_327">0, 1, 1, 0</column>
+<column name="exitcond_flatten_reg_339">1, 0, 1, 0</column>
+<column name="indvar_flatten_next_reg_343">19, 0, 19, 0</column>
+<column name="indvar_flatten_reg_109">19, 0, 19, 0</column>
+<column name="isNeg_reg_324">1, 0, 1, 0</column>
+<column name="loc_V_1_reg_319">23, 0, 23, 0</column>
+<column name="p_Result_s_reg_314">1, 0, 1, 0</column>
+<column name="p_Val2_5_reg_335">32, 0, 32, 0</column>
+<column name="reg_160">32, 0, 32, 0</column>
+<column name="sh_assign_1_reg_329">9, 0, 9, 0</column>
+<column name="tmp_129_reg_348">32, 0, 32, 0</column>
+<column name="tmp_130_reg_353">32, 0, 32, 0</column>
+<column name="tmp_131_reg_358">32, 0, 32, 0</column>
+<column name="tmp_132_reg_363">32, 0, 32, 0</column>
+<column name="tmp_133_reg_368">32, 0, 32, 0</column>
+<column name="tmp_134_reg_373">32, 0, 32, 0</column>
+<column name="tmp_3_i11_i_reg_393">32, 0, 32, 0</column>
+<column name="tmp_3_i_i_reg_383">32, 0, 32, 0</column>
+<column name="tmp_i10_i_reg_388">32, 0, 32, 0</column>
+<column name="tmp_i_i_20_reg_378">32, 0, 32, 0</column>
+<column name="exitcond_flatten_reg_339">0, 1, 1, 0</column>
 </table>
 </item>
 </section>

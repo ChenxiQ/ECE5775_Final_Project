@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_calc_angle_float_float_s'
 ================================================================
-* Date:           Sun Dec  4 18:05:37 2022
+* Date:           Sun Dec  4 22:47:18 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -68,18 +68,18 @@
     +------------------------------------------+--------------------------------------+---------+-------+-----+-----+
     |                 Instance                 |                Module                | BRAM_18K| DSP48E|  FF | LUT |
     +------------------------------------------+--------------------------------------+---------+-------+-----+-----+
-    |dut_fadd_32ns_32ns_32_5_full_dsp_U10      |dut_fadd_32ns_32ns_32_5_full_dsp      |        0|      2|  205|  390|
-    |dut_fadd_32ns_32ns_32_5_full_dsp_U12      |dut_fadd_32ns_32ns_32_5_full_dsp      |        0|      2|  205|  390|
-    |dut_faddfsub_32ns_32ns_32_5_full_dsp_U11  |dut_faddfsub_32ns_32ns_32_5_full_dsp  |        0|      2|  205|  390|
-    |dut_fdiv_32ns_32ns_32_16_U18              |dut_fdiv_32ns_32ns_32_16              |        0|      0|  761|  994|
-    |dut_fdiv_32ns_32ns_32_16_U19              |dut_fdiv_32ns_32ns_32_16              |        0|      0|  761|  994|
-    |dut_fmul_32ns_32ns_32_4_max_dsp_U13       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
-    |dut_fmul_32ns_32ns_32_4_max_dsp_U14       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
-    |dut_fmul_32ns_32ns_32_4_max_dsp_U15       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
-    |dut_fmul_32ns_32ns_32_4_max_dsp_U16       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
-    |dut_fmul_32ns_32ns_32_4_max_dsp_U17       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
-    |dut_frsqrt_32ns_32ns_32_11_full_dsp_U20   |dut_frsqrt_32ns_32ns_32_11_full_dsp   |        0|      9|  245|  416|
-    |dut_frsqrt_32ns_32ns_32_11_full_dsp_U21   |dut_frsqrt_32ns_32ns_32_11_full_dsp   |        0|      9|  245|  416|
+    |dut_fadd_32ns_32ns_32_5_full_dsp_U15      |dut_fadd_32ns_32ns_32_5_full_dsp      |        0|      2|  205|  390|
+    |dut_fadd_32ns_32ns_32_5_full_dsp_U17      |dut_fadd_32ns_32ns_32_5_full_dsp      |        0|      2|  205|  390|
+    |dut_faddfsub_32ns_32ns_32_5_full_dsp_U16  |dut_faddfsub_32ns_32ns_32_5_full_dsp  |        0|      2|  205|  390|
+    |dut_fdiv_32ns_32ns_32_16_U23              |dut_fdiv_32ns_32ns_32_16              |        0|      0|  761|  994|
+    |dut_fdiv_32ns_32ns_32_16_U24              |dut_fdiv_32ns_32ns_32_16              |        0|      0|  761|  994|
+    |dut_fmul_32ns_32ns_32_4_max_dsp_U18       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
+    |dut_fmul_32ns_32ns_32_4_max_dsp_U19       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
+    |dut_fmul_32ns_32ns_32_4_max_dsp_U20       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
+    |dut_fmul_32ns_32ns_32_4_max_dsp_U21       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
+    |dut_fmul_32ns_32ns_32_4_max_dsp_U22       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
+    |dut_frsqrt_32ns_32ns_32_11_full_dsp_U25   |dut_frsqrt_32ns_32ns_32_11_full_dsp   |        0|      9|  245|  416|
+    |dut_frsqrt_32ns_32ns_32_11_full_dsp_U26   |dut_frsqrt_32ns_32ns_32_11_full_dsp   |        0|      9|  245|  416|
     +------------------------------------------+--------------------------------------+---------+-------+-----+-----+
     |Total                                     |                                      |        0|     39| 3342| 5595|
     +------------------------------------------+--------------------------------------+---------+-------+-----+-----+

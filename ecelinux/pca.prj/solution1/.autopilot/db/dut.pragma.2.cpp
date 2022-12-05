@@ -1,5 +1,5 @@
-# 1 "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp"
-# 1 "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp" 1
+# 1 "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp"
+# 1 "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -203,7 +203,7 @@ extern "C" {
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp" 2
+# 1 "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp" 2
 # 1 "dut.cpp"
 # 1 "dut.cpp" 1
 # 1 "<built-in>" 1
@@ -61092,6 +61092,7 @@ void dut (
 );
 
 void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
+void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
 # 5 "./svd.h" 2
 # 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
 
@@ -65236,6 +65237,11 @@ void dut(
       break;
     }
 
+    // Back projection
+    case 5:{
+      backproj(strm_in, strm_out);
+    }
+
     default:
     break;
   }
@@ -65314,27 +65320,36 @@ void dut(
 
 void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   float result = 0;
-  float A[100], B[100];
+  float A[100];
 
   LOOP_ROW:
   for (int i = 0; i < 784; i++) {
     // store A[i]
     LOOP_ST_A:
     for (int m = 0; m < 100; m++) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 139 "dut.cpp"
+
       A[m] = strm_in.read();
     }
     LOOP_COL:
     for (int j = 0; j < 784; j++) {
-      // store B[j]
-      LOOP_ST_B:
-      for (int n = 0; n < 100; n++) {
-        B[n] = strm_in.read();
-      }
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 143 "dut.cpp"
+
       // calculate A[j] dot B[j]
       LOOP_DOT_PROD:
       for (int k = 0; k < 100; k++) {
-        if (k == 0) result = 0;
-        result += A[k] * B[k];
+        if (k == 0) {
+          // // store B[j]
+          // LOOP_ST_B:
+          // for (int n = 0; n < 100; n++) {
+          //   B[n] = strm_in.read();
+          // }
+
+          result = 0;
+        }
+        result += A[k] * strm_in.read();
         // write back result XXT[i][j]
         if (k == 99) strm_out.write(result);
       }
@@ -65352,6 +65367,39 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   //   buffer += a * b;
   // }
   // strm_out.write(buffer);
+}
+
+void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
+  float result = 0;
+  float A[784];
+
+  LOOP_ROW:
+  for (int i = 0; i < 10; i++) {
+    // store A[i]
+    LOOP_ST_A:
+    for (int m = 0; m < 784; m++) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 184 "dut.cpp"
+
+      A[m] = strm_in.read();
+    }
+    LOOP_COL:
+    for (int j = 0; j < 100; j++) {
+      // calculate A[j] dot B[j]
+      LOOP_DOT_PROD:
+      for (int k = 0; k < 784; k++) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 191 "dut.cpp"
+
+        if (k == 0) {
+          result = 0;
+        }
+        result += A[k] * strm_in.read();
+        // write back result XXT[i][j]
+        if (k == 783) strm_out.write(result);
+      }
+    }
+  }
 }
 
 class ssdm_global_array_dutpp0cppaplinecpp {

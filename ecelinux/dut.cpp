@@ -47,6 +47,11 @@ void dut(
       break;
     }
 
+    // Back projection
+    case 5:{
+      backproj(strm_in, strm_out);
+    }
+
     default:
     break;
   }
@@ -125,7 +130,7 @@ void dut(
 
 void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   float result = 0;
-  float A[100], B[100];
+  float A[100];
 
   LOOP_ROW:
   for (int i = 0; i < 784; i++) {
@@ -136,16 +141,19 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
     }
     LOOP_COL:
     for (int j = 0; j < 784; j++) {
-      // store B[j]
-      LOOP_ST_B:
-      for (int n = 0; n < 100; n++) {
-        B[n] = strm_in.read();
-      }
       // calculate A[j] dot B[j]
       LOOP_DOT_PROD:
       for (int k = 0; k < 100; k++) {
-        if (k == 0) result = 0;
-        result += A[k] * B[k];
+        if (k == 0) {
+          // // store B[j]
+          // LOOP_ST_B:
+          // for (int n = 0; n < 100; n++) {
+          //   B[n] = strm_in.read();
+          // }
+
+          result = 0;
+        }
+        result += A[k] * strm_in.read();
         // write back result XXT[i][j]
         if (k == 99)  strm_out.write(result);
       }
@@ -165,3 +173,29 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   // strm_out.write(buffer);
 }
 
+void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
+  float result = 0;
+  float A[784];
+
+  LOOP_ROW:
+  for (int i = 0; i < 10; i++) {
+    // store A[i]
+    LOOP_ST_A:
+    for (int m = 0; m < 784; m++) {
+      A[m] = strm_in.read();
+    }
+    LOOP_COL:
+    for (int j = 0; j < 100; j++) {
+      // calculate A[j] dot B[j]
+      LOOP_DOT_PROD:
+      for (int k = 0; k < 784; k++) {
+        if (k == 0) {
+          result = 0;
+        }
+        result += A[k] * strm_in.read();
+        // write back result XXT[i][j]
+        if (k == 783)  strm_out.write(result);
+      }
+    }
+  }
+}

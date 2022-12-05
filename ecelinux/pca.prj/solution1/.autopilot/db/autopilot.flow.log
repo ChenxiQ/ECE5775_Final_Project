@@ -1,164 +1,164 @@
-@I [HLS-0] Workspace /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1 opened at Sun Dec 04 17:56:03 EST 2022
-@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.1Total elapsed time: 3.321 sec.
+@I [HLS-0] Workspace /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1 opened at Sun Dec 04 22:38:27 EST 2022
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.07Total elapsed time: 1.347 sec.
 @I [HLS-100] Command "set_part xc7z020clg484-1 "
 @I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 3.336 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.361 sec.
 @I [HLS-100] Command "license_isbetapart xc7z020 "
-@I [HLS-100] Command 'license_isbetapart' returned 1; elapsed 0.02Total elapsed time: 3.377 sec.
+@I [HLS-100] Command 'license_isbetapart' returned 1; elapsed 0.01Total elapsed time: 1.373 sec.
 @I [HLS-100] Command "open_platform DefaultPlatform "
-@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 3.382 sec.
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 1.376 sec.
 @I [HLS-100] Command "import_lib /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/zynq/zynq "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx.lib "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/xilinx_interface.lib "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/plb46.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.401 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.385 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/fsl.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.405 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.387 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/axi4.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.409 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.389 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/maxi.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 3.414 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.391 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/saxilite.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.418 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 3.418 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.393 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.393 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/dsp48.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.423 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.396 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/ip/dds_compiler.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.430 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.399 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/ip/xfft.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.434 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.401 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/ip/xfir.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.439 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 3.443 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.403 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.407 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx_old.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.449 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.414 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx_vivado.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.454 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.416 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx.hlp "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/target_info.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.469 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.425 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/xilinx_interface.hlp "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/maxi.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.476 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.429 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/saxilite.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.481 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.481 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.431 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.431 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/dsp48.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.487 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.488 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.434 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.434 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/zynq/dsp48e1.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.492 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.437 sec.
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 3.492 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.437 sec.
 @I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 3.493 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.437 sec.
 @I [HLS-100] Command "config_chip_info -quiet -speed medium "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 3.493 sec.
-@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.04Total elapsed time: 3.495 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.437 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.03Total elapsed time: 1.439 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/zynq/zynq.gen "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/virtex.gen "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx.gen "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/plb46.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.582 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.453 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/fsl.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.588 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.457 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/axi4.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 3.596 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.464 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/nativeAXI4.gen "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/saxilite.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.607 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.475 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/maxi.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 3.620 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 3.620 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.484 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 1.485 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/scripts/xilinxcoregen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 3.638 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.496 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/XilEDKCoreGen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.651 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.504 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/ip/dds_compiler.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 3.660 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.510 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/ip/util.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 3.664 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.512 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/ip/xfft.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 3.756 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 1.597 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/ip/xfir.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 3.760 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.14Total elapsed time: 3.760 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.600 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.13Total elapsed time: 1.601 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/dsp48.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.767 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.14Total elapsed time: 3.767 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.14Total elapsed time: 3.768 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.604 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.13Total elapsed time: 1.605 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.13Total elapsed time: 1.605 sec.
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 3.773 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.611 sec.
 @I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 3.774 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.612 sec.
 @I [HLS-100] Command "config_chip_info -quiet -speed slow "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 3.774 sec.
-@I [HLS-100] Command 'add_library' returned 0; elapsed 0.21Total elapsed time: 3.780 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 0Total elapsed time: 1.612 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.18Total elapsed time: 1.620 sec.
 @I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 3.782 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 0Total elapsed time: 1.623 sec.
 @I [HLS-100] Command "open_platform DefaultPlatform "
-@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 3.784 sec.
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0Total elapsed time: 1.625 sec.
 @I [HLS-100] Command "import_lib /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/zynq/zynq_fpv6 "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx_fpv7.lib "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx_hp.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.797 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 3.801 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.634 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 1.638 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx_fpv.hlp "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx.hlp "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/target_info.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.818 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.658 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/xilinx_interface.hlp "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/maxi.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.819 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.659 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/saxilite.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.820 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.820 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.659 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.659 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/dsp48.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.822 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.823 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.823 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.660 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.661 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.661 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/zynq/zynq_hp.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.829 sec.
-@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.03Total elapsed time: 3.837 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.664 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.04Total elapsed time: 1.669 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/zynq/zynq_fpv6.gen "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx_fpv6.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.849 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 3.849 sec.
-@I [HLS-100] Command 'add_library' returned 0; elapsed 0.03Total elapsed time: 3.855 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.675 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 1.675 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.04Total elapsed time: 1.680 sec.
 @I [HLS-10] Setting target device to 'xc7z020clg484-1'
-@I [HLS-100] Command 'set_part' returned 0; elapsed 0.24Total elapsed time: 3.856 sec.
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.23Total elapsed time: 1.681 sec.
 @I [HLS-100] Command "create_clock -period 10 "
 @I [HLS-100] Command "config_clock -quiet -name default -period 10 -default=false "
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
-@I [HLS-100] Command 'config_clock' returned 0; elapsed 0Total elapsed time: 3.864 sec.
-@I [HLS-100] Command 'create_clock' returned 0; elapsed 0.01Total elapsed time: 3.865 sec.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0Total elapsed time: 1.689 sec.
+@I [HLS-100] Command 'create_clock' returned 0; elapsed 0Total elapsed time: 1.690 sec.
 @I [HLS-100] Command "set_directive_inline -off vm2x1_base "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
-@I [HLS-100] Command 'set_directive_inline' returned 0; elapsed 0Total elapsed time: 3.868 sec.
+@I [HLS-100] Command 'set_directive_inline' returned 0; elapsed 0Total elapsed time: 1.695 sec.
 @I [HLS-100] Command "set_directive_pipeline svd_alt/rd_buffer "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-0] Setting directive 'PIPELINE' 
-@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 3.873 sec.
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.700 sec.
 @I [HLS-100] Command "set_directive_pipeline svd_alt/svd_rd_diag "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
-@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 3.878 sec.
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.704 sec.
 @I [HLS-100] Command "set_directive_pipeline calc_svd/svd_calc_diag "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
-@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 3.885 sec.
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.709 sec.
 @I [HLS-100] Command "set_directive_pipeline svd_alt/svd_wb_diag "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
-@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0.01Total elapsed time: 3.890 sec.
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.714 sec.
 @I [HLS-100] Command "set_directive_pipeline svd_alt/svd_rd_off_r "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-0] Setting directive 'PIPELINE' 
@@ -166,7 +166,7 @@
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
-@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 3.896 sec.
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.719 sec.
 @I [HLS-100] Command "set_directive_pipeline update_off_diag_r/svd_calc_off_r "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-0] Setting directive 'PIPELINE' 
@@ -175,7 +175,7 @@
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
-@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 3.902 sec.
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.723 sec.
 @I [HLS-100] Command "set_directive_pipeline svd_alt/svd_wb_off_r "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-0] Setting directive 'PIPELINE' 
@@ -185,7 +185,7 @@
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
-@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 3.907 sec.
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0.01Total elapsed time: 1.728 sec.
 @I [HLS-100] Command "set_directive_pipeline svd_alt/svd_rd_off_c "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-0] Setting directive 'PIPELINE' 
@@ -196,7 +196,7 @@
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
-@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 3.913 sec.
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.734 sec.
 @I [HLS-100] Command "set_directive_pipeline update_off_diag_c/svd_calc_off_c "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-0] Setting directive 'PIPELINE' 
@@ -208,7 +208,7 @@
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
-@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0.01Total elapsed time: 3.920 sec.
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.741 sec.
 @I [HLS-100] Command "set_directive_pipeline svd_alt/svd_wb_off_c "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-0] Setting directive 'PIPELINE' 
@@ -221,7 +221,7 @@
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
-@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 3.927 sec.
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.746 sec.
 @I [HLS-100] Command "set_directive_pipeline svd_alt/wb_buffer "
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-0] Setting directive 'PIPELINE' 
@@ -235,37 +235,103 @@
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
-@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 3.937 sec.
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0.01Total elapsed time: 1.751 sec.
+@I [HLS-100] Command "set_directive_pipeline matmul/LOOP_ST_A "
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.756 sec.
+@I [HLS-100] Command "set_directive_pipeline matmul/LOOP_COL "
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.763 sec.
+@I [HLS-100] Command "set_directive_pipeline backproj/LOOP_ST_A "
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0.01Total elapsed time: 1.771 sec.
+@I [HLS-100] Command "set_directive_pipeline backproj/LOOP_DOT_PROD "
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-100] Command 'set_directive_pipeline' returned 0; elapsed 0Total elapsed time: 1.777 sec.
 @I [HLS-100] Command "csim_design -O "
-@I [HLS-100] Command "is_encrypted /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca_test.cpp "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 4.52 sec.
-@I [HLS-100] Command "is_xip /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca_test.cpp "
-@I [HLS-100] Command 'is_xip' returned 0; elapsed 0Total elapsed time: 4.52 sec.
-@I [HLS-100] Command "is_encrypted /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 4.55 sec.
-@I [HLS-100] Command "is_xip /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp "
-@I [HLS-100] Command 'is_xip' returned 0; elapsed 0Total elapsed time: 4.57 sec.
-@I [HLS-100] Command "is_encrypted /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 4.58 sec.
-@I [HLS-100] Command "is_xip /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp "
-@I [HLS-100] Command 'is_xip' returned 0; elapsed 0Total elapsed time: 4.59 sec.
+@I [HLS-100] Command "is_encrypted /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca_test.cpp "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 1.875 sec.
+@I [HLS-100] Command "is_xip /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca_test.cpp "
+@I [HLS-100] Command 'is_xip' returned 0; elapsed 0.01Total elapsed time: 1.875 sec.
+@I [HLS-100] Command "is_encrypted /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 1.876 sec.
+@I [HLS-100] Command "is_xip /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp "
+@I [HLS-100] Command 'is_xip' returned 0; elapsed 0Total elapsed time: 1.876 sec.
+@I [HLS-100] Command "is_encrypted /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 1.877 sec.
+@I [HLS-100] Command "is_xip /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp "
+@I [HLS-100] Command 'is_xip' returned 0; elapsed 0.01Total elapsed time: 1.877 sec.
 @I [HLS-100] Command "source run_sim.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 478.488 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 415.338 sec.
 @I [SIM-1] CSim done with 0 errors.
-@I [HLS-100] Command 'csim_design' returned 0; elapsed 0.08Total elapsed time: 478.495 sec.
+@I [HLS-100] Command 'csim_design' returned 0; elapsed 0.07Total elapsed time: 415.350 sec.
 @I [HLS-100] Command "csynth_design "
 @I [HLS-100] Command "elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 "
 @I [HLS-10] Analyzing design file 'dut.cpp' ... 
 @0 [HLS-0] Analyzing design file 'dut.cpp' ... 
 @I [HLS-0] Compiling one TU...
 @I [HLS-0] 
-Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit   -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/systemc/include" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/ap_sysc" -fexceptions -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -include etc/autopilot_ssdm_op.h "dut.cpp"  -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.00.o"
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit   -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/systemc/include" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/ap_sysc" -fexceptions -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -include etc/autopilot_ssdm_op.h "dut.cpp"  -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.00.o"
 
-@I [HLS-100] Command "is_encrypted /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.00.o "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 490.756 sec.
-@I [HLS-0] Syntax Checker time: 12 seconds per iteration
+@I [HLS-100] Command "is_encrypted /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.00.o "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 427.59 sec.
+@I [HLS-0] Syntax Checker time: 11 seconds per iteration
 @I [HLS-0] 
-Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "dut.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp"
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "dut.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp"
 
 @I [HLS-0] GCC PP time: 0 seconds per iteration
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
@@ -280,11 +346,15 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xili
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-100] Command "list_core -type functional_unit "
-@I [HLS-100] Command 'list_core' returned 0; elapsed 0Total elapsed time: 491.249 sec.
-@I [HLS-0] Marker-Pragma convertor: /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp.ap-line.cpp /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp.ap-line.cpp.CXX 1
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0Total elapsed time: 427.367 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp.ap-line.cpp /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp.ap-line.cpp.CXX 1
 @I [HLS-0] 
-Source processor: exec /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/autopilot.sourceprocessor.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/jargs.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp.ap-line.cpp"  -m "dut" -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp.ap-cdt.cpp" --pp --directive /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/solution1.directive --source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp --error /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --ca --es --gf --pd --p2d /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --sd --scff /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/.systemc_flag --ad
+Source processor: exec /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/autopilot.sourceprocessor.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/jargs.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp.ap-line.cpp"  -m "dut" -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp.ap-cdt.cpp" --pp --directive /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/solution1.directive --source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp --error /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --ca --es --gf --pd --p2d /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --sd --scff /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/.systemc_flag --ad
 
 @I [HLS-0] Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
 Error:Missing ; in source:t
@@ -294,26 +364,26 @@ Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
 Error:Missing ; in source:t
 Error:Syntax error in source:)
  *__first = __tmp;
-@I [HLS-0] Marker-Pragma convertor: /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp.ap-cdt.cpp /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.0.cpp /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.0.cpp.ap-line.CXX 0
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pragma.status.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 506.963 sec.
-@I [HLS-0] CDT processor time: 15 seconds per iteration
+@I [HLS-0] Marker-Pragma convertor: /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pp.0.cpp.ap-cdt.cpp /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.0.cpp /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.0.cpp.ap-line.CXX 0
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 441.889 sec.
+@I [HLS-0] CDT processor time: 14 seconds per iteration
 @I [HLS-0] Pragma handling time: 0 seconds per iteration
 @I [HLS-0] 
-Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.2.cpp"
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.2.cpp"
 
-@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.g.bc"
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.g.bc"
 @I [HLS-10] Analyzing design file 'pca.cpp' ... 
 @0 [HLS-0] Analyzing design file 'pca.cpp' ... 
 @I [HLS-0] Compiling one TU...
 @I [HLS-0] 
-Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit   -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/systemc/include" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/ap_sysc" -fexceptions -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -include etc/autopilot_ssdm_op.h "pca.cpp"  -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.00.o"
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit   -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/systemc/include" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/ap_sysc" -fexceptions -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -include etc/autopilot_ssdm_op.h "pca.cpp"  -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.00.o"
 
-@I [HLS-100] Command "is_encrypted /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.00.o "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 524.320 sec.
+@I [HLS-100] Command "is_encrypted /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.00.o "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 458.755 sec.
 @I [HLS-0] Syntax Checker time: 11 seconds per iteration
 @I [HLS-0] 
-Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "pca.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp"
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "pca.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp"
 
 @I [HLS-0] GCC PP time: 0 seconds per iteration
 @I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
@@ -328,11 +398,15 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xili
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
+@I [HLS-0] Setting directive 'PIPELINE' 
 @I [HLS-100] Command "list_core -type functional_unit "
-@I [HLS-100] Command 'list_core' returned 0; elapsed 0Total elapsed time: 524.617 sec.
-@I [HLS-0] Marker-Pragma convertor: /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp.ap-line.cpp /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp.ap-line.cpp.CXX 1
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0Total elapsed time: 458.952 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp.ap-line.cpp /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp.ap-line.cpp.CXX 1
 @I [HLS-0] 
-Source processor: exec /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/autopilot.sourceprocessor.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/jargs.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp.ap-line.cpp"  -m "dut" -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp.ap-cdt.cpp" --pp --directive /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/solution1.directive --source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp --error /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --ca --es --gf --pd --p2d /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --sd --scff /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/.systemc_flag --ad
+Source processor: exec /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/autopilot.sourceprocessor.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lib/classes/jargs.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp.ap-line.cpp"  -m "dut" -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp.ap-cdt.cpp" --pp --directive /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/solution1.directive --source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp --error /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --ca --es --gf --pd --p2d /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db --sd --scff /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/.systemc_flag --ad
 
 @I [HLS-0] Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
 Error:Missing ; in source:t
@@ -346,84 +420,84 @@ Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
 Error:Missing ; in source:t
 Error:Syntax error in source:)
  *__first = __gen();
-@I [HLS-0] Marker-Pragma convertor: /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp.ap-cdt.cpp /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.0.cpp /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.0.cpp.ap-line.CXX 0
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pragma.status.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 540.412 sec.
-@I [HLS-0] CDT processor time: 15 seconds per iteration
+@I [HLS-0] Marker-Pragma convertor: /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pp.0.cpp.ap-cdt.cpp /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.0.cpp /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.0.cpp.ap-line.CXX 0
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 473.788 sec.
+@I [HLS-0] CDT processor time: 14 seconds per iteration
 @I [HLS-0] Pragma handling time: 0 seconds per iteration
 @I [HLS-0] 
-Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.2.cpp"
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.2.cpp"
 
-@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.g.bc"
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/ve_warning.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 546.8 sec.
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot" -I "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.g.bc"
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/ve_warning.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 478.892 sec.
 @I [HLS-10] Validating synthesis directives ...
 @0 [HLS-0] Validating synthesis directives ...
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pragma.status.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 546.15 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 478.900 sec.
 @W [HLS-40] Directive 'INLINE' for location 'vm2x1_base' has been applied in multiple source file:
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/rd_buffer' has been applied in multiple source file:
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_diag' has been applied in multiple source file:
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'calc_svd/svd_calc_diag' has been applied in multiple source file:
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/svd_wb_diag' has been applied in multiple source file:
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_off_r' has been applied in multiple source file:
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'update_off_diag_r/svd_calc_off_r' has been applied in multiple source file:
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/svd_wb_off_r' has been applied in multiple source file:
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_off_c' has been applied in multiple source file:
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'update_off_diag_c/svd_calc_off_c' has been applied in multiple source file:
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' cannot be applied: Label 'svd_wb_off_c' does not exist in function 'svd_alt'. 
 @W [HLS-40] Directive 'PIPELINE' cannot be applied: Label 'wb_buffer' does not exist in function 'svd_alt'. 
 @I [HLS-0] Linking all ...
-@I [HLS-0] exec llvm-ld  "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.bc" "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.bc"  -disable-opt  -L/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/lib -lm_basic -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.pre"
+@I [HLS-0] exec llvm-ld  "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.bc" "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.bc"  -disable-opt  -L/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/lib -lm_basic -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.pre"
 @I [HLS-0] Link time: 2 seconds per iteration
 @I [HLS-0] Linking all ...
-@I [HLS-0] exec llvm-ld  "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.g.bc" "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.g.bc"  -disable-opt  -L/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/lib -lm_basic -o "/home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.pre"
+@I [HLS-0] exec llvm-ld  "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.g.bc" "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.g.bc"  -disable-opt  -L/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/lib -lm_basic -o "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.pre"
 @I [HLS-0] Link time: 2 seconds per iteration
 @I [HLS-100] Command "opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 "
 @I [HLS-100] Command "cleanup_all_models "
-@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 0Total elapsed time: 551.738 sec.
+@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 0Total elapsed time: 484.362 sec.
 @I [HLS-10] Starting code transformations ...
 @0 [HLS-0] Starting code transformations ...
-@I [HLS-0] std xform: transform -hls -share-std-xform -always-inline -promote-dbg-pointer  -interface-preproc  -scalarrepl -mem2reg -keep-read-access -instcombine -dce  -promote-dbg-pointer  -bitop-raise  -indvars -loop-simplify -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -basicaa  -simplifycfg -mem2reg -globalopt  -global-constprop -deadargelim -instcombine -simplifycfg  -prune-eh -simplifycfg  -scalarrepl -instcombine -reassociate -licm  -simplifycfg -loop-simplify -indvars -instcombine  -simplifycfg -mem2reg -loop-simplify -indvars -instcombine  -gvn -gvn -instcombine -adce  -break-crit-edges  -simplifycfg -loop-delete  -global-array-opt -dce -dse -adce  -find-syn-modules -top dut  -deadargelim  -mem2reg -instcombine -dce  -presyn-prepare -auto-rom-infer  -interface-preproc  -syn-check -check-rec-only  -find-region -simplifycfg -func-extr -function-inline  -globaldce -mem2reg -instcombine -dce   -gvn -globaldce -adce -adse  -constprop -instcombine -bit-constprop  -instcombine -dce -simplifycfg -bitop-raise  -simplifycfg -dce -loop-delete -reassociate  -globalopt -global-privatize -mem2reg -dce  -global-constprop -pointer-simplify -constprop -dce  -func-inst -deadargelim  -promote-dbg-pointer  -norm-name   /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.0.bc -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.1.bc -f  -phase std-opt
+@I [HLS-0] std xform: transform -hls -share-std-xform -always-inline -promote-dbg-pointer  -interface-preproc  -scalarrepl -mem2reg -keep-read-access -instcombine -dce  -promote-dbg-pointer  -bitop-raise  -indvars -loop-simplify -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -basicaa  -simplifycfg -mem2reg -globalopt  -global-constprop -deadargelim -instcombine -simplifycfg  -prune-eh -simplifycfg  -scalarrepl -instcombine -reassociate -licm  -simplifycfg -loop-simplify -indvars -instcombine  -simplifycfg -mem2reg -loop-simplify -indvars -instcombine  -gvn -gvn -instcombine -adce  -break-crit-edges  -simplifycfg -loop-delete  -global-array-opt -dce -dse -adce  -find-syn-modules -top dut  -deadargelim  -mem2reg -instcombine -dce  -presyn-prepare -auto-rom-infer  -interface-preproc  -syn-check -check-rec-only  -find-region -simplifycfg -func-extr -function-inline  -globaldce -mem2reg -instcombine -dce   -gvn -globaldce -adce -adse  -constprop -instcombine -bit-constprop  -instcombine -dce -simplifycfg -bitop-raise  -simplifycfg -dce -loop-delete -reassociate  -globalopt -global-privatize -mem2reg -dce  -global-constprop -pointer-simplify -constprop -dce  -func-inst -deadargelim  -promote-dbg-pointer  -norm-name   /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.0.bc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.1.bc -f  -phase std-opt
 @I [XFORM-603] Inlining function 'ap_fixed_base<78, 55, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371).
 @I [XFORM-603] Inlining function 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<55, 55, false, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
 @I [XFORM-603] Inlining function 'svd::svd2x2<float, float, float>' into 'svd::calc_svd<784, 784, MY_CONFIG_SVD>' (./svd.h:298).
 @I [HLS-0] Std xform time: 4 seconds per iteration
-@I [HLS-100] Command "is_encrypted /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.1.bc "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 559.995 sec.
+@I [HLS-100] Command "is_encrypted /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.1.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 492.294 sec.
 @I [HLS-10] Checking synthesizability ...
 @0 [HLS-0] Checking synthesizability ...
-@I [HLS-0] syn check 1/2: transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine  -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce  -array-normalize -instcombine -dce  -array-seg-normalize -instcombine -dce  -array-flatten -instcombine -dce  -array-burst -dce  -deadargelim -promote-global-argument  -simplifycfg -mem2reg -globaldce -resolve-double-ptr  -dce -deadargelim -dce -instcombine  -function-inline -globaldce -dce  -doublePtrSimplify -doublePtrElim -dce  -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -dse -adse -instcombine  -ptrLegalization  -simplifycfg -dce -instcombine  -pointer-simplify -ptrArgReplace -dce -instcombine   -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine -ptrLegalization   -simplifycfg -deadargelim  -instcombine -dce -inst-simplify  -function-uniquify -directive-preproc -mem2reg -dse -dce  -globaldce    /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.1.bc -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.2.prechk.bc -f
+@I [HLS-0] syn check 1/2: transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine  -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce  -array-normalize -instcombine -dce  -array-seg-normalize -instcombine -dce  -array-flatten -instcombine -dce  -array-burst -dce  -deadargelim -promote-global-argument  -simplifycfg -mem2reg -globaldce -resolve-double-ptr  -dce -deadargelim -dce -instcombine  -function-inline -globaldce -dce  -doublePtrSimplify -doublePtrElim -dce  -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -dse -adse -instcombine  -ptrLegalization  -simplifycfg -dce -instcombine  -pointer-simplify -ptrArgReplace -dce -instcombine   -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine -ptrLegalization   -simplifycfg -deadargelim  -instcombine -dce -inst-simplify  -function-uniquify -directive-preproc -mem2reg -dse -dce  -globaldce    /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.1.bc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.2.prechk.bc -f
 @I [XFORM-602] Inlining function 'fp_struct<float>::mantissa' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:368) automatically.
 @I [XFORM-602] Inlining function 'fp_struct<float>::expv' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371) automatically.
 @I [XFORM-602] Inlining function 'fp_struct<float>::__signbit' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:383) automatically.
@@ -447,11 +521,13 @@ Please use function labels to distinguish different locations if necessary.
 @I [XFORM-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::update_off_diag_c<784, 784, MY_CONFIG_SVD>' (./svd.h:450) automatically.
 @I [XFORM-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:28) automatically.
 @I [HLS-0] Syn check 1/2 time: 1 seconds per iteration
-@I [HLS-0] syn check 2/2: transform -syn-check   /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.2.bc -f  -phase syn-check
+@I [HLS-0] syn check 2/2: transform -syn-check   /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.2.bc -f  -phase syn-check
 @I [HLS-0] Syn check 2/2 time: 1 seconds per iteration
 @I [HLS-0] Compiler optimizing ...
-@I [HLS-0] Share syncheck's 1.bc for syn flow: copy /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.1.bc to /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.1.bc
-@I [HLS-0] presyn 1: transform -hls -tmp /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db -type-info  -function-uniquify -directive-preproc -mem2reg -dse -dce  -disaggr -scalarrepl -norm-name -deadargelim  -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify  -resource-proc  -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine  -clib-intrinsic-prepare -dce  -func-buffer -dce -array-normalize  -func-legal -instcombine -gvn -constprop -dce   -ptrArgReplace -mem2reg -instcombine -dce  -array-seg-normalize -deadargelim  -instcombine -dce  -pointer-simplify -dce  -port-alignment -dce  -interface-preproc  -data-pack -instcombine -dce   -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -loop-simplify -indvars -instcombine  -gvn -loop-simplify -mem2reg -dce -simplifycfg  -find-region -instcombine  -auto-loop-pipeline  -inst-simplify  -interface-preproc  -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -attach-range  -gvn -inst-simplify  -constprop -simplifycfg -dce  -pointer-simplify -dce  -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce  -auto-par -instcombine -dce  -array-transform-check  -array-reshape -instcombine -simplifycfg -dce  -ptrArgReplace -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -indvars -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -duplicate-dataflow-processes -globaldce  -array-partition -instcombine -simplifycfg -dce  -ptrArgReplace -global-constprop -deadargelim -mem2reg  -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce   -mem-intrinsic-preproc -dce  -global-privatize  -mem2reg -globaldce  -promote-global-argument  -ptrArgReplace -mem2reg -instcombine -dce  -globalopt -mergereturn -simplify-global-access -mem2reg -dce  -pointer-simplify -dce  -functionattrs  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -inst-simplify -dce -norm-name  -function-inline -globaldce  -func-inst -constprop -instcombine -simplifycfg -dce  -func-legal -dce   -loop-bound  -arraycheck -bitwidthmin -on-by-dataflow  -loop-delete -instcombine -simplifycfg  -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments  -loop-stream -instcombine -simplifycfg -dce -globaldce  -stream-intrinsic-preproc -dce  -check-ap-stream -loop-simplify -eliminate-keepreads  -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse  -check-dataflow-syntax  -legalize-stream-variable -legalize-global -legalize-global-1  -extract-subproc -dce -dead-channel-elimination  -canonicalize-gep -globaldce -dce -gvn -deadargelim  -scalar-propagation -deadargelim -globaldce -mem2reg  -check-dataflow-channels -function-stream -annotate-dataflow-channels -dce -globaldce  -prop-fifo-spec -internal-stream-gen  -canonicalize-gep -globaldce -dce -gvn -deadargelim   -mergereturn -indvars -loop-simplify -instcombine  -array-stream -instcombine -simplifycfg -dce  -bundle-memfifo-ops -deadargelim    -function-uniquify -directive-preproc -mem2reg -dse -dce  -group-axi-access    -licm -simplifycfg -dce -loop-delete  -norm-name  /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.1.bc -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.1.tmp.bc -f
+@I [HLS-0] Share syncheck's 1.bc for syn flow: copy /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.g.1.bc to /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.1.bc
+@I [HLS-0] presyn 1: transform -hls -tmp /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db -type-info  -function-uniquify -directive-preproc -mem2reg -dse -dce  -disaggr -scalarrepl -norm-name -deadargelim  -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify  -resource-proc  -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine  -clib-intrinsic-prepare -dce  -func-buffer -dce -array-normalize  -func-legal -instcombine -gvn -constprop -dce   -ptrArgReplace -mem2reg -instcombine -dce  -array-seg-normalize -deadargelim  -instcombine -dce  -pointer-simplify -dce  -port-alignment -dce  -interface-preproc  -data-pack -instcombine -dce   -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -loop-simplify -indvars -instcombine  -gvn -loop-simplify -mem2reg -dce -simplifycfg  -find-region -instcombine  -auto-loop-pipeline  -inst-simplify  -interface-preproc  -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -attach-range  -gvn -inst-simplify  -constprop -simplifycfg -dce  -pointer-simplify -dce  -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce  -auto-par -instcombine -dce  -array-transform-check  -array-reshape -instcombine -simplifycfg -dce  -ptrArgReplace -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -indvars -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -duplicate-dataflow-processes -globaldce  -array-partition -instcombine -simplifycfg -dce  -ptrArgReplace -global-constprop -deadargelim -mem2reg  -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce   -mem-intrinsic-preproc -dce  -global-privatize  -mem2reg -globaldce  -promote-global-argument  -ptrArgReplace -mem2reg -instcombine -dce  -globalopt -mergereturn -simplify-global-access -mem2reg -dce  -pointer-simplify -dce  -functionattrs  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -inst-simplify -dce -norm-name  -function-inline -globaldce  -func-inst -constprop -instcombine -simplifycfg -dce  -func-legal -dce   -loop-bound  -arraycheck -bitwidthmin -on-by-dataflow  -loop-delete -instcombine -simplifycfg  -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments  -loop-stream -instcombine -simplifycfg -dce -globaldce  -stream-intrinsic-preproc -dce  -check-ap-stream -loop-simplify -eliminate-keepreads  -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse  -check-dataflow-syntax  -legalize-stream-variable -legalize-global -legalize-global-1  -extract-subproc -dce -dead-channel-elimination  -canonicalize-gep -globaldce -dce -gvn -deadargelim  -scalar-propagation -deadargelim -globaldce -mem2reg  -check-dataflow-channels -function-stream -annotate-dataflow-channels -dce -globaldce  -prop-fifo-spec -internal-stream-gen  -canonicalize-gep -globaldce -dce -gvn -deadargelim   -mergereturn -indvars -loop-simplify -instcombine  -array-stream -instcombine -simplifycfg -dce  -bundle-memfifo-ops -deadargelim    -function-uniquify -directive-preproc -mem2reg -dse -dce  -group-axi-access    -licm -simplifycfg -dce -loop-delete  -norm-name  /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.1.bc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.1.tmp.bc -f
+@I [XFORM-502] Unrolling all sub-loops inside loop 'LOOP_COL' (dut.cpp:143) in function 'matmul' for pipelining.
+@I [XFORM-501] Unrolling loop 'LOOP_DOT_PROD' (dut.cpp:146) in function 'matmul' completely.
 @I [XFORM-602] Inlining function 'fp_struct<float>::mantissa' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:368) automatically.
 @I [XFORM-602] Inlining function 'fp_struct<float>::expv' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371) automatically.
 @I [XFORM-602] Inlining function 'fp_struct<float>::__signbit' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:383) automatically.
@@ -475,26 +551,31 @@ Please use function labels to distinguish different locations if necessary.
 @I [XFORM-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::update_off_diag_c<784, 784, MY_CONFIG_SVD>' (./svd.h:450) automatically.
 @I [XFORM-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:28) automatically.
 @I [XFORM-602] Inlining function 'svd::update_off_diag_c<784, 784, MY_CONFIG_SVD>' into 'dut' (dut.cpp:40) automatically.
-@I [HLS-0] Presyn 1 time: 2 seconds per iteration
-@I [HLS-0] presyn 2: transform -hls -keep-callgraph -scalarrepl -mem2reg  -port-alignment -attach-range -dce  -pipe-mux-gen  -indvars -loop-bound  -inst-simplify -instcombine -dce  -merge-array-access -mem2reg -dce  -clean-region -mergereturn -if-conv  -instcombine -dce -constprop  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -scalarrepl -mem2reg  -global-constprop -deadargelim -deadargelim  -instcombine -dce -simplifycfg    -ptrArgReplace -mem2reg -function-inline  -globaldce -mem2reg -instcombine -dce -expr-balance  -instcombine -dce  -bitwidthmin  -interface-preproc -directive-preproc  -inst-rectify -instcombine -dce  -functionattrs  -constprop -instcombine -bit-constprop  -simplify-global-access  -globalopt -globaldce  -inst-simplify -instcombine -elimdeaddata -dce  -loop-delete -simplifycfg -loop-simplify -auto-burst   -norm-name /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.2.bc -f  -phase presyn
+@I [HLS-0] Presyn 1 time: 8 seconds per iteration
+@I [HLS-0] presyn 2: transform -hls -keep-callgraph -scalarrepl -mem2reg  -port-alignment -attach-range -dce  -pipe-mux-gen  -indvars -loop-bound  -inst-simplify -instcombine -dce  -merge-array-access -mem2reg -dce  -clean-region -mergereturn -if-conv  -instcombine -dce -constprop  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -scalarrepl -mem2reg  -global-constprop -deadargelim -deadargelim  -instcombine -dce -simplifycfg    -ptrArgReplace -mem2reg -function-inline  -globaldce -mem2reg -instcombine -dce -expr-balance  -instcombine -dce  -bitwidthmin  -interface-preproc -directive-preproc  -inst-rectify -instcombine -dce  -functionattrs  -constprop -instcombine -bit-constprop  -simplify-global-access  -globalopt -globaldce  -inst-simplify -instcombine -elimdeaddata -dce  -loop-delete -simplifycfg -loop-simplify -auto-burst   -norm-name /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.2.bc -f  -phase presyn
 @I [XFORM-401] Performing if-conversion on hyperblock from (./svd.h:290:70) to (./svd.h:290:62) in function 'svd::calc_svd<784, 784, MY_CONFIG_SVD>'... converting 5 basic blocks.
 @I [XFORM-401] Performing if-conversion on hyperblock to (dut.cpp:28:3) in function 'dut'... converting 4 basic blocks.
-@I [HLS-0] Presyn 2 time: 1 seconds per iteration
-@I [HLS-100] Command "is_encrypted /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.2.bc "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 568.655 sec.
-@I [HLS-0] build ssdm: transform -hls  -function-uniquify -auto-function-inline -globaldce  -ptrArgReplace -mem2reg -instcombine -dce  -reset-lda  -loop-simplify -indvars -licm -loop-dep  -loop-bound -licm -loop-simplify -flattenloopnest  -array-flatten -gvn -instcombine -dce  -array-map -dce -func-legal  -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify   -array-burst -promote-global-argument -dce  -axi4-lower -array-seg-normalize  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm  -inst-simplify -dce  -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine  -dce   -deadargelim -doublePtrSimplify  -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg  -instcombine  -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine  -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound  -loop-simplify -loop-preproc  -constprop -global-constprop -gvn -mem2reg -instcombine -dce  -loop-merge -dce  -bitwidthmin  -deadargelim -dce  -scalar-propagation -deadargelim -globaldce -mem2reg  -interface-preproc -interface-gen  -deadargelim -directive-preproc -inst-simplify -dce  -gvn -mem2reg -instcombine -dce -adse  -loop-bound  -instcombine -cfgopt -simplifycfg -loop-simplify  -clean-region -io-protocol  -find-region -mem2reg  -bitop-raise  -inst-simplify -inst-rectify -instcombine -adce -deadargelim  -loop-simplify -phi-opt -bitop-raise  -cfgopt -simplifycfg -strip-dead-prototypes  -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa  -inst-simplify -simplifycfg   -mergereturn -inst-simplify -inst-rectify  -dce -bitop-lower  -loop-rewind -pointer-simplify -dce -cfgopt  -read-loop-dep -dce -bitwidth -norm-name -legalize    -cdfg-build  /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.2.bc -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.3.bc -f  -phase build-ssdm
+@I [HLS-0] Presyn 2 time: 4 seconds per iteration
+@I [HLS-100] Command "is_encrypted /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.2.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 509.556 sec.
+@I [HLS-0] build ssdm: transform -hls  -function-uniquify -auto-function-inline -globaldce  -ptrArgReplace -mem2reg -instcombine -dce  -reset-lda  -loop-simplify -indvars -licm -loop-dep  -loop-bound -licm -loop-simplify -flattenloopnest  -array-flatten -gvn -instcombine -dce  -array-map -dce -func-legal  -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify   -array-burst -promote-global-argument -dce  -axi4-lower -array-seg-normalize  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm  -inst-simplify -dce  -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine  -dce   -deadargelim -doublePtrSimplify  -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg  -instcombine  -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine  -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound  -loop-simplify -loop-preproc  -constprop -global-constprop -gvn -mem2reg -instcombine -dce  -loop-merge -dce  -bitwidthmin  -deadargelim -dce  -scalar-propagation -deadargelim -globaldce -mem2reg  -interface-preproc -interface-gen  -deadargelim -directive-preproc -inst-simplify -dce  -gvn -mem2reg -instcombine -dce -adse  -loop-bound  -instcombine -cfgopt -simplifycfg -loop-simplify  -clean-region -io-protocol  -find-region -mem2reg  -bitop-raise  -inst-simplify -inst-rectify -instcombine -adce -deadargelim  -loop-simplify -phi-opt -bitop-raise  -cfgopt -simplifycfg -strip-dead-prototypes  -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa  -inst-simplify -simplifycfg   -mergereturn -inst-simplify -inst-rectify  -dce -bitop-lower  -loop-rewind -pointer-simplify -dce -cfgopt  -read-loop-dep -dce -bitwidth -norm-name -legalize    -cdfg-build  /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.2.bc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.3.bc -f  -phase build-ssdm
 @I [XFORM-541] Flattening a loop nest 'Loop-1' (./svd.h:372:22) in function 'svd::update_off_diag_r<784, 784, MY_CONFIG_SVD>'.
+@W [XFORM-542] Cannot flatten a loop nest 'LOOP_ROW' (dut.cpp:136:34) in function 'matmul' : 
+               more than one sub loop.
 @I [XFORM-541] Flattening a loop nest 'Loop-1' (./svd.h:436:22) in function 'dut'.
+@I [XFORM-541] Flattening a loop nest 'LOOP_COL' (dut.cpp:188:36) in function 'backproj'.
+@W [XFORM-542] Cannot flatten a loop nest 'LOOP_ROW' (dut.cpp:181:33) in function 'backproj' : 
+               more than one sub loop.
 @W [XFORM-631] Renaming function 'svd::update_off_diag_r<784, 784, MY_CONFIG_SVD>' (./svd.h:64:78) into update_off_diag_r.
 @W [XFORM-631] Renaming function 'svd::calc_svd<784, 784, MY_CONFIG_SVD>' (./svd.h:64:62) into calc_svd.
 @W [XFORM-631] Renaming function 'svd::calc_angle<float, float>' (./svd.h:48:7) into calc_angle<float, float>.
-@I [HLS-0] Build ssdm time: 2 seconds per iteration
-@I [HLS-100] Command "is_encrypted /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.3.bc "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 572.91 sec.
+@I [HLS-0] Build ssdm time: 5 seconds per iteration
+@I [HLS-100] Command "is_encrypted /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.3.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0Total elapsed time: 516.10 sec.
 @I [HLS-0] Finish building internal data model.
-@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 14.1Total elapsed time: 573.28 sec.
-@I [HLS-111] Elapsed time: 19.74 seconds; current memory usage: 589 MB.
-@I [HLS-100] Command 'elaborate' returned 0; elapsed 18.67Total elapsed time: 573.46 sec.
+@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 25.79Total elapsed time: 516.968 sec.
+@I [HLS-111] Elapsed time: 30.72 seconds; current memory usage: 601 MB.
+@I [HLS-100] Command 'elaborate' returned 0; elapsed 29.9Total elapsed time: 516.987 sec.
 @I [HLS-100] Command "autosyn "
 @I [HLS-10] Starting hardware synthesis ...
 @0 [HLS-0] Starting hardware synthesis ...
@@ -503,84 +584,181 @@ Please use function labels to distinguish different locations if necessary.
 @0 [HLS-0] Synthesizing 'dut' ...
 @I [HLS-100] Command "ap_set_top_model dut "
 @W [SYN-103] Legalizing function name 'dut_calc_angle<float, float>' to 'dut_calc_angle_float_float_s'.
-@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 0.01Total elapsed time: 573.48 sec.
+@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 0Total elapsed time: 516.988 sec.
 @I [HLS-100] Command "get_model_list dut -filter all-wo-channel -topdown "
-@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 573.49 sec.
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 516.989 sec.
 @I [HLS-100] Command "preproc_iomode -model dut "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 573.49 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 516.989 sec.
 @I [HLS-100] Command "preproc_iomode -model dut_calc_svd "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 573.49 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 516.989 sec.
 @I [HLS-100] Command "preproc_iomode -model dut_calc_angle<float, float> "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 573.49 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 516.990 sec.
 @I [HLS-100] Command "preproc_iomode -model dut_update_off_diag_r "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 573.50 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 516.990 sec.
 @I [HLS-100] Command "preproc_iomode -model dut_matmul "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 573.50 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 516.990 sec.
+@I [HLS-100] Command "preproc_iomode -model dut_backproj "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0Total elapsed time: 516.990 sec.
 @I [HLS-100] Command "get_model_list dut -filter all-wo-channel "
-@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 573.50 sec.
-@I [HLS-0] Model list for configure: dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 516.991 sec.
+@I [HLS-0] Model list for configure: dut_backproj dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut
+@I [HLS-0] Configuring Module : dut_backproj ...
+@I [HLS-100] Command "set_default_model dut_backproj "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 516.991 sec.
+@I [HLS-100] Command "apply_spec_resource_limit dut_backproj "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 516.991 sec.
 @I [HLS-0] Configuring Module : dut_matmul ...
 @I [HLS-100] Command "set_default_model dut_matmul "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.51 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 516.991 sec.
 @I [HLS-100] Command "apply_spec_resource_limit dut_matmul "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 573.51 sec.
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 516.991 sec.
 @I [HLS-0] Configuring Module : dut_update_off_diag_r ...
 @I [HLS-100] Command "set_default_model dut_update_off_diag_r "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.51 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 516.992 sec.
 @I [HLS-100] Command "apply_spec_resource_limit dut_update_off_diag_r "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 573.51 sec.
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 516.992 sec.
 @I [HLS-0] Configuring Module : dut_calc_angle<float, float> ...
 @I [HLS-100] Command "set_default_model dut_calc_angle<float, float> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.51 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 516.992 sec.
 @I [HLS-100] Command "apply_spec_resource_limit dut_calc_angle<float, float> "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 573.51 sec.
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 516.992 sec.
 @I [HLS-0] Configuring Module : dut_calc_svd ...
 @I [HLS-100] Command "set_default_model dut_calc_svd "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.51 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 516.992 sec.
 @I [HLS-100] Command "apply_spec_resource_limit dut_calc_svd "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 573.52 sec.
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 516.992 sec.
 @I [HLS-0] Configuring Module : dut ...
 @I [HLS-100] Command "set_default_model dut "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.52 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 516.992 sec.
 @I [HLS-100] Command "apply_spec_resource_limit dut "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 573.52 sec.
-@I [HLS-0] Model list for preprocess: dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 0Total elapsed time: 516.992 sec.
+@I [HLS-0] Model list for preprocess: dut_backproj dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut
+@I [HLS-0] Preprocessing Module: dut_backproj ...
+@I [HLS-100] Command "set_default_model dut_backproj "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 516.993 sec.
+@I [HLS-100] Command "cdfg_preprocess -model dut_backproj "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 516.993 sec.
+@I [HLS-100] Command "rtl_gen_preprocess dut_backproj "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 516.995 sec.
 @I [HLS-0] Preprocessing Module: dut_matmul ...
 @I [HLS-100] Command "set_default_model dut_matmul "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.52 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 516.996 sec.
 @I [HLS-100] Command "cdfg_preprocess -model dut_matmul "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 573.53 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.01Total elapsed time: 517.7 sec.
 @I [HLS-100] Command "rtl_gen_preprocess dut_matmul "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 573.55 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 517.8 sec.
 @I [HLS-0] Preprocessing Module: dut_update_off_diag_r ...
 @I [HLS-100] Command "set_default_model dut_update_off_diag_r "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.55 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 517.9 sec.
 @I [HLS-100] Command "cdfg_preprocess -model dut_update_off_diag_r "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 573.58 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 517.11 sec.
 @I [HLS-100] Command "rtl_gen_preprocess dut_update_off_diag_r "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 573.59 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 517.12 sec.
 @I [HLS-0] Preprocessing Module: dut_calc_angle<float, float> ...
 @I [HLS-100] Command "set_default_model dut_calc_angle<float, float> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.59 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 517.12 sec.
 @I [HLS-100] Command "cdfg_preprocess -model dut_calc_angle<float, float> "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 573.60 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 517.12 sec.
 @I [HLS-100] Command "rtl_gen_preprocess dut_calc_angle<float, float> "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 573.61 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.01Total elapsed time: 517.13 sec.
 @I [HLS-0] Preprocessing Module: dut_calc_svd ...
 @I [HLS-100] Command "set_default_model dut_calc_svd "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.61 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 517.14 sec.
 @I [HLS-100] Command "cdfg_preprocess -model dut_calc_svd "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.01Total elapsed time: 573.69 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 517.19 sec.
 @I [HLS-100] Command "rtl_gen_preprocess dut_calc_svd "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 573.70 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 517.19 sec.
 @I [HLS-0] Preprocessing Module: dut ...
 @I [HLS-100] Command "set_default_model dut "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.71 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 517.20 sec.
 @I [HLS-100] Command "cdfg_preprocess -model dut "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 573.73 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0Total elapsed time: 517.21 sec.
 @I [HLS-100] Command "rtl_gen_preprocess dut "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 573.75 sec.
-@I [HLS-0] Model list for synthesis: dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 517.22 sec.
+@I [HLS-0] Model list for synthesis: dut_backproj dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dut_backproj' 
+@0 [HLS-0] -- Scheduling module 'dut_backproj' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dut_backproj "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 517.23 sec.
+@I [HLS-100] Command "schedule -model dut_backproj "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'LOOP_ST_A'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
+@I [SCHED-61] Pipelining loop 'LOOP_COL_LOOP_DOT_PROD'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between 'store' operation (dut.cpp:195) of variable 'result', dut.cpp:195 on local variable 'tmp' and 'load' operation ('p_load', dut.cpp:192) on local variable 'tmp'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)
+   between 'store' operation (dut.cpp:195) of variable 'result', dut.cpp:195 on local variable 'tmp' and 'load' operation ('p_load', dut.cpp:192) on local variable 'tmp'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)
+   between 'store' operation (dut.cpp:195) of variable 'result', dut.cpp:195 on local variable 'tmp' and 'load' operation ('p_load', dut.cpp:192) on local variable 'tmp'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 4, distance = 1)
+   between 'store' operation (dut.cpp:195) of variable 'result', dut.cpp:195 on local variable 'tmp' and 'load' operation ('p_load', dut.cpp:192) on local variable 'tmp'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 5, Depth: 12.
+@W [SCHED-21] Estimated clock period (8.83ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+@W [SCHED-21] The critical path consists of the following:
+	'fadd' operation ('result', dut.cpp:195) (7.26 ns)
+	'store' operation (dut.cpp:195) of variable 'result', dut.cpp:195 on local variable 'tmp' (1.57 ns)
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.13Total elapsed time: 517.144 sec.
+@I [HLS-111] Elapsed time: 0.17 seconds; current memory usage: 602 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_backproj.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 517.171 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_backproj.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0Total elapsed time: 517.184 sec.
+@I [HLS-0] Finish scheduling dut_backproj.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dut_backproj' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'dut_backproj' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model dut_backproj "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 517.188 sec.
+@I [HLS-100] Command "bind -model dut_backproj "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=dut_backproj
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.01Total elapsed time: 517.203 sec.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 602 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_backproj.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 517.247 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_backproj.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 517.261 sec.
+@I [HLS-0] Finish binding dut_backproj.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'dut_matmul' 
@@ -588,16 +766,34 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model dut_matmul "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.76 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 517.262 sec.
 @I [HLS-100] Command "schedule -model dut_matmul "
 @I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'LOOP_ST_A'.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 2.
+@I [SCHED-61] Pipelining loop 'LOOP_COL'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between fifo read on port 'strm_in_V' (dut.cpp:156) and fifo read on port 'strm_in_V' (dut.cpp:156).
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)
+   between fifo read on port 'strm_in_V' (dut.cpp:156) and fifo read on port 'strm_in_V' (dut.cpp:156).
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)
+   between fifo read on port 'strm_in_V' (dut.cpp:156) and fifo read on port 'strm_in_V' (dut.cpp:156).
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 4, distance = 1)
+   between fifo read on port 'strm_in_V' (dut.cpp:156) and fifo read on port 'strm_in_V' (dut.cpp:156).
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 67, distance = 1)
+   between fifo read on port 'strm_in_V' (dut.cpp:156) and fifo read on port 'strm_in_V' (dut.cpp:156).
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 98, distance = 1)
+   between fifo read on port 'strm_in_V' (dut.cpp:156) and fifo read on port 'strm_in_V' (dut.cpp:156).
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 99, distance = 1)
+   between fifo read on port 'strm_in_V' (dut.cpp:156) and fifo read on port 'strm_in_V' (dut.cpp:156).
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 100, Depth: 511.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 0.1Total elapsed time: 573.182 sec.
-@I [HLS-111] Elapsed time: 0.15 seconds; current memory usage: 590 MB.
-@I [HLS-100] Command "report -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 573.217 sec.
-@I [HLS-100] Command "db_write -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 573.238 sec.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 7.32Total elapsed time: 524.591 sec.
+@I [HLS-111] Elapsed time: 7.38 seconds; current memory usage: 607 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.39Total elapsed time: 525.13 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.09Total elapsed time: 525.107 sec.
 @I [HLS-0] Finish scheduling dut_matmul.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -606,7 +802,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model dut_matmul "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.243 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 525.109 sec.
 @I [HLS-100] Command "bind -model dut_matmul "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -641,12 +837,12 @@ Please use function labels to distinguish different locations if necessary.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0.01Total elapsed time: 573.258 sec.
-@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 590 MB.
-@I [HLS-100] Command "report -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 573.306 sec.
-@I [HLS-100] Command "db_write -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 573.354 sec.
+@I [HLS-100] Command 'bind' returned 0; elapsed 1.02Total elapsed time: 526.131 sec.
+@I [HLS-111] Elapsed time: 1.51 seconds; current memory usage: 613 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.36Total elapsed time: 526.519 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.11Total elapsed time: 526.635 sec.
 @I [HLS-0] Finish binding dut_matmul.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -655,7 +851,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model dut_update_off_diag_r "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 573.356 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 526.635 sec.
 @I [HLS-100] Command "schedule -model dut_update_off_diag_r "
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-61] Pipelining loop 'L_svd_calc_off_r'.
@@ -673,12 +869,12 @@ Please use function labels to distinguish different locations if necessary.
    between fifo read on port 'strm_in_V' (./svd.h:391) and fifo read on port 'strm_in_V' (./svd.h:375).
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 14, Depth: 29.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 0.58Total elapsed time: 573.933 sec.
-@I [HLS-111] Elapsed time: 0.63 seconds; current memory usage: 591 MB.
-@I [HLS-100] Command "report -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 574.2 sec.
-@I [HLS-100] Command "db_write -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 574.21 sec.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.5Total elapsed time: 527.139 sec.
+@I [HLS-111] Elapsed time: 0.98 seconds; current memory usage: 613 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 527.169 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 527.191 sec.
 @I [HLS-0] Finish scheduling dut_update_off_diag_r.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -687,7 +883,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model dut_update_off_diag_r "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 574.23 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 527.192 sec.
 @I [HLS-100] Command "bind -model dut_update_off_diag_r "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -722,12 +918,12 @@ Please use function labels to distinguish different locations if necessary.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0.02Total elapsed time: 574.38 sec.
-@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 591 MB.
-@I [HLS-100] Command "report -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 574.102 sec.
-@I [HLS-100] Command "db_write -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 574.149 sec.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.02Total elapsed time: 527.208 sec.
+@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 614 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 527.241 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 527.259 sec.
 @I [HLS-0] Finish binding dut_update_off_diag_r.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -736,18 +932,18 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model dut_calc_angle<float, float> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 574.151 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 527.260 sec.
 @I [HLS-100] Command "schedule -model dut_calc_angle<float, float> "
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-61] Pipelining function 'dut_calc_angle<float, float>'.
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 85.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 0.1Total elapsed time: 574.250 sec.
-@I [HLS-111] Elapsed time: 0.16 seconds; current memory usage: 592 MB.
-@I [HLS-100] Command "report -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 574.289 sec.
-@I [HLS-100] Command "db_write -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 574.319 sec.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.1Total elapsed time: 527.360 sec.
+@I [HLS-111] Elapsed time: 0.13 seconds; current memory usage: 615 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 527.386 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 527.404 sec.
 @I [HLS-0] Finish scheduling dut_calc_angle<float, float>.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -756,7 +952,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model dut_calc_angle<float, float> "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 574.321 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 527.406 sec.
 @I [HLS-100] Command "bind -model dut_calc_angle<float, float> "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -791,12 +987,12 @@ Please use function labels to distinguish different locations if necessary.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0.04Total elapsed time: 574.348 sec.
-@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 593 MB.
-@I [HLS-100] Command "report -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.04Total elapsed time: 574.425 sec.
-@I [HLS-100] Command "db_write -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 574.473 sec.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.03Total elapsed time: 527.443 sec.
+@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 615 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.06Total elapsed time: 527.517 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 527.537 sec.
 @I [HLS-0] Finish binding dut_calc_angle<float, float>.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -805,7 +1001,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model dut_calc_svd "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 574.475 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 527.538 sec.
 @I [HLS-100] Command "schedule -model dut_calc_svd "
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-61] Pipelining loop 'svd_calc_diag'.
@@ -821,12 +1017,12 @@ Please use function labels to distinguish different locations if necessary.
    between fifo write on port 'strm_out_V' (./svd.h:340) and fifo write on port 'strm_out_V' (./svd.h:301).
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 20, Depth: 154.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 1.1Total elapsed time: 575.578 sec.
-@I [HLS-111] Elapsed time: 1.18 seconds; current memory usage: 594 MB.
-@I [HLS-100] Command "report -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.11Total elapsed time: 575.767 sec.
-@I [HLS-100] Command "db_write -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.05Total elapsed time: 575.883 sec.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.98Total elapsed time: 528.536 sec.
+@I [HLS-111] Elapsed time: 1.07 seconds; current memory usage: 617 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.08Total elapsed time: 528.619 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 528.662 sec.
 @I [HLS-0] Finish scheduling dut_calc_svd.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -835,7 +1031,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model dut_calc_svd "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 575.886 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 528.663 sec.
 @I [HLS-100] Command "bind -model dut_calc_svd "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -870,12 +1066,12 @@ Please use function labels to distinguish different locations if necessary.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0.14Total elapsed time: 576.32 sec.
-@I [HLS-111] Elapsed time: 0.32 seconds; current memory usage: 596 MB.
-@I [HLS-100] Command "report -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.16Total elapsed time: 576.272 sec.
-@I [HLS-100] Command "db_write -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.05Total elapsed time: 576.389 sec.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.1Total elapsed time: 528.766 sec.
+@I [HLS-111] Elapsed time: 0.22 seconds; current memory usage: 618 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.11Total elapsed time: 528.892 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.06Total elapsed time: 528.946 sec.
 @I [HLS-0] Finish binding dut_calc_svd.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -884,7 +1080,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model dut "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 576.391 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 528.948 sec.
 @I [HLS-100] Command "schedule -model dut "
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-61] Pipelining loop 'L_svd_calc_off_c'.
@@ -900,12 +1096,12 @@ Please use function labels to distinguish different locations if necessary.
    between fifo read on port 'strm_in_V' (./svd.h:447->dut.cpp:40) and fifo read on port 'strm_in_V' (./svd.h:441->dut.cpp:40).
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 6, Depth: 19.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 0.26Total elapsed time: 576.656 sec.
-@I [HLS-111] Elapsed time: 0.48 seconds; current memory usage: 596 MB.
-@I [HLS-100] Command "report -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 576.700 sec.
-@I [HLS-100] Command "db_write -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 576.719 sec.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.22Total elapsed time: 529.185 sec.
+@I [HLS-111] Elapsed time: 0.4 seconds; current memory usage: 619 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 529.209 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 529.227 sec.
 @I [HLS-0] Finish scheduling dut.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -914,7 +1110,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model dut "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 576.720 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0Total elapsed time: 529.228 sec.
 @I [HLS-100] Command "bind -model dut "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -949,234 +1145,274 @@ Please use function labels to distinguish different locations if necessary.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0.1Total elapsed time: 576.818 sec.
-@I [HLS-111] Elapsed time: 0.14 seconds; current memory usage: 597 MB.
-@I [HLS-100] Command "report -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.11Total elapsed time: 576.945 sec.
-@I [HLS-100] Command "db_write -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 576.980 sec.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.17Total elapsed time: 529.388 sec.
+@I [HLS-111] Elapsed time: 0.2 seconds; current memory usage: 619 MB.
+@I [HLS-100] Command "report -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.13Total elapsed time: 529.534 sec.
+@I [HLS-100] Command "db_write -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 529.551 sec.
 @I [HLS-0] Finish binding dut.
 @I [HLS-100] Command "get_model_list dut -filter all-wo-channel "
-@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 576.981 sec.
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0Total elapsed time: 529.552 sec.
 @I [HLS-0] Preprocessing for RTLGen ...
+@I [HLS-100] Command "rtl_gen_preprocess dut_backproj "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 529.552 sec.
 @I [HLS-100] Command "rtl_gen_preprocess dut_matmul "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 576.982 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 529.553 sec.
 @I [HLS-100] Command "rtl_gen_preprocess dut_update_off_diag_r "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.01Total elapsed time: 576.983 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 529.553 sec.
 @I [HLS-100] Command "rtl_gen_preprocess dut_calc_angle<float, float> "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 576.983 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 529.554 sec.
 @I [HLS-100] Command "rtl_gen_preprocess dut_calc_svd "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 576.984 sec.
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 529.554 sec.
 @I [HLS-100] Command "rtl_gen_preprocess dut "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 576.984 sec.
-@I [HLS-0] Model list for RTL generation: dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0Total elapsed time: 529.555 sec.
+@I [HLS-0] Model list for RTL generation: dut_backproj dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dut_backproj' 
+@0 [HLS-0] -- Generating RTL for module 'dut_backproj' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model dut_backproj -vendor xilinx -mg_file /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_backproj.compgen.tcl "
+@I [RTGEN-100] Generating core module 'dut_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'dut_backproj'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.02Total elapsed time: 529.581 sec.
+@I [HLS-111] Elapsed time: 0.17 seconds; current memory usage: 620 MB.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 529.598 sec.
+@I [HLS-100] Command "gen_rtl dut_backproj -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/systemc/dut_backproj -synmodules dut_backproj dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 529.609 sec.
+@I [HLS-100] Command "gen_rtl dut_backproj -style xilinx -f -lang vhdl -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/vhdl/dut_backproj "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 529.614 sec.
+@I [HLS-100] Command "gen_rtl dut_backproj -style xilinx -f -lang vlog -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/verilog/dut_backproj "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 529.619 sec.
+@I [HLS-100] Command "gen_tb_info dut_backproj -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_backproj -p /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.01Total elapsed time: 529.633 sec.
+@I [HLS-100] Command "report -model dut_backproj -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_backproj_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 529.646 sec.
+@I [HLS-100] Command "report -model dut_backproj -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_backproj_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 529.657 sec.
+@I [HLS-100] Command "report -model dut_backproj -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_backproj.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 529.691 sec.
+@I [HLS-100] Command "db_write -model dut_backproj -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_backproj.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 529.713 sec.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut_matmul' 
 @0 [HLS-0] -- Generating RTL for module 'dut_matmul' 
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
-@I [HLS-100] Command "create_rtl_model dut_matmul -vendor xilinx -mg_file /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.compgen.tcl "
+@I [HLS-100] Command "create_rtl_model dut_matmul -vendor xilinx -mg_file /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.compgen.tcl "
 @I [RTGEN-100] Generating core module 'dut_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
 @I [RTGEN-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut_matmul'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.02Total elapsed time: 577.13 sec.
-@I [HLS-111] Elapsed time: 0.16 seconds; current memory usage: 597 MB.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 577.36 sec.
-@I [HLS-100] Command "gen_rtl dut_matmul -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/systemc/dut_matmul -synmodules dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 577.43 sec.
-@I [HLS-100] Command "gen_rtl dut_matmul -style xilinx -f -lang vhdl -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/vhdl/dut_matmul "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 577.48 sec.
-@I [HLS-100] Command "gen_rtl dut_matmul -style xilinx -f -lang vlog -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/verilog/dut_matmul "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 577.52 sec.
-@I [HLS-100] Command "gen_tb_info dut_matmul -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul -p /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.01Total elapsed time: 577.66 sec.
-@I [HLS-100] Command "report -model dut_matmul -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_matmul_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 577.79 sec.
-@I [HLS-100] Command "report -model dut_matmul -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_matmul_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 577.90 sec.
-@I [HLS-100] Command "report -model dut_matmul -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.04Total elapsed time: 577.138 sec.
-@I [HLS-100] Command "db_write -model dut_matmul -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 577.166 sec.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 1.07Total elapsed time: 530.821 sec.
+@I [HLS-111] Elapsed time: 1.18 seconds; current memory usage: 626 MB.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 530.831 sec.
+@I [HLS-100] Command "gen_rtl dut_matmul -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/systemc/dut_matmul -synmodules dut_backproj dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.02Total elapsed time: 530.862 sec.
+@I [HLS-100] Command "gen_rtl dut_matmul -style xilinx -f -lang vhdl -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/vhdl/dut_matmul "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 530.881 sec.
+@I [HLS-100] Command "gen_rtl dut_matmul -style xilinx -f -lang vlog -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/verilog/dut_matmul "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.03Total elapsed time: 530.906 sec.
+@I [HLS-100] Command "gen_tb_info dut_matmul -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul -p /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.02Total elapsed time: 530.944 sec.
+@I [HLS-100] Command "report -model dut_matmul -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_matmul_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 530.975 sec.
+@I [HLS-100] Command "report -model dut_matmul -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_matmul_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 531.11 sec.
+@I [HLS-100] Command "report -model dut_matmul -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.36Total elapsed time: 531.376 sec.
+@I [HLS-100] Command "db_write -model dut_matmul -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.14Total elapsed time: 531.531 sec.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut_update_off_diag_r' 
 @0 [HLS-0] -- Generating RTL for module 'dut_update_off_diag_r' 
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
-@I [HLS-100] Command "create_rtl_model dut_update_off_diag_r -vendor xilinx -mg_file /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.compgen.tcl "
+@I [HLS-100] Command "create_rtl_model dut_update_off_diag_r -vendor xilinx -mg_file /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.compgen.tcl "
 @I [RTGEN-100] Generating core module 'dut_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
 @I [RTGEN-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut_update_off_diag_r'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.04Total elapsed time: 577.251 sec.
-@I [HLS-111] Elapsed time: 0.18 seconds; current memory usage: 599 MB.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 577.269 sec.
-@I [HLS-100] Command "gen_rtl dut_update_off_diag_r -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/systemc/dut_update_off_diag_r -synmodules dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 577.281 sec.
-@I [HLS-100] Command "gen_rtl dut_update_off_diag_r -style xilinx -f -lang vhdl -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/vhdl/dut_update_off_diag_r "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 577.288 sec.
-@I [HLS-100] Command "gen_rtl dut_update_off_diag_r -style xilinx -f -lang vlog -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/verilog/dut_update_off_diag_r "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 577.296 sec.
-@I [HLS-100] Command "gen_tb_info dut_update_off_diag_r -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r -p /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.01Total elapsed time: 577.311 sec.
-@I [HLS-100] Command "report -model dut_update_off_diag_r -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_update_off_diag_r_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 577.321 sec.
-@I [HLS-100] Command "report -model dut_update_off_diag_r -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_update_off_diag_r_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 577.329 sec.
-@I [HLS-100] Command "report -model dut_update_off_diag_r -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.04Total elapsed time: 577.386 sec.
-@I [HLS-100] Command "db_write -model dut_update_off_diag_r -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 577.415 sec.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.05Total elapsed time: 531.771 sec.
+@I [HLS-111] Elapsed time: 0.88 seconds; current memory usage: 635 MB.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 531.777 sec.
+@I [HLS-100] Command "gen_rtl dut_update_off_diag_r -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/systemc/dut_update_off_diag_r -synmodules dut_backproj dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 531.787 sec.
+@I [HLS-100] Command "gen_rtl dut_update_off_diag_r -style xilinx -f -lang vhdl -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/vhdl/dut_update_off_diag_r "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 531.793 sec.
+@I [HLS-100] Command "gen_rtl dut_update_off_diag_r -style xilinx -f -lang vlog -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/verilog/dut_update_off_diag_r "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 531.800 sec.
+@I [HLS-100] Command "gen_tb_info dut_update_off_diag_r -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r -p /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.01Total elapsed time: 531.816 sec.
+@I [HLS-100] Command "report -model dut_update_off_diag_r -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_update_off_diag_r_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 531.834 sec.
+@I [HLS-100] Command "report -model dut_update_off_diag_r -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_update_off_diag_r_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 531.842 sec.
+@I [HLS-100] Command "report -model dut_update_off_diag_r -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 531.873 sec.
+@I [HLS-100] Command "db_write -model dut_update_off_diag_r -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01Total elapsed time: 531.893 sec.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut_calc_angle_float_float_s' 
 @0 [HLS-0] -- Generating RTL for module 'dut_calc_angle_float_float_s' 
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
-@I [HLS-100] Command "create_rtl_model dut_calc_angle<float, float> -vendor xilinx -mg_file /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.compgen.tcl "
+@I [HLS-100] Command "create_rtl_model dut_calc_angle<float, float> -vendor xilinx -mg_file /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.compgen.tcl "
 @I [RTGEN-100] Generating core module 'dut_fadd_32ns_32ns_32_5_full_dsp': 2 instance(s).
 @I [RTGEN-100] Generating core module 'dut_faddfsub_32ns_32ns_32_5_full_dsp': 1 instance(s).
 @I [RTGEN-100] Generating core module 'dut_fdiv_32ns_32ns_32_16': 2 instance(s).
 @I [RTGEN-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 5 instance(s).
 @I [RTGEN-100] Generating core module 'dut_frsqrt_32ns_32ns_32_11_full_dsp': 2 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut_calc_angle_float_float_s'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.13Total elapsed time: 577.584 sec.
-@I [HLS-111] Elapsed time: 0.26 seconds; current memory usage: 601 MB.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 577.599 sec.
-@I [HLS-100] Command "gen_rtl dut_calc_angle<float, float> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/systemc/dut_calc_angle_float_float_s -synmodules dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 577.614 sec.
-@I [HLS-100] Command "gen_rtl dut_calc_angle<float, float> -style xilinx -f -lang vhdl -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/vhdl/dut_calc_angle_float_float_s "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 577.623 sec.
-@I [HLS-100] Command "gen_rtl dut_calc_angle<float, float> -style xilinx -f -lang vlog -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/verilog/dut_calc_angle_float_float_s "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 577.634 sec.
-@I [HLS-100] Command "gen_tb_info dut_calc_angle<float, float> -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s -p /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.01Total elapsed time: 577.658 sec.
-@I [HLS-100] Command "report -model dut_calc_angle<float, float> -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_calc_angle_float_float_s_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 577.680 sec.
-@I [HLS-100] Command "report -model dut_calc_angle<float, float> -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_calc_angle_float_float_s_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 577.700 sec.
-@I [HLS-100] Command "report -model dut_calc_angle<float, float> -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.08Total elapsed time: 577.797 sec.
-@I [HLS-100] Command "db_write -model dut_calc_angle<float, float> -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.03Total elapsed time: 577.845 sec.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.11Total elapsed time: 532.46 sec.
+@I [HLS-111] Elapsed time: 0.22 seconds; current memory usage: 637 MB.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 532.54 sec.
+@I [HLS-100] Command "gen_rtl dut_calc_angle<float, float> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/systemc/dut_calc_angle_float_float_s -synmodules dut_backproj dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 532.65 sec.
+@I [HLS-100] Command "gen_rtl dut_calc_angle<float, float> -style xilinx -f -lang vhdl -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/vhdl/dut_calc_angle_float_float_s "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 532.71 sec.
+@I [HLS-100] Command "gen_rtl dut_calc_angle<float, float> -style xilinx -f -lang vlog -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/verilog/dut_calc_angle_float_float_s "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 532.85 sec.
+@I [HLS-100] Command "gen_tb_info dut_calc_angle<float, float> -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s -p /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.03Total elapsed time: 532.110 sec.
+@I [HLS-100] Command "report -model dut_calc_angle<float, float> -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_calc_angle_float_float_s_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 532.135 sec.
+@I [HLS-100] Command "report -model dut_calc_angle<float, float> -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_calc_angle_float_float_s_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 532.154 sec.
+@I [HLS-100] Command "report -model dut_calc_angle<float, float> -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.06Total elapsed time: 532.231 sec.
+@I [HLS-100] Command "db_write -model dut_calc_angle<float, float> -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.04Total elapsed time: 532.280 sec.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut_calc_svd' 
 @0 [HLS-0] -- Generating RTL for module 'dut_calc_svd' 
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
-@I [HLS-100] Command "create_rtl_model dut_calc_svd -vendor xilinx -mg_file /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.compgen.tcl "
+@I [HLS-100] Command "create_rtl_model dut_calc_svd -vendor xilinx -mg_file /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.compgen.tcl "
 @I [RTGEN-100] Generating core module 'dut_faddfsub_32ns_32ns_32_5_full_dsp': 2 instance(s).
 @I [RTGEN-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 2 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut_calc_svd'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.2Total elapsed time: 578.96 sec.
-@I [HLS-111] Elapsed time: 0.42 seconds; current memory usage: 604 MB.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 578.110 sec.
-@I [HLS-100] Command "gen_rtl dut_calc_svd -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/systemc/dut_calc_svd -synmodules dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 578.127 sec.
-@I [HLS-100] Command "gen_rtl dut_calc_svd -style xilinx -f -lang vhdl -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/vhdl/dut_calc_svd "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 578.137 sec.
-@I [HLS-100] Command "gen_rtl dut_calc_svd -style xilinx -f -lang vlog -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/verilog/dut_calc_svd "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 578.150 sec.
-@I [HLS-100] Command "gen_tb_info dut_calc_svd -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd -p /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.01Total elapsed time: 578.170 sec.
-@I [HLS-100] Command "report -model dut_calc_svd -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_calc_svd_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 578.190 sec.
-@I [HLS-100] Command "report -model dut_calc_svd -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_calc_svd_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 578.209 sec.
-@I [HLS-100] Command "report -model dut_calc_svd -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.14Total elapsed time: 578.396 sec.
-@I [HLS-100] Command "db_write -model dut_calc_svd -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.06Total elapsed time: 578.490 sec.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.18Total elapsed time: 532.495 sec.
+@I [HLS-111] Elapsed time: 0.41 seconds; current memory usage: 640 MB.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 532.502 sec.
+@I [HLS-100] Command "gen_rtl dut_calc_svd -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/systemc/dut_calc_svd -synmodules dut_backproj dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.02Total elapsed time: 532.519 sec.
+@I [HLS-100] Command "gen_rtl dut_calc_svd -style xilinx -f -lang vhdl -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/vhdl/dut_calc_svd "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 532.527 sec.
+@I [HLS-100] Command "gen_rtl dut_calc_svd -style xilinx -f -lang vlog -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/verilog/dut_calc_svd "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 532.537 sec.
+@I [HLS-100] Command "gen_tb_info dut_calc_svd -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd -p /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.01Total elapsed time: 532.560 sec.
+@I [HLS-100] Command "report -model dut_calc_svd -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_calc_svd_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 532.581 sec.
+@I [HLS-100] Command "report -model dut_calc_svd -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_calc_svd_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 532.598 sec.
+@I [HLS-100] Command "report -model dut_calc_svd -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.14Total elapsed time: 532.741 sec.
+@I [HLS-100] Command "db_write -model dut_calc_svd -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.07Total elapsed time: 532.817 sec.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut' 
 @0 [HLS-0] -- Generating RTL for module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
-@I [HLS-100] Command "create_rtl_model dut -vendor xilinx -mg_file /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.compgen.tcl "
+@I [HLS-100] Command "create_rtl_model dut -vendor xilinx -mg_file /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.compgen.tcl "
 @I [RTGEN-500] Setting interface mode on port 'dut/strm_in_V' to 'ap_fifo'.
 @I [RTGEN-500] Setting interface mode on port 'dut/strm_out_V' to 'ap_fifo'.
 @I [RTGEN-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
 @I [RTGEN-100] Generating core module 'dut_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
 @I [RTGEN-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.03Total elapsed time: 578.662 sec.
-@I [HLS-111] Elapsed time: 0.41 seconds; current memory usage: 607 MB.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 578.679 sec.
-@I [HLS-100] Command "gen_rtl dut -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/systemc/dut -synmodules dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.01Total elapsed time: 578.688 sec.
-@I [HLS-100] Command "gen_rtl dut -istop -style xilinx -f -lang vhdl -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/vhdl/dut "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.02Total elapsed time: 578.720 sec.
-@I [HLS-100] Command "gen_rtl dut -istop -style xilinx -f -lang vlog -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/verilog/dut "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.02Total elapsed time: 578.738 sec.
-@I [HLS-100] Command "export_constraint_db -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.constraint.tcl -f -tool general "
-@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0Total elapsed time: 578.740 sec.
-@I [HLS-100] Command "report -model dut -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.design.xml -verbose -f -dv "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.09Total elapsed time: 578.836 sec.
-@I [HLS-100] Command "report -model dut -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.sdaccel.xml -verbose -f -sdaccel "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.03Total elapsed time: 578.862 sec.
-@I [HLS-100] Command "gen_tb_info dut -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut -p /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 578.878 sec.
-@I [HLS-100] Command "report -model dut -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 578.896 sec.
-@I [HLS-100] Command "report -model dut -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.01Total elapsed time: 578.906 sec.
-@I [HLS-100] Command "report -model dut -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.14Total elapsed time: 579.53 sec.
-@I [HLS-100] Command "db_write -model dut -o /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 579.91 sec.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.03Total elapsed time: 532.914 sec.
+@I [HLS-111] Elapsed time: 0.36 seconds; current memory usage: 643 MB.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 532.918 sec.
+@I [HLS-100] Command "gen_rtl dut -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/systemc/dut -synmodules dut_backproj dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0Total elapsed time: 532.926 sec.
+@I [HLS-100] Command "gen_rtl dut -istop -style xilinx -f -lang vhdl -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/vhdl/dut "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.02Total elapsed time: 532.953 sec.
+@I [HLS-100] Command "gen_rtl dut -istop -style xilinx -f -lang vlog -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/verilog/dut "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.03Total elapsed time: 532.970 sec.
+@I [HLS-100] Command "export_constraint_db -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.constraint.tcl -f -tool general "
+@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0Total elapsed time: 532.974 sec.
+@I [HLS-100] Command "report -model dut -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.design.xml -verbose -f -dv "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.13Total elapsed time: 533.116 sec.
+@I [HLS-100] Command "report -model dut -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.sdaccel.xml -verbose -f -sdaccel "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 533.140 sec.
+@I [HLS-100] Command "gen_tb_info dut -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut -p /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0Total elapsed time: 533.162 sec.
+@I [HLS-100] Command "report -model dut -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02Total elapsed time: 533.187 sec.
+@I [HLS-100] Command "report -model dut -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/syn/report/dut_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0Total elapsed time: 533.197 sec.
+@I [HLS-100] Command "report -model dut -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.15Total elapsed time: 533.341 sec.
+@I [HLS-100] Command "db_write -model dut -o /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02Total elapsed time: 533.375 sec.
 @I [HLS-100] Command "sc_get_clocks dut "
-@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 0Total elapsed time: 579.147 sec.
+@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 0Total elapsed time: 533.415 sec.
 @I [HLS-100] Command "sc_get_portdomain dut "
-@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 0Total elapsed time: 579.148 sec.
-@I [HLS-0] Model list for RTL component generation: dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut
-@I [HLS-0] Handling components in module [dut_matmul] ... 
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.compgen.tcl "
+@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 0Total elapsed time: 533.415 sec.
+@I [HLS-0] Model list for RTL component generation: dut_backproj dut_matmul dut_update_off_diag_r {dut_calc_angle<float, float>} dut_calc_svd dut
+@I [HLS-0] Handling components in module [dut_backproj] ... 
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_backproj.compgen.tcl "
 @I [HLS-0] Found component dut_fadd_32ns_32ns_32_5_full_dsp.
 @I [HLS-0] Append model dut_fadd_32ns_32ns_32_5_full_dsp
 @I [HLS-0] Found component dut_fmul_32ns_32ns_32_4_max_dsp.
 @I [HLS-0] Append model dut_fmul_32ns_32ns_32_4_max_dsp
+@I [HLS-0] Found component dut_backproj_A.
+@I [HLS-0] Append model dut_backproj_A
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.429 sec.
+@I [HLS-0] Handling components in module [dut_matmul] ... 
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.compgen.tcl "
 @I [HLS-0] Found component dut_matmul_A.
 @I [HLS-0] Append model dut_matmul_A
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.160 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.436 sec.
 @I [HLS-0] Handling components in module [dut_update_off_diag_r] ... 
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.165 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.441 sec.
 @I [HLS-0] Handling components in module [dut_calc_angle_float_float_s] ... 
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.compgen.tcl "
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.compgen.tcl "
 @I [HLS-0] Found component dut_faddfsub_32ns_32ns_32_5_full_dsp.
 @I [HLS-0] Append model dut_faddfsub_32ns_32ns_32_5_full_dsp
 @I [HLS-0] Found component dut_fdiv_32ns_32ns_32_16.
 @I [HLS-0] Append model dut_fdiv_32ns_32ns_32_16
 @I [HLS-0] Found component dut_frsqrt_32ns_32ns_32_11_full_dsp.
 @I [HLS-0] Append model dut_frsqrt_32ns_32ns_32_11_full_dsp
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.171 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.448 sec.
 @I [HLS-0] Handling components in module [dut_calc_svd] ... 
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.177 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.453 sec.
 @I [HLS-0] Handling components in module [dut] ... 
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.181 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.459 sec.
+@I [HLS-0] Append model dut_backproj
 @I [HLS-0] Append model dut_matmul
 @I [HLS-0] Append model dut_update_off_diag_r
 @I [HLS-0] Append model dut_calc_angle_float_float_s
 @I [HLS-0] Append model dut_calc_svd
 @I [HLS-0] Append model dut
 @I [HLS-0] Generating RTL model list ...
-@I [HLS-0] All models in this session: dut_fadd_32ns_32ns_32_5_full_dsp dut_fmul_32ns_32ns_32_4_max_dsp dut_matmul_A dut_faddfsub_32ns_32ns_32_5_full_dsp dut_fdiv_32ns_32ns_32_16 dut_frsqrt_32ns_32ns_32_11_full_dsp dut_matmul dut_update_off_diag_r dut_calc_angle_float_float_s dut_calc_svd dut
+@I [HLS-0] All models in this session: dut_fadd_32ns_32ns_32_5_full_dsp dut_fmul_32ns_32ns_32_4_max_dsp dut_backproj_A dut_matmul_A dut_faddfsub_32ns_32ns_32_5_full_dsp dut_fdiv_32ns_32ns_32_16 dut_frsqrt_32ns_32ns_32_11_full_dsp dut_backproj dut_matmul dut_update_off_diag_r dut_calc_angle_float_float_s dut_calc_svd dut
 @I [HLS-0] To file: write model dut_fadd_32ns_32ns_32_5_full_dsp
 @I [HLS-0] To file: write model dut_fmul_32ns_32ns_32_4_max_dsp
+@I [HLS-0] To file: write model dut_backproj_A
 @I [HLS-0] To file: write model dut_matmul_A
 @I [HLS-0] To file: write model dut_faddfsub_32ns_32ns_32_5_full_dsp
 @I [HLS-0] To file: write model dut_fdiv_32ns_32ns_32_16
 @I [HLS-0] To file: write model dut_frsqrt_32ns_32ns_32_11_full_dsp
+@I [HLS-0] To file: write model dut_backproj
 @I [HLS-0] To file: write model dut_matmul
 @I [HLS-0] To file: write model dut_update_off_diag_r
 @I [HLS-0] To file: write model dut_calc_angle_float_float_s
@@ -1188,83 +1424,86 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-0] RTL Generation done.
 @I [HLS-0] CAS Generation done.
 @I [HLS-0] CBC Generation done.
-@I [HLS-100] Command "export_ssdm /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.export.ll "
-@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0Total elapsed time: 579.194 sec.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.205 sec.
+@I [HLS-100] Command "export_ssdm /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.export.ll "
+@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0.01Total elapsed time: 533.471 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.485 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/generic/autopilot/common.gen "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/generic/autopilot/APCoreGen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.219 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.221 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.493 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.494 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/generic/autopilot/op.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.227 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.497 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/generic/autopilot/op_simcore.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.236 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 533.502 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/generic/autopilot/interface.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.241 sec.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.246 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.505 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.512 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/zynq/zynq.gen "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/virtex.gen "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx.gen "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/plb46.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 579.262 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.527 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/fsl.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.265 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 533.531 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/axi4.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.272 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.537 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/nativeAXI4.gen "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/saxilite.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 579.281 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 533.545 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/maxi.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.290 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 579.290 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 533.554 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 533.555 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/scripts/xilinxcoregen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.302 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 533.566 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/interface/XilEDKCoreGen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02Total elapsed time: 579.311 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 533.576 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/ip/dds_compiler.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.319 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.583 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/ip/util.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.322 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.585 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/ip/xfft.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 579.409 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.09Total elapsed time: 533.676 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/ip/xfir.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.412 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.14Total elapsed time: 579.413 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.679 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.14Total elapsed time: 533.680 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/dsp48.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.416 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.14Total elapsed time: 579.417 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.14Total elapsed time: 579.417 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.683 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.14Total elapsed time: 533.684 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.14Total elapsed time: 533.684 sec.
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/zynq/zynq_fpv6.gen "
 @I [HLS-100] Command "source /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/xilinx/common/xilinx_fpv6.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 579.425 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 579.426 sec.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.432 sec.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.437 sec.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.443 sec.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.449 sec.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.689 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 533.689 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.694 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.700 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.707 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.712 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_backproj.compgen.tcl "
+@I [RTMG-278] Implementing memory 'dut_backproj_A_ram' using block RAMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.1Total elapsed time: 533.943 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_matmul.compgen.tcl "
 @I [RTMG-278] Implementing memory 'dut_matmul_A_ram' using block RAMs.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.1Total elapsed time: 579.649 sec.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.653 sec.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.06Total elapsed time: 579.846 sec.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 579.851 sec.
-@I [HLS-100] Command "source /home/yl3524/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.compgen.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 579.855 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01Total elapsed time: 533.984 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_update_off_diag_r.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 533.990 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_angle_float_float_s.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08Total elapsed time: 534.200 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut_calc_svd.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 534.208 sec.
+@I [HLS-100] Command "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0Total elapsed time: 534.215 sec.
 @I [HLS-10] Finished generating all RTL models.
 @0 [HLS-0] Finished generating all RTL models.
 @I [SYSC-301] Generating SystemC RTL for dut.
 @I [VHDL-304] Generating VHDL RTL for dut.
 @I [VLOG-307] Generating Verilog RTL for dut.
-@I [HLS-100] Command 'autosyn' returned 0; elapsed 5.51Total elapsed time: 580.322 sec.
-@I [HLS-100] Command 'csynth_design' returned 0; elapsed 24.18Total elapsed time: 580.323 sec.
+@I [HLS-100] Command 'autosyn' returned 0; elapsed 16.37Total elapsed time: 534.831 sec.
+@I [HLS-100] Command 'csynth_design' returned 0; elapsed 46.27Total elapsed time: 534.831 sec.
 @I [HLS-100] Command "cleanup_all "
-@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.06Total elapsed time: 580.376 sec.
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.11Total elapsed time: 534.937 sec.

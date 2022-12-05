@@ -16,6 +16,7 @@ void dut (
 );
 
 void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
+void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
 
 
 #endif

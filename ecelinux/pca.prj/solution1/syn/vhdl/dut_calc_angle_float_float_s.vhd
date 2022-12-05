@@ -637,7 +637,7 @@ architecture behav of dut_calc_angle_float_float_s is
 
 
 begin
-    dut_fadd_32ns_32ns_32_5_full_dsp_U10 : component dut_fadd_32ns_32ns_32_5_full_dsp
+    dut_fadd_32ns_32ns_32_5_full_dsp_U15 : component dut_fadd_32ns_32ns_32_5_full_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -652,7 +652,7 @@ begin
         ce => grp_fu_82_ce,
         dout => grp_fu_82_p2);
 
-    dut_faddfsub_32ns_32ns_32_5_full_dsp_U11 : component dut_faddfsub_32ns_32ns_32_5_full_dsp
+    dut_faddfsub_32ns_32ns_32_5_full_dsp_U16 : component dut_faddfsub_32ns_32ns_32_5_full_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -668,7 +668,7 @@ begin
         ce => grp_fu_87_ce,
         dout => grp_fu_87_p2);
 
-    dut_fadd_32ns_32ns_32_5_full_dsp_U12 : component dut_fadd_32ns_32ns_32_5_full_dsp
+    dut_fadd_32ns_32ns_32_5_full_dsp_U17 : component dut_fadd_32ns_32ns_32_5_full_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -683,7 +683,7 @@ begin
         ce => grp_fu_93_ce,
         dout => grp_fu_93_p2);
 
-    dut_fmul_32ns_32ns_32_4_max_dsp_U13 : component dut_fmul_32ns_32ns_32_4_max_dsp
+    dut_fmul_32ns_32ns_32_4_max_dsp_U18 : component dut_fmul_32ns_32ns_32_4_max_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -698,7 +698,7 @@ begin
         ce => grp_fu_98_ce,
         dout => grp_fu_98_p2);
 
-    dut_fmul_32ns_32ns_32_4_max_dsp_U14 : component dut_fmul_32ns_32ns_32_4_max_dsp
+    dut_fmul_32ns_32ns_32_4_max_dsp_U19 : component dut_fmul_32ns_32ns_32_4_max_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -713,7 +713,7 @@ begin
         ce => grp_fu_102_ce,
         dout => grp_fu_102_p2);
 
-    dut_fmul_32ns_32ns_32_4_max_dsp_U15 : component dut_fmul_32ns_32ns_32_4_max_dsp
+    dut_fmul_32ns_32ns_32_4_max_dsp_U20 : component dut_fmul_32ns_32ns_32_4_max_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -728,7 +728,7 @@ begin
         ce => grp_fu_106_ce,
         dout => grp_fu_106_p2);
 
-    dut_fmul_32ns_32ns_32_4_max_dsp_U16 : component dut_fmul_32ns_32ns_32_4_max_dsp
+    dut_fmul_32ns_32ns_32_4_max_dsp_U21 : component dut_fmul_32ns_32ns_32_4_max_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -743,7 +743,7 @@ begin
         ce => grp_fu_110_ce,
         dout => grp_fu_110_p2);
 
-    dut_fmul_32ns_32ns_32_4_max_dsp_U17 : component dut_fmul_32ns_32ns_32_4_max_dsp
+    dut_fmul_32ns_32ns_32_4_max_dsp_U22 : component dut_fmul_32ns_32ns_32_4_max_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -758,7 +758,7 @@ begin
         ce => grp_fu_116_ce,
         dout => grp_fu_116_p2);
 
-    dut_fdiv_32ns_32ns_32_16_U18 : component dut_fdiv_32ns_32ns_32_16
+    dut_fdiv_32ns_32ns_32_16_U23 : component dut_fdiv_32ns_32ns_32_16
     generic map (
         ID => 1,
         NUM_STAGE => 16,
@@ -773,7 +773,7 @@ begin
         ce => grp_fu_122_ce,
         dout => grp_fu_122_p2);
 
-    dut_fdiv_32ns_32ns_32_16_U19 : component dut_fdiv_32ns_32ns_32_16
+    dut_fdiv_32ns_32ns_32_16_U24 : component dut_fdiv_32ns_32ns_32_16
     generic map (
         ID => 1,
         NUM_STAGE => 16,
@@ -788,7 +788,7 @@ begin
         ce => grp_fu_128_ce,
         dout => grp_fu_128_p2);
 
-    dut_frsqrt_32ns_32ns_32_11_full_dsp_U20 : component dut_frsqrt_32ns_32ns_32_11_full_dsp
+    dut_frsqrt_32ns_32ns_32_11_full_dsp_U25 : component dut_frsqrt_32ns_32ns_32_11_full_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 11,
@@ -803,7 +803,7 @@ begin
         ce => grp_fu_132_ce,
         dout => grp_fu_132_p2);
 
-    dut_frsqrt_32ns_32ns_32_11_full_dsp_U21 : component dut_frsqrt_32ns_32ns_32_11_full_dsp
+    dut_frsqrt_32ns_32ns_32_11_full_dsp_U26 : component dut_frsqrt_32ns_32ns_32_11_full_dsp
     generic map (
         ID => 1,
         NUM_STAGE => 11,

@@ -1,9 +1,11 @@
 dut_fadd_32ns_32ns_32_5_full_dsp
 dut_fmul_32ns_32ns_32_4_max_dsp
+dut_backproj_A
 dut_matmul_A
 dut_faddfsub_32ns_32ns_32_5_full_dsp
 dut_fdiv_32ns_32ns_32_16
 dut_frsqrt_32ns_32ns_32_11_full_dsp
+dut_backproj
 dut_matmul
 dut_update_off_diag_r
 dut_calc_angle_float_float_s

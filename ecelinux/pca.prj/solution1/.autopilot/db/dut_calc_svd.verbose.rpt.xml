@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_calc_svd'" level="0">
-<item name = "Date">Sun Dec  4 18:05:37 2022
+<item name = "Date">Sun Dec  4 22:47:19 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -64,10 +64,10 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="grp_dut_calc_angle_float_float_s_fu_81">dut_calc_angle_float_float_s, 0, 39, 3796, 6155</column>
-<column name="dut_faddfsub_32ns_32ns_32_5_full_dsp_U24">dut_faddfsub_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
-<column name="dut_faddfsub_32ns_32ns_32_5_full_dsp_U25">dut_faddfsub_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
-<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U26">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
-<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U27">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="dut_faddfsub_32ns_32ns_32_5_full_dsp_U29">dut_faddfsub_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
+<column name="dut_faddfsub_32ns_32ns_32_5_full_dsp_U30">dut_faddfsub_32ns_32ns_32_5_full_dsp, 0, 2, 205, 390</column>
+<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U31">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
+<column name="dut_fmul_32ns_32ns_32_4_max_dsp_U32">dut_fmul_32ns_32ns_32_4_max_dsp, 0, 3, 143, 321</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -139,12 +139,12 @@
 <column name="ap_reg_ppiten_pp0_it5">1, 0, 1, 0</column>
 <column name="ap_reg_ppiten_pp0_it6">1, 0, 1, 0</column>
 <column name="ap_reg_ppiten_pp0_it7">1, 0, 1, 0</column>
-<column name="ap_reg_ppstg_tmp_39_reg_505_pp0_iter6">32, 0, 32, 0</column>
-<column name="ap_reg_ppstg_tmp_40_reg_513_pp0_iter6">32, 0, 32, 0</column>
-<column name="ap_reg_ppstg_tmp_54_reg_540_pp0_iter6">32, 0, 32, 0</column>
-<column name="ap_reg_ppstg_tmp_55_reg_545_pp0_iter6">32, 0, 32, 0</column>
-<column name="ap_reg_ppstg_tmp_56_reg_550_pp0_iter7">32, 0, 32, 0</column>
-<column name="ap_reg_ppstg_tmp_57_reg_555_pp0_iter7">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_tmp_136_reg_505_pp0_iter6">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_tmp_137_reg_513_pp0_iter6">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_tmp_151_reg_540_pp0_iter6">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_tmp_152_reg_545_pp0_iter6">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_tmp_153_reg_550_pp0_iter7">32, 0, 32, 0</column>
+<column name="ap_reg_ppstg_tmp_154_reg_555_pp0_iter7">32, 0, 32, 0</column>
 <column name="ap_reg_ppstg_uy_int_reg_528_pp0_iter6">32, 0, 32, 0</column>
 <column name="ap_reg_ppstg_vy_int_1_reg_497_pp0_iter6">32, 0, 32, 0</column>
 <column name="ap_reg_ppstg_vy_int_reg_521_pp0_iter6">32, 0, 32, 0</column>
@@ -171,28 +171,28 @@
 <column name="reg_193">32, 0, 32, 0</column>
 <column name="sinA_half_reg_459">32, 0, 32, 0</column>
 <column name="sinB_half_reg_472">32, 0, 32, 0</column>
-<column name="tmp_39_reg_505">32, 0, 32, 0</column>
+<column name="tmp_136_reg_505">32, 0, 32, 0</column>
+<column name="tmp_137_reg_513">32, 0, 32, 0</column>
+<column name="tmp_151_reg_540">32, 0, 32, 0</column>
+<column name="tmp_152_reg_545">32, 0, 32, 0</column>
+<column name="tmp_153_reg_550">32, 0, 32, 0</column>
+<column name="tmp_154_reg_555">32, 0, 32, 0</column>
+<column name="tmp_155_reg_590">32, 0, 32, 0</column>
+<column name="tmp_156_reg_620">32, 0, 32, 0</column>
+<column name="tmp_159_reg_378">32, 0, 32, 0</column>
+<column name="tmp_160_reg_385">32, 0, 32, 0</column>
+<column name="tmp_161_reg_392">32, 0, 32, 0</column>
+<column name="tmp_162_reg_399">32, 0, 32, 0</column>
+<column name="tmp_163_reg_416">32, 0, 32, 0</column>
+<column name="tmp_164_reg_421">32, 0, 32, 0</column>
+<column name="tmp_165_reg_426">32, 0, 32, 0</column>
+<column name="tmp_166_reg_431">32, 0, 32, 0</column>
+<column name="tmp_167_reg_437">32, 0, 32, 0</column>
+<column name="tmp_168_reg_442">32, 0, 32, 0</column>
+<column name="tmp_169_reg_447">32, 0, 32, 0</column>
 <column name="tmp_3_i2_i1_reg_595">32, 0, 32, 0</column>
 <column name="tmp_3_i5_i1_reg_605">32, 0, 32, 0</column>
 <column name="tmp_3_i8_i1_reg_615">32, 0, 32, 0</column>
-<column name="tmp_40_reg_513">32, 0, 32, 0</column>
-<column name="tmp_54_reg_540">32, 0, 32, 0</column>
-<column name="tmp_55_reg_545">32, 0, 32, 0</column>
-<column name="tmp_56_reg_550">32, 0, 32, 0</column>
-<column name="tmp_57_reg_555">32, 0, 32, 0</column>
-<column name="tmp_58_reg_590">32, 0, 32, 0</column>
-<column name="tmp_59_reg_620">32, 0, 32, 0</column>
-<column name="tmp_62_reg_378">32, 0, 32, 0</column>
-<column name="tmp_63_reg_385">32, 0, 32, 0</column>
-<column name="tmp_64_reg_392">32, 0, 32, 0</column>
-<column name="tmp_65_reg_399">32, 0, 32, 0</column>
-<column name="tmp_66_reg_416">32, 0, 32, 0</column>
-<column name="tmp_67_reg_421">32, 0, 32, 0</column>
-<column name="tmp_68_reg_426">32, 0, 32, 0</column>
-<column name="tmp_69_reg_431">32, 0, 32, 0</column>
-<column name="tmp_70_reg_437">32, 0, 32, 0</column>
-<column name="tmp_71_reg_442">32, 0, 32, 0</column>
-<column name="tmp_72_reg_447">32, 0, 32, 0</column>
 <column name="tmp_i4_i1_reg_600">32, 0, 32, 0</column>
 <column name="tmp_i7_i1_reg_610">32, 0, 32, 0</column>
 <column name="tmp_reg_411">32, 0, 32, 0</column>
@@ -208,17 +208,17 @@
 <column name="z_out2_reg_535">32, 0, 32, 0</column>
 <column name="z_out_3_reg_572">32, 0, 32, 0</column>
 <column name="exitcond_reg_369">0, 1, 1, 0</column>
-<column name="tmp_62_reg_378">0, 32, 32, 0</column>
-<column name="tmp_63_reg_385">0, 32, 32, 0</column>
-<column name="tmp_64_reg_392">0, 32, 32, 0</column>
-<column name="tmp_65_reg_399">0, 32, 32, 0</column>
-<column name="tmp_66_reg_416">0, 32, 32, 0</column>
-<column name="tmp_67_reg_421">0, 32, 32, 0</column>
-<column name="tmp_68_reg_426">0, 32, 32, 0</column>
-<column name="tmp_69_reg_431">0, 32, 32, 0</column>
-<column name="tmp_70_reg_437">0, 32, 32, 0</column>
-<column name="tmp_71_reg_442">0, 32, 32, 0</column>
-<column name="tmp_72_reg_447">0, 32, 32, 0</column>
+<column name="tmp_159_reg_378">0, 32, 32, 0</column>
+<column name="tmp_160_reg_385">0, 32, 32, 0</column>
+<column name="tmp_161_reg_392">0, 32, 32, 0</column>
+<column name="tmp_162_reg_399">0, 32, 32, 0</column>
+<column name="tmp_163_reg_416">0, 32, 32, 0</column>
+<column name="tmp_164_reg_421">0, 32, 32, 0</column>
+<column name="tmp_165_reg_426">0, 32, 32, 0</column>
+<column name="tmp_166_reg_431">0, 32, 32, 0</column>
+<column name="tmp_167_reg_437">0, 32, 32, 0</column>
+<column name="tmp_168_reg_442">0, 32, 32, 0</column>
+<column name="tmp_169_reg_447">0, 32, 32, 0</column>
 <column name="tmp_reg_411">0, 32, 32, 0</column>
 </table>
 </item>
