@@ -41,7 +41,7 @@
         <directive functionName="matmul" label="LOOP_ST_A" functionLabel="">
             <pragma name="PIPELINE"/>
         </directive>
-        <directive functionName="matmul" label="LOOP_COL" functionLabel="">
+        <directive functionName="matmul" label="LOOP_DOT_PROD" functionLabel="">
             <pragma name="PIPELINE"/>
         </directive>
         <directive functionName="backproj" label="LOOP_ST_A" functionLabel="">

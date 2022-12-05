@@ -50,25 +50,25 @@ set NewPortList {[
  	{ "name": "strm_out_V_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "strm_out_V", "role": "write" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "19", "23", "26", "30", "31"], "CDFG" : "dut", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "19", "22", "26", "30", "31"], "CDFG" : "dut", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
 		{"Name" : "strm_in_V", "Type" : "Fifo", "Direction" : "I", "BlockSignal" : [
 			{"Name" : "strm_in_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : [
-			{"SubInst" : "grp_dut_backproj_fu_144", "Port" : "strm_in_V"}, 
-			{"SubInst" : "grp_dut_matmul_fu_128", "Port" : "strm_in_V"}, 
 			{"SubInst" : "grp_dut_calc_svd_fu_120", "Port" : "strm_in_V"}, 
-			{"SubInst" : "grp_dut_update_off_diag_r_fu_136", "Port" : "strm_in_V"}]}, 
+			{"SubInst" : "grp_dut_update_off_diag_r_fu_128", "Port" : "strm_in_V"}, 
+			{"SubInst" : "grp_dut_backproj_fu_136", "Port" : "strm_in_V"}, 
+			{"SubInst" : "grp_dut_matmul_fu_144", "Port" : "strm_in_V"}]}, 
 		{"Name" : "strm_out_V", "Type" : "Fifo", "Direction" : "O", "BlockSignal" : [
 			{"Name" : "strm_out_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : [
-			{"SubInst" : "grp_dut_backproj_fu_144", "Port" : "strm_out_V"}, 
-			{"SubInst" : "grp_dut_matmul_fu_128", "Port" : "strm_out_V"}, 
 			{"SubInst" : "grp_dut_calc_svd_fu_120", "Port" : "strm_out_V"}, 
-			{"SubInst" : "grp_dut_update_off_diag_r_fu_136", "Port" : "strm_out_V"}]}],
+			{"SubInst" : "grp_dut_update_off_diag_r_fu_128", "Port" : "strm_out_V"}, 
+			{"SubInst" : "grp_dut_backproj_fu_136", "Port" : "strm_out_V"}, 
+			{"SubInst" : "grp_dut_matmul_fu_144", "Port" : "strm_out_V"}]}],
 		"WaitState" : [
 		{"State" : "ap_ST_st23_fsm_9", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_calc_svd_fu_120"},
-		{"State" : "ap_ST_st3_fsm_2", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_matmul_fu_128"},
-		{"State" : "ap_ST_st23_fsm_9", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_update_off_diag_r_fu_136"},
-		{"State" : "ap_ST_st3_fsm_2", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_backproj_fu_144"}],
+		{"State" : "ap_ST_st23_fsm_9", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_update_off_diag_r_fu_128"},
+		{"State" : "ap_ST_st3_fsm_2", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_backproj_fu_136"},
+		{"State" : "ap_ST_st3_fsm_2", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_matmul_fu_144"}],
 		"SubBlockPort" : []},
 	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_120", "Parent" : "0", "Child" : ["2", "15", "16", "17", "18"], "CDFG" : "dut_calc_svd", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
@@ -100,7 +100,7 @@ set RtlHierarchyInfo {[
 	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_120.dut_faddfsub_32ns_32ns_32_5_full_dsp_U30", "Parent" : "1", "Child" : []},
 	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_120.dut_fmul_32ns_32ns_32_4_max_dsp_U31", "Parent" : "1", "Child" : []},
 	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_120.dut_fmul_32ns_32ns_32_4_max_dsp_U32", "Parent" : "1", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_matmul_fu_128", "Parent" : "0", "Child" : ["20", "21", "22"], "CDFG" : "dut_matmul", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_r_fu_128", "Parent" : "0", "Child" : ["20", "21"], "CDFG" : "dut_update_off_diag_r", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
 		{"Name" : "strm_in_V", "Type" : "Fifo", "Direction" : "I", "BlockSignal" : [
 			{"Name" : "strm_in_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}, 
@@ -108,10 +108,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "strm_out_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}],
 		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_matmul_fu_128.A_U", "Parent" : "19", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_matmul_fu_128.dut_fadd_32ns_32ns_32_5_full_dsp_U6", "Parent" : "19", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_matmul_fu_128.dut_fmul_32ns_32ns_32_4_max_dsp_U7", "Parent" : "19", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_r_fu_136", "Parent" : "0", "Child" : ["24", "25"], "CDFG" : "dut_update_off_diag_r", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_r_fu_128.dut_fadd_32ns_32ns_32_5_full_dsp_U11", "Parent" : "19", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_r_fu_128.dut_fmul_32ns_32ns_32_4_max_dsp_U12", "Parent" : "19", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_backproj_fu_136", "Parent" : "0", "Child" : ["23", "24", "25"], "CDFG" : "dut_backproj", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
 		{"Name" : "strm_in_V", "Type" : "Fifo", "Direction" : "I", "BlockSignal" : [
 			{"Name" : "strm_in_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}, 
@@ -119,9 +118,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "strm_out_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}],
 		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_r_fu_136.dut_fadd_32ns_32ns_32_5_full_dsp_U11", "Parent" : "23", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_update_off_diag_r_fu_136.dut_fmul_32ns_32ns_32_4_max_dsp_U12", "Parent" : "23", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_backproj_fu_144", "Parent" : "0", "Child" : ["27", "28", "29"], "CDFG" : "dut_backproj", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_backproj_fu_136.A_U", "Parent" : "22", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_backproj_fu_136.dut_fadd_32ns_32ns_32_5_full_dsp_U1", "Parent" : "22", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_backproj_fu_136.dut_fmul_32ns_32ns_32_4_max_dsp_U2", "Parent" : "22", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_matmul_fu_144", "Parent" : "0", "Child" : ["27", "28", "29"], "CDFG" : "dut_matmul", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
 		{"Name" : "strm_in_V", "Type" : "Fifo", "Direction" : "I", "BlockSignal" : [
 			{"Name" : "strm_in_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}, 
@@ -129,15 +129,15 @@ set RtlHierarchyInfo {[
 			{"Name" : "strm_out_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}],
 		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_backproj_fu_144.A_U", "Parent" : "26", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_backproj_fu_144.dut_fadd_32ns_32ns_32_5_full_dsp_U1", "Parent" : "26", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_backproj_fu_144.dut_fmul_32ns_32ns_32_4_max_dsp_U2", "Parent" : "26", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_matmul_fu_144.A_U", "Parent" : "26", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_matmul_fu_144.dut_fadd_32ns_32ns_32_5_full_dsp_U6", "Parent" : "26", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_matmul_fu_144.dut_fmul_32ns_32ns_32_4_max_dsp_U7", "Parent" : "26", "Child" : []},
 	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fadd_32ns_32ns_32_5_full_dsp_U35", "Parent" : "0", "Child" : []},
 	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fmul_32ns_32ns_32_4_max_dsp_U36", "Parent" : "0", "Child" : []}]}
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "3", "Max" : "61868580"}
-	, {"Name" : "Interval", "Min" : "4", "Max" : "61868581"}
+	{"Name" : "Latency", "Min" : "3", "Max" : "307328013"}
+	, {"Name" : "Interval", "Min" : "4", "Max" : "307328014"}
 ]}
 
 set Spec2ImplPortList { 

@@ -133,14 +133,14 @@
 						<id>5</id>
 						<name>p_Val2_s</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>309</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="11" tracking_level="0" version="0">
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second class_id="12" tracking_level="0" version="0">
 									<count>3</count>
 									<item_version>0</item_version>
@@ -188,14 +188,14 @@
 						<id>6</id>
 						<name>loc_V</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>316</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
@@ -246,14 +246,14 @@
 						<id>7</id>
 						<name>p_Val2_9</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>309</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
@@ -301,14 +301,14 @@
 						<id>8</id>
 						<name>loc_V_2</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>316</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
@@ -359,14 +359,14 @@
 						<id>9</id>
 						<name>lhs_V_cast</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>48</lineNumber>
 						<contextFuncName>within_precision&amp;lt;float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -407,14 +407,14 @@
 						<id>10</id>
 						<name>r_V</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>48</lineNumber>
 						<contextFuncName>within_precision&amp;lt;float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -456,14 +456,14 @@
 						<id>11</id>
 						<name>tmp_i_cast</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>48</lineNumber>
 						<contextFuncName>within_precision&amp;lt;float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -504,14 +504,14 @@
 						<id>12</id>
 						<name>ult</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>48</lineNumber>
 						<contextFuncName>within_precision&amp;lt;float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -553,14 +553,14 @@
 						<id>13</id>
 						<name>notrhs_i</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>48</lineNumber>
 						<contextFuncName>within_precision&amp;lt;float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -602,14 +602,14 @@
 						<id>14</id>
 						<name>demorgan</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>48</lineNumber>
 						<contextFuncName>within_precision&amp;lt;float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -651,14 +651,14 @@
 						<id>15</id>
 						<name></name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>110</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -694,14 +694,14 @@
 						<id>17</id>
 						<name>r_V_1</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>48</lineNumber>
 						<contextFuncName>within_precision&amp;lt;float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -743,14 +743,14 @@
 						<id>18</id>
 						<name>ult3</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>48</lineNumber>
 						<contextFuncName>within_precision&amp;lt;float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -792,14 +792,14 @@
 						<id>19</id>
 						<name>notrhs_i1</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>48</lineNumber>
 						<contextFuncName>within_precision&amp;lt;float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -841,14 +841,14 @@
 						<id>20</id>
 						<name>demorgan5</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>48</lineNumber>
 						<contextFuncName>within_precision&amp;lt;float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -890,14 +890,14 @@
 						<id>21</id>
 						<name></name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>125</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -933,14 +933,14 @@
 						<id>23</id>
 						<name>tanThetaA</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>143</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -975,14 +975,14 @@
 						<id>24</id>
 						<name>p_Result_8</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>315</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>4</count>
 									<item_version>0</item_version>
@@ -1039,14 +1039,14 @@
 						<id>25</id>
 						<name>p_Result_12</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>334</lineNumber>
 						<contextFuncName>data</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>6</count>
 									<item_version>0</item_version>
@@ -1117,14 +1117,14 @@
 						<id>26</id>
 						<name>ret_i_i_i_i</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>347</lineNumber>
 						<contextFuncName>to_float</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>5</count>
 									<item_version>0</item_version>
@@ -1186,14 +1186,14 @@
 						<id>27</id>
 						<name>tmp_5</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>144</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1228,14 +1228,14 @@
 						<id>28</id>
 						<name>x_assign</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>144</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1270,14 +1270,14 @@
 						<id>29</id>
 						<name>tmp_i_i</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>760</lineNumber>
 						<contextFuncName>rsqrtf</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
@@ -1326,14 +1326,14 @@
 						<id>30</id>
 						<name>cosThetaA_int</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>144</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1368,14 +1368,14 @@
 						<id>31</id>
 						<name>sinThetaA_int</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>146</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1410,14 +1410,14 @@
 						<id>32</id>
 						<name>p_Val2_12</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>309</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
@@ -1465,14 +1465,14 @@
 						<id>33</id>
 						<name>p_Result_13</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>315</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
@@ -1522,14 +1522,14 @@
 						<id>34</id>
 						<name></name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>152</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1565,14 +1565,14 @@
 						<id>36</id>
 						<name>tmp_3</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>155</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1607,14 +1607,14 @@
 						<id>37</id>
 						<name>tanThetaAdiv2</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>155</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1676,14 +1676,14 @@
 						<id>40</id>
 						<name>tmp_s</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>153</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1718,14 +1718,14 @@
 						<id>41</id>
 						<name>tanThetaAdiv2_1</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>153</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1760,14 +1760,14 @@
 						<id>42</id>
 						<name></name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>154</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1831,14 +1831,14 @@
 						<id>45</id>
 						<name>tmp_4</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>157</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1873,14 +1873,14 @@
 						<id>46</id>
 						<name>x_assign_2</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>157</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1915,14 +1915,14 @@
 						<id>47</id>
 						<name>cosThetaAdiv2_int</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>760</lineNumber>
 						<contextFuncName>rsqrtf</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
@@ -1971,14 +1971,14 @@
 						<id>48</id>
 						<name>tmp_7</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>160</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2040,14 +2040,14 @@
 						<id>51</id>
 						<name>p_Result_11</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>315</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
@@ -2097,14 +2097,14 @@
 						<id>52</id>
 						<name>storemerge1</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>127</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2140,14 +2140,14 @@
 						<id>53</id>
 						<name></name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>140</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2181,14 +2181,14 @@
 						<id>55</id>
 						<name>p_Result_s</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>315</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
@@ -2238,14 +2238,14 @@
 						<id>56</id>
 						<name>p_s</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>111</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2281,14 +2281,14 @@
 						<id>57</id>
 						<name>p_1</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>111</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2324,14 +2324,14 @@
 						<id>58</id>
 						<name></name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>111</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2397,14 +2397,14 @@
 						<id>61</id>
 						<name>sinThetaAdiv2_write_assign</name>
 						<fileName>./svd.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>160</lineNumber>
 						<contextFuncName>calc_angle&amp;lt;float, float&amp;gt;</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2443,14 +2443,14 @@
 						<id>62</id>
 						<name>newret</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>760</lineNumber>
 						<contextFuncName>rsqrtf</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
@@ -2499,14 +2499,14 @@
 						<id>63</id>
 						<name>newret2</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>760</lineNumber>
 						<contextFuncName>rsqrtf</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>
@@ -2555,14 +2555,14 @@
 						<id>64</id>
 						<name></name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h</fileName>
-						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>760</lineNumber>
 						<contextFuncName>rsqrtf</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>3</count>
 									<item_version>0</item_version>

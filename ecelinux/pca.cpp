@@ -90,11 +90,14 @@ void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
 
   pca_in->write(4);
   for (int i = 0; i < 784; i++) {
+    /*
     for (int m = 0; m < 100; m++) {
       pca_in->write(X[i][m]);
-    }
+    }*/
     for (int j = 0; j < 784; j++) {
       for (int n = 0; n < 100; n++) {
+        if (j == 0)
+          pca_in->write(X[i][n]);
         pca_in->write(XT[n][j]);
       }
     }
@@ -204,11 +207,14 @@ void PCA::rank(fix32_t tsf_mat[K][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t
 void PCA::back_pjt(fix32_t tsf_mat[K][VEC_SIZ], fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[K][IMG_NUM]){
   pca_in->write(5);
   for (int i = 0; i < 10; i++) {
+    /*
     for (int m = 0; m < 784; m++) {
       pca_in->write(tsf_mat[i][m]);
-    }
+    }*/
     for (int j = 0; j < 100; j++) {
       for (int n = 0; n < 784; n++) {
+        if (j == 0)
+          pca_in->write(tsf_mat[i][n]);
         pca_in->write(X[n][j]);
       }
     }

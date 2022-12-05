@@ -135,25 +135,23 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   LOOP_ROW:
   for (int i = 0; i < 784; i++) {
     // store A[i]
+    /*
     LOOP_ST_A:
     for (int m = 0; m < 100; m++) {
       A[m] = strm_in.read();
-    }
+    }*/
     LOOP_COL:
     for (int j = 0; j < 784; j++) {
       // calculate A[j] dot B[j]
       LOOP_DOT_PROD:
       for (int k = 0; k < 100; k++) {
-        if (k == 0) {
-          // // store B[j]
-          // LOOP_ST_B:
-          // for (int n = 0; n < 100; n++) {
-          //   B[n] = strm_in.read();
-          // }
-
-          result = 0;
+        if (j == 0){
+          A[k] = strm_in.read();
         }
-        result += A[k] * strm_in.read();
+        if (k == 0)
+          result = A[k] * strm_in.read();
+        else
+          result += A[k] * strm_in.read();
         // write back result XXT[i][j]
         if (k == 99)  strm_out.write(result);
       }
@@ -180,15 +178,19 @@ void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   LOOP_ROW:
   for (int i = 0; i < 10; i++) {
     // store A[i]
+    /*
     LOOP_ST_A:
     for (int m = 0; m < 784; m++) {
       A[m] = strm_in.read();
-    }
+    }*/
     LOOP_COL:
     for (int j = 0; j < 100; j++) {
       // calculate A[j] dot B[j]
       LOOP_DOT_PROD:
       for (int k = 0; k < 784; k++) {
+        if (j == 0) {
+          A[k] = strm_in.read();
+        }
         if (k == 0) {
           result = 0;
         }

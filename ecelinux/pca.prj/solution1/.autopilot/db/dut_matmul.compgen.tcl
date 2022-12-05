@@ -4,7 +4,7 @@
 set ID 8
 set MemName dut_matmul_A
 set CoreName ap_simcore_mem
-set PortList { 2 1 }
+set PortList { 2 3 }
 set DataWd 32
 set AddrRange 100
 set AddrWd 7

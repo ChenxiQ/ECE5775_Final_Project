@@ -12,9 +12,9 @@
 #include "AESL_pkg.h"
 
 #include "dut_calc_svd.h"
-#include "dut_matmul.h"
 #include "dut_update_off_diag_r.h"
 #include "dut_backproj.h"
+#include "dut_matmul.h"
 #include "dut_fadd_32ns_32ns_32_5_full_dsp.h"
 #include "dut_fmul_32ns_32ns_32_4_max_dsp.h"
 
@@ -47,9 +47,9 @@ struct dut : public sc_module {
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
     dut_calc_svd* grp_dut_calc_svd_fu_120;
-    dut_matmul* grp_dut_matmul_fu_128;
-    dut_update_off_diag_r* grp_dut_update_off_diag_r_fu_136;
-    dut_backproj* grp_dut_backproj_fu_144;
+    dut_update_off_diag_r* grp_dut_update_off_diag_r_fu_128;
+    dut_backproj* grp_dut_backproj_fu_136;
+    dut_matmul* grp_dut_matmul_fu_144;
     dut_fadd_32ns_32ns_32_5_full_dsp<1,5,32,32,32>* dut_fadd_32ns_32ns_32_5_full_dsp_U35;
     dut_fmul_32ns_32ns_32_4_max_dsp<1,4,32,32,32>* dut_fmul_32ns_32ns_32_4_max_dsp_U36;
     sc_signal< sc_lv<11> > ap_CS_fsm;
@@ -96,14 +96,14 @@ struct dut : public sc_module {
     sc_signal< sc_lv<1> > ap_reg_ppstg_exitcond_flatten_reg_339_pp0_iter1;
     sc_signal< sc_lv<19> > indvar_flatten_next_fu_308_p2;
     sc_signal< sc_lv<19> > indvar_flatten_next_reg_343;
-    sc_signal< sc_lv<32> > tmp_129_reg_348;
-    sc_signal< sc_lv<32> > tmp_130_reg_353;
-    sc_signal< sc_lv<32> > tmp_131_reg_358;
-    sc_signal< sc_lv<32> > tmp_132_reg_363;
-    sc_signal< sc_lv<32> > tmp_133_reg_368;
-    sc_signal< sc_lv<32> > tmp_134_reg_373;
+    sc_signal< sc_lv<32> > tmp_33_reg_348;
+    sc_signal< sc_lv<32> > tmp_34_reg_353;
+    sc_signal< sc_lv<32> > tmp_35_reg_358;
+    sc_signal< sc_lv<32> > tmp_36_reg_363;
+    sc_signal< sc_lv<32> > tmp_37_reg_368;
+    sc_signal< sc_lv<32> > tmp_38_reg_373;
     sc_signal< sc_lv<32> > grp_fu_156_p2;
-    sc_signal< sc_lv<32> > tmp_i_i_20_reg_378;
+    sc_signal< sc_lv<32> > tmp_i_i_16_reg_378;
     sc_signal< sc_lv<32> > tmp_3_i_i_reg_383;
     sc_signal< sc_lv<32> > tmp_i10_i_reg_388;
     sc_signal< sc_lv<32> > tmp_3_i11_i_reg_393;
@@ -114,36 +114,36 @@ struct dut : public sc_module {
     sc_signal< sc_logic > grp_dut_calc_svd_fu_120_strm_in_V_read;
     sc_signal< sc_lv<32> > grp_dut_calc_svd_fu_120_strm_out_V_din;
     sc_signal< sc_logic > grp_dut_calc_svd_fu_120_strm_out_V_write;
-    sc_signal< sc_logic > grp_dut_matmul_fu_128_ap_start;
-    sc_signal< sc_logic > grp_dut_matmul_fu_128_ap_done;
-    sc_signal< sc_logic > grp_dut_matmul_fu_128_ap_idle;
-    sc_signal< sc_logic > grp_dut_matmul_fu_128_ap_ready;
-    sc_signal< sc_logic > grp_dut_matmul_fu_128_strm_in_V_read;
-    sc_signal< sc_lv<32> > grp_dut_matmul_fu_128_strm_out_V_din;
-    sc_signal< sc_logic > grp_dut_matmul_fu_128_strm_out_V_write;
-    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_136_ap_start;
-    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_136_ap_done;
-    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_136_ap_idle;
-    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_136_ap_ready;
-    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_136_strm_in_V_read;
-    sc_signal< sc_lv<32> > grp_dut_update_off_diag_r_fu_136_strm_out_V_din;
-    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_136_strm_out_V_write;
-    sc_signal< sc_logic > grp_dut_backproj_fu_144_ap_start;
-    sc_signal< sc_logic > grp_dut_backproj_fu_144_ap_done;
-    sc_signal< sc_logic > grp_dut_backproj_fu_144_ap_idle;
-    sc_signal< sc_logic > grp_dut_backproj_fu_144_ap_ready;
-    sc_signal< sc_logic > grp_dut_backproj_fu_144_strm_in_V_read;
-    sc_signal< sc_lv<32> > grp_dut_backproj_fu_144_strm_out_V_din;
-    sc_signal< sc_logic > grp_dut_backproj_fu_144_strm_out_V_write;
+    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_128_ap_start;
+    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_128_ap_done;
+    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_128_ap_idle;
+    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_128_ap_ready;
+    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_128_strm_in_V_read;
+    sc_signal< sc_lv<32> > grp_dut_update_off_diag_r_fu_128_strm_out_V_din;
+    sc_signal< sc_logic > grp_dut_update_off_diag_r_fu_128_strm_out_V_write;
+    sc_signal< sc_logic > grp_dut_backproj_fu_136_ap_start;
+    sc_signal< sc_logic > grp_dut_backproj_fu_136_ap_done;
+    sc_signal< sc_logic > grp_dut_backproj_fu_136_ap_idle;
+    sc_signal< sc_logic > grp_dut_backproj_fu_136_ap_ready;
+    sc_signal< sc_logic > grp_dut_backproj_fu_136_strm_in_V_read;
+    sc_signal< sc_lv<32> > grp_dut_backproj_fu_136_strm_out_V_din;
+    sc_signal< sc_logic > grp_dut_backproj_fu_136_strm_out_V_write;
+    sc_signal< sc_logic > grp_dut_matmul_fu_144_ap_start;
+    sc_signal< sc_logic > grp_dut_matmul_fu_144_ap_done;
+    sc_signal< sc_logic > grp_dut_matmul_fu_144_ap_idle;
+    sc_signal< sc_logic > grp_dut_matmul_fu_144_ap_ready;
+    sc_signal< sc_logic > grp_dut_matmul_fu_144_strm_in_V_read;
+    sc_signal< sc_lv<32> > grp_dut_matmul_fu_144_strm_out_V_din;
+    sc_signal< sc_logic > grp_dut_matmul_fu_144_strm_out_V_write;
     sc_signal< sc_lv<19> > indvar_flatten_phi_fu_113_p4;
     sc_signal< sc_logic > ap_reg_grp_dut_calc_svd_fu_120_ap_start;
     sc_signal< sc_logic > ap_sig_cseq_ST_st23_fsm_9;
     sc_signal< bool > ap_sig_297;
-    sc_signal< sc_logic > ap_reg_grp_dut_matmul_fu_128_ap_start;
+    sc_signal< sc_logic > ap_reg_grp_dut_update_off_diag_r_fu_128_ap_start;
+    sc_signal< sc_logic > ap_reg_grp_dut_backproj_fu_136_ap_start;
     sc_signal< sc_logic > ap_sig_cseq_ST_st3_fsm_2;
-    sc_signal< bool > ap_sig_310;
-    sc_signal< sc_logic > ap_reg_grp_dut_update_off_diag_r_fu_136_ap_start;
-    sc_signal< sc_logic > ap_reg_grp_dut_backproj_fu_144_ap_start;
+    sc_signal< bool > ap_sig_316;
+    sc_signal< sc_logic > ap_reg_grp_dut_matmul_fu_144_ap_start;
     sc_signal< sc_lv<32> > grp_fu_152_p0;
     sc_signal< sc_lv<32> > grp_fu_152_p1;
     sc_signal< sc_lv<32> > grp_fu_156_p0;
@@ -152,18 +152,18 @@ struct dut : public sc_module {
     sc_signal< sc_lv<8> > loc_V_fu_177_p4;
     sc_signal< sc_lv<9> > tmp_i_i_i_cast1_fu_191_p1;
     sc_signal< sc_lv<9> > sh_assign_fu_195_p2;
-    sc_signal< sc_lv<8> > tmp_17_i_i_fu_209_p2;
-    sc_signal< sc_lv<9> > tmp_17_i_i_cast_fu_215_p1;
+    sc_signal< sc_lv<8> > tmp_22_i_i_fu_209_p2;
+    sc_signal< sc_lv<9> > tmp_22_i_i_cast_fu_215_p1;
     sc_signal< sc_lv<24> > p_Result_1_fu_227_p3;
     sc_signal< sc_lv<32> > sh_assign_1_cast_fu_238_p1;
     sc_signal< sc_lv<24> > sh_assign_1_cast_cast_fu_241_p1;
     sc_signal< sc_lv<78> > tmp_i_i_fu_234_p1;
-    sc_signal< sc_lv<78> > tmp_18_i_i_fu_244_p1;
-    sc_signal< sc_lv<24> > tmp_19_i_i_fu_248_p2;
+    sc_signal< sc_lv<78> > tmp_23_i_i_fu_244_p1;
+    sc_signal< sc_lv<24> > tmp_24_i_i_fu_248_p2;
     sc_signal< sc_lv<1> > tmp_fu_260_p3;
-    sc_signal< sc_lv<78> > tmp_21_i_i_fu_254_p2;
+    sc_signal< sc_lv<78> > tmp_26_i_i_fu_254_p2;
     sc_signal< sc_lv<32> > tmp_s_fu_268_p1;
-    sc_signal< sc_lv<32> > tmp_7_fu_272_p4;
+    sc_signal< sc_lv<32> > tmp_8_fu_272_p4;
     sc_signal< sc_lv<32> > p_Val2_3_fu_282_p3;
     sc_signal< sc_lv<32> > p_Val2_8_i_i_fu_289_p2;
     sc_signal< sc_logic > grp_fu_152_ce;
@@ -218,7 +218,7 @@ struct dut : public sc_module {
     void thread_ap_sig_165();
     void thread_ap_sig_26();
     void thread_ap_sig_297();
-    void thread_ap_sig_310();
+    void thread_ap_sig_316();
     void thread_ap_sig_469();
     void thread_ap_sig_50();
     void thread_ap_sig_69();
@@ -237,10 +237,10 @@ struct dut : public sc_module {
     void thread_ap_sig_cseq_ST_st2_fsm_1();
     void thread_ap_sig_cseq_ST_st3_fsm_2();
     void thread_exitcond_flatten_fu_302_p2();
-    void thread_grp_dut_backproj_fu_144_ap_start();
+    void thread_grp_dut_backproj_fu_136_ap_start();
     void thread_grp_dut_calc_svd_fu_120_ap_start();
-    void thread_grp_dut_matmul_fu_128_ap_start();
-    void thread_grp_dut_update_off_diag_r_fu_136_ap_start();
+    void thread_grp_dut_matmul_fu_144_ap_start();
+    void thread_grp_dut_update_off_diag_r_fu_128_ap_start();
     void thread_grp_fu_152_ce();
     void thread_grp_fu_152_p0();
     void thread_grp_fu_152_p1();
@@ -266,12 +266,12 @@ struct dut : public sc_module {
     void thread_strm_out_V_blk_n();
     void thread_strm_out_V_din();
     void thread_strm_out_V_write();
-    void thread_tmp_17_i_i_cast_fu_215_p1();
-    void thread_tmp_17_i_i_fu_209_p2();
-    void thread_tmp_18_i_i_fu_244_p1();
-    void thread_tmp_19_i_i_fu_248_p2();
-    void thread_tmp_21_i_i_fu_254_p2();
-    void thread_tmp_7_fu_272_p4();
+    void thread_tmp_22_i_i_cast_fu_215_p1();
+    void thread_tmp_22_i_i_fu_209_p2();
+    void thread_tmp_23_i_i_fu_244_p1();
+    void thread_tmp_24_i_i_fu_248_p2();
+    void thread_tmp_26_i_i_fu_254_p2();
+    void thread_tmp_8_fu_272_p4();
     void thread_tmp_fu_260_p3();
     void thread_tmp_i_i_fu_234_p1();
     void thread_tmp_i_i_i_cast1_fu_191_p1();

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut'
 ================================================================
-* Date:           Sun Dec  4 22:47:19 2022
+* Date:           Mon Dec  5 02:26:31 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -20,29 +20,29 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      9.54|        1.25|
+    |ap_clk  |  10.00|      9.38|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+----------+-----+----------+---------+
-    |     Latency    |    Interval    | Pipeline|
-    | min |    max   | min |    max   |   Type  |
-    +-----+----------+-----+----------+---------+
-    |    3|  61868580|    4|  61868581|   none  |
-    +-----+----------+-----+----------+---------+
+    +-----+-----------+-----+-----------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    | min |    max    | min |    max    |   Type  |
+    +-----+-----------+-----+-----------+---------+
+    |    3|  307328013|    4|  307328014|   none  |
+    +-----+-----------+-----+-----------+---------+
 
     + Detail: 
         * Instance: 
-        +----------------------------------+-----------------------+----------+----------+----------+----------+---------+
-        |                                  |                       |       Latency       |       Interval      | Pipeline|
-        |             Instance             |         Module        |    min   |    max   |    min   |    max   |   Type  |
-        +----------------------------------+-----------------------+----------+----------+----------+----------+---------+
-        |grp_dut_calc_svd_fu_120           |dut_calc_svd           |      7975|      7975|      7975|      7975|   none  |
-        |grp_dut_matmul_fu_128             |dut_matmul             |  61868577|  61868577|  61868577|  61868577|   none  |
-        |grp_dut_update_off_diag_r_fu_136  |dut_update_off_diag_r  |   4291632|   4291632|   4291632|   4291632|   none  |
-        |grp_dut_backproj_fu_144           |dut_backproj           |   3927941|   3927941|   3927941|   3927941|   none  |
-        +----------------------------------+-----------------------+----------+----------+----------+----------+---------+
+        +----------------------------------+-----------------------+-----------+-----------+-----------+-----------+---------+
+        |                                  |                       |        Latency        |        Interval       | Pipeline|
+        |             Instance             |         Module        |    min    |    max    |    min    |    max    |   Type  |
+        +----------------------------------+-----------------------+-----------+-----------+-----------+-----------+---------+
+        |grp_dut_calc_svd_fu_120           |dut_calc_svd           |       7975|       7975|       7975|       7975|   none  |
+        |grp_dut_update_off_diag_r_fu_128  |dut_update_off_diag_r  |    4291632|    4291632|    4291632|    4291632|   none  |
+        |grp_dut_backproj_fu_136           |dut_backproj           |    3136010|    3136010|    3136010|    3136010|   none  |
+        |grp_dut_matmul_fu_144             |dut_matmul             |  307328010|  307328010|  307328010|  307328010|   none  |
+        +----------------------------------+-----------------------+-----------+-----------+-----------+-----------+---------+
 
         * Loop: 
         +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
@@ -64,16 +64,16 @@
 |DSP              |        -|      -|       -|      -|
 |Expression       |        -|      -|       0|    453|
 |FIFO             |        -|      -|       -|      -|
-|Instance         |        4|     69|   15135|  17227|
+|Instance         |        3|     69|    9311|  13147|
 |Memory           |        -|      -|       -|      -|
 |Multiplexer      |        -|      -|       -|    209|
 |Register         |        -|      -|     476|      1|
 +-----------------+---------+-------+--------+-------+
-|Total            |        4|     69|   15611|  17890|
+|Total            |        3|     69|    9787|  13810|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
-|Utilization (%)  |        1|     31|      14|     33|
+|Utilization (%)  |        1|     31|       9|     25|
 +-----------------+---------+-------+--------+-------+
 
 + Detail: 
@@ -81,14 +81,14 @@
     +--------------------------------------+----------------------------------+---------+-------+------+------+
     |               Instance               |              Module              | BRAM_18K| DSP48E|  FF  |  LUT |
     +--------------------------------------+----------------------------------+---------+-------+------+------+
-    |grp_dut_backproj_fu_144               |dut_backproj                      |        2|      5|   587|   949|
+    |grp_dut_backproj_fu_136               |dut_backproj                      |        2|      5|   609|  1066|
     |grp_dut_calc_svd_fu_120               |dut_calc_svd                      |        0|     49|  6621|  9360|
     |dut_fadd_32ns_32ns_32_5_full_dsp_U35  |dut_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|   205|   390|
     |dut_fmul_32ns_32ns_32_4_max_dsp_U36   |dut_fmul_32ns_32ns_32_4_max_dsp   |        0|      3|   143|   321|
-    |grp_dut_matmul_fu_128                 |dut_matmul                        |        2|      5|  6436|  5220|
-    |grp_dut_update_off_diag_r_fu_136      |dut_update_off_diag_r             |        0|      5|  1143|   987|
+    |grp_dut_matmul_fu_144                 |dut_matmul                        |        1|      5|   590|  1023|
+    |grp_dut_update_off_diag_r_fu_128      |dut_update_off_diag_r             |        0|      5|  1143|   987|
     +--------------------------------------+----------------------------------+---------+-------+------+------+
-    |Total                                 |                                  |        4|     69| 15135| 17227|
+    |Total                                 |                                  |        3|     69|  9311| 13147|
     +--------------------------------------+----------------------------------+---------+-------+------+------+
 
     * DSP48: 
@@ -107,16 +107,16 @@
     |indvar_flatten_next_fu_308_p2  |     +    |      0|  0|   19|          19|           1|
     |sh_assign_fu_195_p2            |     +    |      0|  0|    9|           8|           9|
     |p_Val2_8_i_i_fu_289_p2         |     -    |      0|  0|   32|           1|          32|
-    |tmp_17_i_i_fu_209_p2           |     -    |      0|  0|    8|           7|           8|
+    |tmp_22_i_i_fu_209_p2           |     -    |      0|  0|    8|           7|           8|
     |ap_sig_131                     |    and   |      0|  0|    1|           1|           1|
     |ap_sig_165                     |    and   |      0|  0|    1|           1|           1|
     |exitcond_flatten_fu_302_p2     |   icmp   |      0|  0|    7|          19|          19|
-    |tmp_19_i_i_fu_248_p2           |   lshr   |      0|  0|   63|          24|          24|
+    |tmp_24_i_i_fu_248_p2           |   lshr   |      0|  0|   63|          24|          24|
     |ap_sig_143                     |    or    |      0|  0|    1|           1|           1|
     |p_Val2_3_fu_282_p3             |  select  |      0|  0|   32|           1|          32|
     |p_Val2_5_fu_295_p3             |  select  |      0|  0|   32|           1|          32|
     |sh_assign_1_fu_219_p3          |  select  |      0|  0|    9|           1|           9|
-    |tmp_21_i_i_fu_254_p2           |    shl   |      0|  0|  239|          78|          78|
+    |tmp_26_i_i_fu_254_p2           |    shl   |      0|  0|  239|          78|          78|
     +-------------------------------+----------+-------+---+-----+------------+------------+
     |Total                          |          |      0|  0|  453|         162|         247|
     +-------------------------------+----------+-------+---+-----+------------+------------+
@@ -147,10 +147,10 @@
     |                       Name                       | FF | LUT| Bits| Const Bits|
     +--------------------------------------------------+----+----+-----+-----------+
     |ap_CS_fsm                                         |  11|   0|   11|          0|
-    |ap_reg_grp_dut_backproj_fu_144_ap_start           |   1|   0|    1|          0|
+    |ap_reg_grp_dut_backproj_fu_136_ap_start           |   1|   0|    1|          0|
     |ap_reg_grp_dut_calc_svd_fu_120_ap_start           |   1|   0|    1|          0|
-    |ap_reg_grp_dut_matmul_fu_128_ap_start             |   1|   0|    1|          0|
-    |ap_reg_grp_dut_update_off_diag_r_fu_136_ap_start  |   1|   0|    1|          0|
+    |ap_reg_grp_dut_matmul_fu_144_ap_start             |   1|   0|    1|          0|
+    |ap_reg_grp_dut_update_off_diag_r_fu_128_ap_start  |   1|   0|    1|          0|
     |ap_reg_ppiten_pp0_it0                             |   1|   0|    1|          0|
     |ap_reg_ppiten_pp0_it1                             |   1|   0|    1|          0|
     |ap_reg_ppiten_pp0_it2                             |   1|   0|    1|          0|
@@ -164,16 +164,16 @@
     |p_Val2_5_reg_335                                  |  32|   0|   32|          0|
     |reg_160                                           |  32|   0|   32|          0|
     |sh_assign_1_reg_329                               |   9|   0|    9|          0|
-    |tmp_129_reg_348                                   |  32|   0|   32|          0|
-    |tmp_130_reg_353                                   |  32|   0|   32|          0|
-    |tmp_131_reg_358                                   |  32|   0|   32|          0|
-    |tmp_132_reg_363                                   |  32|   0|   32|          0|
-    |tmp_133_reg_368                                   |  32|   0|   32|          0|
-    |tmp_134_reg_373                                   |  32|   0|   32|          0|
+    |tmp_33_reg_348                                    |  32|   0|   32|          0|
+    |tmp_34_reg_353                                    |  32|   0|   32|          0|
+    |tmp_35_reg_358                                    |  32|   0|   32|          0|
+    |tmp_36_reg_363                                    |  32|   0|   32|          0|
+    |tmp_37_reg_368                                    |  32|   0|   32|          0|
+    |tmp_38_reg_373                                    |  32|   0|   32|          0|
     |tmp_3_i11_i_reg_393                               |  32|   0|   32|          0|
     |tmp_3_i_i_reg_383                                 |  32|   0|   32|          0|
     |tmp_i10_i_reg_388                                 |  32|   0|   32|          0|
-    |tmp_i_i_20_reg_378                                |  32|   0|   32|          0|
+    |tmp_i_i_16_reg_378                                |  32|   0|   32|          0|
     |exitcond_flatten_reg_339                          |   0|   1|    1|          0|
     +--------------------------------------------------+----+----+-----+-----------+
     |Total                                             | 476|   1|  477|          0|
@@ -290,11 +290,11 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
  <State 1>: 7.46ns
-ST_1: tmp_128 [1/1] 4.38ns
-_ifconv:5  %tmp_128 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_1: tmp_32 [1/1] 4.38ns
+_ifconv:5  %tmp_32 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 ST_1: p_Val2_s [1/1] 0.00ns
-_ifconv:6  %p_Val2_s = bitcast float %tmp_128 to i32
+_ifconv:6  %p_Val2_s = bitcast float %tmp_32 to i32
 
 ST_1: p_Result_s [1/1] 0.00ns
 _ifconv:7  %p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %p_Val2_s, i32 31)
@@ -314,22 +314,22 @@ _ifconv:13  %sh_assign = add i9 -127, %tmp_i_i_i_cast1
 ST_1: isNeg [1/1] 0.00ns
 _ifconv:14  %isNeg = call i1 @_ssdm_op_BitSelect.i1.i9.i32(i9 %sh_assign, i32 8)
 
-ST_1: tmp_17_i_i [1/1] 1.72ns
-_ifconv:15  %tmp_17_i_i = sub i8 127, %loc_V
+ST_1: tmp_22_i_i [1/1] 1.72ns
+_ifconv:15  %tmp_22_i_i = sub i8 127, %loc_V
 
-ST_1: tmp_17_i_i_cast [1/1] 0.00ns
-_ifconv:16  %tmp_17_i_i_cast = sext i8 %tmp_17_i_i to i9
+ST_1: tmp_22_i_i_cast [1/1] 0.00ns
+_ifconv:16  %tmp_22_i_i_cast = sext i8 %tmp_22_i_i to i9
 
 ST_1: sh_assign_1 [1/1] 1.37ns
-_ifconv:17  %sh_assign_1 = select i1 %isNeg, i9 %tmp_17_i_i_cast, i9 %sh_assign
+_ifconv:17  %sh_assign_1 = select i1 %isNeg, i9 %tmp_22_i_i_cast, i9 %sh_assign
 
 
  <State 2>: 8.47ns
 ST_2: empty [1/1] 0.00ns
 _ifconv:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
 
-ST_2: empty_18 [1/1] 0.00ns
-_ifconv:1  %empty_18 = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+ST_2: empty_14 [1/1] 0.00ns
+_ifconv:1  %empty_14 = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
 
 ST_2: stg_38 [1/1] 0.00ns
 _ifconv:2  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_in_V), !map !212
@@ -352,26 +352,26 @@ _ifconv:18  %sh_assign_1_cast = sext i9 %sh_assign_1 to i32
 ST_2: sh_assign_1_cast_cast [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
 _ifconv:19  %sh_assign_1_cast_cast = sext i9 %sh_assign_1 to i24
 
-ST_2: tmp_18_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
-_ifconv:20  %tmp_18_i_i = zext i32 %sh_assign_1_cast to i78
+ST_2: tmp_23_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
+_ifconv:20  %tmp_23_i_i = zext i32 %sh_assign_1_cast to i78
 
-ST_2: tmp_19_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
-_ifconv:21  %tmp_19_i_i = lshr i24 %p_Result_1, %sh_assign_1_cast_cast
+ST_2: tmp_24_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
+_ifconv:21  %tmp_24_i_i = lshr i24 %p_Result_1, %sh_assign_1_cast_cast
 
-ST_2: tmp_21_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
-_ifconv:22  %tmp_21_i_i = shl i78 %tmp_i_i, %tmp_18_i_i
+ST_2: tmp_26_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
+_ifconv:22  %tmp_26_i_i = shl i78 %tmp_i_i, %tmp_23_i_i
 
 ST_2: tmp [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
-_ifconv:23  %tmp = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %tmp_19_i_i, i32 23)
+_ifconv:23  %tmp = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %tmp_24_i_i, i32 23)
 
 ST_2: tmp_s [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
 _ifconv:24  %tmp_s = zext i1 %tmp to i32
 
-ST_2: tmp_7 [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
-_ifconv:25  %tmp_7 = call i32 @_ssdm_op_PartSelect.i32.i78.i32.i32(i78 %tmp_21_i_i, i32 23, i32 54)
+ST_2: tmp_8 [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
+_ifconv:25  %tmp_8 = call i32 @_ssdm_op_PartSelect.i32.i78.i32.i32(i78 %tmp_26_i_i, i32 23, i32 54)
 
 ST_2: p_Val2_3 [1/1] 2.78ns (out node of the LUT)
-_ifconv:26  %p_Val2_3 = select i1 %isNeg, i32 %tmp_s, i32 %tmp_7
+_ifconv:26  %p_Val2_3 = select i1 %isNeg, i32 %tmp_s, i32 %tmp_8
 
 ST_2: p_Val2_8_i_i [1/1] 2.44ns
 _ifconv:27  %p_Val2_8_i_i = sub i32 0, %p_Val2_3
@@ -433,159 +433,159 @@ ST_4: stg_67 [1/1] 0.00ns
 
 
  <State 5>: 4.38ns
-ST_5: tmp_129 [1/1] 4.38ns
-.preheader:5  %tmp_129 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_5: tmp_33 [1/1] 4.38ns
+.preheader:5  %tmp_33 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 6>: 4.38ns
-ST_6: tmp_130 [1/1] 4.38ns
-.preheader:6  %tmp_130 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_6: tmp_34 [1/1] 4.38ns
+.preheader:6  %tmp_34 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 7>: 4.38ns
-ST_7: tmp_131 [1/1] 4.38ns
-.preheader:7  %tmp_131 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_7: tmp_35 [1/1] 4.38ns
+.preheader:7  %tmp_35 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 8>: 4.38ns
-ST_8: tmp_132 [1/1] 4.38ns
-.preheader:8  %tmp_132 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_8: tmp_36 [1/1] 4.38ns
+.preheader:8  %tmp_36 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 9>: 4.38ns
-ST_9: tmp_133 [1/1] 4.38ns
-.preheader:9  %tmp_133 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_9: tmp_37 [1/1] 4.38ns
+.preheader:9  %tmp_37 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 10>: 5.70ns
-ST_10: tmp_134 [1/1] 4.38ns
-.preheader:10  %tmp_134 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_10: tmp_38 [1/1] 4.38ns
+.preheader:10  %tmp_38 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
-ST_10: tmp_i_i_20 [4/4] 5.70ns
-.preheader:11  %tmp_i_i_20 = fmul float %tmp_129, %tmp_133
+ST_10: tmp_i_i_16 [4/4] 5.70ns
+.preheader:11  %tmp_i_i_16 = fmul float %tmp_33, %tmp_37
 
 
  <State 11>: 5.70ns
-ST_11: tmp_i_i_20 [3/4] 5.70ns
-.preheader:11  %tmp_i_i_20 = fmul float %tmp_129, %tmp_133
+ST_11: tmp_i_i_16 [3/4] 5.70ns
+.preheader:11  %tmp_i_i_16 = fmul float %tmp_33, %tmp_37
 
 ST_11: tmp_3_i_i [4/4] 5.70ns
-.preheader:12  %tmp_3_i_i = fmul float %tmp_131, %tmp_134
+.preheader:12  %tmp_3_i_i = fmul float %tmp_35, %tmp_38
 
 
  <State 12>: 5.70ns
-ST_12: tmp_i_i_20 [2/4] 5.70ns
-.preheader:11  %tmp_i_i_20 = fmul float %tmp_129, %tmp_133
+ST_12: tmp_i_i_16 [2/4] 5.70ns
+.preheader:11  %tmp_i_i_16 = fmul float %tmp_33, %tmp_37
 
 ST_12: tmp_3_i_i [3/4] 5.70ns
-.preheader:12  %tmp_3_i_i = fmul float %tmp_131, %tmp_134
+.preheader:12  %tmp_3_i_i = fmul float %tmp_35, %tmp_38
 
 ST_12: tmp_i10_i [4/4] 5.70ns
-.preheader:14  %tmp_i10_i = fmul float %tmp_130, %tmp_133
+.preheader:14  %tmp_i10_i = fmul float %tmp_34, %tmp_37
 
 
  <State 13>: 5.70ns
-ST_13: tmp_i_i_20 [1/4] 5.70ns
-.preheader:11  %tmp_i_i_20 = fmul float %tmp_129, %tmp_133
+ST_13: tmp_i_i_16 [1/4] 5.70ns
+.preheader:11  %tmp_i_i_16 = fmul float %tmp_33, %tmp_37
 
 ST_13: tmp_3_i_i [2/4] 5.70ns
-.preheader:12  %tmp_3_i_i = fmul float %tmp_131, %tmp_134
+.preheader:12  %tmp_3_i_i = fmul float %tmp_35, %tmp_38
 
 ST_13: tmp_i10_i [3/4] 5.70ns
-.preheader:14  %tmp_i10_i = fmul float %tmp_130, %tmp_133
+.preheader:14  %tmp_i10_i = fmul float %tmp_34, %tmp_37
 
 ST_13: tmp_3_i11_i [4/4] 5.70ns
-.preheader:15  %tmp_3_i11_i = fmul float %tmp_132, %tmp_134
+.preheader:15  %tmp_3_i11_i = fmul float %tmp_36, %tmp_38
 
 
  <State 14>: 5.70ns
 ST_14: tmp_3_i_i [1/4] 5.70ns
-.preheader:12  %tmp_3_i_i = fmul float %tmp_131, %tmp_134
+.preheader:12  %tmp_3_i_i = fmul float %tmp_35, %tmp_38
 
 ST_14: tmp_i10_i [2/4] 5.70ns
-.preheader:14  %tmp_i10_i = fmul float %tmp_130, %tmp_133
+.preheader:14  %tmp_i10_i = fmul float %tmp_34, %tmp_37
 
 ST_14: tmp_3_i11_i [3/4] 5.70ns
-.preheader:15  %tmp_3_i11_i = fmul float %tmp_132, %tmp_134
+.preheader:15  %tmp_3_i11_i = fmul float %tmp_36, %tmp_38
 
 
  <State 15>: 7.26ns
-ST_15: tmp_126 [5/5] 7.26ns
-.preheader:13  %tmp_126 = fadd float %tmp_i_i_20, %tmp_3_i_i
+ST_15: tmp_30 [5/5] 7.26ns
+.preheader:13  %tmp_30 = fadd float %tmp_i_i_16, %tmp_3_i_i
 
 ST_15: tmp_i10_i [1/4] 5.70ns
-.preheader:14  %tmp_i10_i = fmul float %tmp_130, %tmp_133
+.preheader:14  %tmp_i10_i = fmul float %tmp_34, %tmp_37
 
 ST_15: tmp_3_i11_i [2/4] 5.70ns
-.preheader:15  %tmp_3_i11_i = fmul float %tmp_132, %tmp_134
+.preheader:15  %tmp_3_i11_i = fmul float %tmp_36, %tmp_38
 
 
  <State 16>: 7.26ns
-ST_16: tmp_126 [4/5] 7.26ns
-.preheader:13  %tmp_126 = fadd float %tmp_i_i_20, %tmp_3_i_i
+ST_16: tmp_30 [4/5] 7.26ns
+.preheader:13  %tmp_30 = fadd float %tmp_i_i_16, %tmp_3_i_i
 
 ST_16: tmp_3_i11_i [1/4] 5.70ns
-.preheader:15  %tmp_3_i11_i = fmul float %tmp_132, %tmp_134
+.preheader:15  %tmp_3_i11_i = fmul float %tmp_36, %tmp_38
 
 
  <State 17>: 7.26ns
-ST_17: tmp_126 [3/5] 7.26ns
-.preheader:13  %tmp_126 = fadd float %tmp_i_i_20, %tmp_3_i_i
+ST_17: tmp_30 [3/5] 7.26ns
+.preheader:13  %tmp_30 = fadd float %tmp_i_i_16, %tmp_3_i_i
 
-ST_17: tmp_127 [5/5] 7.26ns
-.preheader:16  %tmp_127 = fadd float %tmp_i10_i, %tmp_3_i11_i
+ST_17: tmp_31 [5/5] 7.26ns
+.preheader:16  %tmp_31 = fadd float %tmp_i10_i, %tmp_3_i11_i
 
 
  <State 18>: 7.26ns
-ST_18: tmp_126 [2/5] 7.26ns
-.preheader:13  %tmp_126 = fadd float %tmp_i_i_20, %tmp_3_i_i
+ST_18: tmp_30 [2/5] 7.26ns
+.preheader:13  %tmp_30 = fadd float %tmp_i_i_16, %tmp_3_i_i
 
-ST_18: tmp_127 [4/5] 7.26ns
-.preheader:16  %tmp_127 = fadd float %tmp_i10_i, %tmp_3_i11_i
+ST_18: tmp_31 [4/5] 7.26ns
+.preheader:16  %tmp_31 = fadd float %tmp_i10_i, %tmp_3_i11_i
 
 
  <State 19>: 7.26ns
-ST_19: tmp_126 [1/5] 7.26ns
-.preheader:13  %tmp_126 = fadd float %tmp_i_i_20, %tmp_3_i_i
+ST_19: tmp_30 [1/5] 7.26ns
+.preheader:13  %tmp_30 = fadd float %tmp_i_i_16, %tmp_3_i_i
 
-ST_19: tmp_127 [3/5] 7.26ns
-.preheader:16  %tmp_127 = fadd float %tmp_i10_i, %tmp_3_i11_i
+ST_19: tmp_31 [3/5] 7.26ns
+.preheader:16  %tmp_31 = fadd float %tmp_i10_i, %tmp_3_i11_i
 
 
  <State 20>: 7.26ns
-ST_20: tmp_127 [2/5] 7.26ns
-.preheader:16  %tmp_127 = fadd float %tmp_i10_i, %tmp_3_i11_i
+ST_20: tmp_31 [2/5] 7.26ns
+.preheader:16  %tmp_31 = fadd float %tmp_i10_i, %tmp_3_i11_i
 
 ST_20: stg_99 [1/1] 4.38ns
-.preheader:17  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_126)
+.preheader:17  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_30)
 
 
  <State 21>: 7.26ns
-ST_21: tmp_127 [1/5] 7.26ns
-.preheader:16  %tmp_127 = fadd float %tmp_i10_i, %tmp_3_i11_i
+ST_21: tmp_31 [1/5] 7.26ns
+.preheader:16  %tmp_31 = fadd float %tmp_i10_i, %tmp_3_i11_i
 
 
  <State 22>: 4.38ns
 ST_22: stg_101 [1/1] 0.00ns
 .preheader:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @L_svd_calc_off_c_str)
 
-ST_22: empty_19 [1/1] 0.00ns
-.preheader:1  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 306544, i64 306544, i64 306544)
+ST_22: empty_15 [1/1] 0.00ns
+.preheader:1  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 306544, i64 306544, i64 306544)
 
 ST_22: stg_103 [1/1] 0.00ns
-.preheader:2  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1810) nounwind
+.preheader:2  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1809) nounwind
 
 ST_22: tmp_32_i [1/1] 0.00ns
-.preheader:3  %tmp_32_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str1810)
+.preheader:3  %tmp_32_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str1809)
 
 ST_22: stg_105 [1/1] 0.00ns
-.preheader:4  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1806) nounwind
+.preheader:4  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1807) nounwind
 
 ST_22: stg_106 [1/1] 4.38ns
-.preheader:18  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_127)
+.preheader:18  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_31)
 
-ST_22: empty_21 [1/1] 0.00ns
-.preheader:19  %empty_21 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str1810, i32 %tmp_32_i)
+ST_22: empty_17 [1/1] 0.00ns
+.preheader:19  %empty_17 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str1809, i32 %tmp_32_i)
 
 ST_22: stg_108 [1/1] 0.00ns
 .preheader:20  br label %.preheader.i
@@ -631,7 +631,7 @@ Port [ strm_out_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0;
 
 <LifeTime>
 <method=bitvector/>
-tmp_128               (read             ) [ 0000000000000000000000000]
+tmp_32                (read             ) [ 0000000000000000000000000]
 p_Val2_s              (bitcast          ) [ 0000000000000000000000000]
 p_Result_s            (bitselect        ) [ 0010000000000000000000000]
 loc_V                 (partselect       ) [ 0000000000000000000000000]
@@ -639,11 +639,11 @@ loc_V_1               (trunc            ) [ 0010000000000000000000000]
 tmp_i_i_i_cast1       (zext             ) [ 0000000000000000000000000]
 sh_assign             (add              ) [ 0000000000000000000000000]
 isNeg                 (bitselect        ) [ 0010000000000000000000000]
-tmp_17_i_i            (sub              ) [ 0000000000000000000000000]
-tmp_17_i_i_cast       (sext             ) [ 0000000000000000000000000]
+tmp_22_i_i            (sub              ) [ 0000000000000000000000000]
+tmp_22_i_i_cast       (sext             ) [ 0000000000000000000000000]
 sh_assign_1           (select           ) [ 0010000000000000000000000]
 empty                 (specinterface    ) [ 0000000000000000000000000]
-empty_18              (specinterface    ) [ 0000000000000000000000000]
+empty_14              (specinterface    ) [ 0000000000000000000000000]
 stg_38                (specbitsmap      ) [ 0000000000000000000000000]
 stg_39                (specbitsmap      ) [ 0000000000000000000000000]
 stg_40                (spectopmodule    ) [ 0000000000000000000000000]
@@ -651,12 +651,12 @@ p_Result_1            (bitconcatenate   ) [ 0000000000000000000000000]
 tmp_i_i               (zext             ) [ 0000000000000000000000000]
 sh_assign_1_cast      (sext             ) [ 0000000000000000000000000]
 sh_assign_1_cast_cast (sext             ) [ 0000000000000000000000000]
-tmp_18_i_i            (zext             ) [ 0000000000000000000000000]
-tmp_19_i_i            (lshr             ) [ 0000000000000000000000000]
-tmp_21_i_i            (shl              ) [ 0000000000000000000000000]
+tmp_23_i_i            (zext             ) [ 0000000000000000000000000]
+tmp_24_i_i            (lshr             ) [ 0000000000000000000000000]
+tmp_26_i_i            (shl              ) [ 0000000000000000000000000]
 tmp                   (bitselect        ) [ 0000000000000000000000000]
 tmp_s                 (zext             ) [ 0000000000000000000000000]
-tmp_7                 (partselect       ) [ 0000000000000000000000000]
+tmp_8                 (partselect       ) [ 0000000000000000000000000]
 p_Val2_3              (select           ) [ 0000000000000000000000000]
 p_Val2_8_i_i          (sub              ) [ 0000000000000000000000000]
 p_Val2_5              (select           ) [ 0011111111111111111111110]
@@ -670,26 +670,26 @@ indvar_flatten        (phi              ) [ 0000100000000000000000000]
 exitcond_flatten      (icmp             ) [ 0000111111111111111111100]
 indvar_flatten_next   (add              ) [ 0010111111111111111111100]
 stg_67                (br               ) [ 0000000000000000000000000]
-tmp_129               (read             ) [ 0000111111111100000000000]
-tmp_130               (read             ) [ 0000111111111111000000000]
-tmp_131               (read             ) [ 0000111111111110000000000]
-tmp_132               (read             ) [ 0000111111111111100000000]
-tmp_133               (read             ) [ 0000111111111111000000000]
-tmp_134               (read             ) [ 0000111111011111100000000]
-tmp_i_i_20            (fmul             ) [ 0000111111000011111100000]
+tmp_33                (read             ) [ 0000111111111100000000000]
+tmp_34                (read             ) [ 0000111111111111000000000]
+tmp_35                (read             ) [ 0000111111111110000000000]
+tmp_36                (read             ) [ 0000111111111111100000000]
+tmp_37                (read             ) [ 0000111111111111000000000]
+tmp_38                (read             ) [ 0000111111011111100000000]
+tmp_i_i_16            (fmul             ) [ 0000111111000011111100000]
 tmp_3_i_i             (fmul             ) [ 0000111101000001111100000]
 tmp_i10_i             (fmul             ) [ 0000111111000000111111000]
 tmp_3_i11_i           (fmul             ) [ 0000011111000000011111000]
-tmp_126               (fadd             ) [ 0000000010000000000010000]
+tmp_30                (fadd             ) [ 0000000010000000000010000]
 stg_99                (write            ) [ 0000000000000000000000000]
-tmp_127               (fadd             ) [ 0000100000000000000000100]
+tmp_31                (fadd             ) [ 0000100000000000000000100]
 stg_101               (specloopname     ) [ 0000000000000000000000000]
-empty_19              (speclooptripcount) [ 0000000000000000000000000]
+empty_15              (speclooptripcount) [ 0000000000000000000000000]
 stg_103               (specloopname     ) [ 0000000000000000000000000]
 tmp_32_i              (specregionbegin  ) [ 0000000000000000000000000]
 stg_105               (specpipeline     ) [ 0000000000000000000000000]
 stg_106               (write            ) [ 0000000000000000000000000]
-empty_21              (specregionend    ) [ 0000000000000000000000000]
+empty_17              (specregionend    ) [ 0000000000000000000000000]
 stg_108               (br               ) [ 0010111111111111111111100]
 stg_109               (call             ) [ 0000000000000000000000000]
 stg_110               (br               ) [ 0000000000000000000000000]
@@ -1084,7 +1084,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 <pin id="85" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str1810"/></StgValue>
+<StgValue><ssdm name="p_str1809"/></StgValue>
 </bind>
 </comp>
 
@@ -1120,7 +1120,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 <pin id="93" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="p_str1806"/></StgValue>
+<StgValue><ssdm name="p_str1807"/></StgValue>
 </bind>
 </comp>
 
@@ -1141,7 +1141,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="tmp_128/1 tmp_129/5 tmp_130/6 tmp_131/7 tmp_132/8 tmp_133/9 tmp_134/10 "/>
+<opset="tmp_32/1 tmp_33/5 tmp_34/6 tmp_35/7 tmp_36/8 tmp_37/9 tmp_38/10 "/>
 </bind>
 </comp>
 
@@ -1195,7 +1195,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="128" class="1004" name="grp_dut_matmul_fu_128">
+<comp id="128" class="1004" name="grp_dut_update_off_diag_r_fu_128">
 <pin_list>
 <pin id="129" dir="0" index="0" bw="0" slack="0"/>
 <pin id="130" dir="0" index="1" bw="32" slack="0"/>
@@ -1204,11 +1204,11 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="stg_56/2 "/>
+<opset="stg_57/2 "/>
 </bind>
 </comp>
 
-<comp id="136" class="1004" name="grp_dut_update_off_diag_r_fu_136">
+<comp id="136" class="1004" name="grp_dut_backproj_fu_136">
 <pin_list>
 <pin id="137" dir="0" index="0" bw="0" slack="0"/>
 <pin id="138" dir="0" index="1" bw="32" slack="0"/>
@@ -1217,11 +1217,11 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="stg_57/2 "/>
+<opset="stg_55/2 "/>
 </bind>
 </comp>
 
-<comp id="144" class="1004" name="grp_dut_backproj_fu_144">
+<comp id="144" class="1004" name="grp_dut_matmul_fu_144">
 <pin_list>
 <pin id="145" dir="0" index="0" bw="0" slack="0"/>
 <pin id="146" dir="0" index="1" bw="32" slack="0"/>
@@ -1230,7 +1230,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="stg_55/2 "/>
+<opset="stg_56/2 "/>
 </bind>
 </comp>
 
@@ -1242,7 +1242,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="fadd(9) " fcode="fadd"/>
-<opset="tmp_126/15 tmp_127/17 "/>
+<opset="tmp_30/15 tmp_31/17 "/>
 </bind>
 </comp>
 
@@ -1254,7 +1254,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="fmul(13) " fcode="fmul"/>
-<opset="tmp_i_i_20/10 tmp_3_i_i/11 tmp_i10_i/12 tmp_3_i11_i/13 "/>
+<opset="tmp_i_i_16/10 tmp_3_i_i/11 tmp_i10_i/12 tmp_3_i11_i/13 "/>
 </bind>
 </comp>
 
@@ -1264,7 +1264,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 <pin id="162" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_126 tmp_127 "/>
+<opset="tmp_30 tmp_31 "/>
 </bind>
 </comp>
 
@@ -1353,7 +1353,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="209" class="1004" name="tmp_17_i_i_fu_209">
+<comp id="209" class="1004" name="tmp_22_i_i_fu_209">
 <pin_list>
 <pin id="210" dir="0" index="0" bw="8" slack="0"/>
 <pin id="211" dir="0" index="1" bw="8" slack="0"/>
@@ -1361,18 +1361,18 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
-<opset="tmp_17_i_i/1 "/>
+<opset="tmp_22_i_i/1 "/>
 </bind>
 </comp>
 
-<comp id="215" class="1004" name="tmp_17_i_i_cast_fu_215">
+<comp id="215" class="1004" name="tmp_22_i_i_cast_fu_215">
 <pin_list>
 <pin id="216" dir="0" index="0" bw="8" slack="0"/>
 <pin id="217" dir="1" index="1" bw="9" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="tmp_17_i_i_cast/1 "/>
+<opset="tmp_22_i_i_cast/1 "/>
 </bind>
 </comp>
 
@@ -1435,18 +1435,18 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="244" class="1004" name="tmp_18_i_i_fu_244">
+<comp id="244" class="1004" name="tmp_23_i_i_fu_244">
 <pin_list>
 <pin id="245" dir="0" index="0" bw="9" slack="0"/>
 <pin id="246" dir="1" index="1" bw="78" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_18_i_i/2 "/>
+<opset="tmp_23_i_i/2 "/>
 </bind>
 </comp>
 
-<comp id="248" class="1004" name="tmp_19_i_i_fu_248">
+<comp id="248" class="1004" name="tmp_24_i_i_fu_248">
 <pin_list>
 <pin id="249" dir="0" index="0" bw="24" slack="0"/>
 <pin id="250" dir="0" index="1" bw="9" slack="0"/>
@@ -1454,11 +1454,11 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="lshr(21) " fcode="lshr"/>
-<opset="tmp_19_i_i/2 "/>
+<opset="tmp_24_i_i/2 "/>
 </bind>
 </comp>
 
-<comp id="254" class="1004" name="tmp_21_i_i_fu_254">
+<comp id="254" class="1004" name="tmp_26_i_i_fu_254">
 <pin_list>
 <pin id="255" dir="0" index="0" bw="24" slack="0"/>
 <pin id="256" dir="0" index="1" bw="32" slack="0"/>
@@ -1466,7 +1466,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="shl(20) " fcode="shl"/>
-<opset="tmp_21_i_i/2 "/>
+<opset="tmp_26_i_i/2 "/>
 </bind>
 </comp>
 
@@ -1494,7 +1494,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="272" class="1004" name="tmp_7_fu_272">
+<comp id="272" class="1004" name="tmp_8_fu_272">
 <pin_list>
 <pin id="273" dir="0" index="0" bw="32" slack="0"/>
 <pin id="274" dir="0" index="1" bw="78" slack="0"/>
@@ -1504,7 +1504,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_7/2 "/>
+<opset="tmp_8/2 "/>
 </bind>
 </comp>
 
@@ -1640,73 +1640,73 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="348" class="1005" name="tmp_129_reg_348">
+<comp id="348" class="1005" name="tmp_33_reg_348">
 <pin_list>
 <pin id="349" dir="0" index="0" bw="32" slack="5"/>
 <pin id="350" dir="1" index="1" bw="32" slack="5"/>
 </pin_list>
 <bind>
-<opset="tmp_129 "/>
+<opset="tmp_33 "/>
 </bind>
 </comp>
 
-<comp id="353" class="1005" name="tmp_130_reg_353">
+<comp id="353" class="1005" name="tmp_34_reg_353">
 <pin_list>
 <pin id="354" dir="0" index="0" bw="32" slack="6"/>
 <pin id="355" dir="1" index="1" bw="32" slack="6"/>
 </pin_list>
 <bind>
-<opset="tmp_130 "/>
+<opset="tmp_34 "/>
 </bind>
 </comp>
 
-<comp id="358" class="1005" name="tmp_131_reg_358">
+<comp id="358" class="1005" name="tmp_35_reg_358">
 <pin_list>
 <pin id="359" dir="0" index="0" bw="32" slack="4"/>
 <pin id="360" dir="1" index="1" bw="32" slack="4"/>
 </pin_list>
 <bind>
-<opset="tmp_131 "/>
+<opset="tmp_35 "/>
 </bind>
 </comp>
 
-<comp id="363" class="1005" name="tmp_132_reg_363">
+<comp id="363" class="1005" name="tmp_36_reg_363">
 <pin_list>
 <pin id="364" dir="0" index="0" bw="32" slack="5"/>
 <pin id="365" dir="1" index="1" bw="32" slack="5"/>
 </pin_list>
 <bind>
-<opset="tmp_132 "/>
+<opset="tmp_36 "/>
 </bind>
 </comp>
 
-<comp id="368" class="1005" name="tmp_133_reg_368">
+<comp id="368" class="1005" name="tmp_37_reg_368">
 <pin_list>
 <pin id="369" dir="0" index="0" bw="32" slack="1"/>
 <pin id="370" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_133 "/>
+<opset="tmp_37 "/>
 </bind>
 </comp>
 
-<comp id="373" class="1005" name="tmp_134_reg_373">
+<comp id="373" class="1005" name="tmp_38_reg_373">
 <pin_list>
 <pin id="374" dir="0" index="0" bw="32" slack="1"/>
 <pin id="375" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_134 "/>
+<opset="tmp_38 "/>
 </bind>
 </comp>
 
-<comp id="378" class="1005" name="tmp_i_i_20_reg_378">
+<comp id="378" class="1005" name="tmp_i_i_16_reg_378">
 <pin_list>
 <pin id="379" dir="0" index="0" bw="32" slack="2"/>
 <pin id="380" dir="1" index="1" bw="32" slack="2"/>
 </pin_list>
 <bind>
-<opset="tmp_i_i_20 "/>
+<opset="tmp_i_i_16 "/>
 </bind>
 </comp>
 
@@ -1761,19 +1761,19 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 
 <net id="127"><net_src comp="2" pin="0"/><net_sink comp="120" pin=2"/></net>
 
-<net id="133"><net_src comp="62" pin="0"/><net_sink comp="128" pin=0"/></net>
+<net id="133"><net_src comp="64" pin="0"/><net_sink comp="128" pin=0"/></net>
 
 <net id="134"><net_src comp="0" pin="0"/><net_sink comp="128" pin=1"/></net>
 
 <net id="135"><net_src comp="2" pin="0"/><net_sink comp="128" pin=2"/></net>
 
-<net id="141"><net_src comp="64" pin="0"/><net_sink comp="136" pin=0"/></net>
+<net id="141"><net_src comp="60" pin="0"/><net_sink comp="136" pin=0"/></net>
 
 <net id="142"><net_src comp="0" pin="0"/><net_sink comp="136" pin=1"/></net>
 
 <net id="143"><net_src comp="2" pin="0"/><net_sink comp="136" pin=2"/></net>
 
-<net id="149"><net_src comp="60" pin="0"/><net_sink comp="144" pin=0"/></net>
+<net id="149"><net_src comp="62" pin="0"/><net_sink comp="144" pin=0"/></net>
 
 <net id="150"><net_src comp="0" pin="0"/><net_sink comp="144" pin=1"/></net>
 
@@ -1961,17 +1961,17 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 		tmp_i_i_i_cast1 : 2
 		sh_assign : 3
 		isNeg : 4
-		tmp_17_i_i : 2
-		tmp_17_i_i_cast : 3
+		tmp_22_i_i : 2
+		tmp_22_i_i_cast : 3
 		sh_assign_1 : 5
 	State 2
 		tmp_i_i : 1
-		tmp_18_i_i : 1
-		tmp_19_i_i : 1
-		tmp_21_i_i : 2
+		tmp_23_i_i : 1
+		tmp_24_i_i : 1
+		tmp_26_i_i : 2
 		tmp : 2
 		tmp_s : 3
-		tmp_7 : 3
+		tmp_8 : 3
 		p_Val2_3 : 4
 		p_Val2_8_i_i : 5
 		p_Val2_5 : 6
@@ -1999,7 +1999,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 	State 20
 	State 21
 	State 22
-		empty_21 : 1
+		empty_17 : 1
 	State 23
 	State 24
 
@@ -2013,23 +2013,23 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 | Operation|          Functional Unit         |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |          |      grp_dut_calc_svd_fu_120     |    0    |    49   |  34.266 |   6527  |   8711  |
-|   call   |       grp_dut_matmul_fu_128      |    2    |    5    |  55.066 |   6257  |   3270  |
-|          | grp_dut_update_off_diag_r_fu_136 |    0    |    5    |  7.756  |   1091  |   897   |
-|          |      grp_dut_backproj_fu_144     |    2    |    5    |  6.284  |   647   |   902   |
+|   call   | grp_dut_update_off_diag_r_fu_128 |    0    |    5    |  7.756  |   1091  |   897   |
+|          |      grp_dut_backproj_fu_136     |    2    |    5    |  6.284  |   672   |   980   |
+|          |       grp_dut_matmul_fu_144      |    1    |    5    |  4.713  |   657   |   923   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |   fadd   |            grp_fu_152            |    0    |    2    |    0    |   205   |   390   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |   fmul   |            grp_fu_156            |    0    |    3    |    0    |   143   |   321   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
-|    shl   |         tmp_21_i_i_fu_254        |    0    |    0    |    0    |    0    |    88   |
+|    shl   |         tmp_26_i_i_fu_254        |    0    |    0    |    0    |    0    |    88   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |          |        sh_assign_1_fu_219        |    0    |    0    |    0    |    0    |    9    |
 |  select  |          p_Val2_3_fu_282         |    0    |    0    |    0    |    0    |    32   |
 |          |          p_Val2_5_fu_295         |    0    |    0    |    0    |    0    |    32   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
-|   lshr   |         tmp_19_i_i_fu_248        |    0    |    0    |    0    |    0    |    63   |
+|   lshr   |         tmp_24_i_i_fu_248        |    0    |    0    |    0    |    0    |    63   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
-|    sub   |         tmp_17_i_i_fu_209        |    0    |    0    |    0    |    0    |    8    |
+|    sub   |         tmp_22_i_i_fu_209        |    0    |    0    |    0    |    0    |    8    |
 |          |        p_Val2_8_i_i_fu_289       |    0    |    0    |    0    |    0    |    32   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |    add   |         sh_assign_fu_195         |    0    |    0    |    0    |    0    |    8    |
@@ -2046,22 +2046,22 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 |          |            tmp_fu_260            |    0    |    0    |    0    |    0    |    0    |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |partselect|           loc_V_fu_177           |    0    |    0    |    0    |    0    |    0    |
-|          |           tmp_7_fu_272           |    0    |    0    |    0    |    0    |    0    |
+|          |           tmp_8_fu_272           |    0    |    0    |    0    |    0    |    0    |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |   trunc  |          loc_V_1_fu_187          |    0    |    0    |    0    |    0    |    0    |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |          |      tmp_i_i_i_cast1_fu_191      |    0    |    0    |    0    |    0    |    0    |
 |   zext   |          tmp_i_i_fu_234          |    0    |    0    |    0    |    0    |    0    |
-|          |         tmp_18_i_i_fu_244        |    0    |    0    |    0    |    0    |    0    |
+|          |         tmp_23_i_i_fu_244        |    0    |    0    |    0    |    0    |    0    |
 |          |           tmp_s_fu_268           |    0    |    0    |    0    |    0    |    0    |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
-|          |      tmp_17_i_i_cast_fu_215      |    0    |    0    |    0    |    0    |    0    |
+|          |      tmp_22_i_i_cast_fu_215      |    0    |    0    |    0    |    0    |    0    |
 |   sext   |      sh_assign_1_cast_fu_238     |    0    |    0    |    0    |    0    |    0    |
 |          |   sh_assign_1_cast_cast_fu_241   |    0    |    0    |    0    |    0    |    0    |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |bitconcatenate|         p_Result_1_fu_227        |    0    |    0    |    0    |    0    |    0    |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
-|   Total  |                                  |    4    |    69   | 103.372 |  14870  |  14789  |
+|   Total  |                                  |    3    |    69   |  53.019 |   9295  |  12520  |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 
 Memories:
@@ -2080,16 +2080,16 @@ N/A
 |      p_Val2_5_reg_335     |   32   |
 |          reg_160          |   32   |
 |    sh_assign_1_reg_329    |    9   |
-|      tmp_129_reg_348      |   32   |
-|      tmp_130_reg_353      |   32   |
-|      tmp_131_reg_358      |   32   |
-|      tmp_132_reg_363      |   32   |
-|      tmp_133_reg_368      |   32   |
-|      tmp_134_reg_373      |   32   |
+|       tmp_33_reg_348      |   32   |
+|       tmp_34_reg_353      |   32   |
+|       tmp_35_reg_358      |   32   |
+|       tmp_36_reg_363      |   32   |
+|       tmp_37_reg_368      |   32   |
+|       tmp_38_reg_373      |   32   |
 |    tmp_3_i11_i_reg_393    |   32   |
 |     tmp_3_i_i_reg_383     |   32   |
 |     tmp_i10_i_reg_388     |   32   |
-|     tmp_i_i_20_reg_378    |   32   |
+|     tmp_i_i_16_reg_378    |   32   |
 +---------------------------+--------+
 |           Total           |   457  |
 +---------------------------+--------+
@@ -2112,10 +2112,10 @@ N/A
 +-----------+--------+--------+--------+--------+--------+
 |           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+--------+
-|  Function |    4   |   69   |   103  |  14870 |  14789 |
+|  Function |    3   |   69   |   53   |  9295  |  12520 |
 |   Memory  |    -   |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |    -   |    6   |    -   |   128  |
 |  Register |    -   |    -   |    -   |   457  |    -   |
 +-----------+--------+--------+--------+--------+--------+
-|   Total   |    4   |   69   |   109  |  15327 |  14917 |
+|   Total   |    3   |   69   |   59   |  9752  |  12648 |
 +-----------+--------+--------+--------+--------+--------+
