@@ -9,7 +9,7 @@
 
 
 INC_PATH=/usr/include/vivado_hls
-CFLAGS = -I${INC_PATH}
+CFLAGS = -I${INC_PATH}  -DHLS_NO_XIL_FPO_LIB 
 
 all: sw
 
