@@ -1,16 +1,60 @@
 #ifndef SVD_H
 #define SVD_H
  
- #include "dut.h"
+#include "dut.h"
 //#include "ap_fixed.h"
-#include <complex>
-#include "hls/linear_algebra/utils/x_hls_matrix_utils.h"
-#include "hls/linear_algebra/utils/x_hls_complex.h"
-// #include "hls/utils/x_hls_utils.h"
+//#include <complex>
+#include <cmath>
+//#include "hls/linear_algebra/utils/x_hls_matrix_utils.h"
+//#include "hls/linear_algebra/utils/x_hls_complex.h"
+#include "hls/utils/x_hls_utils.h"
 // #include <assert.h>
-// #include <iostream>
+#include <iostream>
 // #include <iomanip>
+#include<fstream>
 
+namespace hls {
+  template<typename InType>
+  bool x_isneg(InType n){
+    return n<0;
+  }
+
+  template<typename InType>
+  InType x_conj(InType n){
+    return n;
+  }
+
+  template<typename InType>
+  InType x_rsqrt(InType n){
+    return 1/std::sqrt(n);
+  }
+  
+  template<typename InType>
+  InType x_copysign(InType a, InType b){
+    if (b>=0) return a>0?a:-a;
+    else return a<0?a:-a;
+  }
+
+  
+
+
+  template<typename InType>
+  class complex{
+    public:
+    InType real(){return r;}
+    InType imag(){return i;}
+    void real(InType rin){r = rin;}
+    void imag(InType iin){i=iin;}
+    private:
+    InType r;
+    InType i;
+
+  };
+}
+
+//inline float sqrtf(float n){
+//  return n;
+//}
 
 namespace svd {
  // ===================================================================================================================
@@ -86,7 +130,7 @@ namespace svd {
     typename InType,
     typename CSType>
   void calc_angle(
-    std::complex<InType> A, 
+    hls::complex<InType> A, 
     CSType &cosThetaA, CSType &sinThetaA,
     CSType &cosThetaAdiv2, CSType &sinThetaAdiv2,
     bool &is_pos_real, bool &is_imag)
@@ -181,7 +225,7 @@ namespace svd {
     const AOutType     outZERO = 0;
     CSType             s1, c1, s2, c2;
     AInType            u1, u2;
-    std::complex<AInType> A, B;
+    hls::complex<AInType> A, B;
     CSType             cosA_full, sinA_full, cosA_half, sinA_half;
     CSType             cosB_full, sinB_full, cosB_half, sinB_half;
     bool               A_is_pos_real, A_is_imag;
@@ -204,7 +248,7 @@ namespace svd {
     B.imag(u2);
     B.real(u1);
     calc_angle(B,cosB_full, sinB_full, cosB_half, sinB_half, B_is_pos_real, B_is_imag);
-    
+
     // Combine half angles to produce left and right rotations
     // IMPLEMENTATION TIP: There are common products in the following calculations. For parallel implementations these should be shared. 
     // Consider in-lining these function calls.
@@ -262,6 +306,7 @@ namespace svd {
     vx_out = vx_int;
     vy_out = vy_int;
     vz_out = vz_int;
+    
   }
 
 
@@ -479,7 +524,7 @@ namespace svd {
                       OutputType S[RowsA][ColsA],
                       OutputType U[RowsA][RowsA],
                       OutputType V[ColsA][ColsA],
-                      hls::stream<float> & pca_in, hls::stream<float> & pca_out) 
+                      int fdw, int fdr) 
   {
     // Initially only supporting square matrix
     // #ifndef __SYNTHESIS__
@@ -506,6 +551,7 @@ namespace svd {
     const int is_odd = ColsA % 2 == 0 ? 0 : 1;
     const int n_proc = (RowsA+is_odd)/2;
 
+    float input;
     
     for(int i=0; i<RowsA; i++){
       rd_buffer:for(int j=0; j<ColsA; j++){
@@ -583,25 +629,30 @@ namespace svd {
         }
 
         //calc svd, update col
-        pca_in.write(1);
+        input = 1;
+        write (fdw, (void*)&(input), sizeof(input));
         for (int proc = 0; proc < n_proc; proc++){
           init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
           if (top_left == RowsA || bottom_right == RowsA) continue;
 
           // Fetch w,x,y,z values
-          pca_in.write(S_block_buffer[proc][0][0]);
-          pca_in.write(S_block_buffer[proc][0][1]);
-          pca_in.write(S_block_buffer[proc][1][0]);
-          pca_in.write(S_block_buffer[proc][1][1]);
+          input = S_block_buffer[proc][0][0];
+          write (fdw, (void*)&(input), sizeof(input));
+          input = S_block_buffer[proc][0][1];
+          write (fdw, (void*)&(input), sizeof(input));
+          input = S_block_buffer[proc][1][0];
+          write (fdw, (void*)&(input), sizeof(input));
+          input = S_block_buffer[proc][1][1];
+          write (fdw, (void*)&(input), sizeof(input));
 
-          pca_in.write(U_block_buffer[proc][0][0]);
-          pca_in.write(U_block_buffer[proc][0][1]);
-          pca_in.write(U_block_buffer[proc][1][0]);
-          pca_in.write(U_block_buffer[proc][1][1]);
-          pca_in.write(V_block_buffer[proc][0][0]);
-          pca_in.write(V_block_buffer[proc][0][1]);
-          pca_in.write(V_block_buffer[proc][1][0]);
-          pca_in.write(V_block_buffer[proc][1][1]);
+          write (fdw, (void*)&(U_block_buffer[proc][0][0]), sizeof(float));
+          write (fdw, (void*)&(U_block_buffer[proc][0][1]), sizeof(float));
+          write (fdw, (void*)&(U_block_buffer[proc][1][0]), sizeof(float));
+          write (fdw, (void*)&(U_block_buffer[proc][1][1]), sizeof(float));
+          write (fdw, (void*)&(V_block_buffer[proc][0][0]), sizeof(float));
+          write (fdw, (void*)&(V_block_buffer[proc][0][1]), sizeof(float));
+          write (fdw, (void*)&(V_block_buffer[proc][1][0]), sizeof(float));
+          write (fdw, (void*)&(V_block_buffer[proc][1][1]), sizeof(float));
         }
 
         dut(pca_in, pca_out);

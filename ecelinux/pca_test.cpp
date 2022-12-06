@@ -3,12 +3,20 @@
 //=========================================================================
 // @brief: testbench for Binarized Neural Betwork(BNN) digit recongnition application
 
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<fcntl.h>
+#include<math.h>
+#include<assert.h>
+
 #include <iostream>
 #include <fstream>
 #include "pca.h"
 #include "timer.h"
 //#include "hls_linear_algebra.h"
 #include "typedefs.h"
+#include <stdint.h>
 
 using namespace std;
 
@@ -124,9 +132,16 @@ hls::stream<float> & pca_in, hls::stream<float> & pca_out){
 //------------------------------------------------------------------------
 
 int main(){
-  // HLS streams for communicating with the cordic block
-  hls::stream<float> pca_in("pca in");
-  hls::stream<float> pca_out("pca out");
+  // Open channels to the FPGA board.
+  // These channels appear as files to the Linux OS
+  int fdr = open("/dev/xillybus_read_32", O_RDONLY);
+  int fdw = open("/dev/xillybus_write_32", O_WRONLY);
+
+  // Check that the channels are correctly opened
+  if ((fdr < 0) || (fdw < 0)) {
+    fprintf (stderr, "Failed to open Xillybus device channels\n");
+    exit(-1);
+  }
   
   uint8_t test_images[IMG_NUM][VEC_SIZ];
   uint8_t test_labels[IMG_NUM];

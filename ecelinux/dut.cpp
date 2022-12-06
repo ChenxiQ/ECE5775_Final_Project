@@ -9,6 +9,7 @@
 #include <iomanip>
 // #include "hls_linear_algebra.h"
 #include "svd.h"
+#include "dut.h"
 
 using namespace std;
 
