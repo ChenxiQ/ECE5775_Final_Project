@@ -18,15 +18,15 @@
 <PipelineType>function</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.65</EstimatedClockPeriod>
+<EstimatedClockPeriod>8.16</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>84</Best-caseLatency>
-<Average-caseLatency>84</Average-caseLatency>
-<Worst-caseLatency>84</Worst-caseLatency>
+<Best-caseLatency>118</Best-caseLatency>
+<Average-caseLatency>118</Average-caseLatency>
+<Worst-caseLatency>118</Worst-caseLatency>
 <PipelineInitiationInterval>1</PipelineInitiationInterval>
-<PipelineDepth>85</PipelineDepth>
+<PipelineDepth>119</PipelineDepth>
 <Interval-min>1</Interval-min>
 <Interval-max>1</Interval-max>
 </SummaryOfOverallLatency>
@@ -34,9 +34,9 @@
 
 <AreaEstimates>
 <Resources>
-<DSP48E>39</DSP48E>
-<FF>3796</FF>
-<LUT>6155</LUT>
+<DSP48E>21</DSP48E>
+<FF>5841</FF>
+<LUT>9217</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>
@@ -104,8 +104,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>A_M_real</name>
-<Object>A_M_real</Object>
+<name>A_r</name>
+<Object>A_r</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -115,8 +115,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>A_M_imag</name>
-<Object>A_M_imag</Object>
+<name>A_i</name>
+<Object>A_i</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

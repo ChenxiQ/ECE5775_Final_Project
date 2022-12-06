@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_calc_angle_float_float_s'
 ================================================================
-* Date:           Tue Dec  6 01:13:01 2022
+* Date:           Tue Dec  6 06:53:43 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      7.65|        1.25|
+    |ap_clk  |  10.00|      8.16|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline |
     | min | max | min | max |   Type   |
     +-----+-----+-----+-----+----------+
-    |   84|   84|    1|    1| function |
+    |  118|  118|    1|    1| function |
     +-----+-----+-----+-----+----------+
 
     + Detail: 
@@ -49,18 +49,18 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      -|       0|    127|
+|Expression       |        -|      -|       0|    208|
 |FIFO             |        -|      -|       -|      -|
-|Instance         |        -|     39|    3342|   5595|
+|Instance         |        -|     21|    5316|   8459|
 |Memory           |        -|      -|       -|      -|
-|Multiplexer      |        -|      -|       -|    290|
-|Register         |        -|      -|     454|    143|
+|Multiplexer      |        -|      -|       -|    327|
+|Register         |        -|      -|     525|    223|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|     39|    3796|   6155|
+|Total            |        0|     21|    5841|   9217|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
-|Utilization (%)  |        0|     17|       3|     11|
+|Utilization (%)  |        0|      9|       5|     17|
 +-----------------+---------+-------+--------+-------+
 
 + Detail: 
@@ -71,17 +71,21 @@
     |dut_fadd_32ns_32ns_32_5_full_dsp_U15      |dut_fadd_32ns_32ns_32_5_full_dsp      |        0|      2|  205|  390|
     |dut_fadd_32ns_32ns_32_5_full_dsp_U17      |dut_fadd_32ns_32ns_32_5_full_dsp      |        0|      2|  205|  390|
     |dut_faddfsub_32ns_32ns_32_5_full_dsp_U16  |dut_faddfsub_32ns_32ns_32_5_full_dsp  |        0|      2|  205|  390|
+    |dut_fcmp_32ns_32ns_1_1_U27                |dut_fcmp_32ns_32ns_1_1                |        0|      0|   66|  239|
+    |dut_fcmp_32ns_32ns_1_1_U28                |dut_fcmp_32ns_32ns_1_1                |        0|      0|   66|  239|
     |dut_fdiv_32ns_32ns_32_16_U23              |dut_fdiv_32ns_32ns_32_16              |        0|      0|  761|  994|
     |dut_fdiv_32ns_32ns_32_16_U24              |dut_fdiv_32ns_32ns_32_16              |        0|      0|  761|  994|
+    |dut_fdiv_32ns_32ns_32_16_U25              |dut_fdiv_32ns_32ns_32_16              |        0|      0|  761|  994|
+    |dut_fdiv_32ns_32ns_32_16_U26              |dut_fdiv_32ns_32ns_32_16              |        0|      0|  761|  994|
     |dut_fmul_32ns_32ns_32_4_max_dsp_U18       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
     |dut_fmul_32ns_32ns_32_4_max_dsp_U19       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
     |dut_fmul_32ns_32ns_32_4_max_dsp_U20       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
     |dut_fmul_32ns_32ns_32_4_max_dsp_U21       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
     |dut_fmul_32ns_32ns_32_4_max_dsp_U22       |dut_fmul_32ns_32ns_32_4_max_dsp       |        0|      3|  143|  321|
-    |dut_frsqrt_32ns_32ns_32_11_full_dsp_U25   |dut_frsqrt_32ns_32ns_32_11_full_dsp   |        0|      9|  245|  416|
-    |dut_frsqrt_32ns_32ns_32_11_full_dsp_U26   |dut_frsqrt_32ns_32ns_32_11_full_dsp   |        0|      9|  245|  416|
+    |dut_fsqrt_32ns_32ns_32_12_U29             |dut_fsqrt_32ns_32ns_32_12             |        0|      0|  405|  615|
+    |dut_fsqrt_32ns_32ns_32_12_U30             |dut_fsqrt_32ns_32ns_32_12             |        0|      0|  405|  615|
     +------------------------------------------+--------------------------------------+---------+-------+-----+-----+
-    |Total                                     |                                      |        0|     39| 3342| 5595|
+    |Total                                     |                                      |        0|     21| 5316| 8459|
     +------------------------------------------+--------------------------------------+---------+-------+-----+-----+
 
     * DSP48: 
@@ -97,79 +101,110 @@
     +-----------------------+----------+-------+---+----+------------+------------+
     |     Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-----------------------+----------+-------+---+----+------------+------------+
-    |r_V_1_fu_222_p2        |     +    |      0|  0|   9|           9|           5|
-    |r_V_fu_194_p2          |     +    |      0|  0|   9|           9|           5|
-    |ap_sig_608             |    and   |      0|  0|   1|           1|           1|
-    |ap_sig_694             |    and   |      0|  0|   1|           1|           1|
-    |ap_sig_744             |    and   |      0|  0|   1|           1|           1|
-    |notrhs_i1_fu_234_p2    |   icmp   |      0|  0|   3|           8|           1|
-    |notrhs_i_fu_210_p2     |   icmp   |      0|  0|   3|           8|           1|
-    |ult3_fu_228_p2         |   icmp   |      0|  0|   3|           9|           9|
-    |ult_fu_204_p2          |   icmp   |      0|  0|   3|           9|           9|
-    |demorgan5_fu_240_p2    |    or    |      0|  0|   1|           1|           1|
-    |demorgan_fu_216_p2     |    or    |      0|  0|   1|           1|           1|
-    |p_1_fu_291_p3          |  select  |      0|  0|  30|           1|          30|
-    |p_s_fu_284_p3          |  select  |      0|  0|  30|           1|           1|
-    |storemerge1_fu_277_p3  |  select  |      0|  0|  32|           1|          32|
+    |r_V_1_fu_240_p2        |     +    |      0|  0|   9|           9|           5|
+    |r_V_fu_212_p2          |     +    |      0|  0|   9|           9|           5|
+    |ap_sig_1172            |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_1281            |    and   |      0|  0|   1|           1|           1|
+    |ap_sig_1333            |    and   |      0|  0|   1|           1|           1|
+    |tmp_14_fu_304_p2       |    and   |      0|  0|   1|           1|           1|
+    |tmp_18_fu_313_p2       |    and   |      0|  0|   1|           1|           1|
+    |tmp_23_fu_362_p2       |    and   |      0|  0|   1|           1|           1|
+    |tmp_26_fu_372_p2       |    and   |      0|  0|   1|           1|           1|
+    |grp_fu_162_p2          |   icmp   |      0|  0|   3|           8|           2|
+    |notlhs5_fu_278_p2      |   icmp   |      0|  0|   3|           8|           2|
+    |notlhs9_fu_344_p2      |   icmp   |      0|  0|   3|           8|           2|
+    |notrhs1_fu_350_p2      |   icmp   |      0|  0|   8|          23|           1|
+    |notrhs6_fu_284_p2      |   icmp   |      0|  0|   8|          23|           1|
+    |notrhs8_fu_268_p2      |   icmp   |      0|  0|   8|          23|           1|
+    |notrhs_fu_294_p2       |   icmp   |      0|  0|   8|          23|           1|
+    |notrhs_i1_fu_252_p2    |   icmp   |      0|  0|   3|           8|           1|
+    |notrhs_i_fu_228_p2     |   icmp   |      0|  0|   3|           8|           1|
+    |ult3_fu_246_p2         |   icmp   |      0|  0|   3|           9|           9|
+    |ult_fu_222_p2          |   icmp   |      0|  0|   3|           9|           9|
+    |demorgan5_fu_258_p2    |    or    |      0|  0|   1|           1|           1|
+    |demorgan_fu_234_p2     |    or    |      0|  0|   1|           1|           1|
+    |tmp_12_fu_300_p2       |    or    |      0|  0|   1|           1|           1|
+    |tmp_16_fu_309_p2       |    or    |      0|  0|   1|           1|           1|
+    |tmp_21_fu_356_p2       |    or    |      0|  0|   1|           1|           1|
+    |tmp_24_fu_368_p2       |    or    |      0|  0|   1|           1|           1|
+    |grp_fu_100_p0          |  select  |      0|  0|  32|           1|          30|
+    |p_1_fu_392_p3          |  select  |      0|  0|  30|           1|          30|
+    |p_s_fu_385_p3          |  select  |      0|  0|  30|           1|           1|
+    |storemerge1_fu_377_p3  |  select  |      0|  0|  32|           1|          32|
     +-----------------------+----------+-------+---+----+------------+------------+
-    |Total                  |          |      0|  0| 127|          60|          98|
+    |Total                  |          |      0|  0| 208|         185|         146|
     +-----------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
-    +------------------------------------------------------------+----+-----------+-----+-----------+
-    |                            Name                            | LUT| Input Size| Bits| Total Bits|
-    +------------------------------------------------------------+----+-----------+-----+-----------+
-    |ap_reg_phiprechg_cosThetaAdiv2_write_assign_reg_58pp0_it84  |  32|          3|   32|         96|
-    |ap_reg_phiprechg_sinThetaAdiv2_write_assign_reg_69pp0_it84  |  32|          3|   32|         96|
-    |ap_reg_phiprechg_tanThetaAdiv_reg_48pp0_it61                |  32|          2|   32|         64|
-    |cosThetaAdiv2_write_assign_phi_fu_61_p6                     |  32|          2|   32|         64|
-    |grp_fu_128_p0                                               |  32|          3|   32|         96|
-    |grp_fu_128_p1                                               |  32|          3|   32|         96|
-    |grp_fu_87_opcode                                            |   2|          3|    2|          6|
-    |grp_fu_87_p0                                                |  32|          3|   32|         96|
-    |grp_fu_87_p1                                                |  32|          3|   32|         96|
-    |sinThetaAdiv2_write_assign_phi_fu_73_p6                     |  32|          2|   32|         64|
-    +------------------------------------------------------------+----+-----------+-----+-----------+
-    |Total                                                       | 290|         27|  290|        774|
-    +------------------------------------------------------------+----+-----------+-----+-----------+
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
+    |                             Name                            | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_reg_phiprechg_cosThetaAdiv2_write_assign_reg_56pp0_it118  |  32|          3|   32|         96|
+    |ap_reg_phiprechg_sinThetaAdiv2_write_assign_reg_67pp0_it118  |  32|          3|   32|         96|
+    |ap_reg_phiprechg_tanThetaAdiv_reg_46pp0_it78                 |  32|          2|   32|         64|
+    |cosThetaAdiv2_write_assign_phi_fu_59_p6                      |  32|          2|   32|         64|
+    |grp_fu_131_p0                                                |  32|          3|   32|         96|
+    |grp_fu_131_p1                                                |  32|          3|   32|         96|
+    |grp_fu_140_opcode                                            |   5|          3|    5|         15|
+    |grp_fu_140_p0                                                |  32|          3|   32|         96|
+    |grp_fu_85_opcode                                             |   2|          3|    2|          6|
+    |grp_fu_85_p0                                                 |  32|          3|   32|         96|
+    |grp_fu_85_p1                                                 |  32|          3|   32|         96|
+    |sinThetaAdiv2_write_assign_phi_fu_71_p6                      |  32|          2|   32|         64|
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                        | 327|         33|  327|        885|
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +------------------------------------------------------------+----+----+-----+-----------+
-    |                            Name                            | FF | LUT| Bits| Const Bits|
-    +------------------------------------------------------------+----+----+-----+-----------+
-    |ap_reg_phiprechg_cosThetaAdiv2_write_assign_reg_58pp0_it84  |  32|   0|   32|          0|
-    |ap_reg_phiprechg_sinThetaAdiv2_write_assign_reg_69pp0_it84  |  32|   0|   32|          0|
-    |ap_reg_phiprechg_tanThetaAdiv_reg_48pp0_it61                |  32|   0|   32|          0|
-    |cosThetaA_int_reg_371                                       |  32|   0|   32|          0|
-    |cosThetaAdiv2_int_reg_399                                   |  32|   0|   32|          0|
-    |demorgan5_reg_324                                           |   1|   0|    1|          0|
-    |demorgan_reg_320                                            |   1|   0|    1|          0|
-    |p_Result_11_reg_333                                         |   1|   0|    1|          0|
-    |p_Result_13_reg_379                                         |   1|   0|    1|          0|
-    |p_Result_8_reg_328                                          |   1|   0|    1|          0|
-    |p_Result_s_reg_338                                          |   1|   0|    1|          0|
-    |reg_149                                                     |  32|   0|   32|          0|
-    |sinThetaA_int_reg_383                                       |  32|   0|   32|          0|
-    |tanThetaA_reg_344                                           |  32|   0|   32|          0|
-    |tanThetaAdiv_reg_48                                         |  32|   0|   32|          0|
-    |tmp_4_reg_389                                               |  32|   0|   32|          0|
-    |tmp_5_reg_351                                               |  32|   0|   32|          0|
-    |tmp_i_i_reg_361                                             |  32|   0|   32|          0|
-    |x_assign_2_reg_394                                          |  32|   0|   32|          0|
-    |x_assign_reg_356                                            |  32|   0|   32|          0|
-    |cosThetaAdiv2_int_reg_399                                   |   0|  32|   32|          0|
-    |demorgan5_reg_324                                           |   0|   3|    1|          0|
-    |demorgan_reg_320                                            |   0|   3|    1|          0|
-    |p_Result_11_reg_333                                         |   0|   3|    1|          0|
-    |p_Result_13_reg_379                                         |   0|   1|    1|          0|
-    |p_Result_8_reg_328                                          |   0|   2|    1|          0|
-    |p_Result_s_reg_338                                          |   0|   3|    1|          0|
-    |sinThetaA_int_reg_383                                       |   0|  32|   32|          0|
-    |tanThetaA_reg_344                                           |   0|  32|   32|          0|
-    |tanThetaAdiv_reg_48                                         |   0|  32|   32|          0|
-    +------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                       | 454| 143|  588|          0|
-    +------------------------------------------------------------+----+----+-----+-----------+
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |                             Name                            | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |ap_reg_phiprechg_cosThetaAdiv2_write_assign_reg_56pp0_it118  |  32|   0|   32|          0|
+    |ap_reg_phiprechg_sinThetaAdiv2_write_assign_reg_67pp0_it118  |  32|   0|   32|          0|
+    |ap_reg_phiprechg_tanThetaAdiv_reg_46pp0_it78                 |  32|   0|   32|          0|
+    |cosThetaA_int_reg_512                                        |  32|   0|   32|          0|
+    |cosThetaAdiv2_int_reg_546                                    |  32|   0|   32|          0|
+    |demorgan5_reg_425                                            |   1|   0|    1|          0|
+    |demorgan_reg_421                                             |   1|   0|    1|          0|
+    |n_assign_4_reg_536                                           |  32|   0|   32|          0|
+    |n_assign_reg_492                                             |  32|   0|   32|          0|
+    |notlhs5_reg_444                                              |   1|   0|    1|          0|
+    |notlhs7_reg_429                                              |   1|   0|    1|          0|
+    |notlhs_reg_459                                               |   1|   0|    1|          0|
+    |notrhs6_reg_449                                              |   1|   0|    1|          0|
+    |notrhs8_reg_434                                              |   1|   0|    1|          0|
+    |notrhs_reg_464                                               |   1|   0|    1|          0|
+    |reg_167                                                      |  32|   0|   32|          0|
+    |sinThetaA_int_reg_525                                        |  32|   0|   32|          0|
+    |tanThetaA_reg_480                                            |  32|   0|   32|          0|
+    |tanThetaAdiv_reg_46                                          |  32|   0|   32|          0|
+    |tmp_13_reg_469                                               |   1|   0|    1|          0|
+    |tmp_14_reg_474                                               |   1|   0|    1|          0|
+    |tmp_17_reg_439                                               |   1|   0|    1|          0|
+    |tmp_23_reg_521                                               |   1|   0|    1|          0|
+    |tmp_25_reg_454                                               |   1|   0|    1|          0|
+    |tmp_2_reg_487                                                |  32|   0|   32|          0|
+    |tmp_i_i2_reg_541                                             |  32|   0|   32|          0|
+    |tmp_i_i_reg_497                                              |  32|   0|   32|          0|
+    |tmp_i_reg_502                                                |  32|   0|   32|          0|
+    |tmp_s_reg_531                                                |  32|   0|   32|          0|
+    |cosThetaAdiv2_int_reg_546                                    |   0|  32|   32|          0|
+    |demorgan5_reg_425                                            |   0|   4|    1|          0|
+    |demorgan_reg_421                                             |   0|   4|    1|          0|
+    |notlhs5_reg_444                                              |   0|   4|    1|          0|
+    |notlhs7_reg_429                                              |   0|   2|    1|          0|
+    |notrhs6_reg_449                                              |   0|   4|    1|          0|
+    |notrhs8_reg_434                                              |   0|   2|    1|          0|
+    |sinThetaA_int_reg_525                                        |   0|  32|   32|          0|
+    |tanThetaA_reg_480                                            |   0|  64|   32|          0|
+    |tanThetaAdiv_reg_46                                          |   0|  64|   32|          0|
+    |tmp_14_reg_474                                               |   0|   4|    1|          0|
+    |tmp_17_reg_439                                               |   0|   2|    1|          0|
+    |tmp_23_reg_521                                               |   0|   1|    1|          0|
+    |tmp_25_reg_454                                               |   0|   4|    1|          0|
+    +-------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                        | 525| 223|  663|          0|
+    +-------------------------------------------------------------+----+----+-----+-----------+
 
 
 
@@ -185,7 +220,7 @@
 |ap_return_0  | out |   32| ap_ctrl_hs | dut_calc_angle<float, float> | return value |
 |ap_return_1  | out |   32| ap_ctrl_hs | dut_calc_angle<float, float> | return value |
 |ap_ce        |  in |    1| ap_ctrl_hs | dut_calc_angle<float, float> | return value |
-|A_M_real     |  in |   32|   ap_none  |           A_M_real           |    scalar    |
-|A_M_imag     |  in |   32|   ap_none  |           A_M_imag           |    scalar    |
+|A_r          |  in |   32|   ap_none  |              A_r             |    scalar    |
+|A_i          |  in |   32|   ap_none  |              A_i             |    scalar    |
 +-------------+-----+-----+------------+------------------------------+--------------+
 

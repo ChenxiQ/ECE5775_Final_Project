@@ -11,8 +11,6 @@
 // #include <assert.h>
 #include <iostream>
 // #include <iomanip>
-#include<fstream>
-
 namespace hls {
   template<typename InType>
   bool x_isneg(InType n){
@@ -524,7 +522,7 @@ namespace svd {
                       OutputType S[RowsA][ColsA],
                       OutputType U[RowsA][RowsA],
                       OutputType V[ColsA][ColsA],
-                      int fdw, int fdr) 
+                      hls::stream<float> & pca_in, hls::stream<float> & pca_out) 
   {
     // Initially only supporting square matrix
     // #ifndef __SYNTHESIS__
@@ -551,7 +549,6 @@ namespace svd {
     const int is_odd = ColsA % 2 == 0 ? 0 : 1;
     const int n_proc = (RowsA+is_odd)/2;
 
-    float input;
     
     for(int i=0; i<RowsA; i++){
       rd_buffer:for(int j=0; j<ColsA; j++){
@@ -629,30 +626,25 @@ namespace svd {
         }
 
         //calc svd, update col
-        input = 1;
-        write (fdw, (void*)&(input), sizeof(input));
+        pca_in.write(1);
         for (int proc = 0; proc < n_proc; proc++){
           init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
           if (top_left == RowsA || bottom_right == RowsA) continue;
 
           // Fetch w,x,y,z values
-          input = S_block_buffer[proc][0][0];
-          write (fdw, (void*)&(input), sizeof(input));
-          input = S_block_buffer[proc][0][1];
-          write (fdw, (void*)&(input), sizeof(input));
-          input = S_block_buffer[proc][1][0];
-          write (fdw, (void*)&(input), sizeof(input));
-          input = S_block_buffer[proc][1][1];
-          write (fdw, (void*)&(input), sizeof(input));
+          pca_in.write(S_block_buffer[proc][0][0]);
+          pca_in.write(S_block_buffer[proc][0][1]);
+          pca_in.write(S_block_buffer[proc][1][0]);
+          pca_in.write(S_block_buffer[proc][1][1]);
 
-          write (fdw, (void*)&(U_block_buffer[proc][0][0]), sizeof(float));
-          write (fdw, (void*)&(U_block_buffer[proc][0][1]), sizeof(float));
-          write (fdw, (void*)&(U_block_buffer[proc][1][0]), sizeof(float));
-          write (fdw, (void*)&(U_block_buffer[proc][1][1]), sizeof(float));
-          write (fdw, (void*)&(V_block_buffer[proc][0][0]), sizeof(float));
-          write (fdw, (void*)&(V_block_buffer[proc][0][1]), sizeof(float));
-          write (fdw, (void*)&(V_block_buffer[proc][1][0]), sizeof(float));
-          write (fdw, (void*)&(V_block_buffer[proc][1][1]), sizeof(float));
+          pca_in.write(U_block_buffer[proc][0][0]);
+          pca_in.write(U_block_buffer[proc][0][1]);
+          pca_in.write(U_block_buffer[proc][1][0]);
+          pca_in.write(U_block_buffer[proc][1][1]);
+          pca_in.write(V_block_buffer[proc][0][0]);
+          pca_in.write(V_block_buffer[proc][0][1]);
+          pca_in.write(V_block_buffer[proc][1][0]);
+          pca_in.write(V_block_buffer[proc][1][1]);
         }
 
         dut(pca_in, pca_out);

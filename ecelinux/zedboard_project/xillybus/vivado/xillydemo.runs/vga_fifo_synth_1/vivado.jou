@@ -2,11 +2,11 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Tue Dec  6 01:14:30 2022
-# Process ID: 21687
-# Current directory: /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1
+# Start of session at: Tue Dec  6 06:56:47 2022
+# Process ID: 2759
+# Current directory: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1
 # Command line: vivado -log vga_fifo.vds -mode batch -messageDb vivado.pb -notrace -source vga_fifo.tcl
-# Log file: /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/vga_fifo.vds
-# Journal file: /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/vivado.jou
+# Log file: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/vga_fifo.vds
+# Journal file: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/vivado.jou
 #-----------------------------------------------------------
 source vga_fifo.tcl -notrace

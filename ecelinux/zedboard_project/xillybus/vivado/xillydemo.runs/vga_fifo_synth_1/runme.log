@@ -14,11 +14,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21816 
+INFO: Helper process launched with PID 2826 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1213.914 ; gain = 172.137 ; free physical = 1233 ; free virtual = 24113
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1212.918 ; gain = 171.137 ; free physical = 246 ; free virtual = 26757
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'vga_fifo' [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/synth/vga_fifo.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'vga_fifo' [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/synth/vga_fifo.vhd:74]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_SELECT_XPM bound to: 0 - type: integer 
 	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
@@ -221,7 +221,7 @@ INFO: [Synth 8-638] synthesizing module 'vga_fifo' [/home/kh548/ece5775/ECE5775_
 	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
 	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/fifo_generator_v13_1_1/hdl/fifo_generator_v13_1.vhd:75' bound to instance 'U0' of component 'fifo_generator_v13_1_1' [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/synth/vga_fifo.vhd:541]
+INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/fifo_generator_v13_1_1/hdl/fifo_generator_v13_1.vhd:75' bound to instance 'U0' of component 'fifo_generator_v13_1_1' [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/synth/vga_fifo.vhd:541]
 	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter C_SELECT_XPM bound to: 0 - type: integer 
 	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
@@ -1536,7 +1536,7 @@ INFO: [Synth 8-3491] module 'fifo_generator_v13_1_1' declared at '/home/kh548/ec
 	Parameter C_USE_ECC bound to: 0 - type: integer 
 	Parameter C_FIFO_TYPE bound to: 0 - type: integer 
 	Parameter C_BYTE_STRB_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'vga_fifo' (27#1) [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/synth/vga_fifo.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'vga_fifo' (27#1) [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/synth/vga_fifo.vhd:74]
 WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[8]
 WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[7]
 WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[6]
@@ -1639,7 +1639,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DIN
 WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[33]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1425.266 ; gain = 383.488 ; free physical = 626 ; free virtual = 23514
+Finished RTL Elaboration : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 1424.270 ; gain = 382.488 ; free physical = 234 ; free virtual = 26079
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1649,7 +1649,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 1425.266 ; gain = 383.488 ; free physical = 625 ; free virtual = 23514
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 1424.270 ; gain = 382.488 ; free physical = 247 ; free virtual = 26092
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1658,41 +1658,41 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc] for cell 'U0'
-Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/dont_touch.xdc]
-Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc] for cell 'U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_fifo_propImpl.xdc].
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc] for cell 'U0'
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/vga_fifo_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_fifo_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/vga_fifo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2086.547 ; gain = 0.008 ; free physical = 561 ; free virtual = 23444
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2084.543 ; gain = 1.000 ; free physical = 226 ; free virtual = 26011
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 557 ; free virtual = 23442
+Finished Constraint Validation : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 241 ; free virtual = 25949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 556 ; free virtual = 23442
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 241 ; free virtual = 25949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 553 ; free virtual = 23442
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 241 ; free virtual = 25949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:08 ; elapsed = 00:01:12 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 538 ; free virtual = 23421
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 259 ; free virtual = 25942
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1801,14 +1801,14 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:08 ; elapsed = 00:01:12 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 529 ; free virtual = 23412
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 259 ; free virtual = 25942
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:12 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 514 ; free virtual = 23397
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 251 ; free virtual = 25934
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:08 ; elapsed = 00:01:12 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 514 ; free virtual = 23397
+Finished Parallel Reinference  : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 251 ; free virtual = 25934
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1824,9 +1824,9 @@ WARNING: [Synth 8-3332] Sequential element (inst_fifo_gen/gconvfifo.rf/grf.rf/gn
 WARNING: [Synth 8-3332] Sequential element (inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.gpf.wrpf/gdiff.diff_pntr_pad_reg[1]) is unused and will be removed from module fifo_generator_v13_1_1.
 WARNING: [Synth 8-3332] Sequential element (inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.gpf.wrpf/gdiff.diff_pntr_pad_reg[0]) is unused and will be removed from module fifo_generator_v13_1_1.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 465 ; free virtual = 23348
+Finished Area Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:14 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 233 ; free virtual = 25916
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 465 ; free virtual = 23348
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:08 ; elapsed = 00:01:14 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 232 ; free virtual = 25916
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1840,10 +1840,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:20 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 354 ; free virtual = 23237
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 235 ; free virtual = 25790
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:20 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 334 ; free virtual = 23217
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 231 ; free virtual = 25786
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1855,16 +1855,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:20 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 324 ; free virtual = 23207
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 221 ; free virtual = 25776
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:16 ; elapsed = 00:01:20 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 324 ; free virtual = 23207
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 221 ; free virtual = 25776
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:16 ; elapsed = 00:01:20 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 324 ; free virtual = 23207
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 221 ; free virtual = 25775
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -1881,7 +1881,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 325 ; free virtual = 23208
+Finished IO Insertion : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 221 ; free virtual = 25776
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1894,7 +1894,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 325 ; free virtual = 23208
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 221 ; free virtual = 25777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1906,25 +1906,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 327 ; free virtual = 23210
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 222 ; free virtual = 25777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 327 ; free virtual = 23210
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 222 ; free virtual = 25777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 327 ; free virtual = 23210
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 220 ; free virtual = 25775
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 327 ; free virtual = 23210
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 220 ; free virtual = 25775
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1989,22 +1989,22 @@ Report Instance Areas:
 |29    |          rstblk                                       |reset_blk_ramfifo            |    24|
 +------+-------------------------------------------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 327 ; free virtual = 23210
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 222 ; free virtual = 25777
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 466 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 2086.547 ; gain = 282.344 ; free physical = 328 ; free virtual = 23211
-Synthesis Optimization Complete : Time (s): cpu = 00:01:17 ; elapsed = 00:01:21 . Memory (MB): peak = 2086.547 ; gain = 1044.770 ; free physical = 329 ; free virtual = 23212
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 2084.543 ; gain = 282.344 ; free physical = 221 ; free virtual = 25776
+Synthesis Optimization Complete : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 2084.543 ; gain = 1042.762 ; free physical = 221 ; free virtual = 25776
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc] for cell 'U0'
-Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc] for cell 'U0'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc:53]
-Finished Parsing XDC File [/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc] for cell 'U0'
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc] for cell 'U0'
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc] for cell 'U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc:53]
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc] for cell 'U0'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
@@ -2013,7 +2013,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 19 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 2947.727 ; gain = 1817.395 ; free physical = 1192 ; free virtual = 24075
+synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 2946.730 ; gain = 1817.395 ; free physical = 1095 ; free virtual = 26649
 INFO: [Coretcl 2-1174] Renamed 28 cell refs.
-report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.16 . Memory (MB): peak = 3203.742 ; gain = 0.000 ; free physical = 1191 ; free virtual = 24075
-INFO: [Common 17-206] Exiting Vivado at Tue Dec  6 01:16:00 2022...
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.21 . Memory (MB): peak = 3202.746 ; gain = 0.000 ; free physical = 1094 ; free virtual = 26648
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  6 06:58:18 2022...

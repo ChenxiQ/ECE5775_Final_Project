@@ -15,75 +15,79 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.cache/wt [current_project]
-set_property parent.project_path /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.xpr [current_project]
+set_property webtalk.parent_dir /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.cache/wt [current_project]
+set_property parent.project_path /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado-ip [current_project]
-add_files -quiet /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp
-set_property used_in_implementation false [get_files /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp]
-add_files -quiet /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp
-set_property used_in_implementation false [get_files /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp]
-add_files -quiet /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp
-set_property used_in_implementation false [get_files /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp]
-add_files /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/vivado_system.bd
-set_property used_in_implementation false [get_files -all /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_xbar_0/vivado_system_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_0/vivado_system_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_1/vivado_system_auto_pc_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_2/vivado_system_auto_pc_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_3/vivado_system_auto_pc_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/vivado_system_ooc.xdc]
-set_property is_locked true [get_files /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/vivado_system.bd]
+set_property ip_repo_paths /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado-ip [current_project]
+add_files -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp
+set_property used_in_implementation false [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp]
+add_files -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp
+set_property used_in_implementation false [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp]
+add_files -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp
+set_property used_in_implementation false [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp]
+add_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/vivado_system.bd
+set_property used_in_implementation false [get_files -all /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_xbar_0/vivado_system_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_0/vivado_system_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_1/vivado_system_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_2/vivado_system_auto_pc_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_auto_pc_3/vivado_system_auto_pc_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/vivado_system_ooc.xdc]
+set_property is_locked true [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/vivado_system.bd]
 
-read_ip -quiet /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fadd_3_full_dsp_32/dut_ap_fadd_3_full_dsp_32.xci
-set_property is_locked true [get_files /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fadd_3_full_dsp_32/dut_ap_fadd_3_full_dsp_32.xci]
+read_ip -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fadd_3_full_dsp_32/dut_ap_fadd_3_full_dsp_32.xci
+set_property is_locked true [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fadd_3_full_dsp_32/dut_ap_fadd_3_full_dsp_32.xci]
 
-read_ip -quiet /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_faddfsub_3_full_dsp_32/dut_ap_faddfsub_3_full_dsp_32.xci
-set_property is_locked true [get_files /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_faddfsub_3_full_dsp_32/dut_ap_faddfsub_3_full_dsp_32.xci]
+read_ip -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_faddfsub_3_full_dsp_32/dut_ap_faddfsub_3_full_dsp_32.xci
+set_property is_locked true [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_faddfsub_3_full_dsp_32/dut_ap_faddfsub_3_full_dsp_32.xci]
 
-read_ip -quiet /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fdiv_14_no_dsp_32/dut_ap_fdiv_14_no_dsp_32.xci
-set_property is_locked true [get_files /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fdiv_14_no_dsp_32/dut_ap_fdiv_14_no_dsp_32.xci]
+read_ip -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fcmp_0_no_dsp_32/dut_ap_fcmp_0_no_dsp_32.xci
+set_property is_locked true [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fcmp_0_no_dsp_32/dut_ap_fcmp_0_no_dsp_32.xci]
 
-read_ip -quiet /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fmul_2_max_dsp_32/dut_ap_fmul_2_max_dsp_32.xci
-set_property is_locked true [get_files /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fmul_2_max_dsp_32/dut_ap_fmul_2_max_dsp_32.xci]
+read_ip -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fdiv_14_no_dsp_32/dut_ap_fdiv_14_no_dsp_32.xci
+set_property is_locked true [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fdiv_14_no_dsp_32/dut_ap_fdiv_14_no_dsp_32.xci]
 
-read_ip -quiet /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_frsqrt_9_full_dsp_32/dut_ap_frsqrt_9_full_dsp_32.xci
-set_property is_locked true [get_files /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_frsqrt_9_full_dsp_32/dut_ap_frsqrt_9_full_dsp_32.xci]
+read_ip -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fmul_2_max_dsp_32/dut_ap_fmul_2_max_dsp_32.xci
+set_property is_locked true [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fmul_2_max_dsp_32/dut_ap_fmul_2_max_dsp_32.xci]
+
+read_ip -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fsqrt_10_no_dsp_32/dut_ap_fsqrt_10_no_dsp_32.xci
+set_property is_locked true [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fsqrt_10_no_dsp_32/dut_ap_fsqrt_10_no_dsp_32.xci]
 
 read_verilog -library xil_defaultlib {
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/xillydemo.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/xillybus_core.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/xillybus.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/system.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/smbus.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/i2s_audio.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_update_off_diag_r.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_matmul.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_matmul_A.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_frsqrt_32ns_32ns_32_11_full_dsp.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_fmul_32ns_32ns_32_4_max_dsp.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_fdiv_32ns_32ns_32_16.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_faddfsub_32ns_32ns_32_5_full_dsp.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_fadd_32ns_32ns_32_5_full_dsp.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_calc_svd.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_calc_angle_float_float_s.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_backproj.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_backproj_A.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fifo_8x2048.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fifo_32x512.v
-  /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/system.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/xillydemo.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/xillybus_core.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/xillybus.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/system.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/smbus.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/i2s_audio.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_update_off_diag_r.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_matmul.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_matmul_A.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_fsqrt_32ns_32ns_32_12.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_fmul_32ns_32ns_32_4_max_dsp.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_fdiv_32ns_32ns_32_16.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_fcmp_32ns_32ns_1_1.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_faddfsub_32ns_32ns_32_5_full_dsp.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_fadd_32ns_32ns_32_5_full_dsp.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_calc_svd.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_calc_angle_float_float_s.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_backproj.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_backproj_A.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fifo_8x2048.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/src/fifo_32x512.v
+  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/system.v
 }
-set_property edif_extra_search_paths /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/cores [current_fileset]
+set_property edif_extra_search_paths /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/cores [current_fileset]
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/xillydemo.xdc
-set_property used_in_implementation false [get_files /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/xillydemo.xdc]
+read_xdc /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/xillydemo.xdc
+set_property used_in_implementation false [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/xillydemo.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

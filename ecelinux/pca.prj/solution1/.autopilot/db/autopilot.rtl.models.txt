@@ -4,7 +4,8 @@ dut_backproj_A
 dut_matmul_A
 dut_faddfsub_32ns_32ns_32_5_full_dsp
 dut_fdiv_32ns_32ns_32_16
-dut_frsqrt_32ns_32ns_32_11_full_dsp
+dut_fcmp_32ns_32ns_1_1
+dut_fsqrt_32ns_32ns_32_12
 dut_backproj
 dut_matmul
 dut_update_off_diag_r

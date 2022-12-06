@@ -45,7 +45,7 @@ set NewPortList {[
  	{ "name": "strm_out_V_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "strm_out_V", "role": "write" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "14", "15", "16", "17"], "CDFG" : "dut_calc_svd", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "18", "19", "20", "21", "22"], "CDFG" : "dut_calc_svd", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
 		{"Name" : "strm_in_V", "Type" : "Fifo", "Direction" : "I", "BlockSignal" : [
 			{"Name" : "strm_in_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}, 
@@ -53,32 +53,37 @@ set RtlHierarchyInfo {[
 			{"Name" : "strm_out_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}],
 		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"], "CDFG" : "dut_calc_angle_float_float_s", "VariableLatency" : "0", "AlignedPipeline" : "1", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "0",
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17"], "CDFG" : "dut_calc_angle_float_float_s", "VariableLatency" : "0", "AlignedPipeline" : "1", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "0",
 		"Port" : [
-		{"Name" : "A_M_real", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "A_M_imag", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
+		{"Name" : "A_r", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
+		{"Name" : "A_i", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
 		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_fadd_32ns_32ns_32_5_full_dsp_U15", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_faddfsub_32ns_32ns_32_5_full_dsp_U16", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_fadd_32ns_32ns_32_5_full_dsp_U17", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_fmul_32ns_32ns_32_4_max_dsp_U18", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_fmul_32ns_32ns_32_4_max_dsp_U19", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_fmul_32ns_32ns_32_4_max_dsp_U20", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_fmul_32ns_32ns_32_4_max_dsp_U21", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_fmul_32ns_32ns_32_4_max_dsp_U22", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_fdiv_32ns_32ns_32_16_U23", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_fdiv_32ns_32ns_32_16_U24", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_frsqrt_32ns_32ns_32_11_full_dsp_U25", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_81.dut_frsqrt_32ns_32ns_32_11_full_dsp_U26", "Parent" : "1", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_faddfsub_32ns_32ns_32_5_full_dsp_U29", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_faddfsub_32ns_32ns_32_5_full_dsp_U30", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fmul_32ns_32ns_32_4_max_dsp_U31", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fmul_32ns_32ns_32_4_max_dsp_U32", "Parent" : "0", "Child" : []}]}
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fadd_32ns_32ns_32_5_full_dsp_U15", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_faddfsub_32ns_32ns_32_5_full_dsp_U16", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fadd_32ns_32ns_32_5_full_dsp_U17", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U18", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U19", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U20", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U21", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U22", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U23", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U24", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U25", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U26", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fcmp_32ns_32ns_1_1_U27", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fcmp_32ns_32ns_1_1_U28", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fsqrt_32ns_32ns_32_12_U29", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fsqrt_32ns_32ns_32_12_U30", "Parent" : "1", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_faddfsub_32ns_32ns_32_5_full_dsp_U33", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_faddfsub_32ns_32ns_32_5_full_dsp_U34", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fmul_32ns_32ns_32_4_max_dsp_U35", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fmul_32ns_32ns_32_4_max_dsp_U36", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fcmp_32ns_32ns_1_1_U37", "Parent" : "0", "Child" : []}]}
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "295", "Max" : "295"}
-	, {"Name" : "Interval", "Min" : "295", "Max" : "295"}
+	{"Name" : "Latency", "Min" : "327", "Max" : "327"}
+	, {"Name" : "Interval", "Min" : "327", "Max" : "327"}
 ]}
 
 set Spec2ImplPortList { 

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_update_off_diag_r'
 ================================================================
-* Date:           Tue Dec  6 01:12:57 2022
+* Date:           Tue Dec  6 06:53:39 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -145,10 +145,10 @@ IsGatedGlobalClock: 0
 
  <State 1>: 1.57ns
 ST_1: empty [1/1] 0.00ns
-:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str42, [1 x i8]* @p_str43, [1 x i8]* @p_str44, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str45)
 
 ST_1: empty_8 [1/1] 0.00ns
-:1  %empty_8 = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
+:1  %empty_8 = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str46, [1 x i8]* @p_str47, [1 x i8]* @p_str48, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str49)
 
 ST_1: stg_34 [1/1] 1.57ns
 :2  br label %.preheader
@@ -521,19 +521,19 @@ ST_30: empty_9 [1/1] 0.00ns
 .preheader.preheader:1  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 112, i64 112, i64 112)
 
 ST_30: stg_138 [1/1] 0.00ns
-.preheader.preheader:2  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1810) nounwind
+.preheader.preheader:2  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str6) nounwind
 
 ST_30: tmp_s [1/1] 0.00ns
-.preheader.preheader:3  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str1810)
+.preheader.preheader:3  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str6)
 
 ST_30: stg_140 [1/1] 0.00ns
-.preheader.preheader:4  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1807) nounwind
+.preheader.preheader:4  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind
 
 ST_30: stg_141 [1/1] 4.38ns
 .preheader.preheader:42  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_5)
 
 ST_30: empty_10 [1/1] 0.00ns
-.preheader.preheader:43  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str1810, i32 %tmp_s)
+.preheader.preheader:43  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str6, i32 %tmp_s)
 
 ST_30: stg_143 [1/1] 0.00ns
 .preheader.preheader:44  br label %.preheader

@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="14" Path="/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.xpr">
+<Project Version="7" Minor="14" Path="/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="60ec820e89d04c3584de7113373ba922"/>
+    <Option Name="Id" Val="4aa9e65ff67443e89cb70c4a98204b17"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -114,7 +114,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../src/fpga-design/dut_frsqrt_32ns_32ns_32_11_full_dsp.v">
+      <File Path="$PPRDIR/../src/fpga-design/dut_fsqrt_32ns_32ns_32_12.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -129,6 +129,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../src/fpga-design/dut_fdiv_32ns_32ns_32_16.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/fpga-design/dut_fcmp_32ns_32ns_1_1.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -219,6 +226,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/ip/dut_ap_fcmp_0_no_dsp_32/dut_ap_fcmp_0_no_dsp_32.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/ip/dut_ap_fdiv_14_no_dsp_32/dut_ap_fdiv_14_no_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -233,7 +247,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/dut_ap_frsqrt_9_full_dsp_32/dut_ap_frsqrt_9_full_dsp_32.xci">
+      <File Path="$PSRCDIR/sources_1/ip/dut_ap_fsqrt_10_no_dsp_32/dut_ap_fsqrt_10_no_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -243,7 +257,7 @@
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="xillydemo"/>
-        <Option Name="ExtraSearchPath" Val="/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/cores"/>
+        <Option Name="ExtraSearchPath" Val="/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/cores"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -282,19 +296,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="fifo_32x512" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fifo_32x512">
-      <File Path="$PPRDIR/../../vivado-essentials/fifo_32x512/fifo_32x512.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="fifo_32x512"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="fifo_8x2048" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fifo_8x2048">
       <File Path="$PPRDIR/../../vivado-essentials/fifo_8x2048/fifo_8x2048.xci">
         <FileInfo>
@@ -305,6 +306,19 @@
       </File>
       <Config>
         <Option Name="TopModule" Val="fifo_8x2048"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="fifo_32x512" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fifo_32x512">
+      <File Path="$PPRDIR/../../vivado-essentials/fifo_32x512/fifo_32x512.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="fifo_32x512"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -349,7 +363,7 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="fifo_32x512_synth_1" Type="Ft3:Synth" SrcSet="fifo_32x512" Part="xc7z020clg484-1" ConstrsSet="fifo_32x512" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/fifo_32x512_synth_1" IncludeInArchive="true">
+    <Run Id="fifo_8x2048_synth_1" Type="Ft3:Synth" SrcSet="fifo_8x2048" Part="xc7z020clg484-1" ConstrsSet="fifo_8x2048" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/fifo_8x2048_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -358,7 +372,7 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="fifo_8x2048_synth_1" Type="Ft3:Synth" SrcSet="fifo_8x2048" Part="xc7z020clg484-1" ConstrsSet="fifo_8x2048" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/fifo_8x2048_synth_1" IncludeInArchive="true">
+    <Run Id="fifo_32x512_synth_1" Type="Ft3:Synth" SrcSet="fifo_32x512" Part="xc7z020clg484-1" ConstrsSet="fifo_32x512" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/fifo_32x512_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -400,7 +414,7 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="fifo_32x512_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="fifo_32x512" Description="Default settings for Implementation." SynthRun="fifo_32x512_synth_1" IncludeInArchive="false">
+    <Run Id="fifo_8x2048_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="fifo_8x2048" Description="Default settings for Implementation." SynthRun="fifo_8x2048_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
           <Desc>Default settings for Implementation.</Desc>
@@ -416,7 +430,7 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="fifo_8x2048_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="fifo_8x2048" Description="Default settings for Implementation." SynthRun="fifo_8x2048_synth_1" IncludeInArchive="false">
+    <Run Id="fifo_32x512_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="fifo_32x512" Description="Default settings for Implementation." SynthRun="fifo_32x512_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
           <Desc>Default settings for Implementation.</Desc>

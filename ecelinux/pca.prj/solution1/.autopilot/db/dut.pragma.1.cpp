@@ -588,9 +588,10 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
 void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
 #5 "./svd.h" 2
 //#include "ap_fixed.h"
+//#include <complex>
 
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 1 3
-// The template and inlines for the -*- C++ -*- complex number classes.
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
+// -*- C++ -*- C forwarding header.
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
 // 2006, 2007, 2008, 2009, 2010, 2011
@@ -616,22 +617,22 @@ void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/complex
- *  This is a Standard C++ Library header.
+/** @file include/cmath
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c math.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
  */
 
 //
-// ISO C++ 14882: 26.2  Complex Numbers
-// Note: this is not a conforming implementation.
-// Initially implemented by Ulrich Drepper <drepper@cygnus.com>
-// Improved by Gabriel Dos Reis <dosreis@cmla.ens-cachan.fr>
+// ISO C++ 14882: 26.5  C library
 //
 
 
-
-
-
-#41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
+#41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
 
 #1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 1 3
 // Predefined symbols and macros -*- C++ -*-
@@ -2254,7 +2255,7 @@ namespace std
 /* #undef _GLIBCXX_USE_SCHED_YIELD */
 
 /* Define if code specialized for wchar_t should be used. */
-#43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
+#43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
 #1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 1 3
 // The  -*- C++ -*- type traits classes for internal use in libstdc++
 
@@ -2650,7 +2651,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     };
 #422 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
 } // namespace
-#44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
+#44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
 #1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 1 3
 // -*- C++ -*-
 
@@ -2865,54 +2866,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 
 } // namespace
-#45 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
-// -*- C++ -*- C forwarding header.
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/cmath
- *  This is a Standard C++ Library file.  You should @c \#include this file
- *  in your programs, rather than any of the @a *.h implementation files.
- *
- *  This is the C++ version of the Standard C Library header @c math.h,
- *  and its contents are (mostly) the same as that header, but are all
- *  contained in the namespace @c std (except for names which are defined
- *  as macros in C).
- */
-
-//
-// ISO C++ 14882: 26.5  C library
-//
-
-
-#41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-
-
-
-
+#45 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
 extern "C" {
 #1 "/usr/include/math.h" 1 3 4
 /* Declarations for math functions.
@@ -4975,12 +4929,324 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 } // namespace
-#46 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 1 3
-// String based streams -*- C++ -*-
+#8 "./svd.h" 2
+//#include "hls/linear_algebra/utils/x_hls_matrix_utils.h"
+//#include "hls/linear_algebra/utils/x_hls_complex.h"
+
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h" 1
+/*****************************************************************************
+ *
+ *     Author: Xilinx, Inc.
+ *
+ *     This text contains proprietary, confidential information of
+ *     Xilinx, Inc. , is distributed by under license from Xilinx,
+ *     Inc., and may be used, copied and/or disclosed only pursuant to
+ *     the terms of a valid license agreement with Xilinx, Inc.
+ *
+ *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
+ *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
+ *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
+ *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
+ *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
+ *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
+ *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
+ *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
+ *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
+ *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
+ *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
+ *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ *     FOR A PARTICULAR PURPOSE.
+ *
+ *     Xilinx products are not intended for use in life support appliances,
+ *     devices, or systems. Use in such applications is expressly prohibited.
+ *
+ *     (c) Copyright 2012 Xilinx Inc.
+ *     All rights reserved.
+ *
+ *****************************************************************************/
+
+
+
+
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdint.h" 1 3
+/*===---- stdint.h - Standard header for sized integer types --------------===*\
+ *
+ * Copyright (c) 2009 Chris Lattner
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+\*===----------------------------------------------------------------------===*/
+
+
+
+
+/* If we're hosted, fall back to the system's stdint.h, which might have
+ * additional definitions.
+ */
+
+
+
+#1 "/usr/include/stdint.h" 1 3 4
+/* Copyright (C) 1997,1998,1999,2000,2001,2006 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/*
+ *	ISO C99: 7.18 Integer types <stdint.h>
+ */
+
+
+
+
+
+
+#1 "/usr/include/bits/wchar.h" 1 3 4
+/* wchar_t type related definitions.  i386/x86-64 version.
+   Copyright (C) 2000-2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+#1 "/usr/include/bits/wordsize.h" 1 3 4
+/* Determine the wordsize from the preprocessor defines.  */
+#11 "/usr/include/bits/wordsize.h" 3 4
+/* Both x86-64 and x32 use the 64-bit system call interface.  */
+#23 "/usr/include/bits/wchar.h" 2 3 4
+#27 "/usr/include/stdint.h" 2 3 4
+#1 "/usr/include/bits/wordsize.h" 1 3 4
+/* Determine the wordsize from the preprocessor defines.  */
+#11 "/usr/include/bits/wordsize.h" 3 4
+/* Both x86-64 and x32 use the 64-bit system call interface.  */
+#28 "/usr/include/stdint.h" 2 3 4
+
+/* Exact integral types.  */
+
+/* Signed.  */
+
+/* There is some amount of overlap with <sys/types.h> as known by inet code */
+
+
+typedef signed char int8_t;
+typedef short int int16_t;
+typedef int int32_t;
+
+typedef long int int64_t;
+
+
+
+
+
+
+/* Unsigned.  */
+typedef unsigned char uint8_t;
+typedef unsigned short int uint16_t;
+
+typedef unsigned int uint32_t;
+
+
+
+typedef unsigned long int uint64_t;
+
+
+
+
+
+
+/* Small types.  */
+
+/* Signed.  */
+typedef signed char int_least8_t;
+typedef short int int_least16_t;
+typedef int int_least32_t;
+
+typedef long int int_least64_t;
+
+
+
+
+
+/* Unsigned.  */
+typedef unsigned char uint_least8_t;
+typedef unsigned short int uint_least16_t;
+typedef unsigned int uint_least32_t;
+
+typedef unsigned long int uint_least64_t;
+
+
+
+
+
+
+/* Fast types.  */
+
+/* Signed.  */
+typedef signed char int_fast8_t;
+
+typedef long int int_fast16_t;
+typedef long int int_fast32_t;
+typedef long int int_fast64_t;
+
+
+
+
+
+
+
+/* Unsigned.  */
+typedef unsigned char uint_fast8_t;
+
+typedef unsigned long int uint_fast16_t;
+typedef unsigned long int uint_fast32_t;
+typedef unsigned long int uint_fast64_t;
+#116 "/usr/include/stdint.h" 3 4
+/* Types for `void *' pointers.  */
+
+
+typedef long int intptr_t;
+
+
+typedef unsigned long int uintptr_t;
+#132 "/usr/include/stdint.h" 3 4
+/* Largest integral types.  */
+
+typedef long int intmax_t;
+typedef unsigned long int uintmax_t;
+#152 "/usr/include/stdint.h" 3 4
+/* Limits of integral types.  */
+
+/* Minimum of signed integral types.  */
+
+
+
+
+/* Maximum of signed integral types.  */
+
+
+
+
+
+/* Maximum of unsigned integral types.  */
+
+
+
+
+
+
+/* Minimum of signed integral types having a minimum size.  */
+
+
+
+
+/* Maximum of signed integral types having a minimum size.  */
+
+
+
+
+
+/* Maximum of unsigned integral types having a minimum size.  */
+
+
+
+
+
+
+/* Minimum of fast signed integral types having a minimum size.  */
+#200 "/usr/include/stdint.h" 3 4
+/* Maximum of fast signed integral types having a minimum size.  */
+#211 "/usr/include/stdint.h" 3 4
+/* Maximum of fast unsigned integral types having a minimum size.  */
+#223 "/usr/include/stdint.h" 3 4
+/* Values to test for integral types holding `void *' pointer.  */
+#235 "/usr/include/stdint.h" 3 4
+/* Minimum for largest signed integral type.  */
+
+/* Maximum for largest signed integral type.  */
+
+
+/* Maximum for largest unsigned integral type.  */
+
+
+
+/* Limits of other integer types.  */
+
+/* Limits of `ptrdiff_t' type.  */
+#255 "/usr/include/stdint.h" 3 4
+/* Limits of `sig_atomic_t'.  */
+
+
+
+/* Limit of `size_t' type.  */
+#270 "/usr/include/stdint.h" 3 4
+/* Limits of `wchar_t'.  */
+
+/* These constants might also be defined in <wchar.h>.  */
+
+
+
+
+/* Limits of `wint_t'.  */
+
+
+
+
+/* Signed.  */
+#292 "/usr/include/stdint.h" 3 4
+/* Unsigned.  */
+#302 "/usr/include/stdint.h" 3 4
+/* Maximal type.  */
+#34 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdint.h" 2 3
+#35 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h" 2
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 1 3
+// -*- C++ -*- forwarding header.
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -5002,22 +5268,2488 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/sstream
+/** @file include/cstdlib
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c stdlib.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+
+//
+// ISO C++ 14882: 20.4.6  C library
+//
+
+
+#41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+#65 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+#1 "/usr/include/stdlib.h" 1 3 4
+/* Copyright (C) 1991-2007, 2009-2011, 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/*
+ *	ISO C99 Standard: 7.20 General utilities	<stdlib.h>
+ */
+
+
+
+
+
+/* Get size_t, wchar_t and NULL from <stddef.h>.  */
+
+
+
+
+
+
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+
+
+
+
+
+
+typedef __typeof__(((int*)0)-((int*)0)) ptrdiff_t;
+
+
+
+typedef __typeof__(sizeof(int)) size_t;
+#56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+#33 "/usr/include/stdlib.h" 2 3 4
+
+extern "C" {
+
+
+
+
+
+/* XPG requires a few symbols from <sys/wait.h> being defined.  */
+
+#1 "/usr/include/bits/waitflags.h" 1 3 4
+/* Definitions of flag bits for `waitpid' et al.
+   Copyright (C) 1992,1996,1997,2000,2004,2005 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+
+/* Bits in the third argument to `waitpid'.  */
+
+
+
+/* Bits in the fourth argument to `waitid'.  */
+#42 "/usr/include/stdlib.h" 2 3 4
+#1 "/usr/include/bits/waitstatus.h" 1 3 4
+/* Definitions of status bits for `wait' et al.
+   Copyright (C) 1992,1994,1996,1997,2000,2004 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+
+/* Everything extant so far uses these same bits.  */
+
+
+/* If WIFEXITED(STATUS), the low-order 8 bits of the status.  */
+
+
+/* If WIFSIGNALED(STATUS), the terminating signal.  */
+
+
+/* If WIFSTOPPED(STATUS), the signal that stopped the child.  */
+
+
+/* Nonzero if STATUS indicates normal termination.  */
+
+
+/* Nonzero if STATUS indicates termination by a signal.  */
+
+
+
+/* Nonzero if STATUS indicates the child is stopped.  */
+
+
+/* Nonzero if STATUS indicates the child continued after a stop.  We only
+   define this if <bits/waitflags.h> provides the WCONTINUED flag bit.  */
+
+
+
+
+/* Nonzero if STATUS indicates the child dumped core.  */
+
+
+/* Macros for constructing status values.  */
+#64 "/usr/include/bits/waitstatus.h" 3 4
+#1 "/usr/include/endian.h" 1 3 4
+/* Copyright (C) 1992-2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+
+/* Definitions for byte order, according to significance of bytes,
+   from low addresses to high addresses.  The value is what you get by
+   putting '4' in the most significant byte, '3' in the second most
+   significant byte, '2' in the second least significant byte, and '1'
+   in the least significant byte, and then writing down one digit for
+   each byte, starting with the byte at the lowest address at the left,
+   and proceeding to the byte with the highest address at the right.  */
+
+
+
+
+
+/* This file defines `__BYTE_ORDER' for the particular machine.  */
+
+#1 "/usr/include/bits/endian.h" 1 3 4
+/* i386/x86_64 are little-endian.  */
+#37 "/usr/include/endian.h" 2 3 4
+
+/* Some machines may need to use a different endianness for floating point
+   values.  */
+#59 "/usr/include/endian.h" 3 4
+/* Conversion interfaces.  */
+
+#1 "/usr/include/bits/byteswap.h" 1 3 4
+/* Macros to swap the order of bytes in integer values.
+   Copyright (C) 1997-2012   Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#27 "/usr/include/bits/byteswap.h" 3 4
+#1 "/usr/include/bits/types.h" 1 3 4
+/* bits/types.h -- definitions of __*_t types underlying *_t types.
+   Copyright (C) 2002-2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/*
+ * Never include this file directly; use <sys/types.h> instead.
+ */
+
+
+
+
+
+
+#1 "/usr/include/bits/wordsize.h" 1 3 4
+/* Determine the wordsize from the preprocessor defines.  */
+#11 "/usr/include/bits/wordsize.h" 3 4
+/* Both x86-64 and x32 use the 64-bit system call interface.  */
+#28 "/usr/include/bits/types.h" 2 3 4
+
+/* Convenience types.  */
+typedef unsigned char __u_char;
+typedef unsigned short int __u_short;
+typedef unsigned int __u_int;
+typedef unsigned long int __u_long;
+
+/* Fixed-size types, underlying types depend on word size and compiler.  */
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef signed short int __int16_t;
+typedef unsigned short int __uint16_t;
+typedef signed int __int32_t;
+typedef unsigned int __uint32_t;
+
+typedef signed long int __int64_t;
+typedef unsigned long int __uint64_t;
+
+
+
+
+
+/* quad_t is also 64 bits.  */
+
+typedef long int __quad_t;
+typedef unsigned long int __u_quad_t;
+#69 "/usr/include/bits/types.h" 3 4
+/* The machine-dependent file <bits/typesizes.h> defines __*_T_TYPE
+   macros for each of the OS types we define below.  The definitions
+   of those macros must use the following macros for underlying types.
+   We define __S<SIZE>_TYPE and __U<SIZE>_TYPE for the signed and unsigned
+   variants of each of the following integer types on this machine.
+
+	16		-- "natural" 16-bit type (always short)
+	32		-- "natural" 32-bit type (always int)
+	64		-- "natural" 64-bit type (long or long long)
+	LONG32		-- 32-bit type, traditionally long
+	QUAD		-- 64-bit type, always long long
+	WORD		-- natural type of __WORDSIZE bits (int or long)
+	LONGWORD	-- type of __WORDSIZE bits, traditionally long
+
+   We distinguish WORD/LONGWORD, 32/LONG32, and 64/QUAD so that the
+   conventional uses of `long' or `long long' type modifiers match the
+   types we define, even when a less-adorned type would be the same size.
+   This matters for (somewhat) portably writing printf/scanf formats for
+   these types, where using the appropriate l or ll format modifiers can
+   make the typedefs and the formats match up across all GNU platforms.  If
+   we used `long' when it's 64 bits where `long long' is expected, then the
+   compiler would warn about the formats not matching the argument types,
+   and the programmer changing them to shut up the compiler would break the
+   program's portability.
+
+   Here we assume what is presently the case in all the GCC configurations
+   we support: long long is always 64 bits, long is always word/address size,
+   and int is always 32 bits.  */
+#125 "/usr/include/bits/types.h" 3 4
+/* No need to mark the typedef with __extension__.   */
+
+
+
+
+
+#1 "/usr/include/bits/typesizes.h" 1 3 4
+/* bits/typesizes.h -- underlying types for *_t.  Linux/x86-64 version.
+   Copyright (C) 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#26 "/usr/include/bits/typesizes.h" 3 4
+/* See <bits/types.h> for the meaning of these macros.  This file exists so
+   that <bits/types.h> need not vary across different GNU platforms.  */
+
+/* X32 kernel interface is 64-bit.  */
+#76 "/usr/include/bits/typesizes.h" 3 4
+/* Tell the libc code that off_t and off64_t are actually the same type
+   for all ABI purposes, even if possibly expressed as different base types
+   for C type-checking purposes.  */
+
+
+/* Same for ino_t and ino64_t.  */
+
+
+
+/* Number of descriptors that can fit in an `fd_set'.  */
+#131 "/usr/include/bits/types.h" 2 3 4
+
+
+typedef unsigned long int __dev_t; /* Type of device numbers.  */
+typedef unsigned int __uid_t; /* Type of user identifications.  */
+typedef unsigned int __gid_t; /* Type of group identifications.  */
+typedef unsigned long int __ino_t; /* Type of file serial numbers.  */
+typedef unsigned long int __ino64_t; /* Type of file serial numbers (LFS).*/
+typedef unsigned int __mode_t; /* Type of file attribute bitmasks.  */
+typedef unsigned long int __nlink_t; /* Type of file link counts.  */
+typedef long int __off_t; /* Type of file sizes and offsets.  */
+typedef long int __off64_t; /* Type of file sizes and offsets (LFS).  */
+typedef int __pid_t; /* Type of process identifications.  */
+typedef struct { int __val[2]; } __fsid_t; /* Type of file system IDs.  */
+typedef long int __clock_t; /* Type of CPU usage counts.  */
+typedef unsigned long int __rlim_t; /* Type for resource measurement.  */
+typedef unsigned long int __rlim64_t; /* Type for resource measurement (LFS).  */
+typedef unsigned int __id_t; /* General type for IDs.  */
+typedef long int __time_t; /* Seconds since the Epoch.  */
+typedef unsigned int __useconds_t; /* Count of microseconds.  */
+typedef long int __suseconds_t; /* Signed count of microseconds.  */
+
+typedef int __daddr_t; /* The type of a disk address.  */
+typedef int __key_t; /* Type of an IPC key.  */
+
+/* Clock ID used in clock and timer functions.  */
+typedef int __clockid_t;
+
+/* Timer ID returned by `timer_create'.  */
+typedef void * __timer_t;
+
+/* Type to represent block size.  */
+typedef long int __blksize_t;
+
+/* Types from the Large File Support interface.  */
+
+/* Type to count number of disk blocks.  */
+typedef long int __blkcnt_t;
+typedef long int __blkcnt64_t;
+
+/* Type to count file system blocks.  */
+typedef unsigned long int __fsblkcnt_t;
+typedef unsigned long int __fsblkcnt64_t;
+
+/* Type to count file system nodes.  */
+typedef unsigned long int __fsfilcnt_t;
+typedef unsigned long int __fsfilcnt64_t;
+
+/* Type of miscellaneous file system fields.  */
+typedef long int __fsword_t;
+
+typedef long int __ssize_t; /* Type of a byte count, or error.  */
+
+/* Signed long type used in system calls.  */
+typedef long int __syscall_slong_t;
+/* Unsigned long type used in system calls.  */
+typedef unsigned long int __syscall_ulong_t;
+
+/* These few don't really vary by system, they always correspond
+   to one of the other defined types.  */
+typedef __off64_t __loff_t; /* Type of file sizes and offsets (LFS).  */
+typedef __quad_t *__qaddr_t;
+typedef char *__caddr_t;
+
+/* Duplicates info from stdint.h but this is used in unistd.h.  */
+typedef long int __intptr_t;
+
+/* Duplicate info from sys/socket.h.  */
+typedef unsigned int __socklen_t;
+#28 "/usr/include/bits/byteswap.h" 2 3 4
+#1 "/usr/include/bits/wordsize.h" 1 3 4
+/* Determine the wordsize from the preprocessor defines.  */
+#11 "/usr/include/bits/wordsize.h" 3 4
+/* Both x86-64 and x32 use the 64-bit system call interface.  */
+#29 "/usr/include/bits/byteswap.h" 2 3 4
+
+/* Swap bytes in 16 bit value.  */
+
+
+
+/* Get __bswap_16.  */
+
+#1 "/usr/include/bits/byteswap-16.h" 1 3 4
+/* Macros to swap the order of bytes in 16-bit integer values.
+   Copyright (C) 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#36 "/usr/include/bits/byteswap.h" 2 3 4
+
+/* Swap bytes in 32 bit value.  */
+#56 "/usr/include/bits/byteswap.h" 3 4
+/* To swap the bytes in a word the i486 processors and up provide the
+   `bswap' opcode.  On i386 we have to use three instructions.  */
+#96 "/usr/include/bits/byteswap.h" 3 4
+/* Swap bytes in 64 bit value.  */
+#61 "/usr/include/endian.h" 2 3 4
+#65 "/usr/include/bits/waitstatus.h" 2 3 4
+
+union wait
+  {
+    int w_status;
+    struct
+      {
+
+ unsigned int __w_termsig:7; /* Terminating signal.  */
+ unsigned int __w_coredump:1; /* Set if dumped core.  */
+ unsigned int __w_retcode:8; /* Return code if exited normally.  */
+ unsigned int:16;
+
+
+
+
+
+
+
+      } __wait_terminated;
+    struct
+      {
+
+ unsigned int __w_stopval:8; /* W_STOPPED if stopped.  */
+ unsigned int __w_stopsig:8; /* Stopping signal.  */
+ unsigned int:16;
+
+
+
+
+
+
+      } __wait_stopped;
+  };
+#43 "/usr/include/stdlib.h" 2 3 4
+
+
+
+/* Lots of hair to allow traditional BSD use of `union wait'
+   as well as POSIX.1 use of `int' for the status word.  */
+#57 "/usr/include/stdlib.h" 3 4
+/* This is the type of the argument to `wait'.  The funky union
+   causes redeclarations with either `int *' or `union wait *' to be
+   allowed without complaint.  __WAIT_STATUS_DEFN is the type used in
+   the actual function definitions.  */
+#83 "/usr/include/stdlib.h" 3 4
+/* Define the macros <sys/wait.h> also would define this way.  */
+#96 "/usr/include/stdlib.h" 3 4
+/* Returned by `div'.  */
+typedef struct
+  {
+    int quot; /* Quotient.  */
+    int rem; /* Remainder.  */
+  } div_t;
+
+/* Returned by `ldiv'.  */
+
+typedef struct
+  {
+    long int quot; /* Quotient.  */
+    long int rem; /* Remainder.  */
+  } ldiv_t;
+
+
+
+
+
+
+/* Returned by `lldiv'.  */
+__extension__ typedef struct
+  {
+    long long int quot; /* Quotient.  */
+    long long int rem; /* Remainder.  */
+  } lldiv_t;
+
+
+
+
+
+/* The largest number rand will return (same as INT_MAX).  */
+
+
+
+/* We define these the same for all machines.
+   Changes from this to the outside world should be done in `_exit'.  */
+
+
+
+
+/* Maximum length of a multibyte character in the current locale.  */
+
+extern size_t __ctype_get_mb_cur_max (void) throw () /* Ignore */;
+
+
+
+/* Convert a string to a floating-point number.  */
+extern double atof (const char *__nptr)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) /* Ignore */;
+/* Convert a string to an integer.  */
+extern int atoi (const char *__nptr)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) /* Ignore */;
+/* Convert a string to a long integer.  */
+extern long int atol (const char *__nptr)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+
+/* Convert a string to a long long integer.  */
+__extension__ extern long long int atoll (const char *__nptr)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+
+/* Convert a string to a floating-point number.  */
+extern double strtod (const char *__restrict __nptr,
+        char **__restrict __endptr)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+/* Likewise for `float' and `long double' sizes of floating-point numbers.  */
+extern float strtof (const char *__restrict __nptr,
+       char **__restrict __endptr) throw () __attribute__ ((__nonnull__ (1)));
+
+extern long double strtold (const char *__restrict __nptr,
+       char **__restrict __endptr)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+/* Convert a string to a long integer.  */
+extern long int strtol (const char *__restrict __nptr,
+   char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+/* Convert a string to an unsigned long integer.  */
+extern unsigned long int strtoul (const char *__restrict __nptr,
+      char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+/* Convert a string to a quadword integer.  */
+__extension__
+extern long long int strtoq (const char *__restrict __nptr,
+        char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+/* Convert a string to an unsigned quadword integer.  */
+__extension__
+extern unsigned long long int strtouq (const char *__restrict __nptr,
+           char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+/* Convert a string to a quadword integer.  */
+__extension__
+extern long long int strtoll (const char *__restrict __nptr,
+         char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+/* Convert a string to an unsigned quadword integer.  */
+__extension__
+extern unsigned long long int strtoull (const char *__restrict __nptr,
+     char **__restrict __endptr, int __base)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+/* The concept of one static locale per category is not very well
+   thought out.  Many applications will need to process its data using
+   information from several different locales.  Another problem is
+   the implementation of the internationalization handling in the
+   ISO C++ standard library.  To support this another set of
+   the functions using locale data exist which take an additional
+   argument.
+
+   Attention: even though several *_l interfaces are part of POSIX:2008,
+   these are not.  */
+
+/* Structure for reentrant locale using functions.  This is an
+   (almost) opaque type for the user level programs.  */
+
+#1 "/usr/include/xlocale.h" 1 3 4
+/* Definition of locale datatype.
+   Copyright (C) 1997,2000,2002,2009,2010 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+   Contributed by Ulrich Drepper <drepper@cygnus.com>, 1997.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+/* Structure for reentrant locale using functions.  This is an
+   (almost) opaque type for the user level programs.  The file and
+   this data structure is not standardized.  Don't rely on it.  It can
+   go away without warning.  */
+typedef struct __locale_struct
+{
+  /* Note: LC_ALL is not a valid index into this array.  */
+  struct __locale_data *__locales[13]; /* 13 = __LC_LAST. */
+
+  /* To increase the speed of this solution we add some special members.  */
+  const unsigned short int *__ctype_b;
+  const int *__ctype_tolower;
+  const int *__ctype_toupper;
+
+  /* Note: LC_ALL is not a valid index into this array.  */
+  const char *__names[13];
+
+public :
+inline __attribute__((always_inline)) __locale_struct() { _ssdm_SpecConstant(__names);  }
+#39 "/usr/include/xlocale.h"
+} *__locale_t;
+
+/* POSIX 2008 makes locale_t official.  */
+typedef __locale_t locale_t;
+#236 "/usr/include/stdlib.h" 2 3 4
+
+/* Special versions of the functions above which take the locale to
+   use as an additional parameter.  */
+extern long int strtol_l (const char *__restrict __nptr,
+     char **__restrict __endptr, int __base,
+     __locale_t __loc) throw () __attribute__ ((__nonnull__ (1, 4)));
+
+extern unsigned long int strtoul_l (const char *__restrict __nptr,
+        char **__restrict __endptr,
+        int __base, __locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 4)));
+
+__extension__
+extern long long int strtoll_l (const char *__restrict __nptr,
+    char **__restrict __endptr, int __base,
+    __locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 4)));
+
+__extension__
+extern unsigned long long int strtoull_l (const char *__restrict __nptr,
+       char **__restrict __endptr,
+       int __base, __locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 4)));
+
+extern double strtod_l (const char *__restrict __nptr,
+   char **__restrict __endptr, __locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 3)));
+
+extern float strtof_l (const char *__restrict __nptr,
+         char **__restrict __endptr, __locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 3)));
+
+extern long double strtold_l (const char *__restrict __nptr,
+         char **__restrict __endptr,
+         __locale_t __loc)
+     throw () __attribute__ ((__nonnull__ (1, 3)));
+#302 "/usr/include/stdlib.h" 3 4
+/* Convert N to base 64 using the digits "./0-9A-Za-z", least-significant
+   digit first.  Returns a pointer to static storage overwritten by the
+   next call.  */
+extern char *l64a (long int __n) throw () /* Ignore */;
+
+/* Read a number from a string S in base 64 as above.  */
+extern long int a64l (const char *__s)
+     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+
+
+#1 "/usr/include/sys/types.h" 1 3 4
+/* Copyright (C) 1991,1992,1994-2002,2006,2010 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/*
+ *	POSIX Standard: 2.6 Primitive System Data Types	<sys/types.h>
+ */
+
+
+
+
+
+
+extern "C" {
+
+
+
+
+
+typedef __u_char u_char;
+typedef __u_short u_short;
+typedef __u_int u_int;
+typedef __u_long u_long;
+typedef __quad_t quad_t;
+typedef __u_quad_t u_quad_t;
+typedef __fsid_t fsid_t;
+
+
+
+
+typedef __loff_t loff_t;
+
+
+
+typedef __ino_t ino_t;
+
+
+
+
+
+
+typedef __ino64_t ino64_t;
+
+
+
+
+typedef __dev_t dev_t;
+
+
+
+
+typedef __gid_t gid_t;
+
+
+
+
+typedef __mode_t mode_t;
+
+
+
+
+typedef __nlink_t nlink_t;
+
+
+
+
+typedef __uid_t uid_t;
+
+
+
+
+
+typedef __off_t off_t;
+
+
+
+
+
+
+typedef __off64_t off64_t;
+
+
+
+
+typedef __pid_t pid_t;
+
+
+
+
+
+typedef __id_t id_t;
+
+
+
+
+typedef __ssize_t ssize_t;
+
+
+
+
+
+typedef __daddr_t daddr_t;
+typedef __caddr_t caddr_t;
+
+
+
+
+
+typedef __key_t key_t;
+#132 "/usr/include/sys/types.h" 3 4
+#1 "/usr/include/time.h" 1 3 4
+/* Copyright (C) 1991-2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/*
+ *	ISO C99 Standard: 7.23 Date and time	<time.h>
+ */
+#58 "/usr/include/time.h" 3 4
+/* Returned by `clock'.  */
+typedef __clock_t clock_t;
+#74 "/usr/include/time.h" 3 4
+/* Returned by `time'.  */
+typedef __time_t time_t;
+#90 "/usr/include/time.h" 3 4
+/* Clock ID used in clock and timer functions.  */
+typedef __clockid_t clockid_t;
+#102 "/usr/include/time.h" 3 4
+/* Timer ID returned by `timer_create'.  */
+typedef __timer_t timer_t;
+#133 "/usr/include/sys/types.h" 2 3 4
+
+
+
+typedef __useconds_t useconds_t;
+
+
+
+typedef __suseconds_t suseconds_t;
+
+
+
+
+
+
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+#56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+#147 "/usr/include/sys/types.h" 2 3 4
+
+
+/* Old compatibility names for C types.  */
+typedef unsigned long int ulong;
+typedef unsigned short int ushort;
+typedef unsigned int uint;
+
+
+/* These size-specific names are used by some of the inet code.  */
+#186 "/usr/include/sys/types.h" 3 4
+/* For GCC 2.7 and later, we can use specific type-size attributes.  */
+#200 "/usr/include/sys/types.h" 3 4
+typedef unsigned int u_int8_t __attribute__ ((__mode__ (__QI__)));
+typedef unsigned int u_int16_t __attribute__ ((__mode__ (__HI__)));
+typedef unsigned int u_int32_t __attribute__ ((__mode__ (__SI__)));
+typedef unsigned int u_int64_t __attribute__ ((__mode__ (__DI__)));
+
+typedef int register_t __attribute__ ((__mode__ (__word__)));
+
+
+/* Some code from BIND tests this macro to see if the types above are
+   defined.  */
+
+
+
+
+
+/* In BSD <sys/types.h> is expected to define BYTE_ORDER.  */
+
+
+/* It also defines `fd_set' and the FD_* macros for `select'.  */
+
+#1 "/usr/include/sys/select.h" 1 3 4
+/* `fd_set' type and related macros, and `select'/`pselect' declarations.
+   Copyright (C) 1996-2003, 2009, 2011 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/*	POSIX 1003.1g: 6.2 Select from File Descriptor Sets <sys/select.h>  */
+
+
+
+
+
+
+/* Get definition of needed basic types.  */
+
+
+/* Get __FD_* definitions.  */
+
+#1 "/usr/include/bits/select.h" 1 3 4
+/* Copyright (C) 1997-1999,2001,2008,2009,2011 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+
+#1 "/usr/include/bits/wordsize.h" 1 3 4
+/* Determine the wordsize from the preprocessor defines.  */
+#11 "/usr/include/bits/wordsize.h" 3 4
+/* Both x86-64 and x32 use the 64-bit system call interface.  */
+#23 "/usr/include/bits/select.h" 2 3 4
+#31 "/usr/include/sys/select.h" 2 3 4
+
+/* Get __sigset_t.  */
+
+#1 "/usr/include/bits/sigset.h" 1 3 4
+/* __sig_atomic_t, __sigset_t, and related definitions.  Linux version.
+   Copyright (C) 1991, 1992, 1994, 1996, 1997, 2007, 2012
+   Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+typedef int __sig_atomic_t;
+
+/* A `sigset_t' has a bit for each signal.  */
+
+
+typedef struct
+  {
+    unsigned long int __val[(1024 / (8 * sizeof (unsigned long int)))];
+  } __sigset_t;
+
+
+
+
+/* We only want to define these functions if <signal.h> was actually
+   included; otherwise we were included just to define the types.  Since we
+   are namespace-clean, it wouldn't hurt to define extra macros.  But
+   trouble can be caused by functions being defined (e.g., any global
+   register vars declared later will cause compilation errors).  */
+#34 "/usr/include/sys/select.h" 2 3 4
+
+
+
+typedef __sigset_t sigset_t;
+
+
+/* Get definition of timer specification structures.  */
+
+
+
+#1 "/usr/include/time.h" 1 3 4
+/* Copyright (C) 1991-2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/*
+ *	ISO C99 Standard: 7.23 Date and time	<time.h>
+ */
+#118 "/usr/include/time.h" 3 4
+/* POSIX.1b structure for a time value.  This is like a `struct timeval' but
+   has nanoseconds instead of microseconds.  */
+struct timespec
+  {
+    __time_t tv_sec; /* Seconds.  */
+    __syscall_slong_t tv_nsec; /* Nanoseconds.  */
+  };
+#44 "/usr/include/sys/select.h" 2 3 4
+
+#1 "/usr/include/bits/time.h" 1 3 4
+/* System-dependent timing definitions.  Linux version.
+   Copyright (C) 1996,1997,1999-2003,2010,2011,2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/*
+ * Never include this file directly; use <time.h> instead.
+ */
+
+
+
+
+
+
+/* A time value that is accurate to the nearest
+   microsecond but also has a range of years.  */
+struct timeval
+  {
+    __time_t tv_sec; /* Seconds.  */
+    __suseconds_t tv_usec; /* Microseconds.  */
+  };
+#46 "/usr/include/sys/select.h" 2 3 4
+
+
+
+
+
+
+
+/* The fd_set member is required to be an array of longs.  */
+typedef long int __fd_mask;
+
+/* Some versions of <linux/posix_types.h> define this macros.  */
+
+/* It's easier to assume 8-bit bytes than to get CHAR_BIT.  */
+
+
+
+
+/* fd_set for select and pselect.  */
+typedef struct
+  {
+    /* XPG4.2 requires this member name.  Otherwise avoid the name
+       from the global namespace.  */
+
+    __fd_mask fds_bits[1024 / (8 * (int) sizeof (__fd_mask))];
+
+
+
+
+
+  } fd_set;
+
+/* Maximum number of file descriptors in `fd_set'.  */
+
+
+
+/* Sometimes the fd_set member is assumed to have this type.  */
+typedef __fd_mask fd_mask;
+
+/* Number of bits per word of `fd_set' (some code assumes this is 32).  */
+
+
+
+
+/* Access macros for `fd_set'.  */
+
+
+
+
+
+
+extern "C" {
+
+/* Check the first NFDS descriptors each in READFDS (if not NULL) for read
+   readiness, in WRITEFDS (if not NULL) for write readiness, and in EXCEPTFDS
+   (if not NULL) for exceptional conditions.  If TIMEOUT is not NULL, time out
+   after waiting the interval specified therein.  Returns the number of ready
+   descriptors, or -1 for errors.
+
+   This function is a cancellation point and therefore not marked with
+   __THROW.  */
+extern int select (int __nfds, fd_set *__restrict __readfds,
+     fd_set *__restrict __writefds,
+     fd_set *__restrict __exceptfds,
+     struct timeval *__restrict __timeout);
+
+
+/* Same as above only that the TIMEOUT value is given with higher
+   resolution and a sigmask which is been set temporarily.  This version
+   should be used.
+
+   This function is a cancellation point and therefore not marked with
+   __THROW.  */
+extern int pselect (int __nfds, fd_set *__restrict __readfds,
+      fd_set *__restrict __writefds,
+      fd_set *__restrict __exceptfds,
+      const struct timespec *__restrict __timeout,
+      const __sigset_t *__restrict __sigmask);
+
+
+
+/* Define some inlines helping to catch common problems.  */
+
+
+
+
+}
+#220 "/usr/include/sys/types.h" 2 3 4
+
+/* BSD defines these symbols, so we follow.  */
+
+#1 "/usr/include/sys/sysmacros.h" 1 3 4
+/* Definitions of macros to access `dev_t' values.
+   Copyright (C) 1996, 1997, 1999, 2003, 2004, 2007, 2011
+   Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+
+/* If the compiler does not know long long it is out of luck.  We are
+   not going to hack weird hacks to support the dev_t representation
+   they need.  */
+
+extern "C" {
+
+__extension__
+extern unsigned int gnu_dev_major (unsigned long long int __dev)
+     throw () __attribute__ ((__const__));
+__extension__
+extern unsigned int gnu_dev_minor (unsigned long long int __dev)
+     throw () __attribute__ ((__const__));
+__extension__
+extern unsigned long long int gnu_dev_makedev (unsigned int __major,
+            unsigned int __minor)
+     throw () __attribute__ ((__const__));
+#63 "/usr/include/sys/sysmacros.h" 3 4
+}
+
+/* Access the functions with their traditional names.  */
+#223 "/usr/include/sys/types.h" 2 3 4
+
+
+
+
+
+typedef __blksize_t blksize_t;
+
+
+
+/* Types from the Large File Support interface.  */
+
+
+typedef __blkcnt_t blkcnt_t; /* Type to count number of disk blocks.  */
+
+
+
+typedef __fsblkcnt_t fsblkcnt_t; /* Type to count file system blocks.  */
+
+
+
+typedef __fsfilcnt_t fsfilcnt_t; /* Type to count file system inodes.  */
+#262 "/usr/include/sys/types.h" 3 4
+typedef __blkcnt64_t blkcnt64_t; /* Type to count number of disk blocks. */
+typedef __fsblkcnt64_t fsblkcnt64_t; /* Type to count file system blocks.  */
+typedef __fsfilcnt64_t fsfilcnt64_t; /* Type to count file system inodes.  */
+
+
+
+/* Now add the thread types.  */
+
+
+#1 "/usr/include/bits/pthreadtypes.h" 1 3 4
+/* Copyright (C) 2002-2007, 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+#1 "/usr/include/bits/wordsize.h" 1 3 4
+/* Determine the wordsize from the preprocessor defines.  */
+#11 "/usr/include/bits/wordsize.h" 3 4
+/* Both x86-64 and x32 use the 64-bit system call interface.  */
+#22 "/usr/include/bits/pthreadtypes.h" 2 3 4
+#58 "/usr/include/bits/pthreadtypes.h" 3 4
+/* Thread identifiers.  The structure of the attribute type is not
+   exposed on purpose.  */
+typedef unsigned long int pthread_t;
+
+
+union pthread_attr_t
+{
+  char __size[56];
+  long int __align;
+};
+
+typedef union pthread_attr_t pthread_attr_t;
+
+
+
+
+
+typedef struct __pthread_internal_list
+{
+  struct __pthread_internal_list *__prev;
+  struct __pthread_internal_list *__next;
+} __pthread_list_t;
+#88 "/usr/include/bits/pthreadtypes.h" 3 4
+/* Data structures for mutex handling.  The structure of the attribute
+   type is not exposed on purpose.  */
+typedef union
+{
+  struct __pthread_mutex_s
+  {
+    int __lock;
+    unsigned int __count;
+    int __owner;
+
+    unsigned int __nusers;
+
+    /* KIND must stay at this position in the structure to maintain
+       binary compatibility.  */
+    int __kind;
+
+    short __spins;
+    short __elision;
+    __pthread_list_t __list;
+
+/* Mutex __spins initializer used by PTHREAD_MUTEX_INITIALIZER.  */
+#125 "/usr/include/bits/pthreadtypes.h" 3 4
+  } __data;
+  char __size[40];
+  long int __align;
+} pthread_mutex_t;
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_mutexattr_t;
+
+
+/* Data structure for conditional variable handling.  The structure of
+   the attribute type is not exposed on purpose.  */
+typedef union
+{
+  struct
+  {
+    int __lock;
+    unsigned int __futex;
+    __extension__ unsigned long long int __total_seq;
+    __extension__ unsigned long long int __wakeup_seq;
+    __extension__ unsigned long long int __woken_seq;
+    void *__mutex;
+    unsigned int __nwaiters;
+    unsigned int __broadcast_seq;
+  } __data;
+  char __size[48];
+  __extension__ long long int __align;
+} pthread_cond_t;
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_condattr_t;
+
+
+/* Keys for thread-specific data */
+typedef unsigned int pthread_key_t;
+
+
+/* Once-only execution */
+typedef int pthread_once_t;
+
+
+
+/* Data structure for read-write lock variable handling.  The
+   structure of the attribute type is not exposed on purpose.  */
+typedef union
+{
+
+  struct
+  {
+    int __lock;
+    unsigned int __nr_readers;
+    unsigned int __readers_wakeup;
+    unsigned int __writer_wakeup;
+    unsigned int __nr_readers_queued;
+    unsigned int __nr_writers_queued;
+    int __writer;
+    int __shared;
+    unsigned long int __pad1;
+    unsigned long int __pad2;
+    /* FLAGS must stay at this position in the structure to maintain
+       binary compatibility.  */
+    unsigned int __flags;
+
+  } __data;
+#212 "/usr/include/bits/pthreadtypes.h" 3 4
+  char __size[56];
+  long int __align;
+} pthread_rwlock_t;
+
+typedef union
+{
+  char __size[8];
+  long int __align;
+} pthread_rwlockattr_t;
+
+
+
+
+/* POSIX spinlock data type.  */
+typedef volatile int pthread_spinlock_t;
+
+
+/* POSIX barriers data type.  The structure of the type is
+   deliberately not exposed.  */
+typedef union
+{
+  char __size[32];
+  long int __align;
+} pthread_barrier_t;
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_barrierattr_t;
+#271 "/usr/include/sys/types.h" 2 3 4
+
+
+}
+#315 "/usr/include/stdlib.h" 2 3 4
+
+/* These are the functions that actually do things.  The `random', `srandom',
+   `initstate' and `setstate' functions are those from BSD Unices.
+   The `rand' and `srand' functions are required by the ANSI standard.
+   We provide both interfaces to the same random number generator.  */
+/* Return a random long integer between 0 and RAND_MAX inclusive.  */
+extern long int random (void) throw ();
+
+/* Seed the random number generator with the given number.  */
+extern void srandom (unsigned int __seed) throw ();
+
+/* Initialize the random number generator to use state buffer STATEBUF,
+   of length STATELEN, and seed it with SEED.  Optimal lengths are 8, 16,
+   32, 64, 128 and 256, the bigger the better; values less than 8 will
+   cause an error and values greater than 256 will be rounded down.  */
+extern char *initstate (unsigned int __seed, char *__statebuf,
+   size_t __statelen) throw () __attribute__ ((__nonnull__ (2)));
+
+/* Switch the random number generator to state buffer STATEBUF,
+   which should have been previously initialized by `initstate'.  */
+extern char *setstate (char *__statebuf) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+/* Reentrant versions of the `random' family of functions.
+   These functions all use the following data structure to contain
+   state, rather than global state variables.  */
+
+struct random_data
+  {
+    int32_t *fptr; /* Front pointer.  */
+    int32_t *rptr; /* Rear pointer.  */
+    int32_t *state; /* Array of state values.  */
+    int rand_type; /* Type of random number generator.  */
+    int rand_deg; /* Degree of random number generator.  */
+    int rand_sep; /* Distance between front and rear.  */
+    int32_t *end_ptr; /* Pointer behind state table.  */
+  };
+
+extern int random_r (struct random_data *__restrict __buf,
+       int32_t *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
+
+extern int srandom_r (unsigned int __seed, struct random_data *__buf)
+     throw () __attribute__ ((__nonnull__ (2)));
+
+extern int initstate_r (unsigned int __seed, char *__restrict __statebuf,
+   size_t __statelen,
+   struct random_data *__restrict __buf)
+     throw () __attribute__ ((__nonnull__ (2, 4)));
+
+extern int setstate_r (char *__restrict __statebuf,
+         struct random_data *__restrict __buf)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+/* Return a random integer between 0 and RAND_MAX inclusive.  */
+extern int rand (void) throw ();
+/* Seed the random number generator with the given number.  */
+extern void srand (unsigned int __seed) throw ();
+
+
+
+/* Reentrant interface according to POSIX.1.  */
+extern int rand_r (unsigned int *__seed) throw ();
+
+
+
+
+/* System V style 48-bit random number generator functions.  */
+
+/* Return non-negative, double-precision floating-point value in [0.0,1.0).  */
+extern double drand48 (void) throw ();
+extern double erand48 (unsigned short int __xsubi[3]) throw () __attribute__ ((__nonnull__ (1)));
+
+/* Return non-negative, long integer in [0,2^31).  */
+extern long int lrand48 (void) throw ();
+extern long int nrand48 (unsigned short int __xsubi[3])
+     throw () __attribute__ ((__nonnull__ (1)));
+
+/* Return signed, long integers in [-2^31,2^31).  */
+extern long int mrand48 (void) throw ();
+extern long int jrand48 (unsigned short int __xsubi[3])
+     throw () __attribute__ ((__nonnull__ (1)));
+
+/* Seed random number generator.  */
+extern void srand48 (long int __seedval) throw ();
+extern unsigned short int *seed48 (unsigned short int __seed16v[3])
+     throw () __attribute__ ((__nonnull__ (1)));
+extern void lcong48 (unsigned short int __param[7]) throw () __attribute__ ((__nonnull__ (1)));
+
+
+/* Data structure for communication with thread safe versions.  This
+   type is to be regarded as opaque.  It's only exported because users
+   have to allocate objects of this type.  */
+struct drand48_data
+  {
+    unsigned short int __x[3]; /* Current state.  */
+    unsigned short int __old_x[3]; /* Old state.  */
+    unsigned short int __c; /* Additive const. in congruential formula.  */
+    unsigned short int __init; /* Flag for initializing.  */
+    unsigned long long int __a; /* Factor in congruential formula.  */
+  };
+
+/* Return non-negative, double-precision floating-point value in [0.0,1.0).  */
+extern int drand48_r (struct drand48_data *__restrict __buffer,
+        double *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
+extern int erand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        double *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
+
+/* Return non-negative, long integer in [0,2^31).  */
+extern int lrand48_r (struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+extern int nrand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+/* Return signed, long integers in [-2^31,2^31).  */
+extern int mrand48_r (struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+extern int jrand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+
+/* Seed random number generator.  */
+extern int srand48_r (long int __seedval, struct drand48_data *__buffer)
+     throw () __attribute__ ((__nonnull__ (2)));
+
+extern int seed48_r (unsigned short int __seed16v[3],
+       struct drand48_data *__buffer) throw () __attribute__ ((__nonnull__ (1, 2)));
+
+extern int lcong48_r (unsigned short int __param[7],
+        struct drand48_data *__buffer)
+     throw () __attribute__ ((__nonnull__ (1, 2)));
+#464 "/usr/include/stdlib.h" 3 4
+/* Allocate SIZE bytes of memory.  */
+extern void *malloc (size_t __size) throw () __attribute__ ((__malloc__)) /* Ignore */;
+/* Allocate NMEMB elements of SIZE bytes each, all initialized to 0.  */
+extern void *calloc (size_t __nmemb, size_t __size)
+     throw () __attribute__ ((__malloc__)) /* Ignore */;
+
+
+
+
+
+/* Re-allocate the previously allocated block
+   in PTR, making the new block SIZE bytes long.  */
+/* __attribute_malloc__ is not used, because if realloc returns
+   the same pointer that was passed to it, aliasing needs to be allowed
+   between objects pointed by the old and new pointers.  */
+extern void *realloc (void *__ptr, size_t __size)
+     throw () __attribute__ ((__warn_unused_result__));
+/* Free a block allocated by `malloc', `realloc' or `calloc'.  */
+extern void free (void *__ptr) throw ();
+
+
+
+/* Free a block.  An alias for `free'.	(Sun Unices).  */
+extern void cfree (void *__ptr) throw ();
+
+
+
+
+#1 "/usr/include/alloca.h" 1 3 4
+/* Copyright (C) 1992, 1996, 1997, 1998, 1999 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+
+
+
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+#56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+#25 "/usr/include/alloca.h" 2 3 4
+
+extern "C" {
+
+/* Remove any previous definitions.  */
+
+
+/* Allocate a block that will be freed when the calling function exits.  */
+extern void *alloca (size_t __size) throw ();
+
+
+
+
+
+}
+#492 "/usr/include/stdlib.h" 2 3 4
+
+
+
+
+/* Allocate SIZE bytes on a page boundary.  The storage cannot be freed.  */
+extern void *valloc (size_t __size) throw () __attribute__ ((__malloc__)) /* Ignore */;
+
+
+
+/* Allocate memory of SIZE bytes with an alignment of ALIGNMENT.  */
+extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+/* ISO C variant of aligned allocation.  */
+extern void *aligned_alloc (size_t __alignment, size_t __size)
+     throw () /* Ignore */ __attribute__ ((__malloc__, __alloc_size__ (2)));
+
+
+
+/* Abort execution and generate a core-dump.  */
+extern void abort (void) throw () __attribute__ ((__noreturn__));
+
+
+/* Register a function to be called when `exit' is called.  */
+extern int atexit (void (*__func) (void)) throw () __attribute__ ((__nonnull__ (1)));
+
+
+/* Register a function to be called when `quick_exit' is called.  */
+
+extern "C++" int at_quick_exit (void (*__func) (void))
+     throw () __asm ("at_quick_exit") __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+/* Register a function to be called with the status
+   given to `exit' and the given argument.  */
+extern int on_exit (void (*__func) (int __status, void *__arg), void *__arg)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+/* Call all functions registered with `atexit' and `on_exit',
+   in the reverse of the order in which they were registered,
+   perform stdio cleanup, and terminate program execution with STATUS.  */
+extern void exit (int __status) throw () __attribute__ ((__noreturn__));
+
+
+/* Call all functions registered with `at_quick_exit' in the reverse
+   of the order in which they were registered and terminate program
+   execution with STATUS.  */
+extern void quick_exit (int __status) throw () __attribute__ ((__noreturn__));
+
+
+
+
+
+/* Terminate the program with STATUS without calling any of the
+   functions registered with `atexit' or `on_exit'.  */
+extern void _Exit (int __status) throw () __attribute__ ((__noreturn__));
+
+
+
+
+
+/* Return the value of envariable NAME, or NULL if it doesn't exist.  */
+extern char *getenv (const char *__name) throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+/* This function is similar to the above but returns NULL if the
+   programs is running with SUID or SGID enabled.  */
+extern char *secure_getenv (const char *__name)
+     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+/* The SVID says this is in <stdio.h>, but this seems a better place.	*/
+/* Put STRING, which is of the form "NAME=VALUE", in the environment.
+   If there is no `=', remove NAME from the environment.  */
+extern int putenv (char *__string) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+/* Set NAME to VALUE in the environment.
+   If REPLACE is nonzero, overwrite an existing value.  */
+extern int setenv (const char *__name, const char *__value, int __replace)
+     throw () __attribute__ ((__nonnull__ (2)));
+
+/* Remove the variable NAME from the environment.  */
+extern int unsetenv (const char *__name) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+/* The `clearenv' was planned to be added to POSIX.1 but probably
+   never made it.  Nevertheless the POSIX.9 standard (POSIX bindings
+   for Fortran 77) requires this function.  */
+extern int clearenv (void) throw ();
+
+
+
+
+
+/* Generate a unique temporary file name from TEMPLATE.
+   The last six characters of TEMPLATE must be "XXXXXX";
+   they are replaced with a string that makes the file name unique.
+   Always returns TEMPLATE, it's either a temporary file name or a null
+   string if it cannot get a unique file name.  */
+extern char *mktemp (char *__template) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+
+/* Generate a unique temporary file name from TEMPLATE.
+   The last six characters of TEMPLATE must be "XXXXXX";
+   they are replaced with a string that makes the filename unique.
+   Returns a file descriptor open on the file for reading and writing,
+   or -1 if it cannot create a uniquely-named file.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+
+extern int mkstemp (char *__template) __attribute__ ((__nonnull__ (1))) /* Ignore */;
+#629 "/usr/include/stdlib.h" 3 4
+extern int mkstemp64 (char *__template) __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+
+/* Similar to mkstemp, but the template can have a suffix after the
+   XXXXXX.  The length of the suffix is specified in the second
+   parameter.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+
+extern int mkstemps (char *__template, int __suffixlen) __attribute__ ((__nonnull__ (1))) /* Ignore */;
+#651 "/usr/include/stdlib.h" 3 4
+extern int mkstemps64 (char *__template, int __suffixlen)
+     __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+
+/* Create a unique temporary directory from TEMPLATE.
+   The last six characters of TEMPLATE must be "XXXXXX";
+   they are replaced with a string that makes the directory name unique.
+   Returns TEMPLATE, or a null pointer if it cannot get a unique name.
+   The directory is created mode 700.  */
+extern char *mkdtemp (char *__template) throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+/* Generate a unique temporary file name from TEMPLATE similar to
+   mkstemp.  But allow the caller to pass additional flags which are
+   used in the open call to create the file..
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+
+extern int mkostemp (char *__template, int __flags) __attribute__ ((__nonnull__ (1))) /* Ignore */;
+#683 "/usr/include/stdlib.h" 3 4
+extern int mkostemp64 (char *__template, int __flags) __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+/* Similar to mkostemp, but the template can have a suffix after the
+   XXXXXX.  The length of the suffix is specified in the second
+   parameter.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+
+extern int mkostemps (char *__template, int __suffixlen, int __flags)
+     __attribute__ ((__nonnull__ (1))) /* Ignore */;
+#705 "/usr/include/stdlib.h" 3 4
+extern int mkostemps64 (char *__template, int __suffixlen, int __flags)
+     __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+
+
+/* Execute the given line as a shell command.
+
+   This function is a cancellation point and therefore not marked with
+   __THROW.  */
+extern int system (const char *__command) /* Ignore */;
+
+
+
+
+/* Return a malloc'd string containing the canonical absolute name of the
+   existing named file.  */
+extern char *canonicalize_file_name (const char *__name)
+     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+/* Return the canonical absolute name of file NAME.  If RESOLVED is
+   null, the result is malloc'd; otherwise, if the canonical name is
+   PATH_MAX chars or more, returns null with `errno' set to
+   ENAMETOOLONG; if the name fits in fewer than PATH_MAX chars,
+   returns the name in RESOLVED.  */
+extern char *realpath (const char *__restrict __name,
+         char *__restrict __resolved) throw () /* Ignore */;
+
+
+
+/* Shorthand for type of comparison functions.  */
+
+
+typedef int (*__compar_fn_t) (const void *, const void *);
+
+
+typedef __compar_fn_t comparison_fn_t;
+
+
+
+typedef int (*__compar_d_fn_t) (const void *, const void *, void *);
+
+
+
+/* Do a binary search for KEY in BASE, which consists of NMEMB elements
+   of SIZE bytes each, using COMPAR to perform the comparisons.  */
+extern void *bsearch (const void *__key, const void *__base,
+        size_t __nmemb, size_t __size, __compar_fn_t __compar)
+     __attribute__ ((__nonnull__ (1, 2, 5))) /* Ignore */;
+
+/* Sort NMEMB elements of BASE, of SIZE bytes each,
+   using COMPAR to perform the comparisons.  */
+extern void qsort (void *__base, size_t __nmemb, size_t __size,
+     __compar_fn_t __compar) __attribute__ ((__nonnull__ (1, 4)));
+
+extern void qsort_r (void *__base, size_t __nmemb, size_t __size,
+       __compar_d_fn_t __compar, void *__arg)
+  __attribute__ ((__nonnull__ (1, 4)));
+
+
+
+/* Return the absolute value of X.  */
+extern int abs (int __x) throw () __attribute__ ((__const__)) /* Ignore */;
+extern long int labs (long int __x) throw () __attribute__ ((__const__)) /* Ignore */;
+
+
+
+__extension__ extern long long int llabs (long long int __x)
+     throw () __attribute__ ((__const__)) /* Ignore */;
+
+
+
+
+/* Return the `div_t', `ldiv_t' or `lldiv_t' representation
+   of the value of NUMER over DENOM. */
+/* GCC may have built-ins for these someday.  */
+extern div_t div (int __numer, int __denom)
+     throw () __attribute__ ((__const__)) /* Ignore */;
+extern ldiv_t ldiv (long int __numer, long int __denom)
+     throw () __attribute__ ((__const__)) /* Ignore */;
+
+
+
+
+__extension__ extern lldiv_t lldiv (long long int __numer,
+        long long int __denom)
+     throw () __attribute__ ((__const__)) /* Ignore */;
+
+
+
+
+
+
+/* Convert floating point numbers to strings.  The returned values are
+   valid only until another call to the same function.  */
+
+/* Convert VALUE to a string with NDIGIT digits and return a pointer to
+   this.  Set *DECPT with the position of the decimal character and *SIGN
+   with the sign of the number.  */
+extern char *ecvt (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign) throw () __attribute__ ((__nonnull__ (3, 4))) /* Ignore */;
+
+/* Convert VALUE to a string rounded to NDIGIT decimal digits.  Set *DECPT
+   with the position of the decimal character and *SIGN with the sign of
+   the number.  */
+extern char *fcvt (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign) throw () __attribute__ ((__nonnull__ (3, 4))) /* Ignore */;
+
+/* If possible convert VALUE to a string with NDIGIT significant digits.
+   Otherwise use exponential representation.  The resulting string will
+   be written to BUF.  */
+extern char *gcvt (double __value, int __ndigit, char *__buf)
+     throw () __attribute__ ((__nonnull__ (3))) /* Ignore */;
+
+
+
+/* Long double versions of above functions.  */
+extern char *qecvt (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign)
+     throw () __attribute__ ((__nonnull__ (3, 4))) /* Ignore */;
+extern char *qfcvt (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign)
+     throw () __attribute__ ((__nonnull__ (3, 4))) /* Ignore */;
+extern char *qgcvt (long double __value, int __ndigit, char *__buf)
+     throw () __attribute__ ((__nonnull__ (3))) /* Ignore */;
+
+
+/* Reentrant version of the functions above which provide their own
+   buffers.  */
+extern int ecvt_r (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign, char *__restrict __buf,
+     size_t __len) throw () __attribute__ ((__nonnull__ (3, 4, 5)));
+extern int fcvt_r (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign, char *__restrict __buf,
+     size_t __len) throw () __attribute__ ((__nonnull__ (3, 4, 5)));
+
+extern int qecvt_r (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign,
+      char *__restrict __buf, size_t __len)
+     throw () __attribute__ ((__nonnull__ (3, 4, 5)));
+extern int qfcvt_r (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign,
+      char *__restrict __buf, size_t __len)
+     throw () __attribute__ ((__nonnull__ (3, 4, 5)));
+
+
+
+
+
+/* Return the length of the multibyte character
+   in S, which is no longer than N.  */
+extern int mblen (const char *__s, size_t __n) throw () /* Ignore */;
+/* Return the length of the given multibyte character,
+   putting its `wchar_t' representation in *PWC.  */
+extern int mbtowc (wchar_t *__restrict __pwc,
+     const char *__restrict __s, size_t __n) throw () /* Ignore */;
+/* Put the multibyte character represented
+   by WCHAR in S, returning its length.  */
+extern int wctomb (char *__s, wchar_t __wchar) throw () /* Ignore */;
+
+
+/* Convert a multibyte string to a wide char string.  */
+extern size_t mbstowcs (wchar_t *__restrict __pwcs,
+   const char *__restrict __s, size_t __n) throw ();
+/* Convert a wide char string to multibyte string.  */
+extern size_t wcstombs (char *__restrict __s,
+   const wchar_t *__restrict __pwcs, size_t __n)
+     throw ();
+
+
+
+
+/* Determine whether the string value of RESPONSE matches the affirmation
+   or negative response expression as specified by the LC_MESSAGES category
+   in the program's current locale.  Returns 1 if affirmative, 0 if
+   negative, and -1 if not matching.  */
+extern int rpmatch (const char *__response) throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
+
+
+
+
+/* Parse comma separated suboption from *OPTIONP and match against
+   strings in TOKENS.  If found return index and set *VALUEP to
+   optional value introduced by an equal sign.  If the suboption is
+   not part of TOKENS return in *VALUEP beginning of unknown
+   suboption.  On exit *OPTIONP is set to the beginning of the next
+   token or at the terminating NUL character.  */
+extern int getsubopt (char **__restrict __optionp,
+        char *const *__restrict __tokens,
+        char **__restrict __valuep)
+     throw () __attribute__ ((__nonnull__ (1, 2, 3))) /* Ignore */;
+
+
+
+
+/* Setup DES tables according KEY.  */
+extern void setkey (const char *__key) throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+/* X/Open pseudo terminal handling.  */
+
+
+/* Return a master pseudo-terminal handle.  */
+extern int posix_openpt (int __oflag) /* Ignore */;
+
+
+
+/* The next four functions all take a master pseudo-tty fd and
+   perform an operation on the associated slave:  */
+
+/* Chown the slave to the calling user.  */
+extern int grantpt (int __fd) throw ();
+
+/* Release an internal lock so the slave can be opened.
+   Call after grantpt().  */
+extern int unlockpt (int __fd) throw ();
+
+/* Return the pathname of the pseudo terminal slave assoicated with
+   the master FD is open on, or NULL on errors.
+   The returned storage is good until the next call to this function.  */
+extern char *ptsname (int __fd) throw () /* Ignore */;
+
+
+
+/* Store at most BUFLEN characters of the pathname of the slave pseudo
+   terminal associated with the master FD is open on in BUF.
+   Return 0 on success, otherwise an error number.  */
+extern int ptsname_r (int __fd, char *__buf, size_t __buflen)
+     throw () __attribute__ ((__nonnull__ (2)));
+
+/* Open a master pseudo terminal and return its file descriptor.  */
+extern int getpt (void);
+
+
+
+/* Put the 1 minute, 5 minute and 15 minute load averages into the first
+   NELEM elements of LOADAVG.  Return the number written (never more than
+   three, but may be less than NELEM), or -1 if an error occurred.  */
+extern int getloadavg (double __loadavg[], int __nelem)
+     throw () __attribute__ ((__nonnull__ (1)));
+
+
+
+#1 "/usr/include/bits/stdlib-float.h" 1 3 4
+/* Floating-point inline functions for stdlib.h.
+   Copyright (C) 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+#952 "/usr/include/stdlib.h" 2 3 4
+
+/* Define some macros helping to catch buffer overflows.  */
+#964 "/usr/include/stdlib.h" 3 4
+}
+#66 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 2 3
+
+// Get rid of those macros defined in <stdlib.h> in lieu of real functions.
+#97 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  using ::div_t;
+  using ::ldiv_t;
+
+  using ::abort;
+  using ::abs;
+  using ::atexit;
+  using ::atof;
+  using ::atoi;
+  using ::atol;
+  using ::bsearch;
+  using ::calloc;
+  using ::div;
+  using ::exit;
+  using ::free;
+  using ::getenv;
+  using ::labs;
+  using ::ldiv;
+  using ::malloc;
+
+  using ::mblen;
+  using ::mbstowcs;
+  using ::mbtowc;
+
+  using ::qsort;
+  using ::rand;
+  using ::realloc;
+  using ::srand;
+  using ::strtod;
+  using ::strtol;
+  using ::strtoul;
+  using ::system;
+
+  using ::wcstombs;
+  using ::wctomb;
+
+
+  inline long
+  abs(long __i) { return labs(__i); }
+
+  inline ldiv_t
+  div(long __i, long __j) { return ldiv(__i, __j); }
+
+
+} // namespace
+#157 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+  using ::lldiv_t;
+
+
+
+
+
+  using ::_Exit;
+
+
+  inline long long
+  abs(long long __x) { return __x >= 0 ? __x : -__x; }
+
+
+  using ::llabs;
+
+  inline lldiv_t
+  div(long long __n, long long __d)
+  { lldiv_t __q; __q.quot = __n / __d; __q.rem = __n % __d; return __q; }
+
+  using ::lldiv;
+#192 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
+  using ::atoll;
+  using ::strtoll;
+  using ::strtoull;
+
+  using ::strtof;
+  using ::strtold;
+
+
+} // namespace __gnu_cxx
+
+namespace std
+{
+
+  using ::__gnu_cxx::lldiv_t;
+
+  using ::__gnu_cxx::_Exit;
+  using ::__gnu_cxx::abs;
+
+  using ::__gnu_cxx::llabs;
+  using ::__gnu_cxx::div;
+  using ::__gnu_cxx::lldiv;
+
+  using ::__gnu_cxx::atoll;
+  using ::__gnu_cxx::strtof;
+  using ::__gnu_cxx::strtoll;
+  using ::__gnu_cxx::strtoull;
+  using ::__gnu_cxx::strtold;
+} // namespace std
+#36 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h" 2
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h" 1
+// -*- c++ -*-
+/*
+#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
+#-
+#-  This file contains confidential and proprietary information
+#-  of Xilinx, Inc. and is protected under U.S. and
+#-  international copyright and other intellectual property
+#-  laws.
+#-
+#-  DISCLAIMER
+#-  This disclaimer is not a license and does not grant any
+#-  rights to the materials distributed herewith. Except as
+#-  otherwise provided in a valid license issued to you by
+#-  Xilinx, and to the maximum extent permitted by applicable
+#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+#-  (2) Xilinx shall not be liable (whether in contract or tort,
+#-  including negligence, or under any other theory of
+#-  liability) for any loss or damage of any kind or nature
+#-  related to, arising under or in connection with these
+#-  materials, including for any direct, or any indirect,
+#-  special, incidental, or consequential loss or damage
+#-  (including loss of data, profits, goodwill, or any type of
+#-  loss or damage suffered as a result of any action brought
+#-  by a third party) even if such damage or loss was
+#-  reasonably foreseeable or Xilinx had been advised of the
+#-  possibility of the same.
+#-
+#-  CRITICAL APPLICATIONS
+#-  Xilinx products are not designed or intended to be fail-
+#-  safe, or for use in any application requiring fail-safe
+#-  performance, such as life-support or safety devices or
+#-  systems, Class III medical devices, nuclear facilities,
+#-  applications related to the deployment of airbags, or any
+#-  other applications that could lead to death, personal
+#-  injury, or severe property or environmental damage
+#-  (individually and collectively, "Critical
+#-  Applications"). Customer assumes the sole risk and
+#-  liability of any use of Xilinx products in Critical
+#-  Applications, subject only to applicable laws and
+#-  regulations governing limitations on product liability.
+#-
+#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+#-  PART OF THIS FILE AT ALL TIMES. 
+#- ************************************************************************
+
+ *
+ */
+#60 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h"
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h" 1
+/* -*- c++ -*-*/
+/*
+#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
+#-
+#-  This file contains confidential and proprietary information
+#-  of Xilinx, Inc. and is protected under U.S. and
+#-  international copyright and other intellectual property
+#-  laws.
+#-
+#-  DISCLAIMER
+#-  This disclaimer is not a license and does not grant any
+#-  rights to the materials distributed herewith. Except as
+#-  otherwise provided in a valid license issued to you by
+#-  Xilinx, and to the maximum extent permitted by applicable
+#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+#-  (2) Xilinx shall not be liable (whether in contract or tort,
+#-  including negligence, or under any other theory of
+#-  liability) for any loss or damage of any kind or nature
+#-  related to, arising under or in connection with these
+#-  materials, including for any direct, or any indirect,
+#-  special, incidental, or consequential loss or damage
+#-  (including loss of data, profits, goodwill, or any type of
+#-  loss or damage suffered as a result of any action brought
+#-  by a third party) even if such damage or loss was
+#-  reasonably foreseeable or Xilinx had been advised of the
+#-  possibility of the same.
+#-
+#-  CRITICAL APPLICATIONS
+#-  Xilinx products are not designed or intended to be fail-
+#-  safe, or for use in any application requiring fail-safe
+#-  performance, such as life-support or safety devices or
+#-  systems, Class III medical devices, nuclear facilities,
+#-  applications related to the deployment of airbags, or any
+#-  other applications that could lead to death, personal
+#-  injury, or severe property or environmental damage
+#-  (individually and collectively, "Critical
+#-  Applications"). Customer assumes the sole risk and
+#-  liability of any use of Xilinx products in Critical
+#-  Applications, subject only to applicable laws and
+#-  regulations governing limitations on product liability.
+#-
+#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+#-  PART OF THIS FILE AT ALL TIMES. 
+#- ************************************************************************
+
+ *
+ */
+#68 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h"
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3
+// Standard iostream objects -*- C++ -*-
+
+// Copyright (C) 1997, 1998, 1999, 2001, 2002, 2005, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file include/iostream
  *  This is a Standard C++ Library header.
  */
 
 //
-// ISO C++ 14882: 27.7  String-based streams
+// ISO C++ 14882: 27.3  Standard iostream objects
 //
 
 
 
 
 
-#37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+#37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
 
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 1 3
-// Input streams -*- C++ -*-
+
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 1 3
+// Output streams -*- C++ -*-
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
 // 2006, 2007, 2008, 2009, 2010, 2011
@@ -5043,19 +7775,19 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-//
-// ISO C++ 14882: 27.6.1  Input streams
-//
-
-/** @file include/istream
+/** @file include/ostream
  *  This is a Standard C++ Library header.
  */
 
+//
+// ISO C++ 14882: 27.6.2  Output streams
+//
 
 
 
 
-#38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+
+#38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
 
 #1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 1 3
 // Iostreams base classes -*- C++ -*-
@@ -5423,35 +8155,7 @@ typedef __builtin_va_list va_list;
 typedef __builtin_va_list __gnuc_va_list;
 #40 "/usr/include/wchar.h" 2 3 4
 
-#1 "/usr/include/bits/wchar.h" 1 3 4
-/* wchar_t type related definitions.  i386/x86-64 version.
-   Copyright (C) 2000-2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
 
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-#1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-#11 "/usr/include/bits/wordsize.h" 3 4
-/* Both x86-64 and x32 use the 64-bit system call interface.  */
-#23 "/usr/include/bits/wchar.h" 2 3 4
-#42 "/usr/include/wchar.h" 2 3 4
 
 /* Get size_t, wchar_t, wint_t and NULL from <stddef.h>.  */
 
@@ -5487,17 +8191,6 @@ typedef __builtin_va_list __gnuc_va_list;
  *
  *===-----------------------------------------------------------------------===
  */
-
-
-
-
-
-
-typedef __typeof__(((int*)0)-((int*)0)) ptrdiff_t;
-
-
-
-typedef __typeof__(sizeof(int)) size_t;
 #56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
 /* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
 __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
@@ -5547,8 +8240,6 @@ typedef struct
 
 /* Public type.  */
 typedef __mbstate_t mbstate_t;
-#116 "/usr/include/wchar.h" 3 4
-/* These constants might also be defined in <inttypes.h>.  */
 #125 "/usr/include/wchar.h" 3 4
 /* For XPG4 compliance we have to define the stuff from <wctype.h> here
    as well.  */
@@ -5606,54 +8297,6 @@ extern int wcsncasecmp (const wchar_t *__s1, const wchar_t *__s2,
 /* Similar to the two functions above but take the information from
    the provided locale and not the global locale.  */
 
-#1 "/usr/include/xlocale.h" 1 3 4
-/* Definition of locale datatype.
-   Copyright (C) 1997,2000,2002,2009,2010 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-   Contributed by Ulrich Drepper <drepper@cygnus.com>, 1997.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-/* Structure for reentrant locale using functions.  This is an
-   (almost) opaque type for the user level programs.  The file and
-   this data structure is not standardized.  Don't rely on it.  It can
-   go away without warning.  */
-typedef struct __locale_struct
-{
-  /* Note: LC_ALL is not a valid index into this array.  */
-  struct __locale_data *__locales[13]; /* 13 = __LC_LAST. */
-
-  /* To increase the speed of this solution we add some special members.  */
-  const unsigned short int *__ctype_b;
-  const int *__ctype_tolower;
-  const int *__ctype_toupper;
-
-  /* Note: LC_ALL is not a valid index into this array.  */
-  const char *__names[13];
-
-public :
-inline __attribute__((always_inline)) __locale_struct() { _ssdm_SpecConstant(__names);  }
-#39 "/usr/include/xlocale.h"
-} *__locale_t;
-
-/* POSIX 2008 makes locale_t official.  */
-typedef __locale_t locale_t;
-#181 "/usr/include/wchar.h" 2 3 4
 
 extern int wcscasecmp_l (const wchar_t *__s1, const wchar_t *__s2,
     __locale_t __loc) throw ();
@@ -10719,205 +13362,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
-#1 "/usr/include/bits/types.h" 1 3 4
-/* bits/types.h -- definitions of __*_t types underlying *_t types.
-   Copyright (C) 2002-2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- * Never include this file directly; use <sys/types.h> instead.
- */
-
-
-
-
-
-
-#1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-#11 "/usr/include/bits/wordsize.h" 3 4
-/* Both x86-64 and x32 use the 64-bit system call interface.  */
-#28 "/usr/include/bits/types.h" 2 3 4
-
-/* Convenience types.  */
-typedef unsigned char __u_char;
-typedef unsigned short int __u_short;
-typedef unsigned int __u_int;
-typedef unsigned long int __u_long;
-
-/* Fixed-size types, underlying types depend on word size and compiler.  */
-typedef signed char __int8_t;
-typedef unsigned char __uint8_t;
-typedef signed short int __int16_t;
-typedef unsigned short int __uint16_t;
-typedef signed int __int32_t;
-typedef unsigned int __uint32_t;
-
-typedef signed long int __int64_t;
-typedef unsigned long int __uint64_t;
-
-
-
-
-
-/* quad_t is also 64 bits.  */
-
-typedef long int __quad_t;
-typedef unsigned long int __u_quad_t;
-#69 "/usr/include/bits/types.h" 3 4
-/* The machine-dependent file <bits/typesizes.h> defines __*_T_TYPE
-   macros for each of the OS types we define below.  The definitions
-   of those macros must use the following macros for underlying types.
-   We define __S<SIZE>_TYPE and __U<SIZE>_TYPE for the signed and unsigned
-   variants of each of the following integer types on this machine.
-
-	16		-- "natural" 16-bit type (always short)
-	32		-- "natural" 32-bit type (always int)
-	64		-- "natural" 64-bit type (long or long long)
-	LONG32		-- 32-bit type, traditionally long
-	QUAD		-- 64-bit type, always long long
-	WORD		-- natural type of __WORDSIZE bits (int or long)
-	LONGWORD	-- type of __WORDSIZE bits, traditionally long
-
-   We distinguish WORD/LONGWORD, 32/LONG32, and 64/QUAD so that the
-   conventional uses of `long' or `long long' type modifiers match the
-   types we define, even when a less-adorned type would be the same size.
-   This matters for (somewhat) portably writing printf/scanf formats for
-   these types, where using the appropriate l or ll format modifiers can
-   make the typedefs and the formats match up across all GNU platforms.  If
-   we used `long' when it's 64 bits where `long long' is expected, then the
-   compiler would warn about the formats not matching the argument types,
-   and the programmer changing them to shut up the compiler would break the
-   program's portability.
-
-   Here we assume what is presently the case in all the GCC configurations
-   we support: long long is always 64 bits, long is always word/address size,
-   and int is always 32 bits.  */
-#125 "/usr/include/bits/types.h" 3 4
-/* No need to mark the typedef with __extension__.   */
-
-
-
-
-
-#1 "/usr/include/bits/typesizes.h" 1 3 4
-/* bits/typesizes.h -- underlying types for *_t.  Linux/x86-64 version.
-   Copyright (C) 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-#26 "/usr/include/bits/typesizes.h" 3 4
-/* See <bits/types.h> for the meaning of these macros.  This file exists so
-   that <bits/types.h> need not vary across different GNU platforms.  */
-
-/* X32 kernel interface is 64-bit.  */
-#76 "/usr/include/bits/typesizes.h" 3 4
-/* Tell the libc code that off_t and off64_t are actually the same type
-   for all ABI purposes, even if possibly expressed as different base types
-   for C type-checking purposes.  */
-
-
-/* Same for ino_t and ino64_t.  */
-
-
-
-/* Number of descriptors that can fit in an `fd_set'.  */
-#131 "/usr/include/bits/types.h" 2 3 4
-
-
-typedef unsigned long int __dev_t; /* Type of device numbers.  */
-typedef unsigned int __uid_t; /* Type of user identifications.  */
-typedef unsigned int __gid_t; /* Type of group identifications.  */
-typedef unsigned long int __ino_t; /* Type of file serial numbers.  */
-typedef unsigned long int __ino64_t; /* Type of file serial numbers (LFS).*/
-typedef unsigned int __mode_t; /* Type of file attribute bitmasks.  */
-typedef unsigned long int __nlink_t; /* Type of file link counts.  */
-typedef long int __off_t; /* Type of file sizes and offsets.  */
-typedef long int __off64_t; /* Type of file sizes and offsets (LFS).  */
-typedef int __pid_t; /* Type of process identifications.  */
-typedef struct { int __val[2]; } __fsid_t; /* Type of file system IDs.  */
-typedef long int __clock_t; /* Type of CPU usage counts.  */
-typedef unsigned long int __rlim_t; /* Type for resource measurement.  */
-typedef unsigned long int __rlim64_t; /* Type for resource measurement (LFS).  */
-typedef unsigned int __id_t; /* General type for IDs.  */
-typedef long int __time_t; /* Seconds since the Epoch.  */
-typedef unsigned int __useconds_t; /* Count of microseconds.  */
-typedef long int __suseconds_t; /* Signed count of microseconds.  */
-
-typedef int __daddr_t; /* The type of a disk address.  */
-typedef int __key_t; /* Type of an IPC key.  */
-
-/* Clock ID used in clock and timer functions.  */
-typedef int __clockid_t;
-
-/* Timer ID returned by `timer_create'.  */
-typedef void * __timer_t;
-
-/* Type to represent block size.  */
-typedef long int __blksize_t;
-
-/* Types from the Large File Support interface.  */
-
-/* Type to count number of disk blocks.  */
-typedef long int __blkcnt_t;
-typedef long int __blkcnt64_t;
-
-/* Type to count file system blocks.  */
-typedef unsigned long int __fsblkcnt_t;
-typedef unsigned long int __fsblkcnt64_t;
-
-/* Type to count file system nodes.  */
-typedef unsigned long int __fsfilcnt_t;
-typedef unsigned long int __fsfilcnt64_t;
-
-/* Type of miscellaneous file system fields.  */
-typedef long int __fsword_t;
-
-typedef long int __ssize_t; /* Type of a byte count, or error.  */
-
-/* Signed long type used in system calls.  */
-typedef long int __syscall_slong_t;
-/* Unsigned long type used in system calls.  */
-typedef unsigned long int __syscall_ulong_t;
-
-/* These few don't really vary by system, they always correspond
-   to one of the other defined types.  */
-typedef __off64_t __loff_t; /* Type of file sizes and offsets (LFS).  */
-typedef __quad_t *__qaddr_t;
-typedef char *__caddr_t;
-
-/* Duplicates info from stdint.h but this is used in unistd.h.  */
-typedef long int __intptr_t;
-
-/* Duplicate info from sys/socket.h.  */
-typedef unsigned int __socklen_t;
-#28 "/usr/include/ctype.h" 2 3 4
 
 extern "C" {
 
@@ -10929,119 +13373,7 @@ extern "C" {
    The characteristics are stored always in network byte order (big
    endian).  We define the bit value interpretations here dependent on the
    machine's byte order.  */
-
-
-#1 "/usr/include/endian.h" 1 3 4
-/* Copyright (C) 1992-2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-
-/* Definitions for byte order, according to significance of bytes,
-   from low addresses to high addresses.  The value is what you get by
-   putting '4' in the most significant byte, '3' in the second most
-   significant byte, '2' in the second least significant byte, and '1'
-   in the least significant byte, and then writing down one digit for
-   each byte, starting with the byte at the lowest address at the left,
-   and proceeding to the byte with the highest address at the right.  */
-
-
-
-
-
-/* This file defines `__BYTE_ORDER' for the particular machine.  */
-
-#1 "/usr/include/bits/endian.h" 1 3 4
-/* i386/x86_64 are little-endian.  */
-#37 "/usr/include/endian.h" 2 3 4
-
-/* Some machines may need to use a different endianness for floating point
-   values.  */
-#59 "/usr/include/endian.h" 3 4
-/* Conversion interfaces.  */
-
-#1 "/usr/include/bits/byteswap.h" 1 3 4
-/* Macros to swap the order of bytes in integer values.
-   Copyright (C) 1997-2012   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-#28 "/usr/include/bits/byteswap.h" 3 4
-#1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-#11 "/usr/include/bits/wordsize.h" 3 4
-/* Both x86-64 and x32 use the 64-bit system call interface.  */
-#29 "/usr/include/bits/byteswap.h" 2 3 4
-
-/* Swap bytes in 16 bit value.  */
-
-
-
-/* Get __bswap_16.  */
-
-#1 "/usr/include/bits/byteswap-16.h" 1 3 4
-/* Macros to swap the order of bytes in 16-bit integer values.
-   Copyright (C) 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-#36 "/usr/include/bits/byteswap.h" 2 3 4
-
-/* Swap bytes in 32 bit value.  */
-#56 "/usr/include/bits/byteswap.h" 3 4
-/* To swap the bytes in a word the i486 processors and up provide the
-   `bswap' opcode.  On i386 we have to use three instructions.  */
-#96 "/usr/include/bits/byteswap.h" 3 4
-/* Swap bytes in 64 bit value.  */
-#61 "/usr/include/endian.h" 2 3 4
-#41 "/usr/include/ctype.h" 2 3 4
-
-
-
-
-
-
+#47 "/usr/include/ctype.h" 3 4
 enum
 {
   _ISupper = ((0) < 8 ? ((1 << (0)) << 8) : ((1 << (0)) >> 8)), /* UPPERCASE.  */
@@ -11737,21 +14069,10 @@ __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 /*
  *	ISO C99 Standard: 7.23 Date and time	<time.h>
  */
-#74 "/usr/include/time.h" 3 4
-/* Returned by `time'.  */
-typedef __time_t time_t;
-#118 "/usr/include/time.h" 3 4
-/* POSIX.1b structure for a time value.  This is like a `struct timeval' but
-   has nanoseconds instead of microseconds.  */
-struct timespec
-  {
-    __time_t tv_sec; /* Seconds.  */
-    __syscall_slong_t tv_nsec; /* Nanoseconds.  */
-  };
 #34 "/usr/include/sched.h" 2 3 4
 
 
-typedef __pid_t pid_t;
+
 
 
 
@@ -11986,26 +14307,7 @@ __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 /*
  * Never include this file directly; use <time.h> instead.
  */
-
-
-
-
-
-
-/* A time value that is accurate to the nearest
-   microsecond but also has a range of years.  */
-struct timeval
-  {
-    __time_t tv_sec; /* Seconds.  */
-    __suseconds_t tv_usec; /* Microseconds.  */
-  };
-
-
-
-
-
-
-
+#42 "/usr/include/bits/time.h" 3 4
 /* ISO/IEC 9899:1990 7.12.1: <time.h>
    The macro `CLOCKS_PER_SEC' is the number per second of the value
    returned by the `clock' function. */
@@ -12115,15 +14417,6 @@ extern int clock_adjtime (__clockid_t __clock_id, struct timex *__utx) throw ();
 #42 "/usr/include/time.h" 2 3 4
 
 /* This is the obsolete POSIX.1-1988 name for the same constant.  */
-#58 "/usr/include/time.h" 3 4
-/* Returned by `clock'.  */
-typedef __clock_t clock_t;
-#90 "/usr/include/time.h" 3 4
-/* Clock ID used in clock and timer functions.  */
-typedef __clockid_t clockid_t;
-#102 "/usr/include/time.h" 3 4
-/* Timer ID returned by `timer_create'.  */
-typedef __timer_t timer_t;
 #132 "/usr/include/time.h" 3 4
 /* Used by other time functions.  */
 struct tm
@@ -12415,180 +14708,7 @@ extern int getdate_r (const char *__restrict __string,
 }
 #25 "/usr/include/pthread.h" 2 3 4
 
-#1 "/usr/include/bits/pthreadtypes.h" 1 3 4
-/* Copyright (C) 2002-2007, 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
 
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-#1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-#11 "/usr/include/bits/wordsize.h" 3 4
-/* Both x86-64 and x32 use the 64-bit system call interface.  */
-#22 "/usr/include/bits/pthreadtypes.h" 2 3 4
-#58 "/usr/include/bits/pthreadtypes.h" 3 4
-/* Thread identifiers.  The structure of the attribute type is not
-   exposed on purpose.  */
-typedef unsigned long int pthread_t;
-
-
-union pthread_attr_t
-{
-  char __size[56];
-  long int __align;
-};
-
-typedef union pthread_attr_t pthread_attr_t;
-
-
-
-
-
-typedef struct __pthread_internal_list
-{
-  struct __pthread_internal_list *__prev;
-  struct __pthread_internal_list *__next;
-} __pthread_list_t;
-#88 "/usr/include/bits/pthreadtypes.h" 3 4
-/* Data structures for mutex handling.  The structure of the attribute
-   type is not exposed on purpose.  */
-typedef union
-{
-  struct __pthread_mutex_s
-  {
-    int __lock;
-    unsigned int __count;
-    int __owner;
-
-    unsigned int __nusers;
-
-    /* KIND must stay at this position in the structure to maintain
-       binary compatibility.  */
-    int __kind;
-
-    short __spins;
-    short __elision;
-    __pthread_list_t __list;
-
-/* Mutex __spins initializer used by PTHREAD_MUTEX_INITIALIZER.  */
-#125 "/usr/include/bits/pthreadtypes.h" 3 4
-  } __data;
-  char __size[40];
-  long int __align;
-} pthread_mutex_t;
-
-typedef union
-{
-  char __size[4];
-  int __align;
-} pthread_mutexattr_t;
-
-
-/* Data structure for conditional variable handling.  The structure of
-   the attribute type is not exposed on purpose.  */
-typedef union
-{
-  struct
-  {
-    int __lock;
-    unsigned int __futex;
-    __extension__ unsigned long long int __total_seq;
-    __extension__ unsigned long long int __wakeup_seq;
-    __extension__ unsigned long long int __woken_seq;
-    void *__mutex;
-    unsigned int __nwaiters;
-    unsigned int __broadcast_seq;
-  } __data;
-  char __size[48];
-  __extension__ long long int __align;
-} pthread_cond_t;
-
-typedef union
-{
-  char __size[4];
-  int __align;
-} pthread_condattr_t;
-
-
-/* Keys for thread-specific data */
-typedef unsigned int pthread_key_t;
-
-
-/* Once-only execution */
-typedef int pthread_once_t;
-
-
-
-/* Data structure for read-write lock variable handling.  The
-   structure of the attribute type is not exposed on purpose.  */
-typedef union
-{
-
-  struct
-  {
-    int __lock;
-    unsigned int __nr_readers;
-    unsigned int __readers_wakeup;
-    unsigned int __writer_wakeup;
-    unsigned int __nr_readers_queued;
-    unsigned int __nr_writers_queued;
-    int __writer;
-    int __shared;
-    unsigned long int __pad1;
-    unsigned long int __pad2;
-    /* FLAGS must stay at this position in the structure to maintain
-       binary compatibility.  */
-    unsigned int __flags;
-
-  } __data;
-#212 "/usr/include/bits/pthreadtypes.h" 3 4
-  char __size[56];
-  long int __align;
-} pthread_rwlock_t;
-
-typedef union
-{
-  char __size[8];
-  long int __align;
-} pthread_rwlockattr_t;
-
-
-
-
-/* POSIX spinlock data type.  */
-typedef volatile int pthread_spinlock_t;
-
-
-/* POSIX barriers data type.  The structure of the type is
-   deliberately not exposed.  */
-typedef union
-{
-  char __size[32];
-  long int __align;
-} pthread_barrier_t;
-
-typedef union
-{
-  char __size[4];
-  int __align;
-} pthread_barrierattr_t;
-#27 "/usr/include/pthread.h" 2 3 4
 #1 "/usr/include/bits/setjmp.h" 1 3 4
 /* Copyright (C) 2001,2002,2003,2005,2006 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
@@ -14000,17 +16120,7 @@ extern "C" {
 
 
 /* All functions that are not declared anywhere else.  */
-
-
-
-
-typedef __ssize_t ssize_t;
-
-
-
-
-
-
+#226 "/usr/include/unistd.h" 3 4
 #1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
 /*===---- stddef.h - Basic type definitions --------------------------------===
  *
@@ -14044,39 +16154,7 @@ __WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
 
 /* The Single Unix specification says that some more types are
    available here.  */
-
-typedef __gid_t gid_t;
-
-
-
-
-typedef __uid_t uid_t;
-
-
-
-
-
-typedef __off_t off_t;
-
-
-
-
-
-
-typedef __off64_t off64_t;
-
-
-
-
-typedef __useconds_t useconds_t;
-#267 "/usr/include/unistd.h" 3 4
-typedef __intptr_t intptr_t;
-
-
-
-
-
-
+#274 "/usr/include/unistd.h" 3 4
 typedef __socklen_t socklen_t;
 
 
@@ -29998,49 +32076,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 } // namespace std
 #473 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 2 3
 #45 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-#40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 1 3
-// Output streams -*- C++ -*-
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/ostream
- *  This is a Standard C++ Library header.
- */
-
-//
-// ISO C++ 14882: 27.6.2  Output streams
-//
-
-
-
-
-
-#38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
-
-
+#40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
 
 
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -30980,7 +33016,50 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 } // namespace std
 #588 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
-#41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
+#40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
+#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 1 3
+// Input streams -*- C++ -*-
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010, 2011
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+//
+// ISO C++ 14882: 27.6.1  Input streams
+//
+
+/** @file include/istream
+ *  This is a Standard C++ Library header.
+ */
+
+
+
+
+
+#38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
+
+
+
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -32875,2493 +34954,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 } // namespace std
 #859 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
-#39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 2 3
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  // [27.7.1] template class basic_stringbuf
-  /**
-   *  @brief  The actual work of input and output (for std::string).
-   *  @ingroup io
-   *
-   *  This class associates either or both of its input and output sequences
-   *  with a sequence of characters, which can be initialized from, or made
-   *  available as, a @c std::basic_string.  (Paraphrased from [27.7.1]/1.)
-   *
-   *  For this class, open modes (of type @c ios_base::openmode) have
-   *  @c in set if the input sequence can be read, and @c out set if the
-   *  output sequence can be written.
-  */
-  template<typename _CharT, typename _Traits, typename _Alloc>
-    class basic_stringbuf : public basic_streambuf<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 251. basic_stringbuf missing allocator_type
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
-      typedef basic_string<char_type, _Traits, _Alloc> __string_type;
-      typedef typename __string_type::size_type __size_type;
-
-    protected:
-      /// Place to stash in || out || in | out settings for current stringbuf.
-      ios_base::openmode _M_mode;
-
-      // Data Members:
-      __string_type _M_string;
-
-    public:
-      // Constructors:
-      /**
-       *  @brief  Starts with an empty string buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  The default constructor initializes the parent class using its
-       *  own default ctor.
-      */
-      explicit
-      basic_stringbuf(ios_base::openmode __mode = ios_base::in | ios_base::out)
-      : __streambuf_type(), _M_mode(__mode), _M_string()
-      { }
-
-      /**
-       *  @brief  Starts with an existing string buffer.
-       *  @param  str  A string to copy as a starting buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  This constructor initializes the parent class using its
-       *  own default ctor.
-      */
-      explicit
-      basic_stringbuf(const __string_type& __str,
-        ios_base::openmode __mode = ios_base::in | ios_base::out)
-      : __streambuf_type(), _M_mode(), _M_string(__str.data(), __str.size())
-      { _M_stringbuf_init(__mode); }
-
-      // Get and set:
-      /**
-       *  @brief  Copying out the string buffer.
-       *  @return  A copy of one of the underlying sequences.
-       *
-       *  <em>If the buffer is only created in input mode, the underlying
-       *  character sequence is equal to the input sequence; otherwise, it
-       *  is equal to the output sequence.</em> [27.7.1.2]/1
-      */
-      __string_type
-      str() const
-      {
- __string_type __ret;
- if (this->pptr())
-   {
-     // The current egptr() may not be the actual string end.
-     if (this->pptr() > this->egptr())
-       __ret = __string_type(this->pbase(), this->pptr());
-     else
-        __ret = __string_type(this->pbase(), this->egptr());
-   }
- else
-   __ret = _M_string;
- return __ret;
-      }
-
-      /**
-       *  @brief  Setting a new buffer.
-       *  @param  s  The string to use as a new sequence.
-       *
-       *  Deallocates any previous stored sequence, then copies @a s to
-       *  use as a new one.
-      */
-      void
-      str(const __string_type& __s)
-      {
- // Cannot use _M_string = __s, since v3 strings are COW.
- _M_string.assign(__s.data(), __s.size());
- _M_stringbuf_init(_M_mode);
-      }
-
-    protected:
-      // Common initialization code goes here.
-      void
-      _M_stringbuf_init(ios_base::openmode __mode)
-      {
- _M_mode = __mode;
- __size_type __len = 0;
- if (_M_mode & (ios_base::ate | ios_base::app))
-   __len = _M_string.size();
- _M_sync(const_cast<char_type*>(_M_string.data()), 0, __len);
-      }
-
-      virtual streamsize
-      showmanyc()
-      {
- streamsize __ret = -1;
- if (_M_mode & ios_base::in)
-   {
-     _M_update_egptr();
-     __ret = this->egptr() - this->gptr();
-   }
- return __ret;
-      }
-
-      virtual int_type
-      underflow();
-
-      virtual int_type
-      pbackfail(int_type __c = traits_type::eof());
-
-      virtual int_type
-      overflow(int_type __c = traits_type::eof());
-
-      /**
-       *  @brief  Manipulates the buffer.
-       *  @param  s  Pointer to a buffer area.
-       *  @param  n  Size of @a s.
-       *  @return  @c this
-       *
-       *  If no buffer has already been created, and both @a s and @a n are
-       *  non-zero, then @c s is used as a buffer; see
-       *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/bk01pt11ch25s02.html
-       *  for more.
-      */
-      virtual __streambuf_type*
-      setbuf(char_type* __s, streamsize __n)
-      {
- if (__s && __n >= 0)
-   {
-     // This is implementation-defined behavior, and assumes
-     // that an external char_type array of length __n exists
-     // and has been pre-allocated. If this is not the case,
-     // things will quickly blow up.
-
-     // Step 1: Destroy the current internal array.
-     _M_string.clear();
-
-     // Step 2: Use the external array.
-     _M_sync(__s, __n, 0);
-   }
- return this;
-      }
-
-      virtual pos_type
-      seekoff(off_type __off, ios_base::seekdir __way,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-
-      virtual pos_type
-      seekpos(pos_type __sp,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-
-      // Internal function for correctly updating the internal buffer
-      // for a particular _M_string, due to initialization or re-sizing
-      // of an existing _M_string.
-      void
-      _M_sync(char_type* __base, __size_type __i, __size_type __o);
-
-      // Internal function for correctly updating egptr() to the actual
-      // string end.
-      void
-      _M_update_egptr()
-      {
- const bool __testin = _M_mode & ios_base::in;
- if (this->pptr() && this->pptr() > this->egptr())
-   {
-     if (__testin)
-       this->setg(this->eback(), this->gptr(), this->pptr());
-     else
-       this->setg(this->pptr(), this->pptr(), this->pptr());
-   }
-      }
-
-      // Works around the issue with pbump, part of the protected
-      // interface of basic_streambuf, taking just an int.
-      void
-      _M_pbump(char_type* __pbeg, char_type* __pend, off_type __off);
-    };
-
-
-  // [27.7.2] Template class basic_istringstream
-  /**
-   *  @brief  Controlling input for std::string.
-   *  @ingroup io
-   *
-   *  This class supports reading from objects of type std::basic_string,
-   *  using the inherited functions from std::basic_istream.  To control
-   *  the associated sequence, an instance of std::basic_stringbuf is used,
-   *  which this page refers to as @c sb.
-  */
-  template<typename _CharT, typename _Traits, typename _Alloc>
-    class basic_istringstream : public basic_istream<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 251. basic_stringbuf missing allocator_type
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      // Non-standard types:
-      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
-      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
-      typedef basic_istream<char_type, traits_type> __istream_type;
-
-    private:
-      __stringbuf_type _M_stringbuf;
-
-    public:
-      // Constructors:
-      /**
-       *  @brief  Default constructor starts with an empty string buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  @c ios_base::in is automatically included in @a mode.
-       *
-       *  Initializes @c sb using @c mode|in, and passes @c &sb to the base
-       *  class initializer.  Does not allocate any buffer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_istringstream(ios_base::openmode __mode = ios_base::in)
-      : __istream_type(), _M_stringbuf(__mode | ios_base::in)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  Starts with an existing string buffer.
-       *  @param  str  A string to copy as a starting buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  @c ios_base::in is automatically included in @a mode.
-       *
-       *  Initializes @c sb using @a str and @c mode|in, and passes @c &sb
-       *  to the base class initializer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_istringstream(const __string_type& __str,
-     ios_base::openmode __mode = ios_base::in)
-      : __istream_type(), _M_stringbuf(__str, __mode | ios_base::in)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The buffer is deallocated by the stringbuf object, not the
-       *  formatting stream.
-      */
-      ~basic_istringstream()
-      { }
-
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_stringbuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-      */
-      __stringbuf_type*
-      rdbuf() const
-      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
-
-      /**
-       *  @brief  Copying out the string buffer.
-       *  @return  @c rdbuf()->str()
-      */
-      __string_type
-      str() const
-      { return _M_stringbuf.str(); }
-
-      /**
-       *  @brief  Setting a new buffer.
-       *  @param  s  The string to use as a new sequence.
-       *
-       *  Calls @c rdbuf()->str(s).
-      */
-      void
-      str(const __string_type& __s)
-      { _M_stringbuf.str(__s); }
-    };
-
-
-  // [27.7.3] Template class basic_ostringstream
-  /**
-   *  @brief  Controlling output for std::string.
-   *  @ingroup io
-   *
-   *  This class supports writing to objects of type std::basic_string,
-   *  using the inherited functions from std::basic_ostream.  To control
-   *  the associated sequence, an instance of std::basic_stringbuf is used,
-   *  which this page refers to as @c sb.
-  */
-  template <typename _CharT, typename _Traits, typename _Alloc>
-    class basic_ostringstream : public basic_ostream<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 251. basic_stringbuf missing allocator_type
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      // Non-standard types:
-      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
-      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
-      typedef basic_ostream<char_type, traits_type> __ostream_type;
-
-    private:
-      __stringbuf_type _M_stringbuf;
-
-    public:
-      // Constructors/destructor:
-      /**
-       *  @brief  Default constructor starts with an empty string buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  @c ios_base::out is automatically included in @a mode.
-       *
-       *  Initializes @c sb using @c mode|out, and passes @c &sb to the base
-       *  class initializer.  Does not allocate any buffer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_ostringstream(ios_base::openmode __mode = ios_base::out)
-      : __ostream_type(), _M_stringbuf(__mode | ios_base::out)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  Starts with an existing string buffer.
-       *  @param  str  A string to copy as a starting buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  @c ios_base::out is automatically included in @a mode.
-       *
-       *  Initializes @c sb using @a str and @c mode|out, and passes @c &sb
-       *  to the base class initializer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_ostringstream(const __string_type& __str,
-     ios_base::openmode __mode = ios_base::out)
-      : __ostream_type(), _M_stringbuf(__str, __mode | ios_base::out)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The buffer is deallocated by the stringbuf object, not the
-       *  formatting stream.
-      */
-      ~basic_ostringstream()
-      { }
-
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_stringbuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-      */
-      __stringbuf_type*
-      rdbuf() const
-      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
-
-      /**
-       *  @brief  Copying out the string buffer.
-       *  @return  @c rdbuf()->str()
-      */
-      __string_type
-      str() const
-      { return _M_stringbuf.str(); }
-
-      /**
-       *  @brief  Setting a new buffer.
-       *  @param  s  The string to use as a new sequence.
-       *
-       *  Calls @c rdbuf()->str(s).
-      */
-      void
-      str(const __string_type& __s)
-      { _M_stringbuf.str(__s); }
-    };
-
-
-  // [27.7.4] Template class basic_stringstream
-  /**
-   *  @brief  Controlling input and output for std::string.
-   *  @ingroup io
-   *
-   *  This class supports reading from and writing to objects of type
-   *  std::basic_string, using the inherited functions from
-   *  std::basic_iostream.  To control the associated sequence, an instance
-   *  of std::basic_stringbuf is used, which this page refers to as @c sb.
-  */
-  template <typename _CharT, typename _Traits, typename _Alloc>
-    class basic_stringstream : public basic_iostream<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 251. basic_stringbuf missing allocator_type
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      // Non-standard Types:
-      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
-      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
-      typedef basic_iostream<char_type, traits_type> __iostream_type;
-
-    private:
-      __stringbuf_type _M_stringbuf;
-
-    public:
-      // Constructors/destructors
-      /**
-       *  @brief  Default constructor starts with an empty string buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  Initializes @c sb using @c mode, and passes @c &sb to the base
-       *  class initializer.  Does not allocate any buffer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_stringstream(ios_base::openmode __m = ios_base::out | ios_base::in)
-      : __iostream_type(), _M_stringbuf(__m)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  Starts with an existing string buffer.
-       *  @param  str  A string to copy as a starting buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  Initializes @c sb using @a str and @c mode, and passes @c &sb
-       *  to the base class initializer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_stringstream(const __string_type& __str,
-    ios_base::openmode __m = ios_base::out | ios_base::in)
-      : __iostream_type(), _M_stringbuf(__str, __m)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The buffer is deallocated by the stringbuf object, not the
-       *  formatting stream.
-      */
-      ~basic_stringstream()
-      { }
-
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_stringbuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-      */
-      __stringbuf_type*
-      rdbuf() const
-      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
-
-      /**
-       *  @brief  Copying out the string buffer.
-       *  @return  @c rdbuf()->str()
-      */
-      __string_type
-      str() const
-      { return _M_stringbuf.str(); }
-
-      /**
-       *  @brief  Setting a new buffer.
-       *  @param  s  The string to use as a new sequence.
-       *
-       *  Calls @c rdbuf()->str(s).
-      */
-      void
-      str(const __string_type& __s)
-      { _M_stringbuf.str(__s); }
-    };
-
-
-} // namespace
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 1 3
-// String based streams -*- C++ -*-
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file bits/sstream.tcc
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{sstream}
- */
-
-//
-// ISO C++ 14882: 27.7  String-based streams
-//
-
-
-
-
-
-#39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    pbackfail(int_type __c)
-    {
-      int_type __ret = traits_type::eof();
-      if (this->eback() < this->gptr())
- {
-   // Try to put back __c into input sequence in one of three ways.
-   // Order these tests done in is unspecified by the standard.
-   const bool __testeof = traits_type::eq_int_type(__c, __ret);
-   if (!__testeof)
-     {
-       const bool __testeq = traits_type::eq(traits_type::
-          to_char_type(__c),
-          this->gptr()[-1]);
-       const bool __testout = this->_M_mode & ios_base::out;
-       if (__testeq || __testout)
-  {
-    this->gbump(-1);
-    if (!__testeq)
-      *this->gptr() = traits_type::to_char_type(__c);
-    __ret = __c;
-  }
-     }
-   else
-     {
-       this->gbump(-1);
-       __ret = traits_type::not_eof(__c);
-     }
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    overflow(int_type __c)
-    {
-      const bool __testout = this->_M_mode & ios_base::out;
-      if (__builtin_expect(!__testout, false))
- return traits_type::eof();
-
-      const bool __testeof = traits_type::eq_int_type(__c, traits_type::eof());
-      if (__builtin_expect(__testeof, false))
- return traits_type::not_eof(__c);
-
-      const __size_type __capacity = _M_string.capacity();
-      const __size_type __max_size = _M_string.max_size();
-      const bool __testput = this->pptr() < this->epptr();
-      if (__builtin_expect(!__testput && __capacity == __max_size, false))
- return traits_type::eof();
-
-      // Try to append __c into output sequence in one of two ways.
-      // Order these tests done in is unspecified by the standard.
-      const char_type __conv = traits_type::to_char_type(__c);
-      if (!__testput)
- {
-   // NB: Start ostringstream buffers at 512 chars.  This is an
-   // experimental value (pronounced "arbitrary" in some of the
-   // hipper English-speaking countries), and can be changed to
-   // suit particular needs.
-   //
-   // _GLIBCXX_RESOLVE_LIB_DEFECTS
-   // 169. Bad efficiency of overflow() mandated
-   // 432. stringbuf::overflow() makes only one write position
-   //      available
-   const __size_type __opt_len = std::max(__size_type(2 * __capacity),
-       __size_type(512));
-   const __size_type __len = std::min(__opt_len, __max_size);
-   __string_type __tmp;
-   __tmp.reserve(__len);
-   if (this->pbase())
-     __tmp.assign(this->pbase(), this->epptr() - this->pbase());
-   __tmp.push_back(__conv);
-   _M_string.swap(__tmp);
-   _M_sync(const_cast<char_type*>(_M_string.data()),
-    this->gptr() - this->eback(), this->pptr() - this->pbase());
- }
-      else
- *this->pptr() = __conv;
-      this->pbump(1);
-      return __c;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    underflow()
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testin = this->_M_mode & ios_base::in;
-      if (__testin)
- {
-   // Update egptr() to match the actual string end.
-   _M_update_egptr();
-
-   if (this->gptr() < this->egptr())
-     __ret = traits_type::to_int_type(*this->gptr());
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::pos_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode __mode)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      bool __testin = (ios_base::in & this->_M_mode & __mode) != 0;
-      bool __testout = (ios_base::out & this->_M_mode & __mode) != 0;
-      const bool __testboth = __testin && __testout && __way != ios_base::cur;
-      __testin &= !(__mode & ios_base::out);
-      __testout &= !(__mode & ios_base::in);
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 453. basic_stringbuf::seekoff need not always fail for an empty stream.
-      const char_type* __beg = __testin ? this->eback() : this->pbase();
-      if ((__beg || !__off) && (__testin || __testout || __testboth))
- {
-   _M_update_egptr();
-
-   off_type __newoffi = __off;
-   off_type __newoffo = __newoffi;
-   if (__way == ios_base::cur)
-     {
-       __newoffi += this->gptr() - __beg;
-       __newoffo += this->pptr() - __beg;
-     }
-   else if (__way == ios_base::end)
-     __newoffo = __newoffi += this->egptr() - __beg;
-
-   if ((__testin || __testboth)
-       && __newoffi >= 0
-       && this->egptr() - __beg >= __newoffi)
-     {
-       this->setg(this->eback(), this->eback() + __newoffi,
-    this->egptr());
-       __ret = pos_type(__newoffi);
-     }
-   if ((__testout || __testboth)
-       && __newoffo >= 0
-       && this->egptr() - __beg >= __newoffo)
-     {
-       _M_pbump(this->pbase(), this->epptr(), __newoffo);
-       __ret = pos_type(__newoffo);
-     }
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::pos_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    seekpos(pos_type __sp, ios_base::openmode __mode)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      const bool __testin = (ios_base::in & this->_M_mode & __mode) != 0;
-      const bool __testout = (ios_base::out & this->_M_mode & __mode) != 0;
-
-      const char_type* __beg = __testin ? this->eback() : this->pbase();
-      if ((__beg || !off_type(__sp)) && (__testin || __testout))
- {
-   _M_update_egptr();
-
-   const off_type __pos(__sp);
-   const bool __testpos = (0 <= __pos
-      && __pos <= this->egptr() - __beg);
-   if (__testpos)
-     {
-       if (__testin)
-  this->setg(this->eback(), this->eback() + __pos,
-      this->egptr());
-       if (__testout)
-  _M_pbump(this->pbase(), this->epptr(), __pos);
-       __ret = __sp;
-     }
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    void
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    _M_sync(char_type* __base, __size_type __i, __size_type __o)
-    {
-      const bool __testin = _M_mode & ios_base::in;
-      const bool __testout = _M_mode & ios_base::out;
-      char_type* __endg = __base + _M_string.size();
-      char_type* __endp = __base + _M_string.capacity();
-
-      if (__base != _M_string.data())
- {
-   // setbuf: __i == size of buffer area (_M_string.size() == 0).
-   __endg += __i;
-   __i = 0;
-   __endp = __endg;
- }
-
-      if (__testin)
- this->setg(__base, __base + __i, __endg);
-      if (__testout)
- {
-   _M_pbump(__base, __endp, __o);
-   // egptr() always tracks the string end.  When !__testin,
-   // for the correct functioning of the streambuf inlines
-   // the other get area pointers are identical.
-   if (!__testin)
-     this->setg(__endg, __endg, __endg);
- }
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    void
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    _M_pbump(char_type* __pbeg, char_type* __pend, off_type __off)
-    {
-      this->setp(__pbeg, __pend);
-      while (__off > __gnu_cxx::__numeric_traits<int>::__max)
- {
-   this->pbump(__gnu_cxx::__numeric_traits<int>::__max);
-   __off -= __gnu_cxx::__numeric_traits<int>::__max;
- }
-      this->pbump(__off);
-    }
-
-  // Inhibit implicit instantiations for required instantiations,
-  // which are defined via explicit instantiations elsewhere.
-
-  extern template class basic_stringbuf<char>;
-  extern template class basic_istringstream<char>;
-  extern template class basic_ostringstream<char>;
-  extern template class basic_stringstream<char>;
-
-
-  extern template class basic_stringbuf<wchar_t>;
-  extern template class basic_istringstream<wchar_t>;
-  extern template class basic_ostringstream<wchar_t>;
-  extern template class basic_stringstream<wchar_t>;
-
-
-
-
-} // namespace std
-#580 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 2 3
-#47 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  /**
-   * @defgroup complex_numbers Complex Numbers
-   * @ingroup numerics
-   *
-   * Classes and functions for complex numbers.
-   * @{
-   */
-
-  // Forward declarations.
-  template<typename _Tp> class complex;
-  template<> class complex<float>;
-  template<> class complex<double>;
-  template<> class complex<long double>;
-
-  ///  Return magnitude of @a z.
-  template<typename _Tp> _Tp abs(const complex<_Tp>&);
-  ///  Return phase angle of @a z.
-  template<typename _Tp> _Tp arg(const complex<_Tp>&);
-  ///  Return @a z magnitude squared.
-  template<typename _Tp> _Tp norm(const complex<_Tp>&);
-
-  ///  Return complex conjugate of @a z.
-  template<typename _Tp> complex<_Tp> conj(const complex<_Tp>&);
-  ///  Return complex with magnitude @a rho and angle @a theta.
-  template<typename _Tp> complex<_Tp> polar(const _Tp&, const _Tp& = 0);
-
-  // Transcendentals:
-  /// Return complex cosine of @a z.
-  template<typename _Tp> complex<_Tp> cos(const complex<_Tp>&);
-  /// Return complex hyperbolic cosine of @a z.
-  template<typename _Tp> complex<_Tp> cosh(const complex<_Tp>&);
-  /// Return complex base e exponential of @a z.
-  template<typename _Tp> complex<_Tp> exp(const complex<_Tp>&);
-  /// Return complex natural logarithm of @a z.
-  template<typename _Tp> complex<_Tp> log(const complex<_Tp>&);
-  /// Return complex base 10 logarithm of @a z.
-  template<typename _Tp> complex<_Tp> log10(const complex<_Tp>&);
-
-  // DR 844.
-  /// Return @a x to the @a y'th power.
-  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, int);
-
-  /// Return @a x to the @a y'th power.
-  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, const _Tp&);
-  /// Return @a x to the @a y'th power.
-  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&,
-                                          const complex<_Tp>&);
-  /// Return @a x to the @a y'th power.
-  template<typename _Tp> complex<_Tp> pow(const _Tp&, const complex<_Tp>&);
-  /// Return complex sine of @a z.
-  template<typename _Tp> complex<_Tp> sin(const complex<_Tp>&);
-  /// Return complex hyperbolic sine of @a z.
-  template<typename _Tp> complex<_Tp> sinh(const complex<_Tp>&);
-  /// Return complex square root of @a z.
-  template<typename _Tp> complex<_Tp> sqrt(const complex<_Tp>&);
-  /// Return complex tangent of @a z.
-  template<typename _Tp> complex<_Tp> tan(const complex<_Tp>&);
-  /// Return complex hyperbolic tangent of @a z.
-  template<typename _Tp> complex<_Tp> tanh(const complex<_Tp>&);
-
-
-  // 26.2.2  Primary template class complex
-  /**
-   *  Template to represent complex numbers.
-   *
-   *  Specializations for float, double, and long double are part of the
-   *  library.  Results with any other type are not guaranteed.
-   *
-   *  @param  Tp  Type of real and imaginary values.
-  */
-  template<typename _Tp>
-    struct complex
-    {
-      /// Value typedef.
-      typedef _Tp value_type;
-
-      ///  Default constructor.  First parameter is x, second parameter is y.
-      ///  Unspecified parameters default to 0.
-                         complex(const _Tp& __r = _Tp(), const _Tp& __i = _Tp())
-      : _M_real(__r), _M_imag(__i) { }
-
-      // Lets the compiler synthesize the copy constructor   
-      // complex (const complex<_Tp>&);
-      ///  Copy constructor.
-      template<typename _Up>
-                           complex(const complex<_Up>& __z)
- : _M_real(__z.real()), _M_imag(__z.imag()) { }
-#149 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-      ///  Return real part of complex number.
-      _Tp&
-      real() { return _M_real; }
-
-      ///  Return real part of complex number.
-      const _Tp&
-      real() const { return _M_real; }
-
-      ///  Return imaginary part of complex number.
-      _Tp&
-      imag() { return _M_imag; }
-
-      ///  Return imaginary part of complex number.
-      const _Tp&
-      imag() const { return _M_imag; }
-
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // DR 387. std::complex over-encapsulated.
-      void
-      real(_Tp __val) { _M_real = __val; }
-
-      void
-      imag(_Tp __val) { _M_imag = __val; }
-
-      /// Assign this complex number to scalar @a t.
-      complex<_Tp>& operator=(const _Tp&);
-
-      /// Add @a t to this complex number.
-      // 26.2.5/1
-      complex<_Tp>&
-      operator+=(const _Tp& __t)
-      {
- _M_real += __t;
- return *this;
-      }
-
-      /// Subtract @a t from this complex number.
-      // 26.2.5/3
-      complex<_Tp>&
-      operator-=(const _Tp& __t)
-      {
- _M_real -= __t;
- return *this;
-      }
-
-      /// Multiply this complex number by @a t.
-      complex<_Tp>& operator*=(const _Tp&);
-      /// Divide this complex number by @a t.
-      complex<_Tp>& operator/=(const _Tp&);
-
-      // Lets the compiler synthesize the
-      // copy and assignment operator
-      // complex<_Tp>& operator= (const complex<_Tp>&);
-      /// Assign this complex number to complex @a z.
-      template<typename _Up>
-        complex<_Tp>& operator=(const complex<_Up>&);
-      /// Add @a z to this complex number.
-      template<typename _Up>
-        complex<_Tp>& operator+=(const complex<_Up>&);
-      /// Subtract @a z from this complex number.
-      template<typename _Up>
-        complex<_Tp>& operator-=(const complex<_Up>&);
-      /// Multiply this complex number by @a z.
-      template<typename _Up>
-        complex<_Tp>& operator*=(const complex<_Up>&);
-      /// Divide this complex number by @a z.
-      template<typename _Up>
-        complex<_Tp>& operator/=(const complex<_Up>&);
-
-      const complex __rep() const
-      { return *this; }
-
-    private:
-      _Tp _M_real;
-      _Tp _M_imag;
-    };
-
-  template<typename _Tp>
-    complex<_Tp>&
-    complex<_Tp>::operator=(const _Tp& __t)
-    {
-     _M_real = __t;
-     _M_imag = _Tp();
-     return *this;
-    }
-
-  // 26.2.5/5
-  template<typename _Tp>
-    complex<_Tp>&
-    complex<_Tp>::operator*=(const _Tp& __t)
-    {
-      _M_real *= __t;
-      _M_imag *= __t;
-      return *this;
-    }
-
-  // 26.2.5/7
-  template<typename _Tp>
-    complex<_Tp>&
-    complex<_Tp>::operator/=(const _Tp& __t)
-    {
-      _M_real /= __t;
-      _M_imag /= __t;
-      return *this;
-    }
-
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator=(const complex<_Up>& __z)
-    {
-      _M_real = __z.real();
-      _M_imag = __z.imag();
-      return *this;
-    }
-
-  // 26.2.5/9
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator+=(const complex<_Up>& __z)
-    {
-      _M_real += __z.real();
-      _M_imag += __z.imag();
-      return *this;
-    }
-
-  // 26.2.5/11
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator-=(const complex<_Up>& __z)
-    {
-      _M_real -= __z.real();
-      _M_imag -= __z.imag();
-      return *this;
-    }
-
-  // 26.2.5/13
-  // XXX: This is a grammar school implementation.
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator*=(const complex<_Up>& __z)
-    {
-      const _Tp __r = _M_real * __z.real() - _M_imag * __z.imag();
-      _M_imag = _M_real * __z.imag() + _M_imag * __z.real();
-      _M_real = __r;
-      return *this;
-    }
-
-  // 26.2.5/15
-  // XXX: This is a grammar school implementation.
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator/=(const complex<_Up>& __z)
-    {
-      const _Tp __r = _M_real * __z.real() + _M_imag * __z.imag();
-      const _Tp __n = std::norm(__z);
-      _M_imag = (_M_imag * __z.real() - _M_real * __z.imag()) / __n;
-      _M_real = __r / __n;
-      return *this;
-    }
-
-  // Operators:
-  //@{
-  ///  Return new complex value @a x plus @a y.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r += __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r += __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __y;
-      __r += __x;
-      return __r;
-    }
-  //@}
-
-  //@{
-  ///  Return new complex value @a x minus @a y.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r -= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r -= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r(__x, -__y.imag());
-      __r -= __y.real();
-      return __r;
-    }
-  //@}
-
-  //@{
-  ///  Return new complex value @a x times @a y.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator*(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r *= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator*(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r *= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator*(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __y;
-      __r *= __x;
-      return __r;
-    }
-  //@}
-
-  //@{
-  ///  Return new complex value @a x divided by @a y.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator/(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r /= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator/(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r /= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator/(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r /= __y;
-      return __r;
-    }
-  //@}
-
-  ///  Return @a x.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const complex<_Tp>& __x)
-    { return __x; }
-
-  ///  Return complex negation of @a x.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const complex<_Tp>& __x)
-    { return complex<_Tp>(-__x.real(), -__x.imag()); }
-
-  //@{
-  ///  Return true if @a x is equal to @a y.
-  template<typename _Tp>
-    inline bool
-    operator==(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __x.real() == __y.real() && __x.imag() == __y.imag(); }
-
-  template<typename _Tp>
-    inline bool
-    operator==(const complex<_Tp>& __x, const _Tp& __y)
-    { return __x.real() == __y && __x.imag() == _Tp(); }
-
-  template<typename _Tp>
-    inline bool
-    operator==(const _Tp& __x, const complex<_Tp>& __y)
-    { return __x == __y.real() && _Tp() == __y.imag(); }
-  //@}
-
-  //@{
-  ///  Return false if @a x is equal to @a y.
-  template<typename _Tp>
-    inline bool
-    operator!=(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __x.real() != __y.real() || __x.imag() != __y.imag(); }
-
-  template<typename _Tp>
-    inline bool
-    operator!=(const complex<_Tp>& __x, const _Tp& __y)
-    { return __x.real() != __y || __x.imag() != _Tp(); }
-
-  template<typename _Tp>
-    inline bool
-    operator!=(const _Tp& __x, const complex<_Tp>& __y)
-    { return __x != __y.real() || _Tp() != __y.imag(); }
-  //@}
-
-  ///  Extraction operator for complex values.
-  template<typename _Tp, typename _CharT, class _Traits>
-    basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, complex<_Tp>& __x)
-    {
-      _Tp __re_x, __im_x;
-      _CharT __ch;
-      __is >> __ch;
-      if (__ch == '(')
- {
-   __is >> __re_x >> __ch;
-   if (__ch == ',')
-     {
-       __is >> __im_x >> __ch;
-       if (__ch == ')')
-  __x = complex<_Tp>(__re_x, __im_x);
-       else
-  __is.setstate(ios_base::failbit);
-     }
-   else if (__ch == ')')
-     __x = __re_x;
-   else
-     __is.setstate(ios_base::failbit);
- }
-      else
- {
-   __is.putback(__ch);
-   __is >> __re_x;
-   __x = __re_x;
- }
-      return __is;
-    }
-
-  ///  Insertion operator for complex values.
-  template<typename _Tp, typename _CharT, class _Traits>
-    basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
-    {
-      basic_ostringstream<_CharT, _Traits> __s;
-      __s.flags(__os.flags());
-      __s.imbue(__os.getloc());
-      __s.precision(__os.precision());
-      __s << '(' << __x.real() << ',' << __x.imag() << ')';
-      return __os << __s.str();
-    }
-
-  // Values
-#542 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-  template<typename _Tp>
-    inline _Tp&
-    real(complex<_Tp>& __z)
-    { return __z.real(); }
-
-  template<typename _Tp>
-    inline const _Tp&
-    real(const complex<_Tp>& __z)
-    { return __z.real(); }
-
-  template<typename _Tp>
-    inline _Tp&
-    imag(complex<_Tp>& __z)
-    { return __z.imag(); }
-
-  template<typename _Tp>
-    inline const _Tp&
-    imag(const complex<_Tp>& __z)
-    { return __z.imag(); }
-
-
-  // 26.2.7/3 abs(__z):  Returns the magnitude of __z.
-  template<typename _Tp>
-    inline _Tp
-    __complex_abs(const complex<_Tp>& __z)
-    {
-      _Tp __x = __z.real();
-      _Tp __y = __z.imag();
-      const _Tp __s = std::max(abs(__x), abs(__y));
-      if (__s == _Tp()) // well ...
-        return __s;
-      __x /= __s;
-      __y /= __s;
-      return __s * sqrt(__x * __x + __y * __y);
-    }
-
-
-  inline float
-  __complex_abs(__complex__ float __z) { return __builtin_cabsf(__z); }
-
-  inline double
-  __complex_abs(__complex__ double __z) { return __builtin_cabs(__z); }
-
-  inline long double
-  __complex_abs(const __complex__ long double& __z)
-  { return __builtin_cabsl(__z); }
-
-  template<typename _Tp>
-    inline _Tp
-    abs(const complex<_Tp>& __z) { return __complex_abs(__z.__rep()); }
-
-
-
-
-
-
-
-  // 26.2.7/4: arg(__z): Returns the phase angle of __z.
-  template<typename _Tp>
-    inline _Tp
-    __complex_arg(const complex<_Tp>& __z)
-    { return atan2(__z.imag(), __z.real()); }
-
-
-  inline float
-  __complex_arg(__complex__ float __z) { return __builtin_cargf(__z); }
-
-  inline double
-  __complex_arg(__complex__ double __z) { return __builtin_carg(__z); }
-
-  inline long double
-  __complex_arg(const __complex__ long double& __z)
-  { return __builtin_cargl(__z); }
-
-  template<typename _Tp>
-    inline _Tp
-    arg(const complex<_Tp>& __z) { return __complex_arg(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.7/5: norm(__z) returns the squared magnitude of __z.
-  //     As defined, norm() is -not- a norm is the common mathematical
-  //     sens used in numerics.  The helper class _Norm_helper<> tries to
-  //     distinguish between builtin floating point and the rest, so as
-  //     to deliver an answer as close as possible to the real value.
-  template<bool>
-    struct _Norm_helper
-    {
-      template<typename _Tp>
-        static inline _Tp _S_do_it(const complex<_Tp>& __z)
-        {
-          const _Tp __x = __z.real();
-          const _Tp __y = __z.imag();
-          return __x * __x + __y * __y;
-        }
-    };
-
-  template<>
-    struct _Norm_helper<true>
-    {
-      template<typename _Tp>
-        static inline _Tp _S_do_it(const complex<_Tp>& __z)
-        {
-          _Tp __res = std::abs(__z);
-          return __res * __res;
-        }
-    };
-
-  template<typename _Tp>
-    inline _Tp
-    norm(const complex<_Tp>& __z)
-    {
-      return _Norm_helper<__is_floating<_Tp>::__value
- && !0>::_S_do_it(__z);
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    polar(const _Tp& __rho, const _Tp& __theta)
-    { return complex<_Tp>(__rho * cos(__theta), __rho * sin(__theta)); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    conj(const complex<_Tp>& __z)
-    { return complex<_Tp>(__z.real(), -__z.imag()); }
-
-  // Transcendentals
-
-  // 26.2.8/1 cos(__z):  Returns the cosine of __z.
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_cos(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(cos(__x) * cosh(__y), -sin(__x) * sinh(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_cos(__complex__ float __z) { return __builtin_ccosf(__z); }
-
-  inline __complex__ double
-  __complex_cos(__complex__ double __z) { return __builtin_ccos(__z); }
-
-  inline __complex__ long double
-  __complex_cos(const __complex__ long double& __z)
-  { return __builtin_ccosl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    cos(const complex<_Tp>& __z) { return __complex_cos(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/2 cosh(__z): Returns the hyperbolic cosine of __z.
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_cosh(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(cosh(__x) * cos(__y), sinh(__x) * sin(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_cosh(__complex__ float __z) { return __builtin_ccoshf(__z); }
-
-  inline __complex__ double
-  __complex_cosh(__complex__ double __z) { return __builtin_ccosh(__z); }
-
-  inline __complex__ long double
-  __complex_cosh(const __complex__ long double& __z)
-  { return __builtin_ccoshl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    cosh(const complex<_Tp>& __z) { return __complex_cosh(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/3 exp(__z): Returns the complex base e exponential of x
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_exp(const complex<_Tp>& __z)
-    { return std::polar(exp(__z.real()), __z.imag()); }
-
-
-  inline __complex__ float
-  __complex_exp(__complex__ float __z) { return __builtin_cexpf(__z); }
-
-  inline __complex__ double
-  __complex_exp(__complex__ double __z) { return __builtin_cexp(__z); }
-
-  inline __complex__ long double
-  __complex_exp(const __complex__ long double& __z)
-  { return __builtin_cexpl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    exp(const complex<_Tp>& __z) { return __complex_exp(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/5 log(__z): Returns the natural complex logarithm of __z.
-  //                    The branch cut is along the negative axis.
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_log(const complex<_Tp>& __z)
-    { return complex<_Tp>(log(std::abs(__z)), std::arg(__z)); }
-
-
-  inline __complex__ float
-  __complex_log(__complex__ float __z) { return __builtin_clogf(__z); }
-
-  inline __complex__ double
-  __complex_log(__complex__ double __z) { return __builtin_clog(__z); }
-
-  inline __complex__ long double
-  __complex_log(const __complex__ long double& __z)
-  { return __builtin_clogl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
-
-
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    log10(const complex<_Tp>& __z)
-    { return std::log(__z) / log(_Tp(10.0)); }
-
-  // 26.2.8/10 sin(__z): Returns the sine of __z.
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_sin(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(sin(__x) * cosh(__y), cos(__x) * sinh(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_sin(__complex__ float __z) { return __builtin_csinf(__z); }
-
-  inline __complex__ double
-  __complex_sin(__complex__ double __z) { return __builtin_csin(__z); }
-
-  inline __complex__ long double
-  __complex_sin(const __complex__ long double& __z)
-  { return __builtin_csinl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    sin(const complex<_Tp>& __z) { return __complex_sin(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/11 sinh(__z): Returns the hyperbolic sine of __z.
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_sinh(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(sinh(__x) * cos(__y), cosh(__x) * sin(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_sinh(__complex__ float __z) { return __builtin_csinhf(__z); }
-
-  inline __complex__ double
-  __complex_sinh(__complex__ double __z) { return __builtin_csinh(__z); }
-
-  inline __complex__ long double
-  __complex_sinh(const __complex__ long double& __z)
-  { return __builtin_csinhl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    sinh(const complex<_Tp>& __z) { return __complex_sinh(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/13 sqrt(__z): Returns the complex square root of __z.
-  //                     The branch cut is on the negative axis.
-  template<typename _Tp>
-    complex<_Tp>
-    __complex_sqrt(const complex<_Tp>& __z)
-    {
-      _Tp __x = __z.real();
-      _Tp __y = __z.imag();
-
-      if (__x == _Tp())
-        {
-          _Tp __t = sqrt(abs(__y) / 2);
-          return complex<_Tp>(__t, __y < _Tp() ? -__t : __t);
-        }
-      else
-        {
-          _Tp __t = sqrt(2 * (std::abs(__z) + abs(__x)));
-          _Tp __u = __t / 2;
-          return __x > _Tp()
-            ? complex<_Tp>(__u, __y / __t)
-            : complex<_Tp>(abs(__y) / __t, __y < _Tp() ? -__u : __u);
-        }
-    }
-
-
-  inline __complex__ float
-  __complex_sqrt(__complex__ float __z) { return __builtin_csqrtf(__z); }
-
-  inline __complex__ double
-  __complex_sqrt(__complex__ double __z) { return __builtin_csqrt(__z); }
-
-  inline __complex__ long double
-  __complex_sqrt(const __complex__ long double& __z)
-  { return __builtin_csqrtl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    sqrt(const complex<_Tp>& __z) { return __complex_sqrt(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/14 tan(__z):  Return the complex tangent of __z.
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_tan(const complex<_Tp>& __z)
-    { return std::sin(__z) / std::cos(__z); }
-
-
-  inline __complex__ float
-  __complex_tan(__complex__ float __z) { return __builtin_ctanf(__z); }
-
-  inline __complex__ double
-  __complex_tan(__complex__ double __z) { return __builtin_ctan(__z); }
-
-  inline __complex__ long double
-  __complex_tan(const __complex__ long double& __z)
-  { return __builtin_ctanl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    tan(const complex<_Tp>& __z) { return __complex_tan(__z.__rep()); }
-
-
-
-
-
-
-
-  // 26.2.8/15 tanh(__z):  Returns the hyperbolic tangent of __z.
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_tanh(const complex<_Tp>& __z)
-    { return std::sinh(__z) / std::cosh(__z); }
-
-
-  inline __complex__ float
-  __complex_tanh(__complex__ float __z) { return __builtin_ctanhf(__z); }
-
-  inline __complex__ double
-  __complex_tanh(__complex__ double __z) { return __builtin_ctanh(__z); }
-
-  inline __complex__ long double
-  __complex_tanh(const __complex__ long double& __z)
-  { return __builtin_ctanhl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    tanh(const complex<_Tp>& __z) { return __complex_tanh(__z.__rep()); }
-
-
-
-
-
-
-
-  // 26.2.8/9  pow(__x, __y): Returns the complex power base of __x
-  //                          raised to the __y-th power.  The branch
-  //                          cut is on the negative axis.
-
-  template<typename _Tp>
-    complex<_Tp>
-    __complex_pow_unsigned(complex<_Tp> __x, unsigned __n)
-    {
-      complex<_Tp> __y = __n % 2 ? __x : complex<_Tp>(1);
-
-      while (__n >>= 1)
-        {
-          __x *= __x;
-          if (__n % 2)
-            __y *= __x;
-        }
-
-      return __y;
-    }
-
-  // _GLIBCXX_RESOLVE_LIB_DEFECTS
-  // DR 844. complex pow return type is ambiguous.
-  template<typename _Tp>
-    inline complex<_Tp>
-    pow(const complex<_Tp>& __z, int __n)
-    {
-      return __n < 0
-        ? complex<_Tp>(1) / std::__complex_pow_unsigned(__z, -__n)
-        : std::__complex_pow_unsigned(__z, __n);
-    }
-
-
-  template<typename _Tp>
-    complex<_Tp>
-    pow(const complex<_Tp>& __x, const _Tp& __y)
-    {
-
-
-
-
-      if (__x.imag() == _Tp() && __x.real() > _Tp())
-        return pow(__x.real(), __y);
-
-      complex<_Tp> __t = std::log(__x);
-      return std::polar(exp(__y * __t.real()), __y * __t.imag());
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_pow(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __x == _Tp() ? _Tp() : std::exp(__y * std::log(__x)); }
-
-
-  inline __complex__ float
-  __complex_pow(__complex__ float __x, __complex__ float __y)
-  { return __builtin_cpowf(__x, __y); }
-
-  inline __complex__ double
-  __complex_pow(__complex__ double __x, __complex__ double __y)
-  { return __builtin_cpow(__x, __y); }
-
-  inline __complex__ long double
-  __complex_pow(const __complex__ long double& __x,
-  const __complex__ long double& __y)
-  { return __builtin_cpowl(__x, __y); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    pow(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __complex_pow(__x.__rep(), __y.__rep()); }
-
-
-
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    pow(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      return __x > _Tp() ? std::polar(pow(__x, __y.real()),
-          __y.imag() * log(__x))
-                  : std::pow(complex<_Tp>(__x), __y);
-    }
-
-  // 26.2.3  complex specializations
-  // complex<float> specialization
-  template<>
-    struct complex<float>
-    {
-      typedef float value_type;
-      typedef __complex__ float _ComplexT;
-
-                         complex(_ComplexT __z) : _M_value(__z) { }
-
-                         complex(float __r = 0.0f, float __i = 0.0f)
-
-
-
-
-
-
-      {
- __real__ _M_value = __r;
- __imag__ _M_value = __i;
-      }
-
-
-      explicit complex(const complex<double>&);
-      explicit complex(const complex<long double>&);
-#1072 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-      float&
-      real() { return __real__ _M_value; }
-
-      const float&
-      real() const { return __real__ _M_value; }
-
-      float&
-      imag() { return __imag__ _M_value; }
-
-      const float&
-      imag() const { return __imag__ _M_value; }
-
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // DR 387. std::complex over-encapsulated.
-      void
-      real(float __val) { __real__ _M_value = __val; }
-
-      void
-      imag(float __val) { __imag__ _M_value = __val; }
-
-      complex&
-      operator=(float __f)
-      {
- _M_value = __f;
- return *this;
-      }
-
-      complex&
-      operator+=(float __f)
-      {
- _M_value += __f;
- return *this;
-      }
-
-      complex&
-      operator-=(float __f)
-      {
- _M_value -= __f;
- return *this;
-      }
-
-      complex&
-      operator*=(float __f)
-      {
- _M_value *= __f;
- return *this;
-      }
-
-      complex&
-      operator/=(float __f)
-      {
- _M_value /= __f;
- return *this;
-      }
-
-      // Let the compiler synthesize the copy and assignment
-      // operator.  It always does a pretty good job.
-      // complex& operator=(const complex&);
-
-      template<typename _Tp>
-        complex&
-        operator=(const complex<_Tp>& __z)
- {
-   __real__ _M_value = __z.real();
-   __imag__ _M_value = __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator+=(const complex<_Tp>& __z)
- {
-   __real__ _M_value += __z.real();
-   __imag__ _M_value += __z.imag();
-   return *this;
- }
-
-      template<class _Tp>
-        complex&
-        operator-=(const complex<_Tp>& __z)
- {
-   __real__ _M_value -= __z.real();
-   __imag__ _M_value -= __z.imag();
-   return *this;
- }
-
-      template<class _Tp>
-        complex&
-        operator*=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value *= __t;
-   return *this;
- }
-
-      template<class _Tp>
-        complex&
-        operator/=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value /= __t;
-   return *this;
- }
-
-      const _ComplexT __rep() const { return _M_value; }
-
-    private:
-      _ComplexT _M_value;
-    };
-
-  // 26.2.3  complex specializations
-  // complex<double> specialization
-  template<>
-    struct complex<double>
-    {
-      typedef double value_type;
-      typedef __complex__ double _ComplexT;
-
-                         complex(_ComplexT __z) : _M_value(__z) { }
-
-                         complex(double __r = 0.0, double __i = 0.0)
-
-
-
-
-
-
-      {
- __real__ _M_value = __r;
- __imag__ _M_value = __i;
-      }
-
-
-                         complex(const complex<float>& __z)
-      : _M_value(__z.__rep()) { }
-
-      explicit complex(const complex<long double>&);
-#1224 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-      double&
-      real() { return __real__ _M_value; }
-
-      const double&
-      real() const { return __real__ _M_value; }
-
-      double&
-      imag() { return __imag__ _M_value; }
-
-      const double&
-      imag() const { return __imag__ _M_value; }
-
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // DR 387. std::complex over-encapsulated.
-      void
-      real(double __val) { __real__ _M_value = __val; }
-
-      void
-      imag(double __val) { __imag__ _M_value = __val; }
-
-      complex&
-      operator=(double __d)
-      {
- _M_value = __d;
- return *this;
-      }
-
-      complex&
-      operator+=(double __d)
-      {
- _M_value += __d;
- return *this;
-      }
-
-      complex&
-      operator-=(double __d)
-      {
- _M_value -= __d;
- return *this;
-      }
-
-      complex&
-      operator*=(double __d)
-      {
- _M_value *= __d;
- return *this;
-      }
-
-      complex&
-      operator/=(double __d)
-      {
- _M_value /= __d;
- return *this;
-      }
-
-      // The compiler will synthesize this, efficiently.
-      // complex& operator=(const complex&);
-
-      template<typename _Tp>
-        complex&
-        operator=(const complex<_Tp>& __z)
- {
-   __real__ _M_value = __z.real();
-   __imag__ _M_value = __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator+=(const complex<_Tp>& __z)
- {
-   __real__ _M_value += __z.real();
-   __imag__ _M_value += __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator-=(const complex<_Tp>& __z)
- {
-   __real__ _M_value -= __z.real();
-   __imag__ _M_value -= __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator*=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value *= __t;
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator/=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value /= __t;
-   return *this;
- }
-
-      const _ComplexT __rep() const { return _M_value; }
-
-    private:
-      _ComplexT _M_value;
-    };
-
-  // 26.2.3  complex specializations
-  // complex<long double> specialization
-  template<>
-    struct complex<long double>
-    {
-      typedef long double value_type;
-      typedef __complex__ long double _ComplexT;
-
-                         complex(_ComplexT __z) : _M_value(__z) { }
-
-                         complex(long double __r = 0.0L,
-     long double __i = 0.0L)
-
-
-
-
-
-
-      {
- __real__ _M_value = __r;
- __imag__ _M_value = __i;
-      }
-
-
-                         complex(const complex<float>& __z)
-      : _M_value(__z.__rep()) { }
-
-                         complex(const complex<double>& __z)
-      : _M_value(__z.__rep()) { }
-#1377 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-      long double&
-      real() { return __real__ _M_value; }
-
-      const long double&
-      real() const { return __real__ _M_value; }
-
-      long double&
-      imag() { return __imag__ _M_value; }
-
-      const long double&
-      imag() const { return __imag__ _M_value; }
-
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // DR 387. std::complex over-encapsulated.
-      void
-      real(long double __val) { __real__ _M_value = __val; }
-
-      void
-      imag(long double __val) { __imag__ _M_value = __val; }
-
-      complex&
-      operator=(long double __r)
-      {
- _M_value = __r;
- return *this;
-      }
-
-      complex&
-      operator+=(long double __r)
-      {
- _M_value += __r;
- return *this;
-      }
-
-      complex&
-      operator-=(long double __r)
-      {
- _M_value -= __r;
- return *this;
-      }
-
-      complex&
-      operator*=(long double __r)
-      {
- _M_value *= __r;
- return *this;
-      }
-
-      complex&
-      operator/=(long double __r)
-      {
- _M_value /= __r;
- return *this;
-      }
-
-      // The compiler knows how to do this efficiently
-      // complex& operator=(const complex&);
-
-      template<typename _Tp>
-        complex&
-        operator=(const complex<_Tp>& __z)
- {
-   __real__ _M_value = __z.real();
-   __imag__ _M_value = __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator+=(const complex<_Tp>& __z)
- {
-   __real__ _M_value += __z.real();
-   __imag__ _M_value += __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator-=(const complex<_Tp>& __z)
- {
-   __real__ _M_value -= __z.real();
-   __imag__ _M_value -= __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator*=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value *= __t;
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator/=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value /= __t;
-   return *this;
- }
-
-      const _ComplexT __rep() const { return _M_value; }
-
-    private:
-      _ComplexT _M_value;
-    };
-
-  // These bits have to be at the end of this file, so that the
-  // specializations have all been defined.
-  inline
-  complex<float>::complex(const complex<double>& __z)
-  : _M_value(__z.__rep()) { }
-
-  inline
-  complex<float>::complex(const complex<long double>& __z)
-  : _M_value(__z.__rep()) { }
-
-  inline
-  complex<double>::complex(const complex<long double>& __z)
-  : _M_value(__z.__rep()) { }
-
-  // Inhibit implicit instantiations for required instantiations,
-  // which are defined via explicit instantiations elsewhere.
-  // NB:  This syntax is a GNU extension.
-
-  extern template istream& operator>>(istream&, complex<float>&);
-  extern template ostream& operator<<(ostream&, const complex<float>&);
-  extern template istream& operator>>(istream&, complex<double>&);
-  extern template ostream& operator<<(ostream&, const complex<double>&);
-  extern template istream& operator>>(istream&, complex<long double>&);
-  extern template ostream& operator<<(ostream&, const complex<long double>&);
-
-
-  extern template wistream& operator>>(wistream&, complex<float>&);
-  extern template wostream& operator<<(wostream&, const complex<float>&);
-  extern template wistream& operator>>(wistream&, complex<double>&);
-  extern template wostream& operator<<(wostream&, const complex<double>&);
-  extern template wistream& operator>>(wistream&, complex<long double>&);
-  extern template wostream& operator<<(wostream&, const complex<long double>&);
-
-
-
-  // @} group complex_numbers
-
-
-} // namespace
-
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-
-  // See ext/type_traits.h for the primary template.
-  template<typename _Tp, typename _Up>
-    struct __promote_2<std::complex<_Tp>, _Up>
-    {
-    public:
-      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
-    };
-
-  template<typename _Tp, typename _Up>
-    struct __promote_2<_Tp, std::complex<_Up> >
-    {
-    public:
-      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
-    };
-
-  template<typename _Tp, typename _Up>
-    struct __promote_2<std::complex<_Tp>, std::complex<_Up> >
-    {
-    public:
-      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
-    };
-
-
-} // namespace
-#7 "./svd.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2008-2014 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h" 1
-// -*- c++ -*-
-/*
-#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
-#-
-#-  This file contains confidential and proprietary information
-#-  of Xilinx, Inc. and is protected under U.S. and
-#-  international copyright and other intellectual property
-#-  laws.
-#-
-#-  DISCLAIMER
-#-  This disclaimer is not a license and does not grant any
-#-  rights to the materials distributed herewith. Except as
-#-  otherwise provided in a valid license issued to you by
-#-  Xilinx, and to the maximum extent permitted by applicable
-#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-#-  (2) Xilinx shall not be liable (whether in contract or tort,
-#-  including negligence, or under any other theory of
-#-  liability) for any loss or damage of any kind or nature
-#-  related to, arising under or in connection with these
-#-  materials, including for any direct, or any indirect,
-#-  special, incidental, or consequential loss or damage
-#-  (including loss of data, profits, goodwill, or any type of
-#-  loss or damage suffered as a result of any action brought
-#-  by a third party) even if such damage or loss was
-#-  reasonably foreseeable or Xilinx had been advised of the
-#-  possibility of the same.
-#-
-#-  CRITICAL APPLICATIONS
-#-  Xilinx products are not designed or intended to be fail-
-#-  safe, or for use in any application requiring fail-safe
-#-  performance, such as life-support or safety devices or
-#-  systems, Class III medical devices, nuclear facilities,
-#-  applications related to the deployment of airbags, or any
-#-  other applications that could lead to death, personal
-#-  injury, or severe property or environmental damage
-#-  (individually and collectively, "Critical
-#-  Applications"). Customer assumes the sole risk and
-#-  liability of any use of Xilinx products in Critical
-#-  Applications, subject only to applicable laws and
-#-  regulations governing limitations on product liability.
-#-
-#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-#-  PART OF THIS FILE AT ALL TIMES. 
-#- ************************************************************************
-
- *
- */
-#60 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h"
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h" 1
-/* -*- c++ -*-*/
-/*
-#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
-#-
-#-  This file contains confidential and proprietary information
-#-  of Xilinx, Inc. and is protected under U.S. and
-#-  international copyright and other intellectual property
-#-  laws.
-#-
-#-  DISCLAIMER
-#-  This disclaimer is not a license and does not grant any
-#-  rights to the materials distributed herewith. Except as
-#-  otherwise provided in a valid license issued to you by
-#-  Xilinx, and to the maximum extent permitted by applicable
-#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-#-  (2) Xilinx shall not be liable (whether in contract or tort,
-#-  including negligence, or under any other theory of
-#-  liability) for any loss or damage of any kind or nature
-#-  related to, arising under or in connection with these
-#-  materials, including for any direct, or any indirect,
-#-  special, incidental, or consequential loss or damage
-#-  (including loss of data, profits, goodwill, or any type of
-#-  loss or damage suffered as a result of any action brought
-#-  by a third party) even if such damage or loss was
-#-  reasonably foreseeable or Xilinx had been advised of the
-#-  possibility of the same.
-#-
-#-  CRITICAL APPLICATIONS
-#-  Xilinx products are not designed or intended to be fail-
-#-  safe, or for use in any application requiring fail-safe
-#-  performance, such as life-support or safety devices or
-#-  systems, Class III medical devices, nuclear facilities,
-#-  applications related to the deployment of airbags, or any
-#-  other applications that could lead to death, personal
-#-  injury, or severe property or environmental damage
-#-  (individually and collectively, "Critical
-#-  Applications"). Customer assumes the sole risk and
-#-  liability of any use of Xilinx products in Critical
-#-  Applications, subject only to applicable laws and
-#-  regulations governing limitations on product liability.
-#-
-#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-#-  PART OF THIS FILE AT ALL TIMES. 
-#- ************************************************************************
-
- *
- */
-#68 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h"
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3
-// Standard iostream objects -*- C++ -*-
-
-// Copyright (C) 1997, 1998, 1999, 2001, 2002, 2005, 2008, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/iostream
- *  This is a Standard C++ Library header.
- */
-
-//
-// ISO C++ 14882: 27.3  Standard iostream objects
-//
-
-
-
-
-
-#37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
-
-
-
-
+#41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -42356,176 +41949,7 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
 
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#36 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_complex.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2008-2014 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#36 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_complex.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_defines.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-/**
- * @file x_hls_defines.h
- */
-
-
-
-
-
-
-/*
-*******************************************************************************
-*
-* Contains global defines, macos, and structs.
-*
-*******************************************************************************
-*/
-#56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_defines.h"
-/*
-* May be used to specify all intantiated ap_fixed to have different options.
-* Currently unused.
-*/
-#96 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_defines.h"
-/*
-* Macros
-*/
-
-
-
-/*
-* Floating point data structure (with unsigned mantissa)
-*/
-template<int M, int E>
-struct float_struct {
-    ap_uint<M> mant; // 23
-    ap_uint<E> exp; // 8
-    ap_uint<1> sign;
-};
-
-/*
-* Floating point data structure (with signed mantissa)
-*/
-template<int M, int E>
-struct float_struct2 {
-    ap_int<M> mant; // 24
-    ap_uint<E> exp; // 8
-};
-
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_complex.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_traits.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2008-2013 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#36 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_traits.h" 2
+#37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h" 2
 #1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_half.h" 1
 // half - IEEE 754-based half-precision floating point library.
 //
@@ -42552,1988 +41976,7 @@ struct float_struct2 {
 typedef __fp16 half;
 #3082 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_half.h"
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_traits.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdint.h" 1 3
-/*===---- stdint.h - Standard header for sized integer types --------------===*\
- *
- * Copyright (c) 2009 Chris Lattner
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
-\*===----------------------------------------------------------------------===*/
-
-
-
-
-/* If we're hosted, fall back to the system's stdint.h, which might have
- * additional definitions.
- */
-
-
-
-#1 "/usr/include/stdint.h" 1 3 4
-/* Copyright (C) 1997,1998,1999,2000,2001,2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- *	ISO C99: 7.18 Integer types <stdint.h>
- */
-
-
-
-
-
-
-
-#1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-#11 "/usr/include/bits/wordsize.h" 3 4
-/* Both x86-64 and x32 use the 64-bit system call interface.  */
-#28 "/usr/include/stdint.h" 2 3 4
-
-/* Exact integral types.  */
-
-/* Signed.  */
-
-/* There is some amount of overlap with <sys/types.h> as known by inet code */
-
-
-typedef signed char int8_t;
-typedef short int int16_t;
-typedef int int32_t;
-
-typedef long int int64_t;
-
-
-
-
-
-
-/* Unsigned.  */
-typedef unsigned char uint8_t;
-typedef unsigned short int uint16_t;
-
-typedef unsigned int uint32_t;
-
-
-
-typedef unsigned long int uint64_t;
-
-
-
-
-
-
-/* Small types.  */
-
-/* Signed.  */
-typedef signed char int_least8_t;
-typedef short int int_least16_t;
-typedef int int_least32_t;
-
-typedef long int int_least64_t;
-
-
-
-
-
-/* Unsigned.  */
-typedef unsigned char uint_least8_t;
-typedef unsigned short int uint_least16_t;
-typedef unsigned int uint_least32_t;
-
-typedef unsigned long int uint_least64_t;
-
-
-
-
-
-
-/* Fast types.  */
-
-/* Signed.  */
-typedef signed char int_fast8_t;
-
-typedef long int int_fast16_t;
-typedef long int int_fast32_t;
-typedef long int int_fast64_t;
-
-
-
-
-
-
-
-/* Unsigned.  */
-typedef unsigned char uint_fast8_t;
-
-typedef unsigned long int uint_fast16_t;
-typedef unsigned long int uint_fast32_t;
-typedef unsigned long int uint_fast64_t;
-#116 "/usr/include/stdint.h" 3 4
-/* Types for `void *' pointers.  */
-
-
-
-
-
-typedef unsigned long int uintptr_t;
-#132 "/usr/include/stdint.h" 3 4
-/* Largest integral types.  */
-
-typedef long int intmax_t;
-typedef unsigned long int uintmax_t;
-#152 "/usr/include/stdint.h" 3 4
-/* Limits of integral types.  */
-
-/* Minimum of signed integral types.  */
-
-
-
-
-/* Maximum of signed integral types.  */
-
-
-
-
-
-/* Maximum of unsigned integral types.  */
-
-
-
-
-
-
-/* Minimum of signed integral types having a minimum size.  */
-
-
-
-
-/* Maximum of signed integral types having a minimum size.  */
-
-
-
-
-
-/* Maximum of unsigned integral types having a minimum size.  */
-
-
-
-
-
-
-/* Minimum of fast signed integral types having a minimum size.  */
-#200 "/usr/include/stdint.h" 3 4
-/* Maximum of fast signed integral types having a minimum size.  */
-#211 "/usr/include/stdint.h" 3 4
-/* Maximum of fast unsigned integral types having a minimum size.  */
-#223 "/usr/include/stdint.h" 3 4
-/* Values to test for integral types holding `void *' pointer.  */
-#235 "/usr/include/stdint.h" 3 4
-/* Minimum for largest signed integral type.  */
-
-/* Maximum for largest signed integral type.  */
-
-
-/* Maximum for largest unsigned integral type.  */
-
-
-
-/* Limits of other integer types.  */
-
-/* Limits of `ptrdiff_t' type.  */
-#255 "/usr/include/stdint.h" 3 4
-/* Limits of `sig_atomic_t'.  */
-
-
-
-/* Limit of `size_t' type.  */
-#270 "/usr/include/stdint.h" 3 4
-/* Limits of `wchar_t'.  */
-
-
-
-
-
-
-/* Limits of `wint_t'.  */
-
-
-
-
-/* Signed.  */
-#292 "/usr/include/stdint.h" 3 4
-/* Unsigned.  */
-#302 "/usr/include/stdint.h" 3 4
-/* Maximal type.  */
-#34 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdint.h" 2 3
-#35 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 1 3
-// -*- C++ -*- forwarding header.
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/cstdlib
- *  This is a Standard C++ Library file.  You should @c \#include this file
- *  in your programs, rather than any of the @a *.h implementation files.
- *
- *  This is the C++ version of the Standard C Library header @c stdlib.h,
- *  and its contents are (mostly) the same as that header, but are all
- *  contained in the namespace @c std (except for names which are defined
- *  as macros in C).
- */
-
-//
-// ISO C++ 14882: 20.4.6  C library
-//
-
-
-#41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
-#65 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
-#1 "/usr/include/stdlib.h" 1 3 4
-/* Copyright (C) 1991-2007, 2009-2011, 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- *	ISO C99 Standard: 7.20 General utilities	<stdlib.h>
- */
-
-
-
-
-
-/* Get size_t, wchar_t and NULL from <stddef.h>.  */
-
-
-
-
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
- */
-#56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-#33 "/usr/include/stdlib.h" 2 3 4
-
-extern "C" {
-
-
-
-
-
-/* XPG requires a few symbols from <sys/wait.h> being defined.  */
-
-#1 "/usr/include/bits/waitflags.h" 1 3 4
-/* Definitions of flag bits for `waitpid' et al.
-   Copyright (C) 1992,1996,1997,2000,2004,2005 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-
-/* Bits in the third argument to `waitpid'.  */
-
-
-
-/* Bits in the fourth argument to `waitid'.  */
-#42 "/usr/include/stdlib.h" 2 3 4
-#1 "/usr/include/bits/waitstatus.h" 1 3 4
-/* Definitions of status bits for `wait' et al.
-   Copyright (C) 1992,1994,1996,1997,2000,2004 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-
-/* Everything extant so far uses these same bits.  */
-
-
-/* If WIFEXITED(STATUS), the low-order 8 bits of the status.  */
-
-
-/* If WIFSIGNALED(STATUS), the terminating signal.  */
-
-
-/* If WIFSTOPPED(STATUS), the signal that stopped the child.  */
-
-
-/* Nonzero if STATUS indicates normal termination.  */
-
-
-/* Nonzero if STATUS indicates termination by a signal.  */
-
-
-
-/* Nonzero if STATUS indicates the child is stopped.  */
-
-
-/* Nonzero if STATUS indicates the child continued after a stop.  We only
-   define this if <bits/waitflags.h> provides the WCONTINUED flag bit.  */
-
-
-
-
-/* Nonzero if STATUS indicates the child dumped core.  */
-
-
-/* Macros for constructing status values.  */
-#66 "/usr/include/bits/waitstatus.h" 3 4
-union wait
-  {
-    int w_status;
-    struct
-      {
-
- unsigned int __w_termsig:7; /* Terminating signal.  */
- unsigned int __w_coredump:1; /* Set if dumped core.  */
- unsigned int __w_retcode:8; /* Return code if exited normally.  */
- unsigned int:16;
-
-
-
-
-
-
-
-      } __wait_terminated;
-    struct
-      {
-
- unsigned int __w_stopval:8; /* W_STOPPED if stopped.  */
- unsigned int __w_stopsig:8; /* Stopping signal.  */
- unsigned int:16;
-
-
-
-
-
-
-      } __wait_stopped;
-  };
-#43 "/usr/include/stdlib.h" 2 3 4
-
-
-
-/* Lots of hair to allow traditional BSD use of `union wait'
-   as well as POSIX.1 use of `int' for the status word.  */
-#57 "/usr/include/stdlib.h" 3 4
-/* This is the type of the argument to `wait'.  The funky union
-   causes redeclarations with either `int *' or `union wait *' to be
-   allowed without complaint.  __WAIT_STATUS_DEFN is the type used in
-   the actual function definitions.  */
-#83 "/usr/include/stdlib.h" 3 4
-/* Define the macros <sys/wait.h> also would define this way.  */
-#96 "/usr/include/stdlib.h" 3 4
-/* Returned by `div'.  */
-typedef struct
-  {
-    int quot; /* Quotient.  */
-    int rem; /* Remainder.  */
-  } div_t;
-
-/* Returned by `ldiv'.  */
-
-typedef struct
-  {
-    long int quot; /* Quotient.  */
-    long int rem; /* Remainder.  */
-  } ldiv_t;
-
-
-
-
-
-
-/* Returned by `lldiv'.  */
-__extension__ typedef struct
-  {
-    long long int quot; /* Quotient.  */
-    long long int rem; /* Remainder.  */
-  } lldiv_t;
-
-
-
-
-
-/* The largest number rand will return (same as INT_MAX).  */
-
-
-
-/* We define these the same for all machines.
-   Changes from this to the outside world should be done in `_exit'.  */
-
-
-
-
-/* Maximum length of a multibyte character in the current locale.  */
-
-extern size_t __ctype_get_mb_cur_max (void) throw () /* Ignore */;
-
-
-
-/* Convert a string to a floating-point number.  */
-extern double atof (const char *__nptr)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) /* Ignore */;
-/* Convert a string to an integer.  */
-extern int atoi (const char *__nptr)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) /* Ignore */;
-/* Convert a string to a long integer.  */
-extern long int atol (const char *__nptr)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-
-/* Convert a string to a long long integer.  */
-__extension__ extern long long int atoll (const char *__nptr)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-
-/* Convert a string to a floating-point number.  */
-extern double strtod (const char *__restrict __nptr,
-        char **__restrict __endptr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-/* Likewise for `float' and `long double' sizes of floating-point numbers.  */
-extern float strtof (const char *__restrict __nptr,
-       char **__restrict __endptr) throw () __attribute__ ((__nonnull__ (1)));
-
-extern long double strtold (const char *__restrict __nptr,
-       char **__restrict __endptr)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-/* Convert a string to a long integer.  */
-extern long int strtol (const char *__restrict __nptr,
-   char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-/* Convert a string to an unsigned long integer.  */
-extern unsigned long int strtoul (const char *__restrict __nptr,
-      char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Convert a string to a quadword integer.  */
-__extension__
-extern long long int strtoq (const char *__restrict __nptr,
-        char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-/* Convert a string to an unsigned quadword integer.  */
-__extension__
-extern unsigned long long int strtouq (const char *__restrict __nptr,
-           char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-/* Convert a string to a quadword integer.  */
-__extension__
-extern long long int strtoll (const char *__restrict __nptr,
-         char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-/* Convert a string to an unsigned quadword integer.  */
-__extension__
-extern unsigned long long int strtoull (const char *__restrict __nptr,
-     char **__restrict __endptr, int __base)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-
-/* The concept of one static locale per category is not very well
-   thought out.  Many applications will need to process its data using
-   information from several different locales.  Another problem is
-   the implementation of the internationalization handling in the
-   ISO C++ standard library.  To support this another set of
-   the functions using locale data exist which take an additional
-   argument.
-
-   Attention: even though several *_l interfaces are part of POSIX:2008,
-   these are not.  */
-
-/* Structure for reentrant locale using functions.  This is an
-   (almost) opaque type for the user level programs.  */
-
-
-/* Special versions of the functions above which take the locale to
-   use as an additional parameter.  */
-extern long int strtol_l (const char *__restrict __nptr,
-     char **__restrict __endptr, int __base,
-     __locale_t __loc) throw () __attribute__ ((__nonnull__ (1, 4)));
-
-extern unsigned long int strtoul_l (const char *__restrict __nptr,
-        char **__restrict __endptr,
-        int __base, __locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 4)));
-
-__extension__
-extern long long int strtoll_l (const char *__restrict __nptr,
-    char **__restrict __endptr, int __base,
-    __locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 4)));
-
-__extension__
-extern unsigned long long int strtoull_l (const char *__restrict __nptr,
-       char **__restrict __endptr,
-       int __base, __locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 4)));
-
-extern double strtod_l (const char *__restrict __nptr,
-   char **__restrict __endptr, __locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-
-extern float strtof_l (const char *__restrict __nptr,
-         char **__restrict __endptr, __locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-
-extern long double strtold_l (const char *__restrict __nptr,
-         char **__restrict __endptr,
-         __locale_t __loc)
-     throw () __attribute__ ((__nonnull__ (1, 3)));
-#302 "/usr/include/stdlib.h" 3 4
-/* Convert N to base 64 using the digits "./0-9A-Za-z", least-significant
-   digit first.  Returns a pointer to static storage overwritten by the
-   next call.  */
-extern char *l64a (long int __n) throw () /* Ignore */;
-
-/* Read a number from a string S in base 64 as above.  */
-extern long int a64l (const char *__s)
-     throw () __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-
-
-#1 "/usr/include/sys/types.h" 1 3 4
-/* Copyright (C) 1991,1992,1994-2002,2006,2010 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- *	POSIX Standard: 2.6 Primitive System Data Types	<sys/types.h>
- */
-
-
-
-
-
-
-extern "C" {
-
-
-
-
-
-typedef __u_char u_char;
-typedef __u_short u_short;
-typedef __u_int u_int;
-typedef __u_long u_long;
-typedef __quad_t quad_t;
-typedef __u_quad_t u_quad_t;
-typedef __fsid_t fsid_t;
-
-
-
-
-typedef __loff_t loff_t;
-
-
-
-typedef __ino_t ino_t;
-
-
-
-
-
-
-typedef __ino64_t ino64_t;
-
-
-
-
-typedef __dev_t dev_t;
-#70 "/usr/include/sys/types.h" 3 4
-typedef __mode_t mode_t;
-
-
-
-
-typedef __nlink_t nlink_t;
-#104 "/usr/include/sys/types.h" 3 4
-typedef __id_t id_t;
-#115 "/usr/include/sys/types.h" 3 4
-typedef __daddr_t daddr_t;
-typedef __caddr_t caddr_t;
-
-
-
-
-
-typedef __key_t key_t;
-#140 "/usr/include/sys/types.h" 3 4
-typedef __suseconds_t suseconds_t;
-
-
-
-
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
- */
-#56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-#147 "/usr/include/sys/types.h" 2 3 4
-
-
-/* Old compatibility names for C types.  */
-typedef unsigned long int ulong;
-typedef unsigned short int ushort;
-typedef unsigned int uint;
-
-
-/* These size-specific names are used by some of the inet code.  */
-#186 "/usr/include/sys/types.h" 3 4
-/* For GCC 2.7 and later, we can use specific type-size attributes.  */
-#200 "/usr/include/sys/types.h" 3 4
-typedef unsigned int u_int8_t __attribute__ ((__mode__ (__QI__)));
-typedef unsigned int u_int16_t __attribute__ ((__mode__ (__HI__)));
-typedef unsigned int u_int32_t __attribute__ ((__mode__ (__SI__)));
-typedef unsigned int u_int64_t __attribute__ ((__mode__ (__DI__)));
-
-typedef int register_t __attribute__ ((__mode__ (__word__)));
-
-
-/* Some code from BIND tests this macro to see if the types above are
-   defined.  */
-
-
-
-
-
-/* In BSD <sys/types.h> is expected to define BYTE_ORDER.  */
-
-
-/* It also defines `fd_set' and the FD_* macros for `select'.  */
-
-#1 "/usr/include/sys/select.h" 1 3 4
-/* `fd_set' type and related macros, and `select'/`pselect' declarations.
-   Copyright (C) 1996-2003, 2009, 2011 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*	POSIX 1003.1g: 6.2 Select from File Descriptor Sets <sys/select.h>  */
-
-
-
-
-
-
-/* Get definition of needed basic types.  */
-
-
-/* Get __FD_* definitions.  */
-
-#1 "/usr/include/bits/select.h" 1 3 4
-/* Copyright (C) 1997-1999,2001,2008,2009,2011 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-
-#1 "/usr/include/bits/wordsize.h" 1 3 4
-/* Determine the wordsize from the preprocessor defines.  */
-#11 "/usr/include/bits/wordsize.h" 3 4
-/* Both x86-64 and x32 use the 64-bit system call interface.  */
-#23 "/usr/include/bits/select.h" 2 3 4
-#31 "/usr/include/sys/select.h" 2 3 4
-
-/* Get __sigset_t.  */
-
-#1 "/usr/include/bits/sigset.h" 1 3 4
-/* __sig_atomic_t, __sigset_t, and related definitions.  Linux version.
-   Copyright (C) 1991, 1992, 1994, 1996, 1997, 2007, 2012
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-typedef int __sig_atomic_t;
-
-/* A `sigset_t' has a bit for each signal.  */
-
-
-typedef struct
-  {
-    unsigned long int __val[(1024 / (8 * sizeof (unsigned long int)))];
-  } __sigset_t;
-
-
-
-
-/* We only want to define these functions if <signal.h> was actually
-   included; otherwise we were included just to define the types.  Since we
-   are namespace-clean, it wouldn't hurt to define extra macros.  But
-   trouble can be caused by functions being defined (e.g., any global
-   register vars declared later will cause compilation errors).  */
-#34 "/usr/include/sys/select.h" 2 3 4
-
-
-
-typedef __sigset_t sigset_t;
-
-
-/* Get definition of timer specification structures.  */
-
-
-
-
-
-#1 "/usr/include/bits/time.h" 1 3 4
-/* System-dependent timing definitions.  Linux version.
-   Copyright (C) 1996,1997,1999-2003,2010,2011,2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- * Never include this file directly; use <time.h> instead.
- */
-#46 "/usr/include/sys/select.h" 2 3 4
-
-
-
-
-
-
-
-/* The fd_set member is required to be an array of longs.  */
-typedef long int __fd_mask;
-
-/* Some versions of <linux/posix_types.h> define this macros.  */
-
-/* It's easier to assume 8-bit bytes than to get CHAR_BIT.  */
-
-
-
-
-/* fd_set for select and pselect.  */
-typedef struct
-  {
-    /* XPG4.2 requires this member name.  Otherwise avoid the name
-       from the global namespace.  */
-
-    __fd_mask fds_bits[1024 / (8 * (int) sizeof (__fd_mask))];
-
-
-
-
-
-  } fd_set;
-
-/* Maximum number of file descriptors in `fd_set'.  */
-
-
-
-/* Sometimes the fd_set member is assumed to have this type.  */
-typedef __fd_mask fd_mask;
-
-/* Number of bits per word of `fd_set' (some code assumes this is 32).  */
-
-
-
-
-/* Access macros for `fd_set'.  */
-
-
-
-
-
-
-extern "C" {
-
-/* Check the first NFDS descriptors each in READFDS (if not NULL) for read
-   readiness, in WRITEFDS (if not NULL) for write readiness, and in EXCEPTFDS
-   (if not NULL) for exceptional conditions.  If TIMEOUT is not NULL, time out
-   after waiting the interval specified therein.  Returns the number of ready
-   descriptors, or -1 for errors.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int select (int __nfds, fd_set *__restrict __readfds,
-     fd_set *__restrict __writefds,
-     fd_set *__restrict __exceptfds,
-     struct timeval *__restrict __timeout);
-
-
-/* Same as above only that the TIMEOUT value is given with higher
-   resolution and a sigmask which is been set temporarily.  This version
-   should be used.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int pselect (int __nfds, fd_set *__restrict __readfds,
-      fd_set *__restrict __writefds,
-      fd_set *__restrict __exceptfds,
-      const struct timespec *__restrict __timeout,
-      const __sigset_t *__restrict __sigmask);
-
-
-
-/* Define some inlines helping to catch common problems.  */
-
-
-
-
-}
-#220 "/usr/include/sys/types.h" 2 3 4
-
-/* BSD defines these symbols, so we follow.  */
-
-#1 "/usr/include/sys/sysmacros.h" 1 3 4
-/* Definitions of macros to access `dev_t' values.
-   Copyright (C) 1996, 1997, 1999, 2003, 2004, 2007, 2011
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-
-/* If the compiler does not know long long it is out of luck.  We are
-   not going to hack weird hacks to support the dev_t representation
-   they need.  */
-
-extern "C" {
-
-__extension__
-extern unsigned int gnu_dev_major (unsigned long long int __dev)
-     throw () __attribute__ ((__const__));
-__extension__
-extern unsigned int gnu_dev_minor (unsigned long long int __dev)
-     throw () __attribute__ ((__const__));
-__extension__
-extern unsigned long long int gnu_dev_makedev (unsigned int __major,
-            unsigned int __minor)
-     throw () __attribute__ ((__const__));
-#63 "/usr/include/sys/sysmacros.h" 3 4
-}
-
-/* Access the functions with their traditional names.  */
-#223 "/usr/include/sys/types.h" 2 3 4
-
-
-
-
-
-typedef __blksize_t blksize_t;
-
-
-
-/* Types from the Large File Support interface.  */
-
-
-typedef __blkcnt_t blkcnt_t; /* Type to count number of disk blocks.  */
-
-
-
-typedef __fsblkcnt_t fsblkcnt_t; /* Type to count file system blocks.  */
-
-
-
-typedef __fsfilcnt_t fsfilcnt_t; /* Type to count file system inodes.  */
-#262 "/usr/include/sys/types.h" 3 4
-typedef __blkcnt64_t blkcnt64_t; /* Type to count number of disk blocks. */
-typedef __fsblkcnt64_t fsblkcnt64_t; /* Type to count file system blocks.  */
-typedef __fsfilcnt64_t fsfilcnt64_t; /* Type to count file system inodes.  */
-
-
-
-/* Now add the thread types.  */
-
-
-
-
-}
-#315 "/usr/include/stdlib.h" 2 3 4
-
-/* These are the functions that actually do things.  The `random', `srandom',
-   `initstate' and `setstate' functions are those from BSD Unices.
-   The `rand' and `srand' functions are required by the ANSI standard.
-   We provide both interfaces to the same random number generator.  */
-/* Return a random long integer between 0 and RAND_MAX inclusive.  */
-extern long int random (void) throw ();
-
-/* Seed the random number generator with the given number.  */
-extern void srandom (unsigned int __seed) throw ();
-
-/* Initialize the random number generator to use state buffer STATEBUF,
-   of length STATELEN, and seed it with SEED.  Optimal lengths are 8, 16,
-   32, 64, 128 and 256, the bigger the better; values less than 8 will
-   cause an error and values greater than 256 will be rounded down.  */
-extern char *initstate (unsigned int __seed, char *__statebuf,
-   size_t __statelen) throw () __attribute__ ((__nonnull__ (2)));
-
-/* Switch the random number generator to state buffer STATEBUF,
-   which should have been previously initialized by `initstate'.  */
-extern char *setstate (char *__statebuf) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Reentrant versions of the `random' family of functions.
-   These functions all use the following data structure to contain
-   state, rather than global state variables.  */
-
-struct random_data
-  {
-    int32_t *fptr; /* Front pointer.  */
-    int32_t *rptr; /* Rear pointer.  */
-    int32_t *state; /* Array of state values.  */
-    int rand_type; /* Type of random number generator.  */
-    int rand_deg; /* Degree of random number generator.  */
-    int rand_sep; /* Distance between front and rear.  */
-    int32_t *end_ptr; /* Pointer behind state table.  */
-  };
-
-extern int random_r (struct random_data *__restrict __buf,
-       int32_t *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
-
-extern int srandom_r (unsigned int __seed, struct random_data *__buf)
-     throw () __attribute__ ((__nonnull__ (2)));
-
-extern int initstate_r (unsigned int __seed, char *__restrict __statebuf,
-   size_t __statelen,
-   struct random_data *__restrict __buf)
-     throw () __attribute__ ((__nonnull__ (2, 4)));
-
-extern int setstate_r (char *__restrict __statebuf,
-         struct random_data *__restrict __buf)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-
-
-
-
-/* Return a random integer between 0 and RAND_MAX inclusive.  */
-extern int rand (void) throw ();
-/* Seed the random number generator with the given number.  */
-extern void srand (unsigned int __seed) throw ();
-
-
-
-/* Reentrant interface according to POSIX.1.  */
-extern int rand_r (unsigned int *__seed) throw ();
-
-
-
-
-/* System V style 48-bit random number generator functions.  */
-
-/* Return non-negative, double-precision floating-point value in [0.0,1.0).  */
-extern double drand48 (void) throw ();
-extern double erand48 (unsigned short int __xsubi[3]) throw () __attribute__ ((__nonnull__ (1)));
-
-/* Return non-negative, long integer in [0,2^31).  */
-extern long int lrand48 (void) throw ();
-extern long int nrand48 (unsigned short int __xsubi[3])
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Return signed, long integers in [-2^31,2^31).  */
-extern long int mrand48 (void) throw ();
-extern long int jrand48 (unsigned short int __xsubi[3])
-     throw () __attribute__ ((__nonnull__ (1)));
-
-/* Seed random number generator.  */
-extern void srand48 (long int __seedval) throw ();
-extern unsigned short int *seed48 (unsigned short int __seed16v[3])
-     throw () __attribute__ ((__nonnull__ (1)));
-extern void lcong48 (unsigned short int __param[7]) throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Data structure for communication with thread safe versions.  This
-   type is to be regarded as opaque.  It's only exported because users
-   have to allocate objects of this type.  */
-struct drand48_data
-  {
-    unsigned short int __x[3]; /* Current state.  */
-    unsigned short int __old_x[3]; /* Old state.  */
-    unsigned short int __c; /* Additive const. in congruential formula.  */
-    unsigned short int __init; /* Flag for initializing.  */
-    unsigned long long int __a; /* Factor in congruential formula.  */
-  };
-
-/* Return non-negative, double-precision floating-point value in [0.0,1.0).  */
-extern int drand48_r (struct drand48_data *__restrict __buffer,
-        double *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
-extern int erand48_r (unsigned short int __xsubi[3],
-        struct drand48_data *__restrict __buffer,
-        double *__restrict __result) throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Return non-negative, long integer in [0,2^31).  */
-extern int lrand48_r (struct drand48_data *__restrict __buffer,
-        long int *__restrict __result)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-extern int nrand48_r (unsigned short int __xsubi[3],
-        struct drand48_data *__restrict __buffer,
-        long int *__restrict __result)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Return signed, long integers in [-2^31,2^31).  */
-extern int mrand48_r (struct drand48_data *__restrict __buffer,
-        long int *__restrict __result)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-extern int jrand48_r (unsigned short int __xsubi[3],
-        struct drand48_data *__restrict __buffer,
-        long int *__restrict __result)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-
-/* Seed random number generator.  */
-extern int srand48_r (long int __seedval, struct drand48_data *__buffer)
-     throw () __attribute__ ((__nonnull__ (2)));
-
-extern int seed48_r (unsigned short int __seed16v[3],
-       struct drand48_data *__buffer) throw () __attribute__ ((__nonnull__ (1, 2)));
-
-extern int lcong48_r (unsigned short int __param[7],
-        struct drand48_data *__buffer)
-     throw () __attribute__ ((__nonnull__ (1, 2)));
-#464 "/usr/include/stdlib.h" 3 4
-/* Allocate SIZE bytes of memory.  */
-extern void *malloc (size_t __size) throw () __attribute__ ((__malloc__)) /* Ignore */;
-/* Allocate NMEMB elements of SIZE bytes each, all initialized to 0.  */
-extern void *calloc (size_t __nmemb, size_t __size)
-     throw () __attribute__ ((__malloc__)) /* Ignore */;
-
-
-
-
-
-/* Re-allocate the previously allocated block
-   in PTR, making the new block SIZE bytes long.  */
-/* __attribute_malloc__ is not used, because if realloc returns
-   the same pointer that was passed to it, aliasing needs to be allowed
-   between objects pointed by the old and new pointers.  */
-extern void *realloc (void *__ptr, size_t __size)
-     throw () __attribute__ ((__warn_unused_result__));
-/* Free a block allocated by `malloc', `realloc' or `calloc'.  */
-extern void free (void *__ptr) throw ();
-
-
-
-/* Free a block.  An alias for `free'.	(Sun Unices).  */
-extern void cfree (void *__ptr) throw ();
-
-
-
-
-#1 "/usr/include/alloca.h" 1 3 4
-/* Copyright (C) 1992, 1996, 1997, 1998, 1999 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
- */
-#56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-#25 "/usr/include/alloca.h" 2 3 4
-
-extern "C" {
-
-/* Remove any previous definitions.  */
-
-
-/* Allocate a block that will be freed when the calling function exits.  */
-extern void *alloca (size_t __size) throw ();
-
-
-
-
-
-}
-#492 "/usr/include/stdlib.h" 2 3 4
-
-
-
-
-/* Allocate SIZE bytes on a page boundary.  The storage cannot be freed.  */
-extern void *valloc (size_t __size) throw () __attribute__ ((__malloc__)) /* Ignore */;
-
-
-
-/* Allocate memory of SIZE bytes with an alignment of ALIGNMENT.  */
-extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
-     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-/* ISO C variant of aligned allocation.  */
-extern void *aligned_alloc (size_t __alignment, size_t __size)
-     throw () /* Ignore */ __attribute__ ((__malloc__, __alloc_size__ (2)));
-
-
-
-/* Abort execution and generate a core-dump.  */
-extern void abort (void) throw () __attribute__ ((__noreturn__));
-
-
-/* Register a function to be called when `exit' is called.  */
-extern int atexit (void (*__func) (void)) throw () __attribute__ ((__nonnull__ (1)));
-
-
-/* Register a function to be called when `quick_exit' is called.  */
-
-extern "C++" int at_quick_exit (void (*__func) (void))
-     throw () __asm ("at_quick_exit") __attribute__ ((__nonnull__ (1)));
-
-
-
-
-
-
-
-/* Register a function to be called with the status
-   given to `exit' and the given argument.  */
-extern int on_exit (void (*__func) (int __status, void *__arg), void *__arg)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Call all functions registered with `atexit' and `on_exit',
-   in the reverse of the order in which they were registered,
-   perform stdio cleanup, and terminate program execution with STATUS.  */
-extern void exit (int __status) throw () __attribute__ ((__noreturn__));
-
-
-/* Call all functions registered with `at_quick_exit' in the reverse
-   of the order in which they were registered and terminate program
-   execution with STATUS.  */
-extern void quick_exit (int __status) throw () __attribute__ ((__noreturn__));
-
-
-
-
-
-/* Terminate the program with STATUS without calling any of the
-   functions registered with `atexit' or `on_exit'.  */
-extern void _Exit (int __status) throw () __attribute__ ((__noreturn__));
-
-
-
-
-
-/* Return the value of envariable NAME, or NULL if it doesn't exist.  */
-extern char *getenv (const char *__name) throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-/* This function is similar to the above but returns NULL if the
-   programs is running with SUID or SGID enabled.  */
-extern char *secure_getenv (const char *__name)
-     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-/* The SVID says this is in <stdio.h>, but this seems a better place.	*/
-/* Put STRING, which is of the form "NAME=VALUE", in the environment.
-   If there is no `=', remove NAME from the environment.  */
-extern int putenv (char *__string) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* Set NAME to VALUE in the environment.
-   If REPLACE is nonzero, overwrite an existing value.  */
-extern int setenv (const char *__name, const char *__value, int __replace)
-     throw () __attribute__ ((__nonnull__ (2)));
-
-/* Remove the variable NAME from the environment.  */
-extern int unsetenv (const char *__name) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* The `clearenv' was planned to be added to POSIX.1 but probably
-   never made it.  Nevertheless the POSIX.9 standard (POSIX bindings
-   for Fortran 77) requires this function.  */
-extern int clearenv (void) throw ();
-
-
-
-
-
-/* Generate a unique temporary file name from TEMPLATE.
-   The last six characters of TEMPLATE must be "XXXXXX";
-   they are replaced with a string that makes the file name unique.
-   Always returns TEMPLATE, it's either a temporary file name or a null
-   string if it cannot get a unique file name.  */
-extern char *mktemp (char *__template) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-
-/* Generate a unique temporary file name from TEMPLATE.
-   The last six characters of TEMPLATE must be "XXXXXX";
-   they are replaced with a string that makes the filename unique.
-   Returns a file descriptor open on the file for reading and writing,
-   or -1 if it cannot create a uniquely-named file.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-
-extern int mkstemp (char *__template) __attribute__ ((__nonnull__ (1))) /* Ignore */;
-#629 "/usr/include/stdlib.h" 3 4
-extern int mkstemp64 (char *__template) __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-
-/* Similar to mkstemp, but the template can have a suffix after the
-   XXXXXX.  The length of the suffix is specified in the second
-   parameter.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-
-extern int mkstemps (char *__template, int __suffixlen) __attribute__ ((__nonnull__ (1))) /* Ignore */;
-#651 "/usr/include/stdlib.h" 3 4
-extern int mkstemps64 (char *__template, int __suffixlen)
-     __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-
-/* Create a unique temporary directory from TEMPLATE.
-   The last six characters of TEMPLATE must be "XXXXXX";
-   they are replaced with a string that makes the directory name unique.
-   Returns TEMPLATE, or a null pointer if it cannot get a unique name.
-   The directory is created mode 700.  */
-extern char *mkdtemp (char *__template) throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-/* Generate a unique temporary file name from TEMPLATE similar to
-   mkstemp.  But allow the caller to pass additional flags which are
-   used in the open call to create the file..
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-
-extern int mkostemp (char *__template, int __flags) __attribute__ ((__nonnull__ (1))) /* Ignore */;
-#683 "/usr/include/stdlib.h" 3 4
-extern int mkostemp64 (char *__template, int __flags) __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-/* Similar to mkostemp, but the template can have a suffix after the
-   XXXXXX.  The length of the suffix is specified in the second
-   parameter.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-
-extern int mkostemps (char *__template, int __suffixlen, int __flags)
-     __attribute__ ((__nonnull__ (1))) /* Ignore */;
-#705 "/usr/include/stdlib.h" 3 4
-extern int mkostemps64 (char *__template, int __suffixlen, int __flags)
-     __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-
-
-/* Execute the given line as a shell command.
-
-   This function is a cancellation point and therefore not marked with
-   __THROW.  */
-extern int system (const char *__command) /* Ignore */;
-
-
-
-
-/* Return a malloc'd string containing the canonical absolute name of the
-   existing named file.  */
-extern char *canonicalize_file_name (const char *__name)
-     throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-/* Return the canonical absolute name of file NAME.  If RESOLVED is
-   null, the result is malloc'd; otherwise, if the canonical name is
-   PATH_MAX chars or more, returns null with `errno' set to
-   ENAMETOOLONG; if the name fits in fewer than PATH_MAX chars,
-   returns the name in RESOLVED.  */
-extern char *realpath (const char *__restrict __name,
-         char *__restrict __resolved) throw () /* Ignore */;
-
-
-
-/* Shorthand for type of comparison functions.  */
-
-
-typedef int (*__compar_fn_t) (const void *, const void *);
-
-
-typedef __compar_fn_t comparison_fn_t;
-
-
-
-typedef int (*__compar_d_fn_t) (const void *, const void *, void *);
-
-
-
-/* Do a binary search for KEY in BASE, which consists of NMEMB elements
-   of SIZE bytes each, using COMPAR to perform the comparisons.  */
-extern void *bsearch (const void *__key, const void *__base,
-        size_t __nmemb, size_t __size, __compar_fn_t __compar)
-     __attribute__ ((__nonnull__ (1, 2, 5))) /* Ignore */;
-
-/* Sort NMEMB elements of BASE, of SIZE bytes each,
-   using COMPAR to perform the comparisons.  */
-extern void qsort (void *__base, size_t __nmemb, size_t __size,
-     __compar_fn_t __compar) __attribute__ ((__nonnull__ (1, 4)));
-
-extern void qsort_r (void *__base, size_t __nmemb, size_t __size,
-       __compar_d_fn_t __compar, void *__arg)
-  __attribute__ ((__nonnull__ (1, 4)));
-
-
-
-/* Return the absolute value of X.  */
-extern int abs (int __x) throw () __attribute__ ((__const__)) /* Ignore */;
-extern long int labs (long int __x) throw () __attribute__ ((__const__)) /* Ignore */;
-
-
-
-__extension__ extern long long int llabs (long long int __x)
-     throw () __attribute__ ((__const__)) /* Ignore */;
-
-
-
-
-/* Return the `div_t', `ldiv_t' or `lldiv_t' representation
-   of the value of NUMER over DENOM. */
-/* GCC may have built-ins for these someday.  */
-extern div_t div (int __numer, int __denom)
-     throw () __attribute__ ((__const__)) /* Ignore */;
-extern ldiv_t ldiv (long int __numer, long int __denom)
-     throw () __attribute__ ((__const__)) /* Ignore */;
-
-
-
-
-__extension__ extern lldiv_t lldiv (long long int __numer,
-        long long int __denom)
-     throw () __attribute__ ((__const__)) /* Ignore */;
-
-
-
-
-
-
-/* Convert floating point numbers to strings.  The returned values are
-   valid only until another call to the same function.  */
-
-/* Convert VALUE to a string with NDIGIT digits and return a pointer to
-   this.  Set *DECPT with the position of the decimal character and *SIGN
-   with the sign of the number.  */
-extern char *ecvt (double __value, int __ndigit, int *__restrict __decpt,
-     int *__restrict __sign) throw () __attribute__ ((__nonnull__ (3, 4))) /* Ignore */;
-
-/* Convert VALUE to a string rounded to NDIGIT decimal digits.  Set *DECPT
-   with the position of the decimal character and *SIGN with the sign of
-   the number.  */
-extern char *fcvt (double __value, int __ndigit, int *__restrict __decpt,
-     int *__restrict __sign) throw () __attribute__ ((__nonnull__ (3, 4))) /* Ignore */;
-
-/* If possible convert VALUE to a string with NDIGIT significant digits.
-   Otherwise use exponential representation.  The resulting string will
-   be written to BUF.  */
-extern char *gcvt (double __value, int __ndigit, char *__buf)
-     throw () __attribute__ ((__nonnull__ (3))) /* Ignore */;
-
-
-
-/* Long double versions of above functions.  */
-extern char *qecvt (long double __value, int __ndigit,
-      int *__restrict __decpt, int *__restrict __sign)
-     throw () __attribute__ ((__nonnull__ (3, 4))) /* Ignore */;
-extern char *qfcvt (long double __value, int __ndigit,
-      int *__restrict __decpt, int *__restrict __sign)
-     throw () __attribute__ ((__nonnull__ (3, 4))) /* Ignore */;
-extern char *qgcvt (long double __value, int __ndigit, char *__buf)
-     throw () __attribute__ ((__nonnull__ (3))) /* Ignore */;
-
-
-/* Reentrant version of the functions above which provide their own
-   buffers.  */
-extern int ecvt_r (double __value, int __ndigit, int *__restrict __decpt,
-     int *__restrict __sign, char *__restrict __buf,
-     size_t __len) throw () __attribute__ ((__nonnull__ (3, 4, 5)));
-extern int fcvt_r (double __value, int __ndigit, int *__restrict __decpt,
-     int *__restrict __sign, char *__restrict __buf,
-     size_t __len) throw () __attribute__ ((__nonnull__ (3, 4, 5)));
-
-extern int qecvt_r (long double __value, int __ndigit,
-      int *__restrict __decpt, int *__restrict __sign,
-      char *__restrict __buf, size_t __len)
-     throw () __attribute__ ((__nonnull__ (3, 4, 5)));
-extern int qfcvt_r (long double __value, int __ndigit,
-      int *__restrict __decpt, int *__restrict __sign,
-      char *__restrict __buf, size_t __len)
-     throw () __attribute__ ((__nonnull__ (3, 4, 5)));
-
-
-
-
-
-/* Return the length of the multibyte character
-   in S, which is no longer than N.  */
-extern int mblen (const char *__s, size_t __n) throw () /* Ignore */;
-/* Return the length of the given multibyte character,
-   putting its `wchar_t' representation in *PWC.  */
-extern int mbtowc (wchar_t *__restrict __pwc,
-     const char *__restrict __s, size_t __n) throw () /* Ignore */;
-/* Put the multibyte character represented
-   by WCHAR in S, returning its length.  */
-extern int wctomb (char *__s, wchar_t __wchar) throw () /* Ignore */;
-
-
-/* Convert a multibyte string to a wide char string.  */
-extern size_t mbstowcs (wchar_t *__restrict __pwcs,
-   const char *__restrict __s, size_t __n) throw ();
-/* Convert a wide char string to multibyte string.  */
-extern size_t wcstombs (char *__restrict __s,
-   const wchar_t *__restrict __pwcs, size_t __n)
-     throw ();
-
-
-
-
-/* Determine whether the string value of RESPONSE matches the affirmation
-   or negative response expression as specified by the LC_MESSAGES category
-   in the program's current locale.  Returns 1 if affirmative, 0 if
-   negative, and -1 if not matching.  */
-extern int rpmatch (const char *__response) throw () __attribute__ ((__nonnull__ (1))) /* Ignore */;
-
-
-
-
-/* Parse comma separated suboption from *OPTIONP and match against
-   strings in TOKENS.  If found return index and set *VALUEP to
-   optional value introduced by an equal sign.  If the suboption is
-   not part of TOKENS return in *VALUEP beginning of unknown
-   suboption.  On exit *OPTIONP is set to the beginning of the next
-   token or at the terminating NUL character.  */
-extern int getsubopt (char **__restrict __optionp,
-        char *const *__restrict __tokens,
-        char **__restrict __valuep)
-     throw () __attribute__ ((__nonnull__ (1, 2, 3))) /* Ignore */;
-
-
-
-
-/* Setup DES tables according KEY.  */
-extern void setkey (const char *__key) throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-/* X/Open pseudo terminal handling.  */
-
-
-/* Return a master pseudo-terminal handle.  */
-extern int posix_openpt (int __oflag) /* Ignore */;
-
-
-
-/* The next four functions all take a master pseudo-tty fd and
-   perform an operation on the associated slave:  */
-
-/* Chown the slave to the calling user.  */
-extern int grantpt (int __fd) throw ();
-
-/* Release an internal lock so the slave can be opened.
-   Call after grantpt().  */
-extern int unlockpt (int __fd) throw ();
-
-/* Return the pathname of the pseudo terminal slave assoicated with
-   the master FD is open on, or NULL on errors.
-   The returned storage is good until the next call to this function.  */
-extern char *ptsname (int __fd) throw () /* Ignore */;
-
-
-
-/* Store at most BUFLEN characters of the pathname of the slave pseudo
-   terminal associated with the master FD is open on in BUF.
-   Return 0 on success, otherwise an error number.  */
-extern int ptsname_r (int __fd, char *__buf, size_t __buflen)
-     throw () __attribute__ ((__nonnull__ (2)));
-
-/* Open a master pseudo terminal and return its file descriptor.  */
-extern int getpt (void);
-
-
-
-/* Put the 1 minute, 5 minute and 15 minute load averages into the first
-   NELEM elements of LOADAVG.  Return the number written (never more than
-   three, but may be less than NELEM), or -1 if an error occurred.  */
-extern int getloadavg (double __loadavg[], int __nelem)
-     throw () __attribute__ ((__nonnull__ (1)));
-
-
-
-#1 "/usr/include/bits/stdlib-float.h" 1 3 4
-/* Floating-point inline functions for stdlib.h.
-   Copyright (C) 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-#952 "/usr/include/stdlib.h" 2 3 4
-
-/* Define some macros helping to catch buffer overflows.  */
-#964 "/usr/include/stdlib.h" 3 4
-}
-#66 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 2 3
-
-// Get rid of those macros defined in <stdlib.h> in lieu of real functions.
-#97 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  using ::div_t;
-  using ::ldiv_t;
-
-  using ::abort;
-  using ::abs;
-  using ::atexit;
-  using ::atof;
-  using ::atoi;
-  using ::atol;
-  using ::bsearch;
-  using ::calloc;
-  using ::div;
-  using ::exit;
-  using ::free;
-  using ::getenv;
-  using ::labs;
-  using ::ldiv;
-  using ::malloc;
-
-  using ::mblen;
-  using ::mbstowcs;
-  using ::mbtowc;
-
-  using ::qsort;
-  using ::rand;
-  using ::realloc;
-  using ::srand;
-  using ::strtod;
-  using ::strtol;
-  using ::strtoul;
-  using ::system;
-
-  using ::wcstombs;
-  using ::wctomb;
-
-
-  inline long
-  abs(long __i) { return labs(__i); }
-
-  inline ldiv_t
-  div(long __i, long __j) { return ldiv(__i, __j); }
-
-
-} // namespace
-#157 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-  using ::lldiv_t;
-
-
-
-
-
-  using ::_Exit;
-
-
-  inline long long
-  abs(long long __x) { return __x >= 0 ? __x : -__x; }
-
-
-  using ::llabs;
-
-  inline lldiv_t
-  div(long long __n, long long __d)
-  { lldiv_t __q; __q.quot = __n / __d; __q.rem = __n % __d; return __q; }
-
-  using ::lldiv;
-#192 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdlib" 3
-  using ::atoll;
-  using ::strtoll;
-  using ::strtoull;
-
-  using ::strtof;
-  using ::strtold;
-
-
-} // namespace __gnu_cxx
-
-namespace std
-{
-
-  using ::__gnu_cxx::lldiv_t;
-
-  using ::__gnu_cxx::_Exit;
-  using ::__gnu_cxx::abs;
-
-  using ::__gnu_cxx::llabs;
-  using ::__gnu_cxx::div;
-  using ::__gnu_cxx::lldiv;
-
-  using ::__gnu_cxx::atoll;
-  using ::__gnu_cxx::strtof;
-  using ::__gnu_cxx::strtoll;
-  using ::__gnu_cxx::strtoull;
-  using ::__gnu_cxx::strtold;
-} // namespace std
-#36 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h" 2
-
+#38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h" 2
 #1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/limits" 1 3
 // The template and inlines for the numeric_limits classes. -*- C++ -*-
 
@@ -46961,8850 +44404,52 @@ inline __attribute__((always_inline)) enable_and() { _ssdm_SpecConstant(&value);
 
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_traits.h" 2
-
-
-namespace hls
-{
-
-template<typename T>
-struct x_traits_default {
-  typedef T ADD_T;
-  typedef T SUB_T;
-  typedef T SAT_T;
-  typedef T MULT_T;
-  typedef T MADD_T;
-};
-
-template<typename T1, typename T2>
-struct x_traits {
-// 	typedef T1 ADD_T;
-// 	typedef T1 SAT_T;
-// 	typedef T1 MULT_T;
-// 	typedef T1 MADD_T;
-// 	typedef T1 CMADD_T;
-// 	typedef T1 CONJ_SQ_T;
-// 	typedef T1 CONJ_SQ_2_T;
-// 	typedef int INT_T;
-//     typedef T1 INV_T;
-//     typedef float_struct<24,8> FLOAT_STRUCT_T;
-
-};
-
-template<>
-struct x_traits<double, double> : public x_traits_default<double> { };
-
-template<typename T2>
-struct x_traits<double, T2> : public x_traits_default<double> { };
-
-template<typename T1>
-struct x_traits<T1, double> : public x_traits_default<double> { };
-
-template<>
-struct x_traits<float, float> : public x_traits_default<float> { };
-
-template<typename T2>
-struct x_traits<float, T2> : public x_traits_default<float> { };
-
-template<typename T1>
-struct x_traits<T1, float> : public x_traits_default<float> { };
-
-template<>
-struct x_traits<half, half> : public x_traits_default<half> { };
-
-template<typename T2>
-struct x_traits<half, T2> : public x_traits_default<float> { };
-
-template<typename T1>
-struct x_traits<T1, half> : public x_traits_default<float> { };
-
-template<>
-struct x_traits<double, float> : public x_traits_default<double> { };
-
-template<>
-struct x_traits<float, double> : public x_traits_default<double> { };
-
-template<>
-struct x_traits<double, half> : public x_traits_default<double> { };
-
-template<>
-struct x_traits<half, double> : public x_traits_default<double> { };
-
-template<>
-struct x_traits<int, int> : public x_traits_default<int> { };
-
-template<>
-struct x_traits<unsigned int, unsigned int> : public x_traits_default<unsigned int> { };
-
-template<>
-struct x_traits<int64_t, int64_t> : public x_traits_default<int64_t> { };
-
-template<int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int W2, int I2, ap_q_mode Q2, ap_o_mode O2>
-struct x_traits<ap_fixed<W1,I1,Q1,O1>,ap_fixed<W2,I2,Q2,O2> > {
-    typedef typename ap_fixed<W1,I1>::template RType<W2,I2,true> RTYPE;
-    typedef ap_fixed<RTYPE::plus_w, RTYPE::plus_i> ADD_T;
-    typedef ap_fixed<RTYPE::minus_w, RTYPE::minus_i> SUB_T;
-    typedef ap_fixed<RTYPE::mult_w, RTYPE::mult_i> MULT_T;
- typedef ap_fixed<W1,I1,SC_RND,SC_SAT> SAT_T;
- typedef ap_fixed<W1+W2+1,I1+I2+1> MADD_T;
- typedef ap_fixed<W1+W2+2,I1+I2+2> CMADD_T;
- typedef ap_fixed<(2*W1)+1,(2*I1)> CONJ_SQ_T;
- typedef ap_fixed<(2*W1)+2,(2*I1)+1> CONJ_SQ_2_T;
-    typedef ap_fixed<2*(((I1) > (W1-I1) ? (I1) : (W1-I1))+1),(((I1) > (W1-I1) ? (I1) : (W1-I1))+1)> INV_T;
-    typedef int INT_T;
-    typedef float_struct<24,8> FLOAT_STRUCT_T;
-};
-
-template<int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int W2, int I2, ap_q_mode Q2, ap_o_mode O2>
-struct x_traits<ap_fixed<W1,I1,Q1,O1>,ap_ufixed<W2,I2,Q2,O2> > {
-    typedef typename ap_fixed<W1,I1>::template RType<W2,I2,false> RTYPE;
-    typedef ap_fixed<RTYPE::plus_w, RTYPE::plus_i> ADD_T;
-    typedef ap_fixed<RTYPE::minus_w, RTYPE::minus_i> SUB_T;
-    typedef ap_fixed<RTYPE::mult_w, RTYPE::mult_i> MULT_T;
-};
-
-template<int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int W2, int I2, ap_q_mode Q2, ap_o_mode O2>
-struct x_traits<ap_ufixed<W1,I1,Q1,O1>,ap_fixed<W2,I2,Q2,O2> > {
-    typedef typename ap_ufixed<W1,I1>::template RType<W2,I2,true> RTYPE;
-    typedef ap_fixed<RTYPE::plus_w, RTYPE::plus_i> ADD_T;
-    typedef ap_fixed<RTYPE::minus_w, RTYPE::minus_i> SUB_T;
-    typedef ap_fixed<RTYPE::mult_w, RTYPE::mult_i> MULT_T;
-};
-
-template<int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int W2, int I2, ap_q_mode Q2, ap_o_mode O2>
-struct x_traits<ap_ufixed<W1,I1,Q1,O1>,ap_ufixed<W2,I2,Q2,O2> > {
-    typedef typename ap_ufixed<W1,I1>::template RType<W2,I2,false> RTYPE;
-    typedef ap_ufixed<RTYPE::plus_w, RTYPE::plus_i> ADD_T;
-    typedef ap_fixed<RTYPE::minus_w, RTYPE::minus_i> SUB_T;
-    typedef ap_ufixed<RTYPE::mult_w, RTYPE::mult_i> MULT_T;
- typedef ap_ufixed<W1,I1,SC_RND,SC_SAT> SAT_T;
- typedef ap_ufixed<W1+W2+1,I1+I2+1> MADD_T;
- typedef ap_ufixed<W1+W2+2,I1+I2+2> CMADD_T;
- typedef ap_ufixed<(2*W1)+1,(2*I1)> CONJ_SQ_T;
- typedef ap_ufixed<(2*W1)+2,(2*I1)+1> CONJ_SQ_2_T;
-    typedef ap_ufixed<2*(((I1) > (W1-I1) ? (I1) : (W1-I1))+1),(((I1) > (W1-I1) ? (I1) : (W1-I1))+1)> INV_T;
-    typedef int INT_T;
-    typedef float_struct<24,8> FLOAT_STRUCT_T;
-};
-
-template<int W1, int W2>
-struct x_traits<ap_int<W1>,ap_int<W2> > {
- typedef ap_int<((W1) > (W2) ? (W1) : (W2)) + 1> ADD_T;
- typedef ap_int<((W1) > (W2) ? (W1) : (W2)) + 1> SUB_T;
- typedef ap_int<W1+W2> MULT_T;
- typedef ap_int<(W1 > W2)? W1:W2> MADD_T;
-};
-
-template<int W1, int W2>
-struct x_traits<ap_int<W1>,ap_uint<W2> > {
- typedef ap_int<((W1) > (W2+1) ? (W1) : (W2+1)) + 1> ADD_T;
- typedef ap_int<((W1) > (W2+1) ? (W1) : (W2+1)) + 1> SUB_T;
- typedef ap_int<W1+W2> MULT_T;
-};
-
-template<int W1, int W2>
-struct x_traits<ap_uint<W1>,ap_int<W2> > {
- typedef ap_int<((W1+1) > (W2) ? (W1+1) : (W2)) + 1> ADD_T;
- typedef ap_int<((W1+1) > (W2) ? (W1+1) : (W2)) + 1> SUB_T;
- typedef ap_int<W1+W2> MULT_T;
-};
-
-template<int W1, int W2>
-struct x_traits<ap_uint<W1>,ap_uint<W2> > {
- typedef ap_uint<((W1) > (W2) ? (W1) : (W2)) + 1> ADD_T;
- typedef ap_int<((W1) > (W2) ? (W1) : (W2)) + 1> SUB_T;
- typedef ap_uint<W1+W2> MULT_T;
-};
-
-template<int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int W2>
-struct x_traits<ap_fixed<W1,I1,Q1,O1>,ap_int<W2> > : public x_traits<ap_fixed<W1,I1>, ap_fixed<W2,W2> > {};
-
-template<int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int W2>
-struct x_traits<ap_fixed<W1,I1,Q1,O1>,ap_uint<W2> > : public x_traits<ap_fixed<W1,I1>, ap_ufixed<W2,W2> > {};
-
-template<int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int W2>
-struct x_traits<ap_ufixed<W1,I1,Q1,O1>,ap_int<W2> > : public x_traits<ap_ufixed<W1,I1>, ap_fixed<W2,W2> > {};
-
-template<int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int W2>
-struct x_traits<ap_ufixed<W1,I1,Q1,O1>,ap_uint<W2> > : public x_traits<ap_ufixed<W1,I1>, ap_ufixed<W2,W2> > {};
-
-template<int W1, int W2, int I2, ap_q_mode Q2, ap_o_mode O2>
-struct x_traits<ap_int<W1>, ap_fixed<W2,I2,Q2,O2> > : public x_traits<ap_fixed<W1,W1>, ap_fixed<W2,I2> > {};
-
-template<int W1, int W2, int I2, ap_q_mode Q2, ap_o_mode O2>
-struct x_traits<ap_int<W1>, ap_ufixed<W2,I2,Q2,O2> > : public x_traits<ap_fixed<W1,W1>, ap_ufixed<W2,I2> > {};
-
-template<int W1, int W2, int I2, ap_q_mode Q2, ap_o_mode O2>
-struct x_traits<ap_uint<W1>, ap_fixed<W2,I2,Q2,O2> > : public x_traits<ap_ufixed<W1,W1>, ap_fixed<W2,I2> > {};
-
-template<int W1, int W2, int I2, ap_q_mode Q2, ap_o_mode O2>
-struct x_traits<ap_uint<W1>, ap_ufixed<W2,I2,Q2,O2> > : public x_traits<ap_ufixed<W1,W1>, ap_ufixed<W2,I2> > {};
-
-// fixed_type<X>::T is the smallest ap_fixed/ap_ufixed type that can losslessly contain X
-// e.g. X x;  fixed_type<X>::T y(x); is sensible;
-
-    template<typename T> struct fixed_type { };
-    template<> struct fixed_type<char> { typedef ap_fixed<8,8> T; };
-    template<> struct fixed_type<unsigned char> { typedef ap_ufixed<8,8> T; };
-    template<> struct fixed_type<short> { typedef ap_fixed<16,16> T; };
-    template<> struct fixed_type<unsigned short> { typedef ap_ufixed<16,16> T; };
-    template<> struct fixed_type<int> { typedef ap_fixed<32,32> T; };
-    template<> struct fixed_type<unsigned int> { typedef ap_ufixed<32,32> T; };
-    template<> struct fixed_type<float> { typedef ap_ufixed<64,32> T; };
-    template<int W> struct fixed_type<ap_int<W> > { typedef ap_fixed<W,W> T; };
-    template<int W> struct fixed_type<ap_uint<W> > { typedef ap_ufixed<W,W> T; };
-    template<int W, int I, ap_q_mode _AP_Q, ap_o_mode _AP_O> struct fixed_type<ap_fixed<W,I, _AP_Q, _AP_O> > { typedef ap_fixed<W,I> T; };
-    template<int W, int I, ap_q_mode _AP_Q, ap_o_mode _AP_O> struct fixed_type<ap_ufixed<W,I, _AP_Q, _AP_O> > { typedef ap_ufixed<W,I> T; };
-
-template<typename T1, int DIM>
-struct x_traits_d_default {
-    typedef T1 ACCUM_T;
-    typedef T1 ACCUM2_T;
-    typedef T1 ADD_TREE_T;
-};
-
-template<typename T1, int DIM>
-struct x_traits_d {};
-
-template<int DIM>
-struct x_traits_d <float,DIM>:x_traits_d_default<float, DIM> {};
-
-template<int DIM>
-struct x_traits_d <double,DIM>:x_traits_d_default<double, DIM> {};
-
-template<int DIM>
-struct x_traits_d <half,DIM>:x_traits_d_default<half, DIM> {};
-
-template<int W, int DIM>
-struct x_traits_d <ap_int<W>,DIM> {
-    typedef ap_int<W> ACCUM_T;
-    typedef ap_int<2*W> ACCUM2_T;
-    typedef ap_int<25+W> ADD_TREE_T;
-};
-
-template<int W, int DIM>
-struct x_traits_d <ap_uint<W>,DIM> {
-    typedef ap_uint<W> ACCUM_T;
-    typedef ap_uint<2*W> ACCUM2_T;
-    typedef ap_uint<25+W> ADD_TREE_T;
-};
-
-template<int W, int I, ap_q_mode Q, ap_o_mode O, int DIM>
-struct x_traits_d <ap_fixed<W,I,Q,O>,DIM> {
-    typedef ap_fixed<W+BitWidth<DIM>::Value,I+BitWidth<DIM>::Value,Q,O> ACCUM_T;
-    typedef ap_fixed<(2*W)+BitWidth<DIM>::Value,(2*I)+BitWidth<DIM>::Value,Q,O> ACCUM2_T;
-    typedef ap_fixed<25+W+BitWidth<DIM>::Value,25+I+BitWidth<DIM>::Value,Q,O> ADD_TREE_T; // TODO placeholder
-};
-
-template<int W, int I, ap_q_mode Q, ap_o_mode O, int DIM>
-struct x_traits_d <ap_ufixed<W,I,Q,O>,DIM> {
-    typedef ap_ufixed<W+BitWidth<DIM>::Value,I+BitWidth<DIM>::Value,Q,O> ACCUM_T;
-    typedef ap_ufixed<(2*W)+BitWidth<DIM>::Value,(2*I)+BitWidth<DIM>::Value,Q,O> ACCUM2_T;
-    typedef ap_ufixed<25+W+BitWidth<DIM>::Value,25+I+BitWidth<DIM>::Value,Q,O> ADD_TREE_T; // TODO placeholder
-};
-
-}
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_complex.h" 2
-
-namespace hls {
-
-/*
-*******************************************************************************
-* Vivado HLS complex data type
-* ----------------------------
-*
-* x_complex
-* x_traits for x_complex
-* set_to_one
-*
-*******************************************************************************
-*/
-
-
-/*
-*******************************************************************************
-* Complex class
-*
-* This is used over std::<complex> for the following reasons.
-* 1. <complex> auto initializes all variables which forces an auto-initialization
-*    loop to be inserted for every declaration of an array of complex data
-* 2. Using std::<complex> as base class leads to compilation errors.
-*******************************************************************************
-*/
-
-  template<typename T> class x_complex {
-
-  private:
-    T re, im;
-
-  public:
-    // Multiply return type
-    // o Only supports lhs and rhs of the same type
-    typedef x_complex< typename x_traits<T,T>::MADD_T > MULT_RT;
-
-    // Constructors
-    x_complex() {};
-    x_complex(const T& r, const T& i) { re = r; im = i; };
-    x_complex(const T& r) { re = r; im = 0; };
-
-    // Data access
-    inline T real() const { return(re); };
-    inline T& real() { return(re); };
-    inline void real(const T& r) { re = r; };
-    inline T imag() const { return(im); };
-    inline T& imag() { return(im); };
-    inline void imag(const T& i) { im = i; };
-
-    // Operator =
-    inline x_complex<T>& operator= (const T& rhs) {
-      re = rhs; im = 0; return *this; };
-    template<typename T2>
-    inline x_complex<T>& operator= (const x_complex<T2>& rhs) {
-      re = rhs.real(); im = rhs.imag(); return *this; };
-
-    // Operator *=, *
-    template<typename T2>
-    inline x_complex<T>& operator*= (const T2& rhs) {
-      re *= rhs; im *= rhs; return *this; };
-    template<typename T2>
-    inline x_complex<T>& operator*= (const x_complex<T2>& rhs) {
-      T tmp1 = re*rhs.real();
-      T tmp2 = im*rhs.imag();
-      T tmp3 = re*rhs.imag();
-      T tmp4 = im*rhs.real();
-      re = tmp1 - tmp2;
-      im = tmp3 + tmp4;
-      return *this; };
-    inline MULT_RT operator* (const x_complex<T>& rhs) {
-      x_complex_mult_complex:;
-      typename x_traits<T,T>::MULT_T m1, m2, m3, m4;
-      typename x_traits<T,T>::MADD_T sum_re, sum_im;
-      MULT_RT res;
-      m1 = re*rhs.real();
-      m2 = im*rhs.imag();
-      m3 = re*rhs.imag();
-      m4 = im*rhs.real();
-      sum_re = m1 - m2;
-      sum_im = m3 + m4;
-      res.real(sum_re);
-      res.imag(sum_im);
-      return res;
-    };
-    inline MULT_RT operator* (const T& rhs) {
-      x_complex_mult_real:;
-      typename x_traits<T,T>::MULT_T m1, m2;
-      typename x_traits<T,T>::MADD_T sum_re, sum_im;
-      MULT_RT res;
-      m1 = re*rhs;
-      m2 = im*rhs;
-      sum_re = m1;
-      sum_im = m2;
-      res.real(sum_re);
-      res.imag(sum_im);
-      return res;
-    };
-
-    // Operator /=, /
-    inline x_complex<T>& operator/= (const T& rhs) {;
-      re /= rhs; im /= rhs; return *this; };
-    inline x_complex<T> operator/ (const T& rhs) {
-      x_complex<T> tmp(*this); tmp /= rhs; return tmp; };
-    inline x_complex<T>& operator/= (const x_complex<T>& rhs) {
-      // Complex division:
-      //   Get conjugate of rhs
-      //   a =  *this x conjugate
-      //   b =   rhs  x conjugate
-      //   re = a.re / b.re
-      //   im = a.im / b.re
-      x_complex<T> conj = x_conj(rhs);
-      x_complex<T> a = (*this)*conj;
-      x_complex<T> b = conj*rhs;
-      re = a.real() / b.real();
-      im = a.imag() / b.real();
-      return *this;
-    };
-    inline x_complex<T> operator/ (const x_complex<T>& rhs) {
-      x_complex<T> tmp(*this);
-      tmp /= rhs;
-      return tmp;
-    };
-
-    // Operator +=, +
-    inline x_complex<T>& operator+= (const T& rhs) {
-      re += rhs; return *this; };
-    inline x_complex<T> operator+= (const x_complex<T>& rhs) {
-      re += rhs.real(); im += rhs.imag(); return *this; };
-    inline x_complex<T> operator+ (const T& rhs) {
-      x_complex<T> tmp(*this); tmp += rhs; return tmp; };
-    inline x_complex<T> operator+ (const x_complex<T>& rhs) {
-      x_complex<T> tmp(*this); tmp += rhs; return tmp; };
-
-
-    // Operator -=, -
-    inline x_complex<T>& operator-= (const T& rhs) {
-      re -= rhs; return *this; }
-    inline x_complex<T>& operator-= (const x_complex<T>& rhs) {
-      re -= rhs.real(); im -= rhs.imag(); return *this; };
-    inline x_complex<T> operator- (const T& rhs) {
-      x_complex<T> tmp(*this); tmp -= rhs; return tmp; };
-    inline x_complex<T> operator- (const x_complex<T>& rhs) {
-      x_complex<T> tmp(*this); tmp -= rhs; return tmp; };
-    inline x_complex<T> operator- () {
-      x_complex<T> tmp(*this);
-      tmp.real(-real());
-      tmp.imag(-imag());
-      return tmp;
-    };
-
-    // Operator <<
-    friend std::ostream &operator<<(std::ostream &out, const x_complex<T> &c) {
-      bool neg_imag = c.imag() <= -0 ? true : false;
-      T imag = neg_imag ? (T)-c.imag() : (T)c.imag();
-
-      out << c.real() << (neg_imag ? " - j*":" + j*") << imag;
-      return out;
-    }
-
-  }; // x_complex
-
-  template<typename T1> typename x_complex<T1>::MULT_RT operator* (const T1& lhs, x_complex<T1>& rhs) {
-    return (rhs*lhs); // Flip direction and re-use complex class defined operator
-  }
-
-  template<typename T1, typename T2>
-    struct x_traits<x_complex<T1>,x_complex<T2> > {
-      typedef x_complex<T1> ADD_T;
-      typedef x_complex<T1> SAT_T;
-      typedef x_complex<T1> MULT_T;
-      typedef x_complex<T1> MADD_T;
-      typedef x_complex<int> INT_T;
-      typedef x_complex<float_struct<24,8> > FLOAT_STRUCT_T;
-    };
-
-  template<int W1, int I1, int W2, int I2>
-    struct x_traits<x_complex<ap_fixed<W1,I1> >,x_complex<ap_fixed<W2,I2> > > {
-      typedef x_complex<ap_fixed<W1+1,I1+1> > ADD_T;
-      typedef x_complex<ap_fixed<W1,I1,SC_RND,SC_SAT> > SAT_T;
-      typedef x_complex<ap_fixed<W1+W2+1,I1+I2+1> > MULT_T;
-      typedef x_complex<ap_fixed<W1+W2+2,I1+I2+2> > MADD_T;
-      typedef x_complex<ap_fixed<(2*W1)+1,(2*I1)+1> > CONJ_SQ_T;
-      typedef x_complex<int> INT_T;
-      typedef x_complex<float_struct<24,8> > FLOAT_STRUCT_T;
-    };
-
-  template<int DIM, typename T>
-    struct x_traits_d <x_complex<T>,DIM> {
-      typedef x_complex<T> ACCUM_T;
-      typedef x_complex<T> ACCUM2_T;
-      typedef x_complex<ap_int<25+DIM> > ADD_TREE_T;
-    };
-
-  template<int DIM, int W, int I>
-    struct x_traits_d <x_complex<ap_fixed<W,I> >,DIM> {
-      typedef x_complex<ap_fixed<W+BitWidth<DIM>::Value,I+BitWidth<DIM>::Value> > ACCUM_T;
-      typedef x_complex<ap_fixed<(2*W)+BitWidth<DIM>::Value,(2*I)+BitWidth<DIM>::Value> > ACCUM2_T;
-    };
-
-  template<typename T> T x_neg(T &din) {
-    return -din;
-  }
-
-  static float x_neg(float din) {
-    return copysignf(din,-1.0f);
-  }
-
-  static double x_neg(double din) {
-    return copysign(din,-1.0);
-  }
-
-  template<typename T> x_complex<T> x_neg(x_complex<T> &din) {
-    x_complex<T> tmp;
-    tmp.real(-din.real());
-    tmp.imag(-din.imag());
-    return(tmp);
-  }
-
-
-  template<typename T> typename x_traits<T,T>::MULT_T x_conj_sq(T &din) {
-  x_conj_sq:;
-    return (din * din);
-  }
-
-  template<typename T> typename x_traits<T,T>::MADD_T x_conj_sq(x_complex<T> &din) {
-  x_conj_sq_complex:;
-    return ( (din.real()*din.real()) + (din.imag()*din.imag()));
-  }
-
-  template<typename T> T x_conj(T &din) {
-    x_conj_real:;
-    return din;
-  }
-
-  template<typename T> x_complex<T> x_conj(const x_complex<T> &din) {
-    x_conj_complex:;
-    x_complex<T> tmp;
-    tmp.real(din.real());
-    tmp.imag(-din.imag());
-    return(tmp);
-  }
-
-  // This function is called when a non-const x_complex is conjugated.  It calls the
-  // version of x_conj() which takes a constant parameter
-  template<typename T> x_complex<T> x_conj(x_complex<T> &din) {
-    const x_complex<T> tmp = din;
-    return(x_conj(tmp));
-  }
-
-  template<int W, int I> void set_to_one(x_complex<ap_fixed<W,I> > &a) {
-    ap_int<W> tmp_sat = pow((double)2,(double)(W-I))-1;
-    ap_fixed<W,I> tmp;
-    tmp.range() = tmp_sat;
-    a = tmp;
-  }
-
-  // Functions to extract real and imaginary components
-  template<typename T> T x_real(T &din) {
-    return din;
-  }
-  template<typename T> T x_real(x_complex<T> &din) {
-    return(din.real());
-  }
-  template<typename T> T x_imag(T &din) {
-    T tmp = 0;
-    return tmp;
-  }
-  template<typename T> T x_imag(x_complex<T> &din) {
-    return(din.imag());
-  }
-
-} // end namespace hls
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2008-2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-/**
- * @file hls_math.h
- * This file contains math.h related functions such as sin, cos, sqrt, ln, etc.
- */
-#44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h"
-#1 "/usr/include/assert.h" 1 3 4
-/* Copyright (C) 1991,1992,1994-2001,2003,2004,2007,2011,2012
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- *	ISO C99 Standard: 7.2 Diagnostics	<assert.h>
- */
-#44 "/usr/include/assert.h" 3 4
-/* void assert (int expression);
-
-   If NDEBUG is defined, do nothing.
-   If not, and EXPRESSION is zero, print an error message and abort.  */
-#65 "/usr/include/assert.h" 3 4
-extern "C" {
-
-/* This prints an "Assertion failed" message and aborts.  */
-extern void __assert_fail (const char *__assertion, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
-
-/* Likewise, but prints the error text for ERRNUM.  */
-extern void __assert_perror_fail (int __errnum, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
-
-
-/* The following is not at all used here but needed for standard
-   compliance.  */
-extern void __assert (const char *__assertion, const char *__file, int __line)
-     throw () __attribute__ ((__noreturn__));
-
-
-}
-#98 "/usr/include/assert.h" 3 4
-/* Version 2.4 and later of GCC define a magical variable `__PRETTY_FUNCTION__'
-   which contains the name of the function currently being defined.
-   This is broken in G++ before version 2.6.
-   C9x has a similar variable called __func__, but prefer the GCC one since
-   it demangles C++ function names.  */
-#45 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h" 2
-
-
-
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_fpo.h" 1
-/* -*- c -*-*/
-/*
-#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
-#-
-#-  This file contains confidential and proprietary information
-#-  of Xilinx, Inc. and is protected under U.S. and
-#-  international copyright and other intellectual property
-#-  laws.
-#-
-#-  DISCLAIMER
-#-  This disclaimer is not a license and does not grant any
-#-  rights to the materials distributed herewith. Except as
-#-  otherwise provided in a valid license issued to you by
-#-  Xilinx, and to the maximum extent permitted by applicable
-#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-#-  (2) Xilinx shall not be liable (whether in contract or tort,
-#-  including negligence, or under any other theory of
-#-  liability) for any loss or damage of any kind or nature
-#-  related to, arising under or in connection with these
-#-  materials, including for any direct, or any indirect,
-#-  special, incidental, or consequential loss or damage
-#-  (including loss of data, profits, goodwill, or any type of
-#-  loss or damage suffered as a result of any action brought
-#-  by a third party) even if such damage or loss was
-#-  reasonably foreseeable or Xilinx had been advised of the
-#-  possibility of the same.
-#-
-#-  CRITICAL APPLICATIONS
-#-  Xilinx products are not designed or intended to be fail-
-#-  safe, or for use in any application requiring fail-safe
-#-  performance, such as life-support or safety devices or
-#-  systems, Class III medical devices, nuclear facilities,
-#-  applications related to the deployment of airbags, or any
-#-  other applications that could lead to death, personal
-#-  injury, or severe property or environmental damage
-#-  (individually and collectively, "Critical
-#-  Applications"). Customer assumes the sole risk and
-#-  liability of any use of Xilinx products in Critical
-#-  Applications, subject only to applicable laws and
-#-  regulations governing limitations on product liability.
-#-
-#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-#-  PART OF THIS FILE AT ALL TIMES. 
-#- ************************************************************************
-
- *
- *
- */
-#85 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_fpo.h"
-//#define HLS_FPO_UNORDEREDF(a,b)
-//#define HLS_FPO_UNORDERED(a,b)
-#99 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_fpo.h"
-//#define HLS_FPO_CONDCODEF(a,b)
-//#define HLS_FPO_CONDCODE(a,b)
-#655 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_fpo.h"
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#51 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h" 2
-
-namespace hls
-{
-
-/**
- * The Xilinx math.h library implements standard math.h functions
- * optimized for FPGA implementation.
- *
- */
-
-/* @{ */
-
-static int __signbit(float a_re)
-{
-    fp_struct<float> s(a_re);
-    return s.__signbit();
-}
-
-static int __signbit(double a_re)
-{
-    fp_struct<double> s(a_re);
-    return s.__signbit();
-}
-
-static double nan(const char *tagp) {
-    fp_struct<double> nan;
-    nan.sig = -1; // all ones
-    nan.exp = -1; // all ones
-    nan.sign = 0;
-    return nan.to_ieee();
-}
-
-static float nanf(const char *tagp) {
-    fp_struct<float> nan;
-    nan.sig = -1; // all ones
-    nan.exp = -1; // all ones
-    nan.sign = 0;
-    return nan.to_ieee();
-}
-
-
-/**
- * Determines if given floating point number has a finite value.
- * i.e. normal, subnormal or zero, but not infinite or NAN
- *
- * @param t_in floating point vlaue.
- * @return nonzero value if arg has finite value, 0 otherwise.
- */
-static
-int
-__isfinite(float t_in)
-{
-    fp_struct<float> fs = t_in;
-    int ret = (fs.exp == 0xFF) ? 0 : 1;
-    return ret;
-}
-
-static
-int
-__isfinite(double t_in)
-{
-    fp_struct<double> fs = t_in;
-    int ret = (fs.exp == 0x7FF) ? 0 : 1;
-    return ret;
-}
-
-/**
- * Determines if given floating point number is positive or negative infinity.
- *
- * @param t_in floating point vlaue.
- * @return nonzero value if arg is infinite, 0 otherwise.
- */
-static
-int
-__isinf(float t_in)
-{
-    fp_struct<float> fs = t_in;
-    int ret = ((fs.exp == 0xFF) && (fs.sig == 0x0)) ? 1 : 0;
-    return ret;
-}
-
-static
-int
-__isinf(double t_in)
-{
-    fp_struct<double> fs = t_in;
-    int ret = ((fs.exp == 0x7FF) && (fs.sig == 0x0)) ? 1 : 0;
-    return ret;
-}
-
-/**
- * Determines if given floating point number is not-a-number (NaN)
- *
- * @param t_in floating point vlaue.
- * @return nonzero value if arg is not-a-number (NaN), 0 otherwise.
- */
-static
-int
-__isnan(float t_in)
-{
-    fp_struct<float> fs = t_in;
-    int ret = ((fs.exp == 0xFF) && (fs.sig != 0x0)) ? 1 : 0;
-    return ret;
-}
-
-static
-int
-__isnan(double t_in)
-{
-    fp_struct<double> fs = t_in;
-    int ret = ((fs.exp == 0x7FF) && (fs.sig != 0x0)) ? 1 : 0;
-    return ret;
-}
-
-
-/**
- * Determines if given floating point number is normal
- * i.e. is neither zero, subnormal, infinite or NaN.
- *
- * @param t_in floating point vlaue.
- * @return nonzero value if arg is normal, 0 otherwise.
- */
-
-static
-int
-__isnormal(float t_in)
-{
-    fp_struct<float> fs = t_in;
-    int ret = ((fs.exp != 0xFF) && (fs.exp != 0x0)) ? 1 : 0;
-    return ret;
-}
-
-static
-int
-__isnormal(double t_in)
-{
-    fp_struct<double> fs = t_in;
-    int ret = ((fs.exp != 0x7FF) && (fs.exp != 0x0)) ? 1 : 0;
-    return ret;
-}
-
-/**
- * Categorizes floating point value t_in into the following categories:
- * zero, subnormal, normal, infinite, NaN, or implementation-defined category.
- *
- * @param t_in floating point vlaue.
- * @return FP_INFINITE, FP_NAN, FP_NORMAL, FP_SUBNORMAL, FP_ZERO
- */
-#219 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h"
-static
-int
-__fpclassifyf(float t_in)
-{
-    fp_struct<float> fs = t_in;
-    int ret;
-    if(fs.exp == 0x0) {
-        ret = (fs.sig == 0x0) ? 2 : 3;
-    } else if(fs.exp == 0xFF) {
-        ret = (fs.sig == 0x0) ? 1 : 0;
-    } else {
-        ret = 4;
-    }
-    return ret;
-}
-
-static
-int
-__fpclassify(double t_in)
-{
-    fp_struct<double> fs = t_in;
-    int ret;
-    if(fs.exp == 0x0) {
-        ret = (fs.sig == 0x0) ? 2 : 3;
-    } else if(fs.exp == 0x7FF) {
-        ret = (fs.sig == 0x0) ? 1 : 0;
-    } else {
-        ret = 4;
-    }
-    return ret;
-}
-
-static
-double copysign(double x, double y)
-{
-    fp_struct<double> xs(x), ys(y);
-    xs.sign = ys.sign;
-    return xs.to_ieee();
-}
-
-static
-float copysignf(float x, float y)
-{
-    fp_struct<float> xs(x), ys(y);
-    xs.sign = ys.sign;
-    return xs.to_ieee();
-}
-
-
-static
-float copysign(float x, float y)
-{
-    return copysignf(x, y);
-}
-
-
-static
-double fabs(double x)
-{
-    return copysign(x, 0.0);
-}
-
-static
-float fabsf(float x)
-{
-    return copysignf(x, 0.0f);
-}
-
-
-static
-float fabs(float x)
-{
-    return fabsf(x);
-}
-
-
-static double frexp (double x, int* exp) {
-    fp_struct<double> xs = x;
-    bool zero = (xs.exp == 0x0);
-    bool nan = (xs.exp == 0x7FF);
-    *exp = (zero || nan) ? 0 : xs.expv()+1;
-    if(zero) {
-        // zero or subnormal
-        return 0.0;
-    } else if(xs.exp == 0x7FF) {
-        // nan or infinity, return input.
-        return x;
-    } else {
-        xs.exp = fp_struct<double>::EXP_BIAS-1;
-        return xs.to_ieee();
-    }
-}
-
-static float frexpf (float x, int* exp) {
-    fp_struct<float> xs = x;
-    bool zero = (xs.exp == 0x0);
-    bool nan = (xs.exp == 0xFF);
-    *exp = (zero || nan) ? 0 : xs.expv()+1;
-    if(zero) {
-        // zero or subnormal
-        return 0.0f;
-    } else if(nan) {
-        // nan or infinity, return input.
-        return x;
-    } else {
-        xs.exp = fp_struct<float>::EXP_BIAS-1;
-        return xs.to_ieee();
-    }
-}
-
-static double ldexp (double x, int exp) {
-    fp_struct<double> xs = x;
-    exp += xs.exp;
-    bool ininf = (xs.exp == 0x7FF);
-    bool zero = (xs.exp == 0) || (exp <= 0);
-    bool inf = ininf || (exp >= 0x7FF);
-    if(__isnan(x)) {
-        return x;
-    } else if(zero && !ininf) {
-        return copysign(0.0,x);
-    } else if(inf) {
-        // infinity, return input.
-        xs.sig = 0x0;
-        xs.exp = 0x7FF;
-    } else {
-        xs.exp = exp;
-    }
-    return xs.to_ieee();
-}
-
-static float ldexpf (float x, int exp) {
-    fp_struct<float> xs = x;
-    exp += xs.exp;
-    bool ininf = (xs.exp == 0xFF);
-    bool zero = (xs.exp == 0) || (exp <= 0);
-    bool inf = ininf || (exp >= 0xFF);
-    if(__isnan(x)) {
-        return x;
-    } else if(zero && !ininf) {
-        return copysignf(0.0f,x);
-    } else if(inf) {
-        // infinity, return input.
-        xs.sig = 0x0;
-        xs.exp = 0xFF;
-    } else {
-        xs.exp = exp;
-    }
-    return xs.to_ieee();
-}
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2008-2010 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-/**
- * @file cordic.h
- * This file contains the CORDIC function.
- */
-
-
-
-
-//#include "utils/x_hls_defines.h"
-//#include "utils/x_hls_utils.h"
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_big_mult.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-
-
-template<int W1, int W2>
-void
-big_mult_v1(ap_uint<W1> a, ap_uint<W2> b, ap_uint<W1+W2> &c)
-{
-    c = a * b;
-}
-
-template<int M>
-void
-aca(
-    ap_uint<M> a0,
-    ap_uint<M> a1,
-    ap_uint<M> b0,
-    ap_uint<M> b1,
-    ap_uint<2*M> c,
-    ap_uint<1> cin,
-    ap_uint<2*M> &p,
-    ap_uint<2> &out)
-{
-    ap_uint<2*M> p0;
-    ap_uint<2*M> p1;
-    ap_uint<(2*M)+2> pp0;
-    ap_uint<(2*M)+2> pp1;
-
-    p0 = a0 * b0;
-    pp0 = p0 + c + cin;
-    p1 = a1 * b1;
-    pp1 = pp0 + p1;
-    p = pp1((2*M)-1,0);
-    out = pp1(((2*M)+1),(2*M));
-}
-
-template<int M>
-void
-acb(
-    ap_uint<2> x,
-    ap_uint<M> y,
-    ap_uint<M> &r)
-{
-    r = x + y;
-}
-
-template<int M>
-void
-cr(
-    ap_uint<M> din,
-    ap_uint<M> &dout)
-{
-    dout = din;
-}
-
-
-template<int W, int M>
-void
-big_mult_v2(
-    ap_uint<W> a,
-    ap_uint<W> b,
-    ap_uint<2*W> &m)
-{
-    const int N = (W/M)-1;
-
-    // 1st dim: pipeline stage (including before 1st stage)
-    // 2nd dim: W/M breakdown
-    ap_uint<2*M> z[N+1][N+1];
-    //ap_uint<2*W> z[N+1];
-
-    // 1st dim: pipeline stage
-    // 2nd dim: row per stage
-    ap_uint<2> ci[N][N+1]; // TODO check this
-
-    for(int i=0; i<N+1; i++) {
-        z[0][i] = a(M*(i+1)-1,M*i) * b(M*(i+1)-1,M*i);
-        //z[0](2*M*(i+1)-1,2*M*i) = a(M*(i+1)-1,M*i) * b(M*(i+1)-1,M*i);
-#121 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_big_mult.h"
-    }
-
-//	m(M-1,0) = z[0][0]; // TODO check this
-    for(int i=0; i<N; i++) {
-        ci[i][0] = 0;
-
-        ap_uint<M> a0, a1, b0, b1;
-        ap_uint<2*M> c, p;
-        ap_uint<1> cin;
-        ap_uint<2> out;
-
-        for(int j=0; j<N; j++) {
-            if(j>=i) {
-                a0 = a(M*(j-i+1)-1,M*(j-i));
-                b0 = b(M*(j+2)-1,M*(j+1));
-                a1 = a(M*(j+2)-1,M*(j+1));
-                b1 = b(M*(j-i+1)-1,M*(j-i));
-                c = (ap_uint<W>(z[i][j-i+1](M-1,0)),
-                         ap_uint<M>(z[i][j-i]((2*M)-1,M)));
-                //c     = z[i]((2*M*(j-i+1))+M-1,M*(2*(j-i)+1));
-                cin = ci[i][j-i][0]; // TODO check this
-                aca<M>(a0,a1,b0,b1,c,cin,p,out);
-                ci[i][j-i+1] = out;
-                z[i+1][j-i] = p;
-                //z[i+1]((2*M*(j-i+1))-1,2*M*(j-i)) = p;
-#161 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_big_mult.h"
-            }
-        }
-        //if((i == N-1) && (j == N-1)) {
-
-        if(i == N-1) {
-            //m((M*((2*N)+2-i))-1,M*((2*N)+1-i)) = z[N][0]// Store middle 34-bit result
-            //m(M*(N+2)-1,M*(N)) = z[N][0];// Store middle 34-bit result
-            m(M*(N+2)-1,M*(N)) = p; // Store middle 34-bit result
-            //printf("\nm(%d,%d) = z[%d][0] = %s\n",M*(N+2)-1,M*N,N,z[N][0].to_string(16).c_str());
-            //printf("\naca: m(%d,%d) = z[%d][0] = %s\n",M*(N+2)-1,M*N,N,p.to_string(16).c_str());
-
-
-
-            //m(,) = p[N+1]// Store middle 34-bit result
-        }
-
-        // ACB blocks
-        ap_uint<2> x;
-        ap_uint<M> y, r;
-        x = ci[i][N-i]; // TODO check this, should be good
-        y = z[i][N-i]((2*M)-1,M);
-        ////y = z[i](M*((2*(j-i))+2)-1,M*((2*N)-i+1));
-        ////y = z[i](M*((2*N)-i+2)-1,M*((2*N)-i+1));
-        ////y = z[i](M*((2*N)-i+2)-1,M*((2*N)-i+1));
-        //y = z[i](M*((2*(N-i))+2)-1,M*((2*(N-i))+1));
-        acb<M>(x,y,r);
-        m((M*((2*N)+2-i))-1,M*((2*N)+1-i)) = r; // looks right
-
-
-
-
-
-
-        // CR blocks
-        ap_uint<M> din, dout;
-        din = z[i][0]; // TODO check this
-        //din = z[i](M-1,0); // TODO check this
-        cr<M>(din,dout);
-        //m((M*(i+2))-1,M*(i+1)) = dout;
-        m((M*(i+1))-1,M*i) = dout; // looks right
-
-
-
-    }
-}
-
-template<int W, int M>
-void
-big_mult_v3(
-    ap_uint<W> a,
-    ap_uint<W> b,
-    ap_uint<2*W> &m)
-{
-    const int N = (W+M-1)/M; // Take the ceiling of W/M
-    // Partial products
-    ap_uint<2*M> pp[N][N];
-    int i, j;
-    for (i = 0; i < N; ++i)
-        for (j = 0; j < N; ++j) {
-            unsigned Ui = (i == N-1) ? W-1 : M*(i+1)-1;
-            unsigned Uj = (j == N-1) ? W-1 : M*(j+1)-1;
-            pp[i][j] = a(Ui,M*i) * b(Uj,M*j);
-        }
-
-    // Partial product sums
-    ap_uint<48> pps[2*N];
-    pps[0] = pp[0][0];
-    // Add partial products diagonally
-    for (i = 1; i < 2*N; ++i) {
-        pps[i] = pps[i-1] >> M;
-        for (j = 0; j < N; ++j)
-            if ((j <= i) && (i-j < N)) {
-                pps[i] += pp[j][i-j];
-            }
-    }
-
-    // Extract out the useful bits
-    for (i = 0; i < 2*N; ++i) {
-        unsigned Li = M*i;
-        if (Li < 2*W) {
-            unsigned Ui = M*(i+1)-1;
-            if (Ui >= 2*W) { Ui = 2*W-1; }
-            m(Ui,Li) = pps[i](M-1, 0);
-        }
-    }
-}
-
-// M is the size of multiplier to decompose into.
-template<int W, int W2, int M>
-void
-big_mult_v3small(
-    ap_uint<W> a,
-    ap_uint<W2> b,
-    ap_uint<W+W2> &m)
-{
-    const int N = (W+M-1)/M; // Take the ceiling of W/M
-    // Partial products
-    ap_uint<M+W2> pp[N];
-    int i;
-    for (i = 0; i < N; ++i) {
-        unsigned Ui = (i == N-1) ? W-1 : M*(i+1)-1;
-        pp[i] = a(Ui,M*i) * b;
-    }
-
-    // Partial product sums
-    ap_uint<M+W2> pps[N];
-    pps[0] = pp[0];
-    // Add partial products
-    for (i = 1; i < N; ++i) {
-        pps[i] = pps[i-1] >> M;
-        pps[i] += pp[i];
-    }
-
-    // Extract out the useful bits
-    for (i = 0; i < N-1; ++i) {
-        unsigned Li = M*i;
-        if (Li < W+W2) {
-            unsigned Ui = M*(i+1)-1;
-            if (Ui >= W+W2) { Ui = W+W2-1; }
-            m(Ui,Li) = pps[i](M-1, 0);
-        }
-    }
-    unsigned Li = M*i;
-    if (Li < W+W2) {
-        // The highest term is larger than the others
-        unsigned Ui = W+W2-1;
-        m(Ui,Li) = pps[i];//(M-1, 0);
-    }
-}
-
-template<int SELECT, int W, int M>
-void
-big_mult(
-    ap_uint<W> a,
-    ap_uint<W> b,
-    ap_uint<2*W> &m)
-{
-    switch(SELECT) {
-        case 1:
-            big_mult_v1(a,b,m);
-            break;
-        case 2:
-            big_mult_v2<W,M>(a,b,m);
-            break;
-        default:
-            big_mult_v3<W,M>(a,b,m);
-            break;
-    };
-}
-
-template<int W, int M>
-void
-big_mult(
-    ap_uint<W> a,
-    ap_uint<W> b,
-    ap_uint<2*W> &m)
-{
-    big_mult<3,W,M>(a,b,m);
-}
-
-
-template<int W1, int W2>
-void
-big_mult(
-    ap_uint<W1> a,
-    ap_uint<W2> b,
-    ap_uint<W1+W2> &m)
-{
-    if(W2 <= 64) {
-        // Decompose into 17x64 multipliers
-        big_mult_v3small<W1,W2,17>(a,b,m);
-    } else {
-        //const int W_MAX =(W1 > W2) ? W1 : W2;
-//         const int tmp =(W1 > W2) ? W1 : W2;
-//         const int mod = (tmp+ 16)/17;
-//         const int W_MAX = 17*mod;
-
-        ap_uint<(17*(((W1 > W2) ? W1 : W2)+ 16)/17)> a_m = a;
-        ap_uint<(17*(((W1 > W2) ? W1 : W2)+ 16)/17)> b_m = b;
-        ap_uint<2*(17*(((W1 > W2) ? W1 : W2)+ 16)/17)> m_m;
-        big_mult<(17*(((W1 > W2) ? W1 : W2)+ 16)/17),17>(a_m,b_m,m_m);
-
-        m = m_m;
-    }
-}
-
-template <int W1, int I1, int W2, int I2>
-void
-big_mult(
-    ap_ufixed<W1,I1> a,
-    ap_ufixed<W2,I2> b,
-    ap_ufixed<W1+W2,I1+I2> &m)
-{
-    ap_uint<W1> ai;
-    ap_uint<W2> bi;
-    ap_uint<W1+W2> mi;
-    ai(W1-1, 0) = a(W1-1, 0);
-    bi(W2-1, 0) = b(W2-1, 0);
-    big_mult(ai,bi,mi);
-    m(W1+W2-1,0) = mi(W1+W2-1,0);
-}
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_range_redux.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_float_utils.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-
-
-static const ap_uint<100> ref_cordic("9b74eda8435e5a67f5f9092c6",16);
-
-//Q115.397
-static const ap_uint<512> ref_4oPi_512("000000000000000000000000000028BE60DB9391054A7F09D5F47D4D377036D8A5664F10E4107F9458EAF7AEF1586DC91B8E909374B801924BBA827464873FBF",16);
-
-/*
-* Double-precision calculations
-* hi: 400-1-2+( 53-e1+1)    = 451-e1    = 399 (e1=52)
-* lo: 400-1-2+(-53-e1-1-p1) = 343-e1-p1 = 281 (e1=52,p1=10)
-*
-* left-justified alignment
-* e1	hi	lo	i	<<
-* ----	---	---	---	-------
-* 52	399	281	1	0
-* 53	398	281	1	1
-* 61			1	9
-* 179			1	127
-* 180			2	0
-*
-*-------------------------------------------------------------------
-* Need to select 119-bits from ~1024 bits.
-* 256 bits allows 128-bit selection shifted 128 bits.
-* 128-bits is bigger than 119 which we need in the double-precision
-* range reduction payne-hanek.
-* 128-bits * 10 = 1280 which is > 1024 bits
-*-------------------------------------------------------------------
-*/
-static const ap_uint<256> ref_4oPi_table_256[10] = {
-    "0x0000000000000000000000000000000028be60db9391054a7f09d5f47d4d3770",
-    "0x28be60db9391054a7f09d5f47d4d377036d8a5664f10e4107f9458eaf7aef158",
-    "0x36d8a5664f10e4107f9458eaf7aef1586dc91b8e909374b801924bba82746487",
-    "0x6dc91b8e909374b801924bba827464873f877ac72c4a69cfba208d7d4baed121",
-    "0x3f877ac72c4a69cfba208d7d4baed1213a671c09ad17df904e64758e60d4ce7d",
-    "0x3a671c09ad17df904e64758e60d4ce7d272117e2ef7e4a0ec7fe25fff7816603",
-    "0x272117e2ef7e4a0ec7fe25fff7816603fbcbc462d6829b47db4d9fb3c9f2c26d",
-    "0xfbcbc462d6829b47db4d9fb3c9f2c26dd3d18fd9a797fa8b5d49eeb1faf97c5e",
-    "0xd3d18fd9a797fa8b5d49eeb1faf97c5ecf41ce7de294a4ba9afed7ec47e35742",
-    "0xcf41ce7de294a4ba9afed7ec47e357421580cc11bf1edaeafc33ef0826bd0d87",
-};
-
-static const ap_uint<100> ref_4oPi_table_100[13] = {
-    "0x000000000000000000000028B", // -4
-    "0x00000000000000000028BE60D", // -3
-    "0x0000000000000028BE60DB939", // -2
-    "0x000000000028BE60DB9391054", // -1
-    "0x00000028BE60DB9391054A7F0", // 0
-    "0x0028BE60DB9391054A7F09D5F", // 1
-    "0xBE60DB9391054A7F09D5F47D4", // 2
-    "0xDB9391054A7F09D5F47D4D377", // 3
-    "0x91054A7F09D5F47D4D377036D", // 4
-    "0x4A7F09D5F47D4D377036D8A56", // 5
-    "0x09D5F47D4D377036D8A5664F1", // 6
-    "0xF47D4D377036D8A5664F10E41", // 7
-    "0x4D377036D8A5664F10E417F94", // 8
-};
-
-static const ap_uint<80> ref_4oPi_table_80[9] = {
-    "0x00000028BE60DB939105", // 0
-    "0x0028BE60DB9391054A7F", // 1
-    "0xBE60DB9391054A7F09D5", // 2
-    "0xDB9391054A7F09D5F47D", // 3
-    "0x91054A7F09D5F47D4D37", // 4
-    "0x4A7F09D5F47D4D377036", // 5
-    "0x09D5F47D4D377036D8A5", // 6
-    "0xF47D4D377036D8A5664F", // 7
-    "0x4D377036D8A5664F10E4", // 8
-};
-
-
-// Q2.398
-static const ap_uint<400> ref_Pio4_400("3243F6A8885A308D313198A2E03707344A4093822299F31D0082EFA98EC4E6C89452821E638D01377BE5466CF34E90C6CC0A",16);
-
-static const ap_uint<256> ref_Pio4_table[10] = {
-    "0x000000000000000000000000000000003243f6a8885a308d313198a2e0370734",
-    "0x3243f6a8885a308d313198a2e03707344a4093822299f31d0082efa98ec4e6c8",
-    "0x4a4093822299f31d0082efa98ec4e6c89452821e638d01377be5466cf34e90c6",
-    "0x9452821e638d01377be5466cf34e90c6cc0ac29b7c97c50dd3f84d5b5b547091",
-    "0xcc0ac29b7c97c50dd3f84d5b5b54709179216d5d98979fb1bd1310ba698dfb5a",
-    "0x79216d5d98979fb1bd1310ba698dfb5ac2ffd72dbd01adfb7b8e1afed6a267e9",
-    "0xc2ffd72dbd01adfb7b8e1afed6a267e96ba7c9045f12c7f9924a19947b3916cf",
-    "0x6ba7c9045f12c7f9924a19947b3916cf70801f2e2858efc16636920d871574e6",
-    "0x70801f2e2858efc16636920d871574e69a458fea3f4933d7e0d95748f728eb65",
-    "0x9a458fea3f4933d7e0d95748f728eb658718bcd5882154aee7b54a41dc25a59b",
-};
-
-
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#36 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_range_redux.h" 2
-
-
-
-
-/**
- * This function converts ap_uint to float being sure to
- * truncate unnecessary bits off the end and returns the float.
- * Input format is Q1.x
- *
- * @param W The input data width
- */
-template<int W>
-float
-convToFloat(
-    ap_uint<W> din)
-{
-    ap_ufixed<W,1> d;
-    d(W-1,0) = din(W-1,0);
-    int prescale = 0;
-    fp_struct<float> out;
-    out.sign[0] = 0; // unsigned
-
-    ap_ufixed<W,1> ain = d;
-
-    ap_uint<32> out_bits_1 = 0, out_bits_2 = 0, out_bits_3 = 0;
-    out_bits_1(31, 16) = ain(ain.wl()-1,ain.wl()-16); out_bits_1[15] = 1;
-    out_bits_2(31, 16) = ain(ain.wl()-16-1,ain.wl()-32); out_bits_2[15] = 1;
-    if(ain.wl() > 48) {
-        out_bits_3(31, 16) = ain(ain.wl()-32-1,ain.wl()-48);
-    } else {
-        out_bits_3(31, 16) = 0xFFFF;
-    }
-    out_bits_3[15] = 1;
-
-    int c1 = __builtin_clz(out_bits_1.to_uint());
-    int c2 = __builtin_clz(out_bits_2.to_uint());
-    int c3 = __builtin_clz(out_bits_3.to_uint());
-    int shift = c1;
-
-    ap_ufixed<W,1> in_shift = ain << c1;
-    if(c1 == 16) {
-        shift += c2;
-        in_shift = in_shift << c2;
-        if(c2 == 16) {
-            // FIXME: All these stages may not be necessary
-            shift += c3;
-            in_shift = in_shift << c3;
-        }
-    }
-    out.sig(fp_struct<float>::SIG_BITS-1,0) =
-        in_shift(in_shift.wl()-1-1,
-                 in_shift.wl()-fp_struct<float>::SIG_BITS-1);
-    out.exp = (din == 0) ? 0 : (fp_struct<float>::EXP_BIAS+in_shift.iwl())-prescale-shift-1;
-
-    return out.to_ieee();
-}
-
-/**
- * This function converts ap_ufixed to float being sure to
- * truncate unnecessary bits off the end and returns the float.
- * Input format is Q1.x so ufixed values larger than this will 
- * have the integer bits truncated as well.
- *
- * @param W The input data width
- */
-template<int W, int I>
-float
-convToFloat(
- ap_ufixed<W,I> din)
-{
-    ap_ufixed<W,1> d;
- d = din;
- ap_uint<W> di;
- di(W-1,0) = d(W-1,0);
- return convToFloat<W>(di);
-}
-
-
-/**
- * This function converts float to ap_uint.
- * Assume W > 53.
- *
- * @param W The input data width
- */
-template<int W>
-ap_uint<W>
-convToInt(
-    float din)
-{
-    fp_struct<float> fps(din);
-
-    ap_uint<W> dout = ((ap_uint<W>)0x1 << 23) | fps.sig;
-    dout = dout << (W-24);
-    dout = dout >> (-1-fps.expv());
-
-
-
-
-
-
-    return dout;
-}
-
-/**
- * This function converts ap_uint to double being sure to
- * truncate unnecessary bits off the end and returns the double.
- * Input format is Q1.x
- *
- * @param W The input data width
- */
-template<int W>
-double
-convToDouble(
-    ap_uint<W> din)
-{
-    ap_ufixed<W,1> d;
-    d(W-1,0) = din(W-1,0);
-    int prescale = 0;
-    fp_struct<double> out;
-    out.sign[0] = 0;
-
-    ap_ufixed<W,1> ain = d;
-
-    ap_uint<32> out_bits_1 = 0, out_bits_2 = 0, out_bits_3 = 0, out_bits_4 = 0;
-    out_bits_1(31, 16) = ain(ain.wl()-1,ain.wl()-16); out_bits_1[15] = 1;
-    out_bits_2(31, 16) = ain(ain.wl()-16-1,ain.wl()-32); out_bits_2[15] = 1;
-    out_bits_3(31, 16) = ain(ain.wl()-32-1,ain.wl()-48); out_bits_3[15] = 1;
-    out_bits_4(31, 16) = ain(ain.wl()-48-1,ain.wl()-64); out_bits_4[15] = 1;
-
-    int c1 = __builtin_clz(out_bits_1.to_uint());
-    int c2 = __builtin_clz(out_bits_2.to_uint());
-    int c3 = __builtin_clz(out_bits_3.to_uint());
-    int c4 = __builtin_clz(out_bits_4.to_uint());
-    int shift = c1;
-
-    ap_ufixed<W,1> in_shift = ain << c1;
-    if(c1 == 16) {
-        shift += c2;
-        in_shift = in_shift << c2;
-        if(c2 == 16) {
-            // FIXME: All these stages may not be necessary
-            shift += c3;
-            in_shift = in_shift << c3;
-            if(c3 == 16) {
-                shift += c4;
-                in_shift = in_shift << c4; // leading one is now in the sign bit.
-            }
-        }
-    }
-    out.sig(fp_struct<double>::SIG_BITS-1,0) =
-        in_shift(in_shift.wl()-1-1,
-                 in_shift.wl()-fp_struct<double>::SIG_BITS-1);
-    out.exp = (din == 0) ? 0 : (fp_struct<double>::EXP_BIAS+in_shift.iwl())-prescale-shift-1;
-
-    return out.to_ieee();
-}
-
-/**
- * This function converts ap_ufixed to double being sure to
- * truncate unnecessary bits off the end and returns the double.
- * Input format is Q1.x so ufixed values larger than this will 
- * have the integer bits truncated as well.
- *
- * @param W The input data width
- */
-template<int W, int I>
-double
-convToDouble(
- ap_ufixed<W,I> din)
-{
-    ap_ufixed<W,1> d;
- d = din;
- ap_uint<W> di;
- di(W-1,0) = d(W-1,0);
- return convToDouble<W>(di);
-}
-
-
-/**
- * This function converts double to ap_uint.
- * Assume W > 53.
- *
- * @param W The input data width
- */
-template<int W>
-ap_uint<W>
-convToInt(
-    double din)
-{
-    fp_struct<double> fps(din);
-
-    ap_uint<W> dout = ((ap_uint<W>)0x1 << 52) | fps.sig;
-    dout = dout << (W-53);
-    dout = dout >> (-1-fps.expv());
-
-
-
-
-
-
-    return dout;
-}
-
-/**
- * This function performs a table lookup to get the relevant values
- * of 4oPi given an exponent value for floats.
- *
- * @param SB Number of mantissa bits (e.g. 23 for float)
- * @param p1 Padding bits
- * @param exp Exponent value
- * @param dummy dummy value to indicate float type.
- */
-template<int SB, int p1>
-ap_uint<2*(SB+1)+p1+3>
-table_lookup_4oPi(int exp, float dummy)
-{
-_ssdm_op_SpecResource(ref_4oPi_table_100, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-    ap_int<9> addr = exp+(1+4*16);
-    ((addr >= 0) ? static_cast<void> (0) : __assert_fail ("addr >= 0", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_range_redux.h", 254, __PRETTY_FUNCTION__));
-    ap_uint<100> table_100 = ref_4oPi_table_100[addr >> 4];
-    return (table_100 << (ap_uint<4>)(addr(3,0)))(99,100-((2*(SB+1)+p1+3)));
-}
-
-/**
- * This function performs a table lookup to get the relevant values
- * of 4oPi given an exponent value for doubles.
- *
- * @param SB Number of mantissa bits (e.g. 53 for double)
- * @param p1 Padding bits
- * @param exp Exponent value
- * @param dummy dummy value to indicate float type.
- */
-template<int SB, int p1>
-ap_uint<2*(SB+1)+p1+3>
-table_lookup_4oPi(int exp, double dummy)
-{
-    ap_uint<2*(SB+1)+p1+3> ret;
-    ap_int<12> addr = exp+76;
-    ap_uint<256> table_256 = ref_4oPi_table_256[addr(10,7)];
-    ret = (table_256 << (ap_uint<7>)(addr(6,0)))(255,256-((2*(SB+1))+p1+3));
-    if(addr < 0) {
-        ret = 0;
-    }
-    return ret;
-}
-
-/**
- * Payne-hanek algorithm for range reduction (single precision)
- *
- * NOTE: p1 = 10 for double, p1 = 16 for single
- *
- * @param p1 Padding bits
- * @param T data type (float, double)
- * @param din Unreduced data input (float, double)
- * @param k Relevant LSB used to adjust sin/cos identities following reduction
- * @param dout Reduced data output
- */
-template<int p1, int CW, class T>
-void
-range_redux_payne_hanek(
-    T din,
-    ap_uint<3> &k,
-    ap_uint<CW> &dout)
-{
-    const int EB = fp_struct<T>::EXP_BIAS;
-    const int SB = fp_struct<T>::SIG_BITS;
-
-    fp_struct<T> fps1(din);
-    int exp = fps1.exp - EB;
-
-
-
-
-    if(exp > -1) {
-        ap_uint<CW> Pio4_i1; // Relevant bits from Pio4
-        ap_uint<CW+1> Pio4_i2; // Relevant bits from Pio4
-        ap_uint<SB+1> X; // mantissa (din) in integer format
-        ap_uint<2*(SB+1)+p1+3> Med; // significant bits of 4oPi
-        ap_uint<3*(SB+1)+p1+3> h; // X*Med
-        ap_uint<(SB+1)+3> h_int; // integer portion of h
-        ap_uint<CW> h_fract; // fractional portion of h
-        ap_uint<2*CW> prod; // h_fract*Pio4
-        ap_uint<CW+1> prod_adj;
-
-        Pio4_i1 = ref_Pio4_400(400-1-2,400-1-2-CW+1);
-        Pio4_i2 = ref_Pio4_400(400-1-2,400-1-2-(CW+1)+1);
-
-        X = ((ap_uint<SB+1>)0x1 << SB) | (fps1.sig);
-        Med = table_lookup_4oPi<SB,p1>(exp,din);
-
-        big_mult(Med, X, h);
-
-        h_int = h >> (2*(SB+1)+p1);
-        h_fract = h(2*(SB+1)+p1-1,2*(SB+1)+p1-CW);
-        k = h_int(2,0);
-
-        big_mult(h_fract, Pio4_i1, prod);
-
-  prod_adj = prod((2*CW)-1,CW-1);
-  prod_adj = (k[0] == 1) ? (ap_uint<CW+1>)(Pio4_i2 - prod_adj) : prod_adj;
-
-  dout = prod_adj(CW,1);
-    } else {
-        k = 0;
-        dout = convToInt<CW>(din);
-    }
-}
-
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#45 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic_tables.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-
-
-
-
-const ap_uint<128> cordic_ctab_table_int_128[128] = {
-    "0x3243F6A8885A308D313198A2E0370734",
-    "0x1DAC670561BB4F68ADFC88BD978751A0",
-    "0xFADBAFC96406EB156DC79EF5F7A217E",
-    "0x7F56EA6AB0BDB719644BCC4F9F44477",
-    "0x3FEAB76E59FBD38DB2C9E4B7038B835",
-    "0x1FFD55BBA97624A84EF3AEEDBB518C4",
-    "0xFFFAAADDDB94D5BBE78C564015F760",
-    "0x7FFF5556EEEA5CB40311A8FDDF3057",
-    "0x3FFFEAAAB7776E52EC4ABEDADB53DF",
-    "0x1FFFFD5555BBBBA9729AB7AAC08947",
-    "0xFFFFFAAAAADDDDDB94B968067EF3A",
-    "0x7FFFFF555556EEEEEA5CA5D895892",
-    "0x3FFFFFEAAAAAB777776E52E5356F5",
-    "0x1FFFFFFD555555BBBBBBA972972D0",
-    "0xFFFFFFFAAAAAAADDDDDDDB94B94B",
-    "0x7FFFFFFF55555556EEEEEEEA5CA5",
-    "0x3FFFFFFFEAAAAAAAB77777776E52",
-    "0x1FFFFFFFFD55555555BBBBBBBBA9",
-    "0xFFFFFFFFFAAAAAAAAADDDDDDDDD",
-    "0x7FFFFFFFFF5555555556EEEEEEE",
-    "0x3FFFFFFFFFEAAAAAAAAAB777777",
-    "0x1FFFFFFFFFFD5555555555BBBBB",
-    "0xFFFFFFFFFFFAAAAAAAAAAADDDD",
-    "0x7FFFFFFFFFFF555555555556EE",
-    "0x3FFFFFFFFFFFEAAAAAAAAAAAB7",
-    "0x1FFFFFFFFFFFFD555555555555",
-    "0xFFFFFFFFFFFFFAAAAAAAAAAAA",
-    "0x7FFFFFFFFFFFFF55555555555",
-    "0x3FFFFFFFFFFFFFEAAAAAAAAAA",
-    "0x1FFFFFFFFFFFFFFD555555555",
-    "0xFFFFFFFFFFFFFFFAAAAAAAAA",
-    "0x7FFFFFFFFFFFFFFF55555555",
-    "0x3FFFFFFFFFFFFFFFEAAAAAAA",
-    "0x1FFFFFFFFFFFFFFFFD555555",
-    "0xFFFFFFFFFFFFFFFFFAAAAAA",
-    "0x7FFFFFFFFFFFFFFFFF55555",
-    "0x3FFFFFFFFFFFFFFFFFEAAAA",
-    "0x1FFFFFFFFFFFFFFFFFFD555",
-    "0xFFFFFFFFFFFFFFFFFFFAAA",
-    "0x7FFFFFFFFFFFFFFFFFFF55",
-    "0x3FFFFFFFFFFFFFFFFFFFEA",
-    "0x1FFFFFFFFFFFFFFFFFFFFD",
-    "0xFFFFFFFFFFFFFFFFFFFFF",
-    "0x7FFFFFFFFFFFFFFFFFFFF",
-    "0x3FFFFFFFFFFFFFFFFFFFF",
-    "0x1FFFFFFFFFFFFFFFFFFFF",
-    "0xFFFFFFFFFFFFFFFFFFFF",
-    "0x7FFFFFFFFFFFFFFFFFFF",
-    "0x3FFFFFFFFFFFFFFFFFFF",
-    "0x1FFFFFFFFFFFFFFFFFFF",
-    "0xFFFFFFFFFFFFFFFFFFF",
-    "0x7FFFFFFFFFFFFFFFFFF",
-    "0x3FFFFFFFFFFFFFFFFFF",
-    "0x1FFFFFFFFFFFFFFFFFF",
-    "0xFFFFFFFFFFFFFFFFFF",
-    "0x7FFFFFFFFFFFFFFFFF",
-    "0x3FFFFFFFFFFFFFFFFF",
-    "0x1FFFFFFFFFFFFFFFFF",
-    "0xFFFFFFFFFFFFFFFFF",
-    "0x7FFFFFFFFFFFFFFFF",
-    "0x3FFFFFFFFFFFFFFFF",
-    "0x1FFFFFFFFFFFFFFFF",
-    "0xFFFFFFFFFFFFFFFF",
-    "0x7FFFFFFFFFFFFFFF",
-    "0x3FFFFFFFFFFFFFFF",
-    "0x1FFFFFFFFFFFFFFF",
-    "0xFFFFFFFFFFFFFFF",
-    "0x7FFFFFFFFFFFFFF",
-    "0x3FFFFFFFFFFFFFF",
-    "0x1FFFFFFFFFFFFFF",
-    "0xFFFFFFFFFFFFFF",
-    "0x7FFFFFFFFFFFFF",
-    "0x3FFFFFFFFFFFFF",
-    "0x1FFFFFFFFFFFFF",
-    "0xFFFFFFFFFFFFF",
-    "0x7FFFFFFFFFFFF",
-    "0x3FFFFFFFFFFFF",
-    "0x1FFFFFFFFFFFF",
-    "0xFFFFFFFFFFFF",
-    "0x7FFFFFFFFFFF",
-    "0x3FFFFFFFFFFF",
-    "0x1FFFFFFFFFFF",
-    "0xFFFFFFFFFFF",
-    "0x7FFFFFFFFFF",
-    "0x3FFFFFFFFFF",
-    "0x1FFFFFFFFFF",
-    "0xFFFFFFFFFF",
-    "0x7FFFFFFFFF",
-    "0x3FFFFFFFFF",
-    "0x1FFFFFFFFF",
-    "0xFFFFFFFFF",
-    "0x7FFFFFFFF",
-    "0x3FFFFFFFF",
-    "0x1FFFFFFFF",
-    "0xFFFFFFFF",
-    "0x7FFFFFFF",
-    "0x3FFFFFFF",
-    "0x1FFFFFFF",
-    "0xFFFFFFF",
-    "0x7FFFFFF",
-    "0x3FFFFFF",
-    "0x1FFFFFF",
-    "0xFFFFFF",
-    "0x7FFFFF",
-    "0x3FFFFF",
-    "0x1FFFFF",
-    "0xFFFFF",
-    "0x7FFFF",
-    "0x3FFFF",
-    "0x1FFFF",
-    "0xFFFF",
-    "0x7FFF",
-    "0x3FFF",
-    "0x1FFF",
-    "0xFFF",
-    "0x7FF",
-    "0x3FF",
-    "0x1FF",
-    "0xFF",
-    "0x7F",
-    "0x3F",
-    "0x1F",
-    "0xF",
-    "0x7",
-    "0x3",
-    "0x1",
-    "0x0",
-    "0x0",
-};
-
-const ap_ufixed<128,2> cordic_ctab_table_128[128] = {
-    "0x0.C90FDAA22168C234C4C6628B80DC1CD0",
-    "0x0.76B19C1586ED3DA2B7F222F65E1D4680",
-    "0x0.3EB6EBF25901BAC55B71E7BD7DE885F8",
-    "0x0.1FD5BA9AAC2F6DC65912F313E7D111DC",
-    "0x0.0FFAADDB967EF4E36CB2792DC0E2E0D4",
-    "0x0.07FF556EEA5D892A13BCEBBB6ED46310",
-    "0x0.03FFEAAB776E5356EF9E31590057DD80",
-    "0x0.01FFFD555BBBA972D00C46A3F77CC15C",
-    "0x0.00FFFFAAAADDDDB94BB12AFB6B6D4F7C",
-    "0x0.007FFFF55556EEEEA5CA6ADEAB02251C",
-    "0x0.003FFFFEAAAAB77776E52E5A019FBCE8",
-    "0x0.001FFFFFD55555BBBBBA972976256248",
-    "0x0.000FFFFFFAAAAAADDDDDDB94B94D5BD4",
-    "0x0.0007FFFFFF5555556EEEEEEA5CA5CB40",
-    "0x0.0003FFFFFFEAAAAAAB7777776E52E52C",
-    "0x0.0001FFFFFFFD5555555BBBBBBBA97294",
-    "0x0.0000FFFFFFFFAAAAAAAADDDDDDDDB948",
-    "0x0.00007FFFFFFFF555555556EEEEEEEEA4",
-    "0x0.00003FFFFFFFFEAAAAAAAAB777777774",
-    "0x0.00001FFFFFFFFFD555555555BBBBBBB8",
-    "0x0.00000FFFFFFFFFFAAAAAAAAAADDDDDDC",
-    "0x0.000007FFFFFFFFFF55555555556EEEEC",
-    "0x0.000003FFFFFFFFFFEAAAAAAAAAAB7774",
-    "0x0.000001FFFFFFFFFFFD55555555555BB8",
-    "0x0.000000FFFFFFFFFFFFAAAAAAAAAAAADC",
-    "0x0.0000007FFFFFFFFFFFF5555555555554",
-    "0x0.0000003FFFFFFFFFFFFEAAAAAAAAAAA8",
-    "0x0.0000001FFFFFFFFFFFFFD55555555554",
-    "0x0.0000000FFFFFFFFFFFFFFAAAAAAAAAA8",
-    "0x0.00000007FFFFFFFFFFFFFF5555555554",
-    "0x0.00000003FFFFFFFFFFFFFFEAAAAAAAA8",
-    "0x0.00000001FFFFFFFFFFFFFFFD55555554",
-    "0x0.00000000FFFFFFFFFFFFFFFFAAAAAAA8",
-    "0x0.000000007FFFFFFFFFFFFFFFF5555554",
-    "0x0.000000003FFFFFFFFFFFFFFFFEAAAAA8",
-    "0x0.000000001FFFFFFFFFFFFFFFFFD55554",
-    "0x0.000000000FFFFFFFFFFFFFFFFFFAAAA8",
-    "0x0.0000000007FFFFFFFFFFFFFFFFFF5554",
-    "0x0.0000000003FFFFFFFFFFFFFFFFFFEAA8",
-    "0x0.0000000001FFFFFFFFFFFFFFFFFFFD54",
-    "0x0.0000000000FFFFFFFFFFFFFFFFFFFFA8",
-    "0x0.00000000007FFFFFFFFFFFFFFFFFFFF4",
-    "0x0.00000000003FFFFFFFFFFFFFFFFFFFFC",
-    "0x0.00000000001FFFFFFFFFFFFFFFFFFFFC",
-    "0x0.00000000000FFFFFFFFFFFFFFFFFFFFC",
-    "0x0.000000000007FFFFFFFFFFFFFFFFFFFC",
-    "0x0.000000000003FFFFFFFFFFFFFFFFFFFC",
-    "0x0.000000000001FFFFFFFFFFFFFFFFFFFC",
-    "0x0.000000000000FFFFFFFFFFFFFFFFFFFC",
-    "0x0.0000000000007FFFFFFFFFFFFFFFFFFC",
-    "0x0.0000000000003FFFFFFFFFFFFFFFFFFC",
-    "0x0.0000000000001FFFFFFFFFFFFFFFFFFC",
-    "0x0.0000000000000FFFFFFFFFFFFFFFFFFC",
-    "0x0.00000000000007FFFFFFFFFFFFFFFFFC",
-    "0x0.00000000000003FFFFFFFFFFFFFFFFFC",
-    "0x0.00000000000001FFFFFFFFFFFFFFFFFC",
-    "0x0.00000000000000FFFFFFFFFFFFFFFFFC",
-    "0x0.000000000000007FFFFFFFFFFFFFFFFC",
-    "0x0.000000000000003FFFFFFFFFFFFFFFFC",
-    "0x0.000000000000001FFFFFFFFFFFFFFFFC",
-    "0x0.000000000000000FFFFFFFFFFFFFFFFC",
-    "0x0.0000000000000007FFFFFFFFFFFFFFFC",
-    "0x0.0000000000000003FFFFFFFFFFFFFFFC",
-    "0x0.0000000000000001FFFFFFFFFFFFFFFC",
-    "0x0.0000000000000000FFFFFFFFFFFFFFFC",
-    "0x0.00000000000000007FFFFFFFFFFFFFFC",
-    "0x0.00000000000000003FFFFFFFFFFFFFFC",
-    "0x0.00000000000000001FFFFFFFFFFFFFFC",
-    "0x0.00000000000000000FFFFFFFFFFFFFFC",
-    "0x0.000000000000000007FFFFFFFFFFFFFC",
-    "0x0.000000000000000003FFFFFFFFFFFFFC",
-    "0x0.000000000000000001FFFFFFFFFFFFFC",
-    "0x0.000000000000000000FFFFFFFFFFFFFC",
-    "0x0.0000000000000000007FFFFFFFFFFFFC",
-    "0x0.0000000000000000003FFFFFFFFFFFFC",
-    "0x0.0000000000000000001FFFFFFFFFFFFC",
-    "0x0.0000000000000000000FFFFFFFFFFFFC",
-    "0x0.00000000000000000007FFFFFFFFFFFC",
-    "0x0.00000000000000000003FFFFFFFFFFFC",
-    "0x0.00000000000000000001FFFFFFFFFFFC",
-    "0x0.00000000000000000000FFFFFFFFFFFC",
-    "0x0.000000000000000000007FFFFFFFFFFC",
-    "0x0.000000000000000000003FFFFFFFFFFC",
-    "0x0.000000000000000000001FFFFFFFFFFC",
-    "0x0.000000000000000000000FFFFFFFFFFC",
-    "0x0.0000000000000000000007FFFFFFFFFC",
-    "0x0.0000000000000000000003FFFFFFFFFC",
-    "0x0.0000000000000000000001FFFFFFFFFC",
-    "0x0.0000000000000000000000FFFFFFFFFC",
-    "0x0.00000000000000000000007FFFFFFFFC",
-    "0x0.00000000000000000000003FFFFFFFFC",
-    "0x0.00000000000000000000001FFFFFFFFC",
-    "0x0.00000000000000000000000FFFFFFFFC",
-    "0x0.000000000000000000000007FFFFFFFC",
-    "0x0.000000000000000000000003FFFFFFFC",
-    "0x0.000000000000000000000001FFFFFFFC",
-    "0x0.000000000000000000000000FFFFFFFC",
-    "0x0.0000000000000000000000007FFFFFFC",
-    "0x0.0000000000000000000000003FFFFFFC",
-    "0x0.0000000000000000000000001FFFFFFC",
-    "0x0.0000000000000000000000000FFFFFFC",
-    "0x0.00000000000000000000000007FFFFFC",
-    "0x0.00000000000000000000000003FFFFFC",
-    "0x0.00000000000000000000000001FFFFFC",
-    "0x0.00000000000000000000000000FFFFFC",
-    "0x0.000000000000000000000000007FFFFC",
-    "0x0.000000000000000000000000003FFFFC",
-    "0x0.000000000000000000000000001FFFFC",
-    "0x0.000000000000000000000000000FFFFC",
-    "0x0.0000000000000000000000000007FFFC",
-    "0x0.0000000000000000000000000003FFFC",
-    "0x0.0000000000000000000000000001FFFC",
-    "0x0.0000000000000000000000000000FFFC",
-    "0x0.00000000000000000000000000007FFC",
-    "0x0.00000000000000000000000000003FFC",
-    "0x0.00000000000000000000000000001FFC",
-    "0x0.00000000000000000000000000000FFC",
-    "0x0.000000000000000000000000000007FC",
-    "0x0.000000000000000000000000000003FC",
-    "0x0.000000000000000000000000000001FC",
-    "0x0.000000000000000000000000000000FC",
-    "0x0.0000000000000000000000000000007C",
-    "0x0.0000000000000000000000000000003C",
-    "0x0.0000000000000000000000000000001C",
-    "0x0.0000000000000000000000000000000C",
-    "0x0.00000000000000000000000000000004",
-    "0x0.00000000000000000000000000000000",
-    "0x0.00000000000000000000000000000000",
-};
-
-
-const float cordic_ctab_table_floatdouble_128[128] = {
-7.853982e-01,
-4.636476e-01,
-2.449787e-01,
-1.243550e-01,
-6.241881e-02,
-3.123983e-02,
-1.562373e-02,
-7.812341e-03,
-3.906230e-03,
-1.953123e-03,
-9.765622e-04,
-4.882812e-04,
-2.441406e-04,
-1.220703e-04,
-6.103516e-05,
-3.051758e-05,
-1.525879e-05,
-7.629395e-06,
-3.814697e-06,
-1.907349e-06,
-9.536743e-07,
-4.768372e-07,
-2.384186e-07,
-1.192093e-07,
-5.960464e-08,
-2.980232e-08,
-1.490116e-08,
-7.450581e-09,
-3.725290e-09,
-1.862645e-09,
-9.313226e-10,
-4.656613e-10,
-2.328306e-10,
-1.164153e-10,
-5.820766e-11,
-2.910383e-11,
-1.455192e-11,
-7.275958e-12,
-3.637979e-12,
-1.818989e-12,
-9.094947e-13,
-4.547474e-13,
-2.273737e-13,
-1.136868e-13,
-5.684342e-14,
-2.842171e-14,
-1.421085e-14,
-7.105427e-15,
-3.552714e-15,
-1.776357e-15,
-8.881784e-16,
-4.440892e-16,
-2.220446e-16,
-1.110223e-16,
-5.551115e-17,
-2.775558e-17,
-1.387779e-17,
-6.938894e-18,
-3.469447e-18,
-1.734723e-18,
-8.673617e-19,
-4.336809e-19,
-2.168404e-19,
-1.084202e-19,
-5.421011e-20,
-2.710505e-20,
-1.355253e-20,
-6.776264e-21,
-3.388132e-21,
-1.694066e-21,
-8.470329e-22,
-4.235165e-22,
-2.117582e-22,
-1.058791e-22,
-5.293956e-23,
-2.646978e-23,
-1.323489e-23,
-6.617445e-24,
-3.308722e-24,
-1.654361e-24,
-8.271806e-25,
-4.135903e-25,
-2.067952e-25,
-1.033976e-25,
-5.169879e-26,
-2.584939e-26,
-1.292470e-26,
-6.462349e-27,
-3.231174e-27,
-1.615587e-27,
-8.077936e-28,
-4.038968e-28,
-2.019484e-28,
-1.009742e-28,
-5.048710e-29,
-2.524355e-29,
-1.262177e-29,
-6.310887e-30,
-3.155444e-30,
-1.577722e-30,
-7.888609e-31,
-3.944305e-31,
-1.972152e-31,
-9.860761e-32,
-4.930381e-32,
-2.465190e-32,
-1.232595e-32,
-6.162976e-33,
-3.081488e-33,
-1.540744e-33,
-7.703720e-34,
-3.851860e-34,
-1.925930e-34,
-9.629650e-35,
-4.814825e-35,
-2.407412e-35,
-1.203706e-35,
-6.018531e-36,
-3.009266e-36,
-1.504633e-36,
-7.523164e-37,
-3.761582e-37,
-1.880791e-37,
-9.403955e-38,
-4.701977e-38,
-2.350989e-38,
-1.175494e-38,
-5.877472e-39,
-};
-
-const float cordic_hyperb_table_floatdouble_128[128] = {
-5.493061e-01,
-2.554128e-01,
-1.256572e-01,
-6.258157e-02,
-3.126018e-02,
-1.562627e-02,
-7.812659e-03,
-3.906270e-03,
-1.953127e-03,
-9.765628e-04,
-4.882813e-04,
-2.441406e-04,
-1.220703e-04,
-6.103516e-05,
-3.051758e-05,
-1.525879e-05,
-7.629395e-06,
-3.814697e-06,
-1.907349e-06,
-9.536743e-07,
-4.768372e-07,
-2.384186e-07,
-1.192093e-07,
-5.960464e-08,
-2.980232e-08,
-1.490116e-08,
-7.450581e-09,
-3.725290e-09,
-1.862645e-09,
-9.313226e-10,
-4.656613e-10,
-2.328306e-10,
-1.164153e-10,
-5.820766e-11,
-2.910383e-11,
-1.455192e-11,
-7.275958e-12,
-3.637979e-12,
-1.818989e-12,
-9.094947e-13,
-4.547474e-13,
-2.273737e-13,
-1.136868e-13,
-5.684342e-14,
-2.842171e-14,
-1.421085e-14,
-7.105427e-15,
-3.552714e-15,
-1.776357e-15,
-8.881784e-16,
-4.440892e-16,
-2.220446e-16,
-1.110223e-16,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-0.000000e+00,
-};
-
-
-const ap_ufixed<128,4> cordic_hyperb_table_128[128] = {
-"0x0.8c9f53d5681854bb520cc6aa829dbe5",
-"0x0.4162bbea0451469c9daf0be0810eda9",
-"0x0.202b12393d5deed328cf41ed722d8c9",
-"0x0.1005588ad375acdcb1312a563c68525",
-"0x0.0800aac448d77125a4ee9fee2db3774",
-"0x0.04001556222b47263834e958ab3b4ca",
-"0x0.020002aab111235a6e87a29f88bb425",
-"0x0.01000055558888ad1aee1ef93404079",
-"0x0.0080000aaaac44448d68e4c64f4d811",
-"0x0.004000015555622222b46b4dd0dd6ae",
-"0x0.002000002aaaab11111235a35dc3dc4",
-"0x0.001000000555555888888ad1ad1c98c",
-"0x0.0008000000aaaaaac4444448d68d69b",
-"0x0.0004000000155555562222222b46b46",
-"0x0.000200000002aaaaaab1111111235a3",
-"0x0.0001000000005555555588888888ad1",
-"0x0.0000800000000aaaaaaaac444444448",
-"0x0.0000400000000155555555622222222",
-"0x0.000020000000002aaaaaaaab1111111",
-"0x0.0000100000000005555555555888888",
-"0x0.0000080000000000aaaaaaaaaac4444",
-"0x0.0000040000000000155555555556222",
-"0x0.000002000000000002aaaaaaaaaab11",
-"0x0.0000010000000000005555555555558",
-"0x0.0000008000000000000aaaaaaaaaaaa",
-"0x0.0000004000000000000155555555555",
-"0x0.000000200000000000002aaaaaaaaaa",
-"0x0.0000001000000000000005555555555",
-"0x0.0000000800000000000000aaaaaaaaa",
-"0x0.0000000400000000000000155555555",
-"0x0.000000020000000000000002aaaaaaa",
-"0x0.0000000100000000000000005555555",
-"0x0.0000000080000000000000000aaaaaa",
-"0x0.0000000040000000000000000155555",
-"0x0.000000002000000000000000002aaaa",
-"0x0.0000000010000000000000000005555",
-"0x0.0000000008000000000000000000aaa",
-"0x0.0000000004000000000000000000155",
-"0x0.000000000200000000000000000002a",
-"0x0.0000000001000000000000000000005",
-"0x0.0000000000800000000000000000000",
-"0x0.0000000000400000000000000000000",
-"0x0.00000000001ffffffffffffffffffff",
-"0x0.00000000000ffffffffffffffffffff",
-"0x0.000000000007fffffffffffffffffff",
-"0x0.000000000003fffffffffffffffffff",
-"0x0.000000000001fffffffffffffffffff",
-"0x0.000000000000fffffffffffffffffff",
-"0x0.0000000000007ffffffffffffffffff",
-"0x0.0000000000003ffffffffffffffffff",
-"0x0.0000000000001ffffffffffffffffff",
-"0x0.0000000000000ffffffffffffffffff",
-"0x0.00000000000007fffffffffffffffff",
-"0x0.00000000000003fffffffffffffffff",
-"0x0.00000000000001fffffffffffffffff",
-"0x0.00000000000000fffffffffffffffff",
-"0x0.000000000000007ffffffffffffffff",
-"0x0.000000000000003ffffffffffffffff",
-"0x0.000000000000001ffffffffffffffff",
-"0x0.000000000000000ffffffffffffffff",
-"0x0.0000000000000007fffffffffffffff",
-"0x0.0000000000000003fffffffffffffff",
-"0x0.0000000000000001fffffffffffffff",
-"0x0.0000000000000000fffffffffffffff",
-"0x0.00000000000000007ffffffffffffff",
-"0x0.00000000000000003ffffffffffffff",
-"0x0.00000000000000001ffffffffffffff",
-"0x0.00000000000000000ffffffffffffff",
-"0x0.000000000000000007fffffffffffff",
-"0x0.000000000000000003fffffffffffff",
-"0x0.000000000000000001fffffffffffff",
-"0x0.000000000000000000fffffffffffff",
-"0x0.0000000000000000007ffffffffffff",
-"0x0.0000000000000000003ffffffffffff",
-"0x0.0000000000000000001ffffffffffff",
-"0x0.0000000000000000000ffffffffffff",
-"0x0.00000000000000000007fffffffffff",
-"0x0.00000000000000000003fffffffffff",
-"0x0.00000000000000000001fffffffffff",
-"0x0.00000000000000000000fffffffffff",
-"0x0.000000000000000000007ffffffffff",
-"0x0.000000000000000000003ffffffffff",
-"0x0.000000000000000000001ffffffffff",
-"0x0.000000000000000000000ffffffffff",
-"0x0.0000000000000000000007fffffffff",
-"0x0.0000000000000000000003fffffffff",
-"0x0.0000000000000000000001fffffffff",
-"0x0.0000000000000000000000fffffffff",
-"0x0.00000000000000000000007ffffffff",
-"0x0.00000000000000000000003ffffffff",
-"0x0.00000000000000000000001ffffffff",
-"0x0.00000000000000000000000ffffffff",
-"0x0.000000000000000000000007fffffff",
-"0x0.000000000000000000000003fffffff",
-"0x0.000000000000000000000001fffffff",
-"0x0.000000000000000000000000fffffff",
-"0x0.0000000000000000000000007ffffff",
-"0x0.0000000000000000000000003ffffff",
-"0x0.0000000000000000000000001ffffff",
-"0x0.0000000000000000000000000ffffff",
-"0x0.00000000000000000000000007fffff",
-"0x0.00000000000000000000000003fffff",
-"0x0.00000000000000000000000001fffff",
-"0x0.00000000000000000000000000fffff",
-"0x0.000000000000000000000000007ffff",
-"0x0.000000000000000000000000003ffff",
-"0x0.000000000000000000000000001ffff",
-"0x0.000000000000000000000000000ffff",
-"0x0.0000000000000000000000000007fff",
-"0x0.0000000000000000000000000003fff",
-"0x0.0000000000000000000000000001fff",
-"0x0.0000000000000000000000000000fff",
-"0x0.00000000000000000000000000007ff",
-"0x0.00000000000000000000000000003ff",
-"0x0.00000000000000000000000000001ff",
-"0x0.00000000000000000000000000000ff",
-"0x0.000000000000000000000000000007f",
-"0x0.000000000000000000000000000003f",
-"0x0.000000000000000000000000000001f",
-"0x0.000000000000000000000000000000f",
-"0x0.0000000000000000000000000000007",
-"0x0.0000000000000000000000000000003",
-"0x0.0000000000000000000000000000001",
-"0x0.0000000000000000000000000000000",
-"0x0.0000000000000000000000000000000",
-"0x0.0000000000000000000000000000000",
-"0x0.0000000000000000000000000000000",
-"0x0.0000000000000000000000000000000",
-};
-
-
-const ap_ufixed<128,4> cordic_hyperb_table_128_160[170] = {
-"0x0.8c9f53d5681854bb520cc6aa829dbe5",
-"0x0.4162bbea0451469c9daf0be0810eda9",
-"0x0.202b12393d5deed328cf41ed722d8c9",
-"0x0.1005588ad375acdcb1312a563c68525",
-"0x0.1005588ad375acdcb1312a563c68525",
-"0x0.0800aac448d77125a4ee9fee2db3774",
-"0x0.04001556222b47263834e958ab3b4ca",
-"0x0.020002aab111235a6e87a29f88bb425",
-"0x0.020002aab111235a6e87a29f88bb425",
-"0x0.01000055558888ad1aee1ef93404079",
-"0x0.0080000aaaac44448d68e4c64f4d811",
-"0x0.004000015555622222b46b4dd0dd6ae",
-"0x0.004000015555622222b46b4dd0dd6ae",
-"0x0.002000002aaaab11111235a35dc3dc4",
-"0x0.001000000555555888888ad1ad1c98c",
-"0x0.0008000000aaaaaac4444448d68d69b",
-"0x0.0008000000aaaaaac4444448d68d69b",
-"0x0.0004000000155555562222222b46b46",
-"0x0.000200000002aaaaaab1111111235a3",
-"0x0.0001000000005555555588888888ad1",
-"0x0.0001000000005555555588888888ad1",
-"0x0.0000800000000aaaaaaaac444444448",
-"0x0.0000400000000155555555622222222",
-"0x0.000020000000002aaaaaaaab1111111",
-"0x0.000020000000002aaaaaaaab1111111",
-"0x0.0000100000000005555555555888888",
-"0x0.0000080000000000aaaaaaaaaac4444",
-"0x0.0000040000000000155555555556222",
-"0x0.0000040000000000155555555556222",
-"0x0.000002000000000002aaaaaaaaaab11",
-"0x0.0000010000000000005555555555558",
-"0x0.0000008000000000000aaaaaaaaaaaa",
-"0x0.0000008000000000000aaaaaaaaaaaa",
-"0x0.0000004000000000000155555555555",
-"0x0.000000200000000000002aaaaaaaaaa",
-"0x0.0000001000000000000005555555555",
-"0x0.0000001000000000000005555555555",
-"0x0.0000000800000000000000aaaaaaaaa",
-"0x0.0000000400000000000000155555555",
-"0x0.000000020000000000000002aaaaaaa",
-"0x0.000000020000000000000002aaaaaaa",
-"0x0.0000000100000000000000005555555",
-"0x0.0000000080000000000000000aaaaaa",
-"0x0.0000000040000000000000000155555",
-"0x0.0000000040000000000000000155555",
-"0x0.000000002000000000000000002aaaa",
-"0x0.0000000010000000000000000005555",
-"0x0.0000000008000000000000000000aaa",
-"0x0.0000000008000000000000000000aaa",
-"0x0.0000000004000000000000000000155",
-"0x0.000000000200000000000000000002a",
-"0x0.0000000001000000000000000000005",
-"0x0.0000000001000000000000000000005",
-"0x0.0000000000800000000000000000000",
-"0x0.0000000000400000000000000000000",
-"0x0.00000000001ffffffffffffffffffff",
-"0x0.00000000001ffffffffffffffffffff",
-"0x0.00000000000ffffffffffffffffffff",
-"0x0.000000000007fffffffffffffffffff",
-"0x0.000000000003fffffffffffffffffff",
-"0x0.000000000003fffffffffffffffffff",
-"0x0.000000000001fffffffffffffffffff",
-"0x0.000000000000fffffffffffffffffff",
-"0x0.0000000000007ffffffffffffffffff",
-"0x0.0000000000007ffffffffffffffffff",
-"0x0.0000000000003ffffffffffffffffff",
-"0x0.0000000000001ffffffffffffffffff",
-"0x0.0000000000000ffffffffffffffffff",
-"0x0.0000000000000ffffffffffffffffff",
-"0x0.00000000000007fffffffffffffffff",
-"0x0.00000000000003fffffffffffffffff",
-"0x0.00000000000001fffffffffffffffff",
-"0x0.00000000000001fffffffffffffffff",
-"0x0.00000000000000fffffffffffffffff",
-"0x0.000000000000007ffffffffffffffff",
-"0x0.000000000000003ffffffffffffffff",
-"0x0.000000000000003ffffffffffffffff",
-"0x0.000000000000001ffffffffffffffff",
-"0x0.000000000000000ffffffffffffffff",
-"0x0.0000000000000007fffffffffffffff",
-"0x0.0000000000000007fffffffffffffff",
-"0x0.0000000000000003fffffffffffffff",
-"0x0.0000000000000001fffffffffffffff",
-"0x0.0000000000000000fffffffffffffff",
-"0x0.0000000000000000fffffffffffffff",
-"0x0.00000000000000007ffffffffffffff",
-"0x0.00000000000000003ffffffffffffff",
-"0x0.00000000000000001ffffffffffffff",
-"0x0.00000000000000001ffffffffffffff",
-"0x0.00000000000000000ffffffffffffff",
-"0x0.000000000000000007fffffffffffff",
-"0x0.000000000000000003fffffffffffff",
-"0x0.000000000000000003fffffffffffff",
-"0x0.000000000000000001fffffffffffff",
-"0x0.000000000000000000fffffffffffff",
-"0x0.0000000000000000007ffffffffffff",
-"0x0.0000000000000000007ffffffffffff",
-"0x0.0000000000000000003ffffffffffff",
-"0x0.0000000000000000001ffffffffffff",
-"0x0.0000000000000000000ffffffffffff",
-"0x0.0000000000000000000ffffffffffff",
-"0x0.00000000000000000007fffffffffff",
-"0x0.00000000000000000003fffffffffff",
-"0x0.00000000000000000001fffffffffff",
-"0x0.00000000000000000001fffffffffff",
-"0x0.00000000000000000000fffffffffff",
-"0x0.000000000000000000007ffffffffff",
-"0x0.000000000000000000003ffffffffff",
-"0x0.000000000000000000003ffffffffff",
-"0x0.000000000000000000001ffffffffff",
-"0x0.000000000000000000000ffffffffff",
-"0x0.0000000000000000000007fffffffff",
-"0x0.0000000000000000000007fffffffff",
-"0x0.0000000000000000000003fffffffff",
-"0x0.0000000000000000000001fffffffff",
-"0x0.0000000000000000000000fffffffff",
-"0x0.0000000000000000000000fffffffff",
-"0x0.00000000000000000000007ffffffff",
-"0x0.00000000000000000000003ffffffff",
-"0x0.00000000000000000000001ffffffff",
-"0x0.00000000000000000000001ffffffff",
-"0x0.00000000000000000000000ffffffff",
-"0x0.000000000000000000000007fffffff",
-"0x0.000000000000000000000003fffffff",
-"0x0.000000000000000000000003fffffff",
-"0x0.000000000000000000000001fffffff",
-"0x0.000000000000000000000000fffffff",
-"0x0.0000000000000000000000007ffffff",
-"0x0.0000000000000000000000007ffffff",
-"0x0.0000000000000000000000003ffffff",
-"0x0.0000000000000000000000001ffffff",
-"0x0.0000000000000000000000000ffffff",
-"0x0.0000000000000000000000000ffffff",
-"0x0.00000000000000000000000007fffff",
-"0x0.00000000000000000000000003fffff",
-"0x0.00000000000000000000000001fffff",
-"0x0.00000000000000000000000001fffff",
-"0x0.00000000000000000000000000fffff",
-"0x0.000000000000000000000000007ffff",
-"0x0.000000000000000000000000003ffff",
-"0x0.000000000000000000000000003ffff",
-"0x0.000000000000000000000000001ffff",
-"0x0.000000000000000000000000000ffff",
-"0x0.0000000000000000000000000007fff",
-"0x0.0000000000000000000000000007fff",
-"0x0.0000000000000000000000000003fff",
-"0x0.0000000000000000000000000001fff",
-"0x0.0000000000000000000000000000fff",
-"0x0.0000000000000000000000000000fff",
-"0x0.00000000000000000000000000007ff",
-"0x0.00000000000000000000000000003ff",
-"0x0.00000000000000000000000000001ff",
-"0x0.00000000000000000000000000001ff",
-"0x0.00000000000000000000000000000ff",
-"0x0.000000000000000000000000000007f",
-"0x0.000000000000000000000000000003f",
-"0x0.000000000000000000000000000003f",
-"0x0.000000000000000000000000000001f",
-"0x0.000000000000000000000000000000f",
-"0x0.0000000000000000000000000000007",
-"0x0.0000000000000000000000000000007",
-"0x0.0000000000000000000000000000003",
-"0x0.0000000000000000000000000000001",
-"0x0.0000000000000000000000000000000",
-"0x0.0000000000000000000000000000000",
-"0x0.0000000000000000000000000000000",
-"0x0.0000000000000000000000000000000",
-"0x0.0000000000000000000000000000000",
-"0x0.0000000000000000000000000000000",
-"0x0.0000000000000000000000000000000",
-};
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#46 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h" 2
-
-/**
- * The CORDIC function implements a configurable optimized CORDIC block.
- * The block naturally operates on fixed point data but the input data width and
- * associated number of iterations can be arbitrarily extended.
- *
- *
- */
-
-/* @{ */
-
-namespace cordic
-{
-
-template <typename T>
-class _const
-{
-};
-
-template <>
-class _const<float>
-{
-public:
-    static const uint32_t zero = 0x00000000;
-    static const uint32_t pi_4 = 0x3F490FDB;
-    static const uint32_t pi_2 = 0x3FC90FDB;
-    static const uint32_t _3pi_4 = 0x4016CBE4;
-    static const uint32_t pi = 0x40490FDB;
-
-public :
-inline __attribute__((always_inline)) _const<float>() { _ssdm_SpecConstant(&zero); _ssdm_SpecConstant(&pi_4); _ssdm_SpecConstant(&pi_2); _ssdm_SpecConstant(&_3pi_4); _ssdm_SpecConstant(&pi);  }
-#74 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h"
-};
-
-template <>
-class _const<double>
-{
-public:
-    static const uint64_t zero = 0x0000000000000000;
-    static const uint64_t pi_4 = 0x3FE921FB54442D18;
-    static const uint64_t pi_2 = 0x3FF921FB54442D18;
-    static const uint64_t _3pi_4 = 0x4002D97C7F3321D2;
-    static const uint64_t pi = 0x400921FB54442D18;
-
-public :
-inline __attribute__((always_inline)) _const<double>() { _ssdm_SpecConstant(&zero); _ssdm_SpecConstant(&pi_4); _ssdm_SpecConstant(&pi_2); _ssdm_SpecConstant(&_3pi_4); _ssdm_SpecConstant(&pi);  }
-#85 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h"
-};
-
-/**
- * Performs selectable add/sub operation.
- *
- * @param a First input variable.
- * @param b Second input variable.
- * @param add Add/sub selector. 1 = add. 0 = subtract.
- *
- * @return Result of addsub operation.
- */
-template<int II1, int LAT1, class T2, class T3, class T4>
-typename x_traits<T2,T3>::ADD_T addsub(
-    T2 a,
-    T3 b,
-    T4 add)
-{
-    if(II1 == 0) {
-        if(LAT1 == 1) {
-_ssdm_op_SpecInterface(0, "ap_none", 1, 1, 0, 0, "", "", "", 0, 0, 0, 0, "");
-        }
-    }
-_ssdm_op_SpecLatency(0, LAT1, "");
-
-    typename x_traits<T2,T3>::ADD_T tmp;
-//     if(add) {
-//         tmp = a + b;
-//     } else {
-//         tmp = a - b;
-//     }
-
-    if(!add) b = -b;
-    tmp = a + b;
-    return tmp;
-}
-
-/**
- * Performs selectable add/sub operation on float/ doubles.
- *
- * @param a First input variable.
- * @param b Second input variable.
- * @param add Add/sub selector. 1 = add. 0 = subtract.
- *
- * @return Result of addsub operation.
- */
-template<class T2, class T3, class T4>
-typename x_traits<T2, T3>::ADD_T addsub_floatdouble(
- T2 a,
- T3 b,
- T4 add)
-{
- typename x_traits<T2, T3>::ADD_T tmp;
- fp_struct<T3> b_mod(b);
- b_mod.sign = !(add^b_mod.sign);
-
- tmp = a + b_mod.to_ieee();
- return tmp;
-}
-
-/**
- * Shift a by b bits depending on direction value dir.
- * Shifting is accomplished via exponent addition/ subtraction and overflows/
- * underflows are handled as appropriate. 
- * 
- * SHIFT_RIGHT: shift right is true or left if false
- * 
- */
-template<bool SHIFT_RIGHT, class T1, class T2>
-T1 shift_floatdouble(
- T1 a,
- T2 b)
-{
-        (((b>=0) && "number of shift bits must be non-negative, use bool value SHIFT_RIGHT for left-shift or right-shift") ? static_cast<void> (0) : __assert_fail ("(b>=0) && \"number of shift bits must be non-negative, use bool value SHIFT_RIGHT for left-shift or right-shift\"", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h", 157, __PRETTY_FUNCTION__));
-        if (a == 0)
-            return a;
- fp_struct<T1> tmp(a);
- if(SHIFT_RIGHT) {
-            if (tmp.exp == 0) { // subnormal;
-                tmp.sig = (tmp.sig >> b);
-            } else {
-  int new_exp = (int)(tmp.exp) - b;
-  int min_bias = 1;
-  if(new_exp < min_bias) { // underflow
-   tmp.exp = 0;
-                        tmp.sig = tmp.sig >> 1;
-                        tmp.sig[tmp.SIG_BITS-1] = 1;
-   tmp.sig = (tmp.sig >> (-new_exp));
-  } else {
-   tmp.exp = new_exp;
-  }
-            }
- } else { // shifting left, non-subnormal
-  int new_exp = (int)(tmp.exp) + b;
-  int max_bias = 2*tmp.EXP_BIAS;
-  if(new_exp > max_bias) { // overflow, round to INF
-   tmp.exp = 2*tmp.EXP_BIAS+1; // set all 1's on exp
-   tmp.sig = 0;
-  } else {
-   tmp.exp = new_exp;
-                        // FIXME: uncomment below to handle subnormal shifting left (may fail co-sim)
-                        /*
-                        if (tmp.exp != 0)
-			        tmp.exp = new_exp;
-                        else { // subnormal
-                                int k = 0, flag = 0;
-                                for (int i = 0; i < tmp.SIG_BITS; i++) {
-                                    if (tmp.sig[tmp.SIG_BITS-1-i] == 1 && flag == 0) {
-                                        k = i;
-                                        flag = 1;
-                                    }
-                                }
-                                if (b <= k) {
-                                    tmp.sig = (tmp.sig << b);
-                                } else {
-                                    tmp.sig = tmp.sig << (k+1); // hidden bit = 1;
-                                    tmp.exp = b-k;
-                                }
-                        }
-                        */
-  }
- }
- return tmp.to_ieee();
-}
-
-
-/**
- * Main CORDIC sub-function (version 1) which performs the shift/addsub operations.
- *
- * @param theta Input angle (in radians).
- * @param s Output result of sin(theta) in radians.
- * @param c Output result of cos(theta) in radians.
- */
-template<int N, int MODE, int II1, int LAT1, int W, int I, int W2, int I2>
-void cordic_circ_v1(
- ap_fixed<W,I> &x,
- ap_fixed<W,I> &y,
- ap_fixed<W2,I2> &z)
-{
-_ssdm_InlineSelf(0, "");
-    typedef ap_fixed<W,I> T;
-
-    const int n = (N>W) ? W : N;
-    const int LAT2 = LAT1/N;
-
- int k;
- T tx, ty;
-    ap_fixed<W2,I2> tz;
- ap_uint<1> d;
-
- for (k=0; k<n; ++k) {
-
-
-
-  if(MODE == 1) {
-   d = ~y[N-1];
-
-
-
-
-  } else { // == 0
-   d = z[n-1];
-
-
-
-  }
-
-
-
-
-  T y_s = y >> k;
-  tx = addsub<II1,LAT2>(x, y_s, d);
-  T x_s = x >> k;
-  ty = addsub<II1,LAT2>(y, x_s, !d);
-  ap_fixed<W2,I2,SC_RND> z_s; z_s = cordic_ctab_table_128[k]; // Round here.
-  tz = addsub<II1,LAT2>(z, z_s, d);
-  x = tx; y = ty; z = tz;
- }
-}
-
-
-/**
- * Main CORDIC sub-function (version 1) which performs the shift/addsub operations.
- * intending to operate on floats/ doubles directly.
- *
- * @param x (in radians).
- * @param y 
- * @param z 
- */
-template<int N, int MODE, class T>
-void cordic_circ_floatdouble_v1(
- T &x,
- T &y,
- T &z)
-{
-_ssdm_InlineSelf(0, "");
-
- int k;
- T tx, ty, tz;
- ap_uint<1> d;
-
- for (k=0; k<N; ++k) {
-
-
-
-  fp_struct<T> y_tmp(y);
-  fp_struct<T> z_tmp(z);
-
-  if(MODE == 1) {
-   d = ~y_tmp.sign;
-
-
-
-  } else { // == 0
-   d = z_tmp.sign;
-
-
-
-  }
-
-
-
-  T y_s = shift_floatdouble<true,T>(y,k);
-  tx = addsub_floatdouble(x, y_s, d);
-  T x_s = shift_floatdouble<true,T>(x,k);
-  ty = addsub_floatdouble(y, x_s, !d);
-  T z_s = cordic_ctab_table_floatdouble_128[k];
-  tz = addsub_floatdouble(z, z_s, d);
-
-  x = tx; y = ty; z = tz;
- }
-}
-
-template<int W, int N, int MODE, int II1, int LAT1, class T>
-void cordic_hyperb_v1(
- T &x,
- T &y,
- T &z)
-{
-_ssdm_InlineSelf(0, "");
-
- const int n = (N>W) ? W : N;
- const int n1 = n + n/4;
- const int LAT2 = LAT1/N;
-
-//	int k, k1; 
- int k1;
- T tx, ty, tz;
- ap_uint<1> d;
-
-//	k=1;
- for (k1=0; k1<n1; ++k1) {
-  int k = k1 - (k1/4) + 1;
-
-
-
-
-
-
-
-  if(MODE == 1) {
-   d = ~y[n-1];
-
-
-
-  } else { // == 0
-   d = z[n-1];
-
-
-
-  }
-  T y_s = y >> k;
-  tx = addsub<II1,LAT2>(x, y_s, !d);
-
-
-
-  T x_s = x >> k;
-  ty = addsub<II1,LAT2>(y, x_s, !d);
-//		T z_s = cordic_hyperb_table_128[k-1];
-  T z_s = cordic_hyperb_table_128_160[k1];
-
-
-
-  tz = addsub<II1,LAT2>(z, z_s, d);
-
-  x = tx; y = ty; z = tz;
- }
-}
-
-template<int N, int MODE, class T>
-void cordic_hyperb_floatdouble_v1(
- T &x,
- T &y,
- T &z)
-{
-_ssdm_InlineSelf(0, "");
-
- int k, k1;
- T tx, ty, tz;
- ap_uint<1> d;
-
- k=1;
- int cnt = 0;
- const int n1 = N + N/4;
- for (k1=0; k1<n1; ++k1) {
-  fp_struct<T> y_tmp(y);
-  fp_struct<T> z_tmp(z);
-
-
-
-
-
-
-
-  if(MODE == 1) {
-   d = ~y_tmp.sign;
-
-
-
-  } else { // == 0
-   d = z_tmp.sign;
-
-
-
-  }
-  T y_s = shift_floatdouble<true,T>(y,k);
-  tx = addsub_floatdouble(x, y_s, !d);
-  T x_s = shift_floatdouble<true,T>(x,k);
-  ty = addsub_floatdouble(y, x_s, !d);
-  T z_s = cordic_hyperb_table_floatdouble_128[k-1];
-  tz = addsub_floatdouble(z, z_s, d);
-
-
-
-
-  x = tx; y = ty; z = tz;
-
-  if(cnt == 3) {
-   cnt = 0;
-  } else {
-   cnt = cnt + 1;
-   k++;
-   }
- }
-}
-
-
-
-/*
-* CORDIC-based sin/cos using payne-hanek range-reduction algorithm
-* single-precision float
-*/
-static
-int
-sin_cos_range_redux_cordic(
-    float t_in,
-    float &s_out,
-    float &c_out)
-{
-    const int p1 = 20;
-    const int CW = 38;
-
-    fp_struct<float> din(t_in);
-
-    ap_uint<3> k;
-    ap_int<CW> dina1, souta, couta;
-
-    ap_uint<CW> dout;
-    range_redux_payne_hanek<p1,CW,float>(t_in,k,dout);
- dina1 = dout >> 2;
-
-
-
-
- ap_fixed<CW+1,3> x, y, z;
- x.range() = ref_cordic(99,100-CW) >> 2;
- y = 0;
- z.range() = dina1;
- cordic_circ_v1<CW,0,0,0>(x,y,z);
- couta = x.range();
- souta = y.range();
-#497 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h"
-    if(dina1 != 0) {
-        souta = souta << 1;
-        couta = couta << 1;
-    } else {
-
-
-
-        souta = 0;
-        couta = ((ap_uint<CW>)0x1 << (CW-1)) - dina1;
-    }
-    float tmp_s_out, tmp_c_out;
-    tmp_s_out = convToFloat<CW>(souta);
-    tmp_c_out = convToFloat<CW>(couta);
-#519 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h"
-        int sel = (din.__signbit()) ? 7 - k.to_uint() : k.to_uint();
- switch(sel) {
-  case 0:
-   s_out = tmp_s_out;
-   c_out = tmp_c_out;
-   break;
-  case 1:
-   s_out = tmp_c_out;
-   c_out = tmp_s_out;
-   break;
-  case 2:
-   s_out = tmp_c_out;
-   c_out = -tmp_s_out;
-   break;
-  case 3:
-   s_out = tmp_s_out;
-   c_out = -tmp_c_out;
-   break;
-  case 4:
-   s_out = -tmp_s_out;
-   c_out = -tmp_c_out;
-   break;
-  case 5:
-   s_out = -tmp_c_out;
-   c_out = -tmp_s_out;
-   break;
-  case 6:
-   s_out = -tmp_c_out;
-   c_out = tmp_s_out;
-   break;
-  case 7:
-   s_out = -tmp_s_out;
-   c_out = tmp_c_out;
-   break;
-  default: // case 0
-   s_out = tmp_s_out;
-   c_out = tmp_c_out;
- }
-
- if(din.exp == 0xFF) { // +inf, -inf, nan
-        s_out = hls::nan("");
-        c_out = hls::nan("");
-    } else if(din.exp < (127-11)) { // exp=-10 -> ulp=6, exp=-11 -> ulp=1
-        s_out = t_in;
-    }
-
-    return 1;
-}
-
-
-
-/*
-* CORDIC-based sin/cos using payne-hanek range-reduction algorithm
-*/
-static
-int
-sin_cos_range_redux_cordic(
-    double t_in,
-    double &s_out,
-    double &c_out)
-{
-    const int p1 = 16;
-    const int CW = 78;
-
-    fp_struct<double> din(t_in);
-
-    ap_uint<3> k;
- ap_uint<CW> dout;
-
-    range_redux_payne_hanek<p1,CW,double>(t_in,k,dout);
-
-    ap_int<CW> dina1, souta, couta;
-    dina1 = dout >> 2;
-
-
-
- ap_fixed<CW+1,3> x, y, z;
- x.range() = ref_cordic(99,100-CW) >> 2;
- y = 0;
- z.range() = dina1;
- cordic_circ_v1<CW,0,0,0>(x,y,z);
- couta = x.range();
- souta = y.range();
-#615 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h"
-    if(dina1 != 0) {
-        souta = souta << 1;
-        couta = couta << 1;
-    } else {
-
-
-
-        souta = 0;
-        couta = ((ap_uint<CW>)0x1 << (CW-1)) - dina1;
-    }
-    double tmp_s_out, tmp_c_out;
-    tmp_s_out = convToDouble<CW>(souta);
-    tmp_c_out = convToDouble<CW>(couta);
-
-    int sel = (din.__signbit()) ? 7 - k.to_uint() : k.to_uint();
-    switch(sel) {
-        case 0:
-            s_out = tmp_s_out;
-            c_out = tmp_c_out;
-            break;
-        case 1:
-            s_out = tmp_c_out;
-            c_out = tmp_s_out;
-            break;
-        case 2:
-            s_out = tmp_c_out;
-            c_out = -tmp_s_out;
-            break;
-        case 3:
-            s_out = tmp_s_out;
-            c_out = -tmp_c_out;
-            break;
-        case 4:
-            s_out = -tmp_s_out;
-            c_out = -tmp_c_out;
-            break;
-        case 5:
-            s_out = -tmp_c_out;
-            c_out = -tmp_s_out;
-            break;
-        case 6:
-            s_out = -tmp_c_out;
-            c_out = tmp_s_out;
-            break;
-        case 7:
-            s_out = -tmp_s_out;
-            c_out = tmp_c_out;
-            break;
-        default: // case 0
-            s_out = tmp_s_out;
-            c_out = tmp_c_out;
-    }
-
-    if(din.exp == 0x7FF) { // +inf, -inf, nan
-        s_out = hls::nan("");
-        c_out = hls::nan("");
-    } else if(din.exp < (1023-24)) { // exp=-24 -> ulp=3, exp=-25 -> ulp=1
-
-        s_out = t_in;
-    }
-    return 1;
-}
-
-static
-void
-sincos(
- double t_in,
- double *s_out,
- double *c_out)
-{
- sin_cos_range_redux_cordic(t_in,*s_out,*c_out);
-}
-
-static float
-sinf(float t_in)
-{
-    float s_out, c_out;
-    sin_cos_range_redux_cordic(t_in, s_out, c_out);
-    return s_out;
-}
-
-static double
-sin(double t_in)
-{
-    double s_out, c_out;
-    sin_cos_range_redux_cordic(t_in, s_out, c_out);
-    return s_out;
-}
-
-static float
-cosf(float t_in)
-{
-    float s_out, c_out;
-    sin_cos_range_redux_cordic(t_in, s_out, c_out);
-    return c_out;
-}
-
-static double
-cos(double t_in)
-{
-    double s_out, c_out;
-    sin_cos_range_redux_cordic(t_in, s_out, c_out);
-    return c_out;
-}
-
-/*
-* CORDIC-based atan using payne-hanek range-reduction algorithm
-* single-precision float
-*/
-static
-void
-atan_range_redux_cordic(
- float t_in,
- float &t_out)
-{
- const int p1 = 18;
- const int CW = 40;
-
- ap_uint<3> k;
- ap_uint<2*24+p1> dout;
-
- fp_struct<float> fps1(t_in);
- int exp = fp_struct<float>::EXP_BIAS - fps1.exp;
- const int SB = fp_struct<float>::SIG_BITS;
- ap_uint<SB+1> X = ((ap_uint<SB+1>)0x1 << SB) | (fps1.sig);
- dout = 0;
- dout((2*24)+p1-1,(2*24)+p1-(SB+1)) = X;
- dout = dout >> (exp-1);
-
-
-
-
- ap_uint<CW> dtmp;
- ap_fixed<CW+1,3> dina1, x, y, z;
- dtmp = dout((2*24)+p1-1,(2*24)+p1-CW); // Q0.x
- dina1.range() = (dtmp >> 2); // for CW+1,3
-#762 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h"
- x = 1;
- y = dina1;
- z = 0;
-
-
-
-
-
- cordic_circ_v1<CW,1,0,0>(x,y,z);
-
-
-
-
-
-
-
- t_out = convToFloat<CW,3>(z);
-}
-
-/*
-* CORDIC-based atan restricted to range 0 to 1
-* single-precision float
-*/
-static
-void sincosf(
-    float t_in,
-    float *s,
-    float *c)
-{
-    float s_out, c_out;
-    sin_cos_range_redux_cordic(t_in, s_out, c_out);
-    *s = s_out;
-    *c = c_out;
-}
-
-
-/*
-*/
-static
-float
-atan_cordic_floatdouble(
- float t_in)
-{
- const int N = 23;
- float x = 1.0;
- float y = t_in;
- float z = 0.0;
-
-
-
-
-
- cordic_circ_floatdouble_v1<N,1>(x,y,z);
-
-
-
-
-
- return z;
-}
-
-/**
- * atan(x) = pi/2 - atan(1/x)
- */
-static
-float
-atan_cordic(
- float t_in)
-{
- fp_struct<float> tmpin(t_in);
- ap_uint<1> neg = tmpin.sign;
- tmpin.sign = 0;
- float pos = tmpin.to_ieee();
-
- float one_over_x = (float)1.0/pos;
- float din = (pos > (float)1.0) ? one_over_x : pos;
- float res;
- atan_range_redux_cordic(din, res);
- res = (din < (float)4e-4) ? din : res;
-    float pi_over_2 = fp_struct<float>(_const<float>::pi_2).to_ieee();
-    float pi_over_4 = fp_struct<float>(_const<float>::pi_4).to_ieee();
- res = (pos > (float)1.0) ? pi_over_2 - res : res;
- res = (pos == (float)1.0) ? pi_over_4 : res;
- fp_struct<float> tmpout(res);
- tmpout.sign = neg;
-
-    if(tmpin.exp == 0xFF) { // +inf, -inf, nan
-  if(tmpin.sig == 0) { // +inf, - inf
-
-
-
-   fp_struct<float> res_tmp(_const<float>::pi_2);
-   res_tmp.sign = neg;
-   res = res_tmp.to_ieee();
-  } else {
-
-
-
-   res = hls::nan("");
-  }
- } else {
-  res = tmpout.to_ieee();
- }
-
- return res;
-}
-
-static float
-atanf(float t_in) {
- return atan_cordic(t_in);
-}
-
-/*
-* x_in and y_in are both positive and y_in < x_in
-*/
-static
-float
-atan2_range_redux_cordic(float y_in,
-                         float x_in) {
-    // normalize y_in and x_in
-    fp_struct<float> fps_x(x_in);
-    fp_struct<float> fps_y(y_in);
-//     bool x_subnormal = (fps_x.exp == 0);
-//     bool y_subnormal = (fps_y.exp == 0);
-//     bool both_subnormal = x_subnormal && y_subnormal;
-
-    // Note that there is some subnormal handling that is probably duplicated
-    // in the floating point division core.
-    if ( fps_y.exp + 11 < fps_x.exp) { // atan(y/x) = y/x
-
-
-
-        return ((y_in)/(x_in));
-    }
-
-    int d_exp = fps_x.exp - fps_y.exp;
-//     // Handle shifting correctly if y is subnormal and x is not.
-//     if (!x_subnormal && y_subnormal) d_exp--;
-
-    // This comes from (approximately):
-    // 1) We know that there is a 1 in the first 12 bits, since we're not doing the division approximation.
-    // 2) After the first 12 bits, we need 24 significant bits for single precision mantissa
-    // 3) We know there is going to be some rounding error.  The rounding error is very small after a number
-    // of terms, so we can bound this error based on the angle constants in the cordic table.
-    // 40 bits of precision requires 4 guard bits.
-    // 12 + 24 + 4 = 40.
-    const int CW = 40;
-
-    const int SB = fp_struct<float>::SIG_BITS;
-    ap_fixed<CW+1, 2> x, y;
-    ap_fixed<CW+1, 2> z;
-
-    // This is the number of bits we need to shift left if
-    // both x and y are subnormals, in order to avoid loss of precision
-    // int lz = (fps_x.sig | fps_y.sig).countLeadingZeros();
-
-    y=0;
-    y(CW+1-5-1, CW+1-5-SB) = fps_y.sig;
-    y[CW+1-5] = 1; //!y_subnormal; // Set the implicit 1
-    x=0;
-    x(CW+1-5-1, CW+1-5-SB) = fps_x.sig;
-    x[CW+1-5] = 1; //!x_subnormal; // Set the implicit 1
-
-    y >>= d_exp;
-    //if(both_subnormal) y <<= lz;
-    //if(both_subnormal) x <<= lz;
-
-    z = 0;
-
-
-
-
-
-    cordic_circ_v1<CW+1,1,0,0>(x,y,z);
-
-
-
-
-
-
-    return z;//convToFloat(z);
-}
-
-static
-double
-atan2_range_redux_cordic(double y_in,
-                         double x_in) {
-    // normalize y_in and x_in
-    fp_struct<double> fps_x(x_in);
-    fp_struct<double> fps_y(y_in);
-//     bool x_subnormal = (fps_x.exp == 0);
-//     bool y_subnormal = (fps_y.exp == 0);
-//     bool both_subnormal = x_subnormal && y_subnormal;
-
-    // Note that there is some subnormal handling that is probably duplicated
-    // in the floating point division core.
-    if ( fps_y.exp + 26 < fps_x.exp) { // atan(y/x) = y/x
-
-
-
-        return ((y_in)/(x_in));
-    }
-
-    int d_exp = fps_x.exp - fps_y.exp;
-//     // Handle shifting correctly if y is subnormal and x is not.
-//     if (!x_subnormal && y_subnormal) d_exp--;
-
-    // This comes from (approximately):
-    // 1) We know that there is a 1 in the first 27 bits, since we're not doing the division approximation.
-    // 2) After the first 12 bits, we need 53 significant bits for single precision mantissa
-    // 3) We know there is going to be some rounding error.  The rounding error is very small after a number
-    // of terms, so we can bound this error based on the angle constants in the cordic table.
-    // 80 bits of precision requires 5 guard bits.
-    const int CW = 86;
-
-    const int SB = fp_struct<double>::SIG_BITS;
-    ap_fixed<CW+1, 2> x, y;
-    ap_fixed<CW+1, 2> z;
-
-    // This is the number of bits we need to shift left if
-    // both x and y are subnormals, in order to avoid loss of precision
-    // int lz = (fps_x.sig | fps_y.sig).countLeadingZeros();
-
-    y=0;
-    y(CW+1-5-1, CW+1-5-SB) = fps_y.sig;
-    y[CW+1-5] = 1; //!y_subnormal; // Set the implicit 1
-    x=0;
-    x(CW+1-5-1, CW+1-5-SB) = fps_x.sig;
-    x[CW+1-5] = 1; //!x_subnormal; // Set the implicit 1
-
-    y >>= d_exp;
-
-    z = 0;
-
-
-
-
-
-    cordic_circ_v1<CW+1,1,0,0>(x,y,z);
-
-
-
-
-
-
-    return z; //convToDouble<CW,3>(z);
-}
-
-
-template<class T>
-static T
-atan2_cordic_floatdouble(
- T y_in,
-        T x_in)
-{
-_ssdm_op_SpecResourceLimit(1, "", "", "atan2_range_redux_cordic", "");
-    fp_struct<T> fpsx(x_in);
-    fp_struct<T> fpsy(y_in);
-    if (fpsx.data() == fpsy.data())
-        return fp_struct<T>(_const<T>::pi_4).to_ieee();
-    else if (y_in > x_in)
-        return fp_struct<T>(_const<T>::pi_2).to_ieee() - atan2_range_redux_cordic(x_in, y_in);
-    else
-        return atan2_range_redux_cordic(y_in, x_in);
-}
-
-
-template<class T>
-static T
-atan2_cordic(
-        T y_in,
-        T x_in)
-{
-    fp_struct<T> fpsx(x_in);
-    fp_struct<T> fpsy(y_in);
-    if ( hls::__isnan(y_in) || hls::__isnan(x_in) ) { // y or x is NaN
-        return hls::nan("");
-    }
-
-    int m = ( (fpsx.sign.to_int() << 1) | fpsy.sign.to_int() ); // m: bit_1: sign of x; bit_0: sign of y
-
-    if ( fpsy.exp == 0 ) { // y = +-0 or subnormal
-        switch(m) {
-            case 0: return fp_struct<T>(_const<T>::zero).to_ieee(); // atan2(+0, +x) = +0
-            case 1: return -fp_struct<T>(_const<T>::zero).to_ieee(); // atan2(-0, +x) = -0
-            case 2: return fp_struct<T>(_const<T>::pi).to_ieee(); // atan2(+0, -x) = pi
-            case 3: return -fp_struct<T>(_const<T>::pi).to_ieee(); // atan2(-0, -x) = -pi
-        }
-    } else if ( fpsx.exp == 0 ) { // x = +-0 or subnormal, y != 0
-        switch(m&1) {
-            case 0: return fp_struct<T>(_const<T>::pi_2).to_ieee(); // atan2(+y, +-0) = pi/2
-            case 1: return -fp_struct<T>(_const<T>::pi_2).to_ieee(); // atan2(-y, +-0) = -pi/2
-        }
-    } else if ( hls::__isinf(x_in) && hls::__isinf(y_in) ) { // x, y = +-INF
-        switch(m) {
-            case 0: return fp_struct<T>(_const<T>::pi_4).to_ieee(); // atan2(+INF, +INF) = pi/4
-            case 1: return -fp_struct<T>(_const<T>::pi_4).to_ieee(); // atan2(-INF, +INF) = -pi/4
-            case 2: return fp_struct<T>(_const<T>::_3pi_4).to_ieee(); // atan2(+INF, -INF) = 3*pi/4
-            case 3: return -fp_struct<T>(_const<T>::_3pi_4).to_ieee(); // atan2(-INF, -INF) = -3*pi/4
-        }
-    } else if ( hls::__isinf(x_in) ) { // x = +- INF, y != +- INF
-        switch(m) {
-            case 0: return fp_struct<T>(_const<T>::zero).to_ieee(); // atan2(+y, +INF) = +0
-            case 1: return -fp_struct<T>(_const<T>::zero).to_ieee(); // atan2(-y, +INF) = -0
-            case 2: return fp_struct<T>(_const<T>::pi).to_ieee(); // atan2(+y, -INF) = pi
-            case 3: return -fp_struct<T>(_const<T>::pi).to_ieee(); // atan2(-y, -INF) = -pi
-        }
-    } else if ( hls::__isinf(y_in) ) { // y = +- INF, x != +- INF
-        switch(m&1) {
-            case 0: return fp_struct<T>(_const<T>::pi_2).to_ieee(); // atan2(+INF, +-x) = pi/2
-            case 1: return -fp_struct<T>(_const<T>::pi_2).to_ieee(); // atan2(-INF, +-x) = -pi/2
-        }
-    } else { // x, y != +-INF
-        T a = hls::abs(y_in);
-        T b = hls::abs(x_in);
-        T c = atan2_cordic_floatdouble(a,b);
-        T d = fp_struct<T>(_const<T>::pi).to_ieee() - c;
-        switch(m) {
-            case 0: // quadrant I
-                return c; //atan2_cordic_floatdouble(y_in, x_in);
-            case 1: // quadrant IV
-                return -c; //-atan2_cordic_floatdouble(-y_in, x_in);
-            case 2: // quadrant II
-                return d; //fp_struct<T>(_const<T>::pi).to_ieee() - atan2_cordic_floatdouble(y_in, -x_in);
-            case 3: // quadrant III
-                return -d; //atan2_cordic_floatdouble(-y_in, -x_in) - fp_struct<T>(_const<T>::pi).to_ieee();
-        }
-    }
-    return 0;
-}
-
-
-static float
-atan2f(float y_in, float x_in) {
-    return atan2_cordic(y_in, x_in);
-}
-
-static double
-atan2(double y_in, double x_in) {
-    return atan2_cordic(y_in, x_in);
-}
-
-
-
-/**
- * Range reduces input to between -ln2/2 and ln2/2 by 
- * solving for k and y in x = k*ln2 + y, where x = t_in.
- * 
- * Theoretical max value of x is 710.48 where any larger value gives sinh(x) = inf
- * In practcie, for sinhf(float), x,max < 2^7 and sinh(double), x,max < 2^9
- * 
- * k = (int)(x/ln2); k,max = 1025 (11 bits)
- * y = (dec)(x/ln2)*ln2
- *
- * If t_in > X, the final sinh/cosh result will be inf so we set k = 130 to indicate
- * that downstream.
- * 
- * H_INT_MAX: maximum value for which sinh(x) = inf. float(7), double(9), theoretical(11)
- * H_DEC_MIN: minimum value fo rwhich sinh(x) = x.   float(-12), double(-28)
- * k,max = x,max/ln2 or approx x,width+1
- */
-template<int H_INT_MAX, int H_DEC_MIN, typename T>
-void hyperb_range_redux(
- T t_in,
- ap_uint<H_INT_MAX+1> &k,
- ap_ufixed<fp_struct<T>::SIG_BITS+H_DEC_MIN,0> &t_out)
-{
- fp_struct<T> fp_in(t_in);
- // Q7.36 = 6+1.23+13, value ranges from Q7.17 to Q0.36(.12/24)
- const int W1 = H_INT_MAX+fp_struct<T>::SIG_BITS+H_DEC_MIN;
- const int I1 = H_INT_MAX;
-
- // <43,7>
- ap_ufixed<W1,I1> t_in_f = 0;
-
-
-
-
-
- // t_in stored by effectively shifted right by H_DEC_MIN
- t_in_f(fp_struct<T>::SIG_BITS-1,0) = fp_in.sig;
- t_in_f[fp_struct<T>::SIG_BITS] = 1;
-
-
-
-
-
-
-
- // max shift is H_DEC_MIN+H_INT_MAX-1
- int left_shift = (fp_in.expv() > H_INT_MAX-1) ? H_DEC_MIN+H_INT_MAX-1 :
-      ((fp_in.expv() < -H_DEC_MIN) ? 0 : (fp_in.expv() + H_DEC_MIN));
- t_in_f = t_in_f << left_shift;
-
-
-
-
-
-
- ap_ufixed<W1-I1,1> inv_ln2 = 1.4426950408889634073599246810019;
- ap_ufixed<W1-I1,0> ln2 = 0.69314718055994530941723212145818;
-
-
-
-
-
-
- // t_in / ln2
- ap_ufixed<2*W1-I1,I1+1> prod;
- big_mult<W1,I1,W1-I1,1>(t_in_f, inv_ln2, prod);
-
- k = (fp_in.expv() > H_INT_MAX-1) ? pow(2.0,H_INT_MAX) : (int)prod;
-
-
-
-
-
-
-
- ap_ufixed<W1-I1,0> prod_dec = prod;
-
- ap_ufixed<2*(W1-I1),0> tmp_t_out;
- big_mult<W1-I1,0,W1-I1,0>(prod_dec, ln2, tmp_t_out);
- t_out = tmp_t_out;
-#1196 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h"
-}
-
-
-static
-void
-sinh_cosh_range_redux_cordic(
- float t_in,
- float &s_out,
- float &c_out)
-{
-    fp_struct<float> din(t_in);
-
- ap_uint<7+1> k;
- ap_ufixed<23+12,0> r_tmp;
- hyperb_range_redux<7,12,float>(t_in, k, r_tmp);
-
- const int N = 34; // same as N = 40
- float x = 1.0/8.28133692173427360395e-01;
- float y = 0.0;
-
-
-
-
-
-
- ap_fixed<N,2> tmp_x = x;
- ap_fixed<N,2> tmp_y = 0;
- ap_fixed<N,2> tmp_z = r_tmp;
- cordic_hyperb_v1<N,N,0,0,0>(tmp_x,tmp_y,tmp_z);
- x = tmp_x; y = tmp_y;
-#1258 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_cordic.h"
- float two_p_plus_k, two_p_minus_k;
-    //	int p1 = k-1+127;
- unsigned int pos_exp = ((int)k > pow(2.0,7)-1) ? 255 : (int)(k-1+127);
- unsigned int neg_exp = ((int)k < -126) ? 255 : (int)(-k-1+127);
-    fp_struct<float> two_p_plus_s((uint32_t)0u);
-    fp_struct<float> two_p_minus_s((uint32_t)0u);
-    two_p_plus_s.exp = pos_exp;
-    two_p_minus_s.exp = neg_exp;
- two_p_plus_k = two_p_plus_s.to_ieee();
- two_p_minus_k = two_p_minus_s.to_ieee();
-
-
-
-
-
-
-
- float sinhkln2 = two_p_plus_k - two_p_minus_k;
- float coshkln2 = two_p_plus_k + two_p_minus_k;
-
- float s_out_tmp = (k > 0) ? coshkln2*y + sinhkln2*x : y;
- float c_out_tmp = (k > 0) ? coshkln2*x + sinhkln2*y : x;
-
-    fp_struct<float> s_fp(s_out_tmp);
-    fp_struct<float> c_fp(c_out_tmp);
- s_fp.sign = din.sign;
- c_fp.sign = 0;
-
- s_out = s_fp.to_ieee();
- c_out = c_fp.to_ieee();
-
-    if(din.exp == 0xFF) { // +inf, -inf, nan
-        s_out = t_in;
-  din.sign = 0;
-        c_out = din.to_ieee();
- } else if(din.exp < (127-11)) { // exp=-10 -> ulp=6, exp=-11 -> ulp=1
-        s_out = t_in;
-  c_out = 1.0f;
-    }
-}
-
-
-static
-float
-sinhf(
- float t_in)
-{
- float s_out, c_out;
- sinh_cosh_range_redux_cordic(t_in,s_out,c_out);
- return s_out;
-}
-
-static
-float
-coshf(
- float t_in)
-{
- float s_out, c_out;
- sinh_cosh_range_redux_cordic(t_in,s_out,c_out);
- return c_out;
-}
-
-/*
-static 
-double
-sinh(
-	double t_in) 
-{
-	double s_out, c_out;
-	sinh_cosh_range_redux_cordic(t_in,s_out,c_out);
-	return s_out;
-}
-
-static 
-double
-cosh(
-	double t_in) 
-{
-	double s_out, c_out;
-	sinh_cosh_range_redux_cordic(t_in,s_out,c_out);
-	return c_out;
-}
-*/
-
-} // namespace
-
-/* @}*/
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#370 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_normalize.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-/**
- * @file hls_normalize.h
- */
-
-
-
-
-/* @{ */
-
-/**
- * This function returns the number of 'redundant sign bits' in a
- * signed number.  This is equivalent to the gcc __builtin_clrsb(),
- * but synthesizable.
- *
- * @param value The input
- */
-static
-unsigned int clrsb(int value)
-{
-_ssdm_InlineSelf(0, "");
-    int x;
-    if(value < 0) {
-        x = ~value;
-    } else {
-        x = value;
-    }
-    // Set the low order bit, to make '0' input defined.
-    // Note that the input is signed, so we always preserve
-    // one signed bit.
-    x = x << 1 | 0x1;
-    ((__builtin_clz((unsigned int) x) <= 31) ? static_cast<void> (0) : __assert_fail ("__builtin_clz((unsigned int) x) <= 31", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_normalize.h", 62, __PRETTY_FUNCTION__));
-    ((__builtin_clz((unsigned int) x) >= 0) ? static_cast<void> (0) : __assert_fail ("__builtin_clz((unsigned int) x) >= 0", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_normalize.h", 63, __PRETTY_FUNCTION__));
-    return __builtin_clz((unsigned int) x);
-}
-
-/**
- * This function returns the number of 'redundant sign bits' in a
- * signed number.  This is equivalent to the gcc __builtin_clrsb(),
- * but synthesizable.
- *
- * @param value The input
- */
-template <int W, int I, ap_q_mode Q, ap_o_mode O>
-unsigned int clrsb(ap_fixed<W,I,Q,O> value) {
-    ap_uint<W> x = value(W-1,0);
-    if(value[W-1]) {
-        x = ~x;
-    }
-    x = x << 1 | 0x1;
-    (((int)x.countLeadingZeros() <= W) ? static_cast<void> (0) : __assert_fail ("(int)x.countLeadingZeros() <= W", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_normalize.h", 81, __PRETTY_FUNCTION__));
-    (((int)x.countLeadingZeros() >= 0) ? static_cast<void> (0) : __assert_fail ("(int)x.countLeadingZeros() >= 0", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_normalize.h", 82, __PRETTY_FUNCTION__));
-    return x.countLeadingZeros();
-}
-
-/**
- * This function returns the number of 'redundant sign bits' in a
- * signed number.  This is equivalent to the gcc __builtin_clrsb(),
- * but synthesizable.
- *
- * @param value The input
- */
-template <int W>
-unsigned int clrsb(ap_int<W> value) {
-    ap_uint<W> x = value(W-1,0);
-    if(value[W-1]) {
-        x = ~x;
-    }
-    x = x << 1 | 0x1;
-    (((int)x.countLeadingZeros() <= W) ? static_cast<void> (0) : __assert_fail ("(int)x.countLeadingZeros() <= W", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_normalize.h", 100, __PRETTY_FUNCTION__));
-    (((int)x.countLeadingZeros() >= 0) ? static_cast<void> (0) : __assert_fail ("(int)x.countLeadingZeros() >= 0", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_normalize.h", 101, __PRETTY_FUNCTION__));
-    return x.countLeadingZeros();
-}
-
-/**
- * This function returns the number of 'redundant sign bits' in a
- * signed number.  This is equivalent to the gcc __builtin_clrsb(),
- * but synthesizable.  The result of left-shifting the input by the
- * result will be a Q31 format number in [-1,-0.5) or (0.5, 1).
- *
- * @param x The input
- */
-static
-unsigned int find_normalization(int x)
-{
-    return clrsb(x);
-}
-
-/**
- * This function returns the number of 'redundant sign bits' in a
- * signed number.  This is equivalent to the gcc __builtin_clrsb(),
- * but synthesizable.    The result of left-shifting the input by the
- * result will be a Q15 format number in [-1,-0.5) or (0.5, 1).
- *
- * @param x The input
- */
-static
-unsigned int find_normalization(short x)
-{
-    // Set the low order bits to the opposite of the sign bit to
-    // ensure that the case of zero results in a shift of 15.
-    int bits;
-    if(x < 0) {
-        bits = 0;
-    } else {
-        bits = 0xFFFF;
-    }
-    return clrsb(((int)x) << 16 | bits);
-}
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#371 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_round.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2008-2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-/**
- * @file hls_round.h
- * This file contains rounding related functions such as round, trunc, floor, ceil.
- */
-
-
-static
-void init_mask_table_double(uint64_t mask_table[64])
-{_ssdm_SpecArrayDimSize(mask_table,64);
-    // Note that this is a little wierd since we are shifted by BIAS, so
-    // mask_table[i] = mask(exp-BIAS+1);
-    const uint64_t t = (1LL << fp_struct<double>::SIG_BITS)-1;
-    for(int i = 0; i < 62; i++) {
-        mask_table[i] = t >> (i+1);
-    }
-    mask_table[62] = t; // Special case for round()
-    mask_table[63] = t; // mask(fp_struct<double>::EXP_BIAS), stuffed into index N-1.
-}
-
-static
-void init_mask_table_float(uint32_t mask_table[32])
-{_ssdm_SpecArrayDimSize(mask_table,32);
-    // Note that this is a little wierd since we are shifted by BIAS, so
-    // mask_table[i] = mask(exp-BIAS+1);
-    const uint32_t t = (1 << fp_struct<float>::SIG_BITS)-1;
-    for(int i = 0; i < 30; i++) {
-        mask_table[i] = t >> (i+1);
-    }
-    mask_table[30] = t; // Special case for round()
-    mask_table[31] = t; // mask(fp_struct<float>::EXP_BIAS), stuffed into index 31.
-}
-
-static
-void init_one_half_table_double(uint64_t mask_table[64])
-{_ssdm_SpecArrayDimSize(mask_table,64);
-    // Note that this is a little wierd since we are shifted by BIAS, so
-    // mask_table[i] = mask(exp-BIAS+1);
-    const uint64_t t = 1LL << (fp_struct<double>::SIG_BITS-1);
-    for(int i = 0; i < 62; i++) {
-        mask_table[i] = t >> (i+1);
-    }
-    mask_table[62] = t << 1; // Special case for round()
-    mask_table[63] = t; // one_half(fp_struct<double>::EXP_BIAS), stuffed into index N-1.
-}
-
-static
-void init_one_half_table_float(uint32_t mask_table[32])
-{_ssdm_SpecArrayDimSize(mask_table,32);
-    // Note that this is a little wierd since we are shifted by BIAS, so
-    // mask_table[i] = mask(exp-BIAS+1);
-    const uint32_t t = 1 << (fp_struct<float>::SIG_BITS-1);
-    for(int i = 0; i < 30; i++) {
-        mask_table[i] = t >> (i+1);
-    }
-    mask_table[30] = t << 1; // Special case for round()
-    mask_table[31] = t; // one_half(fp_struct<float>::EXP_BIAS), stuffed into index 31.
-}
-
-
-
-static
-double floor(double x)
-{
-    uint64_t mask_table[64];
-    init_mask_table_double(mask_table);
-    fp_struct<double> xs(x);
-    if(xs.exp < fp_struct<double>::EXP_BIAS) {
-        if(xs.__signbit() && !(xs.sig == 0 && xs.exp == 0)) { // negative and not zero
-            return -1.0;
-        } else {
-            return ::hls::copysign(0.0, x);
-        }
-    } else if((xs.exp > fp_struct<double>::EXP_BIAS+fp_struct<double>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        return x;
-    } else {
-        uint64_t mask;
-       // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<6> index = xs.exp(5,0);
-        mask = mask_table[index];
-
-        // Deal with negative numbers
-        if(xs.__signbit()) {
-            xs = ap_uint<64>(xs.data() + mask);
-        }
-
-        xs.sig = xs.sig & (~mask);
-        return xs.to_ieee();
-    }
-}
-
-static
-float floorf(float x)
-{
-    uint32_t mask_table[32];
-    init_mask_table_float(mask_table);
-    fp_struct<float> xs(x);
-    if(xs.exp < fp_struct<float>::EXP_BIAS) { // fp_struct<float>::EXP_BIAS is biased zero
-        if(xs.__signbit() && !(xs.sig == 0 && xs.exp == 0)) { // negative and not zero
-            return -1.0f;
-        } else {
-            return ::hls::copysignf(0.0f, x);
-        }
-    } else if((xs.exp > fp_struct<float>::EXP_BIAS+fp_struct<float>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        return x;
-    } else {
-        uint32_t mask;
-        // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<5> index = xs.exp(4,0);
-        mask = mask_table[index];
-
-        // Deal with negative numbers
-        if(xs.__signbit()) {
-            xs = ap_uint<32>(xs.data() + mask);
-        }
-
-        xs.sig = xs.sig & (~mask);
-        return xs.to_ieee();
-    }
-}
-
-
-static
-float floor(float x)
-{
-    return floorf(x);
-}
-
-
-static
-double ceil(double x)
-{
-    uint64_t mask_table[64];
-    init_mask_table_double(mask_table);
-    fp_struct<double> xs(x);
-
-    if(xs.exp < fp_struct<double>::EXP_BIAS) {
-        if(!xs.__signbit() && !(xs.sig == 0 && xs.exp == 0)) { // positive and not zero
-            return 1.0;
-        } else {
-            return ::hls::copysign(0.0, x);
-        }
-    } else if((xs.exp > fp_struct<double>::EXP_BIAS+fp_struct<double>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        return x;
-    } else {
-        uint64_t mask;
-        // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<6> index = xs.exp(5,0);
-        mask = mask_table[index];
-
-        // Deal with positive numbers
-        if(!xs.__signbit()) {
-            xs = ap_uint<64>(xs.data() + mask);
-        }
-
-        xs.sig = xs.sig & (~mask);
-        return xs.to_ieee();
-    }
-}
-
-static
-float ceilf(float x)
-{
-    uint32_t mask_table[32];
-    init_mask_table_float(mask_table);
-    fp_struct<float> xs(x);
-
-    if(xs.exp < fp_struct<float>::EXP_BIAS) {
-        if(!xs.__signbit() && !(xs.sig == 0 && xs.exp == 0)) { // positive and not zero
-            return 1.0f;
-        } else {
-            return ::hls::copysignf(0.0f, x);
-        }
-    } else if((xs.exp > fp_struct<float>::EXP_BIAS+fp_struct<float>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        return x;
-    } else {
-        uint32_t mask;
-        // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<5> index = xs.exp(4,0);
-        mask = mask_table[index];
-
-        // Deal with positive numbers
-        if(!xs.__signbit()) {
-            xs = ap_uint<32>(xs.data() + mask);
-        }
-
-        xs.sig = xs.sig & (~mask);
-        return xs.to_ieee();
-    }
-}
-
-
-static
-float ceil(float x)
-{
-    return ceilf(x);
-}
-
-
-static
-double trunc(double x)
-{
-    uint64_t mask_table[64];
-    init_mask_table_double(mask_table);
-    fp_struct<double> xs(x);
-
-    if(xs.exp < fp_struct<double>::EXP_BIAS) {
-        return ::hls::copysign(0.0, x);
-    } else if((xs.exp > fp_struct<double>::EXP_BIAS+fp_struct<double>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        return x;
-    } else {
-        uint64_t mask;
-        // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<6> index = xs.exp(5,0);
-        mask = mask_table[index];
-        xs.sig = xs.sig & (~mask);
-        return xs.to_ieee();
-    }
-}
-
-static
-float truncf(float x)
-{
-    uint32_t mask_table[32];
-    init_mask_table_float(mask_table);
-    fp_struct<float> xs(x);
-    if(xs.exp < fp_struct<float>::EXP_BIAS) { // fp_struct<float>::EXP_BIAS is biased zero
-        return ::hls::copysignf(0.0f, x);
-    } else if((xs.exp > fp_struct<float>::EXP_BIAS+fp_struct<float>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        return x;
-    } else {
-        uint32_t mask;
-        // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<5> index = xs.exp(4,0);
-        mask = mask_table[index];
-        xs.sig = xs.sig & (~mask);
-        return xs.to_ieee();
-    }
-}
-
-
-static
-float trunc(float x)
-{
-    return truncf(x);
-}
-
-
-static
-double round(double x)
-{
-    uint64_t mask_table[64];
-    init_mask_table_double(mask_table);
-    uint64_t one_half_table[64];
-    init_one_half_table_double(one_half_table);
-
-    fp_struct<double> xs(x);
-    if(xs.exp < fp_struct<double>::EXP_BIAS - 1) {
-        // Then we have a number less than 0.5
-        return ::hls::copysign(0.0, x);
-    } else if((xs.exp > fp_struct<double>::EXP_BIAS+fp_struct<double>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        return x;
-    } else {
-        uint64_t mask;
-        uint64_t one_half;
-        // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<6> index = xs.exp(5,0);
-        mask = mask_table[index];
-        one_half = one_half_table[index];
-
-        xs = ap_uint<64>(xs.data() + one_half);
-
-        xs.sig = xs.sig & (~mask);
-        return xs.to_ieee();
-    }
-}
-
-// For round, we deal with three cases, the first is for small numbers <0.5, which get rounded to 0.0.
-// The second case if for large numbers where nothing happens.  The third deals with the 'normal' case
-// where we add one half and then drop the fractional bits.  There are two things to observe:
-// 1) When we add one half, we sometimes roll over and increment the exponent, by one.  The exponent
-// integer bits of the resulting number is correct, but the fractional bits aren't.  This is OK, since
-// we drop the fractional bits.
-// 2) The 'missing case' of [0.5, 1.0) is handled in the third case, where adding one
-// to the exponent (making it zero) and then dropping all of the fractional bits, resulting in 1.0f.
-// As a result there is an extra 'dummy' entry in the tables for round, that is not used for the other
-// operators.
-static
-float roundf(float x)
-{
-    uint32_t mask_table[32];
-    init_mask_table_float(mask_table);
-    uint32_t one_half_table[32];
-    init_one_half_table_float(one_half_table);
-
-    fp_struct<float> xs(x);
-
-    if(xs.exp < fp_struct<float>::EXP_BIAS - 1) {
-        return ::hls::copysignf(0.0f, x);
-    } else if((xs.exp > fp_struct<float>::EXP_BIAS+fp_struct<float>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        return x;
-    } else {
-        uint32_t mask;
-        uint32_t one_half;
-        // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<5> index = xs.exp(4,0);
-        mask = mask_table[index];
-        one_half = one_half_table[index];
-
-        xs = ap_uint<32>(xs.data() + one_half);
-
-        xs.sig = xs.sig & (~mask);
-        return xs.to_ieee();
-    }
-}
-
-
-static
-float round(float x)
-{
-    return roundf(x);
-}
-
-
-// conversion from float or double to integer type with truncation towards zero.  Should be equivalent to int(x).
-template <typename T, typename FP>
-T cast_IEEE754(FP x, bool detect_overflow = false, typename enable_if<std::numeric_limits<T>::is_signed, bool>::type dummy = true) {
-    fp_struct<FP> xs(x);
-    ap_ufixed<2*fp_struct<FP>::SIG_BITS + 8 * sizeof(T),
-                fp_struct<FP>::SIG_BITS + 8 * sizeof(T)> mantissa = xs.mantissa();
-
-    ap_ufixed< fp_struct<FP>::SIG_BITS + 8 * sizeof(T),
-                fp_struct<FP>::SIG_BITS + 8 * sizeof(T)> smantissa = mantissa << xs.expv();
-
-    ap_ufixed<1 ,1 + 8 * sizeof(T), SC_TRN,SC_SAT> overflow_bits = smantissa;
-    ap_ufixed<8 * sizeof(T), 8 * sizeof(T)> val = smantissa;
-
-    bool overflow = xs.expv() > (signed)(2*fp_struct<FP>::SIG_BITS) || overflow_bits != 0;
-    ap_int<8*sizeof(T)> minval = 0;
-    minval[8*sizeof(T)-1] = 1;
-    if(overflow && detect_overflow) return minval;
-
-    // std::cout << std::hex << "val = " << val.to_string(16) << std::dec << "\n";
-    ap_fixed<8 * sizeof(T),8 * sizeof(T)> result = val;
-    if(xs.__signbit()) result = -val;
-    // std::cout << std::hex << "result = " << result.to_string(16) << std::dec << "\n";
-    return result;
-}
-
-template <typename T, typename FP>
-T cast_IEEE754(FP x, bool detect_overflow = false, typename enable_if<!std::numeric_limits<T>::is_signed, bool>::type dummy = true) {
-    fp_struct<FP> xs(x);
-    ap_ufixed<2*fp_struct<FP>::SIG_BITS + 8 * sizeof(T),
-                fp_struct<FP>::SIG_BITS + 8 * sizeof(T)> mantissa = xs.mantissa();
-
-    ap_ufixed< fp_struct<FP>::SIG_BITS + 8 * sizeof(T),
-                fp_struct<FP>::SIG_BITS + 8 * sizeof(T)> smantissa = mantissa << xs.expv();
-
-    ap_ufixed<1 ,1 + 8 * sizeof(T), SC_TRN,SC_SAT> overflow_bits = smantissa;
-    ap_ufixed<8 * sizeof(T), 8 * sizeof(T)> val = smantissa;
-
-    bool overflow = xs.expv() > (signed)(2*fp_struct<FP>::SIG_BITS) || overflow_bits != 0;
-    ap_uint<8*sizeof(T)> minval = 0;
-    if((overflow || xs.__signbit()) && detect_overflow) return minval;
-
-    // std::cout << std::hex << "val = " << val.to_string(16) << std::dec << "\n";
-    ap_ufixed<8 * sizeof(T),8 * sizeof(T)> result = val;
-    // std::cout << std::hex << "result = " << result.to_string(16) << std::dec << "\n";
-    return result;
-}
-
-
-static
-long int lrint(double x) {
-    // Note: long int may be 32 or 64 bits.
-    return cast_IEEE754<long int>(x);
-}
-
-static
-long long int llrint(double x) {
-    return cast_IEEE754<long long int>(x);
-}
-
-static
-long int lrintf(float x) {
-    // Note: long int may be 32 or 64 bits.
-    return cast_IEEE754<long int>(x);
-}
-
-static
-long long int llrintf(float x) {
-    return cast_IEEE754<long long int>(x);
-}
-
-static
-double modf(double x, double *intpart)
-{
-    uint64_t mask_table[64];
-    init_mask_table_double(mask_table);
-    fp_struct<double> xs(x);
-
-    if(xs.exp < fp_struct<double>::EXP_BIAS) {
-        *intpart = ::hls::copysign(0.0, x);
-        return x;
-    } else if((xs.exp > fp_struct<double>::EXP_BIAS+fp_struct<double>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        *intpart = x;
-        if(::hls::__isnan(x)) {
-            fp_struct<double> nan;
-            nan.sig = -1; // all ones
-            nan.exp = -1; // all ones
-            nan.sign = 0;
-            return nan.to_ieee();
-        } else {
-            return ::hls::copysign(0.0, x);
-        }
-    } else {
-        uint64_t mask;
-        // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<6> index = xs.exp(5,0);
-        mask = mask_table[index];
-
-        // normalize the fractional part
-        fp_struct<double> xf;
-        xf.sig = xs.sig & mask;
-
-        int zeros = xf.sig.countLeadingZeros();;
-        // If the significand is exactly zero, then we need to return a floating point zero
-        // Otherwise compute the new exponent from the old one.
-        xf.exp = (xf.sig == 0) ? 0 : (unsigned short)(xs.exp-zeros-1);
-        // Normalize the significand, shifting off the zeros and the leading 1.
-        xf.sig = (xf.sig << 1) << zeros;
-        xf.sign = xs.sign;
-
-        // mask the integer part
-        xs.sig = xs.sig & (~mask);
-        *intpart = xs.to_ieee();
-
-        return xf.to_ieee();
-    }
-}
-
-static
-float modff(float x, float *intpart)
-{
-    uint32_t mask_table[32];
-    init_mask_table_float(mask_table);
-    fp_struct<float> xs(x);
-    if(xs.exp < fp_struct<float>::EXP_BIAS) { // fp_struct<float>::EXP_BIAS is biased zero
-        *intpart = ::hls::copysignf(0.0f, x);
-        return x;
-    } else if((xs.exp > fp_struct<float>::EXP_BIAS+fp_struct<float>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        *intpart = x;
-        if(::hls::__isnan(x)) {
-            fp_struct<float> nan;
-            nan.sig = -1; // all ones
-            nan.exp = -1; // all ones
-            nan.sign = 0;
-            return nan.to_ieee();
-        } else {
-            return ::hls::copysignf(0.0f, x);
-        }
-    } else {
-        uint32_t mask;
-        // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<5> index = xs.exp(4,0);
-        mask = mask_table[index];
-
-        // normalize the fractional part
-        fp_struct<float> xf;
-        xf.sig = xs.sig & mask;
-
-        int zeros = xf.sig.countLeadingZeros();;
-        // If the significand is exactly zero, then we need to return a floating point zero
-        // Otherwise compute the new exponent from the old one.
-        xf.exp = (xf.sig == 0) ? 0 : (unsigned short)(xs.exp-zeros-1);
-        // Normalize the significand, shifting off the zeros and the leading 1.
-        xf.sig = (xf.sig << 1) << zeros;
-        xf.sign = xs.sign;
-
-        // mask the integer part
-        xs.sig = xs.sig & (~mask);
-        *intpart = xs.to_ieee();
-
-        return xf.to_ieee();
-    }
-}
-
-static
-double fract(double x, double *intpart)
-{
-    uint64_t mask_table[64];
-    init_mask_table_double(mask_table);
-    fp_struct<double> xs(x);
-
-    if(xs.exp < fp_struct<double>::EXP_BIAS) {
-        *intpart = ::hls::copysign(0.0, x);
-        return x;
-    } else if((xs.exp > fp_struct<double>::EXP_BIAS+fp_struct<double>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        *intpart = x;
-        if(::hls::__isnan(x)) {
-            fp_struct<double> nan;
-            nan.sig = -1; // all ones
-            nan.exp = -1; // all ones
-            nan.sign = 0;
-            return nan.to_ieee();
-        } else {
-            return ::hls::copysign(0.0, x);
-        }
-    } else {
-        uint64_t mask;
-        // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<6> index = xs.exp(5,0);
-        mask = mask_table[index];
-
-        // normalize the fractional part
-        fp_struct<double> xf;
-        xf.sig = xs.sig & mask;
-
-        int zeros = xf.sig.countLeadingZeros();;
-        // If the significand is exactly zero, then we need to return a floating point zero
-        // Otherwise compute the new exponent from the old one.
-        xf.exp = (xf.sig == 0) ? 0 : (unsigned short)(xs.exp-zeros-1);
-        // Normalize the significand, shifting off the zeros and the leading 1.
-        xf.sig = (xf.sig << 1) << zeros;
-        xf.sign = xs.sign;
-
-        // mask the integer part
-        xs.sig = xs.sig & (~mask);
-        *intpart = xs.to_ieee();
-
-        return xf.to_ieee();
-    }
-}
-
-static
-float fractf(float x, float *intpart)
-{
-    uint32_t mask_table[32];
-    init_mask_table_float(mask_table);
-    fp_struct<float> xs(x);
-    if(xs.exp < fp_struct<float>::EXP_BIAS) { // fp_struct<float>::EXP_BIAS is biased zero
-        if(xs.__signbit() && !(xs.sig == 0 && xs.exp == 0)) { // negative and not zero
-            *intpart = -1.0f;
-            float f = 1.0f + x;
-            fp_struct<float> xf(f);
-            bool is_one = xf.exp == fp_struct<float>::EXP_BIAS &&
-                xf.sig == 0;
-
- //            fp_struct<float> xf;
-//             xf.sign = 0;
-//             // This is hardware expensive. I'm sure there's a better
-//             // way to do it.
-//             ap_ufixed<1+2*fp_struct<float>::SIG_BITS,1> mantissa = xs.mantissa(); // Keep an extra sticky bit
-//             //  xf.sig = - (xs.sig >> (-1-xs.expv())); // essentially 1.0f - xf.to_ieee()
-//             ap_ufixed<1+fp_struct<float>::SIG_BITS+2,1> one(1.0f);
-//             ap_ufixed<1+fp_struct<float>::SIG_BITS+2,1> new_mant = one-(mantissa >>= -xs.expv());
-//             //  std::cout << std::hex << "mantissa = " << mantissa.to_string(16) << "\n";
-//             //std::cout << std::hex << "new_mant = " << new_mant.to_string(16) << " " << new_mant << "\n";
-//             bool is_one = (new_mant == one);
-
-//             int zeros = new_mant.countLeadingZeros();
-//             xf.exp = fp_struct<float>::EXP_BIAS;
-//             // Otherwise compute the new exponent from the old one.
-//             xf.exp = (new_mant == 0) ? 0 : fp_struct<float>::EXP_BIAS-zeros;
-//             //std::cout << "zeros = " << zeros << "\n";
-//             new_mant = new_mant << zeros;
-//             xf.set_mantissa(new_mant);
-
-
-            if(is_one) {
-                return 0x1.fffffep-1f;
-            } else {
-                return xf.to_ieee();
-            }
-        } else {
-
-            *intpart = ::hls::copysignf(0.0f, x);
-            return x;
-        }
-    } else if(xs.exp == 255) { // Infinity or nan
-        *intpart = x;
-        return 0x1.fffffep-1f;
-    } else if((xs.exp > fp_struct<float>::EXP_BIAS+fp_struct<float>::SIG_BITS)) {
-        // In this special case, we know there are no fractional bits.
-        *intpart = x;
-        return ::hls::copysignf(0.0f, x);
-    } else {
-        uint32_t mask;
-        // Find the mask.  These are 1's where there are fractional bits.
-        ap_uint<5> index = xs.exp(4,0);
-        mask = mask_table[index];
-
-        // normalize the fractional part
-        fp_struct<float> xf;
-        if(xs.__signbit())
-            xf.sig = -xs.sig;
-        else
-            xf.sig = xs.sig;
-        xf.sig = xf.sig & mask; // essentially 1.0f - xs.to_ieee()
-
-        int zeros = xf.sig.countLeadingZeros();
-        // If the significand is exactly zero, then we need to return a floating point zero
-        // Otherwise compute the new exponent from the old one.
-        xf.exp = (xf.sig == 0) ? 0 : (unsigned short)(xs.exp-zeros-1);
-        // Normalize the significand, shifting off the zeros and the leading 1.
-        xf.sig = (xf.sig << 1) << zeros;
-        xf.sign = 0;
-
-        // Deal with negative numbers
-        if(xs.__signbit()) {
-            xs = ap_uint<32>(xs.data() + mask);
-        }
-        // mask the integer part
-        xs.sig = xs.sig & (~mask);
-        *intpart = xs.to_ieee();
-        return xf.to_ieee();
-    }
-}
-
-
-static
-float modf(float x, float *intpart)
-{
-    return modff(x, intpart);
-}
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#372 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h" 2
-
-/**
- * fmax returns the maximum of two arguments. 
- * If both arguments are 0/ -0, fmax always returns the 2nd argument
- * If both argumetns are nan, fmax always returns the 1st argument but casted 
- * to be of type QNaN meaning bit 23 is a 1.
- * If only one argument is nan, fmax always returns the other argument.
- */
-static
-double fmax(double x, double y)
-{
- fp_struct<double> x_fp(x);
- fp_struct<double> y_fp(y);
- double res;
- if(x_fp.exp == 0 && x_fp.sig == 0 && y_fp.exp == 0 && y_fp.sig == 0) { // 0, -0: always return 2nd arg
-  res = y;
- } else if(x_fp.exp == 0x7FF && x_fp.sig != 0) { // 1st arg: nan 
-  if(y_fp.exp == 0x7FF && y_fp.sig != 0) { // 1st and 2nd arg: nan, cast to QNaN and choose 1st arg 
-   x_fp.sig = 0x8000000000000ULL | x_fp.sig;
-   res = x_fp.to_ieee();
-  } else { // 1st arg: nan, 2nd: ~nan
-   res = y;
-  }
- } else if(y_fp.exp == 0x7FF && y_fp.sig != 0) { // 2nd arg: nan, 1st arg: ~nan
-  res = x;
- } else {
-  //res = (x > y) ? x : y;
-  res = (x_fp.sign==1 && y_fp.sign==1) ? ((x_fp.to_int() > y_fp.to_int()) ? y : x)
-                                            : ((x_fp.to_int() > y_fp.to_int()) ? x : y);
- }
- return res;
-}
-
-static
-float fmaxf(float x, float y)
-{
- fp_struct<float> x_fp(x);
- fp_struct<float> y_fp(y);
- float res;
- if(x_fp.exp == 0 && x_fp.sig == 0 && y_fp.exp == 0 && y_fp.sig == 0) { // 0, -0: always return 2nd arg
-  res = y;
- } else if(x_fp.exp == 0xFF && x_fp.sig != 0) { // 1st arg: nan 
-  if(y_fp.exp == 0xFF && y_fp.sig != 0) { // 1st and 2nd arg: nan, cast to QNaN and choose 1st arg 
-   x_fp.sig = 0x400000 | x_fp.sig;
-   res = x_fp.to_ieee();
-  } else { // 1st arg: nan, 2nd: ~nan
-   res = y;
-  }
- } else if(y_fp.exp == 0xFF && y_fp.sig != 0) { // 2nd arg: nan, 1st arg: ~nan
-  res = x;
- } else {
-  //res = (x > y) ? x : y; // to fix cr853717, subnormal>zero
-  res = (x_fp.sign==1 && y_fp.sign==1) ? ((x_fp.to_int() > y_fp.to_int()) ? y : x)
-                                            : ((x_fp.to_int() > y_fp.to_int()) ? x : y);
- }
- return res;
-}
-
-
-static
-float fmax(float x, float y)
-{
-    return fmaxf(x,y);
-}
-
-
-/**
- * fmax returns the maximum of two arguments. 
- * If both arguments are 0/ -0, fmax always returns the 2nd argument
- * If both argumetns are nan, fmax always returns the 1st argument but casted 
- * to be of type QNaN meaning bit 23 is a 1.
- * If only one argument is nan, fmax always returns the other argument.
- */
-static
-double fmin(double x, double y)
-{
- fp_struct<double> x_fp(x);
- fp_struct<double> y_fp(y);
- double res;
- if(x_fp.exp == 0 && x_fp.sig == 0 && y_fp.exp == 0 && y_fp.sig == 0) { // 0, -0: always return 2nd arg
-  res = y;
- } else if(x_fp.exp == 0x7FF && x_fp.sig != 0) { // 1st arg: nan 
-  if(y_fp.exp == 0x7FF && y_fp.sig != 0) { // 1st and 2nd arg: nan, cast to QNaN and choose 1st arg 
-   x_fp.sig = 0x8000000000000ULL | x_fp.sig;
-   res = x_fp.to_ieee();
-  } else { // 1st arg: nan, 2nd: ~nan
-   res = y;
-  }
- } else if(y_fp.exp == 0x7FF && y_fp.sig != 0) { // 2nd arg: nan, 1st arg: ~nan
-  res = x;
- } else {
-  //res = (x < y) ? x : y;
-  res = (x_fp.sign==1 && y_fp.sign==1) ? ((x_fp.to_int() < y_fp.to_int()) ? y : x)
-                                            : ((x_fp.to_int() < y_fp.to_int()) ? x : y);
- }
- return res;
-}
-
-
-static
-float fminf(float x, float y)
-{
- fp_struct<float> x_fp(x);
- fp_struct<float> y_fp(y);
- float res;
- if(x_fp.exp == 0 && x_fp.sig == 0 && y_fp.exp == 0 && y_fp.sig == 0) { // 0, -0: always return 2nd arg
-  res = y;
- } else if(x_fp.exp == 0xFF && x_fp.sig != 0) { // 1st arg: nan 
-  if(y_fp.exp == 0xFF && y_fp.sig != 0) { // 1st and 2nd arg: nan, cast to QNaN and choose 1st arg 
-   x_fp.sig = 0x400000 | x_fp.sig;
-   res = x_fp.to_ieee();
-  } else { // 1st arg: nan, 2nd: ~nan
-   res = y;
-  }
- } else if(y_fp.exp == 0xFF && y_fp.sig != 0) { // 2nd arg: nan, 1st arg: ~nan
-  res = x;
- } else {
-  //res = (x < y) ? x : y;
-  res = (x_fp.sign==1 && y_fp.sign==1) ? ((x_fp.to_int() < y_fp.to_int()) ? y : x)
-                                            : ((x_fp.to_int() < y_fp.to_int()) ? x : y);
- }
- return res;
-}
-
-
-static
-float fmin(float x, float y)
-{
-    return fminf(x,y);
-}
-
-
-
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-/**
- * @file hls_log.h
- *
- * Natural log implementation using range reduction + Taylor series
- * see: de Dinechin, "A flexible floating-point logarithm for reconfigurable computers"
- */
-namespace log_reduce {
-
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log_tables.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012-2013 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#33 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log_tables.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log_reference_tables.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-template< class out, class in>
-out reference_log(in x)
-{
-    double x_MS = x;
-    in x_MS2 = x_MS;
-    in x_diff = (x-(in)x_MS);
-    long double x_ld = (long double)x_MS + (long double)(double)x_diff;
-    long double ll = logl(x_ld);
-    //    double x_LS = (x-(in)x_MS);
-// (long double) x_MS + (long double) x_LS;
-//     std::cout << "x = " << x << " " << x.to_string(10,true) << "\n";
-//     std::cout << "x_MS = " << x_MS << "\n";
-//     std::cout << "x_MS2 = " << x_MS2 << " " << x_MS2.to_string(2, true) << "\n";
-//     std::cout << "x_diff = " << x_diff << " " << x_diff.to_string(2, true) << "\n";
-//     std::cout << "x_LS = " << x_LS << "\n";
-//     std::cout << "x_ld = " << x_ld << "\n";
-//     std::cout << "ll  = " << ll << "\n";
-    double ll_MS = ll;
-    out y = ll_MS;
-    double ll_LS = ll - (double)y;
-    y += (out)ll_LS;
-//     std::cout << "ll_MS = " << ll_MS << "\n";
-//     std::cout << "ll_LS = " << ll_LS << "\n";
-    return y;
-}
-
-template<int p, int alpha, class T>
-class log_lut_initializer
-{
-public:
-    typedef T TableType;
-    static T f(int i, int n) {
-        ap_uint<alpha> t = i;
-        ap_ufixed<alpha, -p> a = 0;
-        a(alpha-1,0) = t(alpha-1,0); // set alpha1 LSBs to the bit pattern of the index.
-
-        int e_shift = a[a.wl()-1] ? 2*p : 2*p+1; // Stage dependent?
-        ap_fixed<1+2*p+alpha, 2> one = 1;
-        ap_fixed<1+2*p+alpha, 2> y_tilde_inverse = one - a + (one >> e_shift);
-
-        return -reference_log<T>(y_tilde_inverse);
-    }
-    static T apply(int i, int n) {
-        ap_uint<alpha> t = i;
-        ap_ufixed<alpha, -p> a = 0;
-        a(alpha-1,0) = t(alpha-1,0); // set alpha1 LSBs to the bit pattern of the index.
-
-        int e_shift = a[a.wl()-1] ? 2*p : 2*p+1; // Stage dependent?
-        ap_fixed<1+2*p+alpha, 2> one = 1;
-        ap_fixed<1+2*p+alpha, 2> y_tilde_inverse = one - a + (one >> e_shift);
-        T tmp;
-
-
-
-        tmp = f(i,n)-f(0,n);
-
-
-
-
-
-
-        return tmp;
-    }
-};
-
-template<int p0, int alpha0, class T>
-class log0_inverse_lut_initializer
-{
-public:
-    typedef T TableType;
-    static T apply(int i, int n) {
-        ap_uint<1+alpha0> t = i;
-        ap_ufixed<1+alpha0,1> a;
-        a(1+alpha0-1,0) = t(1+alpha0-1,0);
-
-        double d = ::ceil((1 << alpha0)/a.to_double())/(1 << alpha0); // Equation in paper is wrong.
-        T tmp = d;
-        return tmp;
-    }
-};
-
-template<class LOG_TYPE, class T>
-class log0_table_traits {};
-
-template<class LOG_TYPE>
-class log0_table_traits<LOG_TYPE, float>
-{
-public:
-    // Info below is duplicated from hls_log.h
-    const static int p0 = 0; // We start with zero zeroed bits
-    const static int alpha0 = 5; // 1+alpha0 = number of bits considered by stage 0.
-    const static int p1 = (alpha0 == 5) ? 4 : (alpha0-2); // The number of bits zeroed after stage 0.
-    const static int alpha1 = 4;
-    const static int p2 = p1 + alpha1 - 1;
-    const static int alpha2 = 6;
-    const static int p3 = p2 + alpha2 - 1;
-    const static int alpha3 = 6;
-    const static int p4 = p3 + alpha3 - 1;
-    const static int alpha4 = 6;
-    const static int p5 = p4 + alpha4 - 1;
-    const static int alpha5 = 6;
-    static LOG_TYPE log0_offset() {
-        return log_lut_initializer<log0_table_traits<LOG_TYPE, float>::p1, log0_table_traits<LOG_TYPE, float>::alpha1, LOG_TYPE>::f(0,0) +
-               log_lut_initializer<log0_table_traits<LOG_TYPE, float>::p2, log0_table_traits<LOG_TYPE, float>::alpha2, LOG_TYPE>::f(0,0);
-    }
-
-public :
-inline __attribute__((always_inline)) log0_table_traits<LOG_TYPE, float>() { _ssdm_SpecConstant(&p0); _ssdm_SpecConstant(&alpha0); _ssdm_SpecConstant(&p1); _ssdm_SpecConstant(&alpha1); _ssdm_SpecConstant(&p2); _ssdm_SpecConstant(&alpha2); _ssdm_SpecConstant(&p3); _ssdm_SpecConstant(&alpha3); _ssdm_SpecConstant(&p4); _ssdm_SpecConstant(&alpha4); _ssdm_SpecConstant(&p5); _ssdm_SpecConstant(&alpha5);  }
-#137 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log_reference_tables.h"
-};
-
-template<class LOG_TYPE>
-class log0_table_traits<LOG_TYPE, double>
-{
-public:
-    // Info below is duplicated from hls_log.h
-    const static int p0 = 0; // We start with zero zeroed bits
-    const static int alpha0 = 5; // 1+alpha0 = number of bits considered by stage 0.
-    const static int p1 = (alpha0 == 5) ? 4 : (alpha0-2); // The number of bits zeroed after stage 0.
-    const static int alpha1 = 4;
-    const static int p2 = p1 + alpha1 - 1;
-    const static int alpha2 = 6;
-    const static int p3 = p2 + alpha2 - 1;
-    const static int alpha3 = 6;
-    const static int p4 = p3 + alpha3 - 1;
-    const static int alpha4 = 6;
-    const static int p5 = p4 + alpha4 - 1;
-    const static int alpha5 = 6;
-    static LOG_TYPE log0_offset() {
-        return log_lut_initializer<log0_table_traits<LOG_TYPE, double>::p1, log0_table_traits<LOG_TYPE, double>::alpha1, LOG_TYPE>::f(0,0) +
-               log_lut_initializer<log0_table_traits<LOG_TYPE, double>::p2, log0_table_traits<LOG_TYPE, double>::alpha2, LOG_TYPE>::f(0,0) +
-               log_lut_initializer<log0_table_traits<LOG_TYPE, double>::p3, log0_table_traits<LOG_TYPE, double>::alpha3, LOG_TYPE>::f(0,0) +
-               log_lut_initializer<log0_table_traits<LOG_TYPE, double>::p4, log0_table_traits<LOG_TYPE, double>::alpha4, LOG_TYPE>::f(0,0) +
-               log_lut_initializer<log0_table_traits<LOG_TYPE, double>::p5, log0_table_traits<LOG_TYPE, double>::alpha5, LOG_TYPE>::f(0,0);
-    };
-
-public :
-inline __attribute__((always_inline)) log0_table_traits<LOG_TYPE, double>() { _ssdm_SpecConstant(&p0); _ssdm_SpecConstant(&alpha0); _ssdm_SpecConstant(&p1); _ssdm_SpecConstant(&alpha1); _ssdm_SpecConstant(&p2); _ssdm_SpecConstant(&alpha2); _ssdm_SpecConstant(&p3); _ssdm_SpecConstant(&alpha3); _ssdm_SpecConstant(&p4); _ssdm_SpecConstant(&alpha4); _ssdm_SpecConstant(&p5); _ssdm_SpecConstant(&alpha5);  }
-#163 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log_reference_tables.h"
-};
-
-template<int p0, int alpha0, class LOG_TYPE, class T>
-class log0_lut_initializer
-{
-public:
-    typedef LOG_TYPE TableType;
-    static LOG_TYPE apply(int i, int n) {
-        ap_ufixed<1+alpha0,1> y_tilde_inverse = log0_inverse_lut_initializer<p0, alpha0, ap_ufixed<1+alpha0,1> > ::apply(i,n);
-
-
-
-
-        LOG_TYPE tmp = -reference_log<LOG_TYPE>(y_tilde_inverse) + log0_table_traits<LOG_TYPE, T>::log0_offset();
-//             log_lut_initializer<log0_table_traits<LOG_TYPE, float>::p1, log0_table_traits<LOG_TYPE, float>::alpha1, LOG_TYPE>::f(0,0) +
-//             log_lut_initializer<log0_table_traits<LOG_TYPE, float>::p2, log0_table_traits<LOG_TYPE, float>::alpha2, LOG_TYPE>::f(0,0);
-        //log0_table_traits<LOG_TYPE, T>::log0_offset;
-
-
-
-
-
-
-
-        return tmp;
-    }
-};
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#34 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log_tables.h" 2
-namespace {
-template <typename T, int p, int alpha, int size> class log_lut_table {
-
-
-
-};
-
-
-
-
-template <typename T, typename T2, int p, int alpha, int size> class log0_lut_table {
-
-
-
-};
-
-
-
-
-template <> class log0_lut_table<ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0>,float,0,5,64> { public:
-log0_lut_table<ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0>,float,0,5,64>();
-static const ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0> array [64];};
-const ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0> log0_lut_table<ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0>,float,0,5,64>::array [64] = {
-"-0x0.0081e008a6p0",
-"-0x0.0081e008a6p0",
-"-0x0.0081e008a6p0",
-"0x0.5f6a08e6bcp0",
-"-0x0.0081e008a6p0",
-"0x0.e618126842p0",
-"-0x0.4c256af42ap0",
-"0x0.84f1d70ddep0",
-"-0x0.0081e008a6p0",
-"-0x0.72c1bf2710p0",
-"-0x0.332695428ep0",
-"0x0.1003b8acfap0",
-"0x0.5f6a08e6bcp0",
-"0x0.c175d0a4ccp0",
-"0x1.29426057cap0",
-"0x1.dab4784f9cp0",
-"-0x0.0081e008a6p0",
-"-0x0.a5a9a2f626p0",
-"-0x0.944cd09cf2p0",
-"-0x0.86757729cep0",
-"-0x0.7ccc1d8762p0",
-"-0x0.6d95bdf7d8p0",
-"-0x0.62eaae23aap0",
-"-0x0.57c8d70606p0",
-"-0x0.4c256af42ap0",
-"-0x0.3ff410e362p0",
-"-0x0.39a1cf97dap0",
-"-0x0.2c8040e9f4p0",
-"-0x0.25ac85f8e4p0",
-"-0x0.1ea8e776d0p0",
-"-0x0.1772b2938ap0",
-"-0x0.1006f868aep0",
-"-0x0.0081e008a6p0",
-"-0x0.0081e008a6p0",
-"0x0.079ecebc4ep0",
-"0x0.1003b8acfap0",
-"0x0.18b17e54b4p0",
-"0x0.21ad3cfbaap0",
-"0x0.2afca0ce04p0",
-"0x0.2afca0ce04p0",
-"0x0.34a5fa7070p0",
-"0x0.3eb058d0c2p0",
-"0x0.3eb058d0c2p0",
-"0x0.4923a83c2ep0",
-"0x0.4923a83c2ep0",
-"0x0.5408d8143ep0",
-"0x0.5408d8143ep0",
-"0x0.5f6a08e6bcp0",
-"0x0.5f6a08e6bcp0",
-"0x0.6b52c5407ep0",
-"0x0.6b52c5407ep0",
-"0x0.6b52c5407ep0",
-"0x0.77d0485ff8p0",
-"0x0.77d0485ff8p0",
-"0x0.84f1d70ddep0",
-"0x0.84f1d70ddep0",
-"0x0.84f1d70ddep0",
-"0x0.92c9308102p0",
-"0x0.92c9308102p0",
-"0x0.92c9308102p0",
-"0x0.92c9308102p0",
-"0x0.a16b1f8f24p0",
-"0x0.a16b1f8f24p0",
-"0x0.a16b1f8f24p0",
-};
-template <> class log_lut_table<ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0>,4,4,16> { public:
-log_lut_table<ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0>,4,4,16>();
-static const ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0> array [16];};
-const ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0>,4,4,16>::array [16] = {
-"0x0",
-"0x0.0100001556p0",
-"0x0.0201012becp0",
-"0x0.03030549d4p0",
-"0x0.04060e7b40p0",
-"0x0.050a1ed2a2p0",
-"0x0.060f3868c2p0",
-"0x0.07155d5cd8p0",
-"0x0.0798d4c5acp0",
-"0x0.08a08ecf9ap0",
-"0x0.09a959a26ep0",
-"0x0.0ab33774bep0",
-"0x0.0bbe2a8412p0",
-"0x0.0cca3514f6p0",
-"0x0.0dd7597324p0",
-"0x0.0ee599f196p0",
-};
-template <> class log_lut_table<ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0>,7,6,64> { public:
-log_lut_table<ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0>,7,6,64>();
-static const ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0> array [64];};
-const ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<48, 9, (ap_q_mode)5, (ap_o_mode)3, 0>,7,6,64>::array [64] = {
-"0x0",
-"0x0.0008001002p0",
-"0x0.0010006004p0",
-"0x0.001800f00ep0",
-"0x0.002001c024p0",
-"0x0.002802d048p0",
-"0x0.0030042080p0",
-"0x0.003805b0cep0",
-"0x0.0040078138p0",
-"0x0.00480991c0p0",
-"0x0.00500be26cp0",
-"0x0.00580e733ep0",
-"0x0.006011443cp0",
-"0x0.0068145568p0",
-"0x0.007017a6c8p0",
-"0x0.00781b3860p0",
-"0x0.00801f0a32p0",
-"0x0.0088231c42p0",
-"0x0.0090276e98p0",
-"0x0.00982c0134p0",
-"0x0.00a030d41ap0",
-"0x0.00a835e750p0",
-"0x0.00b03b3adap0",
-"0x0.00b840cebcp0",
-"0x0.00c046a2f8p0",
-"0x0.00c84cb794p0",
-"0x0.00d0530c92p0",
-"0x0.00d859a1fap0",
-"0x0.00e06077ccp0",
-"0x0.00e8678e0ep0",
-"0x0.00f06ee4c2p0",
-"0x0.00f8767bf0p0",
-"0x0.00fe7c57a2p0",
-"0x0.0106845faap0",
-"0x0.010e8ca836p0",
-"0x0.0116953148p0",
-"0x0.011e9dfae4p0",
-"0x0.0126a70510p0",
-"0x0.012eb04fcep0",
-"0x0.0136b9db24p0",
-"0x0.013ec3a714p0",
-"0x0.0146cdb3a4p0",
-"0x0.014ed800d8p0",
-"0x0.0156e28eb2p0",
-"0x0.015eed5d38p0",
-"0x0.0166f86c6cp0",
-"0x0.016f03bc56p0",
-"0x0.01770f4cf6p0",
-"0x0.017f1b1e52p0",
-"0x0.018727306cp0",
-"0x0.018f33834cp0",
-"0x0.01974016f2p0",
-"0x0.019f4ceb66p0",
-"0x0.01a75a00a8p0",
-"0x0.01af6756bep0",
-"0x0.01b774edaep0",
-"0x0.01bf82c578p0",
-"0x0.01c790de24p0",
-"0x0.01cf9f37b4p0",
-"0x0.01d7add22cp0",
-"0x0.01dfbcad90p0",
-"0x0.01e7cbc9e6p0",
-"0x0.01efdb2730p0",
-"0x0.01f7eac572p0",
-};
-template <> class log0_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,double,0,5,64> { public:
-log0_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,double,0,5,64>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [64];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log0_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,double,0,5,64>::array [64] = {
-"-0x0.0081e088c6b6ce408b3c9p0",
-"-0x0.0081e088c6b6ce408b3c9p0",
-"-0x0.0081e088c6b6ce408b3c9p0",
-"0x0.5f6a0866999da176f4c37p0",
-"-0x0.0081e088c6b6ce408b3c9p0",
-"0x0.e61811e820cc724974c37p0",
-"-0x0.4c256b744b2b90b18b3c9p0",
-"0x0.84f1d68dbbf103da74c37p0",
-"-0x0.0081e088c6b6ce408b3c9p0",
-"-0x0.72c1bfa7311f54f10b3c9p0",
-"-0x0.332695c2af64372d0b3c9p0",
-"0x0.1003b82cd783384814c37p0",
-"0x0.5f6a0866999da176f4c37p0",
-"0x0.c175d024a952b1f374c37p0",
-"0x1.29425fd7a7b3e1bf74c37p0",
-"0x1.dab477cf79835b6b74c37p0",
-"-0x0.0081e088c6b6ce408b3c9p0",
-"-0x0.a5a9a37648aca6518b3c9p0",
-"-0x0.944cd11d143fa59c8b3c9p0",
-"-0x0.867577a9f00ae3f58b3c9p0",
-"-0x0.7ccc1e0782d2810e0b3c9p0",
-"-0x0.6d95be77f8f458738b3c9p0",
-"-0x0.62eaaea3cbc039170b3c9p0",
-"-0x0.57c8d78626ddf7830b3c9p0",
-"-0x0.4c256b744b2b90b18b3c9p0",
-"-0x0.3ff411638333235b4b3c9p0",
-"-0x0.39a1d017fbeb1198cb3c9p0",
-"-0x0.2c80416a15de75d18b3c9p0",
-"-0x0.25ac867906a114d88b3c9p0",
-"-0x0.1ea8e7f6f1a9b42a6b3c9p0",
-"-0x0.1772b313ac2219dc6b3c9p0",
-"-0x0.1006f8e8cf6821714b3c9p0",
-"-0x0.0081e088c6b6ce408b3c9p0",
-"-0x0.0081e088c6b6ce408b3c9p0",
-"0x0.079ece3c2ceb53f784c37p0",
-"0x0.1003b82cd783384814c37p0",
-"0x0.18b17dd49292ba6d94c37p0",
-"0x0.21ad3c7b8912297bf4c37p0",
-"0x0.2afca04de1c495b674c37p0",
-"0x0.2afca04de1c495b674c37p0",
-"0x0.34a5f9f04efcf89df4c37p0",
-"0x0.3eb05850a0b024bab4c37p0",
-"0x0.3eb05850a0b024bab4c37p0",
-"0x0.4923a7bc0cb77ba074c37p0",
-"0x0.4923a7bc0cb77ba074c37p0",
-"0x0.5408d7941bd890f7f4c37p0",
-"0x0.5408d7941bd890f7f4c37p0",
-"0x0.5f6a0866999da176f4c37p0",
-"0x0.5f6a0866999da176f4c37p0",
-"0x0.6b52c4c05c80735cf4c37p0",
-"0x0.6b52c4c05c80735cf4c37p0",
-"0x0.6b52c4c05c80735cf4c37p0",
-"0x0.77d047dfd5e46812f4c37p0",
-"0x0.77d047dfd5e46812f4c37p0",
-"0x0.84f1d68dbbf103da74c37p0",
-"0x0.84f1d68dbbf103da74c37p0",
-"0x0.84f1d68dbbf103da74c37p0",
-"0x0.92c93000e025c58174c37p0",
-"0x0.92c93000e025c58174c37p0",
-"0x0.92c93000e025c58174c37p0",
-"0x0.92c93000e025c58174c37p0",
-"0x0.a16b1f0f0267583a74c37p0",
-"0x0.a16b1f0f0267583a74c37p0",
-"0x0.a16b1f0f0267583a74c37p0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,4,4,16> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,4,4,16>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [16];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,4,4,16>::array [16] = {
-"0x0",
-"0x0.01000015555888891a800p0",
-"0x0.0201012bec32f8dac2800p0",
-"0x0.03030549d3b2a18bb6800p0",
-"0x0.04060e7b3f982465e6800p0",
-"0x0.050a1ed2a137cd8b7a800p0",
-"0x0.060f3868c0ef391852800p0",
-"0x0.07155d5cd81d536192800p0",
-"0x0.0798d4c5abd6fffd02800p0",
-"0x0.08a08ecf9a4e65d1f2800p0",
-"0x0.09a959a26d3862e752800p0",
-"0x0.0ab33774bd9e386022800p0",
-"0x0.0bbe2a841109efba62800p0",
-"0x0.0cca3514f685e53472800p0",
-"0x0.0dd759732434c1a702800p0",
-"0x0.0ee599f19585a95d52800p0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,7,6,64> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,7,6,64>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [64];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,7,6,64>::array [64] = {
-"0x0",
-"0x0.00080010004aabeab0c20p0",
-"0x0.0010006003957ad6f9a20p0",
-"0x0.001800f00de0e4cfbb720p0",
-"0x0.002001c0232dc1f4da520p0",
-"0x0.002802d0477d4a8741b20p0",
-"0x0.003004207ed116f4eab20p0",
-"0x0.003805b0cd2b1fe4e3f20p0",
-"0x0.00400781368dbe435af20p0",
-"0x0.00480991befbab4da8b20p0",
-"0x0.00500be26a78009e5f320p0",
-"0x0.00580e733d06383958320p0",
-"0x0.006011443aaa2c97c6b20p0",
-"0x0.00681455676818b44c320p0",
-"0x0.007017a6c74498170b320p0",
-"0x0.00781b385e44a6e1beb20p0",
-"0x0.00801f0a306da1dbd5320p0",
-"0x0.0088231c41c5467e89b20p0",
-"0x0.0090276e9651b30101b20p0",
-"0x0.00982c013219666468b20p0",
-"0x0.00a030d41923408016b20p0",
-"0x0.00a835e74f76820dabb20p0",
-"0x0.00b03b3ad91accb539b20p0",
-"0x0.00b840ceba18231968b20p0",
-"0x0.00c046a2f676e8e39db20p0",
-"0x0.00c84cb7923fe2d026b20p0",
-"0x0.00d0530c917c36ba64b20p0",
-"0x0.00d859a1f8356ba8fdb20p0",
-"0x0.00e06077ca7569da05b20p0",
-"0x0.00e8678e0c467acf37b20p0",
-"0x0.00f06ee4c1b3495a24b20p0",
-"0x0.00f8767beec6e1a867b20p0",
-"0x0.00fe7c57a189e48d92b20p0",
-"0x0.0106845fa9bd1841f4b20p0",
-"0x0.010e8ca834b76d9d82b20p0",
-"0x0.0116953146855e53e8b20p0",
-"0x0.011e9dfae333c5aef6b20p0",
-"0x0.0126a7050ecfe09ae0b20p0",
-"0x0.012eb04fcd674db284b20p0",
-"0x0.0136b9db23080d4bacb20p0",
-"0x0.013ec3a713c0818352b20p0",
-"0x0.0146cdb3a39f6e49f0b20p0",
-"0x0.014ed800d6b3f96fc4b20p0",
-"0x0.0156e28eb10daab11ab20p0",
-"0x0.015eed5d36bc6bc2a2b20p0",
-"0x0.0166f86c6bd0885db6b20p0",
-"0x0.016f03bc545aae4cb8b20p0",
-"0x0.01770f4cf46bed775cb20p0",
-"0x0.017f1b1e5015b7eefeb20p0",
-"0x0.018727306b69e1fb00b20p0",
-"0x0.018f33834a7aa22522b20p0",
-"0x0.01974016f15a9145d6b20p0",
-"0x0.019f4ceb641caa90aab20p0",
-"0x0.01a75a00a6d44ba09eb20p0",
-"0x0.01af6756bd95348486b20p0",
-"0x0.01b774edac7387cb76b20p0",
-"0x0.01bf82c57783ca911ab20p0",
-"0x0.01c790de22dae48a2ab20p0",
-"0x0.01cf9f37b28e2010cab20p0",
-"0x0.01d7add22ab32a30feb20p0",
-"0x0.01dfbcad8f6012b50ab20p0",
-"0x0.01e7cbc9e4ab4c31f0b20p0",
-"0x0.01efdb272eabac13d6b20p0",
-"0x0.01f7eac571786aaa82b20p0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,12,4,16> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,12,4,16>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [16];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,12,4,16>::array [16] = {
-"0x0",
-"0x0.000100007f8054d5d4d5ap0",
-"0x0.00020001ff02a8af26b2ap0",
-"0x0.000300047e88fb94f2b2ap0",
-"0x0.00040007fe154d963626ap0",
-"0x0.0005000c7da99ec7eea2ap0",
-"0x0.00060011fd47ef451a1aap0",
-"0x0.000700187cf23f2eb702ap0",
-"0x0.0007ff9ff8aaceb0c44aap0",
-"0x0.0008ffa877f3156e953aap0",
-"0x0.0009ffb1f74d5b1fbb9aap0",
-"0x0.000affbc76bb9ffd35baap0",
-"0x0.000bffc7f63fe44602aaap0",
-"0x0.000cffd475dc283f22baap0",
-"0x0.000dffe1f5926c33972aap0",
-"0x0.000efff07564b074629aap0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,15,4,16> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,15,4,16>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [16];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,15,4,16>::array [16] = {
-"0x0",
-"0x0.0000200001ffc02aa2af2p0",
-"0x0.0000400007ff815535964p0",
-"0x0.0000600011ff447fb9458p0",
-"0x0.000080001fff0aaa2eac8p0",
-"0x0.0000a00031fed4d4971b0p0",
-"0x0.0000c00047fea3fef4420p0",
-"0x0.0000e00061fe792948310p0",
-"0x0.0000fffe7ffc555795610p0",
-"0x0.00011ffea1fbf98156900p0",
-"0x0.00013ffec7fba6ab06f80p0",
-"0x0.00015ffef1fb5dd4aa260p0",
-"0x0.00017fff1ffb1ffe440c0p0",
-"0x0.00019fff51faee27d8fa0p0",
-"0x0.0001bfff87fac9516da00p0",
-"0x0.0001dfffc1fab27b070c0p0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,18,4,16> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,18,4,16>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [16];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,18,4,16>::array [16] = {
-"0x0",
-"0x0.000004000007ffe01554ep0",
-"0x0.00000800001fffc0aaa8bp0",
-"0x0.00000c000047ffa23ffb9p0",
-"0x0.00001000007fff85554dap0",
-"0x0.0000140000c7ff6a6a9ecp0",
-"0x0.00001800011fff51ffef4p0",
-"0x0.00001c000187ff3c953f4p0",
-"0x0.00001ffff9fffe2aaaceap0",
-"0x0.000023fffa87fdfcc0158p0",
-"0x0.000027fffb1ffdd3555b0p0",
-"0x0.00002bfffbc7fdaeeaa00p0",
-"0x0.00002ffffc7ffd8fffe44p0",
-"0x0.000033fffd47fd7715284p0",
-"0x0.000037fffe1ffd64aa6c4p0",
-"0x0.00003bffff07fd593fb08p0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,21,4,16> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,21,4,16>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [16];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,21,4,16>::array [16] = {
-"0x0",
-"0x0.0000008000001ffff00aap0",
-"0x0.0000010000007fffe0555p0",
-"0x0.0000018000011fffd1200p0",
-"0x0.000002000001ffffc2aaap0",
-"0x0.0000028000031fffb5355p0",
-"0x0.0000030000047fffa8fffp0",
-"0x0.0000038000061fff9e4aap0",
-"0x0.000003ffffe7ffff15555p0",
-"0x0.0000047fffea1ffefe5ffp0",
-"0x0.000004ffffec7ffee9aaap0",
-"0x0.0000057fffef1ffed7755p0",
-"0x0.000005fffff1fffec7fffp0",
-"0x0.0000067ffff51ffebb8aap0",
-"0x0.000006fffff87ffeb2555p0",
-"0x0.0000077ffffc1ffeac9ffp0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,24,4,16> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,24,4,16>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [16];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,24,4,16>::array [16] = {
-"0x0",
-"0x0.000000100000007ffff80p0",
-"0x0.00000020000001fffff02p0",
-"0x0.000000300000047fffe88p0",
-"0x0.00000040000007ffffe15p0",
-"0x0.0000005000000c7fffda9p0",
-"0x0.00000060000011ffffd47p0",
-"0x0.000000700000187fffcf2p0",
-"0x0.0000007fffff9fffff8aap0",
-"0x0.0000008fffffa87fff7f2p0",
-"0x0.0000009fffffb1ffff74dp0",
-"0x0.000000afffffbc7fff6bbp0",
-"0x0.000000bfffffc7ffff63fp0",
-"0x0.000000cfffffd47fff5dcp0",
-"0x0.000000dfffffe1ffff592p0",
-"0x0.000000effffff07fff564p0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,27,4,16> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,27,4,16>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [16];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,27,4,16>::array [16] = {
-"0x0",
-"0x0.0000000200000001fffffp0",
-"0x0.0000000400000007fffffp0",
-"0x0.0000000600000011fffffp0",
-"0x0.000000080000001ffffffp0",
-"0x0.0000000a00000031ffffep0",
-"0x0.0000000c00000047ffffep0",
-"0x0.0000000e00000061ffffep0",
-"0x0.0000000ffffffe7fffffcp0",
-"0x0.00000011fffffea1ffffbp0",
-"0x0.00000013fffffec7ffffbp0",
-"0x0.00000015fffffef1ffffbp0",
-"0x0.00000017ffffff1fffffbp0",
-"0x0.00000019ffffff51ffffap0",
-"0x0.0000001bffffff87ffffap0",
-"0x0.0000001dffffffc1ffffap0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,30,4,16> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,30,4,16>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [16];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,30,4,16>::array [16] = {
-"0x0",
-"0x0.000000004000000007fffp0",
-"0x0.00000000800000001ffffp0",
-"0x0.00000000c000000047fffp0",
-"0x0.00000001000000007ffffp0",
-"0x0.0000000140000000c7fffp0",
-"0x0.00000001800000011ffffp0",
-"0x0.00000001c000000187fffp0",
-"0x0.00000001fffffff9fffffp0",
-"0x0.000000023ffffffa87fffp0",
-"0x0.000000027ffffffb1ffffp0",
-"0x0.00000002bffffffbc7fffp0",
-"0x0.00000002fffffffc7ffffp0",
-"0x0.000000033ffffffd47fffp0",
-"0x0.000000037ffffffe1ffffp0",
-"0x0.00000003bfffffff07fffp0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,12,6,64> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,12,6,64>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [64];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,12,6,64>::array [64] = {
-"0x0",
-"0x0.0000400007e0014d65936p0",
-"0x0.000080001fc00a8ace9aap0",
-"0x0.0000c00047a023b8440aap0",
-"0x0.000100007f8054d5d4d5ap0",
-"0x0.00014000c760a5e395f2ap0",
-"0x0.000180011f411ee1a252ap0",
-"0x0.0001c0018721c7d01aecap0",
-"0x0.00020001ff02a8af26b2ap0",
-"0x0.0002400286e3c97ef29aap0",
-"0x0.000280031ec5323fb19aap0",
-"0x0.0002c003c6a6eaf19ca6ap0",
-"0x0.000300047e88fb94f2b2ap0",
-"0x0.00034005466b6c29f8b6ap0",
-"0x0.000380061e4e44b0f9a6ap0",
-"0x0.0003c00706318d2a467aap0",
-"0x0.00040007fe154d963626ap0",
-"0x0.0004400905f98df525a2ap0",
-"0x0.0004800a1dde564777eaap0",
-"0x0.0004c00b45c3ae8d95eaap0",
-"0x0.0005000c7da99ec7eea2ap0",
-"0x0.0005400dc5902ef6f70aap0",
-"0x0.0005800f1d77671b2a1aap0",
-"0x0.0005c010855f4f3508d2ap0",
-"0x0.00060011fd47ef451a1aap0",
-"0x0.0006401385314f4beb02ap0",
-"0x0.000680151d1b774a0e7aap0",
-"0x0.0006c016c5066f401d7aap0",
-"0x0.000700187cf23f2eb702ap0",
-"0x0.0007401a44deef168012ap0",
-"0x0.0007801c1ccc86f823aaap0",
-"0x0.0007c01e04bb0ed452c2ap0",
-"0x0.0007ff9ff8aaceb0c44aap0",
-"0x0.00083fa2007b4c7c4caaap0",
-"0x0.00087fa4184cd23495eaap0",
-"0x0.0008bfa6401f67da692aap0",
-"0x0.0008ffa877f3156e953aap0",
-"0x0.00093faabfc7e2f1ef2aap0",
-"0x0.00097fad179dd86551daap0",
-"0x0.0009bfaf7f74fdc99e5aap0",
-"0x0.0009ffb1f74d5b1fbb9aap0",
-"0x0.000a3fb47f26f868969aap0",
-"0x0.000a7fb71701dda5224aap0",
-"0x0.000abfb9bede12d657aaap0",
-"0x0.000affbc76bb9ffd35baap0",
-"0x0.000b3fbf3e9a8d1ac16aap0",
-"0x0.000b7fc2167ae23005daap0",
-"0x0.000bbfc4fe5ca73e13eaap0",
-"0x0.000bffc7f63fe44602aaap0",
-"0x0.000c3fcafe24a148ef1aap0",
-"0x0.000c7fce160ae647fc3aap0",
-"0x0.000cbfd13df2bb44531aap0",
-"0x0.000cffd475dc283f22baap0",
-"0x0.000d3fd7bdc73539a01aap0",
-"0x0.000d7fdb15b3ea35064aap0",
-"0x0.000dbfde7da24f32964aap0",
-"0x0.000dffe1f5926c33972aap0",
-"0x0.000e3fe57d844939560aap0",
-"0x0.000e7fe91577ee4525caap0",
-"0x0.000ebfecbd6d63585faaap0",
-"0x0.000efff07564b074629aap0",
-"0x0.000f3ff43d5ddd9a93baap0",
-"0x0.000f7ff81558f2cc5e1aap0",
-"0x0.000fbffbfd55f80b32daap0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,17,6,64> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,17,6,64>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [64];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,17,6,64>::array [64] = {
-"0x0",
-"0x0.000002000001ffc002aa3p0",
-"0x0.000004000007ff8015536p0",
-"0x0.000006000011ff4047fb8p0",
-"0x0.00000800001fff00aaa2bp0",
-"0x0.00000a000031fec14d48ep0",
-"0x0.00000c000047fe823fee1p0",
-"0x0.00000e000061fe4392925p0",
-"0x0.00001000007ffe0555359p0",
-"0x0.0000120000a1fdc797d7ep0",
-"0x0.0000140000c7fd8a6a794p0",
-"0x0.0000160000f1fd4ddd19cp0",
-"0x0.00001800011ffd11ffb94p0",
-"0x0.00001a000151fcd6e257ep0",
-"0x0.00001c000187fc9c94f5ap0",
-"0x0.00001e0001c1fc632792ap0",
-"0x0.0000200001fffc2aaa2eap0",
-"0x0.000022000241fbf32cca0p0",
-"0x0.000024000287fbbcbf648p0",
-"0x0.0000260002d1fb8771fe4p0",
-"0x0.00002800031ffb5354970p0",
-"0x0.00002a000371fb20772f4p0",
-"0x0.00002c0003c7faeee9c70p0",
-"0x0.00002e000421fabebc5e0p0",
-"0x0.00003000047ffa8ffef44p0",
-"0x0.0000320004e1fa62c18a0p0",
-"0x0.000034000547fa37141f4p0",
-"0x0.0000360005b1fa0d06b40p0",
-"0x0.00003800061ff9e4a9484p0",
-"0x0.00003a000691f9be0bdc0p0",
-"0x0.00003c000707f9993e6f8p0",
-"0x0.00003e000781f97651028p0",
-"0x0.00003fffe7fff15557954p0",
-"0x0.000041ffe881f0f65a078p0",
-"0x0.000043ffe907f0996c788p0",
-"0x0.000045ffe991f03e9ee80p0",
-"0x0.000047ffea1fefe601568p0",
-"0x0.000049ffeab1ef8fa3c40p0",
-"0x0.00004bffeb47ef3b96308p0",
-"0x0.00004dffebe1eee9e89c8p0",
-"0x0.00004fffec7fee9aab070p0",
-"0x0.000051ffed21ee4ded710p0",
-"0x0.000053ffedc7ee03bfda0p0",
-"0x0.000055ffee71edbc32428p0",
-"0x0.000057ffef1fed7754aa0p0",
-"0x0.000059ffefd1ed3537118p0",
-"0x0.00005bfff087ecf5e9780p0",
-"0x0.00005dfff141ecb97bde0p0",
-"0x0.00005ffff1ffec7ffe440p0",
-"0x0.000061fff2c1ec4980a98p0",
-"0x0.000063fff387ec16130f0p0",
-"0x0.000065fff451ebe5c5740p0",
-"0x0.000067fff51febb8a7d90p0",
-"0x0.000069fff5f1eb8eca3e0p0",
-"0x0.00006bfff6c7eb683ca30p0",
-"0x0.00006dfff7a1eb450f088p0",
-"0x0.00006ffff87feb25516d8p0",
-"0x0.000071fff961eb0913d38p0",
-"0x0.000073fffa47eaf066398p0",
-"0x0.000075fffb31eadb58a00p0",
-"0x0.000077fffc1feac9fb070p0",
-"0x0.000079fffd11eabc5d6e8p0",
-"0x0.00007bfffe07eab28fd70p0",
-"0x0.00007dffff01eaaca2408p0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,22,6,64> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,22,6,64>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [64];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,22,6,64>::array [64] = {
-"0x0",
-"0x0.000000100000007fff800p0",
-"0x0.00000020000001ffff002p0",
-"0x0.000000300000047ffe808p0",
-"0x0.00000040000007fffe015p0",
-"0x0.0000005000000c7ffd829p0",
-"0x0.00000060000011fffd047p0",
-"0x0.000000700000187ffc872p0",
-"0x0.0000008000001ffffc0aap0",
-"0x0.000000900000287ffb8f2p0",
-"0x0.000000a0000031fffb14dp0",
-"0x0.000000b000003c7ffa9bbp0",
-"0x0.000000c0000047fffa23fp0",
-"0x0.000000d00000547ff9adcp0",
-"0x0.000000e0000061fff9392p0",
-"0x0.000000f00000707ff8c64p0",
-"0x0.0000010000007ffff8555p0",
-"0x0.000001100000907ff7e65p0",
-"0x0.000001200000a1fff7797p0",
-"0x0.000001300000b47ff70eep0",
-"0x0.000001400000c7fff6a6ap0",
-"0x0.000001500000dc7ff640ep0",
-"0x0.000001600000f1fff5dddp0",
-"0x0.000001700001087ff57d7p0",
-"0x0.0000018000011ffff51ffp0",
-"0x0.000001900001387ff4c58p0",
-"0x0.000001a0000151fff46e2p0",
-"0x0.000001b000016c7ff41a0p0",
-"0x0.000001c0000187fff3c95p0",
-"0x0.000001d00001a47ff37c1p0",
-"0x0.000001e00001c1fff3327p0",
-"0x0.000001f00001e07ff2ecap0",
-"0x0.000001fffff9ffffe2aaap0",
-"0x0.0000020ffffa207fe1ecap0",
-"0x0.0000021ffffa41ffe132dp0",
-"0x0.0000022ffffa647fe07d3p0",
-"0x0.0000023ffffa87ffdfcbfp0",
-"0x0.0000024ffffaac7fdf1f4p0",
-"0x0.0000025ffffad1ffde772p0",
-"0x0.0000026ffffaf87fddd3cp0",
-"0x0.0000027ffffb1fffdd355p0",
-"0x0.0000028ffffb487fdc9bdp0",
-"0x0.0000029ffffb71ffdc077p0",
-"0x0.000002affffb9c7fdb786p0",
-"0x0.000002bffffbc7ffdaeeap0",
-"0x0.000002cffffbf47fda6a6p0",
-"0x0.000002dffffc21ffd9ebdp0",
-"0x0.000002effffc507fd972fp0",
-"0x0.000002fffffc7fffd8fffp0",
-"0x0.0000030ffffcb07fd8930p0",
-"0x0.0000031ffffce1ffd82c2p0",
-"0x0.0000032ffffd147fd7cb8p0",
-"0x0.0000033ffffd47ffd7715p0",
-"0x0.0000034ffffd7c7fd71d9p0",
-"0x0.0000035ffffdb1ffd6d07p0",
-"0x0.0000036ffffde87fd68a2p0",
-"0x0.0000037ffffe1fffd64aap0",
-"0x0.0000038ffffe587fd6122p0",
-"0x0.0000039ffffe91ffd5e0dp0",
-"0x0.000003affffecc7fd5b6bp0",
-"0x0.000003bfffff07ffd593fp0",
-"0x0.000003cfffff447fd578cp0",
-"0x0.000003dfffff81ffd5652p0",
-"0x0.000003efffffc07fd5594p0",
-};
-template <> class log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,27,6,64> { public:
-log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,27,6,64>();
-static const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> array [64];};
-const ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0> log_lut_table<ap_fixed<96, 12, (ap_q_mode)5, (ap_o_mode)3, 0>,27,6,64>::array [64] = {
-"0x0",
-"0x0.00000000800000001ffffp0",
-"0x0.00000001000000007ffffp0",
-"0x0.00000001800000011ffffp0",
-"0x0.0000000200000001fffffp0",
-"0x0.00000002800000031ffffp0",
-"0x0.00000003000000047ffffp0",
-"0x0.00000003800000061ffffp0",
-"0x0.0000000400000007fffffp0",
-"0x0.000000048000000a1ffffp0",
-"0x0.000000050000000c7ffffp0",
-"0x0.000000058000000f1ffffp0",
-"0x0.0000000600000011fffffp0",
-"0x0.00000006800000151ffffp0",
-"0x0.00000007000000187ffffp0",
-"0x0.000000078000001c1ffffp0",
-"0x0.000000080000001ffffffp0",
-"0x0.00000008800000241fffep0",
-"0x0.00000009000000287fffep0",
-"0x0.000000098000002d1fffep0",
-"0x0.0000000a00000031ffffep0",
-"0x0.0000000a800000371fffep0",
-"0x0.0000000b0000003c7fffep0",
-"0x0.0000000b800000421fffep0",
-"0x0.0000000c00000047ffffep0",
-"0x0.0000000c8000004e1fffep0",
-"0x0.0000000d000000547fffep0",
-"0x0.0000000d8000005b1fffep0",
-"0x0.0000000e00000061ffffep0",
-"0x0.0000000e800000691fffep0",
-"0x0.0000000f000000707fffep0",
-"0x0.0000000f800000781fffep0",
-"0x0.0000000ffffffe7fffffcp0",
-"0x0.000000107ffffe881fffcp0",
-"0x0.00000010fffffe907fffcp0",
-"0x0.000000117ffffe991fffcp0",
-"0x0.00000011fffffea1ffffbp0",
-"0x0.000000127ffffeab1fffbp0",
-"0x0.00000012fffffeb47fffbp0",
-"0x0.000000137ffffebe1fffbp0",
-"0x0.00000013fffffec7ffffbp0",
-"0x0.000000147ffffed21fffbp0",
-"0x0.00000014fffffedc7fffbp0",
-"0x0.000000157ffffee71fffbp0",
-"0x0.00000015fffffef1ffffbp0",
-"0x0.000000167ffffefd1fffbp0",
-"0x0.00000016ffffff087fffbp0",
-"0x0.000000177fffff141fffbp0",
-"0x0.00000017ffffff1fffffbp0",
-"0x0.000000187fffff2c1fffbp0",
-"0x0.00000018ffffff387fffbp0",
-"0x0.000000197fffff451fffap0",
-"0x0.00000019ffffff51ffffap0",
-"0x0.0000001a7fffff5f1fffap0",
-"0x0.0000001affffff6c7fffap0",
-"0x0.0000001b7fffff7a1fffap0",
-"0x0.0000001bffffff87ffffap0",
-"0x0.0000001c7fffff961fffap0",
-"0x0.0000001cffffffa47fffap0",
-"0x0.0000001d7fffffb31fffap0",
-"0x0.0000001dffffffc1ffffap0",
-"0x0.0000001e7fffffd11fffap0",
-"0x0.0000001effffffe07fffap0",
-"0x0.0000001f7ffffff01fffap0",
-};
-template <int p, int alpha, int size> class log_inverse_lut_table {};
-template <> class log_inverse_lut_table<0,5,64> { public:
-log_inverse_lut_table<0,5,64>();
-static const ap_ufixed<6, 1, (ap_q_mode)5, (ap_o_mode)3, 0> array [64];};
-const ap_ufixed<6, 1, (ap_q_mode)5, (ap_o_mode)3, 0> log_inverse_lut_table<0,5,64>::array [64] = {
-"0x0",
-"0x0",
-"0x0",
-"0x0.b0p0",
-"0x0",
-"0x0.68p0",
-"0x1.58p0",
-"0x0.98p0",
-"0x0",
-"0x1.90p0",
-"0x1.38p0",
-"0x0.f0p0",
-"0x0.b0p0",
-"0x0.78p0",
-"0x0.50p0",
-"0x0.28p0",
-"0x0",
-"0x1.e8p0",
-"0x1.c8p0",
-"0x1.b0p0",
-"0x1.a0p0",
-"0x1.88p0",
-"0x1.78p0",
-"0x1.68p0",
-"0x1.58p0",
-"0x1.48p0",
-"0x1.40p0",
-"0x1.30p0",
-"0x1.28p0",
-"0x1.20p0",
-"0x1.18p0",
-"0x1.10p0",
-"0x1",
-"0x1",
-"0x0.f8p0",
-"0x0.f0p0",
-"0x0.e8p0",
-"0x0.e0p0",
-"0x0.d8p0",
-"0x0.d8p0",
-"0x0.d0p0",
-"0x0.c8p0",
-"0x0.c8p0",
-"0x0.c0p0",
-"0x0.c0p0",
-"0x0.b8p0",
-"0x0.b8p0",
-"0x0.b0p0",
-"0x0.b0p0",
-"0x0.a8p0",
-"0x0.a8p0",
-"0x0.a8p0",
-"0x0.a0p0",
-"0x0.a0p0",
-"0x0.98p0",
-"0x0.98p0",
-"0x0.98p0",
-"0x0.90p0",
-"0x0.90p0",
-"0x0.90p0",
-"0x0.90p0",
-"0x0.88p0",
-"0x0.88p0",
-"0x0.88p0",
-};
-}
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h" 2
-
-
-template <typename LOG_TYPE, int p, int alpha, int size, int sizeout>
-void range_reduce(ap_ufixed<size, -p> zN, LOG_TYPE &log, ap_ufixed<sizeout, -(p+alpha-1)> &zN1)
-{
-    //#pragma HLS inline self off
-    const int T1size = 1 << alpha; // The size of the first table
-
-
-    //    LOG_TYPE log_lut[T1size] = log_lut_table<LOG_TYPE, p,alpha,T1size>::array;
-#70 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h"
-    //#pragma HLS RESOURCE variable=log_lut core=ROM_1P_LUTRAM
-
-    ap_ufixed<alpha, -p> a = zN; // Extract alpha MSBs from z1.
-    ap_ufixed<size-alpha, -p-alpha> b = zN; // Extract the LSBs from z1.
-    ap_ufixed<size+p+2*p+1, 1> zNext = 1+zN; // Extend z1 for shift
-    int e_shift = a[a.wl()-1] ? 2*p : 2*p+1; // Stage dependent?
-    ap_ufixed<size+p+1, 1-2*p> eZ = zNext >> e_shift;
-
-    zN1 = ((b + eZ) - a*zN);
-    ap_uint<alpha> index = a(alpha-1,0);
-    log = log_lut_table<LOG_TYPE, p,alpha,T1size>::array[index];
-#105 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h"
-}
-
-template <typename T>
-void my_to_float(T in, float &result, int prescale)
-{
-    //#pragma HLS inline self off
-    fp_struct<float> out;
-    out.sign[0] = in[in.wl()-1];
-
-    T ain = in;
-
-    if(out.__signbit()) {
-        ain = -in;
-    }
-
-    ap_uint<32> out_bits_1 = 0, out_bits_2 = 0, out_bits_3 = 0;
-    out_bits_1(31, 16) = ain(ain.wl()-1,ain.wl()-16); out_bits_1[15] = 1;
-    out_bits_2(31, 16) = ain(ain.wl()-16-1,ain.wl()-32); out_bits_2[15] = 1;
-    out_bits_3(31, 31-(ain.wl()-32)+1) = ain(ain.wl()-32-1, 0); out_bits_3[15] = 1;
-
-    int c1 = __builtin_clz(out_bits_1.to_uint());
-    int c2 = __builtin_clz(out_bits_2.to_uint());
-    int c3 = __builtin_clz(out_bits_3.to_uint());
-    int shift = c1;
-
-    T in_shift = ain << c1;
-    if(c1 == 16) {
-        shift += c2;
-        in_shift = in_shift << c2;
-        if(c2 == 16) {
-            // FIXME: All these stages may not be necessary
-            shift += c3;
-            in_shift = in_shift << c3;
-        }
-    }
-    out.sig(fp_struct<float>::SIG_BITS-1,0) =
-        in_shift(in_shift.wl()-1-1,
-                 in_shift.wl()-fp_struct<float>::SIG_BITS-1);
-    out.exp = (in == 0) ? 0 : (fp_struct<float>::EXP_BIAS+in_shift.iwl())-prescale-shift-1;
-
-    result = out.to_ieee();
-}
-
-template <typename T>
-void my_to_float(T in, double &result, int prescale)
-{
-    //#pragma HLS inline self off
-    fp_struct<double> out;
-    out.sign[0] = in[in.wl()-1];
-
-    T ain = in;
-
-    if(out.__signbit()) {
-        ain = -in;
-    }
-
-    ap_uint<32> out_bits_1 = 0, out_bits_2 = 0, out_bits_3 = 0, out_bits_4 = 0;
-    out_bits_1(31, 16) = ain(ain.wl()-1,ain.wl()-16); out_bits_1[15] = 1;
-    out_bits_2(31, 16) = ain(ain.wl()-16-1,ain.wl()-32); out_bits_2[15] = 1;
-    out_bits_3(31, 16) = ain(ain.wl()-32-1,ain.wl()-48); out_bits_3[15] = 1;
-    out_bits_4(31, 16) = ain(ain.wl()-48-1,ain.wl()-64); out_bits_4[15] = 1;
-
-    int c1 = __builtin_clz(out_bits_1.to_uint());
-    int c2 = __builtin_clz(out_bits_2.to_uint());
-    int c3 = __builtin_clz(out_bits_3.to_uint());
-    int c4 = __builtin_clz(out_bits_4.to_uint());
-    int shift = c1;
-
-    T in_shift = ain << c1;
-    if(c1 == 16) {
-        shift += c2;
-        in_shift = in_shift << c2;
-        if(c2 == 16) {
-            // FIXME: All these stages may not be necessary
-            shift += c3;
-            in_shift = in_shift << c3;
-            if(c3 == 16) {
-                shift += c4;
-                in_shift = in_shift << c4; // leading one is now in the sign bit.
-            }
-        }
-    }
-    out.sig(fp_struct<double>::SIG_BITS-1,0) =
-        in_shift(in_shift.wl()-1-1,
-                 in_shift.wl()-fp_struct<double>::SIG_BITS-1);
-    out.exp = (in == 0) ? 0 : (fp_struct<double>::EXP_BIAS+in_shift.iwl())-prescale-shift-1;
-
-    result = out.to_ieee();
-}
-
-
-const int p0 = 0; // We start with zero zeroed bits
-const int alpha0 = 5; // 1+alpha0 = number of bits considered by stage 0.
-const int p1 = (alpha0 == 5) ? 4 : (alpha0-2); // The number of bits zeroed in y1.
-const int alpha1 = 4;
-const int p2 = p1 + alpha1 - 1;
-const int alpha2 = 6;
-const int p3 = p2 + alpha2 - 1;
-const int alpha3 = 6;
-const int p4 = p3 + alpha3 - 1;
-const int alpha4 = 6;
-const int p5 = p4 + alpha4 - 1;
-const int alpha5 = 6;
-const int p6 = p5 + alpha5 - 1;
-const int alpha6 = 6;
-const int p7 = p6 + alpha6 - 1;
-const int alpha7 = 6;
-const int p8 = p7 + alpha7 - 1;
-const int alpha8 = 6;
-const int p9 = p8 + alpha8 - 1;
-const int alpha9 = 6;
-const int p10 = p9 + alpha9 - 1;
-
-
-//typedef float LOG_TYPE;
-template<typename T>
-class log_traits {};
-
-template <> class log_traits<float>
-{
-public:
-    const static int bypass_threshold = 12; //~Wf/2
-    const static int Wf = fp_struct<float>::SIG_BITS;
-    const static int We = fp_struct<float>::EXP_BITS;
-    const static int guard_bits = 4;
-    const static int MaxPrecision = (Wf*3)/2+1+guard_bits;
-    const static int SquarerExtraBits = 4;
-    typedef ap_fixed<1+We+MaxPrecision,1+We> LOG_TYPE;
-
-    const static int w1 = Wf+1;
-    const static int w2 = w1+2*p1+1-(alpha1-1); // MaxWidth of z2, needs to be truncted to MaxPrecision
-    const static int w3 = w2+2*p2+1-(alpha2-1);
-
-    template <int size>
-    static ap_ufixed<MaxPrecision-p3, -p3> range_reduction(ap_ufixed<size, -p1> z1, LOG_TYPE &log_sum) {
-        ap_ufixed<(w2 < MaxPrecision-p2) ? w2 : (MaxPrecision-p2), -p2> z2;
-        ap_ufixed<(w3 < MaxPrecision-p3) ? w3 : (MaxPrecision-p3), -p3> z3;
-        LOG_TYPE logn;
-        range_reduce<LOG_TYPE, p1, alpha1> (z1, logn, z2);
-        log_sum += logn;
-        range_reduce<LOG_TYPE, p2, alpha2> (z2, logn, z3);
-        log_sum += logn;
-        return z3;
-    }
-
-public :
-inline __attribute__((always_inline)) log_traits<float>() { _ssdm_SpecConstant(&bypass_threshold); _ssdm_SpecConstant(&Wf); _ssdm_SpecConstant(&We); _ssdm_SpecConstant(&guard_bits); _ssdm_SpecConstant(&MaxPrecision); _ssdm_SpecConstant(&SquarerExtraBits); _ssdm_SpecConstant(&w1); _ssdm_SpecConstant(&w2); _ssdm_SpecConstant(&w3);  }
-#249 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h"
-};
-
-template <> class log_traits<double>
-{
-public:
-    const static int bypass_threshold = p6; //~Wf/2
-    const static int Wf = fp_struct<double>::SIG_BITS;
-    const static int We = fp_struct<double>::EXP_BITS;
-    const static int guard_bits = 5 ;
-    const static int MaxPrecision = (Wf*3)/2+1+guard_bits;
-    const static int SquarerExtraBits = 8 ;
-    typedef ap_fixed<1+We+MaxPrecision,1+We> LOG_TYPE;
-
-    const static int w1 = Wf+1;
-    const static int w2 = w1+2*p1+1-(alpha1-1); // MaxWidth of z2, needs to be truncted to MaxPrecision
-    const static int w3 = w2+2*p2+1-(alpha2-1);
-    const static int w4 = w3+2*p3+1-(alpha3-1);
-    const static int w5 = w4+2*p4+1-(alpha4-1);
-    const static int w6 = w5+2*p5+1-(alpha5-1);
-
-    template <int size>
-    static ap_ufixed<MaxPrecision-p6, -p6> range_reduction(ap_ufixed<size, -p1> z1, LOG_TYPE &log_sum) {
-        ap_ufixed<(w2 < MaxPrecision-p2) ? w2 : (MaxPrecision-p2), -p2> z2;
-        ap_ufixed<(w3 < MaxPrecision-p3) ? w3 : (MaxPrecision-p3), -p3> z3;
-        ap_ufixed<(w4 < MaxPrecision-p4) ? w4 : (MaxPrecision-p4), -p4> z4;
-        ap_ufixed<(w5 < MaxPrecision-p5) ? w5 : (MaxPrecision-p5), -p5> z5;
-        ap_ufixed<(w6 < MaxPrecision-p6) ? w6 : (MaxPrecision-p6), -p6> z6;
-        LOG_TYPE logn;
-        range_reduce<LOG_TYPE, p1, alpha1> (z1, logn, z2);
-        log_sum += logn;
-        range_reduce<LOG_TYPE, p2, alpha2> (z2, logn, z3);
-        log_sum += logn;
-        range_reduce<LOG_TYPE, p3, alpha3> (z3, logn, z4);
-        log_sum += logn;
-        range_reduce<LOG_TYPE, p4, alpha4> (z4, logn, z5);
-        log_sum += logn;
-        range_reduce<LOG_TYPE, p5, alpha5> (z5, logn, z6);
-        log_sum += logn;
-        return z6;
-    }
-
-public :
-inline __attribute__((always_inline)) log_traits<double>() { _ssdm_SpecConstant(&bypass_threshold); _ssdm_SpecConstant(&Wf); _ssdm_SpecConstant(&We); _ssdm_SpecConstant(&guard_bits); _ssdm_SpecConstant(&MaxPrecision); _ssdm_SpecConstant(&SquarerExtraBits); _ssdm_SpecConstant(&w1); _ssdm_SpecConstant(&w2); _ssdm_SpecConstant(&w3); _ssdm_SpecConstant(&w4); _ssdm_SpecConstant(&w5); _ssdm_SpecConstant(&w6);  }
-#289 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h"
-};
-
-template<typename T>
-T log_generic(T z)
-{
-    typedef typename log_traits<T>::LOG_TYPE LOG_TYPE;
-
-    const int T0size = 1 << (1+alpha0); // The size of the first table
-
-
-    //    ap_ufixed<1+alpha0,1> inverse_lut[T0size] = log_inverse_lut_table<p0,alpha0, T0size>::array;
-#312 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h"
-    //    LOG_TYPE log_lut[T0size] = log0_lut_table<LOG_TYPE,T,p0,alpha0,T0size>::array;
-#330 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h"
-    //#pragma HLS RESOURCE variable=inverse_lut core=ROM_1P_LUTRAM
-    //#pragma HLS RESOURCE variable=log_inverse_lut_table<p0,alpha0, T0size>::array core=ROM_1P_LUTRAM
-    //#pragma HLS RESOURCE variable=log_lut core=ROM_1P_LUTRAM
-
-    //#pragma HLS inline all recursive
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-
-    T logz;
-    LOG_TYPE sum;
-    LOG_TYPE log_sum;
-
-
-
-
-
-    // Check special cases
-    fp_struct<T> zs(z);
-
-
-    if(zs.exp == 0) { // zero or subnormal
-
-
-
-
-
-
-        return fp_struct<T>::minus_infinity();
-    } else if(zs.sign != 0 || ::hls::__isnan(z)) {
-        return ::hls::nan("");
-    } else if(::hls::__isinf(z)) {
-        return fp_struct<T>::infinity();
-    }
-
-    int exponent = zs.expv();
-    fp_struct<T> ns = zs;
-#380 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h"
-    int FirstBit = ns.sig[log_traits<T>::Wf-1];
-
-    // Y is prenormalized, between 0.75 and 1.5
-    ap_ufixed<1+log_traits<T>::Wf+1,1> y = 0;
-    y[y.wl()-1] = 1; // The implicit '1' in IEEE format.
-    y(y.wl()-1-y.iwl(),1) = ns.sig(log_traits<T>::Wf-1,0);
-    if(FirstBit) {
-        y = y >> 1;
-        exponent += 1;
-    }
-
-    // A lookup table for this?
-    const ap_ufixed<log_traits<T>::Wf+log_traits<T>::We+2,0>
-    LOG2 = 0.69314718055994530941723212145;
-    ap_ufixed<log_traits<T>::We+1+log_traits<T>::Wf+log_traits<T>::We+2,log_traits<T>::We+1>
-    Elog2 = LOG2 * exponent;
-
-
-
-
-
-
-    //    int p_next = 0;
-
-    ap_uint<fp_struct<T>::SIG_BITS> t;
-    if(FirstBit) {
-        t = -ns.sig;
-    } else {
-        t = ns.sig;
-    }
-
-    ap_fixed<1+-log_traits<T>::bypass_threshold+1+log_traits<T>::MaxPrecision, -log_traits<T>::bypass_threshold+1> zk;
-    unsigned int prescale;
-    int bits = log_traits<T>::bypass_threshold; // For taylor
-    if((exponent == 0) && ((t >> (log_traits<T>::Wf-bits)) == 0)) { // Check the leading bits.  We could also write this with __builtin_clz().
-        // Close to 1, Skip range reduction
-        ap_uint<fp_struct<T>::SIG_BITS> t2 = t << bits;
-        t2.reverse();
-        prescale = __builtin_ctzl(t2);
-
-        zk = y << prescale; // This also performs some truncation of the high order bits.
-        log_sum = 0;
-
-
-
-
-
-
-
-    } else {
-        prescale = 0;
-        ap_uint<1+alpha0> index0 = y(y.wl()-1, y.wl()-(1+alpha0));
-        ap_ufixed<1+alpha0,1> y_tilde_inverse = log_inverse_lut_table<p0,alpha0, T0size>::array[index0];
-        log_sum = log0_lut_table<LOG_TYPE,T,p0,alpha0,T0size>::array[index0];
-        // The first bits of y1 are always a 1, followed by p1 zeros, but
-        // it gets dropped later
-        ap_ufixed<1+log_traits<T>::Wf+1+(1+alpha0),1> y1 = y * y_tilde_inverse;
-        // p_next = p1;
-#447 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h"
-        ((y1( y1.wl()-y1.iwl()-1, y1.wl()-y1.iwl()-p1) == 0) ? static_cast<void> (0) : __assert_fail ("y1( y1.wl()-y1.iwl()-1, y1.wl()-y1.iwl()-p1) == 0", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h", 447, __PRETTY_FUNCTION__)); // Check that the first stage zeros out p1 bits.
-
-        const int z1_width = 1+log_traits<T>::Wf+1+(1+alpha0)-p1+1;
-        ap_ufixed<z1_width, -p1> z1 = y1; // Extract a1+b1 from y1.
-
-        zk = log_traits<T>::range_reduction(z1,log_sum);
-    }
-
-    ap_fixed<1+-log_traits<T>::bypass_threshold+1+log_traits<T>::MaxPrecision/2+log_traits<T>::SquarerExtraBits, -log_traits<T>::bypass_threshold+1> zk_trunc = zk;
-    sum = zk-((zk_trunc*zk_trunc/2) >> prescale);
-    //sum = zk*2/(zk+2);
-#468 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_log.h"
-    LOG_TYPE log_out = Elog2 + log_sum + sum;
-
-
-
-
-
-
-    my_to_float(log_out, logz, prescale);
-
-
-
-    return logz;
-
-
-}
-
-static
-float logf(float x)
-{
-    return log_generic(x);
-}
-
-
-static
-float log(float x)
-{
-    return logf(x);
-}
-
-static
-float log10f(float x)
-{
-    return logf(x) * 0.434294481903251827651128918916605082294397005f;
-}
-
-static
-float log10(float x)
-{
-    return log10f(x);
-}
-
-/*
-template<int N>
-double log(double z)
-{
-
-#pragma HLS pipeline
-    double logz;
-    double first_apprx, curr_apprx, sq_apprx, apprx;
-    double sum, z1, z2;
-    int i;
-    double nume1, denom1;
-
-#ifdef DEBUG
-  std::cout << " --- Value of z received " << z << "\n";
-#endif
-
-  // Check special cases
-  fp_struct<double> zs(z);
-
-  if(zs.sign != 0 || (zs.exp == 0x7FF && zs.sig != 0)) { // isnan(z)
-  return ::hls::nan("");
-#ifndef STDSUBNORMALS
-  } else if(zs.exp == 0) { // zero or subnormal
-#ifdef DEBUG
-      std::cout << "Subnormal detected! " << z << "\n";
-#endif
-#else
-  } else if(zs.exp == 0 && zs.sig == 0) { // zero
-#endif
-      return fp_struct<T>::minus_infinity();
-  } else if(zs.exp == 0x7FF && zs.sig == 0) { // isinf(z)
-      return fp_struct<T>::infinity();
-  }
-
-  int exponent = zs.expv();
-
-  fp_struct<double> ns = zs;
-  if(zs.exp == 1022) {
-      z2 = 0; // For exponent == -1, don't do normalization, since it results in catastrophic cancellation where the result is close to zero.
-  } else {
-#ifdef STDSUBNORMALS
-      if(zs.exp == 0) {
-          // subnormal handling.
-          ap_uint<52> nsrev = ns.sig;
-          nsrev.reverse();
-          unsigned int zeros = __builtin_ctzl(nsrev);
-#ifdef DEBUG
-          std::cout << "is subnormal, sig = " << std::hex << ns.sig << " " << nsrev << std::dec << " zeros = " << zeros << "\n;";
-#endif
-          exponent -= zeros;
-          ns.sig = ns.sig << (zeros + 1); // add one so we shift off the leading one.
-      }
-#endif
-
-      // A lookup table for this?
-      z2 = 0.69314718055994530941723212145 * exponent;
-      ns.exp = 1023; // set the exponent to biased zero.
-  }
-  z1 = ns.to_ieee();
-#ifdef DEBUG
-  std::cout << "normalized " << z << " is " << z1 << " " << std::hex << reinterpret_cast<uint64_t&>(z1) << std::dec << "\n";
-#endif
-
-  denom1 = z1+1.0;  // z1 + 1
-  nume1 = z1-1.0;   // z1 - 1
-
-  first_apprx = nume1/denom1;
-  curr_apprx = first_apprx;
-  sum = curr_apprx;
-  sq_apprx = first_apprx * first_apprx;
-
-  double scale[32];
-  scale[0] = 1.0;
-  scale[1] = 1.0;
-  scale[2] = 1.0/3.0;
-  scale[3] = 1.0/5.0;
-  scale[4] = 1.0/7.0;
-  scale[5] = 1.0/9.0;
-  scale[6] = 1.0/11.0;
-  scale[7] = 1.0/13.0;
-  scale[8] = 1.0/15.0;
-  scale[9] = 1.0/17.0;
-  scale[10] = 1.0/19.0;
-  scale[11] = 1.0/21.0;
-  scale[12] = 1.0/23.0;
-  scale[13] = 1.0/25.0;
-  scale[14] = 1.0/27.0;
-  scale[15] = 1.0/29.0;
-  scale[16] = 1.0/31.0;
-  scale[17] = 1.0/33.0;
-  scale[18] = 1.0/35.0;
-  scale[19] = 1.0/37.0;
-  scale[20] = 1.0/39.0;
-  scale[21] = 1.0/41.0;
-  scale[22] = 1.0/43.0;
-  scale[23] = 1.0/45.0;
-  scale[24] = 1.0/47.0;
-  scale[25] = 1.0/49.0;
-  scale[26] = 1.0/51.0;
-  scale[27] = 1.0/53.0;
-  scale[28] = 1.0/55.0;
-  scale[29] = 1.0/57.0;
-  scale[30] = 1.0/59.0;
-  scale[31] = 1.0/61.0;
-
-  // Should probably be fixed point instead of floating point.
-  for(i=2;i<N;i++) {
-    curr_apprx = sq_apprx * curr_apprx;
-    apprx = curr_apprx * scale[i];
-    sum = sum + apprx;
-  }
-  sum = sum * 2.0;
-  logz = sum + z2;
-#ifdef DEBUG
-  std::cout << "sum = " << sum << " " << std::hex << reinterpret_cast<uint64_t&>(sum) << std::dec << "\n";
-  std::cout << "z2 = " << z2 << " " << std::hex << reinterpret_cast<uint64_t&>(z2) << std::dec << "\n";
-  std::cout << " --- Natural log of z is " << logz << "\n";
-#endif
-  return logz;
-}
-*/
-
-static
-double log(double x)
-{
-    return log_generic(x);
-}
-
-static
-double log10(double x)
-{
-    return log(x) * 0.434294481903251827651128918916605082294397005;
-}
-
-}
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#507 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h" 2
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012-2013 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-/**
- * @file hls_hotbm.h
- * An implementation of sin/cos, based on the HOTBM method published by
- * Detrey and deDinechin, "Floating-point Trigonometric Functions for FPGAs"
- */
-#50 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-// FIXME: should be in namespace hotbm
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm_tables.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2012 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#33 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm_tables.h" 2
-//namespace cos_basis {
-// Tables for f= 1 - cos((pi) / 4 * x)
-//  K0  estimated  -1  integer bits.
-static const ap_fixed< 29 , 0 > cos_K0 [ 128 ] = {
-"0", "0x1.3bdp-16", "0x4.ef48p-16", "0xb.1a6p-16", "0x1.3bcf8p-12", "0x1.ed71p-12", "0x2.c688p-12", "0x3.c7128p-12",
-"0x4.ef0ep-12", "0x6.3e78p-12", "0x7.b54dp-12", "0x9.53898p-12", "0xb.19298p-12", "0xd.06288p-12", "0xf.1a818p-12", "0x1.1563p-8",
-"0x1.3b92ep-8", "0x1.64376p-8", "0x1.8f501p-8", "0x1.bcdc98p-8", "0x1.ecdc78p-8", "0x2.1f4f4p-8", "0x2.54347p-8", "0x2.8b8b9p-8",
-"0x2.c55408p-8", "0x3.018d5p-8", "0x3.4036d8p-8", "0x3.815p-8", "0x3.c4d828p-8", "0x4.0acebp-8", "0x4.5332ep-8", "0x4.9e041p-8",
-"0x4.eb418p-8", "0x5.3aea7p-8", "0x5.8cfe28p-8", "0x5.e17bdp-8", "0x6.386298p-8", "0x6.91b1b8p-8", "0x6.ed684p-8", "0x7.4b856p-8",
-"0x7.ac082p-8", "0x8.0eefap-8", "0x8.743aep-8", "0x8.dbe8e8p-8", "0x9.45f8cp-8", "0x9.b2696p-8", "0xa.2139b8p-8", "0xa.9268b8p-8",
-"0xb.05f548p-8", "0xb.7bde5p-8", "0xb.f422a8p-8", "0xc.6ec12p-8", "0xc.ebb8ap-8", "0xd.6b07d8p-8", "0xd.ecada8p-8", "0xe.70a8b8p-8",
-"0xe.f6f7d8p-8", "0xf.7f99bp-8", "0x1.00a8cfp-4", "0x1.097d04p-4", "0x1.1276248p-4", "0x1.1b941a8p-4", "0x1.24d6cfp-4", "0x1.2e3e2bp-4",
-"0x1.37ca188p-4", "0x1.417a7e8p-4", "0x1.4b4f46p-4", "0x1.5548568p-4", "0x1.5f6597p-4", "0x1.69a6ef8p-4", "0x1.740c458p-4", "0x1.7e95808p-4",
-"0x1.8942858p-4", "0x1.94133bp-4", "0x1.9f0786p-4", "0x1.aa1f4bp-4", "0x1.b55a6f8p-4", "0x1.c0b8d7p-4", "0x1.cc3a658p-4", "0x1.d7deff8p-4",
-"0x1.e3a687p-4", "0x1.ef90ep-4", "0x1.fb9dec8p-4", "0x2.07cd8fp-4", "0x2.141fa98p-4", "0x2.20941d8p-4", "0x2.2d2accp-4", "0x2.39e3968p-4",
-"0x2.46be5d8p-4", "0x2.53bb008p-4", "0x2.60d9608p-4", "0x2.6e195c8p-4", "0x2.7b7ad4p-4", "0x2.88fda58p-4", "0x2.96a1b1p-4", "0x2.a466d38p-4",
-"0x2.b24ceb8p-4", "0x2.c053d68p-4", "0x2.ce7b728p-4", "0x2.dcc39cp-4", "0x2.eb2c2f8p-4", "0x2.f9b50a8p-4", "0x3.085e08p-4", "0x3.172705p-4",
-"0x3.260fdcp-4", "0x3.3518688p-4", "0x3.4440858p-4", "0x3.53880d8p-4", "0x3.62eedbp-4", "0x3.7274c8p-4", "0x3.8219aep-4", "0x3.91dd668p-4",
-"0x3.a1bfca8p-4", "0x3.b1c0b28p-4", "0x3.c1dff8p-4", "0x3.d21d728p-4", "0x3.e278fap-4", "0x3.f2f266p-4", "0x4.03898ep-4", "0x4.143e498p-4",
-"0x4.25106e8p-4", "0x4.35ffd4p-4", "0x4.470c508p-4", "0x4.5835b9p-4", "0x4.697be4p-4", "0x4.7adea6p-4", "0x4.8c5dd58p-4", "0x4.9df946p-4",
-};
-//  K1  estimated  0  integer bits.
-static const ap_fixed< 23 , 1 > cos_K1 [ 128 ] = {
-"0x4.p-24", "0x1.3bdcp-8", "0x2.77a8p-8", "0x3.b36cp-8", "0x4.ef38p-8", "0x6.2ae4p-8", "0x7.668cp-8", "0x8.a21cp-8",
-"0x9.dda8p-8", "0xb.190cp-8", "0xc.5454p-8", "0xd.8f7cp-8", "0xe.ca84p-8", "0x1.00568p-4", "0x1.1402cp-4", "0x1.27acp-4",
-"0x1.3b524p-4", "0x1.4ef54p-4", "0x1.62964p-4", "0x1.76328p-4", "0x1.89cbcp-4", "0x1.9d614p-4", "0x1.b0f28p-4", "0x1.c47f4p-4",
-"0x1.d8084p-4", "0x1.eb8ccp-4", "0x1.ff0c4p-4", "0x2.1286cp-4", "0x2.25fc8p-4", "0x2.396c8p-4", "0x2.4cd74p-4", "0x2.603cp-4",
-"0x2.739bp-4", "0x2.86f4cp-4", "0x2.9a47p-4", "0x2.ad934p-4", "0x2.c0d9cp-4", "0x2.d4184p-4", "0x2.e751p-4", "0x2.fa81p-4",
-"0x3.0dab4p-4", "0x3.20cdp-4", "0x3.33e74p-4", "0x3.46fap-4", "0x3.5a048p-4", "0x3.6d064p-4", "0x3.7fffcp-4", "0x3.92f0cp-4",
-"0x3.a5d8cp-4", "0x3.b8b78p-4", "0x3.cb8d4p-4", "0x3.de5acp-4", "0x3.f11ccp-4", "0x4.03d7p-4", "0x4.1685cp-4", "0x4.292cp-4",
-"0x4.3bc64p-4", "0x4.4e56cp-4", "0x4.60ddp-4", "0x4.73588p-4", "0x4.85c88p-4", "0x4.982dp-4", "0x4.aa86cp-4", "0x4.bcd5cp-4",
-"0x4.cf174p-4", "0x4.e14ecp-4", "0x4.f3794p-4", "0x5.05974p-4", "0x5.17aap-4", "0x5.29aecp-4", "0x5.3ba84p-4", "0x5.4d938p-4",
-"0x5.5f728p-4", "0x5.7143cp-4", "0x5.83074p-4", "0x5.94bep-4", "0x5.a6664p-4", "0x5.b800cp-4", "0x5.c98ep-4", "0x5.db0bcp-4",
-"0x5.ec7cp-4", "0x5.fddd4p-4", "0x6.0f3p-4", "0x6.20738p-4", "0x6.31a7cp-4", "0x6.42cccp-4", "0x6.53e2cp-4", "0x6.64e8cp-4",
-"0x6.75de4p-4", "0x6.86c54p-4", "0x6.979bp-4", "0x6.a861p-4", "0x6.b9164p-4", "0x6.c9bcp-4", "0x6.da4f8p-4", "0x6.ead2cp-4",
-"0x6.fb44cp-4", "0x7.0ba68p-4", "0x7.1bf5cp-4", "0x7.2c338p-4", "0x7.3c608p-4", "0x7.4c7acp-4", "0x7.5c84p-4", "0x7.6c798p-4",
-"0x7.7c5d4p-4", "0x7.8c2ecp-4", "0x7.9beep-4", "0x7.ab9a4p-4", "0x7.bb338p-4", "0x7.cab94p-4", "0x7.da2c8p-4", "0x7.e98bcp-4",
-"0x7.f8d7cp-4", "0x8.0810cp-4", "0x8.1734cp-4", "0x8.26458p-4", "0x8.3541cp-4", "0x8.442a4p-4", "0x8.52fe4p-4", "0x8.61bd4p-4",
-"0x8.70684p-4", "0x8.7efe4p-4", "0x8.8d7e4p-4", "0x8.9beap-4", "0x8.aa40cp-4", "0x8.b882cp-4", "0x8.c6adp-4", "0x8.d4c34p-4",
-};
-//  K2  estimated  -1  integer bits.
-static const ap_fixed< 15 , 0 > cos_K2 [ 128 ] = {
-"0x4.ef2p-4", "0x4.efp-4", "0x4.ef2p-4", "0x4.efp-4", "0x4.eeap-4", "0x4.eeap-4", "0x4.ee4p-4", "0x4.ee2p-4",
-"0x4.ed4p-4", "0x4.ecep-4", "0x4.ec8p-4", "0x4.ec2p-4", "0x4.ebap-4", "0x4.ebp-4", "0x4.ea4p-4", "0x4.e98p-4",
-"0x4.e8ep-4", "0x4.e84p-4", "0x4.e7p-4", "0x4.e64p-4", "0x4.e54p-4", "0x4.e42p-4", "0x4.e34p-4", "0x4.e24p-4",
-"0x4.e1p-4", "0x4.dfcp-4", "0x4.de8p-4", "0x4.dd6p-4", "0x4.dbep-4", "0x4.da8p-4", "0x4.d92p-4", "0x4.d7cp-4",
-"0x4.d66p-4", "0x4.d48p-4", "0x4.d32p-4", "0x4.d1ap-4", "0x4.cfap-4", "0x4.ce2p-4", "0x4.ccp-4", "0x4.caap-4",
-"0x4.c86p-4", "0x4.c68p-4", "0x4.c4ap-4", "0x4.c28p-4", "0x4.c04p-4", "0x4.be4p-4", "0x4.bc2p-4", "0x4.b9ep-4",
-"0x4.b7cp-4", "0x4.b5ap-4", "0x4.b36p-4", "0x4.b0ap-4", "0x4.aeap-4", "0x4.abcp-4", "0x4.a98p-4", "0x4.a68p-4",
-"0x4.a44p-4", "0x4.a1ap-4", "0x4.9ecp-4", "0x4.9bep-4", "0x4.994p-4", "0x4.96ap-4", "0x4.93cp-4", "0x4.908p-4",
-"0x4.8ep-4", "0x4.8a8p-4", "0x4.878p-4", "0x4.84ap-4", "0x4.812p-4", "0x4.7e4p-4", "0x4.7aap-4", "0x4.77ap-4",
-"0x4.744p-4", "0x4.70ep-4", "0x4.6dcp-4", "0x4.6a2p-4", "0x4.66cp-4", "0x4.636p-4", "0x4.5f8p-4", "0x4.5c2p-4",
-"0x4.586p-4", "0x4.54ap-4", "0x4.50cp-4", "0x4.4dp-4", "0x4.494p-4", "0x4.456p-4", "0x4.416p-4", "0x4.3d6p-4",
-"0x4.39cp-4", "0x4.356p-4", "0x4.318p-4", "0x4.2d6p-4", "0x4.296p-4", "0x4.24ep-4", "0x4.20ep-4", "0x4.1cap-4",
-"0x4.188p-4", "0x4.13cp-4", "0x4.0f8p-4", "0x4.0b4p-4", "0x4.06ap-4", "0x4.022p-4", "0x3.fd4p-4", "0x3.f9p-4",
-"0x3.f4ap-4", "0x3.fp-4", "0x3.eb2p-4", "0x3.e66p-4", "0x3.e1ap-4", "0x3.ddp-4", "0x3.d7ep-4", "0x3.d32p-4",
-"0x3.ce4p-4", "0x3.c92p-4", "0x3.c46p-4", "0x3.bf2p-4", "0x3.ba4p-4", "0x3.b5p-4", "0x3.afep-4", "0x3.aacp-4",
-"0x3.a56p-4", "0x3.ap-4", "0x3.9b2p-4", "0x3.95ep-4", "0x3.904p-4", "0x3.8a8p-4", "0x3.85cp-4", "0x3.802p-4",
-};
-//};
-
-//namespace sin_basis {
-// Tables for f= sin((pi) / 4 * x) / x
-//  K0  estimated  0  integer bits.
-static const ap_fixed< 30 , 1 > sin_K0 [ 128 ] = {
-"0xc.90fdaap-4", "0xc.90f87fp-4", "0xc.90e8fe8p-4", "0xc.90cf28p-4", "0xc.90aafcp-4", "0xc.907c7a8p-4", "0xc.9043a4p-4", "0xc.9000788p-4",
-"0xc.8fb2f88p-4", "0xc.8f5b25p-4", "0xc.8ef8fd8p-4", "0xc.8e8c838p-4", "0xc.8e15b7p-4", "0xc.8d94998p-4", "0xc.8d092a8p-4", "0xc.8c736cp-4",
-"0xc.8bd35ep-4", "0xc.8b2902p-4", "0xc.8a74588p-4", "0xc.89b563p-4", "0xc.88ec228p-4", "0xc.881898p-4", "0xc.873ac5p-4", "0xc.8652aa8p-4",
-"0xc.8560498p-4", "0xc.8463a48p-4", "0xc.835cbcp-4", "0xc.824b918p-4", "0xc.813027p-4", "0xc.800a7e8p-4", "0xc.7eda988p-4", "0xc.7da078p-4",
-"0xc.7c5c1ep-4", "0xc.7b0d8dp-4", "0xc.79b4c68p-4", "0xc.7851cc8p-4", "0xc.76e4a1p-4", "0xc.756d468p-4", "0xc.73ebbfp-4", "0xc.72600c8p-4",
-"0xc.70ca318p-4", "0xc.6f2a3p-4", "0xc.6d800bp-4", "0xc.6bcbc48p-4", "0xc.6a0d5fp-4", "0xc.6844dd8p-4", "0xc.6672428p-4", "0xc.64959p-4",
-"0xc.62aecap-4", "0xc.60bdf2p-4", "0xc.5ec30cp-4", "0xc.5cbe1a8p-4", "0xc.5aaf2p-4", "0xc.58962p-4", "0xc.56731ep-4", "0xc.54461c8p-4",
-"0xc.520f1e8p-4", "0xc.4fce28p-4", "0xc.4d833c8p-4", "0xc.4b2e5e8p-4", "0xc.48cf918p-4", "0xc.4666dap-4", "0xc.43f43a8p-4", "0xc.4177b7p-4",
-"0xc.3ef1538p-4", "0xc.3c6113p-4", "0xc.39c6fap-4", "0xc.37230cp-4", "0xc.34754dp-4", "0xc.31bdc1p-4", "0xc.2efc6b8p-4", "0xc.2c31518p-4",
-"0xc.295c76p-4", "0xc.267dde8p-4", "0xc.23958ep-4", "0xc.20a389p-4", "0xc.1da7d48p-4", "0xc.1aa275p-4", "0xc.17936ep-4", "0xc.147ac48p-4",
-"0xc.11587dp-4", "0xc.0e2c9cp-4", "0xc.0af7268p-4", "0xc.07b8218p-4", "0xc.046f91p-4", "0xc.011d7ap-4", "0xb.fdc1e18p-4", "0xb.fa5ccdp-4",
-"0xb.f6ee41p-4", "0xb.f376428p-4", "0xb.eff4d68p-4", "0xb.ec6a028p-4", "0xb.e8d5cbp-4", "0xb.e538368p-4", "0xb.e191498p-4", "0xb.dde1098p-4",
-"0xb.da277cp-4", "0xb.d664a6p-4", "0xb.d2988ep-4", "0xb.cec3388p-4", "0xb.cae4acp-4", "0xb.c6fceep-4", "0xb.c30c04p-4", "0xb.bf11f38p-4",
-"0xb.bb0ec3p-4", "0xb.b70278p-4", "0xb.b2ed19p-4", "0xb.aeceabp-4", "0xb.aaa735p-4", "0xb.a676bc8p-4", "0xb.a23d48p-4", "0xb.9dfaddp-4",
-"0xb.99af83p-4", "0xb.955b3fp-4", "0xb.90fe188p-4", "0xb.8c9815p-4", "0xb.88293b8p-4", "0xb.83b1928p-4", "0xb.7f312p-4", "0xb.7aa7ebp-4",
-"0xb.7615fap-4", "0xb.717b54p-4", "0xb.6cd7ffp-4", "0xb.682c03p-4", "0xb.637766p-4", "0xb.5eba2e8p-4", "0xb.59f4648p-4", "0xb.55260e8p-4",
-};
-//  K1  estimated  -2  integer bits.
-static const ap_fixed< 21 , -1 > sin_K1 [ 128 ] = {
-"0x8.p-24", "-0x5.2a8p-12", "-0xa.56p-12", "-0xf.81p-12", "-0x1.4acp-8", "-0x1.9d64p-8", "-0x1.f014p-8", "-0x2.42b4p-8",
-"-0x2.955p-8", "-0x2.e7f4p-8", "-0x3.3a84p-8", "-0x3.8d18p-8", "-0x3.dfa8p-8", "-0x4.3238p-8", "-0x4.84b4p-8", "-0x4.d734p-8",
-"-0x5.29a8p-8", "-0x5.7c14p-8", "-0x5.ce74p-8", "-0x6.20dp-8", "-0x6.7328p-8", "-0x6.c574p-8", "-0x7.17bcp-8", "-0x7.69fp-8",
-"-0x7.bc18p-8", "-0x8.0e4p-8", "-0x8.6054p-8", "-0x8.b254p-8", "-0x9.044cp-8", "-0x9.564p-8", "-0x9.a814p-8", "-0x9.f9e8p-8",
-"-0xa.4ba8p-8", "-0xa.9d64p-8", "-0xa.ef08p-8", "-0xb.4098p-8", "-0xb.9218p-8", "-0xb.e39p-8", "-0xc.34f4p-8", "-0xc.8644p-8",
-"-0xc.d78p-8", "-0xd.28a4p-8", "-0xd.79bcp-8", "-0xd.cab8p-8", "-0xe.1bap-8", "-0xe.6c7cp-8", "-0xe.bd4p-8", "-0xf.0de4p-8",
-"-0xf.5e7cp-8", "-0xf.aef4p-8", "-0xf.ff64p-8", "-0x1.04fb8p-4", "-0x1.09fecp-4", "-0x1.0f00cp-4", "-0x1.1401cp-4", "-0x1.19008p-4",
-"-0x1.1dfdp-4", "-0x1.22f88p-4", "-0x1.27f38p-4", "-0x1.2ceb8p-4", "-0x1.31e14p-4", "-0x1.36d6cp-4", "-0x1.3bc94p-4", "-0x1.40ba4p-4",
-"-0x1.45a9cp-4", "-0x1.4a968p-4", "-0x1.4f82p-4", "-0x1.546b8p-4", "-0x1.59538p-4", "-0x1.5e39p-4", "-0x1.631c4p-4", "-0x1.67fep-4",
-"-0x1.6cdccp-4", "-0x1.71bb4p-4", "-0x1.7696p-4", "-0x1.7b6e4p-4", "-0x1.8045p-4", "-0x1.851bp-4", "-0x1.89ed4p-4", "-0x1.8ebd8p-4",
-"-0x1.938bp-4", "-0x1.9856p-4", "-0x1.9d1fp-4", "-0x1.a1e6cp-4", "-0x1.a6abp-4", "-0x1.ab6c4p-4", "-0x1.b02b8p-4", "-0x1.b4e9p-4",
-"-0x1.b9a38p-4", "-0x1.be5cp-4", "-0x1.c310cp-4", "-0x1.c7c3cp-4", "-0x1.cc734p-4", "-0x1.d1214p-4", "-0x1.d5cc4p-4", "-0x1.da748p-4",
-"-0x1.df19cp-4", "-0x1.e3bc4p-4", "-0x1.e85c4p-4", "-0x1.ecf8cp-4", "-0x1.f1938p-4", "-0x1.f62acp-4", "-0x1.fabfcp-4", "-0x1.ff51p-4",
-"-0x2.03df8p-4", "-0x2.086bp-4", "-0x2.0cf48p-4", "-0x2.117ap-4", "-0x2.15fdp-4", "-0x2.1a7c4p-4", "-0x2.1ef9p-4", "-0x2.2371cp-4",
-"-0x2.27e84p-4", "-0x2.2c5bp-4", "-0x2.30cb4p-4", "-0x2.3537cp-4", "-0x2.39a14p-4", "-0x2.3e088p-4", "-0x2.426b4p-4", "-0x2.46cacp-4",
-"-0x2.4b268p-4", "-0x2.4f7fcp-4", "-0x2.53d5p-4", "-0x2.58274p-4", "-0x2.5c764p-4", "-0x2.60c0cp-4", "-0x2.6509p-4", "-0x2.694d4p-4",
-};
-//  K2  estimated  -3  integer bits.
-static const ap_fixed< 13 , -2 > sin_K2 [ 128 ] = {
-"-0x1.4bp-4", "-0x1.4aep-4", "-0x1.4aap-4", "-0x1.4a8p-4", "-0x1.4a6p-4", "-0x1.4aap-4", "-0x1.4a4p-4", "-0x1.4a6p-4",
-"-0x1.4a6p-4", "-0x1.4a4p-4", "-0x1.4a6p-4", "-0x1.4a6p-4", "-0x1.4a2p-4", "-0x1.4ap-4", "-0x1.4ap-4", "-0x1.49ep-4",
-"-0x1.49cp-4", "-0x1.49cp-4", "-0x1.49cp-4", "-0x1.49ap-4", "-0x1.496p-4", "-0x1.492p-4", "-0x1.48cp-4", "-0x1.48cp-4",
-"-0x1.488p-4", "-0x1.482p-4", "-0x1.48p-4", "-0x1.48p-4", "-0x1.47cp-4", "-0x1.478p-4", "-0x1.478p-4", "-0x1.474p-4",
-"-0x1.47p-4", "-0x1.468p-4", "-0x1.464p-4", "-0x1.462p-4", "-0x1.45ep-4", "-0x1.456p-4", "-0x1.45p-4", "-0x1.44ap-4",
-"-0x1.446p-4", "-0x1.442p-4", "-0x1.43cp-4", "-0x1.43ap-4", "-0x1.436p-4", "-0x1.42ep-4", "-0x1.42ap-4", "-0x1.426p-4",
-"-0x1.422p-4", "-0x1.41ep-4", "-0x1.414p-4", "-0x1.40ep-4", "-0x1.40ap-4", "-0x1.402p-4", "-0x1.3f8p-4", "-0x1.3f4p-4",
-"-0x1.3f2p-4", "-0x1.3ecp-4", "-0x1.3dcp-4", "-0x1.3d8p-4", "-0x1.3d6p-4", "-0x1.3c8p-4", "-0x1.3c4p-4", "-0x1.3bcp-4",
-"-0x1.3b4p-4", "-0x1.3bp-4", "-0x1.3a8p-4", "-0x1.3ap-4", "-0x1.394p-4", "-0x1.38ep-4", "-0x1.386p-4", "-0x1.37ep-4",
-"-0x1.37ap-4", "-0x1.368p-4", "-0x1.364p-4", "-0x1.36p-4", "-0x1.358p-4", "-0x1.344p-4", "-0x1.33cp-4", "-0x1.332p-4",
-"-0x1.32cp-4", "-0x1.326p-4", "-0x1.31ep-4", "-0x1.30cp-4", "-0x1.304p-4", "-0x1.3p-4", "-0x1.2f6p-4", "-0x1.2e8p-4",
-"-0x1.2ep-4", "-0x1.2dp-4", "-0x1.2ccp-4", "-0x1.2cp-4", "-0x1.2b8p-4", "-0x1.2aap-4", "-0x1.29ep-4", "-0x1.292p-4",
-"-0x1.28ap-4", "-0x1.27ep-4", "-0x1.274p-4", "-0x1.26cp-4", "-0x1.25cp-4", "-0x1.254p-4", "-0x1.244p-4", "-0x1.23ap-4",
-"-0x1.23p-4", "-0x1.226p-4", "-0x1.214p-4", "-0x1.208p-4", "-0x1.1fap-4", "-0x1.1f2p-4", "-0x1.1e4p-4", "-0x1.1dap-4",
-"-0x1.1cep-4", "-0x1.1c2p-4", "-0x1.1b4p-4", "-0x1.1a8p-4", "-0x1.19cp-4", "-0x1.186p-4", "-0x1.17ap-4", "-0x1.16ep-4",
-"-0x1.166p-4", "-0x1.156p-4", "-0x1.148p-4", "-0x1.13cp-4", "-0x1.12cp-4", "-0x1.122p-4", "-0x1.11p-4", "-0x1.104p-4",
-};
-//};
-
-///////////////////////////////
-
-static const ap_ufixed< 30 , 1 > sin_cos_K0 [ 256 ] = {
-    0x1.p0 ,
-    0xf.ffec43p-4 ,
-    0xf.ffb10b8p-4 ,
-    0xf.ff4e5ap-4 ,
-    0xf.fec4308p-4 ,
-    0xf.fe128fp-4 ,
-    0xf.fd3978p-4 ,
-    0xf.fc38ed8p-4 ,
-    0xf.fb10f2p-4 ,
-    0xf.f9c188p-4 ,
-    0xf.f84ab3p-4 ,
-    0xf.f6ac768p-4 ,
-    0xf.f4e6d68p-4 ,
-    0xf.f2f9d78p-4 ,
-    0xf.f0e57e8p-4 ,
-    0xf.eea9dp-4 ,
-    0xf.ec46d2p-4 ,
-    0xf.e9bc8ap-4 ,
-    0xf.e70affp-4 ,
-    0xf.e432368p-4 ,
-    0xf.e132388p-4 ,
-    0xf.de0b0cp-4 ,
-    0xf.dabcb9p-4 ,
-    0xf.d74747p-4 ,
-    0xf.d3aabf8p-4 ,
-    0xf.cfe72bp-4 ,
-    0xf.cbfc928p-4 ,
-    0xf.c7ebp-4 ,
-    0xf.c3b27d8p-4 ,
-    0xf.bf5315p-4 ,
-    0xf.baccd2p-4 ,
-    0xf.b61fbfp-4 ,
-    0xf.b14be8p-4 ,
-    0xf.ac5159p-4 ,
-    0xf.a7301d8p-4 ,
-    0xf.a1e843p-4 ,
-    0xf.9c79d68p-4 ,
-    0xf.96e4e48p-4 ,
-    0xf.91297cp-4 ,
-    0xf.8b47aap-4 ,
-    0xf.853f7ep-4 ,
-    0xf.7f1106p-4 ,
-    0xf.78bc52p-4 ,
-    0xf.7241718p-4 ,
-    0xf.6ba074p-4 ,
-    0xf.64d96ap-4 ,
-    0xf.5dec648p-4 ,
-    0xf.56d9748p-4 ,
-    0xf.4fa0ab8p-4 ,
-    0xf.48421bp-4 ,
-    0xf.40bdd58p-4 ,
-    0xf.3913eep-4 ,
-    0xf.314476p-4 ,
-    0xf.294f828p-4 ,
-    0xf.2135258p-4 ,
-    0xf.18f5748p-4 ,
-    0xf.1090828p-4 ,
-    0xf.080665p-4 ,
-    0xe.ff5731p-4 ,
-    0xe.f682fcp-4 ,
-    0xe.ed89db8p-4 ,
-    0xe.e46be58p-4 ,
-    0xe.db2931p-4 ,
-    0xe.d1c1d5p-4 ,
-    0xe.c835e78p-4 ,
-    0xe.be85818p-4 ,
-    0xe.b4b0bap-4 ,
-    0xe.aab7a98p-4 ,
-    0xe.a09a69p-4 ,
-    0xe.9659108p-4 ,
-    0xe.8bf3ba8p-4 ,
-    0xe.816a7f8p-4 ,
-    0xe.76bd7a8p-4 ,
-    0xe.6becc5p-4 ,
-    0xe.60f87ap-4 ,
-    0xe.55e0b5p-4 ,
-    0xe.4aa5908p-4 ,
-    0xe.3f4729p-4 ,
-    0xe.33c59a8p-4 ,
-    0xe.2821008p-4 ,
-    0xe.1c5979p-4 ,
-    0xe.106f2p-4 ,
-    0xe.0462138p-4 ,
-    0xd.f83271p-4 ,
-    0xd.ebe0568p-4 ,
-    0xd.df6be28p-4 ,
-    0xd.d2d534p-4 ,
-    0xd.c61c698p-4 ,
-    0xd.b941a28p-4 ,
-    0xd.ac44ff8p-4 ,
-    0xd.9f269f8p-4 ,
-    0xd.91e6a38p-4 ,
-    0xd.84852cp-4 ,
-    0xd.77025a8p-4 ,
-    0xd.695e4fp-4 ,
-    0xd.5b992c8p-4 ,
-    0xd.4db3148p-4 ,
-    0xd.3fac298p-4 ,
-    0xd.31848d8p-4 ,
-    0xd.233c64p-4 ,
-    0xd.14d3d08p-4 ,
-    0xd.064af58p-4 ,
-    0xc.f7a1f8p-4 ,
-    0xc.e8d8fbp-4 ,
-    0xc.d9f024p-4 ,
-    0xc.cae7978p-4 ,
-    0xc.bbbf7a8p-4 ,
-    0xc.ac77f28p-4 ,
-    0xc.9d1125p-4 ,
-    0xc.8d8b38p-4 ,
-    0xc.7de652p-4 ,
-    0xc.6e22998p-4 ,
-    0xc.5e40358p-4 ,
-    0xc.4e3f4d8p-4 ,
-    0xc.3e2008p-4 ,
-    0xc.2de28d8p-4 ,
-    0xc.1d8706p-4 ,
-    0xc.0d0d9ap-4 ,
-    0xb.fc7672p-4 ,
-    0xb.ebc1b68p-4 ,
-    0xb.daef918p-4 ,
-    0xb.ca002cp-4 ,
-    0xb.b8f3af8p-4 ,
-    0xb.a7ca47p-4 ,
-    0xb.96841cp-4 ,
-    0xb.85215ap-4 ,
-    0xb.73a22a8p-4 ,
-    0xb.6206bap-4 ,
-///
-    0xc.90fdaap-4 ,
-    0xc.90f87fp-4 ,
-    0xc.90e8fe8p-4 ,
-    0xc.90cf28p-4 ,
-    0xc.90aafcp-4 ,
-    0xc.907c7a8p-4 ,
-    0xc.9043a4p-4 ,
-    0xc.9000788p-4 ,
-    0xc.8fb2f88p-4 ,
-    0xc.8f5b25p-4 ,
-    0xc.8ef8fd8p-4 ,
-    0xc.8e8c838p-4 ,
-    0xc.8e15b7p-4 ,
-    0xc.8d94998p-4 ,
-    0xc.8d092a8p-4 ,
-    0xc.8c736cp-4 ,
-    0xc.8bd35ep-4 ,
-    0xc.8b2902p-4 ,
-    0xc.8a74588p-4 ,
-    0xc.89b563p-4 ,
-    0xc.88ec228p-4 ,
-    0xc.881898p-4 ,
-    0xc.873ac5p-4 ,
-    0xc.8652aa8p-4 ,
-    0xc.8560498p-4 ,
-    0xc.8463a48p-4 ,
-    0xc.835cbcp-4 ,
-    0xc.824b918p-4 ,
-    0xc.813027p-4 ,
-    0xc.800a7e8p-4 ,
-    0xc.7eda988p-4 ,
-    0xc.7da078p-4 ,
-    0xc.7c5c1ep-4 ,
-    0xc.7b0d8dp-4 ,
-    0xc.79b4c68p-4 ,
-    0xc.7851cc8p-4 ,
-    0xc.76e4a1p-4 ,
-    0xc.756d468p-4 ,
-    0xc.73ebbfp-4 ,
-    0xc.72600c8p-4 ,
-    0xc.70ca318p-4 ,
-    0xc.6f2a3p-4 ,
-    0xc.6d800bp-4 ,
-    0xc.6bcbc48p-4 ,
-    0xc.6a0d5fp-4 ,
-    0xc.6844dd8p-4 ,
-    0xc.6672428p-4 ,
-    0xc.64959p-4 ,
-    0xc.62aecap-4 ,
-    0xc.60bdf2p-4 ,
-    0xc.5ec30cp-4 ,
-    0xc.5cbe1a8p-4 ,
-    0xc.5aaf2p-4 ,
-    0xc.58962p-4 ,
-    0xc.56731ep-4 ,
-    0xc.54461c8p-4 ,
-    0xc.520f1e8p-4 ,
-    0xc.4fce28p-4 ,
-    0xc.4d833c8p-4 ,
-    0xc.4b2e5e8p-4 ,
-    0xc.48cf918p-4 ,
-    0xc.4666dap-4 ,
-    0xc.43f43a8p-4 ,
-    0xc.4177b7p-4 ,
-    0xc.3ef1538p-4 ,
-    0xc.3c6113p-4 ,
-    0xc.39c6fap-4 ,
-    0xc.37230cp-4 ,
-    0xc.34754dp-4 ,
-    0xc.31bdc1p-4 ,
-    0xc.2efc6b8p-4 ,
-    0xc.2c31518p-4 ,
-    0xc.295c76p-4 ,
-    0xc.267dde8p-4 ,
-    0xc.23958ep-4 ,
-    0xc.20a389p-4 ,
-    0xc.1da7d48p-4 ,
-    0xc.1aa275p-4 ,
-    0xc.17936ep-4 ,
-    0xc.147ac48p-4 ,
-    0xc.11587dp-4 ,
-    0xc.0e2c9cp-4 ,
-    0xc.0af7268p-4 ,
-    0xc.07b8218p-4 ,
-    0xc.046f91p-4 ,
-    0xc.011d7ap-4 ,
-    0xb.fdc1e18p-4 ,
-    0xb.fa5ccdp-4 ,
-    0xb.f6ee41p-4 ,
-    0xb.f376428p-4 ,
-    0xb.eff4d68p-4 ,
-    0xb.ec6a028p-4 ,
-    0xb.e8d5cbp-4 ,
-    0xb.e538368p-4 ,
-    0xb.e191498p-4 ,
-    0xb.dde1098p-4 ,
-    0xb.da277cp-4 ,
-    0xb.d664a6p-4 ,
-    0xb.d2988ep-4 ,
-    0xb.cec3388p-4 ,
-    0xb.cae4acp-4 ,
-    0xb.c6fceep-4 ,
-    0xb.c30c04p-4 ,
-    0xb.bf11f38p-4 ,
-    0xb.bb0ec3p-4 ,
-    0xb.b70278p-4 ,
-    0xb.b2ed19p-4 ,
-    0xb.aeceabp-4 ,
-    0xb.aaa735p-4 ,
-    0xb.a676bc8p-4 ,
-    0xb.a23d48p-4 ,
-    0xb.9dfaddp-4 ,
-    0xb.99af83p-4 ,
-    0xb.955b3fp-4 ,
-    0xb.90fe188p-4 ,
-    0xb.8c9815p-4 ,
-    0xb.88293b8p-4 ,
-    0xb.83b1928p-4 ,
-    0xb.7f312p-4 ,
-    0xb.7aa7ebp-4 ,
-    0xb.7615fap-4 ,
-    0xb.717b54p-4 ,
-    0xb.6cd7ffp-4 ,
-    0xb.682c03p-4 ,
-    0xb.637766p-4 ,
-    0xb.5eba2e8p-4 ,
-    0xb.59f4648p-4 ,
-    0xb.55260e8p-4 ,
-};
-//  K1  estimated  0  integer bits.
-static const ap_fixed< 23 , 1 > sin_cos_K1 [ 256 ] = {
-    -0x4.p-24 ,
-    -0x1.3bdcp-8 ,
-    -0x2.77a8p-8 ,
-    -0x3.b36cp-8 ,
-    -0x4.ef38p-8 ,
-    -0x6.2ae4p-8 ,
-    -0x7.668cp-8 ,
-    -0x8.a21cp-8 ,
-    -0x9.dda8p-8 ,
-    -0xb.190cp-8 ,
-    -0xc.5454p-8 ,
-    -0xd.8f7cp-8 ,
-    -0xe.ca84p-8 ,
-    -0x1.00568p-4 ,
-    -0x1.1402cp-4 ,
-    -0x1.27acp-4 ,
-    -0x1.3b524p-4 ,
-    -0x1.4ef54p-4 ,
-    -0x1.62964p-4 ,
-    -0x1.76328p-4 ,
-    -0x1.89cbcp-4 ,
-    -0x1.9d614p-4 ,
-    -0x1.b0f28p-4 ,
-    -0x1.c47f4p-4 ,
-    -0x1.d8084p-4 ,
-    -0x1.eb8ccp-4 ,
-    -0x1.ff0c4p-4 ,
-    -0x2.1286cp-4 ,
-    -0x2.25fc8p-4 ,
-    -0x2.396c8p-4 ,
-    -0x2.4cd74p-4 ,
-    -0x2.603cp-4 ,
-    -0x2.739bp-4 ,
-    -0x2.86f4cp-4 ,
-    -0x2.9a47p-4 ,
-    -0x2.ad934p-4 ,
-    -0x2.c0d9cp-4 ,
-    -0x2.d4184p-4 ,
-    -0x2.e751p-4 ,
-    -0x2.fa81p-4 ,
-    -0x3.0dab4p-4 ,
-    -0x3.20cdp-4 ,
-    -0x3.33e74p-4 ,
-    -0x3.46fap-4 ,
-    -0x3.5a048p-4 ,
-    -0x3.6d064p-4 ,
-    -0x3.7fffcp-4 ,
-    -0x3.92f0cp-4 ,
-    -0x3.a5d8cp-4 ,
-    -0x3.b8b78p-4 ,
-    -0x3.cb8d4p-4 ,
-    -0x3.de5acp-4 ,
-    -0x3.f11ccp-4 ,
-    -0x4.03d7p-4 ,
-    -0x4.1685cp-4 ,
-    -0x4.292cp-4 ,
-    -0x4.3bc64p-4 ,
-    -0x4.4e56cp-4 ,
-    -0x4.60ddp-4 ,
-    -0x4.73588p-4 ,
-    -0x4.85c88p-4 ,
-    -0x4.982dp-4 ,
-    -0x4.aa86cp-4 ,
-    -0x4.bcd5cp-4 ,
-    -0x4.cf174p-4 ,
-    -0x4.e14ecp-4 ,
-    -0x4.f3794p-4 ,
-    -0x5.05974p-4 ,
-    -0x5.17aap-4 ,
-    -0x5.29aecp-4 ,
-    -0x5.3ba84p-4 ,
-    -0x5.4d938p-4 ,
-    -0x5.5f728p-4 ,
-    -0x5.7143cp-4 ,
-    -0x5.83074p-4 ,
-    -0x5.94bep-4 ,
-    -0x5.a6664p-4 ,
-    -0x5.b800cp-4 ,
-    -0x5.c98ep-4 ,
-    -0x5.db0bcp-4 ,
-    -0x5.ec7cp-4 ,
-    -0x5.fddd4p-4 ,
-    -0x6.0f3p-4 ,
-    -0x6.20738p-4 ,
-    -0x6.31a7cp-4 ,
-    -0x6.42cccp-4 ,
-    -0x6.53e2cp-4 ,
-    -0x6.64e8cp-4 ,
-    -0x6.75de4p-4 ,
-    -0x6.86c54p-4 ,
-    -0x6.979bp-4 ,
-    -0x6.a861p-4 ,
-    -0x6.b9164p-4 ,
-    -0x6.c9bcp-4 ,
-    -0x6.da4f8p-4 ,
-    -0x6.ead2cp-4 ,
-    -0x6.fb44cp-4 ,
-    -0x7.0ba68p-4 ,
-    -0x7.1bf5cp-4 ,
-    -0x7.2c338p-4 ,
-    -0x7.3c608p-4 ,
-    -0x7.4c7acp-4 ,
-    -0x7.5c84p-4 ,
-    -0x7.6c798p-4 ,
-    -0x7.7c5d4p-4 ,
-    -0x7.8c2ecp-4 ,
-    -0x7.9beep-4 ,
-    -0x7.ab9a4p-4 ,
-    -0x7.bb338p-4 ,
-    -0x7.cab94p-4 ,
-    -0x7.da2c8p-4 ,
-    -0x7.e98bcp-4 ,
-    -0x7.f8d7cp-4 ,
-    -0x8.0810cp-4 ,
-    -0x8.1734cp-4 ,
-    -0x8.26458p-4 ,
-    -0x8.3541cp-4 ,
-    -0x8.442a4p-4 ,
-    -0x8.52fe4p-4 ,
-    -0x8.61bd4p-4 ,
-    -0x8.70684p-4 ,
-    -0x8.7efe4p-4 ,
-    -0x8.8d7e4p-4 ,
-    -0x8.9beap-4 ,
-    -0x8.aa40cp-4 ,
-    -0x8.b882cp-4 ,
-    -0x8.c6adp-4 ,
-    -0x8.d4c34p-4 ,
-////
-    0x8.p-24 ,
-    -0x5.2a8p-12 ,
-    -0xa.56p-12 ,
-    -0xf.81p-12 ,
-    -0x1.4acp-8 ,
-    -0x1.9d64p-8 ,
-    -0x1.f014p-8 ,
-    -0x2.42b4p-8 ,
-    -0x2.955p-8 ,
-    -0x2.e7f4p-8 ,
-    -0x3.3a84p-8 ,
-    -0x3.8d18p-8 ,
-    -0x3.dfa8p-8 ,
-    -0x4.3238p-8 ,
-    -0x4.84b4p-8 ,
-    -0x4.d734p-8 ,
-    -0x5.29a8p-8 ,
-    -0x5.7c14p-8 ,
-    -0x5.ce74p-8 ,
-    -0x6.20dp-8 ,
-    -0x6.7328p-8 ,
-    -0x6.c574p-8 ,
-    -0x7.17bcp-8 ,
-    -0x7.69fp-8 ,
-    -0x7.bc18p-8 ,
-    -0x8.0e4p-8 ,
-    -0x8.6054p-8 ,
-    -0x8.b254p-8 ,
-    -0x9.044cp-8 ,
-    -0x9.564p-8 ,
-    -0x9.a814p-8 ,
-    -0x9.f9e8p-8 ,
-    -0xa.4ba8p-8 ,
-    -0xa.9d64p-8 ,
-    -0xa.ef08p-8 ,
-    -0xb.4098p-8 ,
-    -0xb.9218p-8 ,
-    -0xb.e39p-8 ,
-    -0xc.34f4p-8 ,
-    -0xc.8644p-8 ,
-    -0xc.d78p-8 ,
-    -0xd.28a4p-8 ,
-    -0xd.79bcp-8 ,
-    -0xd.cab8p-8 ,
-    -0xe.1bap-8 ,
-    -0xe.6c7cp-8 ,
-    -0xe.bd4p-8 ,
-    -0xf.0de4p-8 ,
-    -0xf.5e7cp-8 ,
-    -0xf.aef4p-8 ,
-    -0xf.ff64p-8 ,
-    -0x1.04fb8p-4 ,
-    -0x1.09fecp-4 ,
-    -0x1.0f00cp-4 ,
-    -0x1.1401cp-4 ,
-    -0x1.19008p-4 ,
-    -0x1.1dfdp-4 ,
-    -0x1.22f88p-4 ,
-    -0x1.27f38p-4 ,
-    -0x1.2ceb8p-4 ,
-    -0x1.31e14p-4 ,
-    -0x1.36d6cp-4 ,
-    -0x1.3bc94p-4 ,
-    -0x1.40ba4p-4 ,
-    -0x1.45a9cp-4 ,
-    -0x1.4a968p-4 ,
-    -0x1.4f82p-4 ,
-    -0x1.546b8p-4 ,
-    -0x1.59538p-4 ,
-    -0x1.5e39p-4 ,
-    -0x1.631c4p-4 ,
-    -0x1.67fep-4 ,
-    -0x1.6cdccp-4 ,
-    -0x1.71bb4p-4 ,
-    -0x1.7696p-4 ,
-    -0x1.7b6e4p-4 ,
-    -0x1.8045p-4 ,
-    -0x1.851bp-4 ,
-    -0x1.89ed4p-4 ,
-    -0x1.8ebd8p-4 ,
-    -0x1.938bp-4 ,
-    -0x1.9856p-4 ,
-    -0x1.9d1fp-4 ,
-    -0x1.a1e6cp-4 ,
-    -0x1.a6abp-4 ,
-    -0x1.ab6c4p-4 ,
-    -0x1.b02b8p-4 ,
-    -0x1.b4e9p-4 ,
-    -0x1.b9a38p-4 ,
-    -0x1.be5cp-4 ,
-    -0x1.c310cp-4 ,
-    -0x1.c7c3cp-4 ,
-    -0x1.cc734p-4 ,
-    -0x1.d1214p-4 ,
-    -0x1.d5cc4p-4 ,
-    -0x1.da748p-4 ,
-    -0x1.df19cp-4 ,
-    -0x1.e3bc4p-4 ,
-    -0x1.e85c4p-4 ,
-    -0x1.ecf8cp-4 ,
-    -0x1.f1938p-4 ,
-    -0x1.f62acp-4 ,
-    -0x1.fabfcp-4 ,
-    -0x1.ff51p-4 ,
-    -0x2.03df8p-4 ,
-    -0x2.086bp-4 ,
-    -0x2.0cf48p-4 ,
-    -0x2.117ap-4 ,
-    -0x2.15fdp-4 ,
-    -0x2.1a7c4p-4 ,
-    -0x2.1ef9p-4 ,
-    -0x2.2371cp-4 ,
-    -0x2.27e84p-4 ,
-    -0x2.2c5bp-4 ,
-    -0x2.30cb4p-4 ,
-    -0x2.3537cp-4 ,
-    -0x2.39a14p-4 ,
-    -0x2.3e088p-4 ,
-    -0x2.426b4p-4 ,
-    -0x2.46cacp-4 ,
-    -0x2.4b268p-4 ,
-    -0x2.4f7fcp-4 ,
-    -0x2.53d5p-4 ,
-    -0x2.58274p-4 ,
-    -0x2.5c764p-4 ,
-    -0x2.60c0cp-4 ,
-    -0x2.6509p-4 ,
-    -0x2.694d4p-4 ,
-};
-//  K2  estimated  -1  integer bits.
-static const ap_fixed< 15 , 0 > sin_cos_K2 [ 256 ] = {
-    -0x4.ef2p-4 ,
-    -0x4.efp-4 ,
-    -0x4.ef2p-4 ,
-    -0x4.efp-4 ,
-    -0x4.eeap-4 ,
-    -0x4.eeap-4 ,
-    -0x4.ee4p-4 ,
-    -0x4.ee2p-4 ,
-    -0x4.ed4p-4 ,
-    -0x4.ecep-4 ,
-    -0x4.ec8p-4 ,
-    -0x4.ec2p-4 ,
-    -0x4.ebap-4 ,
-    -0x4.ebp-4 ,
-    -0x4.ea4p-4 ,
-    -0x4.e98p-4 ,
-    -0x4.e8ep-4 ,
-    -0x4.e84p-4 ,
-    -0x4.e7p-4 ,
-    -0x4.e64p-4 ,
-    -0x4.e54p-4 ,
-    -0x4.e42p-4 ,
-    -0x4.e34p-4 ,
-    -0x4.e24p-4 ,
-    -0x4.e1p-4 ,
-    -0x4.dfcp-4 ,
-    -0x4.de8p-4 ,
-    -0x4.dd6p-4 ,
-    -0x4.dbep-4 ,
-    -0x4.da8p-4 ,
-    -0x4.d92p-4 ,
-    -0x4.d7cp-4 ,
-    -0x4.d66p-4 ,
-    -0x4.d48p-4 ,
-    -0x4.d32p-4 ,
-    -0x4.d1ap-4 ,
-    -0x4.cfap-4 ,
-    -0x4.ce2p-4 ,
-    -0x4.ccp-4 ,
-    -0x4.caap-4 ,
-    -0x4.c86p-4 ,
-    -0x4.c68p-4 ,
-    -0x4.c4ap-4 ,
-    -0x4.c28p-4 ,
-    -0x4.c04p-4 ,
-    -0x4.be4p-4 ,
-    -0x4.bc2p-4 ,
-    -0x4.b9ep-4 ,
-    -0x4.b7cp-4 ,
-    -0x4.b5ap-4 ,
-    -0x4.b36p-4 ,
-    -0x4.b0ap-4 ,
-    -0x4.aeap-4 ,
-    -0x4.abcp-4 ,
-    -0x4.a98p-4 ,
-    -0x4.a68p-4 ,
-    -0x4.a44p-4 ,
-    -0x4.a1ap-4 ,
-    -0x4.9ecp-4 ,
-    -0x4.9bep-4 ,
-    -0x4.994p-4 ,
-    -0x4.96ap-4 ,
-    -0x4.93cp-4 ,
-    -0x4.908p-4 ,
-    -0x4.8ep-4 ,
-    -0x4.8a8p-4 ,
-    -0x4.878p-4 ,
-    -0x4.84ap-4 ,
-    -0x4.812p-4 ,
-    -0x4.7e4p-4 ,
-    -0x4.7aap-4 ,
-    -0x4.77ap-4 ,
-    -0x4.744p-4 ,
-    -0x4.70ep-4 ,
-    -0x4.6dcp-4 ,
-    -0x4.6a2p-4 ,
-    -0x4.66cp-4 ,
-    -0x4.636p-4 ,
-    -0x4.5f8p-4 ,
-    -0x4.5c2p-4 ,
-    -0x4.586p-4 ,
-    -0x4.54ap-4 ,
-    -0x4.50cp-4 ,
-    -0x4.4dp-4 ,
-    -0x4.494p-4 ,
-    -0x4.456p-4 ,
-    -0x4.416p-4 ,
-    -0x4.3d6p-4 ,
-    -0x4.39cp-4 ,
-    -0x4.356p-4 ,
-    -0x4.318p-4 ,
-    -0x4.2d6p-4 ,
-    -0x4.296p-4 ,
-    -0x4.24ep-4 ,
-    -0x4.20ep-4 ,
-    -0x4.1cap-4 ,
-    -0x4.188p-4 ,
-    -0x4.13cp-4 ,
-    -0x4.0f8p-4 ,
-    -0x4.0b4p-4 ,
-    -0x4.06ap-4 ,
-    -0x4.022p-4 ,
-    -0x3.fd4p-4 ,
-    -0x3.f9p-4 ,
-    -0x3.f4ap-4 ,
-    -0x3.fp-4 ,
-    -0x3.eb2p-4 ,
-    -0x3.e66p-4 ,
-    -0x3.e1ap-4 ,
-    -0x3.ddp-4 ,
-    -0x3.d7ep-4 ,
-    -0x3.d32p-4 ,
-    -0x3.ce4p-4 ,
-    -0x3.c92p-4 ,
-    -0x3.c46p-4 ,
-    -0x3.bf2p-4 ,
-    -0x3.ba4p-4 ,
-    -0x3.b5p-4 ,
-    -0x3.afep-4 ,
-    -0x3.aacp-4 ,
-    -0x3.a56p-4 ,
-    -0x3.ap-4 ,
-    -0x3.9b2p-4 ,
-    -0x3.95ep-4 ,
-    -0x3.904p-4 ,
-    -0x3.8a8p-4 ,
-    -0x3.85cp-4 ,
-    -0x3.802p-4 ,
-/////
-    -0x1.4bp-4 ,
-    -0x1.4aep-4 ,
-    -0x1.4aap-4 ,
-    -0x1.4a8p-4 ,
-    -0x1.4a6p-4 ,
-    -0x1.4aap-4 ,
-    -0x1.4a4p-4 ,
-    -0x1.4a6p-4 ,
-    -0x1.4a6p-4 ,
-    -0x1.4a4p-4 ,
-    -0x1.4a6p-4 ,
-    -0x1.4a6p-4 ,
-    -0x1.4a2p-4 ,
-    -0x1.4ap-4 ,
-    -0x1.4ap-4 ,
-    -0x1.49ep-4 ,
-    -0x1.49cp-4 ,
-    -0x1.49cp-4 ,
-    -0x1.49cp-4 ,
-    -0x1.49ap-4 ,
-    -0x1.496p-4 ,
-    -0x1.492p-4 ,
-    -0x1.48cp-4 ,
-    -0x1.48cp-4 ,
-    -0x1.488p-4 ,
-    -0x1.482p-4 ,
-    -0x1.48p-4 ,
-    -0x1.48p-4 ,
-    -0x1.47cp-4 ,
-    -0x1.478p-4 ,
-    -0x1.478p-4 ,
-    -0x1.474p-4 ,
-    -0x1.47p-4 ,
-    -0x1.468p-4 ,
-    -0x1.464p-4 ,
-    -0x1.462p-4 ,
-    -0x1.45ep-4 ,
-    -0x1.456p-4 ,
-    -0x1.45p-4 ,
-    -0x1.44ap-4 ,
-    -0x1.446p-4 ,
-    -0x1.442p-4 ,
-    -0x1.43cp-4 ,
-    -0x1.43ap-4 ,
-    -0x1.436p-4 ,
-    -0x1.42ep-4 ,
-    -0x1.42ap-4 ,
-    -0x1.426p-4 ,
-    -0x1.422p-4 ,
-    -0x1.41ep-4 ,
-    -0x1.414p-4 ,
-    -0x1.40ep-4 ,
-    -0x1.40ap-4 ,
-    -0x1.402p-4 ,
-    -0x1.3f8p-4 ,
-    -0x1.3f4p-4 ,
-    -0x1.3f2p-4 ,
-    -0x1.3ecp-4 ,
-    -0x1.3dcp-4 ,
-    -0x1.3d8p-4 ,
-    -0x1.3d6p-4 ,
-    -0x1.3c8p-4 ,
-    -0x1.3c4p-4 ,
-    -0x1.3bcp-4 ,
-    -0x1.3b4p-4 ,
-    -0x1.3bp-4 ,
-    -0x1.3a8p-4 ,
-    -0x1.3ap-4 ,
-    -0x1.394p-4 ,
-    -0x1.38ep-4 ,
-    -0x1.386p-4 ,
-    -0x1.37ep-4 ,
-    -0x1.37ap-4 ,
-    -0x1.368p-4 ,
-    -0x1.364p-4 ,
-    -0x1.36p-4 ,
-    -0x1.358p-4 ,
-    -0x1.344p-4 ,
-    -0x1.33cp-4 ,
-    -0x1.332p-4 ,
-    -0x1.32cp-4 ,
-    -0x1.326p-4 ,
-    -0x1.31ep-4 ,
-    -0x1.30cp-4 ,
-    -0x1.304p-4 ,
-    -0x1.3p-4 ,
-    -0x1.2f6p-4 ,
-    -0x1.2e8p-4 ,
-    -0x1.2ep-4 ,
-    -0x1.2dp-4 ,
-    -0x1.2ccp-4 ,
-    -0x1.2cp-4 ,
-    -0x1.2b8p-4 ,
-    -0x1.2aap-4 ,
-    -0x1.29ep-4 ,
-    -0x1.292p-4 ,
-    -0x1.28ap-4 ,
-    -0x1.27ep-4 ,
-    -0x1.274p-4 ,
-    -0x1.26cp-4 ,
-    -0x1.25cp-4 ,
-    -0x1.254p-4 ,
-    -0x1.244p-4 ,
-    -0x1.23ap-4 ,
-    -0x1.23p-4 ,
-    -0x1.226p-4 ,
-    -0x1.214p-4 ,
-    -0x1.208p-4 ,
-    -0x1.1fap-4 ,
-    -0x1.1f2p-4 ,
-    -0x1.1e4p-4 ,
-    -0x1.1dap-4 ,
-    -0x1.1cep-4 ,
-    -0x1.1c2p-4 ,
-    -0x1.1b4p-4 ,
-    -0x1.1a8p-4 ,
-    -0x1.19cp-4 ,
-    -0x1.186p-4 ,
-    -0x1.17ap-4 ,
-    -0x1.16ep-4 ,
-    -0x1.166p-4 ,
-    -0x1.156p-4 ,
-    -0x1.148p-4 ,
-    -0x1.13cp-4 ,
-    -0x1.12cp-4 ,
-    -0x1.122p-4 ,
-    -0x1.11p-4 ,
-    -0x1.104p-4 ,
-};
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#52 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h" 2
-
-namespace hotbm
-{
-
-
-
-template <int W, int I>
-void my_to_float(ap_fixed<W, I> in, float &result, int prescale)
-{
-    //#pragma HLS inline self off
-    fp_struct<float> out;
-    out.sign[0] = in[in.wl()-1];
-
-    // Note that when we chop off the sign bit, we don't loose any
-    // bits to allow for -MAX to be converted correctly.
-    ap_ufixed<W,I> ain = in;
-
-    if(out.__signbit()) {
-        ain = -in;
-    }
-
-    //const int parts = (W+15)/16;
-    //const int rem = W - (parts-1)*16; // The size of the last part
-    (((W - (((W+15)/16)-1)*16) > 0) ? static_cast<void> (0) : __assert_fail ("(W - (((W+15)/16)-1)*16) > 0", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h", 75, __PRETTY_FUNCTION__));
-    (((W - (((W+15)/16)-1)*16) <= 16) ? static_cast<void> (0) : __assert_fail ("(W - (((W+15)/16)-1)*16) <= 16", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h", 76, __PRETTY_FUNCTION__));
-
-    // Chop into 16 bit segments. out_bits[0] includes the MSBs.
-    ap_uint<32> out_bits[((W+15)/16)] = {};
-    for(int i = 0; i < ((W+15)/16)-1; i++) {
-        out_bits[i](31, 16) = ain(ain.wl()-16*i-1,ain.wl()-16*i-16);
-        out_bits[i][15] = 1;
-    }
-    out_bits[((W+15)/16)-1](31,31-(W - (((W+15)/16)-1)*16)) = ain(ain.wl()-16*(((W+15)/16)-1)-(W - (((W+15)/16)-1)*16));
-    out_bits[((W+15)/16)-1][31-(W - (((W+15)/16)-1)*16)-1] = 1;
-
-    // Count the leading zeros in each segment.
-    int c[((W+15)/16)];
-    for(int i = 0; i < ((W+15)/16); i++) {
-        c[i] = __builtin_clz(out_bits[i].to_uint());
-    }
-
-    int shift = 0;
-    ap_ufixed<W, I> in_shift = ain;
-
-    for(int i = 0; i < ((W+15)/16); i++) {
-        shift += c[i];
-        in_shift = in_shift << c[i];
-        if(c[i] != 16) {
-            break;
-        }
-    }
-
-    //    assert(in_shift[W-1] == 1);
-    ap_ufixed<W,1> result_mantissa; // Reinterpret the bits as a mantissa.
-    result_mantissa(W-1,0) = in_shift(W-1,0);
-
-    // Truncate the implicit one and zero extend, if necessary.
-    out.sig = result_mantissa; // FIXME: Round here?
-    ((((int)fp_struct<float>::EXP_BIAS+in_shift.iwl()-prescale-shift)<255) ? static_cast<void> (0) : __assert_fail ("((int)fp_struct<float>::EXP_BIAS+in_shift.iwl()-prescale-shift)<255", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h", 110, __PRETTY_FUNCTION__));
-    ((((int)fp_struct<float>::EXP_BIAS+in_shift.iwl()-prescale-shift)>0) ? static_cast<void> (0) : __assert_fail ("((int)fp_struct<float>::EXP_BIAS+in_shift.iwl()-prescale-shift)>0", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h", 111, __PRETTY_FUNCTION__));
-    out.exp = (in == 0) ? 0 : (fp_struct<float>::EXP_BIAS+in_shift.iwl())-prescale-shift;
-
-    result = out.to_ieee();
-}
-
-template <int W, int I>
-void my_to_float(ap_ufixed<W, I> in, float &result, int prescale)
-{
-    //#pragma HLS inline self off
-    fp_struct<float> out;
-    out.sign[0] = 0;
-    ap_ufixed<W,I> ain = in;
-
-    //    std::cout << "ain = " << ain.to_string(2) << "\n";
-
-    (((W - (((W+15)/16)-1)*16) > 0) ? static_cast<void> (0) : __assert_fail ("(W - (((W+15)/16)-1)*16) > 0", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h", 127, __PRETTY_FUNCTION__));
-    (((W - (((W+15)/16)-1)*16) <= 16) ? static_cast<void> (0) : __assert_fail ("(W - (((W+15)/16)-1)*16) <= 16", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h", 128, __PRETTY_FUNCTION__));
-
-    // Chop into 16 bit segments. out_bits[0] includes the MSBs.
-    //    std::cout << W << " " << parts << " " << rem << "\n";
-    ap_uint<32> out_bits[((W+15)/16)] = {};
-    for(int i = 0; i < ((W+15)/16)-1; i++) {
-        out_bits[i](31, 16) = ain(ain.wl()-16*i-1,
-                                  ain.wl()-16*i-16);
-        out_bits[i][15] = 1;
-        //std::cout << out_bits[i] << "\n";
-    }
-    out_bits[((W+15)/16)-1](32-1,32-(W - (((W+15)/16)-1)*16)) = ain(ain.wl()-16*(((W+15)/16)-1)-1,
-                                         ain.wl()-16*(((W+15)/16)-1)-(W - (((W+15)/16)-1)*16));
-    out_bits[((W+15)/16)-1][32-(W - (((W+15)/16)-1)*16)-1] = 1;
-    //std::cout << out_bits[parts-1] << "\n";
-
-    // Count the leading zeros in each segment.
-    int c[((W+15)/16)];
-    for(int i = 0; i < ((W+15)/16); i++) {
-        c[i] = __builtin_clz(out_bits[i].to_uint());
-        //std::cout << "c[" << i << "] = " << c[i] << "\n";
-    }
-
-    int shift = 0;
-    ap_fixed<W, I> in_shift = ain;
-
-    for(int i = 0; i < ((W+15)/16); i++) {
-        shift += c[i];
-        in_shift = in_shift << c[i];
-        if(c[i] != 16) {
-            break;
-        }
-    }
-
-    //    assert(in_shift[W-1] == 1);
-    ap_ufixed<W,1> result_mantissa; // Reinterpret the bits as a mantissa.
-    result_mantissa(W-1,0) = in_shift(W-1,0);
-
-    // std::cout << "result_mantissa = " << result_mantissa.to_string(2) << "\n";
-
-    // Truncate the implicit one and zero extend, if necessary.
-    out.set_mantissa(result_mantissa);
-    // std::cout << "sig = " << out.sig.to_string(2) << "\n";
-    out.exp = (in == 0) ? 0 : (fp_struct<float>::EXP_BIAS+in_shift.iwl()-1)-prescale-shift;
-
-    result = out.to_ieee();
-}
-
-
-
-template<int Z, int W, int I>
-unsigned int clz(ap_ufixed<W,I> x)
-{
-    ap_uint<Z+1> t;
-    t(Z,1) = x(x.wl()-1,x.wl()-Z);
-    t[0] = 1;
-
-    return t.countLeadingZeros();
-}
-
-/**
- * Algorithm for trigonometric range reduction, based on the method
- * published by Payne and Hanek.  Basically, this maps an arbitrary
- * range input onto the unit circle.  The output is expressed as the
- * quadrant k and fixed point number in [0,1).
- *
- * The Quadrants k for positive numbers:
- *  2 1
- * 3   0
- * 4   7
- *  5 6
- * The Quadrants k for negative numbers:
- *  5 6
- * 4   7
- * 3   0
- *  2 1
- * NOTE: p1 = 10 for double, p1 = 16 for single
- *
- * @param p1 Padding bits
- * @param T data type (float, double)
- * @param din Unreduced data input (float, double)
- * @param k quadrant of the circle that we are in.
- * @param dout Reduced data output
- */
-template<int p1, class T, int W_dout, int W_Mx>
-void
-range_redux_payne_hanek_hotbm(
-    T din,
-    ap_uint<3> &k,
-    ap_ufixed<W_dout, 0> &dout,
-    ap_ufixed<W_Mx, 0> &Mx,
-    ap_int<fp_struct<T>::EXP_BITS> &Ex)
-{
-    const int SB = fp_struct<T>::SIG_BITS;
-
-    fp_struct<T> fps1(din);
-    int expv = fps1.expv();
-
-
-
-
-
-    ap_ufixed<3*(SB+1)+p1+3,SB+1+3> h_fixed; // X*Med
-
-    bool closepath = ((fps1.exp) < fp_struct<T>::EXP_BIAS-1);
-
-    if(closepath) {
-        Ex = expv+2;
-        expv = -2;
-    } else {
-        Ex = 0;
-    }
-
-    {
-        ap_uint<SB+1> X; // mantissa (din) in integer format
-        ap_uint<2*(SB+1)+p1+3> Med; // significant bits of 4oPi
-        ap_uint<3*(SB+1)+p1+3> h; // X*Med
-        // Construct the mantissa, Q1.SIG_BITS
-        X(fp_struct<T>::SIG_BITS-1,0) = fps1.sig(fp_struct<T>::SIG_BITS-1,0);
-        X[fp_struct<T>::SIG_BITS] = 1;
-
-        Med = table_lookup_4oPi<SB,p1>(expv,din);
-        //h = Med * X;
-        big_mult(Med, X, h);
-        //reinterpret bits of h.
-        h_fixed(h_fixed.wl()-1, 0) = h(h_fixed.wl()-1, 0);
-#262 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-    }
-
-    ap_ufixed<W_Mx+18, 0> Mx_bits = h_fixed; // Mx_bits is not normalized !
-
-    if(closepath) {
-        k = 0;
-    } else {
-        k = h_fixed; // Extract the quadrant from the integer bits of h_fixed.
-    }
-
-    // If we're in an odd quadrant, then the base functions need to be flipped.
-    if(k[0] == 1) {
-        Mx_bits = 1-Mx_bits;
-    }
-
-    ap_uint<5> Mx_zeros = clz<18>(Mx_bits);
-
-
-
-
-
-
-    Mx = ap_ufixed<W_Mx, 0,SC_RND>(Mx_bits << Mx_zeros);
-    Ex -= Mx_zeros;
-
-    dout = ap_ufixed<W_dout, 0, SC_RND>(Mx << Ex); // A negative shift!
-#297 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-}
-
-/**
- * Algorithm for trigonometric range reduction, based on the method
- * published by Payne and Hanek.  Basically, this maps an arbitrary
- * range input onto the unit circle.  The output is expressed as the
- * quadrant k and fixed point number in [0,1).
- *
- * The Quadrants k for positive numbers:
- *  2 1
- * 3   0
- * 4   7
- *  5 6
- * The Quadrants k for negative numbers:
- *  5 6
- * 4   7
- * 3   0
- *  2 1
- * NOTE: p1 = 10 for double, p1 = 16 for single
- *
- * @param p1 Padding bits
- * @param T data type (float, double)
- * @param din Unreduced data input (float, double)
- * @param k quadrant of the circle that we are in.
- * @param dout Reduced data output
- */
-template<int p1, class T, int W_dout, int W_Mx>
-void
-range_redux_payne_hanek_hotbm_pi(
-    T din,
-    ap_uint<3> &k,
-    ap_ufixed<W_dout, 0> &dout,
-    ap_ufixed<W_Mx, 0> &Mx,
-    ap_int<fp_struct<T>::EXP_BITS> &Ex,
-    int &exactly_pi_over_2)
-{
-    const int SB = fp_struct<T>::SIG_BITS;
-
-    fp_struct<T> fps1(din);
-    int expv = fps1.expv();
-
-
-
-
-
-    ap_ufixed<3*(SB+1)+p1+3,SB+1+3> h_fixed; // X*Med
-
-    bool closepath = ((fps1.exp) < fp_struct<T>::EXP_BIAS-3);
-
-    if(closepath) {
-        Ex = expv+4;
-        expv = -4;
-    } else {
-        Ex = 0;
-    }
-
-    {
-        ap_uint<SB+1> X; // mantissa (din) in integer format
-        ap_uint<2*(SB+1)+p1+3> Med; // significant bits of 4oPi
-        ap_uint<3*(SB+1)+p1+3> h; // X*Med
-        // Construct the mantissa, Q1.SIG_BITS
-        X(fp_struct<T>::SIG_BITS-1,0) = fps1.sig(fp_struct<T>::SIG_BITS-1,0);
-        X[fp_struct<T>::SIG_BITS] = 1; // Don't handle subnormals (fps1.exp == 0) ? 0 : 1; // handle subnormals
-
-        h = X;
-        h <<= SB+p1+2; //align
-        h <<= 2; // Multiply by 4
-        h <<= expv;
-
-        //reinterpret bits of h.
-        h_fixed(h_fixed.wl()-1, 0) = h(h_fixed.wl()-1, 0);
-#376 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-    }
-
-    ap_ufixed<W_Mx+18, 1> Mx_bits_extended = h_fixed; // Mx_bits is not normalized !
-    exactly_pi_over_2 = (Mx_bits_extended == 1);
-
-    ap_ufixed<W_Mx+18, 0> Mx_bits = h_fixed; // Mx_bits is not normalized !
-
-    if(closepath) {
-        k = 0;
-    } else {
-        k = h_fixed; // Extract the quadrant from the integer bits of h_fixed.
-    }
-
-    // If we're in an odd quadrant, then the base functions need to be flipped.
-    if(k[0] == 1) {
-        Mx_bits = 1-Mx_bits;
-    }
-
-    ap_uint<5> Mx_zeros = clz<18>(Mx_bits);
-
-
-
-
-
-
-    Mx = ap_ufixed<W_Mx, 0,SC_RND>(Mx_bits << Mx_zeros);
-    Ex -= Mx_zeros;
-
-    dout = ap_ufixed<W_dout, 0, SC_RND>(Mx << Ex); // A negative shift!
-#414 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-}
-
-static
-void sincosf(
-    float t_in,
-    float *s,
-    float *c)
-{
-    const int g = 7;
-    const int p1 = 20;//+g;
-    // Alpha should come from tables.
-    const int alpha = 7;
-    const int beta1 = 7; // The number of bits of B that are not used in the K1 computation
-    const int beta2 = 15; // The number of bits of B that are not used in the K2 computation
-
-    const bool swap_table[8] = {0,1,1,0,0,1,1,0};
-_ssdm_SpecConstant(swap_table);
-#429 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-
-    const bool neg_sin_table[16] = {0,0,1,0,1,1,0,1, 1,0,1,1,0,1,0,0};
-_ssdm_SpecConstant(neg_sin_table);
-#430 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-
-    const bool neg_cos_table[16] = {0,0,0,1,1,1,1,0, 0,1,1,1,1,0,0,0};
-_ssdm_SpecConstant(neg_cos_table);
-#431 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-
-_ssdm_SpecArrayPartition( swap_table, 1, "COMPLETE", 0, "");
-_ssdm_SpecArrayPartition( neg_sin_table, 1, "COMPLETE", 0, "");
-_ssdm_SpecArrayPartition( neg_cos_table, 1, "COMPLETE", 0, "");
-// #pragma HLS RESOURCE variable=swap_table core=ROM_1P_LUTRAM
-// #pragma HLS RESOURCE variable=neg_sin_table core=ROM_1P_LUTRAM
-// #pragma HLS RESOURCE variable=neg_cos_table core=ROM_1P_LUTRAM
-_ssdm_op_SpecResource(cos_K0, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-_ssdm_op_SpecResource(cos_K1, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-_ssdm_op_SpecResource(cos_K2, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-_ssdm_op_SpecResource(sin_K0, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-_ssdm_op_SpecResource(sin_K1, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-_ssdm_op_SpecResource(sin_K2, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-
-    fp_struct<float> din(t_in);
-
-
-
-
-
-    ap_uint<3> k;
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g, 0> x;
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g, 0> Mx;
-    ap_int<fp_struct<float>::EXP_BITS> Ex;
-
-    range_redux_payne_hanek_hotbm<p1,float>(t_in,k,x,Mx,Ex);
-
-    ap_uint<alpha> A = x(x.wl()-x.iwl()-1,
-                         x.wl()-x.iwl()-alpha);
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g-alpha-beta1, -alpha> B = x;
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g-alpha-beta2, -alpha> B_trunc = B;
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g-2*alpha, -2*alpha> B_squared = B_trunc*B_trunc;
-#473 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g, 1> cos_t1 = cos_K0[A];
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g, 1> cos_t2 = B*cos_K1[A];
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g, 1> cos_t3 = B_squared*cos_K2[A];
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g, 1> cos_result =
-        1-(cos_t1+cos_t2+cos_t3);
-    float cos_resultf;
-    my_to_float(cos_result, cos_resultf, 0);
-    fp_struct<float> cos_results(cos_resultf);
-
-    ap_fixed<fp_struct<float>::SIG_BITS+1+g, 1> sin_t1 = sin_K0[A];
-    ap_fixed<fp_struct<float>::SIG_BITS+1+g, 1> sin_t2 = B*sin_K1[A];
-    ap_fixed<fp_struct<float>::SIG_BITS+1+g, 1> sin_t3 = B_squared*sin_K2[A];
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g, 1> sin_result =
-        (sin_t1 + sin_t2 + sin_t3) * Mx;
-    float sin_resultf;
-    my_to_float(sin_result, sin_resultf, -Ex);
-    fp_struct<float> sin_results(sin_resultf);
-#503 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-    // Negate and swap the results, based on which quadrant we're in.
-    // This decision is done using some tables.  We use the second
-    // half of each table if the result is negative, which means
-    // everything is quadrant swapped.
-
-    ap_uint<4> index = k;
-    index[3] = din.sign;
-
-    if(neg_sin_table[index]) { sin_results.sign = 1; }
-    if(neg_cos_table[index]) { cos_results.sign = 1; }
-
-    float s_out, c_out;
-    if(din.exp == 0 && din.sig == 0) { // t_in == 0.0
-        s_out = copysignf(0.0f, t_in);
-        c_out = 1.0f;
-    } else if(::hls::__isinf(t_in) || ::hls::__isnan(t_in)) {//din.exp == 0x7FF) { // +inf, -inf, nan
-        s_out = ::hls::nan("");
-        c_out = ::hls::nan("");
-    } else {
-        if(swap_table[k]) {
-            s_out = cos_results.to_ieee();
-            c_out = sin_results.to_ieee();
-        } else {
-            s_out = sin_results.to_ieee();
-            c_out = cos_results.to_ieee();
-        }
-    }
-    *s = s_out;
-    *c = c_out;
-}
-
-static
-float
-sinf_or_cosf(float t_in, bool do_cos, bool do_pi)
-{
-    const int g = 7;
-    const int p1 = 20;//+g;
-    // Alpha should come from tables.
-    const int alpha = 7;
-    const int beta1 = 7; // The number of bits of B that are not used in the K1 computation
-    const int beta2 = 15; // The number of bits of B that are not used in the K2 computation
-
-    const bool swap_table[8] = {0,1,1,0,0,1,1,0};
-_ssdm_SpecConstant(swap_table);
-#545 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-
-    const bool neg_sin_table[16] = {0,0,1,0,1,1,0,1, 1,0,1,1,0,1,0,0};
-_ssdm_SpecConstant(neg_sin_table);
-#546 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-
-    const bool neg_cos_table[16] = {0,0,0,1,1,1,1,0, 0,1,1,1,1,0,0,0};
-_ssdm_SpecConstant(neg_cos_table);
-#547 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-
-_ssdm_SpecArrayPartition( swap_table, 1, "COMPLETE", 0, "");
-_ssdm_SpecArrayPartition( neg_sin_table, 1, "COMPLETE", 0, "");
-_ssdm_SpecArrayPartition( neg_cos_table, 1, "COMPLETE", 0, "");
-// #pragma HLS RESOURCE variable=swap_table core=ROM_1P_LUTRAM
-// #pragma HLS RESOURCE variable=neg_sin_table core=ROM_1P_LUTRAM
-// #pragma HLS RESOURCE variable=neg_cos_table core=ROM_1P_LUTRAM
-_ssdm_op_SpecResource(sin_cos_K0, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-_ssdm_op_SpecResource(sin_cos_K1, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-_ssdm_op_SpecResource(sin_cos_K2, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-
-    fp_struct<float> din(t_in);
-
-
-
-
-
-    ap_uint<3> k;
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g, 0> x;
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g, 0> Mx;
-    ap_int<fp_struct<float>::EXP_BITS> Ex;
-
-    int exactly_pi_over_2 = 0;
-    if(do_pi) {
-        range_redux_payne_hanek_hotbm_pi<p1,float>(t_in,k,x,Mx,Ex,exactly_pi_over_2);
-    } else {
-        range_redux_payne_hanek_hotbm<p1,float>(t_in,k,x,Mx,Ex);
-    }
-    ap_uint<alpha+1> A = x(x.wl()-x.iwl()-1,
-                           x.wl()-x.iwl()-alpha);
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g-alpha-beta1, -alpha> B = x;
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g-alpha-beta2, -alpha> B_trunc = B;
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g-2*alpha, -2*alpha> B_squared = B_trunc*B_trunc;
-#590 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-    bool cos_basis = do_cos?!swap_table[k]: swap_table[k];
-    bool sin_basis = do_cos? swap_table[k]:!swap_table[k];
-
-    A[alpha] = sin_basis; // cos and sin are concatentated.
-
-    if(cos_basis) {
-        // In this case, we are using cos() as the basis, so we don't
-        // multiply by Mx*2^Ex.
-        Mx = ap_ufixed<fp_struct<float>::SIG_BITS+1+g, 0, SC_RND, SC_SAT>(1);
-        Ex = 0;
-    }
-
-    ap_fixed<fp_struct<float>::SIG_BITS+1+g, 1> t1 = sin_cos_K0[A];
-    ap_fixed<fp_struct<float>::SIG_BITS+1+g, 1> t2 = B*sin_cos_K1[A];
-    ap_fixed<fp_struct<float>::SIG_BITS+1+g, 1> t3 = B_squared*sin_cos_K2[A];
-    ap_ufixed<fp_struct<float>::SIG_BITS+1+g, 1> result =
-        (t1+t2+t3) * Mx;
-    float resultf;
-    if(exactly_pi_over_2) {
-        resultf = 0.70710678118;
-    } else {
-        my_to_float(result, resultf, -Ex);
-    }
-    fp_struct<float> results(resultf);
-#624 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-    // Negate and swap the results, based on which quadrant we're in.
-    // This decision is done using some tables.  We use the second
-    // half of each table if the result is negative, which means
-    // everything is quadrant swapped.
-
-    ap_uint<4> index = k;
-    index[3] = din.sign;
-    if(cos_basis ? neg_cos_table[index] : neg_sin_table[index]) {
-        results.sign = 1;
-    }
-
-    if(din.exp == 0 && (do_pi ? 1 : din.sig == 0)) { // t_in == 0.0
-        // Note that handling subnormals correctly for sinpif/cospif is harder
-        // than sinf/cosf.  So for cospif and sinpif, we do flush-to-zero
-        // for all subnormals.
-        return do_cos ? 1.0f : copysignf(0.0f, t_in);
-    } else if(::hls::__isinf(t_in) || ::hls::__isnan(t_in)) {//din.exp == 0x7FF) { // +inf, -inf, nan
-        return ::hls::nan("");
-    } else {
-        return results.to_ieee();
-    }
-}
-
-
-template<int WO, int WI>
-ap_fixed<WO,2>
-    sinf_or_cosf(ap_fixed<32, WI> t_in, bool do_cos, bool do_pi)
-{
-    const int g = 7;
-    //  const int p1 = 20;//+g;
-    // Alpha should come from tables.
-    const int alpha = 7;
-    const int beta1 = 7; // The number of bits of B that are not used in the K1 computation
-    const int beta2 = 15; // The number of bits of B that are not used in the K2 computation
-
-    const bool swap_table[8] = {0,1,1,0,0,1,1,0};
-_ssdm_SpecConstant(swap_table);
-#659 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-
-    const bool neg_sin_table[16] = {0,0,1,0,1,1,0,1, 1,0,1,1,0,1,0,0};
-_ssdm_SpecConstant(neg_sin_table);
-#660 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-
-    const bool neg_cos_table[16] = {0,0,0,1,1,1,1,0, 0,1,1,1,1,0,0,0};
-_ssdm_SpecConstant(neg_cos_table);
-#661 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-
-_ssdm_SpecArrayPartition( swap_table, 1, "COMPLETE", 0, "");
-_ssdm_SpecArrayPartition( neg_sin_table, 1, "COMPLETE", 0, "");
-_ssdm_SpecArrayPartition( neg_cos_table, 1, "COMPLETE", 0, "");
-// #pragma HLS RESOURCE variable=swap_table core=ROM_1P_LUTRAM
-// #pragma HLS RESOURCE variable=neg_sin_table core=ROM_1P_LUTRAM
-// #pragma HLS RESOURCE variable=neg_cos_table core=ROM_1P_LUTRAM
-_ssdm_op_SpecResource(sin_cos_K0, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-_ssdm_op_SpecResource(sin_cos_K1, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-_ssdm_op_SpecResource(sin_cos_K2, "", "ROM_1P_LUTRAM", "", -1, "", "", "", "", "");
-
-
-
-
-
-
-    ap_uint<3> k;
-    ap_ufixed<WO+1+g, 0> x;
-    ap_ufixed<WO+1+g, 0> Mx;
-
-    int exactly_pi_over_2 = 0;
-    bool is_negative = t_in[32-1];
-    ap_ufixed<32, WI> din = is_negative ? ap_fixed<32, WI>(-t_in) : t_in;
-    if(do_pi) {
-        k = din*4;
-        x = din*4;
-        ap_ufixed<32, 1> Mx_bits_extended = din*4;
-
-
-
-        exactly_pi_over_2 = (Mx_bits_extended == 1);
-    } else {
-        k = din * ap_ufixed<32,2>(4/3.14159265358979323846 /* pi */);
-        x = din * ap_ufixed<32,2>(4/3.14159265358979323846 /* pi */);
-    }
-    // If we're in an odd quadrant, then the base functions need to be flipped.
-    if(k[0] == 1) {
-        x = 1-x;
-    }
-
-    ap_uint<alpha+1> A = x(x.wl()-x.iwl()-1,
-                           x.wl()-x.iwl()-alpha);
-    ap_ufixed<WO+1+g-alpha-beta1, -alpha> B = x;
-    ap_ufixed<WO+1+g-alpha-beta2, -alpha> B_trunc = B;
-    ap_ufixed<WO+1+g-2*alpha, -2*alpha> B_squared = B_trunc*B_trunc;
-#716 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-    bool cos_basis = do_cos?!swap_table[k]: swap_table[k];
-    bool sin_basis = do_cos? swap_table[k]:!swap_table[k];
-
-    A[alpha] = sin_basis; // cos and sin are concatentated.
-
-    if(cos_basis) {
-        // In this case, we are using cos() as the basis, so we don't
-        // multiply by Mx*2^Ex.
-        Mx = ap_ufixed<WO+1+g, 0, SC_RND, SC_SAT>(1);
-    } else {
-        Mx = x;
-    }
-
-    ap_ufixed<WO+1+g, 1> t1 = sin_cos_K0[A];
-    ap_fixed<WO+1+g, 1> t2 = B*sin_cos_K1[A];
-    ap_fixed<WO+1+g, 1> t3 = B_squared*sin_cos_K2[A];
-    ap_fixed<WO+1+g, 1> result =
-        (t1+t2+t3) * Mx;
-    if(exactly_pi_over_2) {
-        result = 0.70710678118;
-    }
-#745 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_hotbm.h"
-    // Negate and swap the results, based on which quadrant we're in.
-    // This decision is done using some tables.  We use the second
-    // half of each table if the result is negative, which means
-    // everything is quadrant swapped.
-
-    ap_uint<4> index = k;
-    index[3] = is_negative;
-    if(cos_basis ? neg_cos_table[index] : neg_sin_table[index]) {
-        result = -result;
-    }
-    return result;
-}
-
-static
-float
-cosf(float t_in)
-{
-    return sinf_or_cosf(t_in, 1, 0);
-}
-
-static
-float
-sinf(float t_in)
-{
-    return sinf_or_cosf(t_in, 0, 0);
-}
-
-static
-float
-cospif(float t_in)
-{
-    return sinf_or_cosf(t_in, 1, 1);
-}
-
-static
-float
-sinpif(float t_in)
-{
-    return sinf_or_cosf(t_in, 0, 1);
-}
-
-
-template<int WI>
-ap_fixed<32,2>
-    cosf(ap_fixed<32, WI> t_in)
-{
-    return sinf_or_cosf<32>(t_in, 1, 0);
-}
-template<int WI>
-ap_fixed<32,2>
-    sinf(ap_fixed<32, WI> t_in)
-{
-    return sinf_or_cosf<32>(t_in, 0, 0);
-}
-
-template<int WI>
-ap_fixed<32,2>
-    cospif(ap_fixed<32, WI> t_in)
-{
-    return sinf_or_cosf<32>(t_in, 1, 1);
-}
-template<int WI>
-ap_fixed<32,2>
-    sinpif(ap_fixed<32, WI> t_in)
-{
-    return sinf_or_cosf<32>(t_in, 0, 1);
-}
-
-}
-
-
-
-/* @}*/
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#508 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h" 2
-
-static
-float
-sinf(float t_in)
-{
-    return hotbm::sinf(t_in);
-}
-
-static
-float
-sinpif(float t_in)
-{
-    return hotbm::sinpif(t_in);
-}
-
-static
-float
-sin(float t_in)
-{
-    return sinf(t_in);
-}
-
-static
-double
-sin(double t_in)
-{
-    return cordic::sin(t_in);
-}
-
-static
-float
-cosf(float t_in)
-{
-    return hotbm::cosf(t_in);
-}
-
-static
-float
-cospif(float t_in)
-{
-    return hotbm::cospif(t_in);
-}
-
-static
-float
-cos(float t_in)
-{
-    return cosf(t_in);
-}
-
-static
-double
-cos(double t_in)
-{
-    return cordic::cos(t_in);
-}
-
-template<int WI>
-ap_fixed<32,2>
-    cosf(ap_fixed<32, WI> t_in)
-{
-    return hotbm::cosf(t_in);
-}
-template<int WI>
-ap_fixed<32,2>
-    sinf(ap_fixed<32, WI> t_in)
-{
-    return hotbm::sinf(t_in);
-}
-
-template<int WI>
-ap_fixed<32,2>
-    cospif(ap_fixed<32, WI> t_in)
-{
-    return hotbm::cospif(t_in);
-}
-template<int WI>
-ap_fixed<32,2>
-    sinpif(ap_fixed<32, WI> t_in)
-{
-    return hotbm::sinpif(t_in);
-}
-
-template<int WI>
-ap_fixed<32,2>
-    cos(ap_fixed<32, WI> t_in)
-{
-    return hotbm::cosf(t_in);
-}
-template<int WI>
-ap_fixed<32,2>
-    sin(ap_fixed<32, WI> t_in)
-{
-    return hotbm::sinf(t_in);
-}
-
-template<int WI>
-ap_fixed<32,2>
-    cospi(ap_fixed<32, WI> t_in)
-{
-    return hotbm::cospif(t_in);
-}
-template<int WI>
-ap_fixed<32,2>
-    sinpi(ap_fixed<32, WI> t_in)
-{
-    return hotbm::sinpif(t_in);
-}
-
-
-static
-void sincos(double x, double *sin, double *cos)
-{
-    cordic::sincos(x, sin, cos);
-}
-
-static
-void sincosf(float x, float *sin, float *cos)
-{
-    hotbm::sincosf(x, sin, cos);
-}
-
-static
-float
-atanf(float t_in)
-{
- return cordic::atanf(t_in);
-}
-
-static
-double
-atan2(double y_in, double x_in)
-{
- return cordic::atan2(y_in, x_in);
-}
-
-static
-float
-atan2f(float y_in, float x_in)
-{
- return cordic::atan2f(y_in, x_in);
-}
-
-static
-float
-sinhf(float t_in)
-{
- return cordic::sinhf(t_in);
-}
-
-static
-float
-coshf(float t_in)
-{
- return cordic::coshf(t_in);
-}
-
-}
-
-
-
-
-extern "C" {
-
-    double _ssdm_op_DRecip(double) __attribute__ ((nothrow));
-    float _ssdm_op_FRecip(float) __attribute__ ((nothrow));
-    double _ssdm_op_DRSqrt(double) __attribute__ ((nothrow));
-    float _ssdm_op_FRSqrt(float) __attribute__ ((nothrow));
-
-}
-
-
-namespace hls {
-
-static
-float
-tanf(float t_in)
-{
- float s_out, c_out;
-    fp_struct<float> fs = t_in;
-    if(fs.exp == 0x0) {
-        //subnormal or zero
-        return t_in;
-    } else {
-        sincosf(t_in, &s_out, &c_out);
-        return ((s_out)/(c_out));
-    }
-}
-
-static
-double
-tan(double t_in)
-{
- double s_out, c_out;
-    fp_struct<double> fs = t_in;
-    if(fs.exp == 0x0) {
-        //subnormal or zero
-        return t_in;
-    } else {
-        sincos(t_in, &s_out, &c_out);
-        return ((s_out)/(c_out));
-    }
-}
-
-static
-float logf(float x)
-{
-    return ::logf(x);
-}
-
-
-static
-float log10f(float x)
-{
-    return ((logf(x)) * (0.434294481903251827651128918916605082294397005f));
-}
-
-static
-double log(double x)
-{
-    return ::log(x);
-}
-
-
-static
-double log10(double x)
-{
-    return ((log(x)) * (0.434294481903251827651128918916605082294397005));
-}
-
-
-static
-double recip(double x)
-{
-    return _ssdm_op_DRecip(x);
-}
-
-static
-float recipf(float x)
-{
-    return _ssdm_op_FRecip(x);
-}
-
-static
-double rsqrt(double x)
-{
-    return _ssdm_op_DRSqrt(x);
-}
-
-static
-float rsqrtf(float x)
-{
-    return _ssdm_op_FRSqrt(x);
-}
-#788 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h"
-#1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_sqrt.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2013 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-/**
- * @file hls_sqrt.h
- */
-
-
-
-template <int W, int I, ap_q_mode _AP_Q, ap_o_mode _AP_O>
-ap_ufixed<W,I> sqrt(ap_ufixed<W,I, _AP_Q, _AP_O> x) {
-    ((I >= 0 && "Number of integer bits for sqrt() must be greater than zero") ? static_cast<void> (0) : __assert_fail ("I >= 0 && \"Number of integer bits for sqrt() must be greater than zero\"", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_sqrt.h", 41, __PRETTY_FUNCTION__));
-    ((W >= I && "Number of integer bits for sqrt() must be less than or equal to total width") ? static_cast<void> (0) : __assert_fail ("W >= I && \"Number of integer bits for sqrt() must be less than or equal to total width\"", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/hls_sqrt.h", 42, __PRETTY_FUNCTION__));
-    ap_ufixed<W+1,I> factor = 0;
-    int offset;
-    // Since input bits are handled in pairs, the
-    // start condition for even and odd integer widths
-    // are handled slightly differently.
-    if(I%2 == 0) {
-        offset = 1;
-    } else {
-        offset = 0;
-    }
-    factor[W+1 -1-offset] = 1;
-    ap_ufixed<W+1 +1,I+1> result = 0;
-    ap_ufixed<W+1 +2,I+2> x2 = x;
-    for(int i = W+1 -offset; i > (I-1)/2; i -= 1 ) {
-
-        ap_ufixed<W+2+1,I+2> t = (result << 1) + factor;
-        //        std::cout << x2.to_string(2) << " " << t.to_string(2) << " " << result.to_string(2) << " " << factor.to_string(2) << "\n";
-        ap_ufixed<W+1,I> thisfactor = 0;
-        if(x2 >= t) {
-            x2 -= t;
-            thisfactor = factor;
-        }
-        result = result + thisfactor;
-        factor >>= 1;
-        x2 <<= 1;
-    }
-    //    std::cout << W << " " << I << " " << offset << ((I-1) >> 1) << " " << x2.to_string(2) << " " << result.to_string(2) << " " << factor.to_string(2) << "\n";
-    return result >> ((I-1) >> 1);
-    //I <= 0 ? (I-2)/2 : (I-1)/2);
-}
-
-template <int W, int I, ap_q_mode _AP_Q, ap_o_mode _AP_O>
-ap_fixed<W,I> sqrt(ap_fixed<W,I, _AP_Q, _AP_O> x) {
-    ap_ufixed<W-1,I-1> x2 = x;
-    if(x < 0) return 0; else return ::hls::sqrt(x2);
-}
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#789 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h" 2
-
-static
-double sqrt(double x)
-{
-    return ::sqrt(x);
-}
-
-static
-float sqrtf(float x)
-{
-    return ::sqrtf(x);
-}
-
-static
-double exp(double x)
-{
-    return ::exp(x);
-}
-
-static
-float expf(float x)
-{
-    return ::expf(x);
-}
-
-// Do nothing with the result of the filter.
-template <typename T>
-struct hls_filter_traits {
-    typedef T T_data;
-    typedef T T_accum;
-    static T_data shift(T_accum in) {
-        return in;
-    }
-};
-
-struct hls_filter_traits_Q15 {
-    typedef short T_data;
-    typedef int T_accum;
-    static T_data shift(T_accum in) {
-        return (T_data)(in >> 15);
-    }
-};
-
-/** Compute the dot product of x and y, returning the result.
- * @param x the first vector, with length n
- * @param y the second vector, with length n
- * @param n the size of the vectors.
- * @param T the type of the data
- * @param T_accum the type used for the accumulation
- */
-template <typename T_accum, typename T>
-T_accum dot(T *x, T *y, int n)
-{
-    // This volatile prevents the first tap from being constant-optimized.
-    volatile T_accum r = 0;
-    T_accum result = r;
-dot_foreach_tap:
-    for(int i = 0; i < n; i++) {
-        result += x[i] * y[i];
-    }
-    return result;
-}
-
-/**
- * Block FIR filter, with data type T.  This function supports traits
- * which can be used to control the type used to perform the filter
- * accumultation.
- *
- * @param in the input data, with size incout.
- * @param state the filter state (size = numtaps), with the newest
- * sample in state[0].
- * @param out the filtered data, with size incout.
- * @param taps the filter taps (size = numtaps), stored in 'normal' order.
- * in and out are size incount.
- * @param incount
- * @param numtaps
- */
-template <typename T, typename TRAITS>
-void fir_blocksrl(T *in, T *taps, T *out, T *state, int incount, int numtaps)
-{
-_ssdm_InlineSelf(0, "");
-fir_blocksrl_foreach_data:
-    for(int n = 0; n < incount; n++) {
-_ssdm_SpecExprBalance(0, "");
-        for(int i = numtaps-1; i > 0; i--) {
-            state[i] = state[i-1];
-        }
-        state[0] = in[n];
-        out[n] = TRAITS::shift( dot<typename TRAITS::T_accum>(state, taps, numtaps));
-    }
-}
-
-/**
- * Block FIR filter, with data type T.  This function should be used
- * when the type used for accumulation is the same as the type of the
- * output (e.g. 'float').
- *
- * @param in the input data, with size incout.
- * @param state the filter state (size = numtaps), with the newest
- * sample in state[0].
- * @param out the filtered data, with size incout.
- * @param taps the filter taps (size = numtaps), stored in 'normal' order.
- * in and out are size incount.
- * @param incount
- * @param numtaps
- */
-template <typename T>
-void fir_blocksrl(T *in, T *taps, T *out, T *state, int incount, int numtaps)
-{
-    fir_blocksrl<T, hls_filter_traits<T> >(in, taps, out, state, incount, numtaps);
-}
-
-/**
- * Block FIR filter, with Q15 datatypes modeled as 'short'.  The
- * result always includes the required right shift by 15.
- *
- * @param in the input data, with size incout.
- * @param state the filter state (size = numtaps), with the newest
- * sample in state[0].
- * @param out the filtered data, with size incout.
- * @param taps the filter taps (size = numtaps), stored in 'normal' order.
- * in and out are size incount.
- * @param incount
- * @param numtaps
- */
-static void fir_blocksrl_Q15(short *in, short *taps, short *out, short *state, int incount, int numtaps)
-{
-    fir_blocksrl<short, hls_filter_traits_Q15>(in, taps, out, state, incount, numtaps);
-}
-
-} // namespace hls
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h" 2
-#47 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h"
-namespace hls {
-
-  // ===================================================================================================================
-  // Transpose Types & Operation
-  struct NoTranspose {
-    const static int TransposeType = 0;
-    template <
-      int RowsA,
-      int ColsA,
-      typename InputType>
-    static InputType GetElement(const InputType A [RowsA][ColsA], unsigned Row, unsigned Col)
-    {_ssdm_SpecArrayDimSize(A,RowsA);
-      // No transpose, default
-      return A[Row][Col];
-    }
-  
-public :
-inline __attribute__((always_inline)) NoTranspose() { _ssdm_SpecConstant(&TransposeType);  }
-#62 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h"
-};
-
-  struct Transpose {
-    const static int TransposeType = 1;
-    template <
-      int RowsA,
-      int ColsA,
-      typename InputType>
-    static InputType GetElement(const InputType A [RowsA][ColsA], unsigned Row, unsigned Col)
-    {_ssdm_SpecArrayDimSize(A,RowsA);
-      // Transpose, no conjugate
-      return A[Col][Row];
-    }
-  
-public :
-inline __attribute__((always_inline)) Transpose() { _ssdm_SpecConstant(&TransposeType);  }
-#75 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h"
-};
-
-  struct ConjugateTranspose {
-    const static int TransposeType = 2;
-    template <
-      int RowsA,
-      int ColsA,
-      typename InputType>
-    static InputType GetElement(const InputType A [RowsA][ColsA], unsigned Row, unsigned Col)
-    {_ssdm_SpecArrayDimSize(A,RowsA);
-      // Complex conjugate transpose.
-      // o For non x_complex types this function will return an unaltered value.
-      return x_conj(A[Col][Row]);
-    }
-  
-public :
-inline __attribute__((always_inline)) ConjugateTranspose() { _ssdm_SpecConstant(&TransposeType);  }
-#89 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h"
-};
-
-  template <
-    class TransposeForm,
-    int RowsA,
-    int ColsA,
-    typename InputType>
-  InputType GetMatrixElement(const InputType A [RowsA][ColsA], unsigned Row, unsigned Col)
-  {_ssdm_SpecArrayDimSize(A,RowsA);
-    // Need to help the compiler identify that the GetElement member function is a template
-    return TransposeForm::template GetElement<RowsA, ColsA, InputType>(A,Row,Col);
-  }
-
-  // ===================================================================================================================
-  // Common math operations and constants. Wrappers/templates to select the correct function based on type.
-
-  // sqrt
-  static float x_sqrt(float x) {
-    return sqrtf(x);
-  }
-  static double x_sqrt(double x) {
-    return sqrt(x);
-  }
-  template <
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1>
-    ap_fixed<W1, I1, Q1, O1, N1> x_sqrt(ap_fixed<W1, I1, Q1, O1, N1> x) {
-    return hls::sqrt(x);
-  }
-
-
-  // copysign
-  static float x_copysign(float a, float b){
-    return copysignf(a, b);
-  }
-  static double x_copysign(double a, double b){
-    return copysign(a, b);
-  }
-
-
-  // sign
-  static float x_sign(float x) {
-    if ( x == 0.0f ) {
-      return 0.0f;
-    } else {
-      return copysignf(1.0f,x);
-    }
-  }
-  static double x_sign(double x) {
-    if ( x == 0.0 ) {
-      return 0.0;
-    } else {
-      return copysign(1.0,x);
-    }
-  }
-  template <
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1>
-    ap_fixed<W1, I1, Q1, O1, N1> x_sign(ap_fixed<W1, I1, Q1, O1, N1> x) {
-    ap_fixed<W1, I1, Q1, O1, N1> tmp = 0;
-    if ( x > 0 ) {
-      tmp = 1;
-    } else {
-      tmp = -1;
-    }
-    return tmp;
-  }
-
-
-  // reciprocal sqrt
-  static float x_rsqrt(float x) {
-    return rsqrtf(x);
-  }
-  static double x_rsqrt(double x) {
-    return rsqrt(x);
-  }
-
-
-  // isneg
-  static int x_isneg(float x) {
-    fp_struct<float> fs = x;
-    return fs.__signbit();
-  }
-  static int x_isneg(double x) {
-    fp_struct<double> fs = x;
-    return fs.__signbit();
-  }
-#282 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h"
-} // end namespace hls
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-#8 "./svd.h" 2
-
-// #include "hls/utils/x_hls_utils.h"
+#11 "./svd.h" 2
 // #include <assert.h>
-// #include <iostream>
-// #include <iomanip>
 
+// #include <iomanip>
+namespace hls {
+  template<typename InType>
+  bool x_isneg(InType n){
+    return n<0;
+  }
+
+  template<typename InType>
+  InType x_conj(InType n){
+    return n;
+  }
+
+  template<typename InType>
+  InType x_rsqrt(InType n){
+    return 1/std::sqrt(n);
+  }
+
+  template<typename InType>
+  InType x_copysign(InType a, InType b){
+    if (b>=0) return a>0?a:-a;
+    else return a<0?a:-a;
+  }
+
+
+
+
+  template<typename InType>
+  class complex{
+    public:
+    InType real(){return r;}
+    InType imag(){return i;}
+    void real(InType rin){r = rin;}
+    void imag(InType iin){i=iin;}
+    private:
+    InType r;
+    InType i;
+
+  };
+}
+
+//inline float sqrtf(float n){
+//  return n;
+//}
 
 namespace svd {
  // ===================================================================================================================
@@ -55830,7 +44475,7 @@ namespace svd {
   
 public :
 inline __attribute__((always_inline)) svd_traits() { _ssdm_SpecConstant(&NUM_SWEEPS); _ssdm_SpecConstant(&MIN_DIM); _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&OFF_DIAG_II); _ssdm_SpecConstant(&DIAG_II);  }
-#36 "./svd.h"
+#78 "./svd.h"
 };
 
   // ===================================================================================================================
@@ -55884,7 +44529,7 @@ inline __attribute__((always_inline)) svd_traits() { _ssdm_SpecConstant(&NUM_SWE
     typename InType,
     typename CSType>
   void calc_angle(
-    std::complex<InType> A,
+    hls::complex<InType> A,
     CSType &cosThetaA, CSType &sinThetaA,
     CSType &cosThetaAdiv2, CSType &sinThetaAdiv2,
     bool &is_pos_real, bool &is_imag)
@@ -55979,7 +44624,7 @@ _ssdm_InlineSelf(0, "");
  const AOutType outZERO = 0;
     CSType s1, c1, s2, c2;
     AInType u1, u2;
-    std::complex<AInType> A, B;
+    hls::complex<AInType> A, B;
     CSType cosA_full, sinA_full, cosA_half, sinA_half;
     CSType cosB_full, sinB_full, cosB_half, sinB_half;
     bool A_is_pos_real, A_is_imag;
@@ -56060,6 +44705,7 @@ _ssdm_InlineSelf(0, "");
     vx_out = vx_int;
     vy_out = vy_int;
     vz_out = vz_int;
+
   }
 
 
@@ -56087,7 +44733,7 @@ _ssdm_InlineSelf(0, "");
     //calc svd, update col
     svd_calc_diag:for (int proc = 0; proc < n_proc - is_odd; proc++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-#290 "./svd.h"
+#333 "./svd.h"
 
       // Fetch w,x,y,z values
       w_in = strm_in.read();
@@ -56174,7 +44820,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
       // 2 cols update
       svd_calc_off_r:for (int off_row = 0; off_row < SVDTraits::MIN_DIM - 2; off_row++) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-#374 "./svd.h"
+#417 "./svd.h"
 
         w_in = strm_in.read();
         vw_in = strm_in.read();
@@ -56242,7 +44888,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
       // 2 rows updates
       svd_calc_off_c:for (int off_col = 0; off_col < SVDTraits::MIN_DIM - 2; off_col++) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-#439 "./svd.h"
+#482 "./svd.h"
 
 
         uw_new = strm_in.read();
@@ -56317,7 +44963,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
     for(int i=0; i<RowsA; i++){
       rd_buffer:for(int j=0; j<ColsA; j++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-#511 "./svd.h"
+#554 "./svd.h"
 
         S[i][j] = A[i][j];
         U[i][j] = i==j?1:0;
@@ -56372,7 +45018,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         //read diag
         svd_rd_diag:for (int proc = 0; proc < n_proc; proc++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-#563 "./svd.h"
+#606 "./svd.h"
 
           init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
 
@@ -56454,7 +45100,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         //write back diag and cols
         svd_wb_diag:for (int proc = 0; proc < n_proc; proc++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-#642 "./svd.h"
+#685 "./svd.h"
 
           init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
           if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -56481,7 +45127,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         for (int proc = 0; proc < n_proc; proc++){
           svd_rd_off_r:for (int i=0; i<ColsA; i++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-#666 "./svd.h"
+#709 "./svd.h"
 
             if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
             if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -56553,7 +45199,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         for (int proc = 0; proc < n_proc; proc++){
           svd_wb_off_r:for (int i=0; i<ColsA; i++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-#735 "./svd.h"
+#778 "./svd.h"
 
             if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
             if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -56572,7 +45218,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         for (int proc = 0; proc < n_proc; proc++){
           svd_rd_off_c:for (int i=0; i<ColsA; i++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-#751 "./svd.h"
+#794 "./svd.h"
 
             if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
             if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -60741,6 +49387,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 // #include "hls_linear_algebra.h"
 
 
+
 using namespace std;
 
 //----------------------------------------------------------
@@ -60877,7 +49524,7 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
       LOOP_DOT_PROD:
       for (int k = 0; k < 100; k++) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-#147 "dut.cpp"
+#148 "dut.cpp"
 
         if (j == 0){
           A[k] = strm_in.read();
@@ -60923,7 +49570,7 @@ void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
       LOOP_DOT_PROD:
       for (int k = 0; k < VEC_SIZ; k++) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-#190 "dut.cpp"
+#191 "dut.cpp"
 
         if (j == 0) {
           A[k] = strm_in.read();
@@ -60942,49 +49589,6 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 class ssdm_global_array_dutpp0cppaplinecpp {
 	public:
 		 inline __attribute__((always_inline)) ssdm_global_array_dutpp0cppaplinecpp() {
-			_ssdm_SpecConstant(&hls::ref_cordic);
-			_ssdm_SpecConstant(&hls::ref_4oPi_512);
-			_ssdm_SpecConstant(hls::ref_4oPi_table_256);
-			_ssdm_SpecConstant(hls::ref_4oPi_table_100);
-			_ssdm_SpecConstant(hls::ref_4oPi_table_80);
-			_ssdm_SpecConstant(&hls::ref_Pio4_400);
-			_ssdm_SpecConstant(hls::ref_Pio4_table);
-			_ssdm_SpecConstant(hls::cordic_ctab_table_int_128);
-			_ssdm_SpecConstant(hls::cordic_ctab_table_128);
-			_ssdm_SpecConstant(hls::cordic_ctab_table_floatdouble_128);
-			_ssdm_SpecConstant(hls::cordic_hyperb_table_floatdouble_128);
-			_ssdm_SpecConstant(hls::cordic_hyperb_table_128);
-			_ssdm_SpecConstant(hls::cordic_hyperb_table_128_160);
-			_ssdm_SpecConstant(&hls::log_reduce::p0);
-			_ssdm_SpecConstant(&hls::log_reduce::alpha0);
-			_ssdm_SpecConstant(&hls::log_reduce::p1);
-			_ssdm_SpecConstant(&hls::log_reduce::alpha1);
-			_ssdm_SpecConstant(&hls::log_reduce::p2);
-			_ssdm_SpecConstant(&hls::log_reduce::alpha2);
-			_ssdm_SpecConstant(&hls::log_reduce::p3);
-			_ssdm_SpecConstant(&hls::log_reduce::alpha3);
-			_ssdm_SpecConstant(&hls::log_reduce::p4);
-			_ssdm_SpecConstant(&hls::log_reduce::alpha4);
-			_ssdm_SpecConstant(&hls::log_reduce::p5);
-			_ssdm_SpecConstant(&hls::log_reduce::alpha5);
-			_ssdm_SpecConstant(&hls::log_reduce::p6);
-			_ssdm_SpecConstant(&hls::log_reduce::alpha6);
-			_ssdm_SpecConstant(&hls::log_reduce::p7);
-			_ssdm_SpecConstant(&hls::log_reduce::alpha7);
-			_ssdm_SpecConstant(&hls::log_reduce::p8);
-			_ssdm_SpecConstant(&hls::log_reduce::alpha8);
-			_ssdm_SpecConstant(&hls::log_reduce::p9);
-			_ssdm_SpecConstant(&hls::log_reduce::alpha9);
-			_ssdm_SpecConstant(&hls::log_reduce::p10);
-			_ssdm_SpecConstant(hls::cos_K0);
-			_ssdm_SpecConstant(hls::cos_K1);
-			_ssdm_SpecConstant(hls::cos_K2);
-			_ssdm_SpecConstant(hls::sin_K0);
-			_ssdm_SpecConstant(hls::sin_K1);
-			_ssdm_SpecConstant(hls::sin_K2);
-			_ssdm_SpecConstant(hls::sin_cos_K0);
-			_ssdm_SpecConstant(hls::sin_cos_K1);
-			_ssdm_SpecConstant(hls::sin_cos_K2);
 			_ssdm_SpecConstant(&VEC_SIZ);
 		}
 };

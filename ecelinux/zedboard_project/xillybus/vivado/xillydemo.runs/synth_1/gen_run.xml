@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1670307268">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1670327804">
   <File Type="VDS-TIMING-PB" Name="xillydemo_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="xillydemo_timing_summary_synth.rpt"/>
   <File Type="RDS-RDS" Name="xillydemo.vds"/>
@@ -80,7 +80,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../src/fpga-design/dut_frsqrt_32ns_32ns_32_11_full_dsp.v">
+    <File Path="$PPRDIR/../src/fpga-design/dut_fsqrt_32ns_32ns_32_12.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -95,6 +95,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../src/fpga-design/dut_fdiv_32ns_32ns_32_16.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/fpga-design/dut_fcmp_32ns_32ns_1_1.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -185,6 +192,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ip/dut_ap_fcmp_0_no_dsp_32/dut_ap_fcmp_0_no_dsp_32.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/ip/dut_ap_fdiv_14_no_dsp_32/dut_ap_fdiv_14_no_dsp_32.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -199,7 +213,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/dut_ap_frsqrt_9_full_dsp_32/dut_ap_frsqrt_9_full_dsp_32.xci">
+    <File Path="$PSRCDIR/sources_1/ip/dut_ap_fsqrt_10_no_dsp_32/dut_ap_fsqrt_10_no_dsp_32.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -230,6 +244,6 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="vga_fifo"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_8x2048"/>
   <BlockFileSet Type="BlockSrcs" Name="fifo_32x512"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_8x2048"/>
 </GenRun>
