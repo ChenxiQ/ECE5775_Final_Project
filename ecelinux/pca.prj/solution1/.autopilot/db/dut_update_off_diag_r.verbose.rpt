@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_update_off_diag_r'
 ================================================================
-* Date:           Mon Dec  5 02:26:29 2022
+* Date:           Tue Dec  6 01:13:00 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -25,24 +25,24 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +---------+---------+---------+---------+---------+
-    |      Latency      |      Interval     | Pipeline|
-    |   min   |   max   |   min   |   max   |   Type  |
-    +---------+---------+---------+---------+---------+
-    |  4291632|  4291632|  4291632|  4291632|   none  |
-    +---------+---------+---------+---------+---------+
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  1584|  1584|  1584|  1584|   none  |
+    +------+------+------+------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
-        |                    |      Latency      | Iteration|  Initiation Interval  |  Trip  |          |
-        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
-        |- L_svd_calc_off_r  |  4291630|  4291630|        29|         14|          1|  306544|    yes   |
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        +--------------------+------+------+----------+-----------+-----------+------+----------+
+        |                    |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+------+------+----------+-----------+-----------+------+----------+
+        |- L_svd_calc_off_r  |  1582|  1582|        29|         14|          1|   112|    yes   |
+        +--------------------+------+------+----------+-----------+-----------+------+----------+
 
 
 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      -|       0|     28|
+|Expression       |        -|      -|       0|     12|
 |FIFO             |        -|      -|       -|      -|
 |Instance         |        -|      5|     348|    711|
 |Memory           |        -|      -|       -|      -|
-|Multiplexer      |        -|      -|       -|    248|
-|Register         |        -|      -|     795|      -|
+|Multiplexer      |        -|      -|       -|    224|
+|Register         |        -|      -|     771|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|      5|    1143|    987|
+|Total            |        0|      5|    1119|    947|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
@@ -92,12 +92,12 @@
     +-------------------------------+----------+-------+---+----+------------+------------+
     |         Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-------------------------------+----------+-------+---+----+------------+------------+
-    |indvar_flatten_next_fu_119_p2  |     +    |      0|  0|  19|          19|           1|
+    |indvar_flatten_next_fu_119_p2  |     +    |      0|  0|   7|           7|           1|
     |ap_sig_221                     |    and   |      0|  0|   1|           1|           1|
     |ap_sig_233                     |    and   |      0|  0|   1|           1|           1|
-    |exitcond_flatten_fu_113_p2     |   icmp   |      0|  0|   7|          19|          19|
+    |exitcond_flatten_fu_113_p2     |   icmp   |      0|  0|   3|           7|           6|
     +-------------------------------+----------+-------+---+----+------------+------------+
-    |Total                          |          |      0|  0|  28|          40|          22|
+    |Total                          |          |      0|  0|  12|          16|           9|
     +-------------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
@@ -110,12 +110,12 @@
     |grp_fu_72_p1                 |  32|          6|   32|        192|
     |grp_fu_76_p0                 |  64|          8|   32|        256|
     |grp_fu_76_p1                 |  64|          9|   32|        288|
-    |indvar_flatten_phi_fu_65_p4  |  19|          2|   19|         38|
-    |indvar_flatten_reg_61        |  19|          2|   19|         38|
+    |indvar_flatten_phi_fu_65_p4  |   7|          2|    7|         14|
+    |indvar_flatten_reg_61        |   7|          2|    7|         14|
     |strm_in_V_blk_n              |   1|          2|    1|          2|
     |strm_out_V_blk_n             |   1|          2|    1|          2|
     +-----------------------------+----+-----------+-----+-----------+
-    |Total                        | 248|         56|  170|       1027|
+    |Total                        | 224|         56|  146|        979|
     +-----------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -129,8 +129,8 @@
     |ap_reg_ppstg_exitcond_flatten_reg_125_pp0_iter1  |   1|   0|    1|          0|
     |ap_reg_ppstg_tmp_8_reg_144_pp0_iter1             |  32|   0|   32|          0|
     |exitcond_flatten_reg_125                         |   1|   0|    1|          0|
-    |indvar_flatten_next_reg_129                      |  19|   0|   19|          0|
-    |indvar_flatten_reg_61                            |  19|   0|   19|          0|
+    |indvar_flatten_next_reg_129                      |   7|   0|    7|          0|
+    |indvar_flatten_reg_61                            |   7|   0|    7|          0|
     |reg_102                                          |  32|   0|   32|          0|
     |reg_108                                          |  32|   0|   32|          0|
     |reg_80                                           |  32|   0|   32|          0|
@@ -154,7 +154,7 @@
     |tmp_9_reg_149                                    |  32|   0|   32|          0|
     |tmp_i3_reg_209                                   |  32|   0|   32|          0|
     +-------------------------------------------------+----+----+-----+-----------+
-    |Total                                            | 795|   0|  795|          0|
+    |Total                                            | 771|   0|  771|          0|
     +-------------------------------------------------+----+----+-----+-----------+
 
 
@@ -290,15 +290,15 @@ ST_1: stg_34 [1/1] 1.57ns
 :2  br label %.preheader
 
 
- <State 2>: 2.33ns
+ <State 2>: 1.97ns
 ST_2: indvar_flatten [1/1] 0.00ns
-.preheader:0  %indvar_flatten = phi i19 [ 0, %0 ], [ %indvar_flatten_next, %.preheader.preheader ]
+.preheader:0  %indvar_flatten = phi i7 [ 0, %0 ], [ %indvar_flatten_next, %.preheader.preheader ]
 
-ST_2: exitcond_flatten [1/1] 2.33ns
-.preheader:1  %exitcond_flatten = icmp eq i19 %indvar_flatten, -217744
+ST_2: exitcond_flatten [1/1] 1.97ns
+.preheader:1  %exitcond_flatten = icmp eq i7 %indvar_flatten, -16
 
-ST_2: indvar_flatten_next [1/1] 2.08ns
-.preheader:2  %indvar_flatten_next = add i19 %indvar_flatten, 1
+ST_2: indvar_flatten_next [1/1] 1.72ns
+.preheader:2  %indvar_flatten_next = add i7 %indvar_flatten, 1
 
 ST_2: stg_38 [1/1] 0.00ns
 .preheader:3  br i1 %exitcond_flatten, label %1, label %.preheader.preheader
@@ -654,7 +654,7 @@ ST_30: stg_136 [1/1] 0.00ns
 .preheader.preheader:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @L_svd_calc_off_r_str)
 
 ST_30: empty_9 [1/1] 0.00ns
-.preheader.preheader:1  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 306544, i64 306544, i64 306544)
+.preheader.preheader:1  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 112, i64 112, i64 112)
 
 ST_30: stg_138 [1/1] 0.00ns
 .preheader.preheader:2  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1810) nounwind
@@ -1002,8 +1002,8 @@ stg_144             (ret              ) [ 00000000000000000000000000000000]
 
 <comp id="61" class="1005" name="indvar_flatten_reg_61">
 <pin_list>
-<pin id="62" dir="0" index="0" bw="19" slack="1"/>
-<pin id="63" dir="1" index="1" bw="19" slack="1"/>
+<pin id="62" dir="0" index="0" bw="7" slack="1"/>
+<pin id="63" dir="1" index="1" bw="7" slack="1"/>
 </pin_list>
 <bind>
 <opset="indvar_flatten (phireg) "/>
@@ -1014,9 +1014,9 @@ stg_144             (ret              ) [ 00000000000000000000000000000000]
 <pin_list>
 <pin id="66" dir="0" index="0" bw="1" slack="1"/>
 <pin id="67" dir="0" index="1" bw="0" slack="2147483647"/>
-<pin id="68" dir="0" index="2" bw="19" slack="0"/>
+<pin id="68" dir="0" index="2" bw="7" slack="0"/>
 <pin id="69" dir="0" index="3" bw="0" slack="2147483647"/>
-<pin id="70" dir="1" index="4" bw="19" slack="0"/>
+<pin id="70" dir="1" index="4" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
@@ -1110,8 +1110,8 @@ stg_144             (ret              ) [ 00000000000000000000000000000000]
 
 <comp id="113" class="1004" name="exitcond_flatten_fu_113">
 <pin_list>
-<pin id="114" dir="0" index="0" bw="19" slack="0"/>
-<pin id="115" dir="0" index="1" bw="19" slack="0"/>
+<pin id="114" dir="0" index="0" bw="7" slack="0"/>
+<pin id="115" dir="0" index="1" bw="7" slack="0"/>
 <pin id="116" dir="1" index="2" bw="1" slack="1"/>
 </pin_list>
 <bind>
@@ -1122,9 +1122,9 @@ stg_144             (ret              ) [ 00000000000000000000000000000000]
 
 <comp id="119" class="1004" name="indvar_flatten_next_fu_119">
 <pin_list>
-<pin id="120" dir="0" index="0" bw="19" slack="0"/>
+<pin id="120" dir="0" index="0" bw="7" slack="0"/>
 <pin id="121" dir="0" index="1" bw="1" slack="0"/>
-<pin id="122" dir="1" index="2" bw="19" slack="0"/>
+<pin id="122" dir="1" index="2" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -1144,8 +1144,8 @@ stg_144             (ret              ) [ 00000000000000000000000000000000]
 
 <comp id="129" class="1005" name="indvar_flatten_next_reg_129">
 <pin_list>
-<pin id="130" dir="0" index="0" bw="19" slack="0"/>
-<pin id="131" dir="1" index="1" bw="19" slack="0"/>
+<pin id="130" dir="0" index="0" bw="7" slack="0"/>
+<pin id="131" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opset="indvar_flatten_next "/>
@@ -1497,15 +1497,15 @@ stg_144             (ret              ) [ 00000000000000000000000000000000]
 |----------|----------------------------|---------|---------|---------|
 |   fmul   |          grp_fu_76         |    3    |   143   |   321   |
 |----------|----------------------------|---------|---------|---------|
-|    add   | indvar_flatten_next_fu_119 |    0    |    0    |    19   |
+|    add   | indvar_flatten_next_fu_119 |    0    |    0    |    7    |
 |----------|----------------------------|---------|---------|---------|
-|   icmp   |   exitcond_flatten_fu_113  |    0    |    0    |    7    |
+|   icmp   |   exitcond_flatten_fu_113  |    0    |    0    |    3    |
 |----------|----------------------------|---------|---------|---------|
 |   read   |       grp_read_fu_48       |    0    |    0    |    0    |
 |----------|----------------------------|---------|---------|---------|
 |   write  |       grp_write_fu_54      |    0    |    0    |    0    |
 |----------|----------------------------|---------|---------|---------|
-|   Total  |                            |    5    |   348   |   737   |
+|   Total  |                            |    5    |   348   |   721   |
 |----------|----------------------------|---------|---------|---------|
 
 Memories:
@@ -1516,8 +1516,8 @@ N/A
 |                           |   FF   |
 +---------------------------+--------+
 |  exitcond_flatten_reg_125 |    1   |
-|indvar_flatten_next_reg_129|   19   |
-|   indvar_flatten_reg_61   |   19   |
+|indvar_flatten_next_reg_129|    7   |
+|   indvar_flatten_reg_61   |    7   |
 |          reg_102          |   32   |
 |          reg_108          |   32   |
 |           reg_80          |   32   |
@@ -1541,7 +1541,7 @@ N/A
 |       tmp_9_reg_149       |   32   |
 |       tmp_i3_reg_209      |   32   |
 +---------------------------+--------+
-|           Total           |   743  |
+|           Total           |   719  |
 +---------------------------+--------+
 
 * Multiplexer (MUX) list: 
@@ -1562,10 +1562,10 @@ N/A
 +-----------+--------+--------+--------+--------+
 |           | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+
-|  Function |    5   |    -   |   348  |   737  |
+|  Function |    5   |    -   |   348  |   721  |
 |   Memory  |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |    7   |    -   |   160  |
-|  Register |    -   |    -   |   743  |    -   |
+|  Register |    -   |    -   |   719  |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |    5   |    7   |  1091  |   897  |
+|   Total   |    5   |    7   |  1067  |   881  |
 +-----------+--------+--------+--------+--------+

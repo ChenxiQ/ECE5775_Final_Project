@@ -75,7 +75,7 @@ struct dut : public sc_module {
     sc_signal< sc_logic > ap_reg_ppiten_pp0_it3;
     sc_signal< sc_logic > strm_out_V_blk_n;
     sc_signal< sc_lv<1> > ap_reg_ppstg_exitcond_flatten_reg_339_pp0_iter2;
-    sc_signal< sc_lv<19> > indvar_flatten_reg_109;
+    sc_signal< sc_lv<7> > indvar_flatten_reg_109;
     sc_signal< sc_lv<32> > grp_fu_152_p2;
     sc_signal< sc_lv<32> > reg_160;
     sc_signal< bool > ap_sig_131;
@@ -94,8 +94,8 @@ struct dut : public sc_module {
     sc_signal< sc_lv<1> > exitcond_flatten_fu_302_p2;
     sc_signal< bool > ap_sig_165;
     sc_signal< sc_lv<1> > ap_reg_ppstg_exitcond_flatten_reg_339_pp0_iter1;
-    sc_signal< sc_lv<19> > indvar_flatten_next_fu_308_p2;
-    sc_signal< sc_lv<19> > indvar_flatten_next_reg_343;
+    sc_signal< sc_lv<7> > indvar_flatten_next_fu_308_p2;
+    sc_signal< sc_lv<7> > indvar_flatten_next_reg_343;
     sc_signal< sc_lv<32> > tmp_33_reg_348;
     sc_signal< sc_lv<32> > tmp_34_reg_353;
     sc_signal< sc_lv<32> > tmp_35_reg_358;
@@ -135,7 +135,7 @@ struct dut : public sc_module {
     sc_signal< sc_logic > grp_dut_matmul_fu_144_strm_in_V_read;
     sc_signal< sc_lv<32> > grp_dut_matmul_fu_144_strm_out_V_din;
     sc_signal< sc_logic > grp_dut_matmul_fu_144_strm_out_V_write;
-    sc_signal< sc_lv<19> > indvar_flatten_phi_fu_113_p4;
+    sc_signal< sc_lv<7> > indvar_flatten_phi_fu_113_p4;
     sc_signal< sc_logic > ap_reg_grp_dut_calc_svd_fu_120_ap_start;
     sc_signal< sc_logic > ap_sig_cseq_ST_st23_fsm_9;
     sc_signal< bool > ap_sig_297;
@@ -194,7 +194,7 @@ struct dut : public sc_module {
     static const sc_lv<32> ap_const_lv32_8;
     static const sc_lv<32> ap_const_lv32_3;
     static const sc_lv<32> ap_const_lv32_1;
-    static const sc_lv<19> ap_const_lv19_0;
+    static const sc_lv<7> ap_const_lv7_0;
     static const sc_lv<32> ap_const_lv32_9;
     static const sc_lv<32> ap_const_lv32_2;
     static const sc_lv<32> ap_const_lv32_1F;
@@ -203,8 +203,8 @@ struct dut : public sc_module {
     static const sc_lv<9> ap_const_lv9_181;
     static const sc_lv<8> ap_const_lv8_7F;
     static const sc_lv<32> ap_const_lv32_36;
-    static const sc_lv<19> ap_const_lv19_4AD70;
-    static const sc_lv<19> ap_const_lv19_1;
+    static const sc_lv<7> ap_const_lv7_70;
+    static const sc_lv<7> ap_const_lv7_1;
     static const sc_lv<32> ap_const_lv32_A;
     // Thread declarations
     void thread_ap_clk_no_reset_();

@@ -80,7 +80,7 @@ struct dut_update_off_diag_r : public sc_module {
     sc_signal< sc_logic > ap_reg_ppiten_pp0_it2;
     sc_signal< sc_logic > strm_out_V_blk_n;
     sc_signal< sc_lv<1> > ap_reg_ppstg_exitcond_flatten_reg_125_pp0_iter1;
-    sc_signal< sc_lv<19> > indvar_flatten_reg_61;
+    sc_signal< sc_lv<7> > indvar_flatten_reg_61;
     sc_signal< sc_lv<32> > grp_fu_76_p2;
     sc_signal< sc_lv<32> > reg_80;
     sc_signal< bool > ap_sig_221;
@@ -92,8 +92,8 @@ struct dut_update_off_diag_r : public sc_module {
     sc_signal< sc_lv<32> > grp_fu_72_p2;
     sc_signal< sc_lv<32> > reg_108;
     sc_signal< sc_lv<1> > exitcond_flatten_fu_113_p2;
-    sc_signal< sc_lv<19> > indvar_flatten_next_fu_119_p2;
-    sc_signal< sc_lv<19> > indvar_flatten_next_reg_129;
+    sc_signal< sc_lv<7> > indvar_flatten_next_fu_119_p2;
+    sc_signal< sc_lv<7> > indvar_flatten_next_reg_129;
     sc_signal< sc_lv<32> > tmp_6_reg_134;
     sc_signal< sc_lv<32> > tmp_7_reg_139;
     sc_signal< sc_lv<32> > tmp_8_reg_144;
@@ -111,7 +111,7 @@ struct dut_update_off_diag_r : public sc_module {
     sc_signal< sc_lv<32> > tmp_19_reg_199;
     sc_signal< sc_lv<32> > tmp_3_i2_reg_204;
     sc_signal< sc_lv<32> > tmp_i3_reg_209;
-    sc_signal< sc_lv<19> > indvar_flatten_phi_fu_65_p4;
+    sc_signal< sc_lv<7> > indvar_flatten_phi_fu_65_p4;
     sc_signal< sc_lv<32> > grp_fu_72_p0;
     sc_signal< sc_lv<32> > grp_fu_72_p1;
     sc_signal< sc_lv<32> > grp_fu_76_p0;
@@ -156,9 +156,9 @@ struct dut_update_off_diag_r : public sc_module {
     static const sc_lv<32> ap_const_lv32_D;
     static const sc_lv<32> ap_const_lv32_E;
     static const sc_lv<32> ap_const_lv32_1;
-    static const sc_lv<19> ap_const_lv19_0;
-    static const sc_lv<19> ap_const_lv19_4AD70;
-    static const sc_lv<19> ap_const_lv19_1;
+    static const sc_lv<7> ap_const_lv7_0;
+    static const sc_lv<7> ap_const_lv7_70;
+    static const sc_lv<7> ap_const_lv7_1;
     static const sc_lv<32> ap_const_lv32_F;
     // Thread declarations
     void thread_ap_clk_no_reset_();

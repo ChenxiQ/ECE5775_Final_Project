@@ -62,9 +62,9 @@ architecture behav of dut_update_off_diag_r is
     constant ap_const_lv32_D : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001101";
     constant ap_const_lv32_E : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001110";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
-    constant ap_const_lv19_0 : STD_LOGIC_VECTOR (18 downto 0) := "0000000000000000000";
-    constant ap_const_lv19_4AD70 : STD_LOGIC_VECTOR (18 downto 0) := "1001010110101110000";
-    constant ap_const_lv19_1 : STD_LOGIC_VECTOR (18 downto 0) := "0000000000000000001";
+    constant ap_const_lv7_0 : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
+    constant ap_const_lv7_70 : STD_LOGIC_VECTOR (6 downto 0) := "1110000";
+    constant ap_const_lv7_1 : STD_LOGIC_VECTOR (6 downto 0) := "0000001";
     constant ap_const_lv32_F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001111";
 
     signal ap_CS_fsm : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000001";
@@ -107,7 +107,7 @@ architecture behav of dut_update_off_diag_r is
     signal ap_reg_ppiten_pp0_it2 : STD_LOGIC := '0';
     signal strm_out_V_blk_n : STD_LOGIC;
     signal ap_reg_ppstg_exitcond_flatten_reg_125_pp0_iter1 : STD_LOGIC_VECTOR (0 downto 0);
-    signal indvar_flatten_reg_61 : STD_LOGIC_VECTOR (18 downto 0);
+    signal indvar_flatten_reg_61 : STD_LOGIC_VECTOR (6 downto 0);
     signal grp_fu_76_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal reg_80 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_sig_221 : BOOLEAN;
@@ -119,8 +119,8 @@ architecture behav of dut_update_off_diag_r is
     signal grp_fu_72_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal reg_108 : STD_LOGIC_VECTOR (31 downto 0);
     signal exitcond_flatten_fu_113_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal indvar_flatten_next_fu_119_p2 : STD_LOGIC_VECTOR (18 downto 0);
-    signal indvar_flatten_next_reg_129 : STD_LOGIC_VECTOR (18 downto 0);
+    signal indvar_flatten_next_fu_119_p2 : STD_LOGIC_VECTOR (6 downto 0);
+    signal indvar_flatten_next_reg_129 : STD_LOGIC_VECTOR (6 downto 0);
     signal tmp_6_reg_134 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_7_reg_139 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_8_reg_144 : STD_LOGIC_VECTOR (31 downto 0);
@@ -138,7 +138,7 @@ architecture behav of dut_update_off_diag_r is
     signal tmp_19_reg_199 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_3_i2_reg_204 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_i3_reg_209 : STD_LOGIC_VECTOR (31 downto 0);
-    signal indvar_flatten_phi_fu_65_p4 : STD_LOGIC_VECTOR (18 downto 0);
+    signal indvar_flatten_phi_fu_65_p4 : STD_LOGIC_VECTOR (6 downto 0);
     signal grp_fu_72_p0 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_72_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_76_p0 : STD_LOGIC_VECTOR (31 downto 0);
@@ -285,7 +285,7 @@ begin
             if (((ap_const_logic_1 = ap_reg_ppiten_pp0_it1) and (exitcond_flatten_reg_125 = ap_const_lv1_0) and (ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_1) and not((((ap_const_logic_1 = ap_reg_ppiten_pp0_it1) and ap_sig_221) or ((ap_const_logic_1 = ap_reg_ppiten_pp0_it2) and ap_sig_233))))) then 
                 indvar_flatten_reg_61 <= indvar_flatten_next_reg_129;
             elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st1_fsm_0) and not((ap_start = ap_const_logic_0)))) then 
-                indvar_flatten_reg_61 <= ap_const_lv19_0;
+                indvar_flatten_reg_61 <= ap_const_lv7_0;
             end if; 
         end if;
     end process;
@@ -890,7 +890,7 @@ begin
         end if; 
     end process;
 
-    exitcond_flatten_fu_113_p2 <= "1" when (indvar_flatten_phi_fu_65_p4 = ap_const_lv19_4AD70) else "0";
+    exitcond_flatten_fu_113_p2 <= "1" when (indvar_flatten_phi_fu_65_p4 = ap_const_lv7_70) else "0";
 
     grp_fu_72_ce_assign_proc : process(ap_sig_cseq_ST_pp0_stg1_fsm_2, ap_reg_ppiten_pp0_it0, ap_reg_ppiten_pp0_it1, ap_sig_cseq_ST_pp0_stg2_fsm_3, ap_sig_cseq_ST_pp0_stg3_fsm_4, ap_sig_cseq_ST_pp0_stg4_fsm_5, ap_sig_cseq_ST_pp0_stg5_fsm_6, ap_sig_cseq_ST_pp0_stg6_fsm_7, ap_sig_cseq_ST_pp0_stg7_fsm_8, ap_sig_cseq_ST_pp0_stg8_fsm_9, ap_sig_cseq_ST_pp0_stg9_fsm_10, ap_sig_cseq_ST_pp0_stg10_fsm_11, ap_sig_cseq_ST_pp0_stg11_fsm_12, ap_sig_cseq_ST_pp0_stg12_fsm_13, ap_sig_cseq_ST_pp0_stg13_fsm_14, ap_sig_cseq_ST_pp0_stg0_fsm_1, ap_reg_ppiten_pp0_it2, ap_sig_221, ap_sig_233)
     begin
@@ -993,7 +993,7 @@ begin
         end if; 
     end process;
 
-    indvar_flatten_next_fu_119_p2 <= std_logic_vector(unsigned(indvar_flatten_phi_fu_65_p4) + unsigned(ap_const_lv19_1));
+    indvar_flatten_next_fu_119_p2 <= std_logic_vector(unsigned(indvar_flatten_phi_fu_65_p4) + unsigned(ap_const_lv7_1));
 
     indvar_flatten_phi_fu_65_p4_assign_proc : process(ap_reg_ppiten_pp0_it1, exitcond_flatten_reg_125, ap_sig_cseq_ST_pp0_stg0_fsm_1, indvar_flatten_reg_61, indvar_flatten_next_reg_129)
     begin

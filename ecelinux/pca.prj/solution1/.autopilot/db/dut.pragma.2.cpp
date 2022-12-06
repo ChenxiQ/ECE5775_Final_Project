@@ -1,5 +1,5 @@
-# 1 "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp"
-# 1 "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp" 1
+# 1 "/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp"
+# 1 "/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -203,7 +203,7 @@ extern "C" {
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp" 2
+# 1 "/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/dut.pragma.1.cpp" 2
 # 1 "dut.cpp"
 # 1 "dut.cpp" 1
 # 1 "<built-in>" 1
@@ -437,62 +437,40 @@ extern "C" {
 
 
 
+// #include <ap_int.h>
+// #include <ap_fixed.h>
+
+// typedef bool bit;
+// typedef ap_int<8> bit8_t;
+// typedef ap_uint<2> bit2_t;
+// typedef ap_uint<32> bit32_t;
+
+typedef float fix32_t;
+//typedef ap_fixed<16,16> fix32_t;
+# 9 "./pca.h" 2
+
+// #include <fstream>
+// #include <iostream>
+// #include <iomanip>
+//#include "hls_linear_algebra.h"
 
 
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h" 1
-// -*- c++ -*-
-/*
-#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
-#-
-#-  This file contains confidential and proprietary information
-#-  of Xilinx, Inc. and is protected under U.S. and
-#-  international copyright and other intellectual property
-#-  laws.
-#-
-#-  DISCLAIMER
-#-  This disclaimer is not a license and does not grant any
-#-  rights to the materials distributed herewith. Except as
-#-  otherwise provided in a valid license issued to you by
-#-  Xilinx, and to the maximum extent permitted by applicable
-#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-#-  (2) Xilinx shall not be liable (whether in contract or tort,
-#-  including negligence, or under any other theory of
-#-  liability) for any loss or damage of any kind or nature
-#-  related to, arising under or in connection with these
-#-  materials, including for any direct, or any indirect,
-#-  special, incidental, or consequential loss or damage
-#-  (including loss of data, profits, goodwill, or any type of
-#-  loss or damage suffered as a result of any action brought
-#-  by a third party) even if such damage or loss was
-#-  reasonably foreseeable or Xilinx had been advised of the
-#-  possibility of the same.
-#-
-#-  CRITICAL APPLICATIONS
-#-  Xilinx products are not designed or intended to be fail-
-#-  safe, or for use in any application requiring fail-safe
-#-  performance, such as life-support or safety devices or
-#-  systems, Class III medical devices, nuclear facilities,
-#-  applications related to the deployment of airbags, or any
-#-  other applications that could lead to death, personal
-#-  injury, or severe property or environmental damage
-#-  (individually and collectively, "Critical
-#-  Applications"). Customer assumes the sole risk and
-#-  liability of any use of Xilinx products in Critical
-#-  Applications, subject only to applicable laws and
-#-  regulations governing limitations on product liability.
-#-
-#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-#-  PART OF THIS FILE AT ALL TIMES. 
-#- ************************************************************************
+# 1 "./svd.h" 1
 
- *
- */
-# 60 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h"
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h" 1
+
+
+# 1 "./dut.h" 1
+//===========================================================================
+// dut.h
+//===========================================================================
+// @brief: This header file defines the interface for the core functions.
+
+
+
+
+
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_stream.h" 1
 /* -*- c++ -*-*/
 /*
 #-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
@@ -543,12 +521,291 @@ extern "C" {
 #- ************************************************************************
 
  *
+ *
  */
-# 68 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h"
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3
-// Standard iostream objects -*- C++ -*-
 
-// Copyright (C) 1997, 1998, 1999, 2001, 2002, 2005, 2008, 2009, 2010
+
+
+
+/*
+ * This file contains a C++ model of hls::stream.
+ * It defines AutoESL synthesis model.
+ */
+
+
+
+
+
+
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/etc/autopilot_enum.h" 1
+/*
+#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
+#-
+#-  This file contains confidential and proprietary information
+#-  of Xilinx, Inc. and is protected under U.S. and
+#-  international copyright and other intellectual property
+#-  laws.
+#-
+#-  DISCLAIMER
+#-  This disclaimer is not a license and does not grant any
+#-  rights to the materials distributed herewith. Except as
+#-  otherwise provided in a valid license issued to you by
+#-  Xilinx, and to the maximum extent permitted by applicable
+#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+#-  (2) Xilinx shall not be liable (whether in contract or tort,
+#-  including negligence, or under any other theory of
+#-  liability) for any loss or damage of any kind or nature
+#-  related to, arising under or in connection with these
+#-  materials, including for any direct, or any indirect,
+#-  special, incidental, or consequential loss or damage
+#-  (including loss of data, profits, goodwill, or any type of
+#-  loss or damage suffered as a result of any action brought
+#-  by a third party) even if such damage or loss was
+#-  reasonably foreseeable or Xilinx had been advised of the
+#-  possibility of the same.
+#-
+#-  CRITICAL APPLICATIONS
+#-  Xilinx products are not designed or intended to be fail-
+#-  safe, or for use in any application requiring fail-safe
+#-  performance, such as life-support or safety devices or
+#-  systems, Class III medical devices, nuclear facilities,
+#-  applications related to the deployment of airbags, or any
+#-  other applications that could lead to death, personal
+#-  injury, or severe property or environmental damage
+#-  (individually and collectively, "Critical
+#-  Applications"). Customer assumes the sole risk and
+#-  liability of any use of Xilinx products in Critical
+#-  Applications, subject only to applicable laws and
+#-  regulations governing limitations on product liability.
+#-
+#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+#-  PART OF THIS FILE AT ALL TIMES. 
+#- ************************************************************************
+
+ *
+ * $Id$
+ */
+
+
+
+
+
+/* Data Types */
+enum SsdmDataTypes {
+    _ssdm_sc_int = 0,
+    _ssdm_c_int = _ssdm_sc_int,
+    _ssdm_sc_uint = 1,
+    _ssdm_c_uint = _ssdm_sc_uint,
+    _ssdm_sc_bigint = 2,
+    _ssdm_sc_biguint = 3,
+};
+
+
+/* Ports */
+enum SsdmPortTypes {
+    _ssdm_sc_in = 0,
+    _ssdm_sc_out = 1,
+    _ssdm_sc_inout = 2,
+    _ssdm_sc_in_clk,
+
+    _ssdm_fifo_in,
+    _ssdm_sc_fifo_in = _ssdm_fifo_in,
+    _ssdm_tlm_fifo_in = _ssdm_fifo_in,
+    _ssdm_fifo_out,
+    _ssdm_sc_fifo_out = _ssdm_fifo_out,
+    _ssdm_tlm_fifo_out = _ssdm_fifo_out,
+    _ssdm_fifo_inout,
+    _ssdm_sc_fifo_inout = _ssdm_fifo_inout,
+    _ssdm_tlm_fifo_inout = _ssdm_fifo_inout,
+    _ssdm_sc_bus,
+    _ssdm_hls_bus_port = _ssdm_sc_bus,
+    _ssdm_AXI4M_bus_port = _ssdm_sc_bus,
+    _ssdm_port_end,
+};
+
+
+/* Threads (Processes) */
+enum SsdmProcessTypes {
+    _ssdm_method = 0,
+    _ssdm_sc_method = _ssdm_method,
+    _ssdm_thread = 1,
+    _ssdm_sc_thread = _ssdm_thread,
+    _ssdm_cthread = 2,
+    _ssdm_sc_cthread = _ssdm_cthread,
+    _ssdm_process_end,
+};
+
+
+/* Threads (Processes) */
+enum SsdmSensitiveTypes {
+    _ssdm_sensitive = 0,
+    _ssdm_sensitive_pos,
+    _ssdm_sensitive_neg,
+    _ssdm_sensitive_reset0, /* Level = High*/
+    _ssdm_sensitive_reset1, /* Level = Low*/
+    _ssdm_sensitive_end,
+};
+
+
+/* Channels */
+enum SsdmChannelTypes {
+    _ssdm_sc_sig,
+    _ssdm_fifo,
+    _ssdm_sc_fifo = _ssdm_fifo,
+    _ssdm_mem_fifo,
+    _ssdm_sc_mem_fifo = _ssdm_mem_fifo,
+};
+
+/* Regions */
+enum SsdmRegionTypes {
+    _ssdm_region_reset,
+    _ssdm_region_protocol,
+    _ssdm_region_pipeline,
+    _ssdm_region_parallel,
+};
+
+
+
+
+// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
+# 67 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_stream.h" 2
+
+
+namespace hls {
+
+
+
+
+
+//////////////////////////////////////////////
+// Synthesis models for stream
+//////////////////////////////////////////////
+template<typename __STREAM_T__>
+class stream
+{
+  public:
+    /// Constructors
+    inline __attribute__((always_inline)) stream() {
+    }
+
+    inline __attribute__((always_inline)) stream(const char* name) {
+    }
+
+  /// Make copy constructor and assignment operator private
+  private:
+    inline __attribute__((always_inline)) stream(const stream< __STREAM_T__ >& chn):V(chn.V) {
+    }
+
+    inline __attribute__((always_inline)) stream& operator= (const stream< __STREAM_T__ >& chn) {
+        V = chn.V;
+        return *this;
+    }
+
+  public:
+    /// Overload >> and << operators to implement read() and write()
+    inline __attribute__((always_inline)) void operator >> (__STREAM_T__& rdata) {
+        read(rdata);
+    }
+
+    inline __attribute__((always_inline)) void operator << (const __STREAM_T__& wdata) {
+        write(wdata);
+    }
+
+  /// Public API
+  public:
+    /// Empty & Full
+    inline __attribute__((always_inline)) bool empty() const {
+        bool tmp = _ssdm_StreamCanRead(&V);
+        return !tmp;
+    }
+
+    inline __attribute__((always_inline)) bool full() const {
+        bool tmp = _ssdm_StreamCanWrite(&V);
+        return !tmp;
+    }
+
+    /// Blocking read
+    inline __attribute__((always_inline)) void read(__STREAM_T__& dout) {
+        __STREAM_T__ tmp;
+        _ssdm_StreamRead(&V, &tmp);
+        dout = tmp;
+    }
+
+    inline __attribute__((always_inline)) __STREAM_T__ read() {
+        __STREAM_T__ tmp;
+        _ssdm_StreamRead(&V, &tmp);
+        return tmp;
+    }
+
+    /// Nonblocking read
+    inline __attribute__((always_inline)) bool read_nb(__STREAM_T__& dout) {
+        __STREAM_T__ tmp;
+        bool empty_n = _ssdm_StreamNbRead(&V, &tmp);
+        dout = tmp;
+        return empty_n;
+    }
+
+    /// Blocking write
+    inline __attribute__((always_inline)) void write(const __STREAM_T__& din) {
+        __STREAM_T__ tmp = din;
+        _ssdm_StreamWrite(&V, &tmp);
+    }
+
+    /// Nonblocking write
+    inline __attribute__((always_inline)) bool write_nb(const __STREAM_T__& din) {
+        __STREAM_T__ tmp = din;
+        bool full_n = _ssdm_StreamNbWrite(&V, &tmp);
+        return full_n;
+    }
+
+    /// Fifo size
+    inline __attribute__((always_inline)) unsigned size() {
+        unsigned size = _ssdm_StreamSize(&V);
+        return size;
+    }
+
+  public:
+    __STREAM_T__ V;
+};
+
+} // namespace hls
+
+
+
+
+// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
+# 9 "./dut.h" 2
+
+# 1 "./pca.h" 1
+//===========================================================================
+// pca.h
+//===========================================================================
+// @brief: TODO
+# 10 "./dut.h" 2
+
+
+// Top function for synthesis
+void dut (
+  hls::stream<float> &strm_in,
+  hls::stream<float> &strm_out
+);
+
+void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
+void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
+# 5 "./svd.h" 2
+//#include "ap_fixed.h"
+
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 1 3
+// The template and inlines for the -*- C++ -*- complex number classes.
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010, 2011
 // Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
@@ -571,14 +828,17 @@ extern "C" {
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/iostream
+/** @file include/complex
  *  This is a Standard C++ Library header.
  */
 
 //
-// ISO C++ 14882: 27.3  Standard iostream objects
+// ISO C++ 14882: 26.2  Complex Numbers
+// Note: this is not a conforming implementation.
+// Initially implemented by Ulrich Drepper <drepper@cygnus.com>
+// Improved by Gabriel Dos Reis <dosreis@cmla.ens-cachan.fr>
 //
-# 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
+# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
 
 # 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h" 1 3
 // Predefined symbols and macros -*- C++ -*-
@@ -2208,9 +2468,610 @@ namespace std
 /* #undef _GLIBCXX_USE_SCHED_YIELD */
 
 /* Define if code specialized for wchar_t should be used. */
-# 39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 1 3
-// Output streams -*- C++ -*-
+# 43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 1 3
+// The  -*- C++ -*- type traits classes for internal use in libstdc++
+
+// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file bits/cpp_type_traits.h
+ *  This is an internal header file, included by other library headers.
+ *  Do not attempt to use it directly. @headername{ext/type_traits}
+ */
+
+// Written by Gabriel Dos Reis <dosreis@cmla.ens-cachan.fr>
+# 36 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+
+
+
+//
+// This file provides some compile-time information about various types.
+// These representations were designed, on purpose, to be constant-expressions
+// and not types as found in <bits/type_traits.h>.  In particular, they
+// can be used in control structures and the optimizer hopefully will do
+// the obvious thing.
+//
+// Why integral expressions, and not functions nor types?
+// Firstly, these compile-time entities are used as template-arguments
+// so function return values won't work:  We need compile-time entities.
+// We're left with types and constant  integral expressions.
+// Secondly, from the point of view of ease of use, type-based compile-time
+// information is -not- *that* convenient.  On has to write lots of
+// overloaded functions and to hope that the compiler will select the right
+// one. As a net effect, the overall structure isn't very clear at first
+// glance.
+// Thirdly, partial ordering and overload resolution (of function templates)
+// is highly costly in terms of compiler-resource.  It is a Good Thing to
+// keep these resource consumption as least as possible.
+//
+// See valarray_array.h for a case use.
+//
+// -- Gaby (dosreis@cmla.ens-cachan.fr) 2000-03-06.
+//
+// Update 2005: types are also provided and <bits/type_traits.h> has been
+// removed.
+//
+
+// Forward declaration hack, should really include this from somewhere.
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+
+
+  template<typename _Iterator, typename _Container>
+    class __normal_iterator;
+
+
+} // namespace
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  struct __true_type { };
+  struct __false_type { };
+
+  template<bool>
+    struct __truth_type
+    { typedef __false_type __type; };
+
+  template<>
+    struct __truth_type<true>
+    { typedef __true_type __type; };
+
+  // N.B. The conversions to bool are needed due to the issue
+  // explained in c++/19404.
+  template<class _Sp, class _Tp>
+    struct __traitor
+    {
+      enum { __value = bool(_Sp::__value) || bool(_Tp::__value) };
+      typedef typename __truth_type<__value>::__type __type;
+    };
+
+  // Compare for equality of types.
+  template<typename, typename>
+    struct __are_same
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<typename _Tp>
+    struct __are_same<_Tp, _Tp>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  // Holds if the template-argument is a void type.
+  template<typename _Tp>
+    struct __is_void
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_void<void>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  //
+  // Integer types
+  //
+  template<typename _Tp>
+    struct __is_integer
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  // Thirteen specializations (yes there are eleven standard integer
+  // types; <em>long long</em> and <em>unsigned long long</em> are
+  // supported as extensions)
+  template<>
+    struct __is_integer<bool>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<signed char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<>
+    struct __is_integer<wchar_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+# 198 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+ template<>
+    struct __is_integer<short>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned short>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<int>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned int>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<long long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned long long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  //
+  // Floating point types
+  //
+  template<typename _Tp>
+    struct __is_floating
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  // three specializations (float, double and 'long double')
+  template<>
+    struct __is_floating<float>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_floating<double>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_floating<long double>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  //
+  // Pointer types
+  //
+  template<typename _Tp>
+    struct __is_pointer
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<typename _Tp>
+    struct __is_pointer<_Tp*>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  //
+  // Normal iterator type
+  //
+  template<typename _Tp>
+    struct __is_normal_iterator
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<typename _Iterator, typename _Container>
+    struct __is_normal_iterator< __gnu_cxx::__normal_iterator<_Iterator,
+             _Container> >
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  //
+  // An arithmetic type is an integer type or a floating point type
+  //
+  template<typename _Tp>
+    struct __is_arithmetic
+    : public __traitor<__is_integer<_Tp>, __is_floating<_Tp> >
+    { };
+
+  //
+  // A fundamental type is `void' or and arithmetic type
+  //
+  template<typename _Tp>
+    struct __is_fundamental
+    : public __traitor<__is_void<_Tp>, __is_arithmetic<_Tp> >
+    { };
+
+  //
+  // A scalar type is an arithmetic type or a pointer type
+  // 
+  template<typename _Tp>
+    struct __is_scalar
+    : public __traitor<__is_arithmetic<_Tp>, __is_pointer<_Tp> >
+    { };
+
+  //
+  // For use in std::copy and std::find overloads for streambuf iterators.
+  //
+  template<typename _Tp>
+    struct __is_char
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_char<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<>
+    struct __is_char<wchar_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<typename _Tp>
+    struct __is_byte
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_byte<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_byte<signed char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_byte<unsigned char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  //
+  // Move iterator type
+  //
+  template<typename _Tp>
+    struct __is_move_iterator
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+# 422 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
+} // namespace
+# 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 1 3
+// -*- C++ -*-
+
+// Copyright (C) 2005, 2006, 2007, 2009, 2010, 2011
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the terms
+// of the GNU General Public License as published by the Free Software
+// Foundation; either version 3, or (at your option) any later
+// version.
+
+// This library is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file ext/type_traits.h
+ *  This file is a GNU extension to the Standard C++ Library.
+ */
+# 33 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
+
+
+
+
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+
+
+  // Define a nested type if some predicate holds.
+  template<bool, typename>
+    struct __enable_if
+    { };
+
+  template<typename _Tp>
+    struct __enable_if<true, _Tp>
+    { typedef _Tp __type; };
+
+
+  // Conditional expression for types. If true, first, if false, second.
+  template<bool _Cond, typename _Iftrue, typename _Iffalse>
+    struct __conditional_type
+    { typedef _Iftrue __type; };
+
+  template<typename _Iftrue, typename _Iffalse>
+    struct __conditional_type<false, _Iftrue, _Iffalse>
+    { typedef _Iffalse __type; };
+
+
+  // Given an integral builtin type, return the corresponding unsigned type.
+  template<typename _Tp>
+    struct __add_unsigned
+    {
+    private:
+      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
+
+    public:
+      typedef typename __if_type::__type __type;
+    };
+
+  template<>
+    struct __add_unsigned<char>
+    { typedef unsigned char __type; };
+
+  template<>
+    struct __add_unsigned<signed char>
+    { typedef unsigned char __type; };
+
+  template<>
+    struct __add_unsigned<short>
+    { typedef unsigned short __type; };
+
+  template<>
+    struct __add_unsigned<int>
+    { typedef unsigned int __type; };
+
+  template<>
+    struct __add_unsigned<long>
+    { typedef unsigned long __type; };
+
+  template<>
+    struct __add_unsigned<long long>
+    { typedef unsigned long long __type; };
+
+  // Declare but don't define.
+  template<>
+    struct __add_unsigned<bool>;
+
+  template<>
+    struct __add_unsigned<wchar_t>;
+
+
+  // Given an integral builtin type, return the corresponding signed type.
+  template<typename _Tp>
+    struct __remove_unsigned
+    {
+    private:
+      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
+
+    public:
+      typedef typename __if_type::__type __type;
+    };
+
+  template<>
+    struct __remove_unsigned<char>
+    { typedef signed char __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned char>
+    { typedef signed char __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned short>
+    { typedef short __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned int>
+    { typedef int __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned long>
+    { typedef long __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned long long>
+    { typedef long long __type; };
+
+  // Declare but don't define.
+  template<>
+    struct __remove_unsigned<bool>;
+
+  template<>
+    struct __remove_unsigned<wchar_t>;
+
+
+  // For use in string and vstring.
+  template<typename _Type>
+    inline bool
+    __is_null_pointer(_Type* __ptr)
+    { return __ptr == 0; }
+
+  template<typename _Type>
+    inline bool
+    __is_null_pointer(_Type)
+    { return false; }
+
+
+  // For complex and cmath
+  template<typename _Tp, bool = std::__is_integer<_Tp>::__value>
+    struct __promote
+    { typedef double __type; };
+
+  // No nested __type member for non-integer non-floating point types,
+  // allows this type to be used for SFINAE to constrain overloads in
+  // <cmath> and <complex> to only the intended types.
+  template<typename _Tp>
+    struct __promote<_Tp, false>
+    { };
+
+  template<>
+    struct __promote<long double>
+    { typedef long double __type; };
+
+  template<>
+    struct __promote<double>
+    { typedef double __type; };
+
+  template<>
+    struct __promote<float>
+    { typedef float __type; };
+
+  template<typename _Tp, typename _Up,
+           typename _Tp2 = typename __promote<_Tp>::__type,
+           typename _Up2 = typename __promote<_Up>::__type>
+    struct __promote_2
+    {
+      typedef __typeof__(_Tp2() + _Up2()) __type;
+    };
+
+  template<typename _Tp, typename _Up, typename _Vp,
+           typename _Tp2 = typename __promote<_Tp>::__type,
+           typename _Up2 = typename __promote<_Up>::__type,
+           typename _Vp2 = typename __promote<_Vp>::__type>
+    struct __promote_3
+    {
+      typedef __typeof__(_Tp2() + _Up2() + _Vp2()) __type;
+    };
+
+  template<typename _Tp, typename _Up, typename _Vp, typename _Wp,
+           typename _Tp2 = typename __promote<_Tp>::__type,
+           typename _Up2 = typename __promote<_Up>::__type,
+           typename _Vp2 = typename __promote<_Vp>::__type,
+           typename _Wp2 = typename __promote<_Wp>::__type>
+    struct __promote_4
+    {
+      typedef __typeof__(_Tp2() + _Up2() + _Vp2() + _Wp2()) __type;
+    };
+
+
+} // namespace
+# 45 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
+// -*- C++ -*- C forwarding header.
 
 // Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
 // 2006, 2007, 2008, 2009, 2010, 2011
@@ -2236,14 +3097,2162 @@ namespace std
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/ostream
+/** @file include/cmath
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c math.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+
+//
+// ISO C++ 14882: 26.5  C library
+//
+# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+
+
+
+
+extern "C" {
+
+# 1 "/usr/include/math.h" 1 3 4
+/* Declarations for math functions.
+   Copyright (C) 1991-1993, 1995-1999, 2001, 2002, 2004, 2006, 2009, 2011, 2012
+   Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/*
+ *	ISO C99 Standard: 7.12 Mathematics	<math.h>
+ */
+
+
+
+
+
+
+extern "C" {
+
+/* Get machine-dependent HUGE_VAL value (returned on overflow).
+   On all IEEE754 machines, this is +Infinity.  */
+
+
+# 1 "/usr/include/bits/huge_val.h" 1 3 4
+/* `HUGE_VAL' constant for IEEE 754 machines (where it is infinity).
+   Used by <stdlib.h> and <math.h> functions for overflow.
+   Copyright (C) 1992, 1995, 1996, 1997, 1999, 2000, 2004
+   Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+/* IEEE positive infinity (-HUGE_VAL is negative infinity).  */
+# 34 "/usr/include/math.h" 2 3 4
+
+# 1 "/usr/include/bits/huge_valf.h" 1 3 4
+/* `HUGE_VALF' constant for IEEE 754 machines (where it is infinity).
+   Used by <stdlib.h> and <math.h> functions for overflow.
+   Copyright (C) 1992, 1995, 1996, 1997, 1999, 2000, 2004
+   Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+/* IEEE positive infinity (-HUGE_VAL is negative infinity).  */
+# 36 "/usr/include/math.h" 2 3 4
+# 1 "/usr/include/bits/huge_vall.h" 1 3 4
+/* `HUGE_VALL' constant for ix86 (where it is infinity).
+   Used by <stdlib.h> and <math.h> functions for overflow.
+   Copyright (C) 1992, 1995, 1996, 1997, 1999, 2000, 2004
+   Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+# 37 "/usr/include/math.h" 2 3 4
+
+/* Get machine-dependent INFINITY value.  */
+
+
+# 1 "/usr/include/bits/inf.h" 1 3 4
+/* `INFINITY' constant for IEEE 754 machines.
+   Copyright (C) 2004 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+/* IEEE positive infinity.  */
+# 40 "/usr/include/math.h" 2 3 4
+
+/* Get machine-dependent NAN value (returned for some domain errors).  */
+
+
+# 1 "/usr/include/bits/nan.h" 1 3 4
+/* `NAN' constant for IEEE 754 machines.
+   Copyright (C) 1992,1996,1997,1999,2004,2006 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+
+/* IEEE Not A Number.  */
+# 43 "/usr/include/math.h" 2 3 4
+
+
+/* Get general and ISO C99 specific information.  */
+
+
+# 1 "/usr/include/bits/mathdef.h" 1 3 4
+/* Copyright (C) 2001-2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+# 26 "/usr/include/bits/mathdef.h" 3 4
+/* The x86-64 architecture computes values with the precission of the
+   used type.  Similarly for -m32 -mfpmath=sse.  */
+typedef float float_t; /* `float' expressions are evaluated as `float'.  */
+typedef double double_t; /* `double' expressions are evaluated
+				   as `double'.  */
+# 41 "/usr/include/bits/mathdef.h" 3 4
+/* The values returned by `ilogb' for 0 and NaN respectively.  */
+
+
+
+/* The GCC 4.6 compiler will define __FP_FAST_FMA{,F,L} if the fma{,f,l}
+   builtins are supported.  */
+# 47 "/usr/include/math.h" 2 3 4
+
+/* The file <bits/mathcalls.h> contains the prototypes for all the
+   actual math functions.  These macros are used for those prototypes,
+   so we can easily declare each function as both `name' and `__name',
+   and can declare the float versions `namef' and `__namef'.  */
+# 70 "/usr/include/math.h" 3 4
+# 1 "/usr/include/bits/mathcalls.h" 1 3 4
+/* Prototype declarations for math functions; helper file for <math.h>.
+   Copyright (C) 1996-2003, 2006, 2011, 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/* NOTE: Because of the special way this file is used by <math.h>, this
+   file must NOT be protected from multiple inclusion as header files
+   usually are.
+
+   This file provides prototype declarations for the math functions.
+   Most functions are declared using the macro:
+
+   __MATHCALL (NAME,[_r], (ARGS...));
+
+   This means there is a function `NAME' returning `double' and a function
+   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
+   prototype, that is actually `double' in the prototype for `NAME' and
+   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
+   called `NAME_r' and `NAMEf_r'.
+
+   Functions returning other types like `int' are declared using the macro:
+
+   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
+
+   This is just like __MATHCALL but for a function returning `TYPE'
+   instead of `_Mdouble_'.  In all of these cases, there is still
+   both a `NAME' and a `NAMEf' that takes `float' arguments.
+
+   Note that there must be no whitespace before the argument passed for
+   NAME, to make token pasting work with -traditional.  */
+
+
+
+
+
+
+/* Trigonometric functions.  */
+
+
+/* Arc cosine of X.  */
+extern double acos (double __x) throw (); extern double __acos (double __x) throw ();
+/* Arc sine of X.  */
+extern double asin (double __x) throw (); extern double __asin (double __x) throw ();
+/* Arc tangent of X.  */
+extern double atan (double __x) throw (); extern double __atan (double __x) throw ();
+/* Arc tangent of Y/X.  */
+extern double atan2 (double __y, double __x) throw (); extern double __atan2 (double __y, double __x) throw ();
+
+/* Cosine of X.  */
+extern double cos (double __x) throw (); extern double __cos (double __x) throw ();
+/* Sine of X.  */
+extern double sin (double __x) throw (); extern double __sin (double __x) throw ();
+/* Tangent of X.  */
+extern double tan (double __x) throw (); extern double __tan (double __x) throw ();
+
+/* Hyperbolic functions.  */
+
+/* Hyperbolic cosine of X.  */
+extern double cosh (double __x) throw (); extern double __cosh (double __x) throw ();
+/* Hyperbolic sine of X.  */
+extern double sinh (double __x) throw (); extern double __sinh (double __x) throw ();
+/* Hyperbolic tangent of X.  */
+extern double tanh (double __x) throw (); extern double __tanh (double __x) throw ();
+
+
+
+/* Cosine and sine of X.  */
+extern void sincos (double __x, double *__sinx, double *__cosx) throw (); extern void __sincos (double __x, double *__sinx, double *__cosx) throw ();
+
+
+
+
+
+/* Hyperbolic arc cosine of X.  */
+extern double acosh (double __x) throw (); extern double __acosh (double __x) throw ();
+/* Hyperbolic arc sine of X.  */
+extern double asinh (double __x) throw (); extern double __asinh (double __x) throw ();
+/* Hyperbolic arc tangent of X.  */
+extern double atanh (double __x) throw (); extern double __atanh (double __x) throw ();
+
+
+
+/* Exponential and logarithmic functions.  */
+
+
+/* Exponential function of X.  */
+extern double exp (double __x) throw (); extern double __exp (double __x) throw ();
+
+/* Break VALUE into a normalized fraction and an integral power of 2.  */
+extern double frexp (double __x, int *__exponent) throw (); extern double __frexp (double __x, int *__exponent) throw ();
+
+/* X times (two to the EXP power).  */
+extern double ldexp (double __x, int __exponent) throw (); extern double __ldexp (double __x, int __exponent) throw ();
+
+/* Natural logarithm of X.  */
+extern double log (double __x) throw (); extern double __log (double __x) throw ();
+
+/* Base-ten logarithm of X.  */
+extern double log10 (double __x) throw (); extern double __log10 (double __x) throw ();
+
+/* Break VALUE into integral and fractional parts.  */
+extern double modf (double __x, double *__iptr) throw (); extern double __modf (double __x, double *__iptr) throw ()
+     __attribute__ ((__nonnull__ (2)));
+
+
+
+/* A function missing in all standards: compute exponent to base ten.  */
+extern double exp10 (double __x) throw (); extern double __exp10 (double __x) throw ();
+/* Another name occasionally used.  */
+extern double pow10 (double __x) throw (); extern double __pow10 (double __x) throw ();
+
+
+
+
+/* Return exp(X) - 1.  */
+extern double expm1 (double __x) throw (); extern double __expm1 (double __x) throw ();
+
+/* Return log(1 + X).  */
+extern double log1p (double __x) throw (); extern double __log1p (double __x) throw ();
+
+/* Return the base 2 signed integral exponent of X.  */
+extern double logb (double __x) throw (); extern double __logb (double __x) throw ();
+
+
+
+
+
+/* Compute base-2 exponential of X.  */
+extern double exp2 (double __x) throw (); extern double __exp2 (double __x) throw ();
+
+/* Compute base-2 logarithm of X.  */
+extern double log2 (double __x) throw (); extern double __log2 (double __x) throw ();
+
+
+
+
+/* Power functions.  */
+
+
+/* Return X to the Y power.  */
+extern double pow (double __x, double __y) throw (); extern double __pow (double __x, double __y) throw ();
+
+/* Return the square root of X.  */
+extern double sqrt (double __x) throw (); extern double __sqrt (double __x) throw ();
+
+
+
+
+/* Return `sqrt(X*X + Y*Y)'.  */
+extern double hypot (double __x, double __y) throw (); extern double __hypot (double __x, double __y) throw ();
+
+
+
+
+
+/* Return the cube root of X.  */
+extern double cbrt (double __x) throw (); extern double __cbrt (double __x) throw ();
+
+
+
+
+/* Nearest integer, absolute value, and remainder functions.  */
+
+
+/* Smallest integral value not less than X.  */
+extern double ceil (double __x) throw () __attribute__ ((__const__)); extern double __ceil (double __x) throw () __attribute__ ((__const__));
+
+/* Absolute value of X.  */
+extern double fabs (double __x) throw () __attribute__ ((__const__)); extern double __fabs (double __x) throw () __attribute__ ((__const__));
+
+/* Largest integer not greater than X.  */
+extern double floor (double __x) throw () __attribute__ ((__const__)); extern double __floor (double __x) throw () __attribute__ ((__const__));
+
+/* Floating-point modulo remainder of X/Y.  */
+extern double fmod (double __x, double __y) throw (); extern double __fmod (double __x, double __y) throw ();
+
+
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int __isinf (double __value) throw () __attribute__ ((__const__));
+
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int __finite (double __value) throw () __attribute__ ((__const__));
+
+
+
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int isinf (double __value) throw () __attribute__ ((__const__));
+
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int finite (double __value) throw () __attribute__ ((__const__));
+
+/* Return the remainder of X/Y.  */
+extern double drem (double __x, double __y) throw (); extern double __drem (double __x, double __y) throw ();
+
+
+/* Return the fractional part of X after dividing out `ilogb (X)'.  */
+extern double significand (double __x) throw (); extern double __significand (double __x) throw ();
+
+
+
+
+/* Return X with its signed changed to Y's.  */
+extern double copysign (double __x, double __y) throw () __attribute__ ((__const__)); extern double __copysign (double __x, double __y) throw () __attribute__ ((__const__));
+
+
+
+
+
+/* Return representation of NaN for double type.  */
+extern double nan (const char *__tagb) throw () __attribute__ ((__const__)); extern double __nan (const char *__tagb) throw () __attribute__ ((__const__));
+
+
+
+
+/* Return nonzero if VALUE is not a number.  */
+extern int __isnan (double __value) throw () __attribute__ ((__const__));
+
+
+/* Return nonzero if VALUE is not a number.  */
+extern int isnan (double __value) throw () __attribute__ ((__const__));
+
+/* Bessel functions.  */
+extern double j0 (double) throw (); extern double __j0 (double) throw ();
+extern double j1 (double) throw (); extern double __j1 (double) throw ();
+extern double jn (int, double) throw (); extern double __jn (int, double) throw ();
+extern double y0 (double) throw (); extern double __y0 (double) throw ();
+extern double y1 (double) throw (); extern double __y1 (double) throw ();
+extern double yn (int, double) throw (); extern double __yn (int, double) throw ();
+
+
+
+
+
+/* Error and gamma functions.  */
+extern double erf (double) throw (); extern double __erf (double) throw ();
+extern double erfc (double) throw (); extern double __erfc (double) throw ();
+extern double lgamma (double) throw (); extern double __lgamma (double) throw ();
+
+
+
+
+
+/* True gamma function.  */
+extern double tgamma (double) throw (); extern double __tgamma (double) throw ();
+
+
+
+
+/* Obsolete alias for `lgamma'.  */
+extern double gamma (double) throw (); extern double __gamma (double) throw ();
+
+
+
+/* Reentrant version of lgamma.  This function uses the global variable
+   `signgam'.  The reentrant version instead takes a pointer and stores
+   the value through it.  */
+extern double lgamma_r (double, int *__signgamp) throw (); extern double __lgamma_r (double, int *__signgamp) throw ();
+
+
+
+
+
+/* Return the integer nearest X in the direction of the
+   prevailing rounding mode.  */
+extern double rint (double __x) throw (); extern double __rint (double __x) throw ();
+
+/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
+extern double nextafter (double __x, double __y) throw () __attribute__ ((__const__)); extern double __nextafter (double __x, double __y) throw () __attribute__ ((__const__));
+
+extern double nexttoward (double __x, long double __y) throw () __attribute__ ((__const__)); extern double __nexttoward (double __x, long double __y) throw () __attribute__ ((__const__));
+
+
+/* Return the remainder of integer divison X / Y with infinite precision.  */
+extern double remainder (double __x, double __y) throw (); extern double __remainder (double __x, double __y) throw ();
+
+
+/* Return X times (2 to the Nth power).  */
+extern double scalbn (double __x, int __n) throw (); extern double __scalbn (double __x, int __n) throw ();
+
+
+/* Return the binary exponent of X, which must be nonzero.  */
+extern int ilogb (double __x) throw (); extern int __ilogb (double __x) throw ();
+
+
+
+/* Return X times (2 to the Nth power).  */
+extern double scalbln (double __x, long int __n) throw (); extern double __scalbln (double __x, long int __n) throw ();
+
+/* Round X to integral value in floating-point format using current
+   rounding direction, but do not raise inexact exception.  */
+extern double nearbyint (double __x) throw (); extern double __nearbyint (double __x) throw ();
+
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern double round (double __x) throw () __attribute__ ((__const__)); extern double __round (double __x) throw () __attribute__ ((__const__));
+
+/* Round X to the integral value in floating-point format nearest but
+   not larger in magnitude.  */
+extern double trunc (double __x) throw () __attribute__ ((__const__)); extern double __trunc (double __x) throw () __attribute__ ((__const__));
+
+/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
+   and magnitude congruent `mod 2^n' to the magnitude of the integral
+   quotient x/y, with n >= 3.  */
+extern double remquo (double __x, double __y, int *__quo) throw (); extern double __remquo (double __x, double __y, int *__quo) throw ();
+
+
+/* Conversion functions.  */
+
+/* Round X to nearest integral value according to current rounding
+   direction.  */
+extern long int lrint (double __x) throw (); extern long int __lrint (double __x) throw ();
+extern long long int llrint (double __x) throw (); extern long long int __llrint (double __x) throw ();
+
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern long int lround (double __x) throw (); extern long int __lround (double __x) throw ();
+extern long long int llround (double __x) throw (); extern long long int __llround (double __x) throw ();
+
+
+/* Return positive difference between X and Y.  */
+extern double fdim (double __x, double __y) throw (); extern double __fdim (double __x, double __y) throw ();
+
+/* Return maximum numeric value from X and Y.  */
+extern double fmax (double __x, double __y) throw () __attribute__ ((__const__)); extern double __fmax (double __x, double __y) throw () __attribute__ ((__const__));
+
+/* Return minimum numeric value from X and Y.  */
+extern double fmin (double __x, double __y) throw () __attribute__ ((__const__)); extern double __fmin (double __x, double __y) throw () __attribute__ ((__const__));
+
+
+/* Classify given number.  */
+extern int __fpclassify (double __value) throw ()
+     __attribute__ ((__const__));
+
+/* Test for negative number.  */
+extern int __signbit (double __value) throw ()
+     __attribute__ ((__const__));
+
+
+/* Multiply-add function computed as a ternary operation.  */
+extern double fma (double __x, double __y, double __z) throw (); extern double __fma (double __x, double __y, double __z) throw ();
+
+
+
+
+
+
+
+/* Return X times (2 to the Nth power).  */
+extern double scalb (double __x, double __n) throw (); extern double __scalb (double __x, double __n) throw ();
+# 71 "/usr/include/math.h" 2 3 4
+
+
+
+
+
+
+
+
+/* Include the file of declarations again, this time using `float'
+   instead of `double' and appending f to each function name.  */
+# 89 "/usr/include/math.h" 3 4
+# 1 "/usr/include/bits/mathcalls.h" 1 3 4
+/* Prototype declarations for math functions; helper file for <math.h>.
+   Copyright (C) 1996-2003, 2006, 2011, 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/* NOTE: Because of the special way this file is used by <math.h>, this
+   file must NOT be protected from multiple inclusion as header files
+   usually are.
+
+   This file provides prototype declarations for the math functions.
+   Most functions are declared using the macro:
+
+   __MATHCALL (NAME,[_r], (ARGS...));
+
+   This means there is a function `NAME' returning `double' and a function
+   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
+   prototype, that is actually `double' in the prototype for `NAME' and
+   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
+   called `NAME_r' and `NAMEf_r'.
+
+   Functions returning other types like `int' are declared using the macro:
+
+   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
+
+   This is just like __MATHCALL but for a function returning `TYPE'
+   instead of `_Mdouble_'.  In all of these cases, there is still
+   both a `NAME' and a `NAMEf' that takes `float' arguments.
+
+   Note that there must be no whitespace before the argument passed for
+   NAME, to make token pasting work with -traditional.  */
+
+
+
+
+
+
+/* Trigonometric functions.  */
+
+
+/* Arc cosine of X.  */
+extern float acosf (float __x) throw (); extern float __acosf (float __x) throw ();
+/* Arc sine of X.  */
+extern float asinf (float __x) throw (); extern float __asinf (float __x) throw ();
+/* Arc tangent of X.  */
+extern float atanf (float __x) throw (); extern float __atanf (float __x) throw ();
+/* Arc tangent of Y/X.  */
+extern float atan2f (float __y, float __x) throw (); extern float __atan2f (float __y, float __x) throw ();
+
+/* Cosine of X.  */
+extern float cosf (float __x) throw (); extern float __cosf (float __x) throw ();
+/* Sine of X.  */
+extern float sinf (float __x) throw (); extern float __sinf (float __x) throw ();
+/* Tangent of X.  */
+extern float tanf (float __x) throw (); extern float __tanf (float __x) throw ();
+
+/* Hyperbolic functions.  */
+
+/* Hyperbolic cosine of X.  */
+extern float coshf (float __x) throw (); extern float __coshf (float __x) throw ();
+/* Hyperbolic sine of X.  */
+extern float sinhf (float __x) throw (); extern float __sinhf (float __x) throw ();
+/* Hyperbolic tangent of X.  */
+extern float tanhf (float __x) throw (); extern float __tanhf (float __x) throw ();
+
+
+
+/* Cosine and sine of X.  */
+extern void sincosf (float __x, float *__sinx, float *__cosx) throw (); extern void __sincosf (float __x, float *__sinx, float *__cosx) throw ();
+
+
+
+
+
+/* Hyperbolic arc cosine of X.  */
+extern float acoshf (float __x) throw (); extern float __acoshf (float __x) throw ();
+/* Hyperbolic arc sine of X.  */
+extern float asinhf (float __x) throw (); extern float __asinhf (float __x) throw ();
+/* Hyperbolic arc tangent of X.  */
+extern float atanhf (float __x) throw (); extern float __atanhf (float __x) throw ();
+
+
+
+/* Exponential and logarithmic functions.  */
+
+
+/* Exponential function of X.  */
+extern float expf (float __x) throw (); extern float __expf (float __x) throw ();
+
+/* Break VALUE into a normalized fraction and an integral power of 2.  */
+extern float frexpf (float __x, int *__exponent) throw (); extern float __frexpf (float __x, int *__exponent) throw ();
+
+/* X times (two to the EXP power).  */
+extern float ldexpf (float __x, int __exponent) throw (); extern float __ldexpf (float __x, int __exponent) throw ();
+
+/* Natural logarithm of X.  */
+extern float logf (float __x) throw (); extern float __logf (float __x) throw ();
+
+/* Base-ten logarithm of X.  */
+extern float log10f (float __x) throw (); extern float __log10f (float __x) throw ();
+
+/* Break VALUE into integral and fractional parts.  */
+extern float modff (float __x, float *__iptr) throw (); extern float __modff (float __x, float *__iptr) throw ()
+     __attribute__ ((__nonnull__ (2)));
+
+
+
+/* A function missing in all standards: compute exponent to base ten.  */
+extern float exp10f (float __x) throw (); extern float __exp10f (float __x) throw ();
+/* Another name occasionally used.  */
+extern float pow10f (float __x) throw (); extern float __pow10f (float __x) throw ();
+
+
+
+
+/* Return exp(X) - 1.  */
+extern float expm1f (float __x) throw (); extern float __expm1f (float __x) throw ();
+
+/* Return log(1 + X).  */
+extern float log1pf (float __x) throw (); extern float __log1pf (float __x) throw ();
+
+/* Return the base 2 signed integral exponent of X.  */
+extern float logbf (float __x) throw (); extern float __logbf (float __x) throw ();
+
+
+
+
+
+/* Compute base-2 exponential of X.  */
+extern float exp2f (float __x) throw (); extern float __exp2f (float __x) throw ();
+
+/* Compute base-2 logarithm of X.  */
+extern float log2f (float __x) throw (); extern float __log2f (float __x) throw ();
+
+
+
+
+/* Power functions.  */
+
+
+/* Return X to the Y power.  */
+extern float powf (float __x, float __y) throw (); extern float __powf (float __x, float __y) throw ();
+
+/* Return the square root of X.  */
+extern float sqrtf (float __x) throw (); extern float __sqrtf (float __x) throw ();
+
+
+
+
+/* Return `sqrt(X*X + Y*Y)'.  */
+extern float hypotf (float __x, float __y) throw (); extern float __hypotf (float __x, float __y) throw ();
+
+
+
+
+
+/* Return the cube root of X.  */
+extern float cbrtf (float __x) throw (); extern float __cbrtf (float __x) throw ();
+
+
+
+
+/* Nearest integer, absolute value, and remainder functions.  */
+
+
+/* Smallest integral value not less than X.  */
+extern float ceilf (float __x) throw () __attribute__ ((__const__)); extern float __ceilf (float __x) throw () __attribute__ ((__const__));
+
+/* Absolute value of X.  */
+extern float fabsf (float __x) throw () __attribute__ ((__const__)); extern float __fabsf (float __x) throw () __attribute__ ((__const__));
+
+/* Largest integer not greater than X.  */
+extern float floorf (float __x) throw () __attribute__ ((__const__)); extern float __floorf (float __x) throw () __attribute__ ((__const__));
+
+/* Floating-point modulo remainder of X/Y.  */
+extern float fmodf (float __x, float __y) throw (); extern float __fmodf (float __x, float __y) throw ();
+
+
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int __isinff (float __value) throw () __attribute__ ((__const__));
+
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int __finitef (float __value) throw () __attribute__ ((__const__));
+
+
+
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int isinff (float __value) throw () __attribute__ ((__const__));
+
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int finitef (float __value) throw () __attribute__ ((__const__));
+
+/* Return the remainder of X/Y.  */
+extern float dremf (float __x, float __y) throw (); extern float __dremf (float __x, float __y) throw ();
+
+
+/* Return the fractional part of X after dividing out `ilogb (X)'.  */
+extern float significandf (float __x) throw (); extern float __significandf (float __x) throw ();
+
+
+
+
+/* Return X with its signed changed to Y's.  */
+extern float copysignf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __copysignf (float __x, float __y) throw () __attribute__ ((__const__));
+
+
+
+
+
+/* Return representation of NaN for double type.  */
+extern float nanf (const char *__tagb) throw () __attribute__ ((__const__)); extern float __nanf (const char *__tagb) throw () __attribute__ ((__const__));
+
+
+
+
+/* Return nonzero if VALUE is not a number.  */
+extern int __isnanf (float __value) throw () __attribute__ ((__const__));
+
+
+/* Return nonzero if VALUE is not a number.  */
+extern int isnanf (float __value) throw () __attribute__ ((__const__));
+
+/* Bessel functions.  */
+extern float j0f (float) throw (); extern float __j0f (float) throw ();
+extern float j1f (float) throw (); extern float __j1f (float) throw ();
+extern float jnf (int, float) throw (); extern float __jnf (int, float) throw ();
+extern float y0f (float) throw (); extern float __y0f (float) throw ();
+extern float y1f (float) throw (); extern float __y1f (float) throw ();
+extern float ynf (int, float) throw (); extern float __ynf (int, float) throw ();
+
+
+
+
+
+/* Error and gamma functions.  */
+extern float erff (float) throw (); extern float __erff (float) throw ();
+extern float erfcf (float) throw (); extern float __erfcf (float) throw ();
+extern float lgammaf (float) throw (); extern float __lgammaf (float) throw ();
+
+
+
+
+
+/* True gamma function.  */
+extern float tgammaf (float) throw (); extern float __tgammaf (float) throw ();
+
+
+
+
+/* Obsolete alias for `lgamma'.  */
+extern float gammaf (float) throw (); extern float __gammaf (float) throw ();
+
+
+
+/* Reentrant version of lgamma.  This function uses the global variable
+   `signgam'.  The reentrant version instead takes a pointer and stores
+   the value through it.  */
+extern float lgammaf_r (float, int *__signgamp) throw (); extern float __lgammaf_r (float, int *__signgamp) throw ();
+
+
+
+
+
+/* Return the integer nearest X in the direction of the
+   prevailing rounding mode.  */
+extern float rintf (float __x) throw (); extern float __rintf (float __x) throw ();
+
+/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
+extern float nextafterf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __nextafterf (float __x, float __y) throw () __attribute__ ((__const__));
+
+extern float nexttowardf (float __x, long double __y) throw () __attribute__ ((__const__)); extern float __nexttowardf (float __x, long double __y) throw () __attribute__ ((__const__));
+
+
+/* Return the remainder of integer divison X / Y with infinite precision.  */
+extern float remainderf (float __x, float __y) throw (); extern float __remainderf (float __x, float __y) throw ();
+
+
+/* Return X times (2 to the Nth power).  */
+extern float scalbnf (float __x, int __n) throw (); extern float __scalbnf (float __x, int __n) throw ();
+
+
+/* Return the binary exponent of X, which must be nonzero.  */
+extern int ilogbf (float __x) throw (); extern int __ilogbf (float __x) throw ();
+
+
+
+/* Return X times (2 to the Nth power).  */
+extern float scalblnf (float __x, long int __n) throw (); extern float __scalblnf (float __x, long int __n) throw ();
+
+/* Round X to integral value in floating-point format using current
+   rounding direction, but do not raise inexact exception.  */
+extern float nearbyintf (float __x) throw (); extern float __nearbyintf (float __x) throw ();
+
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern float roundf (float __x) throw () __attribute__ ((__const__)); extern float __roundf (float __x) throw () __attribute__ ((__const__));
+
+/* Round X to the integral value in floating-point format nearest but
+   not larger in magnitude.  */
+extern float truncf (float __x) throw () __attribute__ ((__const__)); extern float __truncf (float __x) throw () __attribute__ ((__const__));
+
+/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
+   and magnitude congruent `mod 2^n' to the magnitude of the integral
+   quotient x/y, with n >= 3.  */
+extern float remquof (float __x, float __y, int *__quo) throw (); extern float __remquof (float __x, float __y, int *__quo) throw ();
+
+
+/* Conversion functions.  */
+
+/* Round X to nearest integral value according to current rounding
+   direction.  */
+extern long int lrintf (float __x) throw (); extern long int __lrintf (float __x) throw ();
+extern long long int llrintf (float __x) throw (); extern long long int __llrintf (float __x) throw ();
+
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern long int lroundf (float __x) throw (); extern long int __lroundf (float __x) throw ();
+extern long long int llroundf (float __x) throw (); extern long long int __llroundf (float __x) throw ();
+
+
+/* Return positive difference between X and Y.  */
+extern float fdimf (float __x, float __y) throw (); extern float __fdimf (float __x, float __y) throw ();
+
+/* Return maximum numeric value from X and Y.  */
+extern float fmaxf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __fmaxf (float __x, float __y) throw () __attribute__ ((__const__));
+
+/* Return minimum numeric value from X and Y.  */
+extern float fminf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __fminf (float __x, float __y) throw () __attribute__ ((__const__));
+
+
+/* Classify given number.  */
+extern int __fpclassifyf (float __value) throw ()
+     __attribute__ ((__const__));
+
+/* Test for negative number.  */
+extern int __signbitf (float __value) throw ()
+     __attribute__ ((__const__));
+
+
+/* Multiply-add function computed as a ternary operation.  */
+extern float fmaf (float __x, float __y, float __z) throw (); extern float __fmaf (float __x, float __y, float __z) throw ();
+
+
+
+
+
+
+
+/* Return X times (2 to the Nth power).  */
+extern float scalbf (float __x, float __n) throw (); extern float __scalbf (float __x, float __n) throw ();
+# 90 "/usr/include/math.h" 2 3 4
+# 122 "/usr/include/math.h" 3 4
+/* Include the file of declarations again, this time using `long double'
+   instead of `double' and appending l to each function name.  */
+# 133 "/usr/include/math.h" 3 4
+# 1 "/usr/include/bits/mathcalls.h" 1 3 4
+/* Prototype declarations for math functions; helper file for <math.h>.
+   Copyright (C) 1996-2003, 2006, 2011, 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/* NOTE: Because of the special way this file is used by <math.h>, this
+   file must NOT be protected from multiple inclusion as header files
+   usually are.
+
+   This file provides prototype declarations for the math functions.
+   Most functions are declared using the macro:
+
+   __MATHCALL (NAME,[_r], (ARGS...));
+
+   This means there is a function `NAME' returning `double' and a function
+   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
+   prototype, that is actually `double' in the prototype for `NAME' and
+   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
+   called `NAME_r' and `NAMEf_r'.
+
+   Functions returning other types like `int' are declared using the macro:
+
+   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
+
+   This is just like __MATHCALL but for a function returning `TYPE'
+   instead of `_Mdouble_'.  In all of these cases, there is still
+   both a `NAME' and a `NAMEf' that takes `float' arguments.
+
+   Note that there must be no whitespace before the argument passed for
+   NAME, to make token pasting work with -traditional.  */
+
+
+
+
+
+
+/* Trigonometric functions.  */
+
+
+/* Arc cosine of X.  */
+extern long double acosl (long double __x) throw (); extern long double __acosl (long double __x) throw ();
+/* Arc sine of X.  */
+extern long double asinl (long double __x) throw (); extern long double __asinl (long double __x) throw ();
+/* Arc tangent of X.  */
+extern long double atanl (long double __x) throw (); extern long double __atanl (long double __x) throw ();
+/* Arc tangent of Y/X.  */
+extern long double atan2l (long double __y, long double __x) throw (); extern long double __atan2l (long double __y, long double __x) throw ();
+
+/* Cosine of X.  */
+extern long double cosl (long double __x) throw (); extern long double __cosl (long double __x) throw ();
+/* Sine of X.  */
+extern long double sinl (long double __x) throw (); extern long double __sinl (long double __x) throw ();
+/* Tangent of X.  */
+extern long double tanl (long double __x) throw (); extern long double __tanl (long double __x) throw ();
+
+/* Hyperbolic functions.  */
+
+/* Hyperbolic cosine of X.  */
+extern long double coshl (long double __x) throw (); extern long double __coshl (long double __x) throw ();
+/* Hyperbolic sine of X.  */
+extern long double sinhl (long double __x) throw (); extern long double __sinhl (long double __x) throw ();
+/* Hyperbolic tangent of X.  */
+extern long double tanhl (long double __x) throw (); extern long double __tanhl (long double __x) throw ();
+
+
+
+/* Cosine and sine of X.  */
+extern void sincosl (long double __x, long double *__sinx, long double *__cosx) throw (); extern void __sincosl (long double __x, long double *__sinx, long double *__cosx) throw ();
+
+
+
+
+
+/* Hyperbolic arc cosine of X.  */
+extern long double acoshl (long double __x) throw (); extern long double __acoshl (long double __x) throw ();
+/* Hyperbolic arc sine of X.  */
+extern long double asinhl (long double __x) throw (); extern long double __asinhl (long double __x) throw ();
+/* Hyperbolic arc tangent of X.  */
+extern long double atanhl (long double __x) throw (); extern long double __atanhl (long double __x) throw ();
+
+
+
+/* Exponential and logarithmic functions.  */
+
+
+/* Exponential function of X.  */
+extern long double expl (long double __x) throw (); extern long double __expl (long double __x) throw ();
+
+/* Break VALUE into a normalized fraction and an integral power of 2.  */
+extern long double frexpl (long double __x, int *__exponent) throw (); extern long double __frexpl (long double __x, int *__exponent) throw ();
+
+/* X times (two to the EXP power).  */
+extern long double ldexpl (long double __x, int __exponent) throw (); extern long double __ldexpl (long double __x, int __exponent) throw ();
+
+/* Natural logarithm of X.  */
+extern long double logl (long double __x) throw (); extern long double __logl (long double __x) throw ();
+
+/* Base-ten logarithm of X.  */
+extern long double log10l (long double __x) throw (); extern long double __log10l (long double __x) throw ();
+
+/* Break VALUE into integral and fractional parts.  */
+extern long double modfl (long double __x, long double *__iptr) throw (); extern long double __modfl (long double __x, long double *__iptr) throw ()
+     __attribute__ ((__nonnull__ (2)));
+
+
+
+/* A function missing in all standards: compute exponent to base ten.  */
+extern long double exp10l (long double __x) throw (); extern long double __exp10l (long double __x) throw ();
+/* Another name occasionally used.  */
+extern long double pow10l (long double __x) throw (); extern long double __pow10l (long double __x) throw ();
+
+
+
+
+/* Return exp(X) - 1.  */
+extern long double expm1l (long double __x) throw (); extern long double __expm1l (long double __x) throw ();
+
+/* Return log(1 + X).  */
+extern long double log1pl (long double __x) throw (); extern long double __log1pl (long double __x) throw ();
+
+/* Return the base 2 signed integral exponent of X.  */
+extern long double logbl (long double __x) throw (); extern long double __logbl (long double __x) throw ();
+
+
+
+
+
+/* Compute base-2 exponential of X.  */
+extern long double exp2l (long double __x) throw (); extern long double __exp2l (long double __x) throw ();
+
+/* Compute base-2 logarithm of X.  */
+extern long double log2l (long double __x) throw (); extern long double __log2l (long double __x) throw ();
+
+
+
+
+/* Power functions.  */
+
+
+/* Return X to the Y power.  */
+extern long double powl (long double __x, long double __y) throw (); extern long double __powl (long double __x, long double __y) throw ();
+
+/* Return the square root of X.  */
+extern long double sqrtl (long double __x) throw (); extern long double __sqrtl (long double __x) throw ();
+
+
+
+
+/* Return `sqrt(X*X + Y*Y)'.  */
+extern long double hypotl (long double __x, long double __y) throw (); extern long double __hypotl (long double __x, long double __y) throw ();
+
+
+
+
+
+/* Return the cube root of X.  */
+extern long double cbrtl (long double __x) throw (); extern long double __cbrtl (long double __x) throw ();
+
+
+
+
+/* Nearest integer, absolute value, and remainder functions.  */
+
+
+/* Smallest integral value not less than X.  */
+extern long double ceill (long double __x) throw () __attribute__ ((__const__)); extern long double __ceill (long double __x) throw () __attribute__ ((__const__));
+
+/* Absolute value of X.  */
+extern long double fabsl (long double __x) throw () __attribute__ ((__const__)); extern long double __fabsl (long double __x) throw () __attribute__ ((__const__));
+
+/* Largest integer not greater than X.  */
+extern long double floorl (long double __x) throw () __attribute__ ((__const__)); extern long double __floorl (long double __x) throw () __attribute__ ((__const__));
+
+/* Floating-point modulo remainder of X/Y.  */
+extern long double fmodl (long double __x, long double __y) throw (); extern long double __fmodl (long double __x, long double __y) throw ();
+
+
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int __isinfl (long double __value) throw () __attribute__ ((__const__));
+
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int __finitel (long double __value) throw () __attribute__ ((__const__));
+
+
+
+/* Return 0 if VALUE is finite or NaN, +1 if it
+   is +Infinity, -1 if it is -Infinity.  */
+extern int isinfl (long double __value) throw () __attribute__ ((__const__));
+
+/* Return nonzero if VALUE is finite and not NaN.  */
+extern int finitel (long double __value) throw () __attribute__ ((__const__));
+
+/* Return the remainder of X/Y.  */
+extern long double dreml (long double __x, long double __y) throw (); extern long double __dreml (long double __x, long double __y) throw ();
+
+
+/* Return the fractional part of X after dividing out `ilogb (X)'.  */
+extern long double significandl (long double __x) throw (); extern long double __significandl (long double __x) throw ();
+
+
+
+
+/* Return X with its signed changed to Y's.  */
+extern long double copysignl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __copysignl (long double __x, long double __y) throw () __attribute__ ((__const__));
+
+
+
+
+
+/* Return representation of NaN for double type.  */
+extern long double nanl (const char *__tagb) throw () __attribute__ ((__const__)); extern long double __nanl (const char *__tagb) throw () __attribute__ ((__const__));
+
+
+
+
+/* Return nonzero if VALUE is not a number.  */
+extern int __isnanl (long double __value) throw () __attribute__ ((__const__));
+
+
+/* Return nonzero if VALUE is not a number.  */
+extern int isnanl (long double __value) throw () __attribute__ ((__const__));
+
+/* Bessel functions.  */
+extern long double j0l (long double) throw (); extern long double __j0l (long double) throw ();
+extern long double j1l (long double) throw (); extern long double __j1l (long double) throw ();
+extern long double jnl (int, long double) throw (); extern long double __jnl (int, long double) throw ();
+extern long double y0l (long double) throw (); extern long double __y0l (long double) throw ();
+extern long double y1l (long double) throw (); extern long double __y1l (long double) throw ();
+extern long double ynl (int, long double) throw (); extern long double __ynl (int, long double) throw ();
+
+
+
+
+
+/* Error and gamma functions.  */
+extern long double erfl (long double) throw (); extern long double __erfl (long double) throw ();
+extern long double erfcl (long double) throw (); extern long double __erfcl (long double) throw ();
+extern long double lgammal (long double) throw (); extern long double __lgammal (long double) throw ();
+
+
+
+
+
+/* True gamma function.  */
+extern long double tgammal (long double) throw (); extern long double __tgammal (long double) throw ();
+
+
+
+
+/* Obsolete alias for `lgamma'.  */
+extern long double gammal (long double) throw (); extern long double __gammal (long double) throw ();
+
+
+
+/* Reentrant version of lgamma.  This function uses the global variable
+   `signgam'.  The reentrant version instead takes a pointer and stores
+   the value through it.  */
+extern long double lgammal_r (long double, int *__signgamp) throw (); extern long double __lgammal_r (long double, int *__signgamp) throw ();
+
+
+
+
+
+/* Return the integer nearest X in the direction of the
+   prevailing rounding mode.  */
+extern long double rintl (long double __x) throw (); extern long double __rintl (long double __x) throw ();
+
+/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
+extern long double nextafterl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __nextafterl (long double __x, long double __y) throw () __attribute__ ((__const__));
+
+extern long double nexttowardl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __nexttowardl (long double __x, long double __y) throw () __attribute__ ((__const__));
+
+
+/* Return the remainder of integer divison X / Y with infinite precision.  */
+extern long double remainderl (long double __x, long double __y) throw (); extern long double __remainderl (long double __x, long double __y) throw ();
+
+
+/* Return X times (2 to the Nth power).  */
+extern long double scalbnl (long double __x, int __n) throw (); extern long double __scalbnl (long double __x, int __n) throw ();
+
+
+/* Return the binary exponent of X, which must be nonzero.  */
+extern int ilogbl (long double __x) throw (); extern int __ilogbl (long double __x) throw ();
+
+
+
+/* Return X times (2 to the Nth power).  */
+extern long double scalblnl (long double __x, long int __n) throw (); extern long double __scalblnl (long double __x, long int __n) throw ();
+
+/* Round X to integral value in floating-point format using current
+   rounding direction, but do not raise inexact exception.  */
+extern long double nearbyintl (long double __x) throw (); extern long double __nearbyintl (long double __x) throw ();
+
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern long double roundl (long double __x) throw () __attribute__ ((__const__)); extern long double __roundl (long double __x) throw () __attribute__ ((__const__));
+
+/* Round X to the integral value in floating-point format nearest but
+   not larger in magnitude.  */
+extern long double truncl (long double __x) throw () __attribute__ ((__const__)); extern long double __truncl (long double __x) throw () __attribute__ ((__const__));
+
+/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
+   and magnitude congruent `mod 2^n' to the magnitude of the integral
+   quotient x/y, with n >= 3.  */
+extern long double remquol (long double __x, long double __y, int *__quo) throw (); extern long double __remquol (long double __x, long double __y, int *__quo) throw ();
+
+
+/* Conversion functions.  */
+
+/* Round X to nearest integral value according to current rounding
+   direction.  */
+extern long int lrintl (long double __x) throw (); extern long int __lrintl (long double __x) throw ();
+extern long long int llrintl (long double __x) throw (); extern long long int __llrintl (long double __x) throw ();
+
+/* Round X to nearest integral value, rounding halfway cases away from
+   zero.  */
+extern long int lroundl (long double __x) throw (); extern long int __lroundl (long double __x) throw ();
+extern long long int llroundl (long double __x) throw (); extern long long int __llroundl (long double __x) throw ();
+
+
+/* Return positive difference between X and Y.  */
+extern long double fdiml (long double __x, long double __y) throw (); extern long double __fdiml (long double __x, long double __y) throw ();
+
+/* Return maximum numeric value from X and Y.  */
+extern long double fmaxl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __fmaxl (long double __x, long double __y) throw () __attribute__ ((__const__));
+
+/* Return minimum numeric value from X and Y.  */
+extern long double fminl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __fminl (long double __x, long double __y) throw () __attribute__ ((__const__));
+
+
+/* Classify given number.  */
+extern int __fpclassifyl (long double __value) throw ()
+     __attribute__ ((__const__));
+
+/* Test for negative number.  */
+extern int __signbitl (long double __value) throw ()
+     __attribute__ ((__const__));
+
+
+/* Multiply-add function computed as a ternary operation.  */
+extern long double fmal (long double __x, long double __y, long double __z) throw (); extern long double __fmal (long double __x, long double __y, long double __z) throw ();
+
+
+
+
+
+
+
+/* Return X times (2 to the Nth power).  */
+extern long double scalbl (long double __x, long double __n) throw (); extern long double __scalbl (long double __x, long double __n) throw ();
+# 134 "/usr/include/math.h" 2 3 4
+# 148 "/usr/include/math.h" 3 4
+/* This variable is used by `gamma' and `lgamma'.  */
+extern int signgam;
+
+
+
+/* ISO C99 defines some generic macros which work on any data type.  */
+
+
+/* Get the architecture specific values describing the floating-point
+   evaluation.  The following symbols will get defined:
+
+    float_t	floating-point type at least as wide as `float' used
+		to evaluate `float' expressions
+    double_t	floating-point type at least as wide as `double' used
+		to evaluate `double' expressions
+
+    FLT_EVAL_METHOD
+		Defined to
+		  0	if `float_t' is `float' and `double_t' is `double'
+		  1	if `float_t' and `double_t' are `double'
+		  2	if `float_t' and `double_t' are `long double'
+		  else	`float_t' and `double_t' are unspecified
+
+    INFINITY	representation of the infinity value of type `float'
+
+    FP_FAST_FMA
+    FP_FAST_FMAF
+    FP_FAST_FMAL
+		If defined it indicates that the `fma' function
+		generally executes about as fast as a multiply and an add.
+		This macro is defined only iff the `fma' function is
+		implemented directly with a hardware multiply-add instructions.
+
+    FP_ILOGB0	Expands to a value returned by `ilogb (0.0)'.
+    FP_ILOGBNAN	Expands to a value returned by `ilogb (NAN)'.
+
+    DECIMAL_DIG	Number of decimal digits supported by conversion between
+		decimal and all internal floating-point formats.
+
+*/
+
+/* All floating-point numbers can be put in one of these categories.  */
+enum
+  {
+    FP_NAN =
+
+      0,
+    FP_INFINITE =
+
+      1,
+    FP_ZERO =
+
+      2,
+    FP_SUBNORMAL =
+
+      3,
+    FP_NORMAL =
+
+      4
+  };
+
+/* Return number of classification appropriate for X.  */
+# 221 "/usr/include/math.h" 3 4
+/* Return nonzero value if sign of X is negative.  */
+# 233 "/usr/include/math.h" 3 4
+/* Return nonzero value if X is not +-Inf or NaN.  */
+# 245 "/usr/include/math.h" 3 4
+/* Return nonzero value if X is neither zero, subnormal, Inf, nor NaN.  */
+
+
+/* Return nonzero value if X is a NaN.  We could use `fpclassify' but
+   we already have this functions `__isnan' and it is faster.  */
+# 261 "/usr/include/math.h" 3 4
+/* Return nonzero value if X is positive or negative infinity.  */
+# 273 "/usr/include/math.h" 3 4
+/* Bitmasks for the math_errhandling macro.  */
+
+
+
+/* By default all functions support both errno and exception handling.
+   In gcc's fast math mode and if inline functions are defined this
+   might not be true.  */
+
+
+
+
+
+
+
+/* Support for various different standard error handling behaviors.  */
+typedef enum
+{
+  _IEEE_ = -1, /* According to IEEE 754/IEEE 854.  */
+  _SVID_, /* According to System V, release 4.  */
+  _XOPEN_, /* Nowadays also Unix98.  */
+  _POSIX_,
+  _ISOC_ /* Actually this is ISO C99.  */
+} _LIB_VERSION_TYPE;
+
+/* This variable can be changed at run-time to any of the values above to
+   affect floating point error handling behavior (it may also be necessary
+   to change the hardware FPU exception settings).  */
+extern _LIB_VERSION_TYPE _LIB_VERSION;
+
+
+
+
+/* In SVID error handling, `matherr' is called with this description
+   of the exceptional condition.
+
+   We have a problem when using C++ since `exception' is a reserved
+   name in C++.  */
+
+struct __exception
+
+
+
+  {
+    int type;
+    char *name;
+    double arg1;
+    double arg2;
+    double retval;
+  };
+
+
+extern int matherr (struct __exception *__exc) throw ();
+
+
+
+
+
+
+/* Types of exceptions in the `type' field.  */
+
+
+
+
+
+
+
+/* SVID mode specifies returning this large value instead of infinity.  */
+# 352 "/usr/include/math.h" 3 4
+/* Some useful constants.  */
+# 369 "/usr/include/math.h" 3 4
+/* The above constants are not adequate for computation using `long double's.
+   Therefore we provide as an extension constants with similar names as a
+   GNU extension.  Provide enough digits for the 128-bit IEEE quad.  */
+# 389 "/usr/include/math.h" 3 4
+/* When compiling in strict ISO C compatible mode we must not use the
+   inline functions since they, among other things, do not set the
+   `errno' variable correctly.  */
+
+
+
+
+
+/* ISO C99 defines some macros to compare number while taking care for
+   unordered numbers.  Many FPUs provide special instructions to support
+   these operations.  Generic support in GCC for these as builtins went
+   in before 3.0.0, but not all cpus added their patterns.  We define
+   versions that use the builtins here, and <bits/mathinline.h> will
+   undef/redefine as appropriate for the specific GCC version in use.  */
+# 411 "/usr/include/math.h" 3 4
+/* Get machine-dependent inline versions (if there are any).  */
+
+
+
+
+/* Define special entry points to use when the compiler got told to
+   only expect finite results.  */
+
+
+
+
+
+/* If we've still got undefined comparison macros, provide defaults.  */
+
+/* Return nonzero value if X is greater than Y.  */
+
+
+
+
+
+
+
+/* Return nonzero value if X is greater than or equal to Y.  */
+
+
+
+
+
+
+
+/* Return nonzero value if X is less than Y.  */
+
+
+
+
+
+
+
+/* Return nonzero value if X is less than or equal to Y.  */
+
+
+
+
+
+
+
+/* Return nonzero value if either X is less than Y or Y is less than X.  */
+
+
+
+
+
+
+
+/* Return nonzero value if arguments are unordered.  */
+# 475 "/usr/include/math.h" 3 4
+}
+# 46 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 2 3
+}
+# 46 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath"
+
+
+
+
+
+// Get rid of those macros defined in <math.h> in lieu of real functions.
+# 76 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  inline double
+  abs(double __x)
+  { return __builtin_fabs(__x); }
+
+  inline float
+  abs(float __x)
+  { return __builtin_fabsf(__x); }
+
+  inline long double
+  abs(long double __x)
+  { return __builtin_fabsl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    abs(_Tp __x)
+    { return __builtin_fabs(__x); }
+
+  using ::acos;
+
+  inline float
+  acos(float __x)
+  { return __builtin_acosf(__x); }
+
+  inline long double
+  acos(long double __x)
+  { return __builtin_acosl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    acos(_Tp __x)
+    { return __builtin_acos(__x); }
+
+  using ::asin;
+
+  inline float
+  asin(float __x)
+  { return __builtin_asinf(__x); }
+
+  inline long double
+  asin(long double __x)
+  { return __builtin_asinl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    asin(_Tp __x)
+    { return __builtin_asin(__x); }
+
+  using ::atan;
+
+  inline float
+  atan(float __x)
+  { return __builtin_atanf(__x); }
+
+  inline long double
+  atan(long double __x)
+  { return __builtin_atanl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    atan(_Tp __x)
+    { return __builtin_atan(__x); }
+
+  using ::atan2;
+
+  inline float
+  atan2(float __y, float __x)
+  { return __builtin_atan2f(__y, __x); }
+
+  inline long double
+  atan2(long double __y, long double __x)
+  { return __builtin_atan2l(__y, __x); }
+
+  template<typename _Tp, typename _Up>
+    inline
+    typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
+    atan2(_Tp __y, _Up __x)
+    {
+      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
+      return atan2(__type(__y), __type(__x));
+    }
+
+  using ::ceil;
+
+  inline float
+  ceil(float __x)
+  { return __builtin_ceilf(__x); }
+
+  inline long double
+  ceil(long double __x)
+  { return __builtin_ceill(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    ceil(_Tp __x)
+    { return __builtin_ceil(__x); }
+
+  using ::cos;
+
+  inline float
+  cos(float __x)
+  { return __builtin_cosf(__x); }
+
+  inline long double
+  cos(long double __x)
+  { return __builtin_cosl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    cos(_Tp __x)
+    { return __builtin_cos(__x); }
+
+  using ::cosh;
+
+  inline float
+  cosh(float __x)
+  { return __builtin_coshf(__x); }
+
+  inline long double
+  cosh(long double __x)
+  { return __builtin_coshl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    cosh(_Tp __x)
+    { return __builtin_cosh(__x); }
+
+  using ::exp;
+
+  inline float
+  exp(float __x)
+  { return __builtin_expf(__x); }
+
+  inline long double
+  exp(long double __x)
+  { return __builtin_expl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    exp(_Tp __x)
+    { return __builtin_exp(__x); }
+
+  using ::fabs;
+
+  inline float
+  fabs(float __x)
+  { return __builtin_fabsf(__x); }
+
+  inline long double
+  fabs(long double __x)
+  { return __builtin_fabsl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    fabs(_Tp __x)
+    { return __builtin_fabs(__x); }
+
+  using ::floor;
+
+  inline float
+  floor(float __x)
+  { return __builtin_floorf(__x); }
+
+  inline long double
+  floor(long double __x)
+  { return __builtin_floorl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    floor(_Tp __x)
+    { return __builtin_floor(__x); }
+
+  using ::fmod;
+
+  inline float
+  fmod(float __x, float __y)
+  { return __builtin_fmodf(__x, __y); }
+
+  inline long double
+  fmod(long double __x, long double __y)
+  { return __builtin_fmodl(__x, __y); }
+
+  using ::frexp;
+
+  inline float
+  frexp(float __x, int* __exp)
+  { return __builtin_frexpf(__x, __exp); }
+
+  inline long double
+  frexp(long double __x, int* __exp)
+  { return __builtin_frexpl(__x, __exp); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    frexp(_Tp __x, int* __exp)
+    { return __builtin_frexp(__x, __exp); }
+
+  using ::ldexp;
+
+  inline float
+  ldexp(float __x, int __exp)
+  { return __builtin_ldexpf(__x, __exp); }
+
+  inline long double
+  ldexp(long double __x, int __exp)
+  { return __builtin_ldexpl(__x, __exp); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+  ldexp(_Tp __x, int __exp)
+  { return __builtin_ldexp(__x, __exp); }
+
+  using ::log;
+
+  inline float
+  log(float __x)
+  { return __builtin_logf(__x); }
+
+  inline long double
+  log(long double __x)
+  { return __builtin_logl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    log(_Tp __x)
+    { return __builtin_log(__x); }
+
+  using ::log10;
+
+  inline float
+  log10(float __x)
+  { return __builtin_log10f(__x); }
+
+  inline long double
+  log10(long double __x)
+  { return __builtin_log10l(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    log10(_Tp __x)
+    { return __builtin_log10(__x); }
+
+  using ::modf;
+
+  inline float
+  modf(float __x, float* __iptr)
+  { return __builtin_modff(__x, __iptr); }
+
+  inline long double
+  modf(long double __x, long double* __iptr)
+  { return __builtin_modfl(__x, __iptr); }
+
+  using ::pow;
+
+  inline float
+  pow(float __x, float __y)
+  { return __builtin_powf(__x, __y); }
+
+  inline long double
+  pow(long double __x, long double __y)
+  { return __builtin_powl(__x, __y); }
+
+
+  // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  // DR 550. What should the return type of pow(float,int) be?
+  inline double
+  pow(double __x, int __i)
+  { return __builtin_powi(__x, __i); }
+
+  inline float
+  pow(float __x, int __n)
+  { return __builtin_powif(__x, __n); }
+
+  inline long double
+  pow(long double __x, int __n)
+  { return __builtin_powil(__x, __n); }
+
+
+  template<typename _Tp, typename _Up>
+    inline
+    typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
+    pow(_Tp __x, _Up __y)
+    {
+      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
+      return pow(__type(__x), __type(__y));
+    }
+
+  using ::sin;
+
+  inline float
+  sin(float __x)
+  { return __builtin_sinf(__x); }
+
+  inline long double
+  sin(long double __x)
+  { return __builtin_sinl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    sin(_Tp __x)
+    { return __builtin_sin(__x); }
+
+  using ::sinh;
+
+  inline float
+  sinh(float __x)
+  { return __builtin_sinhf(__x); }
+
+  inline long double
+  sinh(long double __x)
+  { return __builtin_sinhl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    sinh(_Tp __x)
+    { return __builtin_sinh(__x); }
+
+  using ::sqrt;
+
+  inline float
+  sqrt(float __x)
+  { return __builtin_sqrtf(__x); }
+
+  inline long double
+  sqrt(long double __x)
+  { return __builtin_sqrtl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    sqrt(_Tp __x)
+    { return __builtin_sqrt(__x); }
+
+  using ::tan;
+
+  inline float
+  tan(float __x)
+  { return __builtin_tanf(__x); }
+
+  inline long double
+  tan(long double __x)
+  { return __builtin_tanl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    tan(_Tp __x)
+    { return __builtin_tan(__x); }
+
+  using ::tanh;
+
+  inline float
+  tanh(float __x)
+  { return __builtin_tanhf(__x); }
+
+  inline long double
+  tanh(long double __x)
+  { return __builtin_tanhl(__x); }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
+        double>::__type
+    tanh(_Tp __x)
+    { return __builtin_tanh(__x); }
+
+
+} // namespace
+
+
+
+
+// These are possible macros imported from C99-land.
+# 480 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+# 730 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
+ template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    fpclassify(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_fpclassify(0, 1, 4,
+      3, 2, __type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isfinite(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isfinite(__type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isinf(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isinf(__type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isnan(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isnan(__type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isnormal(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isnormal(__type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    signbit(_Tp __f)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_signbit(__type(__f));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isgreater(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isgreater(__type(__f1), __type(__f2));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isgreaterequal(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isgreaterequal(__type(__f1), __type(__f2));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isless(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isless(__type(__f1), __type(__f2));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    islessequal(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_islessequal(__type(__f1), __type(__f2));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    islessgreater(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_islessgreater(__type(__f1), __type(__f2));
+    }
+
+  template<typename _Tp>
+    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
+        int>::__type
+    isunordered(_Tp __f1, _Tp __f2)
+    {
+      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
+      return __builtin_isunordered(__type(__f1), __type(__f2));
+    }
+
+
+
+
+} // namespace
+# 46 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 1 3
+// String based streams -*- C++ -*-
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file include/sstream
  *  This is a Standard C++ Library header.
  */
 
 //
-// ISO C++ 14882: 27.6.2  Output streams
+// ISO C++ 14882: 27.7  String-based streams
 //
-# 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+# 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 1 3
+// Input streams -*- C++ -*-
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010, 2011
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+//
+// ISO C++ 14882: 27.6.1  Input streams
+//
+
+/** @file include/istream
+ *  This is a Standard C++ Library header.
+ */
+# 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
 
 # 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 1 3
 // Iostreams base classes -*- C++ -*-
@@ -4300,607 +7309,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 } // namespace
 # 62 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 1 3
-// The  -*- C++ -*- type traits classes for internal use in libstdc++
 
-// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
 
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file bits/cpp_type_traits.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{ext/type_traits}
- */
-
-// Written by Gabriel Dos Reis <dosreis@cmla.ens-cachan.fr>
-# 36 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
-
-
-
-//
-// This file provides some compile-time information about various types.
-// These representations were designed, on purpose, to be constant-expressions
-// and not types as found in <bits/type_traits.h>.  In particular, they
-// can be used in control structures and the optimizer hopefully will do
-// the obvious thing.
-//
-// Why integral expressions, and not functions nor types?
-// Firstly, these compile-time entities are used as template-arguments
-// so function return values won't work:  We need compile-time entities.
-// We're left with types and constant  integral expressions.
-// Secondly, from the point of view of ease of use, type-based compile-time
-// information is -not- *that* convenient.  On has to write lots of
-// overloaded functions and to hope that the compiler will select the right
-// one. As a net effect, the overall structure isn't very clear at first
-// glance.
-// Thirdly, partial ordering and overload resolution (of function templates)
-// is highly costly in terms of compiler-resource.  It is a Good Thing to
-// keep these resource consumption as least as possible.
-//
-// See valarray_array.h for a case use.
-//
-// -- Gaby (dosreis@cmla.ens-cachan.fr) 2000-03-06.
-//
-// Update 2005: types are also provided and <bits/type_traits.h> has been
-// removed.
-//
-
-// Forward declaration hack, should really include this from somewhere.
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-
-  template<typename _Iterator, typename _Container>
-    class __normal_iterator;
-
-
-} // namespace
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  struct __true_type { };
-  struct __false_type { };
-
-  template<bool>
-    struct __truth_type
-    { typedef __false_type __type; };
-
-  template<>
-    struct __truth_type<true>
-    { typedef __true_type __type; };
-
-  // N.B. The conversions to bool are needed due to the issue
-  // explained in c++/19404.
-  template<class _Sp, class _Tp>
-    struct __traitor
-    {
-      enum { __value = bool(_Sp::__value) || bool(_Tp::__value) };
-      typedef typename __truth_type<__value>::__type __type;
-    };
-
-  // Compare for equality of types.
-  template<typename, typename>
-    struct __are_same
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<typename _Tp>
-    struct __are_same<_Tp, _Tp>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  // Holds if the template-argument is a void type.
-  template<typename _Tp>
-    struct __is_void
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<>
-    struct __is_void<void>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  //
-  // Integer types
-  //
-  template<typename _Tp>
-    struct __is_integer
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  // Thirteen specializations (yes there are eleven standard integer
-  // types; <em>long long</em> and <em>unsigned long long</em> are
-  // supported as extensions)
-  template<>
-    struct __is_integer<bool>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<signed char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<>
-    struct __is_integer<wchar_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-# 198 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
- template<>
-    struct __is_integer<short>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned short>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<int>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned int>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<long long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned long long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  //
-  // Floating point types
-  //
-  template<typename _Tp>
-    struct __is_floating
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  // three specializations (float, double and 'long double')
-  template<>
-    struct __is_floating<float>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_floating<double>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_floating<long double>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  //
-  // Pointer types
-  //
-  template<typename _Tp>
-    struct __is_pointer
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<typename _Tp>
-    struct __is_pointer<_Tp*>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  //
-  // Normal iterator type
-  //
-  template<typename _Tp>
-    struct __is_normal_iterator
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<typename _Iterator, typename _Container>
-    struct __is_normal_iterator< __gnu_cxx::__normal_iterator<_Iterator,
-             _Container> >
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  //
-  // An arithmetic type is an integer type or a floating point type
-  //
-  template<typename _Tp>
-    struct __is_arithmetic
-    : public __traitor<__is_integer<_Tp>, __is_floating<_Tp> >
-    { };
-
-  //
-  // A fundamental type is `void' or and arithmetic type
-  //
-  template<typename _Tp>
-    struct __is_fundamental
-    : public __traitor<__is_void<_Tp>, __is_arithmetic<_Tp> >
-    { };
-
-  //
-  // A scalar type is an arithmetic type or a pointer type
-  // 
-  template<typename _Tp>
-    struct __is_scalar
-    : public __traitor<__is_arithmetic<_Tp>, __is_pointer<_Tp> >
-    { };
-
-  //
-  // For use in std::copy and std::find overloads for streambuf iterators.
-  //
-  template<typename _Tp>
-    struct __is_char
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<>
-    struct __is_char<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<>
-    struct __is_char<wchar_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<typename _Tp>
-    struct __is_byte
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<>
-    struct __is_byte<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_byte<signed char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_byte<unsigned char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  //
-  // Move iterator type
-  //
-  template<typename _Tp>
-    struct __is_move_iterator
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-# 422 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/cpp_type_traits.h" 3
-} // namespace
-# 63 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 1 3
-// -*- C++ -*-
-
-// Copyright (C) 2005, 2006, 2007, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the terms
-// of the GNU General Public License as published by the Free Software
-// Foundation; either version 3, or (at your option) any later
-// version.
-
-// This library is distributed in the hope that it will be useful, but
-// WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-// General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file ext/type_traits.h
- *  This file is a GNU extension to the Standard C++ Library.
- */
-# 33 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/type_traits.h" 3
-
-
-
-
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-
-  // Define a nested type if some predicate holds.
-  template<bool, typename>
-    struct __enable_if
-    { };
-
-  template<typename _Tp>
-    struct __enable_if<true, _Tp>
-    { typedef _Tp __type; };
-
-
-  // Conditional expression for types. If true, first, if false, second.
-  template<bool _Cond, typename _Iftrue, typename _Iffalse>
-    struct __conditional_type
-    { typedef _Iftrue __type; };
-
-  template<typename _Iftrue, typename _Iffalse>
-    struct __conditional_type<false, _Iftrue, _Iffalse>
-    { typedef _Iffalse __type; };
-
-
-  // Given an integral builtin type, return the corresponding unsigned type.
-  template<typename _Tp>
-    struct __add_unsigned
-    {
-    private:
-      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
-
-    public:
-      typedef typename __if_type::__type __type;
-    };
-
-  template<>
-    struct __add_unsigned<char>
-    { typedef unsigned char __type; };
-
-  template<>
-    struct __add_unsigned<signed char>
-    { typedef unsigned char __type; };
-
-  template<>
-    struct __add_unsigned<short>
-    { typedef unsigned short __type; };
-
-  template<>
-    struct __add_unsigned<int>
-    { typedef unsigned int __type; };
-
-  template<>
-    struct __add_unsigned<long>
-    { typedef unsigned long __type; };
-
-  template<>
-    struct __add_unsigned<long long>
-    { typedef unsigned long long __type; };
-
-  // Declare but don't define.
-  template<>
-    struct __add_unsigned<bool>;
-
-  template<>
-    struct __add_unsigned<wchar_t>;
-
-
-  // Given an integral builtin type, return the corresponding signed type.
-  template<typename _Tp>
-    struct __remove_unsigned
-    {
-    private:
-      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
-
-    public:
-      typedef typename __if_type::__type __type;
-    };
-
-  template<>
-    struct __remove_unsigned<char>
-    { typedef signed char __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned char>
-    { typedef signed char __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned short>
-    { typedef short __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned int>
-    { typedef int __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned long>
-    { typedef long __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned long long>
-    { typedef long long __type; };
-
-  // Declare but don't define.
-  template<>
-    struct __remove_unsigned<bool>;
-
-  template<>
-    struct __remove_unsigned<wchar_t>;
-
-
-  // For use in string and vstring.
-  template<typename _Type>
-    inline bool
-    __is_null_pointer(_Type* __ptr)
-    { return __ptr == 0; }
-
-  template<typename _Type>
-    inline bool
-    __is_null_pointer(_Type)
-    { return false; }
-
-
-  // For complex and cmath
-  template<typename _Tp, bool = std::__is_integer<_Tp>::__value>
-    struct __promote
-    { typedef double __type; };
-
-  // No nested __type member for non-integer non-floating point types,
-  // allows this type to be used for SFINAE to constrain overloads in
-  // <cmath> and <complex> to only the intended types.
-  template<typename _Tp>
-    struct __promote<_Tp, false>
-    { };
-
-  template<>
-    struct __promote<long double>
-    { typedef long double __type; };
-
-  template<>
-    struct __promote<double>
-    { typedef double __type; };
-
-  template<>
-    struct __promote<float>
-    { typedef float __type; };
-
-  template<typename _Tp, typename _Up,
-           typename _Tp2 = typename __promote<_Tp>::__type,
-           typename _Up2 = typename __promote<_Up>::__type>
-    struct __promote_2
-    {
-      typedef __typeof__(_Tp2() + _Up2()) __type;
-    };
-
-  template<typename _Tp, typename _Up, typename _Vp,
-           typename _Tp2 = typename __promote<_Tp>::__type,
-           typename _Up2 = typename __promote<_Up>::__type,
-           typename _Vp2 = typename __promote<_Vp>::__type>
-    struct __promote_3
-    {
-      typedef __typeof__(_Tp2() + _Up2() + _Vp2()) __type;
-    };
-
-  template<typename _Tp, typename _Up, typename _Vp, typename _Wp,
-           typename _Tp2 = typename __promote<_Tp>::__type,
-           typename _Up2 = typename __promote<_Up>::__type,
-           typename _Vp2 = typename __promote<_Vp>::__type,
-           typename _Wp2 = typename __promote<_Wp>::__type>
-    struct __promote_4
-    {
-      typedef __typeof__(_Tp2() + _Up2() + _Vp2() + _Wp2()) __type;
-    };
-
-
-} // namespace
-# 64 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h" 2 3
 # 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ext/numeric_traits.h" 1 3
 // -*- C++ -*-
 
@@ -27633,7 +30043,44 @@ namespace std __attribute__ ((__visibility__ ("default")))
 } // namespace std
 # 473 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/basic_ios.h" 2 3
 # 45 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios" 2 3
-# 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
+# 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 1 3
+// Output streams -*- C++ -*-
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010, 2011
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file include/ostream
+ *  This is a Standard C++ Library header.
+ */
+
+//
+// ISO C++ 14882: 27.6.2  Output streams
+//
+# 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 3
+
+
 
 
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -28569,45 +31016,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 } // namespace std
 # 588 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream" 2 3
-# 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 1 3
-// Input streams -*- C++ -*-
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-//
-// ISO C++ 14882: 27.6.1  Input streams
-//
-
-/** @file include/istream
- *  This is a Standard C++ Library header.
- */
-# 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 3
-
-
-
+# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -30498,7 +32907,2485 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 } // namespace std
 # 859 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/istream" 2 3
-# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 2 3
+# 39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 2 3
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  // [27.7.1] template class basic_stringbuf
+  /**
+   *  @brief  The actual work of input and output (for std::string).
+   *  @ingroup io
+   *
+   *  This class associates either or both of its input and output sequences
+   *  with a sequence of characters, which can be initialized from, or made
+   *  available as, a @c std::basic_string.  (Paraphrased from [27.7.1]/1.)
+   *
+   *  For this class, open modes (of type @c ios_base::openmode) have
+   *  @c in set if the input sequence can be read, and @c out set if the
+   *  output sequence can be written.
+  */
+  template<typename _CharT, typename _Traits, typename _Alloc>
+    class basic_stringbuf : public basic_streambuf<_CharT, _Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // 251. basic_stringbuf missing allocator_type
+      typedef _Alloc allocator_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
+      typedef basic_string<char_type, _Traits, _Alloc> __string_type;
+      typedef typename __string_type::size_type __size_type;
+
+    protected:
+      /// Place to stash in || out || in | out settings for current stringbuf.
+      ios_base::openmode _M_mode;
+
+      // Data Members:
+      __string_type _M_string;
+
+    public:
+      // Constructors:
+      /**
+       *  @brief  Starts with an empty string buffer.
+       *  @param  mode  Whether the buffer can read, or write, or both.
+       *
+       *  The default constructor initializes the parent class using its
+       *  own default ctor.
+      */
+      explicit
+      basic_stringbuf(ios_base::openmode __mode = ios_base::in | ios_base::out)
+      : __streambuf_type(), _M_mode(__mode), _M_string()
+      { }
+
+      /**
+       *  @brief  Starts with an existing string buffer.
+       *  @param  str  A string to copy as a starting buffer.
+       *  @param  mode  Whether the buffer can read, or write, or both.
+       *
+       *  This constructor initializes the parent class using its
+       *  own default ctor.
+      */
+      explicit
+      basic_stringbuf(const __string_type& __str,
+        ios_base::openmode __mode = ios_base::in | ios_base::out)
+      : __streambuf_type(), _M_mode(), _M_string(__str.data(), __str.size())
+      { _M_stringbuf_init(__mode); }
+
+      // Get and set:
+      /**
+       *  @brief  Copying out the string buffer.
+       *  @return  A copy of one of the underlying sequences.
+       *
+       *  <em>If the buffer is only created in input mode, the underlying
+       *  character sequence is equal to the input sequence; otherwise, it
+       *  is equal to the output sequence.</em> [27.7.1.2]/1
+      */
+      __string_type
+      str() const
+      {
+ __string_type __ret;
+ if (this->pptr())
+   {
+     // The current egptr() may not be the actual string end.
+     if (this->pptr() > this->egptr())
+       __ret = __string_type(this->pbase(), this->pptr());
+     else
+        __ret = __string_type(this->pbase(), this->egptr());
+   }
+ else
+   __ret = _M_string;
+ return __ret;
+      }
+
+      /**
+       *  @brief  Setting a new buffer.
+       *  @param  s  The string to use as a new sequence.
+       *
+       *  Deallocates any previous stored sequence, then copies @a s to
+       *  use as a new one.
+      */
+      void
+      str(const __string_type& __s)
+      {
+ // Cannot use _M_string = __s, since v3 strings are COW.
+ _M_string.assign(__s.data(), __s.size());
+ _M_stringbuf_init(_M_mode);
+      }
+
+    protected:
+      // Common initialization code goes here.
+      void
+      _M_stringbuf_init(ios_base::openmode __mode)
+      {
+ _M_mode = __mode;
+ __size_type __len = 0;
+ if (_M_mode & (ios_base::ate | ios_base::app))
+   __len = _M_string.size();
+ _M_sync(const_cast<char_type*>(_M_string.data()), 0, __len);
+      }
+
+      virtual streamsize
+      showmanyc()
+      {
+ streamsize __ret = -1;
+ if (_M_mode & ios_base::in)
+   {
+     _M_update_egptr();
+     __ret = this->egptr() - this->gptr();
+   }
+ return __ret;
+      }
+
+      virtual int_type
+      underflow();
+
+      virtual int_type
+      pbackfail(int_type __c = traits_type::eof());
+
+      virtual int_type
+      overflow(int_type __c = traits_type::eof());
+
+      /**
+       *  @brief  Manipulates the buffer.
+       *  @param  s  Pointer to a buffer area.
+       *  @param  n  Size of @a s.
+       *  @return  @c this
+       *
+       *  If no buffer has already been created, and both @a s and @a n are
+       *  non-zero, then @c s is used as a buffer; see
+       *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/bk01pt11ch25s02.html
+       *  for more.
+      */
+      virtual __streambuf_type*
+      setbuf(char_type* __s, streamsize __n)
+      {
+ if (__s && __n >= 0)
+   {
+     // This is implementation-defined behavior, and assumes
+     // that an external char_type array of length __n exists
+     // and has been pre-allocated. If this is not the case,
+     // things will quickly blow up.
+
+     // Step 1: Destroy the current internal array.
+     _M_string.clear();
+
+     // Step 2: Use the external array.
+     _M_sync(__s, __n, 0);
+   }
+ return this;
+      }
+
+      virtual pos_type
+      seekoff(off_type __off, ios_base::seekdir __way,
+       ios_base::openmode __mode = ios_base::in | ios_base::out);
+
+      virtual pos_type
+      seekpos(pos_type __sp,
+       ios_base::openmode __mode = ios_base::in | ios_base::out);
+
+      // Internal function for correctly updating the internal buffer
+      // for a particular _M_string, due to initialization or re-sizing
+      // of an existing _M_string.
+      void
+      _M_sync(char_type* __base, __size_type __i, __size_type __o);
+
+      // Internal function for correctly updating egptr() to the actual
+      // string end.
+      void
+      _M_update_egptr()
+      {
+ const bool __testin = _M_mode & ios_base::in;
+ if (this->pptr() && this->pptr() > this->egptr())
+   {
+     if (__testin)
+       this->setg(this->eback(), this->gptr(), this->pptr());
+     else
+       this->setg(this->pptr(), this->pptr(), this->pptr());
+   }
+      }
+
+      // Works around the issue with pbump, part of the protected
+      // interface of basic_streambuf, taking just an int.
+      void
+      _M_pbump(char_type* __pbeg, char_type* __pend, off_type __off);
+    };
+
+
+  // [27.7.2] Template class basic_istringstream
+  /**
+   *  @brief  Controlling input for std::string.
+   *  @ingroup io
+   *
+   *  This class supports reading from objects of type std::basic_string,
+   *  using the inherited functions from std::basic_istream.  To control
+   *  the associated sequence, an instance of std::basic_stringbuf is used,
+   *  which this page refers to as @c sb.
+  */
+  template<typename _CharT, typename _Traits, typename _Alloc>
+    class basic_istringstream : public basic_istream<_CharT, _Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // 251. basic_stringbuf missing allocator_type
+      typedef _Alloc allocator_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+      // Non-standard types:
+      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
+      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
+      typedef basic_istream<char_type, traits_type> __istream_type;
+
+    private:
+      __stringbuf_type _M_stringbuf;
+
+    public:
+      // Constructors:
+      /**
+       *  @brief  Default constructor starts with an empty string buffer.
+       *  @param  mode  Whether the buffer can read, or write, or both.
+       *
+       *  @c ios_base::in is automatically included in @a mode.
+       *
+       *  Initializes @c sb using @c mode|in, and passes @c &sb to the base
+       *  class initializer.  Does not allocate any buffer.
+       *
+       *  That's a lie.  We initialize the base class with NULL, because the
+       *  string class does its own memory management.
+      */
+      explicit
+      basic_istringstream(ios_base::openmode __mode = ios_base::in)
+      : __istream_type(), _M_stringbuf(__mode | ios_base::in)
+      { this->init(&_M_stringbuf); }
+
+      /**
+       *  @brief  Starts with an existing string buffer.
+       *  @param  str  A string to copy as a starting buffer.
+       *  @param  mode  Whether the buffer can read, or write, or both.
+       *
+       *  @c ios_base::in is automatically included in @a mode.
+       *
+       *  Initializes @c sb using @a str and @c mode|in, and passes @c &sb
+       *  to the base class initializer.
+       *
+       *  That's a lie.  We initialize the base class with NULL, because the
+       *  string class does its own memory management.
+      */
+      explicit
+      basic_istringstream(const __string_type& __str,
+     ios_base::openmode __mode = ios_base::in)
+      : __istream_type(), _M_stringbuf(__str, __mode | ios_base::in)
+      { this->init(&_M_stringbuf); }
+
+      /**
+       *  @brief  The destructor does nothing.
+       *
+       *  The buffer is deallocated by the stringbuf object, not the
+       *  formatting stream.
+      */
+      ~basic_istringstream()
+      { }
+
+      // Members:
+      /**
+       *  @brief  Accessing the underlying buffer.
+       *  @return  The current basic_stringbuf buffer.
+       *
+       *  This hides both signatures of std::basic_ios::rdbuf().
+      */
+      __stringbuf_type*
+      rdbuf() const
+      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
+
+      /**
+       *  @brief  Copying out the string buffer.
+       *  @return  @c rdbuf()->str()
+      */
+      __string_type
+      str() const
+      { return _M_stringbuf.str(); }
+
+      /**
+       *  @brief  Setting a new buffer.
+       *  @param  s  The string to use as a new sequence.
+       *
+       *  Calls @c rdbuf()->str(s).
+      */
+      void
+      str(const __string_type& __s)
+      { _M_stringbuf.str(__s); }
+    };
+
+
+  // [27.7.3] Template class basic_ostringstream
+  /**
+   *  @brief  Controlling output for std::string.
+   *  @ingroup io
+   *
+   *  This class supports writing to objects of type std::basic_string,
+   *  using the inherited functions from std::basic_ostream.  To control
+   *  the associated sequence, an instance of std::basic_stringbuf is used,
+   *  which this page refers to as @c sb.
+  */
+  template <typename _CharT, typename _Traits, typename _Alloc>
+    class basic_ostringstream : public basic_ostream<_CharT, _Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // 251. basic_stringbuf missing allocator_type
+      typedef _Alloc allocator_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+      // Non-standard types:
+      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
+      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
+      typedef basic_ostream<char_type, traits_type> __ostream_type;
+
+    private:
+      __stringbuf_type _M_stringbuf;
+
+    public:
+      // Constructors/destructor:
+      /**
+       *  @brief  Default constructor starts with an empty string buffer.
+       *  @param  mode  Whether the buffer can read, or write, or both.
+       *
+       *  @c ios_base::out is automatically included in @a mode.
+       *
+       *  Initializes @c sb using @c mode|out, and passes @c &sb to the base
+       *  class initializer.  Does not allocate any buffer.
+       *
+       *  That's a lie.  We initialize the base class with NULL, because the
+       *  string class does its own memory management.
+      */
+      explicit
+      basic_ostringstream(ios_base::openmode __mode = ios_base::out)
+      : __ostream_type(), _M_stringbuf(__mode | ios_base::out)
+      { this->init(&_M_stringbuf); }
+
+      /**
+       *  @brief  Starts with an existing string buffer.
+       *  @param  str  A string to copy as a starting buffer.
+       *  @param  mode  Whether the buffer can read, or write, or both.
+       *
+       *  @c ios_base::out is automatically included in @a mode.
+       *
+       *  Initializes @c sb using @a str and @c mode|out, and passes @c &sb
+       *  to the base class initializer.
+       *
+       *  That's a lie.  We initialize the base class with NULL, because the
+       *  string class does its own memory management.
+      */
+      explicit
+      basic_ostringstream(const __string_type& __str,
+     ios_base::openmode __mode = ios_base::out)
+      : __ostream_type(), _M_stringbuf(__str, __mode | ios_base::out)
+      { this->init(&_M_stringbuf); }
+
+      /**
+       *  @brief  The destructor does nothing.
+       *
+       *  The buffer is deallocated by the stringbuf object, not the
+       *  formatting stream.
+      */
+      ~basic_ostringstream()
+      { }
+
+      // Members:
+      /**
+       *  @brief  Accessing the underlying buffer.
+       *  @return  The current basic_stringbuf buffer.
+       *
+       *  This hides both signatures of std::basic_ios::rdbuf().
+      */
+      __stringbuf_type*
+      rdbuf() const
+      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
+
+      /**
+       *  @brief  Copying out the string buffer.
+       *  @return  @c rdbuf()->str()
+      */
+      __string_type
+      str() const
+      { return _M_stringbuf.str(); }
+
+      /**
+       *  @brief  Setting a new buffer.
+       *  @param  s  The string to use as a new sequence.
+       *
+       *  Calls @c rdbuf()->str(s).
+      */
+      void
+      str(const __string_type& __s)
+      { _M_stringbuf.str(__s); }
+    };
+
+
+  // [27.7.4] Template class basic_stringstream
+  /**
+   *  @brief  Controlling input and output for std::string.
+   *  @ingroup io
+   *
+   *  This class supports reading from and writing to objects of type
+   *  std::basic_string, using the inherited functions from
+   *  std::basic_iostream.  To control the associated sequence, an instance
+   *  of std::basic_stringbuf is used, which this page refers to as @c sb.
+  */
+  template <typename _CharT, typename _Traits, typename _Alloc>
+    class basic_stringstream : public basic_iostream<_CharT, _Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // 251. basic_stringbuf missing allocator_type
+      typedef _Alloc allocator_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+      // Non-standard Types:
+      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
+      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
+      typedef basic_iostream<char_type, traits_type> __iostream_type;
+
+    private:
+      __stringbuf_type _M_stringbuf;
+
+    public:
+      // Constructors/destructors
+      /**
+       *  @brief  Default constructor starts with an empty string buffer.
+       *  @param  mode  Whether the buffer can read, or write, or both.
+       *
+       *  Initializes @c sb using @c mode, and passes @c &sb to the base
+       *  class initializer.  Does not allocate any buffer.
+       *
+       *  That's a lie.  We initialize the base class with NULL, because the
+       *  string class does its own memory management.
+      */
+      explicit
+      basic_stringstream(ios_base::openmode __m = ios_base::out | ios_base::in)
+      : __iostream_type(), _M_stringbuf(__m)
+      { this->init(&_M_stringbuf); }
+
+      /**
+       *  @brief  Starts with an existing string buffer.
+       *  @param  str  A string to copy as a starting buffer.
+       *  @param  mode  Whether the buffer can read, or write, or both.
+       *
+       *  Initializes @c sb using @a str and @c mode, and passes @c &sb
+       *  to the base class initializer.
+       *
+       *  That's a lie.  We initialize the base class with NULL, because the
+       *  string class does its own memory management.
+      */
+      explicit
+      basic_stringstream(const __string_type& __str,
+    ios_base::openmode __m = ios_base::out | ios_base::in)
+      : __iostream_type(), _M_stringbuf(__str, __m)
+      { this->init(&_M_stringbuf); }
+
+      /**
+       *  @brief  The destructor does nothing.
+       *
+       *  The buffer is deallocated by the stringbuf object, not the
+       *  formatting stream.
+      */
+      ~basic_stringstream()
+      { }
+
+      // Members:
+      /**
+       *  @brief  Accessing the underlying buffer.
+       *  @return  The current basic_stringbuf buffer.
+       *
+       *  This hides both signatures of std::basic_ios::rdbuf().
+      */
+      __stringbuf_type*
+      rdbuf() const
+      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
+
+      /**
+       *  @brief  Copying out the string buffer.
+       *  @return  @c rdbuf()->str()
+      */
+      __string_type
+      str() const
+      { return _M_stringbuf.str(); }
+
+      /**
+       *  @brief  Setting a new buffer.
+       *  @param  s  The string to use as a new sequence.
+       *
+       *  Calls @c rdbuf()->str(s).
+      */
+      void
+      str(const __string_type& __s)
+      { _M_stringbuf.str(__s); }
+    };
+
+
+} // namespace
+
+
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 1 3
+// String based streams -*- C++ -*-
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010, 2011
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file bits/sstream.tcc
+ *  This is an internal header file, included by other library headers.
+ *  Do not attempt to use it directly. @headername{sstream}
+ */
+
+//
+// ISO C++ 14882: 27.7  String-based streams
+//
+# 39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  template <class _CharT, class _Traits, class _Alloc>
+    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    pbackfail(int_type __c)
+    {
+      int_type __ret = traits_type::eof();
+      if (this->eback() < this->gptr())
+ {
+   // Try to put back __c into input sequence in one of three ways.
+   // Order these tests done in is unspecified by the standard.
+   const bool __testeof = traits_type::eq_int_type(__c, __ret);
+   if (!__testeof)
+     {
+       const bool __testeq = traits_type::eq(traits_type::
+          to_char_type(__c),
+          this->gptr()[-1]);
+       const bool __testout = this->_M_mode & ios_base::out;
+       if (__testeq || __testout)
+  {
+    this->gbump(-1);
+    if (!__testeq)
+      *this->gptr() = traits_type::to_char_type(__c);
+    __ret = __c;
+  }
+     }
+   else
+     {
+       this->gbump(-1);
+       __ret = traits_type::not_eof(__c);
+     }
+ }
+      return __ret;
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    overflow(int_type __c)
+    {
+      const bool __testout = this->_M_mode & ios_base::out;
+      if (__builtin_expect(!__testout, false))
+ return traits_type::eof();
+
+      const bool __testeof = traits_type::eq_int_type(__c, traits_type::eof());
+      if (__builtin_expect(__testeof, false))
+ return traits_type::not_eof(__c);
+
+      const __size_type __capacity = _M_string.capacity();
+      const __size_type __max_size = _M_string.max_size();
+      const bool __testput = this->pptr() < this->epptr();
+      if (__builtin_expect(!__testput && __capacity == __max_size, false))
+ return traits_type::eof();
+
+      // Try to append __c into output sequence in one of two ways.
+      // Order these tests done in is unspecified by the standard.
+      const char_type __conv = traits_type::to_char_type(__c);
+      if (!__testput)
+ {
+   // NB: Start ostringstream buffers at 512 chars.  This is an
+   // experimental value (pronounced "arbitrary" in some of the
+   // hipper English-speaking countries), and can be changed to
+   // suit particular needs.
+   //
+   // _GLIBCXX_RESOLVE_LIB_DEFECTS
+   // 169. Bad efficiency of overflow() mandated
+   // 432. stringbuf::overflow() makes only one write position
+   //      available
+   const __size_type __opt_len = std::max(__size_type(2 * __capacity),
+       __size_type(512));
+   const __size_type __len = std::min(__opt_len, __max_size);
+   __string_type __tmp;
+   __tmp.reserve(__len);
+   if (this->pbase())
+     __tmp.assign(this->pbase(), this->epptr() - this->pbase());
+   __tmp.push_back(__conv);
+   _M_string.swap(__tmp);
+   _M_sync(const_cast<char_type*>(_M_string.data()),
+    this->gptr() - this->eback(), this->pptr() - this->pbase());
+ }
+      else
+ *this->pptr() = __conv;
+      this->pbump(1);
+      return __c;
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    underflow()
+    {
+      int_type __ret = traits_type::eof();
+      const bool __testin = this->_M_mode & ios_base::in;
+      if (__testin)
+ {
+   // Update egptr() to match the actual string end.
+   _M_update_egptr();
+
+   if (this->gptr() < this->egptr())
+     __ret = traits_type::to_int_type(*this->gptr());
+ }
+      return __ret;
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    typename basic_stringbuf<_CharT, _Traits, _Alloc>::pos_type
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode __mode)
+    {
+      pos_type __ret = pos_type(off_type(-1));
+      bool __testin = (ios_base::in & this->_M_mode & __mode) != 0;
+      bool __testout = (ios_base::out & this->_M_mode & __mode) != 0;
+      const bool __testboth = __testin && __testout && __way != ios_base::cur;
+      __testin &= !(__mode & ios_base::out);
+      __testout &= !(__mode & ios_base::in);
+
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // 453. basic_stringbuf::seekoff need not always fail for an empty stream.
+      const char_type* __beg = __testin ? this->eback() : this->pbase();
+      if ((__beg || !__off) && (__testin || __testout || __testboth))
+ {
+   _M_update_egptr();
+
+   off_type __newoffi = __off;
+   off_type __newoffo = __newoffi;
+   if (__way == ios_base::cur)
+     {
+       __newoffi += this->gptr() - __beg;
+       __newoffo += this->pptr() - __beg;
+     }
+   else if (__way == ios_base::end)
+     __newoffo = __newoffi += this->egptr() - __beg;
+
+   if ((__testin || __testboth)
+       && __newoffi >= 0
+       && this->egptr() - __beg >= __newoffi)
+     {
+       this->setg(this->eback(), this->eback() + __newoffi,
+    this->egptr());
+       __ret = pos_type(__newoffi);
+     }
+   if ((__testout || __testboth)
+       && __newoffo >= 0
+       && this->egptr() - __beg >= __newoffo)
+     {
+       _M_pbump(this->pbase(), this->epptr(), __newoffo);
+       __ret = pos_type(__newoffo);
+     }
+ }
+      return __ret;
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    typename basic_stringbuf<_CharT, _Traits, _Alloc>::pos_type
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    seekpos(pos_type __sp, ios_base::openmode __mode)
+    {
+      pos_type __ret = pos_type(off_type(-1));
+      const bool __testin = (ios_base::in & this->_M_mode & __mode) != 0;
+      const bool __testout = (ios_base::out & this->_M_mode & __mode) != 0;
+
+      const char_type* __beg = __testin ? this->eback() : this->pbase();
+      if ((__beg || !off_type(__sp)) && (__testin || __testout))
+ {
+   _M_update_egptr();
+
+   const off_type __pos(__sp);
+   const bool __testpos = (0 <= __pos
+      && __pos <= this->egptr() - __beg);
+   if (__testpos)
+     {
+       if (__testin)
+  this->setg(this->eback(), this->eback() + __pos,
+      this->egptr());
+       if (__testout)
+  _M_pbump(this->pbase(), this->epptr(), __pos);
+       __ret = __sp;
+     }
+ }
+      return __ret;
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    void
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    _M_sync(char_type* __base, __size_type __i, __size_type __o)
+    {
+      const bool __testin = _M_mode & ios_base::in;
+      const bool __testout = _M_mode & ios_base::out;
+      char_type* __endg = __base + _M_string.size();
+      char_type* __endp = __base + _M_string.capacity();
+
+      if (__base != _M_string.data())
+ {
+   // setbuf: __i == size of buffer area (_M_string.size() == 0).
+   __endg += __i;
+   __i = 0;
+   __endp = __endg;
+ }
+
+      if (__testin)
+ this->setg(__base, __base + __i, __endg);
+      if (__testout)
+ {
+   _M_pbump(__base, __endp, __o);
+   // egptr() always tracks the string end.  When !__testin,
+   // for the correct functioning of the streambuf inlines
+   // the other get area pointers are identical.
+   if (!__testin)
+     this->setg(__endg, __endg, __endg);
+ }
+    }
+
+  template <class _CharT, class _Traits, class _Alloc>
+    void
+    basic_stringbuf<_CharT, _Traits, _Alloc>::
+    _M_pbump(char_type* __pbeg, char_type* __pend, off_type __off)
+    {
+      this->setp(__pbeg, __pend);
+      while (__off > __gnu_cxx::__numeric_traits<int>::__max)
+ {
+   this->pbump(__gnu_cxx::__numeric_traits<int>::__max);
+   __off -= __gnu_cxx::__numeric_traits<int>::__max;
+ }
+      this->pbump(__off);
+    }
+
+  // Inhibit implicit instantiations for required instantiations,
+  // which are defined via explicit instantiations elsewhere.
+
+  extern template class basic_stringbuf<char>;
+  extern template class basic_istringstream<char>;
+  extern template class basic_ostringstream<char>;
+  extern template class basic_stringstream<char>;
+
+
+  extern template class basic_stringbuf<wchar_t>;
+  extern template class basic_istringstream<wchar_t>;
+  extern template class basic_ostringstream<wchar_t>;
+  extern template class basic_stringstream<wchar_t>;
+
+
+
+
+} // namespace std
+# 580 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 2 3
+# 47 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  /**
+   * @defgroup complex_numbers Complex Numbers
+   * @ingroup numerics
+   *
+   * Classes and functions for complex numbers.
+   * @{
+   */
+
+  // Forward declarations.
+  template<typename _Tp> class complex;
+  template<> class complex<float>;
+  template<> class complex<double>;
+  template<> class complex<long double>;
+
+  ///  Return magnitude of @a z.
+  template<typename _Tp> _Tp abs(const complex<_Tp>&);
+  ///  Return phase angle of @a z.
+  template<typename _Tp> _Tp arg(const complex<_Tp>&);
+  ///  Return @a z magnitude squared.
+  template<typename _Tp> _Tp norm(const complex<_Tp>&);
+
+  ///  Return complex conjugate of @a z.
+  template<typename _Tp> complex<_Tp> conj(const complex<_Tp>&);
+  ///  Return complex with magnitude @a rho and angle @a theta.
+  template<typename _Tp> complex<_Tp> polar(const _Tp&, const _Tp& = 0);
+
+  // Transcendentals:
+  /// Return complex cosine of @a z.
+  template<typename _Tp> complex<_Tp> cos(const complex<_Tp>&);
+  /// Return complex hyperbolic cosine of @a z.
+  template<typename _Tp> complex<_Tp> cosh(const complex<_Tp>&);
+  /// Return complex base e exponential of @a z.
+  template<typename _Tp> complex<_Tp> exp(const complex<_Tp>&);
+  /// Return complex natural logarithm of @a z.
+  template<typename _Tp> complex<_Tp> log(const complex<_Tp>&);
+  /// Return complex base 10 logarithm of @a z.
+  template<typename _Tp> complex<_Tp> log10(const complex<_Tp>&);
+
+  // DR 844.
+  /// Return @a x to the @a y'th power.
+  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, int);
+
+  /// Return @a x to the @a y'th power.
+  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, const _Tp&);
+  /// Return @a x to the @a y'th power.
+  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&,
+                                          const complex<_Tp>&);
+  /// Return @a x to the @a y'th power.
+  template<typename _Tp> complex<_Tp> pow(const _Tp&, const complex<_Tp>&);
+  /// Return complex sine of @a z.
+  template<typename _Tp> complex<_Tp> sin(const complex<_Tp>&);
+  /// Return complex hyperbolic sine of @a z.
+  template<typename _Tp> complex<_Tp> sinh(const complex<_Tp>&);
+  /// Return complex square root of @a z.
+  template<typename _Tp> complex<_Tp> sqrt(const complex<_Tp>&);
+  /// Return complex tangent of @a z.
+  template<typename _Tp> complex<_Tp> tan(const complex<_Tp>&);
+  /// Return complex hyperbolic tangent of @a z.
+  template<typename _Tp> complex<_Tp> tanh(const complex<_Tp>&);
+
+
+  // 26.2.2  Primary template class complex
+  /**
+   *  Template to represent complex numbers.
+   *
+   *  Specializations for float, double, and long double are part of the
+   *  library.  Results with any other type are not guaranteed.
+   *
+   *  @param  Tp  Type of real and imaginary values.
+  */
+  template<typename _Tp>
+    struct complex
+    {
+      /// Value typedef.
+      typedef _Tp value_type;
+
+      ///  Default constructor.  First parameter is x, second parameter is y.
+      ///  Unspecified parameters default to 0.
+                         complex(const _Tp& __r = _Tp(), const _Tp& __i = _Tp())
+      : _M_real(__r), _M_imag(__i) { }
+
+      // Lets the compiler synthesize the copy constructor   
+      // complex (const complex<_Tp>&);
+      ///  Copy constructor.
+      template<typename _Up>
+                           complex(const complex<_Up>& __z)
+ : _M_real(__z.real()), _M_imag(__z.imag()) { }
+# 149 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
+ ///  Return real part of complex number.
+      _Tp&
+      real() { return _M_real; }
+
+      ///  Return real part of complex number.
+      const _Tp&
+      real() const { return _M_real; }
+
+      ///  Return imaginary part of complex number.
+      _Tp&
+      imag() { return _M_imag; }
+
+      ///  Return imaginary part of complex number.
+      const _Tp&
+      imag() const { return _M_imag; }
+
+
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // DR 387. std::complex over-encapsulated.
+      void
+      real(_Tp __val) { _M_real = __val; }
+
+      void
+      imag(_Tp __val) { _M_imag = __val; }
+
+      /// Assign this complex number to scalar @a t.
+      complex<_Tp>& operator=(const _Tp&);
+
+      /// Add @a t to this complex number.
+      // 26.2.5/1
+      complex<_Tp>&
+      operator+=(const _Tp& __t)
+      {
+ _M_real += __t;
+ return *this;
+      }
+
+      /// Subtract @a t from this complex number.
+      // 26.2.5/3
+      complex<_Tp>&
+      operator-=(const _Tp& __t)
+      {
+ _M_real -= __t;
+ return *this;
+      }
+
+      /// Multiply this complex number by @a t.
+      complex<_Tp>& operator*=(const _Tp&);
+      /// Divide this complex number by @a t.
+      complex<_Tp>& operator/=(const _Tp&);
+
+      // Lets the compiler synthesize the
+      // copy and assignment operator
+      // complex<_Tp>& operator= (const complex<_Tp>&);
+      /// Assign this complex number to complex @a z.
+      template<typename _Up>
+        complex<_Tp>& operator=(const complex<_Up>&);
+      /// Add @a z to this complex number.
+      template<typename _Up>
+        complex<_Tp>& operator+=(const complex<_Up>&);
+      /// Subtract @a z from this complex number.
+      template<typename _Up>
+        complex<_Tp>& operator-=(const complex<_Up>&);
+      /// Multiply this complex number by @a z.
+      template<typename _Up>
+        complex<_Tp>& operator*=(const complex<_Up>&);
+      /// Divide this complex number by @a z.
+      template<typename _Up>
+        complex<_Tp>& operator/=(const complex<_Up>&);
+
+      const complex __rep() const
+      { return *this; }
+
+    private:
+      _Tp _M_real;
+      _Tp _M_imag;
+    };
+
+  template<typename _Tp>
+    complex<_Tp>&
+    complex<_Tp>::operator=(const _Tp& __t)
+    {
+     _M_real = __t;
+     _M_imag = _Tp();
+     return *this;
+    }
+
+  // 26.2.5/5
+  template<typename _Tp>
+    complex<_Tp>&
+    complex<_Tp>::operator*=(const _Tp& __t)
+    {
+      _M_real *= __t;
+      _M_imag *= __t;
+      return *this;
+    }
+
+  // 26.2.5/7
+  template<typename _Tp>
+    complex<_Tp>&
+    complex<_Tp>::operator/=(const _Tp& __t)
+    {
+      _M_real /= __t;
+      _M_imag /= __t;
+      return *this;
+    }
+
+  template<typename _Tp>
+    template<typename _Up>
+    complex<_Tp>&
+    complex<_Tp>::operator=(const complex<_Up>& __z)
+    {
+      _M_real = __z.real();
+      _M_imag = __z.imag();
+      return *this;
+    }
+
+  // 26.2.5/9
+  template<typename _Tp>
+    template<typename _Up>
+    complex<_Tp>&
+    complex<_Tp>::operator+=(const complex<_Up>& __z)
+    {
+      _M_real += __z.real();
+      _M_imag += __z.imag();
+      return *this;
+    }
+
+  // 26.2.5/11
+  template<typename _Tp>
+    template<typename _Up>
+    complex<_Tp>&
+    complex<_Tp>::operator-=(const complex<_Up>& __z)
+    {
+      _M_real -= __z.real();
+      _M_imag -= __z.imag();
+      return *this;
+    }
+
+  // 26.2.5/13
+  // XXX: This is a grammar school implementation.
+  template<typename _Tp>
+    template<typename _Up>
+    complex<_Tp>&
+    complex<_Tp>::operator*=(const complex<_Up>& __z)
+    {
+      const _Tp __r = _M_real * __z.real() - _M_imag * __z.imag();
+      _M_imag = _M_real * __z.imag() + _M_imag * __z.real();
+      _M_real = __r;
+      return *this;
+    }
+
+  // 26.2.5/15
+  // XXX: This is a grammar school implementation.
+  template<typename _Tp>
+    template<typename _Up>
+    complex<_Tp>&
+    complex<_Tp>::operator/=(const complex<_Up>& __z)
+    {
+      const _Tp __r = _M_real * __z.real() + _M_imag * __z.imag();
+      const _Tp __n = std::norm(__z);
+      _M_imag = (_M_imag * __z.real() - _M_real * __z.imag()) / __n;
+      _M_real = __r / __n;
+      return *this;
+    }
+
+  // Operators:
+  //@{
+  ///  Return new complex value @a x plus @a y.
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator+(const complex<_Tp>& __x, const complex<_Tp>& __y)
+    {
+      complex<_Tp> __r = __x;
+      __r += __y;
+      return __r;
+    }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator+(const complex<_Tp>& __x, const _Tp& __y)
+    {
+      complex<_Tp> __r = __x;
+      __r += __y;
+      return __r;
+    }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator+(const _Tp& __x, const complex<_Tp>& __y)
+    {
+      complex<_Tp> __r = __y;
+      __r += __x;
+      return __r;
+    }
+  //@}
+
+  //@{
+  ///  Return new complex value @a x minus @a y.
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator-(const complex<_Tp>& __x, const complex<_Tp>& __y)
+    {
+      complex<_Tp> __r = __x;
+      __r -= __y;
+      return __r;
+    }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator-(const complex<_Tp>& __x, const _Tp& __y)
+    {
+      complex<_Tp> __r = __x;
+      __r -= __y;
+      return __r;
+    }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator-(const _Tp& __x, const complex<_Tp>& __y)
+    {
+      complex<_Tp> __r(__x, -__y.imag());
+      __r -= __y.real();
+      return __r;
+    }
+  //@}
+
+  //@{
+  ///  Return new complex value @a x times @a y.
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+    {
+      complex<_Tp> __r = __x;
+      __r *= __y;
+      return __r;
+    }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator*(const complex<_Tp>& __x, const _Tp& __y)
+    {
+      complex<_Tp> __r = __x;
+      __r *= __y;
+      return __r;
+    }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator*(const _Tp& __x, const complex<_Tp>& __y)
+    {
+      complex<_Tp> __r = __y;
+      __r *= __x;
+      return __r;
+    }
+  //@}
+
+  //@{
+  ///  Return new complex value @a x divided by @a y.
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator/(const complex<_Tp>& __x, const complex<_Tp>& __y)
+    {
+      complex<_Tp> __r = __x;
+      __r /= __y;
+      return __r;
+    }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator/(const complex<_Tp>& __x, const _Tp& __y)
+    {
+      complex<_Tp> __r = __x;
+      __r /= __y;
+      return __r;
+    }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator/(const _Tp& __x, const complex<_Tp>& __y)
+    {
+      complex<_Tp> __r = __x;
+      __r /= __y;
+      return __r;
+    }
+  //@}
+
+  ///  Return @a x.
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator+(const complex<_Tp>& __x)
+    { return __x; }
+
+  ///  Return complex negation of @a x.
+  template<typename _Tp>
+    inline complex<_Tp>
+    operator-(const complex<_Tp>& __x)
+    { return complex<_Tp>(-__x.real(), -__x.imag()); }
+
+  //@{
+  ///  Return true if @a x is equal to @a y.
+  template<typename _Tp>
+    inline bool
+    operator==(const complex<_Tp>& __x, const complex<_Tp>& __y)
+    { return __x.real() == __y.real() && __x.imag() == __y.imag(); }
+
+  template<typename _Tp>
+    inline bool
+    operator==(const complex<_Tp>& __x, const _Tp& __y)
+    { return __x.real() == __y && __x.imag() == _Tp(); }
+
+  template<typename _Tp>
+    inline bool
+    operator==(const _Tp& __x, const complex<_Tp>& __y)
+    { return __x == __y.real() && _Tp() == __y.imag(); }
+  //@}
+
+  //@{
+  ///  Return false if @a x is equal to @a y.
+  template<typename _Tp>
+    inline bool
+    operator!=(const complex<_Tp>& __x, const complex<_Tp>& __y)
+    { return __x.real() != __y.real() || __x.imag() != __y.imag(); }
+
+  template<typename _Tp>
+    inline bool
+    operator!=(const complex<_Tp>& __x, const _Tp& __y)
+    { return __x.real() != __y || __x.imag() != _Tp(); }
+
+  template<typename _Tp>
+    inline bool
+    operator!=(const _Tp& __x, const complex<_Tp>& __y)
+    { return __x != __y.real() || _Tp() != __y.imag(); }
+  //@}
+
+  ///  Extraction operator for complex values.
+  template<typename _Tp, typename _CharT, class _Traits>
+    basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, complex<_Tp>& __x)
+    {
+      _Tp __re_x, __im_x;
+      _CharT __ch;
+      __is >> __ch;
+      if (__ch == '(')
+ {
+   __is >> __re_x >> __ch;
+   if (__ch == ',')
+     {
+       __is >> __im_x >> __ch;
+       if (__ch == ')')
+  __x = complex<_Tp>(__re_x, __im_x);
+       else
+  __is.setstate(ios_base::failbit);
+     }
+   else if (__ch == ')')
+     __x = __re_x;
+   else
+     __is.setstate(ios_base::failbit);
+ }
+      else
+ {
+   __is.putback(__ch);
+   __is >> __re_x;
+   __x = __re_x;
+ }
+      return __is;
+    }
+
+  ///  Insertion operator for complex values.
+  template<typename _Tp, typename _CharT, class _Traits>
+    basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+    {
+      basic_ostringstream<_CharT, _Traits> __s;
+      __s.flags(__os.flags());
+      __s.imbue(__os.getloc());
+      __s.precision(__os.precision());
+      __s << '(' << __x.real() << ',' << __x.imag() << ')';
+      return __os << __s.str();
+    }
+
+  // Values
+# 542 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
+ template<typename _Tp>
+    inline _Tp&
+    real(complex<_Tp>& __z)
+    { return __z.real(); }
+
+  template<typename _Tp>
+    inline const _Tp&
+    real(const complex<_Tp>& __z)
+    { return __z.real(); }
+
+  template<typename _Tp>
+    inline _Tp&
+    imag(complex<_Tp>& __z)
+    { return __z.imag(); }
+
+  template<typename _Tp>
+    inline const _Tp&
+    imag(const complex<_Tp>& __z)
+    { return __z.imag(); }
+
+
+  // 26.2.7/3 abs(__z):  Returns the magnitude of __z.
+  template<typename _Tp>
+    inline _Tp
+    __complex_abs(const complex<_Tp>& __z)
+    {
+      _Tp __x = __z.real();
+      _Tp __y = __z.imag();
+      const _Tp __s = std::max(abs(__x), abs(__y));
+      if (__s == _Tp()) // well ...
+        return __s;
+      __x /= __s;
+      __y /= __s;
+      return __s * sqrt(__x * __x + __y * __y);
+    }
+
+
+  inline float
+  __complex_abs(__complex__ float __z) { return __builtin_cabsf(__z); }
+
+  inline double
+  __complex_abs(__complex__ double __z) { return __builtin_cabs(__z); }
+
+  inline long double
+  __complex_abs(const __complex__ long double& __z)
+  { return __builtin_cabsl(__z); }
+
+  template<typename _Tp>
+    inline _Tp
+    abs(const complex<_Tp>& __z) { return __complex_abs(__z.__rep()); }
+
+
+
+
+
+
+
+  // 26.2.7/4: arg(__z): Returns the phase angle of __z.
+  template<typename _Tp>
+    inline _Tp
+    __complex_arg(const complex<_Tp>& __z)
+    { return atan2(__z.imag(), __z.real()); }
+
+
+  inline float
+  __complex_arg(__complex__ float __z) { return __builtin_cargf(__z); }
+
+  inline double
+  __complex_arg(__complex__ double __z) { return __builtin_carg(__z); }
+
+  inline long double
+  __complex_arg(const __complex__ long double& __z)
+  { return __builtin_cargl(__z); }
+
+  template<typename _Tp>
+    inline _Tp
+    arg(const complex<_Tp>& __z) { return __complex_arg(__z.__rep()); }
+
+
+
+
+
+
+  // 26.2.7/5: norm(__z) returns the squared magnitude of __z.
+  //     As defined, norm() is -not- a norm is the common mathematical
+  //     sens used in numerics.  The helper class _Norm_helper<> tries to
+  //     distinguish between builtin floating point and the rest, so as
+  //     to deliver an answer as close as possible to the real value.
+  template<bool>
+    struct _Norm_helper
+    {
+      template<typename _Tp>
+        static inline _Tp _S_do_it(const complex<_Tp>& __z)
+        {
+          const _Tp __x = __z.real();
+          const _Tp __y = __z.imag();
+          return __x * __x + __y * __y;
+        }
+    };
+
+  template<>
+    struct _Norm_helper<true>
+    {
+      template<typename _Tp>
+        static inline _Tp _S_do_it(const complex<_Tp>& __z)
+        {
+          _Tp __res = std::abs(__z);
+          return __res * __res;
+        }
+    };
+
+  template<typename _Tp>
+    inline _Tp
+    norm(const complex<_Tp>& __z)
+    {
+      return _Norm_helper<__is_floating<_Tp>::__value
+ && !0>::_S_do_it(__z);
+    }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    polar(const _Tp& __rho, const _Tp& __theta)
+    { return complex<_Tp>(__rho * cos(__theta), __rho * sin(__theta)); }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    conj(const complex<_Tp>& __z)
+    { return complex<_Tp>(__z.real(), -__z.imag()); }
+
+  // Transcendentals
+
+  // 26.2.8/1 cos(__z):  Returns the cosine of __z.
+  template<typename _Tp>
+    inline complex<_Tp>
+    __complex_cos(const complex<_Tp>& __z)
+    {
+      const _Tp __x = __z.real();
+      const _Tp __y = __z.imag();
+      return complex<_Tp>(cos(__x) * cosh(__y), -sin(__x) * sinh(__y));
+    }
+
+
+  inline __complex__ float
+  __complex_cos(__complex__ float __z) { return __builtin_ccosf(__z); }
+
+  inline __complex__ double
+  __complex_cos(__complex__ double __z) { return __builtin_ccos(__z); }
+
+  inline __complex__ long double
+  __complex_cos(const __complex__ long double& __z)
+  { return __builtin_ccosl(__z); }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    cos(const complex<_Tp>& __z) { return __complex_cos(__z.__rep()); }
+
+
+
+
+
+
+  // 26.2.8/2 cosh(__z): Returns the hyperbolic cosine of __z.
+  template<typename _Tp>
+    inline complex<_Tp>
+    __complex_cosh(const complex<_Tp>& __z)
+    {
+      const _Tp __x = __z.real();
+      const _Tp __y = __z.imag();
+      return complex<_Tp>(cosh(__x) * cos(__y), sinh(__x) * sin(__y));
+    }
+
+
+  inline __complex__ float
+  __complex_cosh(__complex__ float __z) { return __builtin_ccoshf(__z); }
+
+  inline __complex__ double
+  __complex_cosh(__complex__ double __z) { return __builtin_ccosh(__z); }
+
+  inline __complex__ long double
+  __complex_cosh(const __complex__ long double& __z)
+  { return __builtin_ccoshl(__z); }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    cosh(const complex<_Tp>& __z) { return __complex_cosh(__z.__rep()); }
+
+
+
+
+
+
+  // 26.2.8/3 exp(__z): Returns the complex base e exponential of x
+  template<typename _Tp>
+    inline complex<_Tp>
+    __complex_exp(const complex<_Tp>& __z)
+    { return std::polar(exp(__z.real()), __z.imag()); }
+
+
+  inline __complex__ float
+  __complex_exp(__complex__ float __z) { return __builtin_cexpf(__z); }
+
+  inline __complex__ double
+  __complex_exp(__complex__ double __z) { return __builtin_cexp(__z); }
+
+  inline __complex__ long double
+  __complex_exp(const __complex__ long double& __z)
+  { return __builtin_cexpl(__z); }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    exp(const complex<_Tp>& __z) { return __complex_exp(__z.__rep()); }
+
+
+
+
+
+
+  // 26.2.8/5 log(__z): Returns the natural complex logarithm of __z.
+  //                    The branch cut is along the negative axis.
+  template<typename _Tp>
+    inline complex<_Tp>
+    __complex_log(const complex<_Tp>& __z)
+    { return complex<_Tp>(log(std::abs(__z)), std::arg(__z)); }
+
+
+  inline __complex__ float
+  __complex_log(__complex__ float __z) { return __builtin_clogf(__z); }
+
+  inline __complex__ double
+  __complex_log(__complex__ double __z) { return __builtin_clog(__z); }
+
+  inline __complex__ long double
+  __complex_log(const __complex__ long double& __z)
+  { return __builtin_clogl(__z); }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
+
+
+
+
+
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    log10(const complex<_Tp>& __z)
+    { return std::log(__z) / log(_Tp(10.0)); }
+
+  // 26.2.8/10 sin(__z): Returns the sine of __z.
+  template<typename _Tp>
+    inline complex<_Tp>
+    __complex_sin(const complex<_Tp>& __z)
+    {
+      const _Tp __x = __z.real();
+      const _Tp __y = __z.imag();
+      return complex<_Tp>(sin(__x) * cosh(__y), cos(__x) * sinh(__y));
+    }
+
+
+  inline __complex__ float
+  __complex_sin(__complex__ float __z) { return __builtin_csinf(__z); }
+
+  inline __complex__ double
+  __complex_sin(__complex__ double __z) { return __builtin_csin(__z); }
+
+  inline __complex__ long double
+  __complex_sin(const __complex__ long double& __z)
+  { return __builtin_csinl(__z); }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    sin(const complex<_Tp>& __z) { return __complex_sin(__z.__rep()); }
+
+
+
+
+
+
+  // 26.2.8/11 sinh(__z): Returns the hyperbolic sine of __z.
+  template<typename _Tp>
+    inline complex<_Tp>
+    __complex_sinh(const complex<_Tp>& __z)
+    {
+      const _Tp __x = __z.real();
+      const _Tp __y = __z.imag();
+      return complex<_Tp>(sinh(__x) * cos(__y), cosh(__x) * sin(__y));
+    }
+
+
+  inline __complex__ float
+  __complex_sinh(__complex__ float __z) { return __builtin_csinhf(__z); }
+
+  inline __complex__ double
+  __complex_sinh(__complex__ double __z) { return __builtin_csinh(__z); }
+
+  inline __complex__ long double
+  __complex_sinh(const __complex__ long double& __z)
+  { return __builtin_csinhl(__z); }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    sinh(const complex<_Tp>& __z) { return __complex_sinh(__z.__rep()); }
+
+
+
+
+
+
+  // 26.2.8/13 sqrt(__z): Returns the complex square root of __z.
+  //                     The branch cut is on the negative axis.
+  template<typename _Tp>
+    complex<_Tp>
+    __complex_sqrt(const complex<_Tp>& __z)
+    {
+      _Tp __x = __z.real();
+      _Tp __y = __z.imag();
+
+      if (__x == _Tp())
+        {
+          _Tp __t = sqrt(abs(__y) / 2);
+          return complex<_Tp>(__t, __y < _Tp() ? -__t : __t);
+        }
+      else
+        {
+          _Tp __t = sqrt(2 * (std::abs(__z) + abs(__x)));
+          _Tp __u = __t / 2;
+          return __x > _Tp()
+            ? complex<_Tp>(__u, __y / __t)
+            : complex<_Tp>(abs(__y) / __t, __y < _Tp() ? -__u : __u);
+        }
+    }
+
+
+  inline __complex__ float
+  __complex_sqrt(__complex__ float __z) { return __builtin_csqrtf(__z); }
+
+  inline __complex__ double
+  __complex_sqrt(__complex__ double __z) { return __builtin_csqrt(__z); }
+
+  inline __complex__ long double
+  __complex_sqrt(const __complex__ long double& __z)
+  { return __builtin_csqrtl(__z); }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    sqrt(const complex<_Tp>& __z) { return __complex_sqrt(__z.__rep()); }
+
+
+
+
+
+
+  // 26.2.8/14 tan(__z):  Return the complex tangent of __z.
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    __complex_tan(const complex<_Tp>& __z)
+    { return std::sin(__z) / std::cos(__z); }
+
+
+  inline __complex__ float
+  __complex_tan(__complex__ float __z) { return __builtin_ctanf(__z); }
+
+  inline __complex__ double
+  __complex_tan(__complex__ double __z) { return __builtin_ctan(__z); }
+
+  inline __complex__ long double
+  __complex_tan(const __complex__ long double& __z)
+  { return __builtin_ctanl(__z); }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    tan(const complex<_Tp>& __z) { return __complex_tan(__z.__rep()); }
+
+
+
+
+
+
+
+  // 26.2.8/15 tanh(__z):  Returns the hyperbolic tangent of __z.
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    __complex_tanh(const complex<_Tp>& __z)
+    { return std::sinh(__z) / std::cosh(__z); }
+
+
+  inline __complex__ float
+  __complex_tanh(__complex__ float __z) { return __builtin_ctanhf(__z); }
+
+  inline __complex__ double
+  __complex_tanh(__complex__ double __z) { return __builtin_ctanh(__z); }
+
+  inline __complex__ long double
+  __complex_tanh(const __complex__ long double& __z)
+  { return __builtin_ctanhl(__z); }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    tanh(const complex<_Tp>& __z) { return __complex_tanh(__z.__rep()); }
+
+
+
+
+
+
+
+  // 26.2.8/9  pow(__x, __y): Returns the complex power base of __x
+  //                          raised to the __y-th power.  The branch
+  //                          cut is on the negative axis.
+
+  template<typename _Tp>
+    complex<_Tp>
+    __complex_pow_unsigned(complex<_Tp> __x, unsigned __n)
+    {
+      complex<_Tp> __y = __n % 2 ? __x : complex<_Tp>(1);
+
+      while (__n >>= 1)
+        {
+          __x *= __x;
+          if (__n % 2)
+            __y *= __x;
+        }
+
+      return __y;
+    }
+
+  // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  // DR 844. complex pow return type is ambiguous.
+  template<typename _Tp>
+    inline complex<_Tp>
+    pow(const complex<_Tp>& __z, int __n)
+    {
+      return __n < 0
+        ? complex<_Tp>(1) / std::__complex_pow_unsigned(__z, -__n)
+        : std::__complex_pow_unsigned(__z, __n);
+    }
+
+
+  template<typename _Tp>
+    complex<_Tp>
+    pow(const complex<_Tp>& __x, const _Tp& __y)
+    {
+
+
+
+
+      if (__x.imag() == _Tp() && __x.real() > _Tp())
+        return pow(__x.real(), __y);
+
+      complex<_Tp> __t = std::log(__x);
+      return std::polar(exp(__y * __t.real()), __y * __t.imag());
+    }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    __complex_pow(const complex<_Tp>& __x, const complex<_Tp>& __y)
+    { return __x == _Tp() ? _Tp() : std::exp(__y * std::log(__x)); }
+
+
+  inline __complex__ float
+  __complex_pow(__complex__ float __x, __complex__ float __y)
+  { return __builtin_cpowf(__x, __y); }
+
+  inline __complex__ double
+  __complex_pow(__complex__ double __x, __complex__ double __y)
+  { return __builtin_cpow(__x, __y); }
+
+  inline __complex__ long double
+  __complex_pow(const __complex__ long double& __x,
+  const __complex__ long double& __y)
+  { return __builtin_cpowl(__x, __y); }
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    pow(const complex<_Tp>& __x, const complex<_Tp>& __y)
+    { return __complex_pow(__x.__rep(), __y.__rep()); }
+
+
+
+
+
+
+
+  template<typename _Tp>
+    inline complex<_Tp>
+    pow(const _Tp& __x, const complex<_Tp>& __y)
+    {
+      return __x > _Tp() ? std::polar(pow(__x, __y.real()),
+          __y.imag() * log(__x))
+                  : std::pow(complex<_Tp>(__x), __y);
+    }
+
+  // 26.2.3  complex specializations
+  // complex<float> specialization
+  template<>
+    struct complex<float>
+    {
+      typedef float value_type;
+      typedef __complex__ float _ComplexT;
+
+                         complex(_ComplexT __z) : _M_value(__z) { }
+
+                         complex(float __r = 0.0f, float __i = 0.0f)
+
+
+
+
+
+
+      {
+ __real__ _M_value = __r;
+ __imag__ _M_value = __i;
+      }
+
+
+      explicit complex(const complex<double>&);
+      explicit complex(const complex<long double>&);
+# 1072 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
+ float&
+      real() { return __real__ _M_value; }
+
+      const float&
+      real() const { return __real__ _M_value; }
+
+      float&
+      imag() { return __imag__ _M_value; }
+
+      const float&
+      imag() const { return __imag__ _M_value; }
+
+
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // DR 387. std::complex over-encapsulated.
+      void
+      real(float __val) { __real__ _M_value = __val; }
+
+      void
+      imag(float __val) { __imag__ _M_value = __val; }
+
+      complex&
+      operator=(float __f)
+      {
+ _M_value = __f;
+ return *this;
+      }
+
+      complex&
+      operator+=(float __f)
+      {
+ _M_value += __f;
+ return *this;
+      }
+
+      complex&
+      operator-=(float __f)
+      {
+ _M_value -= __f;
+ return *this;
+      }
+
+      complex&
+      operator*=(float __f)
+      {
+ _M_value *= __f;
+ return *this;
+      }
+
+      complex&
+      operator/=(float __f)
+      {
+ _M_value /= __f;
+ return *this;
+      }
+
+      // Let the compiler synthesize the copy and assignment
+      // operator.  It always does a pretty good job.
+      // complex& operator=(const complex&);
+
+      template<typename _Tp>
+        complex&
+        operator=(const complex<_Tp>& __z)
+ {
+   __real__ _M_value = __z.real();
+   __imag__ _M_value = __z.imag();
+   return *this;
+ }
+
+      template<typename _Tp>
+        complex&
+        operator+=(const complex<_Tp>& __z)
+ {
+   __real__ _M_value += __z.real();
+   __imag__ _M_value += __z.imag();
+   return *this;
+ }
+
+      template<class _Tp>
+        complex&
+        operator-=(const complex<_Tp>& __z)
+ {
+   __real__ _M_value -= __z.real();
+   __imag__ _M_value -= __z.imag();
+   return *this;
+ }
+
+      template<class _Tp>
+        complex&
+        operator*=(const complex<_Tp>& __z)
+ {
+   _ComplexT __t;
+   __real__ __t = __z.real();
+   __imag__ __t = __z.imag();
+   _M_value *= __t;
+   return *this;
+ }
+
+      template<class _Tp>
+        complex&
+        operator/=(const complex<_Tp>& __z)
+ {
+   _ComplexT __t;
+   __real__ __t = __z.real();
+   __imag__ __t = __z.imag();
+   _M_value /= __t;
+   return *this;
+ }
+
+      const _ComplexT __rep() const { return _M_value; }
+
+    private:
+      _ComplexT _M_value;
+    };
+
+  // 26.2.3  complex specializations
+  // complex<double> specialization
+  template<>
+    struct complex<double>
+    {
+      typedef double value_type;
+      typedef __complex__ double _ComplexT;
+
+                         complex(_ComplexT __z) : _M_value(__z) { }
+
+                         complex(double __r = 0.0, double __i = 0.0)
+
+
+
+
+
+
+      {
+ __real__ _M_value = __r;
+ __imag__ _M_value = __i;
+      }
+
+
+                         complex(const complex<float>& __z)
+      : _M_value(__z.__rep()) { }
+
+      explicit complex(const complex<long double>&);
+# 1224 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
+ double&
+      real() { return __real__ _M_value; }
+
+      const double&
+      real() const { return __real__ _M_value; }
+
+      double&
+      imag() { return __imag__ _M_value; }
+
+      const double&
+      imag() const { return __imag__ _M_value; }
+
+
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // DR 387. std::complex over-encapsulated.
+      void
+      real(double __val) { __real__ _M_value = __val; }
+
+      void
+      imag(double __val) { __imag__ _M_value = __val; }
+
+      complex&
+      operator=(double __d)
+      {
+ _M_value = __d;
+ return *this;
+      }
+
+      complex&
+      operator+=(double __d)
+      {
+ _M_value += __d;
+ return *this;
+      }
+
+      complex&
+      operator-=(double __d)
+      {
+ _M_value -= __d;
+ return *this;
+      }
+
+      complex&
+      operator*=(double __d)
+      {
+ _M_value *= __d;
+ return *this;
+      }
+
+      complex&
+      operator/=(double __d)
+      {
+ _M_value /= __d;
+ return *this;
+      }
+
+      // The compiler will synthesize this, efficiently.
+      // complex& operator=(const complex&);
+
+      template<typename _Tp>
+        complex&
+        operator=(const complex<_Tp>& __z)
+ {
+   __real__ _M_value = __z.real();
+   __imag__ _M_value = __z.imag();
+   return *this;
+ }
+
+      template<typename _Tp>
+        complex&
+        operator+=(const complex<_Tp>& __z)
+ {
+   __real__ _M_value += __z.real();
+   __imag__ _M_value += __z.imag();
+   return *this;
+ }
+
+      template<typename _Tp>
+        complex&
+        operator-=(const complex<_Tp>& __z)
+ {
+   __real__ _M_value -= __z.real();
+   __imag__ _M_value -= __z.imag();
+   return *this;
+ }
+
+      template<typename _Tp>
+        complex&
+        operator*=(const complex<_Tp>& __z)
+ {
+   _ComplexT __t;
+   __real__ __t = __z.real();
+   __imag__ __t = __z.imag();
+   _M_value *= __t;
+   return *this;
+ }
+
+      template<typename _Tp>
+        complex&
+        operator/=(const complex<_Tp>& __z)
+ {
+   _ComplexT __t;
+   __real__ __t = __z.real();
+   __imag__ __t = __z.imag();
+   _M_value /= __t;
+   return *this;
+ }
+
+      const _ComplexT __rep() const { return _M_value; }
+
+    private:
+      _ComplexT _M_value;
+    };
+
+  // 26.2.3  complex specializations
+  // complex<long double> specialization
+  template<>
+    struct complex<long double>
+    {
+      typedef long double value_type;
+      typedef __complex__ long double _ComplexT;
+
+                         complex(_ComplexT __z) : _M_value(__z) { }
+
+                         complex(long double __r = 0.0L,
+     long double __i = 0.0L)
+
+
+
+
+
+
+      {
+ __real__ _M_value = __r;
+ __imag__ _M_value = __i;
+      }
+
+
+                         complex(const complex<float>& __z)
+      : _M_value(__z.__rep()) { }
+
+                         complex(const complex<double>& __z)
+      : _M_value(__z.__rep()) { }
+# 1377 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
+ long double&
+      real() { return __real__ _M_value; }
+
+      const long double&
+      real() const { return __real__ _M_value; }
+
+      long double&
+      imag() { return __imag__ _M_value; }
+
+      const long double&
+      imag() const { return __imag__ _M_value; }
+
+
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // DR 387. std::complex over-encapsulated.
+      void
+      real(long double __val) { __real__ _M_value = __val; }
+
+      void
+      imag(long double __val) { __imag__ _M_value = __val; }
+
+      complex&
+      operator=(long double __r)
+      {
+ _M_value = __r;
+ return *this;
+      }
+
+      complex&
+      operator+=(long double __r)
+      {
+ _M_value += __r;
+ return *this;
+      }
+
+      complex&
+      operator-=(long double __r)
+      {
+ _M_value -= __r;
+ return *this;
+      }
+
+      complex&
+      operator*=(long double __r)
+      {
+ _M_value *= __r;
+ return *this;
+      }
+
+      complex&
+      operator/=(long double __r)
+      {
+ _M_value /= __r;
+ return *this;
+      }
+
+      // The compiler knows how to do this efficiently
+      // complex& operator=(const complex&);
+
+      template<typename _Tp>
+        complex&
+        operator=(const complex<_Tp>& __z)
+ {
+   __real__ _M_value = __z.real();
+   __imag__ _M_value = __z.imag();
+   return *this;
+ }
+
+      template<typename _Tp>
+        complex&
+ operator+=(const complex<_Tp>& __z)
+ {
+   __real__ _M_value += __z.real();
+   __imag__ _M_value += __z.imag();
+   return *this;
+ }
+
+      template<typename _Tp>
+        complex&
+ operator-=(const complex<_Tp>& __z)
+ {
+   __real__ _M_value -= __z.real();
+   __imag__ _M_value -= __z.imag();
+   return *this;
+ }
+
+      template<typename _Tp>
+        complex&
+ operator*=(const complex<_Tp>& __z)
+ {
+   _ComplexT __t;
+   __real__ __t = __z.real();
+   __imag__ __t = __z.imag();
+   _M_value *= __t;
+   return *this;
+ }
+
+      template<typename _Tp>
+        complex&
+ operator/=(const complex<_Tp>& __z)
+ {
+   _ComplexT __t;
+   __real__ __t = __z.real();
+   __imag__ __t = __z.imag();
+   _M_value /= __t;
+   return *this;
+ }
+
+      const _ComplexT __rep() const { return _M_value; }
+
+    private:
+      _ComplexT _M_value;
+    };
+
+  // These bits have to be at the end of this file, so that the
+  // specializations have all been defined.
+  inline
+  complex<float>::complex(const complex<double>& __z)
+  : _M_value(__z.__rep()) { }
+
+  inline
+  complex<float>::complex(const complex<long double>& __z)
+  : _M_value(__z.__rep()) { }
+
+  inline
+  complex<double>::complex(const complex<long double>& __z)
+  : _M_value(__z.__rep()) { }
+
+  // Inhibit implicit instantiations for required instantiations,
+  // which are defined via explicit instantiations elsewhere.
+  // NB:  This syntax is a GNU extension.
+
+  extern template istream& operator>>(istream&, complex<float>&);
+  extern template ostream& operator<<(ostream&, const complex<float>&);
+  extern template istream& operator>>(istream&, complex<double>&);
+  extern template ostream& operator<<(ostream&, const complex<double>&);
+  extern template istream& operator>>(istream&, complex<long double>&);
+  extern template ostream& operator<<(ostream&, const complex<long double>&);
+
+
+  extern template wistream& operator>>(wistream&, complex<float>&);
+  extern template wostream& operator<<(wostream&, const complex<float>&);
+  extern template wistream& operator>>(wistream&, complex<double>&);
+  extern template wostream& operator<<(wostream&, const complex<double>&);
+  extern template wistream& operator>>(wistream&, complex<long double>&);
+  extern template wostream& operator<<(wostream&, const complex<long double>&);
+
+
+
+  // @} group complex_numbers
+
+
+} // namespace
+
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+
+
+  // See ext/type_traits.h for the primary template.
+  template<typename _Tp, typename _Up>
+    struct __promote_2<std::complex<_Tp>, _Up>
+    {
+    public:
+      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
+    };
+
+  template<typename _Tp, typename _Up>
+    struct __promote_2<_Tp, std::complex<_Up> >
+    {
+    public:
+      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
+    };
+
+  template<typename _Tp, typename _Up>
+    struct __promote_2<std::complex<_Tp>, std::complex<_Up> >
+    {
+    public:
+      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
+    };
+
+
+} // namespace
+# 7 "./svd.h" 2
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h" 1
+/*****************************************************************************
+ *
+ *     Author: Xilinx, Inc.
+ *
+ *     This text contains proprietary, confidential information of
+ *     Xilinx, Inc. , is distributed by under license from Xilinx,
+ *     Inc., and may be used, copied and/or disclosed only pursuant to
+ *     the terms of a valid license agreement with Xilinx, Inc.
+ *
+ *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
+ *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
+ *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
+ *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
+ *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
+ *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
+ *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
+ *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
+ *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
+ *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
+ *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
+ *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ *     FOR A PARTICULAR PURPOSE.
+ *
+ *     Xilinx products are not intended for use in life support appliances,
+ *     devices, or systems. Use in such applications is expressly prohibited.
+ *
+ *     (c) Copyright 2008-2014 Xilinx Inc.
+ *     All rights reserved.
+ *
+ *****************************************************************************/
+
+
+
+
+
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h" 1
+// -*- c++ -*-
+/*
+#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
+#-
+#-  This file contains confidential and proprietary information
+#-  of Xilinx, Inc. and is protected under U.S. and
+#-  international copyright and other intellectual property
+#-  laws.
+#-
+#-  DISCLAIMER
+#-  This disclaimer is not a license and does not grant any
+#-  rights to the materials distributed herewith. Except as
+#-  otherwise provided in a valid license issued to you by
+#-  Xilinx, and to the maximum extent permitted by applicable
+#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+#-  (2) Xilinx shall not be liable (whether in contract or tort,
+#-  including negligence, or under any other theory of
+#-  liability) for any loss or damage of any kind or nature
+#-  related to, arising under or in connection with these
+#-  materials, including for any direct, or any indirect,
+#-  special, incidental, or consequential loss or damage
+#-  (including loss of data, profits, goodwill, or any type of
+#-  loss or damage suffered as a result of any action brought
+#-  by a third party) even if such damage or loss was
+#-  reasonably foreseeable or Xilinx had been advised of the
+#-  possibility of the same.
+#-
+#-  CRITICAL APPLICATIONS
+#-  Xilinx products are not designed or intended to be fail-
+#-  safe, or for use in any application requiring fail-safe
+#-  performance, such as life-support or safety devices or
+#-  systems, Class III medical devices, nuclear facilities,
+#-  applications related to the deployment of airbags, or any
+#-  other applications that could lead to death, personal
+#-  injury, or severe property or environmental damage
+#-  (individually and collectively, "Critical
+#-  Applications"). Customer assumes the sole risk and
+#-  liability of any use of Xilinx products in Critical
+#-  Applications, subject only to applicable laws and
+#-  regulations governing limitations on product liability.
+#-
+#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+#-  PART OF THIS FILE AT ALL TIMES. 
+#- ************************************************************************
+
+ *
+ */
+# 60 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int.h"
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h" 1
+/* -*- c++ -*-*/
+/*
+#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
+#-
+#-  This file contains confidential and proprietary information
+#-  of Xilinx, Inc. and is protected under U.S. and
+#-  international copyright and other intellectual property
+#-  laws.
+#-
+#-  DISCLAIMER
+#-  This disclaimer is not a license and does not grant any
+#-  rights to the materials distributed herewith. Except as
+#-  otherwise provided in a valid license issued to you by
+#-  Xilinx, and to the maximum extent permitted by applicable
+#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
+#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
+#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
+#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
+#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
+#-  (2) Xilinx shall not be liable (whether in contract or tort,
+#-  including negligence, or under any other theory of
+#-  liability) for any loss or damage of any kind or nature
+#-  related to, arising under or in connection with these
+#-  materials, including for any direct, or any indirect,
+#-  special, incidental, or consequential loss or damage
+#-  (including loss of data, profits, goodwill, or any type of
+#-  loss or damage suffered as a result of any action brought
+#-  by a third party) even if such damage or loss was
+#-  reasonably foreseeable or Xilinx had been advised of the
+#-  possibility of the same.
+#-
+#-  CRITICAL APPLICATIONS
+#-  Xilinx products are not designed or intended to be fail-
+#-  safe, or for use in any application requiring fail-safe
+#-  performance, such as life-support or safety devices or
+#-  systems, Class III medical devices, nuclear facilities,
+#-  applications related to the deployment of airbags, or any
+#-  other applications that could lead to death, personal
+#-  injury, or severe property or environmental damage
+#-  (individually and collectively, "Critical
+#-  Applications"). Customer assumes the sole risk and
+#-  liability of any use of Xilinx products in Critical
+#-  Applications, subject only to applicable laws and
+#-  regulations governing limitations on product liability.
+#-
+#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
+#-  PART OF THIS FILE AT ALL TIMES. 
+#- ************************************************************************
+
+ *
+ */
+# 68 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h"
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 1 3
+// Standard iostream objects -*- C++ -*-
+
+// Copyright (C) 1997, 1998, 1999, 2001, 2002, 2005, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file include/iostream
+ *  This is a Standard C++ Library header.
+ */
+
+//
+// ISO C++ 14882: 27.3  Standard iostream objects
+//
+# 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream" 3
+
+
+
+
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -30537,1558 +35424,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 } // namespace
 # 69 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h" 2
-extern "C" {
-
-# 1 "/usr/include/math.h" 1 3 4
-/* Declarations for math functions.
-   Copyright (C) 1991-1993, 1995-1999, 2001, 2002, 2004, 2006, 2009, 2011, 2012
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- *	ISO C99 Standard: 7.12 Mathematics	<math.h>
- */
-
-
-
-
-
-
-extern "C" {
-
-/* Get machine-dependent HUGE_VAL value (returned on overflow).
-   On all IEEE754 machines, this is +Infinity.  */
-
-
-# 1 "/usr/include/bits/huge_val.h" 1 3 4
-/* `HUGE_VAL' constant for IEEE 754 machines (where it is infinity).
-   Used by <stdlib.h> and <math.h> functions for overflow.
-   Copyright (C) 1992, 1995, 1996, 1997, 1999, 2000, 2004
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-/* IEEE positive infinity (-HUGE_VAL is negative infinity).  */
-# 34 "/usr/include/math.h" 2 3 4
-
-# 1 "/usr/include/bits/huge_valf.h" 1 3 4
-/* `HUGE_VALF' constant for IEEE 754 machines (where it is infinity).
-   Used by <stdlib.h> and <math.h> functions for overflow.
-   Copyright (C) 1992, 1995, 1996, 1997, 1999, 2000, 2004
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-/* IEEE positive infinity (-HUGE_VAL is negative infinity).  */
-# 36 "/usr/include/math.h" 2 3 4
-# 1 "/usr/include/bits/huge_vall.h" 1 3 4
-/* `HUGE_VALL' constant for ix86 (where it is infinity).
-   Used by <stdlib.h> and <math.h> functions for overflow.
-   Copyright (C) 1992, 1995, 1996, 1997, 1999, 2000, 2004
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-# 37 "/usr/include/math.h" 2 3 4
-
-/* Get machine-dependent INFINITY value.  */
-
-
-# 1 "/usr/include/bits/inf.h" 1 3 4
-/* `INFINITY' constant for IEEE 754 machines.
-   Copyright (C) 2004 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-/* IEEE positive infinity.  */
-# 40 "/usr/include/math.h" 2 3 4
-
-/* Get machine-dependent NAN value (returned for some domain errors).  */
-
-
-# 1 "/usr/include/bits/nan.h" 1 3 4
-/* `NAN' constant for IEEE 754 machines.
-   Copyright (C) 1992,1996,1997,1999,2004,2006 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-
-/* IEEE Not A Number.  */
-# 43 "/usr/include/math.h" 2 3 4
-
-
-/* Get general and ISO C99 specific information.  */
-
-
-# 1 "/usr/include/bits/mathdef.h" 1 3 4
-/* Copyright (C) 2001-2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-# 26 "/usr/include/bits/mathdef.h" 3 4
-/* The x86-64 architecture computes values with the precission of the
-   used type.  Similarly for -m32 -mfpmath=sse.  */
-typedef float float_t; /* `float' expressions are evaluated as `float'.  */
-typedef double double_t; /* `double' expressions are evaluated
-				   as `double'.  */
-# 41 "/usr/include/bits/mathdef.h" 3 4
-/* The values returned by `ilogb' for 0 and NaN respectively.  */
-
-
-
-/* The GCC 4.6 compiler will define __FP_FAST_FMA{,F,L} if the fma{,f,l}
-   builtins are supported.  */
-# 47 "/usr/include/math.h" 2 3 4
-
-/* The file <bits/mathcalls.h> contains the prototypes for all the
-   actual math functions.  These macros are used for those prototypes,
-   so we can easily declare each function as both `name' and `__name',
-   and can declare the float versions `namef' and `__namef'.  */
-# 70 "/usr/include/math.h" 3 4
-# 1 "/usr/include/bits/mathcalls.h" 1 3 4
-/* Prototype declarations for math functions; helper file for <math.h>.
-   Copyright (C) 1996-2003, 2006, 2011, 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/* NOTE: Because of the special way this file is used by <math.h>, this
-   file must NOT be protected from multiple inclusion as header files
-   usually are.
-
-   This file provides prototype declarations for the math functions.
-   Most functions are declared using the macro:
-
-   __MATHCALL (NAME,[_r], (ARGS...));
-
-   This means there is a function `NAME' returning `double' and a function
-   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
-   prototype, that is actually `double' in the prototype for `NAME' and
-   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
-   called `NAME_r' and `NAMEf_r'.
-
-   Functions returning other types like `int' are declared using the macro:
-
-   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
-
-   This is just like __MATHCALL but for a function returning `TYPE'
-   instead of `_Mdouble_'.  In all of these cases, there is still
-   both a `NAME' and a `NAMEf' that takes `float' arguments.
-
-   Note that there must be no whitespace before the argument passed for
-   NAME, to make token pasting work with -traditional.  */
-
-
-
-
-
-
-/* Trigonometric functions.  */
-
-
-/* Arc cosine of X.  */
-extern double acos (double __x) throw (); extern double __acos (double __x) throw ();
-/* Arc sine of X.  */
-extern double asin (double __x) throw (); extern double __asin (double __x) throw ();
-/* Arc tangent of X.  */
-extern double atan (double __x) throw (); extern double __atan (double __x) throw ();
-/* Arc tangent of Y/X.  */
-extern double atan2 (double __y, double __x) throw (); extern double __atan2 (double __y, double __x) throw ();
-
-/* Cosine of X.  */
-extern double cos (double __x) throw (); extern double __cos (double __x) throw ();
-/* Sine of X.  */
-extern double sin (double __x) throw (); extern double __sin (double __x) throw ();
-/* Tangent of X.  */
-extern double tan (double __x) throw (); extern double __tan (double __x) throw ();
-
-/* Hyperbolic functions.  */
-
-/* Hyperbolic cosine of X.  */
-extern double cosh (double __x) throw (); extern double __cosh (double __x) throw ();
-/* Hyperbolic sine of X.  */
-extern double sinh (double __x) throw (); extern double __sinh (double __x) throw ();
-/* Hyperbolic tangent of X.  */
-extern double tanh (double __x) throw (); extern double __tanh (double __x) throw ();
-
-
-
-/* Cosine and sine of X.  */
-extern void sincos (double __x, double *__sinx, double *__cosx) throw (); extern void __sincos (double __x, double *__sinx, double *__cosx) throw ();
-
-
-
-
-
-/* Hyperbolic arc cosine of X.  */
-extern double acosh (double __x) throw (); extern double __acosh (double __x) throw ();
-/* Hyperbolic arc sine of X.  */
-extern double asinh (double __x) throw (); extern double __asinh (double __x) throw ();
-/* Hyperbolic arc tangent of X.  */
-extern double atanh (double __x) throw (); extern double __atanh (double __x) throw ();
-
-
-
-/* Exponential and logarithmic functions.  */
-
-
-/* Exponential function of X.  */
-extern double exp (double __x) throw (); extern double __exp (double __x) throw ();
-
-/* Break VALUE into a normalized fraction and an integral power of 2.  */
-extern double frexp (double __x, int *__exponent) throw (); extern double __frexp (double __x, int *__exponent) throw ();
-
-/* X times (two to the EXP power).  */
-extern double ldexp (double __x, int __exponent) throw (); extern double __ldexp (double __x, int __exponent) throw ();
-
-/* Natural logarithm of X.  */
-extern double log (double __x) throw (); extern double __log (double __x) throw ();
-
-/* Base-ten logarithm of X.  */
-extern double log10 (double __x) throw (); extern double __log10 (double __x) throw ();
-
-/* Break VALUE into integral and fractional parts.  */
-extern double modf (double __x, double *__iptr) throw (); extern double __modf (double __x, double *__iptr) throw ()
-     __attribute__ ((__nonnull__ (2)));
-
-
-
-/* A function missing in all standards: compute exponent to base ten.  */
-extern double exp10 (double __x) throw (); extern double __exp10 (double __x) throw ();
-/* Another name occasionally used.  */
-extern double pow10 (double __x) throw (); extern double __pow10 (double __x) throw ();
-
-
-
-
-/* Return exp(X) - 1.  */
-extern double expm1 (double __x) throw (); extern double __expm1 (double __x) throw ();
-
-/* Return log(1 + X).  */
-extern double log1p (double __x) throw (); extern double __log1p (double __x) throw ();
-
-/* Return the base 2 signed integral exponent of X.  */
-extern double logb (double __x) throw (); extern double __logb (double __x) throw ();
-
-
-
-
-
-/* Compute base-2 exponential of X.  */
-extern double exp2 (double __x) throw (); extern double __exp2 (double __x) throw ();
-
-/* Compute base-2 logarithm of X.  */
-extern double log2 (double __x) throw (); extern double __log2 (double __x) throw ();
-
-
-
-
-/* Power functions.  */
-
-
-/* Return X to the Y power.  */
-extern double pow (double __x, double __y) throw (); extern double __pow (double __x, double __y) throw ();
-
-/* Return the square root of X.  */
-extern double sqrt (double __x) throw (); extern double __sqrt (double __x) throw ();
-
-
-
-
-/* Return `sqrt(X*X + Y*Y)'.  */
-extern double hypot (double __x, double __y) throw (); extern double __hypot (double __x, double __y) throw ();
-
-
-
-
-
-/* Return the cube root of X.  */
-extern double cbrt (double __x) throw (); extern double __cbrt (double __x) throw ();
-
-
-
-
-/* Nearest integer, absolute value, and remainder functions.  */
-
-
-/* Smallest integral value not less than X.  */
-extern double ceil (double __x) throw () __attribute__ ((__const__)); extern double __ceil (double __x) throw () __attribute__ ((__const__));
-
-/* Absolute value of X.  */
-extern double fabs (double __x) throw () __attribute__ ((__const__)); extern double __fabs (double __x) throw () __attribute__ ((__const__));
-
-/* Largest integer not greater than X.  */
-extern double floor (double __x) throw () __attribute__ ((__const__)); extern double __floor (double __x) throw () __attribute__ ((__const__));
-
-/* Floating-point modulo remainder of X/Y.  */
-extern double fmod (double __x, double __y) throw (); extern double __fmod (double __x, double __y) throw ();
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int __isinf (double __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int __finite (double __value) throw () __attribute__ ((__const__));
-
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int isinf (double __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int finite (double __value) throw () __attribute__ ((__const__));
-
-/* Return the remainder of X/Y.  */
-extern double drem (double __x, double __y) throw (); extern double __drem (double __x, double __y) throw ();
-
-
-/* Return the fractional part of X after dividing out `ilogb (X)'.  */
-extern double significand (double __x) throw (); extern double __significand (double __x) throw ();
-
-
-
-
-/* Return X with its signed changed to Y's.  */
-extern double copysign (double __x, double __y) throw () __attribute__ ((__const__)); extern double __copysign (double __x, double __y) throw () __attribute__ ((__const__));
-
-
-
-
-
-/* Return representation of NaN for double type.  */
-extern double nan (const char *__tagb) throw () __attribute__ ((__const__)); extern double __nan (const char *__tagb) throw () __attribute__ ((__const__));
-
-
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int __isnan (double __value) throw () __attribute__ ((__const__));
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int isnan (double __value) throw () __attribute__ ((__const__));
-
-/* Bessel functions.  */
-extern double j0 (double) throw (); extern double __j0 (double) throw ();
-extern double j1 (double) throw (); extern double __j1 (double) throw ();
-extern double jn (int, double) throw (); extern double __jn (int, double) throw ();
-extern double y0 (double) throw (); extern double __y0 (double) throw ();
-extern double y1 (double) throw (); extern double __y1 (double) throw ();
-extern double yn (int, double) throw (); extern double __yn (int, double) throw ();
-
-
-
-
-
-/* Error and gamma functions.  */
-extern double erf (double) throw (); extern double __erf (double) throw ();
-extern double erfc (double) throw (); extern double __erfc (double) throw ();
-extern double lgamma (double) throw (); extern double __lgamma (double) throw ();
-
-
-
-
-
-/* True gamma function.  */
-extern double tgamma (double) throw (); extern double __tgamma (double) throw ();
-
-
-
-
-/* Obsolete alias for `lgamma'.  */
-extern double gamma (double) throw (); extern double __gamma (double) throw ();
-
-
-
-/* Reentrant version of lgamma.  This function uses the global variable
-   `signgam'.  The reentrant version instead takes a pointer and stores
-   the value through it.  */
-extern double lgamma_r (double, int *__signgamp) throw (); extern double __lgamma_r (double, int *__signgamp) throw ();
-
-
-
-
-
-/* Return the integer nearest X in the direction of the
-   prevailing rounding mode.  */
-extern double rint (double __x) throw (); extern double __rint (double __x) throw ();
-
-/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
-extern double nextafter (double __x, double __y) throw () __attribute__ ((__const__)); extern double __nextafter (double __x, double __y) throw () __attribute__ ((__const__));
-
-extern double nexttoward (double __x, long double __y) throw () __attribute__ ((__const__)); extern double __nexttoward (double __x, long double __y) throw () __attribute__ ((__const__));
-
-
-/* Return the remainder of integer divison X / Y with infinite precision.  */
-extern double remainder (double __x, double __y) throw (); extern double __remainder (double __x, double __y) throw ();
-
-
-/* Return X times (2 to the Nth power).  */
-extern double scalbn (double __x, int __n) throw (); extern double __scalbn (double __x, int __n) throw ();
-
-
-/* Return the binary exponent of X, which must be nonzero.  */
-extern int ilogb (double __x) throw (); extern int __ilogb (double __x) throw ();
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern double scalbln (double __x, long int __n) throw (); extern double __scalbln (double __x, long int __n) throw ();
-
-/* Round X to integral value in floating-point format using current
-   rounding direction, but do not raise inexact exception.  */
-extern double nearbyint (double __x) throw (); extern double __nearbyint (double __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern double round (double __x) throw () __attribute__ ((__const__)); extern double __round (double __x) throw () __attribute__ ((__const__));
-
-/* Round X to the integral value in floating-point format nearest but
-   not larger in magnitude.  */
-extern double trunc (double __x) throw () __attribute__ ((__const__)); extern double __trunc (double __x) throw () __attribute__ ((__const__));
-
-/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
-   and magnitude congruent `mod 2^n' to the magnitude of the integral
-   quotient x/y, with n >= 3.  */
-extern double remquo (double __x, double __y, int *__quo) throw (); extern double __remquo (double __x, double __y, int *__quo) throw ();
-
-
-/* Conversion functions.  */
-
-/* Round X to nearest integral value according to current rounding
-   direction.  */
-extern long int lrint (double __x) throw (); extern long int __lrint (double __x) throw ();
-extern long long int llrint (double __x) throw (); extern long long int __llrint (double __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern long int lround (double __x) throw (); extern long int __lround (double __x) throw ();
-extern long long int llround (double __x) throw (); extern long long int __llround (double __x) throw ();
-
-
-/* Return positive difference between X and Y.  */
-extern double fdim (double __x, double __y) throw (); extern double __fdim (double __x, double __y) throw ();
-
-/* Return maximum numeric value from X and Y.  */
-extern double fmax (double __x, double __y) throw () __attribute__ ((__const__)); extern double __fmax (double __x, double __y) throw () __attribute__ ((__const__));
-
-/* Return minimum numeric value from X and Y.  */
-extern double fmin (double __x, double __y) throw () __attribute__ ((__const__)); extern double __fmin (double __x, double __y) throw () __attribute__ ((__const__));
-
-
-/* Classify given number.  */
-extern int __fpclassify (double __value) throw ()
-     __attribute__ ((__const__));
-
-/* Test for negative number.  */
-extern int __signbit (double __value) throw ()
-     __attribute__ ((__const__));
-
-
-/* Multiply-add function computed as a ternary operation.  */
-extern double fma (double __x, double __y, double __z) throw (); extern double __fma (double __x, double __y, double __z) throw ();
-
-
-
-
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern double scalb (double __x, double __n) throw (); extern double __scalb (double __x, double __n) throw ();
-# 71 "/usr/include/math.h" 2 3 4
-
-
-
-
-
-
-
-
-/* Include the file of declarations again, this time using `float'
-   instead of `double' and appending f to each function name.  */
-# 89 "/usr/include/math.h" 3 4
-# 1 "/usr/include/bits/mathcalls.h" 1 3 4
-/* Prototype declarations for math functions; helper file for <math.h>.
-   Copyright (C) 1996-2003, 2006, 2011, 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/* NOTE: Because of the special way this file is used by <math.h>, this
-   file must NOT be protected from multiple inclusion as header files
-   usually are.
-
-   This file provides prototype declarations for the math functions.
-   Most functions are declared using the macro:
-
-   __MATHCALL (NAME,[_r], (ARGS...));
-
-   This means there is a function `NAME' returning `double' and a function
-   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
-   prototype, that is actually `double' in the prototype for `NAME' and
-   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
-   called `NAME_r' and `NAMEf_r'.
-
-   Functions returning other types like `int' are declared using the macro:
-
-   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
-
-   This is just like __MATHCALL but for a function returning `TYPE'
-   instead of `_Mdouble_'.  In all of these cases, there is still
-   both a `NAME' and a `NAMEf' that takes `float' arguments.
-
-   Note that there must be no whitespace before the argument passed for
-   NAME, to make token pasting work with -traditional.  */
-
-
-
-
-
-
-/* Trigonometric functions.  */
-
-
-/* Arc cosine of X.  */
-extern float acosf (float __x) throw (); extern float __acosf (float __x) throw ();
-/* Arc sine of X.  */
-extern float asinf (float __x) throw (); extern float __asinf (float __x) throw ();
-/* Arc tangent of X.  */
-extern float atanf (float __x) throw (); extern float __atanf (float __x) throw ();
-/* Arc tangent of Y/X.  */
-extern float atan2f (float __y, float __x) throw (); extern float __atan2f (float __y, float __x) throw ();
-
-/* Cosine of X.  */
-extern float cosf (float __x) throw (); extern float __cosf (float __x) throw ();
-/* Sine of X.  */
-extern float sinf (float __x) throw (); extern float __sinf (float __x) throw ();
-/* Tangent of X.  */
-extern float tanf (float __x) throw (); extern float __tanf (float __x) throw ();
-
-/* Hyperbolic functions.  */
-
-/* Hyperbolic cosine of X.  */
-extern float coshf (float __x) throw (); extern float __coshf (float __x) throw ();
-/* Hyperbolic sine of X.  */
-extern float sinhf (float __x) throw (); extern float __sinhf (float __x) throw ();
-/* Hyperbolic tangent of X.  */
-extern float tanhf (float __x) throw (); extern float __tanhf (float __x) throw ();
-
-
-
-/* Cosine and sine of X.  */
-extern void sincosf (float __x, float *__sinx, float *__cosx) throw (); extern void __sincosf (float __x, float *__sinx, float *__cosx) throw ();
-
-
-
-
-
-/* Hyperbolic arc cosine of X.  */
-extern float acoshf (float __x) throw (); extern float __acoshf (float __x) throw ();
-/* Hyperbolic arc sine of X.  */
-extern float asinhf (float __x) throw (); extern float __asinhf (float __x) throw ();
-/* Hyperbolic arc tangent of X.  */
-extern float atanhf (float __x) throw (); extern float __atanhf (float __x) throw ();
-
-
-
-/* Exponential and logarithmic functions.  */
-
-
-/* Exponential function of X.  */
-extern float expf (float __x) throw (); extern float __expf (float __x) throw ();
-
-/* Break VALUE into a normalized fraction and an integral power of 2.  */
-extern float frexpf (float __x, int *__exponent) throw (); extern float __frexpf (float __x, int *__exponent) throw ();
-
-/* X times (two to the EXP power).  */
-extern float ldexpf (float __x, int __exponent) throw (); extern float __ldexpf (float __x, int __exponent) throw ();
-
-/* Natural logarithm of X.  */
-extern float logf (float __x) throw (); extern float __logf (float __x) throw ();
-
-/* Base-ten logarithm of X.  */
-extern float log10f (float __x) throw (); extern float __log10f (float __x) throw ();
-
-/* Break VALUE into integral and fractional parts.  */
-extern float modff (float __x, float *__iptr) throw (); extern float __modff (float __x, float *__iptr) throw ()
-     __attribute__ ((__nonnull__ (2)));
-
-
-
-/* A function missing in all standards: compute exponent to base ten.  */
-extern float exp10f (float __x) throw (); extern float __exp10f (float __x) throw ();
-/* Another name occasionally used.  */
-extern float pow10f (float __x) throw (); extern float __pow10f (float __x) throw ();
-
-
-
-
-/* Return exp(X) - 1.  */
-extern float expm1f (float __x) throw (); extern float __expm1f (float __x) throw ();
-
-/* Return log(1 + X).  */
-extern float log1pf (float __x) throw (); extern float __log1pf (float __x) throw ();
-
-/* Return the base 2 signed integral exponent of X.  */
-extern float logbf (float __x) throw (); extern float __logbf (float __x) throw ();
-
-
-
-
-
-/* Compute base-2 exponential of X.  */
-extern float exp2f (float __x) throw (); extern float __exp2f (float __x) throw ();
-
-/* Compute base-2 logarithm of X.  */
-extern float log2f (float __x) throw (); extern float __log2f (float __x) throw ();
-
-
-
-
-/* Power functions.  */
-
-
-/* Return X to the Y power.  */
-extern float powf (float __x, float __y) throw (); extern float __powf (float __x, float __y) throw ();
-
-/* Return the square root of X.  */
-extern float sqrtf (float __x) throw (); extern float __sqrtf (float __x) throw ();
-
-
-
-
-/* Return `sqrt(X*X + Y*Y)'.  */
-extern float hypotf (float __x, float __y) throw (); extern float __hypotf (float __x, float __y) throw ();
-
-
-
-
-
-/* Return the cube root of X.  */
-extern float cbrtf (float __x) throw (); extern float __cbrtf (float __x) throw ();
-
-
-
-
-/* Nearest integer, absolute value, and remainder functions.  */
-
-
-/* Smallest integral value not less than X.  */
-extern float ceilf (float __x) throw () __attribute__ ((__const__)); extern float __ceilf (float __x) throw () __attribute__ ((__const__));
-
-/* Absolute value of X.  */
-extern float fabsf (float __x) throw () __attribute__ ((__const__)); extern float __fabsf (float __x) throw () __attribute__ ((__const__));
-
-/* Largest integer not greater than X.  */
-extern float floorf (float __x) throw () __attribute__ ((__const__)); extern float __floorf (float __x) throw () __attribute__ ((__const__));
-
-/* Floating-point modulo remainder of X/Y.  */
-extern float fmodf (float __x, float __y) throw (); extern float __fmodf (float __x, float __y) throw ();
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int __isinff (float __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int __finitef (float __value) throw () __attribute__ ((__const__));
-
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int isinff (float __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int finitef (float __value) throw () __attribute__ ((__const__));
-
-/* Return the remainder of X/Y.  */
-extern float dremf (float __x, float __y) throw (); extern float __dremf (float __x, float __y) throw ();
-
-
-/* Return the fractional part of X after dividing out `ilogb (X)'.  */
-extern float significandf (float __x) throw (); extern float __significandf (float __x) throw ();
-
-
-
-
-/* Return X with its signed changed to Y's.  */
-extern float copysignf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __copysignf (float __x, float __y) throw () __attribute__ ((__const__));
-
-
-
-
-
-/* Return representation of NaN for double type.  */
-extern float nanf (const char *__tagb) throw () __attribute__ ((__const__)); extern float __nanf (const char *__tagb) throw () __attribute__ ((__const__));
-
-
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int __isnanf (float __value) throw () __attribute__ ((__const__));
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int isnanf (float __value) throw () __attribute__ ((__const__));
-
-/* Bessel functions.  */
-extern float j0f (float) throw (); extern float __j0f (float) throw ();
-extern float j1f (float) throw (); extern float __j1f (float) throw ();
-extern float jnf (int, float) throw (); extern float __jnf (int, float) throw ();
-extern float y0f (float) throw (); extern float __y0f (float) throw ();
-extern float y1f (float) throw (); extern float __y1f (float) throw ();
-extern float ynf (int, float) throw (); extern float __ynf (int, float) throw ();
-
-
-
-
-
-/* Error and gamma functions.  */
-extern float erff (float) throw (); extern float __erff (float) throw ();
-extern float erfcf (float) throw (); extern float __erfcf (float) throw ();
-extern float lgammaf (float) throw (); extern float __lgammaf (float) throw ();
-
-
-
-
-
-/* True gamma function.  */
-extern float tgammaf (float) throw (); extern float __tgammaf (float) throw ();
-
-
-
-
-/* Obsolete alias for `lgamma'.  */
-extern float gammaf (float) throw (); extern float __gammaf (float) throw ();
-
-
-
-/* Reentrant version of lgamma.  This function uses the global variable
-   `signgam'.  The reentrant version instead takes a pointer and stores
-   the value through it.  */
-extern float lgammaf_r (float, int *__signgamp) throw (); extern float __lgammaf_r (float, int *__signgamp) throw ();
-
-
-
-
-
-/* Return the integer nearest X in the direction of the
-   prevailing rounding mode.  */
-extern float rintf (float __x) throw (); extern float __rintf (float __x) throw ();
-
-/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
-extern float nextafterf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __nextafterf (float __x, float __y) throw () __attribute__ ((__const__));
-
-extern float nexttowardf (float __x, long double __y) throw () __attribute__ ((__const__)); extern float __nexttowardf (float __x, long double __y) throw () __attribute__ ((__const__));
-
-
-/* Return the remainder of integer divison X / Y with infinite precision.  */
-extern float remainderf (float __x, float __y) throw (); extern float __remainderf (float __x, float __y) throw ();
-
-
-/* Return X times (2 to the Nth power).  */
-extern float scalbnf (float __x, int __n) throw (); extern float __scalbnf (float __x, int __n) throw ();
-
-
-/* Return the binary exponent of X, which must be nonzero.  */
-extern int ilogbf (float __x) throw (); extern int __ilogbf (float __x) throw ();
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern float scalblnf (float __x, long int __n) throw (); extern float __scalblnf (float __x, long int __n) throw ();
-
-/* Round X to integral value in floating-point format using current
-   rounding direction, but do not raise inexact exception.  */
-extern float nearbyintf (float __x) throw (); extern float __nearbyintf (float __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern float roundf (float __x) throw () __attribute__ ((__const__)); extern float __roundf (float __x) throw () __attribute__ ((__const__));
-
-/* Round X to the integral value in floating-point format nearest but
-   not larger in magnitude.  */
-extern float truncf (float __x) throw () __attribute__ ((__const__)); extern float __truncf (float __x) throw () __attribute__ ((__const__));
-
-/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
-   and magnitude congruent `mod 2^n' to the magnitude of the integral
-   quotient x/y, with n >= 3.  */
-extern float remquof (float __x, float __y, int *__quo) throw (); extern float __remquof (float __x, float __y, int *__quo) throw ();
-
-
-/* Conversion functions.  */
-
-/* Round X to nearest integral value according to current rounding
-   direction.  */
-extern long int lrintf (float __x) throw (); extern long int __lrintf (float __x) throw ();
-extern long long int llrintf (float __x) throw (); extern long long int __llrintf (float __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern long int lroundf (float __x) throw (); extern long int __lroundf (float __x) throw ();
-extern long long int llroundf (float __x) throw (); extern long long int __llroundf (float __x) throw ();
-
-
-/* Return positive difference between X and Y.  */
-extern float fdimf (float __x, float __y) throw (); extern float __fdimf (float __x, float __y) throw ();
-
-/* Return maximum numeric value from X and Y.  */
-extern float fmaxf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __fmaxf (float __x, float __y) throw () __attribute__ ((__const__));
-
-/* Return minimum numeric value from X and Y.  */
-extern float fminf (float __x, float __y) throw () __attribute__ ((__const__)); extern float __fminf (float __x, float __y) throw () __attribute__ ((__const__));
-
-
-/* Classify given number.  */
-extern int __fpclassifyf (float __value) throw ()
-     __attribute__ ((__const__));
-
-/* Test for negative number.  */
-extern int __signbitf (float __value) throw ()
-     __attribute__ ((__const__));
-
-
-/* Multiply-add function computed as a ternary operation.  */
-extern float fmaf (float __x, float __y, float __z) throw (); extern float __fmaf (float __x, float __y, float __z) throw ();
-
-
-
-
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern float scalbf (float __x, float __n) throw (); extern float __scalbf (float __x, float __n) throw ();
-# 90 "/usr/include/math.h" 2 3 4
-# 122 "/usr/include/math.h" 3 4
-/* Include the file of declarations again, this time using `long double'
-   instead of `double' and appending l to each function name.  */
-# 133 "/usr/include/math.h" 3 4
-# 1 "/usr/include/bits/mathcalls.h" 1 3 4
-/* Prototype declarations for math functions; helper file for <math.h>.
-   Copyright (C) 1996-2003, 2006, 2011, 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/* NOTE: Because of the special way this file is used by <math.h>, this
-   file must NOT be protected from multiple inclusion as header files
-   usually are.
-
-   This file provides prototype declarations for the math functions.
-   Most functions are declared using the macro:
-
-   __MATHCALL (NAME,[_r], (ARGS...));
-
-   This means there is a function `NAME' returning `double' and a function
-   `NAMEf' returning `float'.  Each place `_Mdouble_' appears in the
-   prototype, that is actually `double' in the prototype for `NAME' and
-   `float' in the prototype for `NAMEf'.  Reentrant variant functions are
-   called `NAME_r' and `NAMEf_r'.
-
-   Functions returning other types like `int' are declared using the macro:
-
-   __MATHDECL (TYPE, NAME,[_r], (ARGS...));
-
-   This is just like __MATHCALL but for a function returning `TYPE'
-   instead of `_Mdouble_'.  In all of these cases, there is still
-   both a `NAME' and a `NAMEf' that takes `float' arguments.
-
-   Note that there must be no whitespace before the argument passed for
-   NAME, to make token pasting work with -traditional.  */
-
-
-
-
-
-
-/* Trigonometric functions.  */
-
-
-/* Arc cosine of X.  */
-extern long double acosl (long double __x) throw (); extern long double __acosl (long double __x) throw ();
-/* Arc sine of X.  */
-extern long double asinl (long double __x) throw (); extern long double __asinl (long double __x) throw ();
-/* Arc tangent of X.  */
-extern long double atanl (long double __x) throw (); extern long double __atanl (long double __x) throw ();
-/* Arc tangent of Y/X.  */
-extern long double atan2l (long double __y, long double __x) throw (); extern long double __atan2l (long double __y, long double __x) throw ();
-
-/* Cosine of X.  */
-extern long double cosl (long double __x) throw (); extern long double __cosl (long double __x) throw ();
-/* Sine of X.  */
-extern long double sinl (long double __x) throw (); extern long double __sinl (long double __x) throw ();
-/* Tangent of X.  */
-extern long double tanl (long double __x) throw (); extern long double __tanl (long double __x) throw ();
-
-/* Hyperbolic functions.  */
-
-/* Hyperbolic cosine of X.  */
-extern long double coshl (long double __x) throw (); extern long double __coshl (long double __x) throw ();
-/* Hyperbolic sine of X.  */
-extern long double sinhl (long double __x) throw (); extern long double __sinhl (long double __x) throw ();
-/* Hyperbolic tangent of X.  */
-extern long double tanhl (long double __x) throw (); extern long double __tanhl (long double __x) throw ();
-
-
-
-/* Cosine and sine of X.  */
-extern void sincosl (long double __x, long double *__sinx, long double *__cosx) throw (); extern void __sincosl (long double __x, long double *__sinx, long double *__cosx) throw ();
-
-
-
-
-
-/* Hyperbolic arc cosine of X.  */
-extern long double acoshl (long double __x) throw (); extern long double __acoshl (long double __x) throw ();
-/* Hyperbolic arc sine of X.  */
-extern long double asinhl (long double __x) throw (); extern long double __asinhl (long double __x) throw ();
-/* Hyperbolic arc tangent of X.  */
-extern long double atanhl (long double __x) throw (); extern long double __atanhl (long double __x) throw ();
-
-
-
-/* Exponential and logarithmic functions.  */
-
-
-/* Exponential function of X.  */
-extern long double expl (long double __x) throw (); extern long double __expl (long double __x) throw ();
-
-/* Break VALUE into a normalized fraction and an integral power of 2.  */
-extern long double frexpl (long double __x, int *__exponent) throw (); extern long double __frexpl (long double __x, int *__exponent) throw ();
-
-/* X times (two to the EXP power).  */
-extern long double ldexpl (long double __x, int __exponent) throw (); extern long double __ldexpl (long double __x, int __exponent) throw ();
-
-/* Natural logarithm of X.  */
-extern long double logl (long double __x) throw (); extern long double __logl (long double __x) throw ();
-
-/* Base-ten logarithm of X.  */
-extern long double log10l (long double __x) throw (); extern long double __log10l (long double __x) throw ();
-
-/* Break VALUE into integral and fractional parts.  */
-extern long double modfl (long double __x, long double *__iptr) throw (); extern long double __modfl (long double __x, long double *__iptr) throw ()
-     __attribute__ ((__nonnull__ (2)));
-
-
-
-/* A function missing in all standards: compute exponent to base ten.  */
-extern long double exp10l (long double __x) throw (); extern long double __exp10l (long double __x) throw ();
-/* Another name occasionally used.  */
-extern long double pow10l (long double __x) throw (); extern long double __pow10l (long double __x) throw ();
-
-
-
-
-/* Return exp(X) - 1.  */
-extern long double expm1l (long double __x) throw (); extern long double __expm1l (long double __x) throw ();
-
-/* Return log(1 + X).  */
-extern long double log1pl (long double __x) throw (); extern long double __log1pl (long double __x) throw ();
-
-/* Return the base 2 signed integral exponent of X.  */
-extern long double logbl (long double __x) throw (); extern long double __logbl (long double __x) throw ();
-
-
-
-
-
-/* Compute base-2 exponential of X.  */
-extern long double exp2l (long double __x) throw (); extern long double __exp2l (long double __x) throw ();
-
-/* Compute base-2 logarithm of X.  */
-extern long double log2l (long double __x) throw (); extern long double __log2l (long double __x) throw ();
-
-
-
-
-/* Power functions.  */
-
-
-/* Return X to the Y power.  */
-extern long double powl (long double __x, long double __y) throw (); extern long double __powl (long double __x, long double __y) throw ();
-
-/* Return the square root of X.  */
-extern long double sqrtl (long double __x) throw (); extern long double __sqrtl (long double __x) throw ();
-
-
-
-
-/* Return `sqrt(X*X + Y*Y)'.  */
-extern long double hypotl (long double __x, long double __y) throw (); extern long double __hypotl (long double __x, long double __y) throw ();
-
-
-
-
-
-/* Return the cube root of X.  */
-extern long double cbrtl (long double __x) throw (); extern long double __cbrtl (long double __x) throw ();
-
-
-
-
-/* Nearest integer, absolute value, and remainder functions.  */
-
-
-/* Smallest integral value not less than X.  */
-extern long double ceill (long double __x) throw () __attribute__ ((__const__)); extern long double __ceill (long double __x) throw () __attribute__ ((__const__));
-
-/* Absolute value of X.  */
-extern long double fabsl (long double __x) throw () __attribute__ ((__const__)); extern long double __fabsl (long double __x) throw () __attribute__ ((__const__));
-
-/* Largest integer not greater than X.  */
-extern long double floorl (long double __x) throw () __attribute__ ((__const__)); extern long double __floorl (long double __x) throw () __attribute__ ((__const__));
-
-/* Floating-point modulo remainder of X/Y.  */
-extern long double fmodl (long double __x, long double __y) throw (); extern long double __fmodl (long double __x, long double __y) throw ();
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int __isinfl (long double __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int __finitel (long double __value) throw () __attribute__ ((__const__));
-
-
-
-/* Return 0 if VALUE is finite or NaN, +1 if it
-   is +Infinity, -1 if it is -Infinity.  */
-extern int isinfl (long double __value) throw () __attribute__ ((__const__));
-
-/* Return nonzero if VALUE is finite and not NaN.  */
-extern int finitel (long double __value) throw () __attribute__ ((__const__));
-
-/* Return the remainder of X/Y.  */
-extern long double dreml (long double __x, long double __y) throw (); extern long double __dreml (long double __x, long double __y) throw ();
-
-
-/* Return the fractional part of X after dividing out `ilogb (X)'.  */
-extern long double significandl (long double __x) throw (); extern long double __significandl (long double __x) throw ();
-
-
-
-
-/* Return X with its signed changed to Y's.  */
-extern long double copysignl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __copysignl (long double __x, long double __y) throw () __attribute__ ((__const__));
-
-
-
-
-
-/* Return representation of NaN for double type.  */
-extern long double nanl (const char *__tagb) throw () __attribute__ ((__const__)); extern long double __nanl (const char *__tagb) throw () __attribute__ ((__const__));
-
-
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int __isnanl (long double __value) throw () __attribute__ ((__const__));
-
-
-/* Return nonzero if VALUE is not a number.  */
-extern int isnanl (long double __value) throw () __attribute__ ((__const__));
-
-/* Bessel functions.  */
-extern long double j0l (long double) throw (); extern long double __j0l (long double) throw ();
-extern long double j1l (long double) throw (); extern long double __j1l (long double) throw ();
-extern long double jnl (int, long double) throw (); extern long double __jnl (int, long double) throw ();
-extern long double y0l (long double) throw (); extern long double __y0l (long double) throw ();
-extern long double y1l (long double) throw (); extern long double __y1l (long double) throw ();
-extern long double ynl (int, long double) throw (); extern long double __ynl (int, long double) throw ();
-
-
-
-
-
-/* Error and gamma functions.  */
-extern long double erfl (long double) throw (); extern long double __erfl (long double) throw ();
-extern long double erfcl (long double) throw (); extern long double __erfcl (long double) throw ();
-extern long double lgammal (long double) throw (); extern long double __lgammal (long double) throw ();
-
-
-
-
-
-/* True gamma function.  */
-extern long double tgammal (long double) throw (); extern long double __tgammal (long double) throw ();
-
-
-
-
-/* Obsolete alias for `lgamma'.  */
-extern long double gammal (long double) throw (); extern long double __gammal (long double) throw ();
-
-
-
-/* Reentrant version of lgamma.  This function uses the global variable
-   `signgam'.  The reentrant version instead takes a pointer and stores
-   the value through it.  */
-extern long double lgammal_r (long double, int *__signgamp) throw (); extern long double __lgammal_r (long double, int *__signgamp) throw ();
-
-
-
-
-
-/* Return the integer nearest X in the direction of the
-   prevailing rounding mode.  */
-extern long double rintl (long double __x) throw (); extern long double __rintl (long double __x) throw ();
-
-/* Return X + epsilon if X < Y, X - epsilon if X > Y.  */
-extern long double nextafterl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __nextafterl (long double __x, long double __y) throw () __attribute__ ((__const__));
-
-extern long double nexttowardl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __nexttowardl (long double __x, long double __y) throw () __attribute__ ((__const__));
-
-
-/* Return the remainder of integer divison X / Y with infinite precision.  */
-extern long double remainderl (long double __x, long double __y) throw (); extern long double __remainderl (long double __x, long double __y) throw ();
-
-
-/* Return X times (2 to the Nth power).  */
-extern long double scalbnl (long double __x, int __n) throw (); extern long double __scalbnl (long double __x, int __n) throw ();
-
-
-/* Return the binary exponent of X, which must be nonzero.  */
-extern int ilogbl (long double __x) throw (); extern int __ilogbl (long double __x) throw ();
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern long double scalblnl (long double __x, long int __n) throw (); extern long double __scalblnl (long double __x, long int __n) throw ();
-
-/* Round X to integral value in floating-point format using current
-   rounding direction, but do not raise inexact exception.  */
-extern long double nearbyintl (long double __x) throw (); extern long double __nearbyintl (long double __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern long double roundl (long double __x) throw () __attribute__ ((__const__)); extern long double __roundl (long double __x) throw () __attribute__ ((__const__));
-
-/* Round X to the integral value in floating-point format nearest but
-   not larger in magnitude.  */
-extern long double truncl (long double __x) throw () __attribute__ ((__const__)); extern long double __truncl (long double __x) throw () __attribute__ ((__const__));
-
-/* Compute remainder of X and Y and put in *QUO a value with sign of x/y
-   and magnitude congruent `mod 2^n' to the magnitude of the integral
-   quotient x/y, with n >= 3.  */
-extern long double remquol (long double __x, long double __y, int *__quo) throw (); extern long double __remquol (long double __x, long double __y, int *__quo) throw ();
-
-
-/* Conversion functions.  */
-
-/* Round X to nearest integral value according to current rounding
-   direction.  */
-extern long int lrintl (long double __x) throw (); extern long int __lrintl (long double __x) throw ();
-extern long long int llrintl (long double __x) throw (); extern long long int __llrintl (long double __x) throw ();
-
-/* Round X to nearest integral value, rounding halfway cases away from
-   zero.  */
-extern long int lroundl (long double __x) throw (); extern long int __lroundl (long double __x) throw ();
-extern long long int llroundl (long double __x) throw (); extern long long int __llroundl (long double __x) throw ();
-
-
-/* Return positive difference between X and Y.  */
-extern long double fdiml (long double __x, long double __y) throw (); extern long double __fdiml (long double __x, long double __y) throw ();
-
-/* Return maximum numeric value from X and Y.  */
-extern long double fmaxl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __fmaxl (long double __x, long double __y) throw () __attribute__ ((__const__));
-
-/* Return minimum numeric value from X and Y.  */
-extern long double fminl (long double __x, long double __y) throw () __attribute__ ((__const__)); extern long double __fminl (long double __x, long double __y) throw () __attribute__ ((__const__));
-
-
-/* Classify given number.  */
-extern int __fpclassifyl (long double __value) throw ()
-     __attribute__ ((__const__));
-
-/* Test for negative number.  */
-extern int __signbitl (long double __value) throw ()
-     __attribute__ ((__const__));
-
-
-/* Multiply-add function computed as a ternary operation.  */
-extern long double fmal (long double __x, long double __y, long double __z) throw (); extern long double __fmal (long double __x, long double __y, long double __z) throw ();
-
-
-
-
-
-
-
-/* Return X times (2 to the Nth power).  */
-extern long double scalbl (long double __x, long double __n) throw (); extern long double __scalbl (long double __x, long double __n) throw ();
-# 134 "/usr/include/math.h" 2 3 4
-# 148 "/usr/include/math.h" 3 4
-/* This variable is used by `gamma' and `lgamma'.  */
-extern int signgam;
-
-
-
-/* ISO C99 defines some generic macros which work on any data type.  */
-
-
-/* Get the architecture specific values describing the floating-point
-   evaluation.  The following symbols will get defined:
-
-    float_t	floating-point type at least as wide as `float' used
-		to evaluate `float' expressions
-    double_t	floating-point type at least as wide as `double' used
-		to evaluate `double' expressions
-
-    FLT_EVAL_METHOD
-		Defined to
-		  0	if `float_t' is `float' and `double_t' is `double'
-		  1	if `float_t' and `double_t' are `double'
-		  2	if `float_t' and `double_t' are `long double'
-		  else	`float_t' and `double_t' are unspecified
-
-    INFINITY	representation of the infinity value of type `float'
-
-    FP_FAST_FMA
-    FP_FAST_FMAF
-    FP_FAST_FMAL
-		If defined it indicates that the `fma' function
-		generally executes about as fast as a multiply and an add.
-		This macro is defined only iff the `fma' function is
-		implemented directly with a hardware multiply-add instructions.
-
-    FP_ILOGB0	Expands to a value returned by `ilogb (0.0)'.
-    FP_ILOGBNAN	Expands to a value returned by `ilogb (NAN)'.
-
-    DECIMAL_DIG	Number of decimal digits supported by conversion between
-		decimal and all internal floating-point formats.
-
-*/
-
-/* All floating-point numbers can be put in one of these categories.  */
-enum
-  {
-    FP_NAN =
-
-      0,
-    FP_INFINITE =
-
-      1,
-    FP_ZERO =
-
-      2,
-    FP_SUBNORMAL =
-
-      3,
-    FP_NORMAL =
-
-      4
-  };
-
-/* Return number of classification appropriate for X.  */
-# 221 "/usr/include/math.h" 3 4
-/* Return nonzero value if sign of X is negative.  */
-# 233 "/usr/include/math.h" 3 4
-/* Return nonzero value if X is not +-Inf or NaN.  */
-# 245 "/usr/include/math.h" 3 4
-/* Return nonzero value if X is neither zero, subnormal, Inf, nor NaN.  */
-
-
-/* Return nonzero value if X is a NaN.  We could use `fpclassify' but
-   we already have this functions `__isnan' and it is faster.  */
-# 261 "/usr/include/math.h" 3 4
-/* Return nonzero value if X is positive or negative infinity.  */
-# 273 "/usr/include/math.h" 3 4
-/* Bitmasks for the math_errhandling macro.  */
-
-
-
-/* By default all functions support both errno and exception handling.
-   In gcc's fast math mode and if inline functions are defined this
-   might not be true.  */
-
-
-
-
-
-
-
-/* Support for various different standard error handling behaviors.  */
-typedef enum
-{
-  _IEEE_ = -1, /* According to IEEE 754/IEEE 854.  */
-  _SVID_, /* According to System V, release 4.  */
-  _XOPEN_, /* Nowadays also Unix98.  */
-  _POSIX_,
-  _ISOC_ /* Actually this is ISO C99.  */
-} _LIB_VERSION_TYPE;
-
-/* This variable can be changed at run-time to any of the values above to
-   affect floating point error handling behavior (it may also be necessary
-   to change the hardware FPU exception settings).  */
-extern _LIB_VERSION_TYPE _LIB_VERSION;
-
-
-
-
-/* In SVID error handling, `matherr' is called with this description
-   of the exceptional condition.
-
-   We have a problem when using C++ since `exception' is a reserved
-   name in C++.  */
-
-struct __exception
-
-
-
-  {
-    int type;
-    char *name;
-    double arg1;
-    double arg2;
-    double retval;
-  };
-
-
-extern int matherr (struct __exception *__exc) throw ();
-
-
-
-
-
-
-/* Types of exceptions in the `type' field.  */
-
-
-
-
-
-
-
-/* SVID mode specifies returning this large value instead of infinity.  */
-# 352 "/usr/include/math.h" 3 4
-/* Some useful constants.  */
-# 369 "/usr/include/math.h" 3 4
-/* The above constants are not adequate for computation using `long double's.
-   Therefore we provide as an extension constants with similar names as a
-   GNU extension.  Provide enough digits for the 128-bit IEEE quad.  */
-# 389 "/usr/include/math.h" 3 4
-/* When compiling in strict ISO C compatible mode we must not use the
-   inline functions since they, among other things, do not set the
-   `errno' variable correctly.  */
-
-
-
-
-
-/* ISO C99 defines some macros to compare number while taking care for
-   unordered numbers.  Many FPUs provide special instructions to support
-   these operations.  Generic support in GCC for these as builtins went
-   in before 3.0.0, but not all cpus added their patterns.  We define
-   versions that use the builtins here, and <bits/mathinline.h> will
-   undef/redefine as appropriate for the specific GCC version in use.  */
-# 411 "/usr/include/math.h" 3 4
-/* Get machine-dependent inline versions (if there are any).  */
-
-
-
-
-/* Define special entry points to use when the compiler got told to
-   only expect finite results.  */
-
-
-
-
-
-/* If we've still got undefined comparison macros, provide defaults.  */
-
-/* Return nonzero value if X is greater than Y.  */
-
-
-
-
-
-
-
-/* Return nonzero value if X is greater than or equal to Y.  */
-
-
-
-
-
-
-
-/* Return nonzero value if X is less than Y.  */
-
-
-
-
-
-
-
-/* Return nonzero value if X is less than or equal to Y.  */
-
-
-
-
-
-
-
-/* Return nonzero value if either X is less than Y or Y is less than X.  */
-
-
-
-
-
-
-
-/* Return nonzero value if arguments are unordered.  */
-# 475 "/usr/include/math.h" 3 4
-}
-# 70 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h" 2
-}
-# 70 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_int_syn.h"
 
 
 
@@ -39046,4122 +42381,11 @@ struct ap_ufixed: ap_fixed_base<_AP_W, _AP_I, false, _AP_Q, _AP_O, _AP_N> {
 
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 10 "./typedefs.h" 2
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
+# 2 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 2
 
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 11 "./typedefs.h" 2
-
-typedef bool bit;
-typedef ap_int<8> bit8_t;
-typedef ap_uint<2> bit2_t;
-typedef ap_uint<32> bit32_t;
-
-typedef float fix32_t;
-//typedef ap_fixed<16,16> fix32_t;
-# 9 "./pca.h" 2
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3
-// File based streams -*- C++ -*-
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/fstream
- *  This is a Standard C++ Library header.
- */
-
-//
-// ISO C++ 14882: 27.8  File-based streams
-//
-# 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 1 3
-// Locale support (codecvt) -*- C++ -*-
-
-// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008,
-// 2009, 2010, 2011  Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file bits/codecvt.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{locale}
- */
-
-//
-// ISO C++ 14882: 22.2.1.5 Template class codecvt
-//
-
-// Written by Benjamin Kosnik <bkoz@redhat.com>
-# 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  /// Empty base class for codecvt facet [22.2.1.5].
-  class codecvt_base
-  {
-  public:
-    enum result
-    {
-      ok,
-      partial,
-      error,
-      noconv
-    };
-  };
-
-  /**
-   *  @brief  Common base for codecvt functions.
-   *
-   *  This template class provides implementations of the public functions
-   *  that forward to the protected virtual functions.
-   *
-   *  This template also provides abstract stubs for the protected virtual
-   *  functions.
-  */
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    class __codecvt_abstract_base
-    : public locale::facet, public codecvt_base
-    {
-    public:
-      // Types:
-      typedef codecvt_base::result result;
-      typedef _InternT intern_type;
-      typedef _ExternT extern_type;
-      typedef _StateT state_type;
-
-      // 22.2.1.5.1 codecvt members
-      /**
-       *  @brief  Convert from internal to external character set.
-       *
-       *  Converts input string of intern_type to output string of
-       *  extern_type.  This is analogous to wcsrtombs.  It does this by
-       *  calling codecvt::do_out.
-       *
-       *  The source and destination character sets are determined by the
-       *  facet's locale, internal and external types.
-       *
-       *  The characters in [from,from_end) are converted and written to
-       *  [to,to_end).  from_next and to_next are set to point to the
-       *  character following the last successfully converted character,
-       *  respectively.  If the result needed no conversion, from_next and
-       *  to_next are not affected.
-       *
-       *  The @a state argument should be initialized if the input is at the
-       *  beginning and carried from a previous call if continuing
-       *  conversion.  There are no guarantees about how @a state is used.
-       *
-       *  The result returned is a member of codecvt_base::result.  If
-       *  all the input is converted, returns codecvt_base::ok.  If no
-       *  conversion is necessary, returns codecvt_base::noconv.  If
-       *  the input ends early or there is insufficient space in the
-       *  output, returns codecvt_base::partial.  Otherwise the
-       *  conversion failed and codecvt_base::error is returned.
-       *
-       *  @param  state  Persistent conversion state data.
-       *  @param  from  Start of input.
-       *  @param  from_end  End of input.
-       *  @param  from_next  Returns start of unconverted data.
-       *  @param  to  Start of output buffer.
-       *  @param  to_end  End of output buffer.
-       *  @param  to_next  Returns start of unused output area.
-       *  @return  codecvt_base::result.
-      */
-      result
-      out(state_type& __state, const intern_type* __from,
-   const intern_type* __from_end, const intern_type*& __from_next,
-   extern_type* __to, extern_type* __to_end,
-   extern_type*& __to_next) const
-      {
- return this->do_out(__state, __from, __from_end, __from_next,
-       __to, __to_end, __to_next);
-      }
-
-      /**
-       *  @brief  Reset conversion state.
-       *
-       *  Writes characters to output that would restore @a state to initial
-       *  conditions.  The idea is that if a partial conversion occurs, then
-       *  the converting the characters written by this function would leave
-       *  the state in initial conditions, rather than partial conversion
-       *  state.  It does this by calling codecvt::do_unshift().
-       *
-       *  For example, if 4 external characters always converted to 1 internal
-       *  character, and input to in() had 6 external characters with state
-       *  saved, this function would write two characters to the output and
-       *  set the state to initialized conditions.
-       *
-       *  The source and destination character sets are determined by the
-       *  facet's locale, internal and external types.
-       *
-       *  The result returned is a member of codecvt_base::result.  If the
-       *  state could be reset and data written, returns codecvt_base::ok.  If
-       *  no conversion is necessary, returns codecvt_base::noconv.  If the
-       *  output has insufficient space, returns codecvt_base::partial.
-       *  Otherwise the reset failed and codecvt_base::error is returned.
-       *
-       *  @param  state  Persistent conversion state data.
-       *  @param  to  Start of output buffer.
-       *  @param  to_end  End of output buffer.
-       *  @param  to_next  Returns start of unused output area.
-       *  @return  codecvt_base::result.
-      */
-      result
-      unshift(state_type& __state, extern_type* __to, extern_type* __to_end,
-       extern_type*& __to_next) const
-      { return this->do_unshift(__state, __to,__to_end,__to_next); }
-
-      /**
-       *  @brief  Convert from external to internal character set.
-       *
-       *  Converts input string of extern_type to output string of
-       *  intern_type.  This is analogous to mbsrtowcs.  It does this by
-       *  calling codecvt::do_in.
-       *
-       *  The source and destination character sets are determined by the
-       *  facet's locale, internal and external types.
-       *
-       *  The characters in [from,from_end) are converted and written to
-       *  [to,to_end).  from_next and to_next are set to point to the
-       *  character following the last successfully converted character,
-       *  respectively.  If the result needed no conversion, from_next and
-       *  to_next are not affected.
-       *
-       *  The @a state argument should be initialized if the input is at the
-       *  beginning and carried from a previous call if continuing
-       *  conversion.  There are no guarantees about how @a state is used.
-       *
-       *  The result returned is a member of codecvt_base::result.  If
-       *  all the input is converted, returns codecvt_base::ok.  If no
-       *  conversion is necessary, returns codecvt_base::noconv.  If
-       *  the input ends early or there is insufficient space in the
-       *  output, returns codecvt_base::partial.  Otherwise the
-       *  conversion failed and codecvt_base::error is returned.
-       *
-       *  @param  state  Persistent conversion state data.
-       *  @param  from  Start of input.
-       *  @param  from_end  End of input.
-       *  @param  from_next  Returns start of unconverted data.
-       *  @param  to  Start of output buffer.
-       *  @param  to_end  End of output buffer.
-       *  @param  to_next  Returns start of unused output area.
-       *  @return  codecvt_base::result.
-      */
-      result
-      in(state_type& __state, const extern_type* __from,
-  const extern_type* __from_end, const extern_type*& __from_next,
-  intern_type* __to, intern_type* __to_end,
-  intern_type*& __to_next) const
-      {
- return this->do_in(__state, __from, __from_end, __from_next,
-      __to, __to_end, __to_next);
-      }
-
-      int
-      encoding() const throw()
-      { return this->do_encoding(); }
-
-      bool
-      always_noconv() const throw()
-      { return this->do_always_noconv(); }
-
-      int
-      length(state_type& __state, const extern_type* __from,
-      const extern_type* __end, size_t __max) const
-      { return this->do_length(__state, __from, __end, __max); }
-
-      int
-      max_length() const throw()
-      { return this->do_max_length(); }
-
-    protected:
-      explicit
-      __codecvt_abstract_base(size_t __refs = 0) : locale::facet(__refs) { }
-
-      virtual
-      ~__codecvt_abstract_base() { }
-
-      /**
-       *  @brief  Convert from internal to external character set.
-       *
-       *  Converts input string of intern_type to output string of
-       *  extern_type.  This function is a hook for derived classes to change
-       *  the value returned.  @see out for more information.
-      */
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const = 0;
-
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const = 0;
-
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const = 0;
-
-      virtual int
-      do_encoding() const throw() = 0;
-
-      virtual bool
-      do_always_noconv() const throw() = 0;
-
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const = 0;
-
-      virtual int
-      do_max_length() const throw() = 0;
-    };
-
-
-
-  /**
-   *  @brief  Primary class template codecvt.
-   *  @ingroup locales
-   *
-   *  NB: Generic, mostly useless implementation.
-   *
-  */
-   template<typename _InternT, typename _ExternT, typename _StateT>
-    class codecvt
-    : public __codecvt_abstract_base<_InternT, _ExternT, _StateT>
-    {
-    public:
-      // Types:
-      typedef codecvt_base::result result;
-      typedef _InternT intern_type;
-      typedef _ExternT extern_type;
-      typedef _StateT state_type;
-
-    protected:
-      __c_locale _M_c_locale_codecvt;
-
-    public:
-      static locale::id id;
-
-      explicit
-      codecvt(size_t __refs = 0)
-      : __codecvt_abstract_base<_InternT, _ExternT, _StateT> (__refs) { }
-
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-
-    protected:
-      virtual
-      ~codecvt() { }
-
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const;
-
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const;
-
-      virtual int
-      do_encoding() const throw();
-
-      virtual bool
-      do_always_noconv() const throw();
-
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const;
-
-      virtual int
-      do_max_length() const throw();
-    };
-
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    locale::id codecvt<_InternT, _ExternT, _StateT>::id;
-
-  /// class codecvt<char, char, mbstate_t> specialization.
-  template<>
-    class codecvt<char, char, mbstate_t>
-    : public __codecvt_abstract_base<char, char, mbstate_t>
-    {
-    public:
-      // Types:
-      typedef char intern_type;
-      typedef char extern_type;
-      typedef mbstate_t state_type;
-
-    protected:
-      __c_locale _M_c_locale_codecvt;
-
-    public:
-      static locale::id id;
-
-      explicit
-      codecvt(size_t __refs = 0);
-
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-
-    protected:
-      virtual
-      ~codecvt();
-
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-
-      virtual result
-      do_unshift(state_type& __state, extern_type* __to,
-   extern_type* __to_end, extern_type*& __to_next) const;
-
-      virtual result
-      do_in(state_type& __state, const extern_type* __from,
-     const extern_type* __from_end, const extern_type*& __from_next,
-     intern_type* __to, intern_type* __to_end,
-     intern_type*& __to_next) const;
-
-      virtual int
-      do_encoding() const throw();
-
-      virtual bool
-      do_always_noconv() const throw();
-
-      virtual int
-      do_length(state_type&, const extern_type* __from,
-  const extern_type* __end, size_t __max) const;
-
-      virtual int
-      do_max_length() const throw();
-  };
-
-
-  /// class codecvt<wchar_t, char, mbstate_t> specialization.
-  template<>
-    class codecvt<wchar_t, char, mbstate_t>
-    : public __codecvt_abstract_base<wchar_t, char, mbstate_t>
-    {
-    public:
-      // Types:
-      typedef wchar_t intern_type;
-      typedef char extern_type;
-      typedef mbstate_t state_type;
-
-    protected:
-      __c_locale _M_c_locale_codecvt;
-
-    public:
-      static locale::id id;
-
-      explicit
-      codecvt(size_t __refs = 0);
-
-      explicit
-      codecvt(__c_locale __cloc, size_t __refs = 0);
-
-    protected:
-      virtual
-      ~codecvt();
-
-      virtual result
-      do_out(state_type& __state, const intern_type* __from,
-      const intern_type* __from_end, const intern_type*& __from_next,
-      extern_type* __to, extern_type* __to_end,
-      extern_type*& __to_next) const;
-
-      virtual result
-      do_unshift(state_type& __state,
-   extern_type* __to, extern_type* __to_end,
-   extern_type*& __to_next) const;
-
-      virtual result
-      do_in(state_type& __state,
-      const extern_type* __from, const extern_type* __from_end,
-      const extern_type*& __from_next,
-      intern_type* __to, intern_type* __to_end,
-      intern_type*& __to_next) const;
-
-      virtual
-      int do_encoding() const throw();
-
-      virtual
-      bool do_always_noconv() const throw();
-
-      virtual
-      int do_length(state_type&, const extern_type* __from,
-      const extern_type* __end, size_t __max) const;
-
-      virtual int
-      do_max_length() const throw();
-    };
-
-
-  /// class codecvt_byname [22.2.1.6].
-  template<typename _InternT, typename _ExternT, typename _StateT>
-    class codecvt_byname : public codecvt<_InternT, _ExternT, _StateT>
-    {
-    public:
-      explicit
-      codecvt_byname(const char* __s, size_t __refs = 0)
-      : codecvt<_InternT, _ExternT, _StateT>(__refs)
-      {
- if (__builtin_strcmp(__s, "C") != 0
-     && __builtin_strcmp(__s, "POSIX") != 0)
-   {
-     this->_S_destroy_c_locale(this->_M_c_locale_codecvt);
-     this->_S_create_c_locale(this->_M_c_locale_codecvt, __s);
-   }
-      }
-
-    protected:
-      virtual
-      ~codecvt_byname() { }
-    };
-
-  // Inhibit implicit instantiations for required instantiations,
-  // which are defined via explicit instantiations elsewhere.
-
-  extern template class codecvt_byname<char, char, mbstate_t>;
-
-  extern template
-    const codecvt<char, char, mbstate_t>&
-    use_facet<codecvt<char, char, mbstate_t> >(const locale&);
-
-  extern template
-    bool
-    has_facet<codecvt<char, char, mbstate_t> >(const locale&);
-
-
-  extern template class codecvt_byname<wchar_t, char, mbstate_t>;
-
-  extern template
-    const codecvt<wchar_t, char, mbstate_t>&
-    use_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
-
-  extern template
-    bool
-    has_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
-
-
-
-
-} // namespace std
-# 42 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
-// -*- C++ -*- forwarding header.
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/cstdio
- *  This is a Standard C++ Library file.  You should @c \#include this file
- *  in your programs, rather than any of the @a *.h implementation files.
- *
- *  This is the C++ version of the Standard C Library header @c stdio.h,
- *  and its contents are (mostly) the same as that header, but are all
- *  contained in the namespace @c std (except for names which are defined
- *  as macros in C).
- */
-
-//
-// ISO C++ 14882: 27.8.2  C Library files
-//
-# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-
-
-# 1 "/usr/include/stdio.h" 1 3 4
-/* Define ISO C stdio on top of C++ iostreams.
-   Copyright (C) 1991, 1994-2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- *	ISO C99 Standard: 7.19 Input/output	<stdio.h>
- */
-
-
-
-
-
-
-
-extern "C" {
-
-
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
- */
-# 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-# 34 "/usr/include/stdio.h" 2 3 4
-# 74 "/usr/include/stdio.h" 3 4
-# 1 "/usr/include/libio.h" 1 3 4
-/* Copyright (C) 1991-1995,1997-2007,2009,2011,2012
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-   Written by Per Bothner <bothner@cygnus.com>.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.
-
-   As a special exception, if you link the code in this file with
-   files compiled with a GNU compiler to produce an executable,
-   that does not cause the resulting executable to be covered by
-   the GNU Lesser General Public License.  This exception does not
-   however invalidate any other reasons why the executable file
-   might be covered by the GNU Lesser General Public License.
-   This exception applies to code released by its copyright holders
-   in files containing the exception.  */
-
-
-
-
-
-
-# 1 "/usr/include/_G_config.h" 1 3 4
-/* This file is needed by libio to define various configuration parameters.
-   These are always the same in the GNU C library.  */
-
-
-
-
-/* Define types for libio in terms of the standard internal type names.  */
-# 16 "/usr/include/_G_config.h" 3 4
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
-/*===---- stddef.h - Basic type definitions --------------------------------===
- *
- * Copyright (c) 2008 Eli Friedman
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- *===-----------------------------------------------------------------------===
- */
-# 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
-/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
-__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
-# 16 "/usr/include/_G_config.h" 2 3 4
-
-
-
-
-# 1 "/usr/include/wchar.h" 1 3 4
-/* Copyright (C) 1995-2008, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- *      ISO C99 Standard: 7.24
- *	Extended multibyte and wide character utilities	<wchar.h>
- */
-# 897 "/usr/include/wchar.h" 3 4
-/* Undefine all __need_* constants in case we are included to get those
-   constants but the whole file was already read.  */
-# 21 "/usr/include/_G_config.h" 2 3 4
-typedef struct
-{
-  __off_t __pos;
-  __mbstate_t __state;
-} _G_fpos_t;
-typedef struct
-{
-  __off64_t __pos;
-  __mbstate_t __state;
-} _G_fpos64_t;
-# 45 "/usr/include/_G_config.h" 3 4
-/* These library features are always available in the GNU C library.  */
-
-
-
-
-
-
-
-/* This is defined by <bits/stat.h> if `st_blksize' exists.  */
-# 33 "/usr/include/libio.h" 2 3 4
-/* ALL of these should be defined in _G_config.h */
-# 48 "/usr/include/libio.h" 3 4
-/* This define avoids name pollution if we're using GNU stdarg.h */
-# 87 "/usr/include/libio.h" 3 4
-/* Magic numbers and bits for the _flags field.
-   The magic numbers use the high-order bits of _flags;
-   the remaining bits are available for variable flags.
-   Note: The magic numbers must all be negative if stdio
-   emulation is desired. */
-# 125 "/usr/include/libio.h" 3 4
-/* These are "formatting flags" matching the iostream fmtflags enum values. */
-# 145 "/usr/include/libio.h" 3 4
-struct _IO_jump_t; struct _IO_FILE;
-
-/* Handle lock.  */
-
-
-
-
-
-
-
-typedef void _IO_lock_t;
-
-
-
-/* A streammarker remembers a position in a buffer. */
-
-struct _IO_marker {
-  struct _IO_marker *_next;
-  struct _IO_FILE *_sbuf;
-  /* If _pos >= 0
- it points to _buf->Gbase()+_pos. FIXME comment */
-  /* if _pos < 0, it points to _buf->eBptr()+_pos. FIXME comment */
-  int _pos;
-# 178 "/usr/include/libio.h" 3 4
-};
-
-/* This is the structure from the libstdc++ codecvt class.  */
-enum __codecvt_result
-{
-  __codecvt_ok,
-  __codecvt_partial,
-  __codecvt_error,
-  __codecvt_noconv
-};
-# 246 "/usr/include/libio.h" 3 4
-struct _IO_FILE {
-  int _flags; /* High-order word is _IO_MAGIC; rest is flags. */
-
-
-  /* The following pointers correspond to the C++ streambuf protocol. */
-  /* Note:  Tk uses the _IO_read_ptr and _IO_read_end fields directly. */
-  char* _IO_read_ptr; /* Current read pointer */
-  char* _IO_read_end; /* End of get area. */
-  char* _IO_read_base; /* Start of putback+get area. */
-  char* _IO_write_base; /* Start of put area. */
-  char* _IO_write_ptr; /* Current put pointer. */
-  char* _IO_write_end; /* End of put area. */
-  char* _IO_buf_base; /* Start of reserve area. */
-  char* _IO_buf_end; /* End of reserve area. */
-  /* The following fields are used to support backing up and undo. */
-  char *_IO_save_base; /* Pointer to start of non-current get area. */
-  char *_IO_backup_base; /* Pointer to first valid character of backup area */
-  char *_IO_save_end; /* Pointer to end of non-current get area. */
-
-  struct _IO_marker *_markers;
-
-  struct _IO_FILE *_chain;
-
-  int _fileno;
-
-
-
-  int _flags2;
-
-  __off_t _old_offset; /* This used to be _offset but it's too small.  */
-
-
-  /* 1+column number of pbase(); 0 is unknown. */
-  unsigned short _cur_column;
-  signed char _vtable_offset;
-  char _shortbuf[1];
-
-  /*  char* _save_gptr;  char* _save_egptr; */
-
-  _IO_lock_t *_lock;
-# 294 "/usr/include/libio.h" 3 4
- __off64_t _offset;
-# 303 "/usr/include/libio.h" 3 4
- void *__pad1;
-  void *__pad2;
-  void *__pad3;
-  void *__pad4;
-  size_t __pad5;
-
-  int _mode;
-  /* Make sure we don't get into trouble again.  */
-  char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
-
-};
-
-
-
-
-
-struct _IO_FILE_plus;
-
-extern struct _IO_FILE_plus _IO_2_1_stdin_;
-extern struct _IO_FILE_plus _IO_2_1_stdout_;
-extern struct _IO_FILE_plus _IO_2_1_stderr_;
-# 335 "/usr/include/libio.h" 3 4
-/* Functions to do I/O and file management for a stream.  */
-
-/* Read NBYTES bytes from COOKIE into a buffer pointed to by BUF.
-   Return number of bytes read.  */
-typedef __ssize_t __io_read_fn (void *__cookie, char *__buf, size_t __nbytes);
-
-/* Write N bytes pointed to by BUF to COOKIE.  Write all N bytes
-   unless there is an error.  Return number of bytes written.  If
-   there is an error, return 0 and do not write anything.  If the file
-   has been opened for append (__mode.__append set), then set the file
-   pointer to the end of the file and then do the write; if not, just
-   write at the current file pointer.  */
-typedef __ssize_t __io_write_fn (void *__cookie, const char *__buf,
-     size_t __n);
-
-/* Move COOKIE's file position to *POS bytes from the
-   beginning of the file (if W is SEEK_SET),
-   the current position (if W is SEEK_CUR),
-   or the end of the file (if W is SEEK_END).
-   Set *POS to the new file position.
-   Returns zero if successful, nonzero if not.  */
-typedef int __io_seek_fn (void *__cookie, __off64_t *__pos, int __w);
-
-/* Close COOKIE.  */
-typedef int __io_close_fn (void *__cookie);
-
-
-
-/* User-visible names for the above.  */
-typedef __io_read_fn cookie_read_function_t;
-typedef __io_write_fn cookie_write_function_t;
-typedef __io_seek_fn cookie_seek_function_t;
-typedef __io_close_fn cookie_close_function_t;
-
-/* The structure with the cookie function pointers.  */
-typedef struct
-{
-  __io_read_fn *read; /* Read bytes.  */
-  __io_write_fn *write; /* Write bytes.  */
-  __io_seek_fn *seek; /* Seek/tell file position.  */
-  __io_close_fn *close; /* Close file.  */
-} _IO_cookie_io_functions_t;
-typedef _IO_cookie_io_functions_t cookie_io_functions_t;
-
-struct _IO_cookie_file;
-
-/* Initialize one of those.  */
-extern void _IO_cookie_init (struct _IO_cookie_file *__cfile, int __read_write,
-        void *__cookie, _IO_cookie_io_functions_t __fns);
-
-
-
-
-extern "C" {
-
-
-extern int __underflow (_IO_FILE *);
-extern int __uflow (_IO_FILE *);
-extern int __overflow (_IO_FILE *, int);
-# 435 "/usr/include/libio.h" 3 4
-extern int _IO_getc (_IO_FILE *__fp);
-extern int _IO_putc (int __c, _IO_FILE *__fp);
-extern int _IO_feof (_IO_FILE *__fp) throw ();
-extern int _IO_ferror (_IO_FILE *__fp) throw ();
-
-extern int _IO_peekc_locked (_IO_FILE *__fp);
-
-/* This one is for Emacs. */
-
-
-
-extern void _IO_flockfile (_IO_FILE *) throw ();
-extern void _IO_funlockfile (_IO_FILE *) throw ();
-extern int _IO_ftrylockfile (_IO_FILE *) throw ();
-# 465 "/usr/include/libio.h" 3 4
-extern int _IO_vfscanf (_IO_FILE * __restrict, const char * __restrict,
-   __gnuc_va_list, int *__restrict);
-extern int _IO_vfprintf (_IO_FILE *__restrict, const char *__restrict,
-    __gnuc_va_list);
-extern __ssize_t _IO_padn (_IO_FILE *, int, __ssize_t);
-extern size_t _IO_sgetn (_IO_FILE *, void *, size_t);
-
-extern __off64_t _IO_seekoff (_IO_FILE *, __off64_t, int, int);
-extern __off64_t _IO_seekpos (_IO_FILE *, __off64_t, int);
-
-extern void _IO_free_backup_area (_IO_FILE *) throw ();
-# 527 "/usr/include/libio.h" 3 4
-}
-# 75 "/usr/include/stdio.h" 2 3 4
-
-
-
-
-typedef __gnuc_va_list va_list;
-# 107 "/usr/include/stdio.h" 3 4
-/* The type of the second argument to `fgetpos' and `fsetpos'.  */
-
-
-typedef _G_fpos_t fpos_t;
-
-
-
-
-
-typedef _G_fpos64_t fpos64_t;
-
-
-/* The possibilities for the third argument to `setvbuf'.  */
-
-
-
-
-
-/* Default buffer size.  */
-
-
-
-
-
-/* End of file character.
-   Some things throughout the library rely on this being -1.  */
-
-
-
-
-
-/* The possibilities for the third argument to `fseek'.
-   These values should not be changed.  */
-# 150 "/usr/include/stdio.h" 3 4
-/* Default path prefix for `tempnam' and `tmpnam'.  */
-
-
-
-
-/* Get the values:
-   L_tmpnam	How long an array of chars must be to be passed to `tmpnam'.
-   TMP_MAX	The minimum number of unique filenames generated by tmpnam
-		(and tempnam when it uses tmpnam's name space),
-		or tempnam (the two are separate).
-   L_ctermid	How long an array to pass to `ctermid'.
-   L_cuserid	How long an array to pass to `cuserid'.
-   FOPEN_MAX	Minimum number of files that can be open at once.
-   FILENAME_MAX	Maximum length of a filename.  */
-
-
-# 1 "/usr/include/bits/stdio_lim.h" 1 3 4
-/* Copyright (C) 1994, 1997, 1998, 1999, 2009 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-# 165 "/usr/include/stdio.h" 2 3 4
-
-
-/* Standard streams.  */
-extern struct _IO_FILE *stdin; /* Standard input stream.  */
-extern struct _IO_FILE *stdout; /* Standard output stream.  */
-extern struct _IO_FILE *stderr; /* Standard error output stream.  */
-/* C89/C99 say they're macros.  Make them happy.  */
-
-
-
-
-
-/* Remove file FILENAME.  */
-extern int remove (const char *__filename) throw ();
-/* Rename file OLD to NEW.  */
-extern int rename (const char *__old, const char *__new) throw ();
-
-
-
-/* Rename file OLD relative to OLDFD to NEW relative to NEWFD.  */
-extern int renameat (int __oldfd, const char *__old, int __newfd,
-       const char *__new) throw ();
-
-
-
-/* Create a temporary file and open it read/write.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-
-extern FILE *tmpfile (void) /* Ignore */;
-# 205 "/usr/include/stdio.h" 3 4
-extern FILE *tmpfile64 (void) /* Ignore */;
-
-
-/* Generate a temporary filename.  */
-extern char *tmpnam (char *__s) throw () /* Ignore */;
-
-
-
-/* This is the reentrant variant of `tmpnam'.  The only difference is
-   that it does not allow S to be NULL.  */
-extern char *tmpnam_r (char *__s) throw () /* Ignore */;
-
-
-
-
-/* Generate a unique temporary filename using up to five characters of PFX
-   if it is not NULL.  The directory to put this file in is searched for
-   as follows: First the environment variable "TMPDIR" is checked.
-   If it contains the name of a writable directory, that directory is used.
-   If not and if DIR is not NULL, that value is checked.  If that fails,
-   P_tmpdir is tried and finally "/tmp".  The storage for the filename
-   is allocated by `malloc'.  */
-extern char *tempnam (const char *__dir, const char *__pfx)
-     throw () __attribute__ ((__malloc__)) /* Ignore */;
-
-
-
-
-/* Close STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fclose (FILE *__stream);
-/* Flush STREAM, or all streams if STREAM is NULL.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fflush (FILE *__stream);
-
-
-
-/* Faster versions when locking is not required.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int fflush_unlocked (FILE *__stream);
-
-
-
-/* Close all streams.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int fcloseall (void);
-
-
-
-
-
-/* Open a file and create a new stream for it.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern FILE *fopen (const char *__restrict __filename,
-      const char *__restrict __modes) /* Ignore */;
-/* Open a file, replacing an existing stream with it.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern FILE *freopen (const char *__restrict __filename,
-        const char *__restrict __modes,
-        FILE *__restrict __stream) /* Ignore */;
-# 297 "/usr/include/stdio.h" 3 4
-extern FILE *fopen64 (const char *__restrict __filename,
-        const char *__restrict __modes) /* Ignore */;
-extern FILE *freopen64 (const char *__restrict __filename,
-   const char *__restrict __modes,
-   FILE *__restrict __stream) /* Ignore */;
-
-
-
-/* Create a new stream that refers to an existing system file descriptor.  */
-extern FILE *fdopen (int __fd, const char *__modes) throw () /* Ignore */;
-
-
-
-/* Create a new stream that refers to the given magic cookie,
-   and uses the given functions for input and output.  */
-extern FILE *fopencookie (void *__restrict __magic_cookie,
-     const char *__restrict __modes,
-     _IO_cookie_io_functions_t __io_funcs) throw () /* Ignore */;
-
-
-
-/* Create a new stream that refers to a memory buffer.  */
-extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
-  throw () /* Ignore */;
-
-/* Open a stream that writes into a malloc'd buffer that is expanded as
-   necessary.  *BUFLOC and *SIZELOC are updated with the buffer's location
-   and the number of characters written on fflush or fclose.  */
-extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) throw () /* Ignore */;
-
-
-
-
-/* If BUF is NULL, make STREAM unbuffered.
-   Else make it use buffer BUF, of size BUFSIZ.  */
-extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) throw ();
-/* Make STREAM use buffering mode MODE.
-   If BUF is not NULL, use N bytes of it for buffering;
-   else allocate an internal buffer N bytes long.  */
-extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,
-      int __modes, size_t __n) throw ();
-
-
-
-/* If BUF is NULL, make STREAM unbuffered.
-   Else make it use SIZE bytes of BUF for buffering.  */
-extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,
-         size_t __size) throw ();
-
-/* Make STREAM line-buffered.  */
-extern void setlinebuf (FILE *__stream) throw ();
-
-
-
-
-/* Write formatted output to STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fprintf (FILE *__restrict __stream,
-      const char *__restrict __format, ...);
-/* Write formatted output to stdout.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int printf (const char *__restrict __format, ...);
-/* Write formatted output to S.  */
-extern int sprintf (char *__restrict __s,
-      const char *__restrict __format, ...) throw ();
-
-/* Write formatted output to S from argument list ARG.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,
-       __gnuc_va_list __arg);
-/* Write formatted output to stdout from argument list ARG.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vprintf (const char *__restrict __format, __gnuc_va_list __arg);
-/* Write formatted output to S from argument list ARG.  */
-extern int vsprintf (char *__restrict __s, const char *__restrict __format,
-       __gnuc_va_list __arg) throw ();
-
-
-
-
-/* Maximum chars of output to write in MAXLEN.  */
-extern int snprintf (char *__restrict __s, size_t __maxlen,
-       const char *__restrict __format, ...)
-     throw () __attribute__ ((__format__ (__printf__, 3, 4)));
-
-extern int vsnprintf (char *__restrict __s, size_t __maxlen,
-        const char *__restrict __format, __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__printf__, 3, 0)));
-
-
-
-
-/* Write formatted output to a string dynamically allocated with `malloc'.
-   Store the address of the string in *PTR.  */
-extern int vasprintf (char **__restrict __ptr, const char *__restrict __f,
-        __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__printf__, 2, 0))) /* Ignore */;
-extern int __asprintf (char **__restrict __ptr,
-         const char *__restrict __fmt, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3))) /* Ignore */;
-extern int asprintf (char **__restrict __ptr,
-       const char *__restrict __fmt, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3))) /* Ignore */;
-
-
-
-/* Write formatted output to a file descriptor.  */
-extern int vdprintf (int __fd, const char *__restrict __fmt,
-       __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__printf__, 2, 0)));
-extern int dprintf (int __fd, const char *__restrict __fmt, ...)
-     __attribute__ ((__format__ (__printf__, 2, 3)));
-
-
-
-
-/* Read formatted input from STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fscanf (FILE *__restrict __stream,
-     const char *__restrict __format, ...) /* Ignore */;
-/* Read formatted input from stdin.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int scanf (const char *__restrict __format, ...) /* Ignore */;
-/* Read formatted input from S.  */
-extern int sscanf (const char *__restrict __s,
-     const char *__restrict __format, ...) throw ();
-# 467 "/usr/include/stdio.h" 3 4
-/* Read formatted input from S into argument list ARG.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vfscanf (FILE *__restrict __s, const char *__restrict __format,
-      __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__scanf__, 2, 0))) /* Ignore */;
-
-/* Read formatted input from stdin into argument list ARG.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg)
-     __attribute__ ((__format__ (__scanf__, 1, 0))) /* Ignore */;
-
-/* Read formatted input from S into argument list ARG.  */
-extern int vsscanf (const char *__restrict __s,
-      const char *__restrict __format, __gnuc_va_list __arg)
-     throw () __attribute__ ((__format__ (__scanf__, 2, 0)));
-# 527 "/usr/include/stdio.h" 3 4
-/* Read a character from STREAM.
-
-   These functions are possible cancellation points and therefore not
-   marked with __THROW.  */
-extern int fgetc (FILE *__stream);
-extern int getc (FILE *__stream);
-
-/* Read a character from stdin.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int getchar (void);
-
-
-/* The C standard explicitly says this is a macro, so we always do the
-   optimization for it.  */
-
-
-
-/* These are defined in POSIX.1:1996.
-
-   These functions are possible cancellation points and therefore not
-   marked with __THROW.  */
-extern int getc_unlocked (FILE *__stream);
-extern int getchar_unlocked (void);
-
-
-
-/* Faster version when locking is not necessary.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int fgetc_unlocked (FILE *__stream);
-
-
-
-
-/* Write a character to STREAM.
-
-   These functions are possible cancellation points and therefore not
-   marked with __THROW.
-
-   These functions is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fputc (int __c, FILE *__stream);
-extern int putc (int __c, FILE *__stream);
-
-/* Write a character to stdout.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int putchar (int __c);
-
-
-/* The C standard explicitly says this can be a macro,
-   so we always do the optimization for it.  */
-
-
-
-/* Faster version when locking is not necessary.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int fputc_unlocked (int __c, FILE *__stream);
-
-
-
-/* These are defined in POSIX.1:1996.
-
-   These functions are possible cancellation points and therefore not
-   marked with __THROW.  */
-extern int putc_unlocked (int __c, FILE *__stream);
-extern int putchar_unlocked (int __c);
-
-
-
-
-
-/* Get a word (int) from STREAM.  */
-extern int getw (FILE *__stream);
-
-/* Write a word (int) to STREAM.  */
-extern int putw (int __w, FILE *__stream);
-
-
-
-
-/* Get a newline-terminated string of finite length from STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
-     /* Ignore */;
-
-
-
-/* Get a newline-terminated string from stdin, removing the newline.
-   DO NOT USE THIS FUNCTION!!  There is no limit on how much it will read.
-
-   The function has been officially removed in ISO C11.  This opportunity
-   is used to also remove it from the GNU feature list.  It is now only
-   available when explicitly using an old ISO C, Unix, or POSIX standard.
-   GCC defines _GNU_SOURCE when building C++ code and the function is still
-   in C++11, so it is also available for C++.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern char *gets (char *__s) /* Ignore */ __attribute__ ((__deprecated__));
-
-
-
-
-/* This function does the same as `fgets' but does not lock the stream.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern char *fgets_unlocked (char *__restrict __s, int __n,
-        FILE *__restrict __stream) /* Ignore */;
-
-
-
-
-/* Read up to (and including) a DELIMITER from STREAM into *LINEPTR
-   (and null-terminate it). *LINEPTR is a pointer returned from malloc (or
-   NULL), pointing to *N characters of space.  It is realloc'd as
-   necessary.  Returns the number of characters read (not including the
-   null terminator), or -1 on error or EOF.
-
-   These functions are not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation they are cancellation points and
-   therefore not marked with __THROW.  */
-extern __ssize_t __getdelim (char **__restrict __lineptr,
-          size_t *__restrict __n, int __delimiter,
-          FILE *__restrict __stream) /* Ignore */;
-extern __ssize_t getdelim (char **__restrict __lineptr,
-        size_t *__restrict __n, int __delimiter,
-        FILE *__restrict __stream) /* Ignore */;
-
-/* Like `getdelim', but reads up to a newline.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern __ssize_t getline (char **__restrict __lineptr,
-       size_t *__restrict __n,
-       FILE *__restrict __stream) /* Ignore */;
-
-
-
-
-/* Write a string to STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
-
-/* Write a string, followed by a newline, to stdout.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int puts (const char *__s);
-
-
-/* Push a character back onto the input buffer of STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int ungetc (int __c, FILE *__stream);
-
-
-/* Read chunks of generic data from STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern size_t fread (void *__restrict __ptr, size_t __size,
-       size_t __n, FILE *__restrict __stream) /* Ignore */;
-/* Write chunks of generic data to STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern size_t fwrite (const void *__restrict __ptr, size_t __size,
-        size_t __n, FILE *__restrict __s);
-
-
-
-/* This function does the same as `fputs' but does not lock the stream.
-
-   This function is not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation it is a cancellation point and
-   therefore not marked with __THROW.  */
-extern int fputs_unlocked (const char *__restrict __s,
-      FILE *__restrict __stream);
-
-
-
-/* Faster versions when locking is not necessary.
-
-   These functions are not part of POSIX and therefore no official
-   cancellation point.  But due to similarity with an POSIX interface
-   or due to the implementation they are cancellation points and
-   therefore not marked with __THROW.  */
-extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
-         size_t __n, FILE *__restrict __stream) /* Ignore */;
-extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
-          size_t __n, FILE *__restrict __stream);
-
-
-
-
-/* Seek to a certain position on STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fseek (FILE *__stream, long int __off, int __whence);
-/* Return the current position of STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern long int ftell (FILE *__stream) /* Ignore */;
-/* Rewind to the beginning of STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern void rewind (FILE *__stream);
-
-
-/* The Single Unix Specification, Version 2, specifies an alternative,
-   more adequate interface for the two functions above which deal with
-   file offset.  `long int' is not the right type.  These definitions
-   are originally defined in the Large File Support API.  */
-
-
-
-/* Seek to a certain position on STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fseeko (FILE *__stream, __off_t __off, int __whence);
-/* Return the current position of STREAM.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern __off_t ftello (FILE *__stream) /* Ignore */;
-# 794 "/usr/include/stdio.h" 3 4
-/* Get STREAM's position.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);
-/* Set STREAM's position.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int fsetpos (FILE *__stream, const fpos_t *__pos);
-# 818 "/usr/include/stdio.h" 3 4
-extern int fseeko64 (FILE *__stream, __off64_t __off, int __whence);
-extern __off64_t ftello64 (FILE *__stream) /* Ignore */;
-extern int fgetpos64 (FILE *__restrict __stream, fpos64_t *__restrict __pos);
-extern int fsetpos64 (FILE *__stream, const fpos64_t *__pos);
-
-
-
-/* Clear the error and EOF indicators for STREAM.  */
-extern void clearerr (FILE *__stream) throw ();
-/* Return the EOF indicator for STREAM.  */
-extern int feof (FILE *__stream) throw () /* Ignore */;
-/* Return the error indicator for STREAM.  */
-extern int ferror (FILE *__stream) throw () /* Ignore */;
-
-
-
-/* Faster versions when locking is not required.  */
-extern void clearerr_unlocked (FILE *__stream) throw ();
-extern int feof_unlocked (FILE *__stream) throw () /* Ignore */;
-extern int ferror_unlocked (FILE *__stream) throw () /* Ignore */;
-
-
-
-
-/* Print a message describing the meaning of the value of errno.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern void perror (const char *__s);
-
-
-/* Provide the declarations for `sys_errlist' and `sys_nerr' if they
-   are available on this system.  Even if available, these variables
-   should not be used directly.  The `strerror' function provides
-   all the necessary functionality.  */
-
-
-# 1 "/usr/include/bits/sys_errlist.h" 1 3 4
-/* Declare sys_errlist and sys_nerr, or don't.  Compatibility (do) version.
-   Copyright (C) 2002, 2012 Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-
-
-
-
-/* sys_errlist and sys_nerr are deprecated.  Use strerror instead.  */
-
-
-extern int sys_nerr;
-extern const char *const sys_errlist[];
-
-
-extern int _sys_nerr;
-extern const char *const _sys_errlist[];
-# 854 "/usr/include/stdio.h" 2 3 4
-
-
-
-/* Return the system file descriptor for STREAM.  */
-extern int fileno (FILE *__stream) throw () /* Ignore */;
-
-
-
-/* Faster version when locking is not required.  */
-extern int fileno_unlocked (FILE *__stream) throw () /* Ignore */;
-
-
-
-
-
-/* Create a new stream connected to a pipe running the given command.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern FILE *popen (const char *__command, const char *__modes) /* Ignore */;
-
-/* Close a stream opened by popen and return the status of its child.
-
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
-extern int pclose (FILE *__stream);
-
-
-
-
-/* Return the name of the controlling terminal.  */
-extern char *ctermid (char *__s) throw ();
-
-
-
-
-/* Return the name of the current user.  */
-extern char *cuserid (char *__s);
-
-
-
-
-struct obstack; /* See <obstack.h>.  */
-
-/* Write formatted output to an obstack.  */
-extern int obstack_printf (struct obstack *__restrict __obstack,
-      const char *__restrict __format, ...)
-     throw () __attribute__ ((__format__ (__printf__, 2, 3)));
-extern int obstack_vprintf (struct obstack *__restrict __obstack,
-       const char *__restrict __format,
-       __gnuc_va_list __args)
-     throw () __attribute__ ((__format__ (__printf__, 2, 0)));
-
-
-
-
-/* These are defined in POSIX.1:1996.  */
-
-/* Acquire ownership of STREAM.  */
-extern void flockfile (FILE *__stream) throw ();
-
-/* Try to acquire ownership of STREAM but do not block if it is not
-   possible.  */
-extern int ftrylockfile (FILE *__stream) throw () /* Ignore */;
-
-/* Relinquish the ownership granted for STREAM.  */
-extern void funlockfile (FILE *__stream) throw ();
-# 931 "/usr/include/stdio.h" 3 4
-/* If we are compiling with optimizing read this file.  It contains
-   several optimizing inline functions and macros.  */
-# 943 "/usr/include/stdio.h" 3 4
-}
-# 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 2 3
-
-
-
-
-// Get rid of those macros defined in <stdio.h> in lieu of real functions.
-# 91 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-namespace std
-{
-  using ::FILE;
-  using ::fpos_t;
-
-  using ::clearerr;
-  using ::fclose;
-  using ::feof;
-  using ::ferror;
-  using ::fflush;
-  using ::fgetc;
-  using ::fgetpos;
-  using ::fgets;
-  using ::fopen;
-  using ::fprintf;
-  using ::fputc;
-  using ::fputs;
-  using ::fread;
-  using ::freopen;
-  using ::fscanf;
-  using ::fseek;
-  using ::fsetpos;
-  using ::ftell;
-  using ::fwrite;
-  using ::getc;
-  using ::getchar;
-  using ::gets;
-  using ::perror;
-  using ::printf;
-  using ::putc;
-  using ::putchar;
-  using ::puts;
-  using ::remove;
-  using ::rename;
-  using ::rewind;
-  using ::scanf;
-  using ::setbuf;
-  using ::setvbuf;
-  using ::sprintf;
-  using ::sscanf;
-  using ::tmpfile;
-  using ::tmpnam;
-  using ::ungetc;
-  using ::vfprintf;
-  using ::vprintf;
-  using ::vsprintf;
-} // namespace
-# 147 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-namespace __gnu_cxx
-{
-# 165 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
- using ::snprintf;
-  using ::vfscanf;
-  using ::vscanf;
-  using ::vsnprintf;
-  using ::vsscanf;
-
-} // namespace __gnu_cxx
-
-namespace std
-{
-  using ::__gnu_cxx::snprintf;
-  using ::__gnu_cxx::vfscanf;
-  using ::__gnu_cxx::vscanf;
-  using ::__gnu_cxx::vsnprintf;
-  using ::__gnu_cxx::vsscanf;
-} // namespace std
-# 43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 1 3
-// Wrapper of C-language FILE struct -*- C++ -*-
-
-// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-//
-// ISO C++ 14882: 27.8  File-based streams
-//
-
-/** @file bits/basic_file.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{ios}
- */
-# 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 1 3
-// Underlying io library details -*- C++ -*-
-
-// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file bits/c++io.h
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{ios}
- */
-
-// c_io_stdio.h - Defines for using "C" stdio.h
-
-
-
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
-// -*- C++ -*- forwarding header.
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/cstdio
- *  This is a Standard C++ Library file.  You should @c \#include this file
- *  in your programs, rather than any of the @a *.h implementation files.
- *
- *  This is the C++ version of the Standard C Library header @c stdio.h,
- *  and its contents are (mostly) the same as that header, but are all
- *  contained in the namespace @c std (except for names which are defined
- *  as macros in C).
- */
-
-//
-// ISO C++ 14882: 27.8.2  C Library files
-//
-# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
-# 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 2 3
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  typedef __gthread_mutex_t __c_lock;
-
-  // for basic_file.h
-  typedef FILE __c_file;
-
-
-} // namespace
-# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 2 3
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  // Generic declaration.
-  template<typename _CharT>
-    class __basic_file;
-
-  // Specialization.
-  template<>
-    class __basic_file<char>
-    {
-      // Underlying data source/sink.
-      __c_file* _M_cfile;
-
-      // True iff we opened _M_cfile, and thus must close it ourselves.
-      bool _M_cfile_created;
-
-    public:
-      __basic_file(__c_lock* __lock = 0) throw ();
-
-      __basic_file*
-      open(const char* __name, ios_base::openmode __mode, int __prot = 0664);
-
-      __basic_file*
-      sys_open(__c_file* __file, ios_base::openmode);
-
-      __basic_file*
-      sys_open(int __fd, ios_base::openmode __mode) throw ();
-
-      __basic_file*
-      close();
-
-      __attribute__ ((__pure__)) bool
-      is_open() const throw ();
-
-      __attribute__ ((__pure__)) int
-      fd() throw ();
-
-      __attribute__ ((__pure__)) __c_file*
-      file() throw ();
-
-      ~__basic_file();
-
-      streamsize
-      xsputn(const char* __s, streamsize __n);
-
-      streamsize
-      xsputn_2(const char* __s1, streamsize __n1,
-        const char* __s2, streamsize __n2);
-
-      streamsize
-      xsgetn(char* __s, streamsize __n);
-
-      streamoff
-      seekoff(streamoff __off, ios_base::seekdir __way) throw ();
-
-      int
-      sync();
-
-      streamsize
-      showmanyc();
-    };
-
-
-} // namespace
-# 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  // [27.8.1.1] template class basic_filebuf
-  /**
-   *  @brief  The actual work of input and output (for files).
-   *  @ingroup io
-   *
-   *  This class associates both its input and output sequence with an
-   *  external disk file, and maintains a joint file position for both
-   *  sequences.  Many of its semantics are described in terms of similar
-   *  behavior in the Standard C Library's @c FILE streams.
-   */
-  // Requirements on traits_type, specific to this class:
-  // traits_type::pos_type must be fpos<traits_type::state_type>
-  // traits_type::off_type must be streamoff
-  // traits_type::state_type must be Assignable and DefaultConstructible,
-  // and traits_type::state_type() must be the initial state for codecvt.
-  template<typename _CharT, typename _Traits>
-    class basic_filebuf : public basic_streambuf<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef __basic_file<char> __file_type;
-      typedef typename traits_type::state_type __state_type;
-      typedef codecvt<char_type, char, __state_type> __codecvt_type;
-
-      friend class ios_base; // For sync_with_stdio.
-
-    protected:
-      // Data Members:
-      // MT lock inherited from libio or other low-level io library.
-      __c_lock _M_lock;
-
-      // External buffer.
-      __file_type _M_file;
-
-      /// Place to stash in || out || in | out settings for current filebuf.
-      ios_base::openmode _M_mode;
-
-      // Beginning state type for codecvt.
-      __state_type _M_state_beg;
-
-      // During output, the state that corresponds to pptr(),
-      // during input, the state that corresponds to egptr() and
-      // _M_ext_next.
-      __state_type _M_state_cur;
-
-      // Not used for output. During input, the state that corresponds
-      // to eback() and _M_ext_buf.
-      __state_type _M_state_last;
-
-      /// Pointer to the beginning of internal buffer.
-      char_type* _M_buf;
-
-      /**
-       *  Actual size of internal buffer. This number is equal to the size
-       *  of the put area + 1 position, reserved for the overflow char of
-       *  a full area.
-       */
-      size_t _M_buf_size;
-
-      // Set iff _M_buf is allocated memory from _M_allocate_internal_buffer.
-      bool _M_buf_allocated;
-
-      /**
-       *  _M_reading == false && _M_writing == false for @b uncommitted mode;
-       *  _M_reading == true for @b read mode;
-       *  _M_writing == true for @b write mode;
-       *
-       *  NB: _M_reading == true && _M_writing == true is unused.
-       */
-      bool _M_reading;
-      bool _M_writing;
-
-      //@{
-      /**
-       *  Necessary bits for putback buffer management.
-       *
-       *  @note pbacks of over one character are not currently supported.
-       */
-      char_type _M_pback;
-      char_type* _M_pback_cur_save;
-      char_type* _M_pback_end_save;
-      bool _M_pback_init;
-      //@}
-
-      // Cached codecvt facet.
-      const __codecvt_type* _M_codecvt;
-
-      /**
-       *  Buffer for external characters. Used for input when
-       *  codecvt::always_noconv() == false. When valid, this corresponds
-       *  to eback().
-       */
-      char* _M_ext_buf;
-
-      /**
-       *  Size of buffer held by _M_ext_buf.
-       */
-      streamsize _M_ext_buf_size;
-
-      /**
-       *  Pointers into the buffer held by _M_ext_buf that delimit a
-       *  subsequence of bytes that have been read but not yet converted.
-       *  When valid, _M_ext_next corresponds to egptr().
-       */
-      const char* _M_ext_next;
-      char* _M_ext_end;
-
-      /**
-       *  Initializes pback buffers, and moves normal buffers to safety.
-       *  Assumptions:
-       *  _M_in_cur has already been moved back
-       */
-      void
-      _M_create_pback()
-      {
- if (!_M_pback_init)
-   {
-     _M_pback_cur_save = this->gptr();
-     _M_pback_end_save = this->egptr();
-     this->setg(&_M_pback, &_M_pback, &_M_pback + 1);
-     _M_pback_init = true;
-   }
-      }
-
-      /**
-       *  Deactivates pback buffer contents, and restores normal buffer.
-       *  Assumptions:
-       *  The pback buffer has only moved forward.
-       */
-      void
-      _M_destroy_pback() throw()
-      {
- if (_M_pback_init)
-   {
-     // Length _M_in_cur moved in the pback buffer.
-     _M_pback_cur_save += this->gptr() != this->eback();
-     this->setg(_M_buf, _M_pback_cur_save, _M_pback_end_save);
-     _M_pback_init = false;
-   }
-      }
-
-    public:
-      // Constructors/destructor:
-      /**
-       *  @brief  Does not open any files.
-       *
-       *  The default constructor initializes the parent class using its
-       *  own default ctor.
-       */
-      basic_filebuf();
-
-      /**
-       *  @brief  The destructor closes the file first.
-       */
-      virtual
-      ~basic_filebuf()
-      { this->close(); }
-
-      // Members:
-      /**
-       *  @brief  Returns true if the external file is open.
-       */
-      bool
-      is_open() const throw()
-      { return _M_file.is_open(); }
-
-      /**
-       *  @brief  Opens an external file.
-       *  @param  s  The name of the file.
-       *  @param  mode  The open mode flags.
-       *  @return  @c this on success, NULL on failure
-       *
-       *  If a file is already open, this function immediately fails.
-       *  Otherwise it tries to open the file named @a s using the flags
-       *  given in @a mode.
-       *
-       *  Table 92, adapted here, gives the relation between openmode
-       *  combinations and the equivalent fopen() flags.
-       *  (NB: lines app, in|out|app, in|app, binary|app, binary|in|out|app,
-       *  and binary|in|app per DR 596)
-       *  +---------------------------------------------------------+
-       *  | ios_base Flag combination            stdio equivalent   |
-       *  |binary  in  out  trunc  app                              |
-       *  +---------------------------------------------------------+
-       *  |             +                        w                  |
-       *  |             +           +            a                  |
-       *  |                         +            a                  |
-       *  |             +     +                  w                  |
-       *  |         +                            r                  |
-       *  |         +   +                        r+                 |
-       *  |         +   +     +                  w+                 |
-       *  |         +   +           +            a+                 |
-       *  |         +               +            a+                 |
-       *  +---------------------------------------------------------+
-       *  |   +         +                        wb                 |
-       *  |   +         +           +            ab                 |
-       *  |   +                     +            ab                 |
-       *  |   +         +     +                  wb                 |
-       *  |   +     +                            rb                 |
-       *  |   +     +   +                        r+b                |
-       *  |   +     +   +     +                  w+b                |
-       *  |   +     +   +           +            a+b                |
-       *  |   +     +               +            a+b                |
-       *  +---------------------------------------------------------+
-       */
-      __filebuf_type*
-      open(const char* __s, ios_base::openmode __mode);
-# 280 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
- /**
-       *  @brief  Closes the currently associated file.
-       *  @return  @c this on success, NULL on failure
-       *
-       *  If no file is currently open, this function immediately fails.
-       *
-       *  If a <em>put buffer area</em> exists, @c overflow(eof) is
-       *  called to flush all the characters.  The file is then
-       *  closed.
-       *
-       *  If any operations fail, this function also fails.
-       */
-      __filebuf_type*
-      close();
-
-    protected:
-      void
-      _M_allocate_internal_buffer();
-
-      void
-      _M_destroy_internal_buffer() throw();
-
-      // [27.8.1.4] overridden virtual functions
-      virtual streamsize
-      showmanyc();
-
-      // Stroustrup, 1998, p. 628
-      // underflow() and uflow() functions are called to get the next
-      // character from the real input source when the buffer is empty.
-      // Buffered input uses underflow()
-
-      virtual int_type
-      underflow();
-
-      virtual int_type
-      pbackfail(int_type __c = _Traits::eof());
-
-      // Stroustrup, 1998, p 648
-      // The overflow() function is called to transfer characters to the
-      // real output destination when the buffer is full. A call to
-      // overflow(c) outputs the contents of the buffer plus the
-      // character c.
-      // 27.5.2.4.5
-      // Consume some sequence of the characters in the pending sequence.
-      virtual int_type
-      overflow(int_type __c = _Traits::eof());
-
-      // Convert internal byte sequence to external, char-based
-      // sequence via codecvt.
-      bool
-      _M_convert_to_external(char_type*, streamsize);
-
-      /**
-       *  @brief  Manipulates the buffer.
-       *  @param  s  Pointer to a buffer area.
-       *  @param  n  Size of @a s.
-       *  @return  @c this
-       *
-       *  If no file has been opened, and both @a s and @a n are zero, then
-       *  the stream becomes unbuffered.  Otherwise, @c s is used as a
-       *  buffer; see
-       *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/bk01pt11ch25s02.html
-       *  for more.
-       */
-      virtual __streambuf_type*
-      setbuf(char_type* __s, streamsize __n);
-
-      virtual pos_type
-      seekoff(off_type __off, ios_base::seekdir __way,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-
-      virtual pos_type
-      seekpos(pos_type __pos,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-
-      // Common code for seekoff, seekpos, and overflow
-      pos_type
-      _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state);
-
-      int
-      _M_get_ext_pos(__state_type &__state);
-
-      virtual int
-      sync();
-
-      virtual void
-      imbue(const locale& __loc);
-
-      virtual streamsize
-      xsgetn(char_type* __s, streamsize __n);
-
-      virtual streamsize
-      xsputn(const char_type* __s, streamsize __n);
-
-      // Flushes output buffer, then writes unshift sequence.
-      bool
-      _M_terminate_output();
-
-      /**
-       *  This function sets the pointers of the internal buffer, both get
-       *  and put areas. Typically:
-       *
-       *   __off == egptr() - eback() upon underflow/uflow (@b read mode);
-       *   __off == 0 upon overflow (@b write mode);
-       *   __off == -1 upon open, setbuf, seekoff/pos (@b uncommitted mode).
-       *
-       *  NB: epptr() - pbase() == _M_buf_size - 1, since _M_buf_size
-       *  reflects the actual allocated memory and the last cell is reserved
-       *  for the overflow char of a full put area.
-       */
-      void
-      _M_set_buffer(streamsize __off)
-      {
-  const bool __testin = _M_mode & ios_base::in;
-  const bool __testout = _M_mode & ios_base::out;
-
- if (__testin && __off > 0)
-   this->setg(_M_buf, _M_buf, _M_buf + __off);
- else
-   this->setg(_M_buf, _M_buf, _M_buf);
-
- if (__testout && __off == 0 && _M_buf_size > 1 )
-   this->setp(_M_buf, _M_buf + _M_buf_size - 1);
- else
-   this->setp(0, 0);
-      }
-    };
-
-  // [27.8.1.5] Template class basic_ifstream
-  /**
-   *  @brief  Controlling input for files.
-   *  @ingroup io
-   *
-   *  This class supports reading from named files, using the inherited
-   *  functions from std::basic_istream.  To control the associated
-   *  sequence, an instance of std::basic_filebuf is used, which this page
-   *  refers to as @c sb.
-   */
-  template<typename _CharT, typename _Traits>
-    class basic_ifstream : public basic_istream<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      // Non-standard types:
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_istream<char_type, traits_type> __istream_type;
-
-    private:
-      __filebuf_type _M_filebuf;
-
-    public:
-      // Constructors/Destructors:
-      /**
-       *  @brief  Default constructor.
-       *
-       *  Initializes @c sb using its default constructor, and passes
-       *  @c &sb to the base class initializer.  Does not open any files
-       *  (you haven't given it a filename to open).
-       */
-      basic_ifstream() : __istream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-
-      /**
-       *  @brief  Create an input file stream.
-       *  @param  s  Null terminated string specifying the filename.
-       *  @param  mode  Open file in specified mode (see std::ios_base).
-       *
-       *  @c ios_base::in is automatically included in @a mode.
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      explicit
-      basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
-      : __istream_type(), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-# 484 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
- /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The file is closed by the filebuf object, not the formatting
-       *  stream.
-       */
-      ~basic_ifstream()
-      { }
-
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_filebuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-       */
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-
-      /**
-       *  @brief  Wrapper to test for an open file.
-       *  @return  @c rdbuf()->is_open()
-       */
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 365. Lack of const-qualification in clause 27
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-
-      /**
-       *  @brief  Opens an external file.
-       *  @param  s  The name of the file.
-       *  @param  mode  The open mode flags.
-       *
-       *  Calls @c std::basic_filebuf::open(s,mode|in).  If that function
-       *  fails, @c failbit is set in the stream's error state.
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      void
-      open(const char* __s, ios_base::openmode __mode = ios_base::in)
-      {
- if (!_M_filebuf.open(__s, __mode | ios_base::in))
-   this->setstate(ios_base::failbit);
- else
-   // _GLIBCXX_RESOLVE_LIB_DEFECTS
-   // 409. Closing an fstream should clear error state
-   this->clear();
-      }
-# 561 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
- /**
-       *  @brief  Close the file.
-       *
-       *  Calls @c std::basic_filebuf::close().  If that function
-       *  fails, @c failbit is set in the stream's error state.
-       */
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-
-
-  // [27.8.1.8] Template class basic_ofstream
-  /**
-   *  @brief  Controlling output for files.
-   *  @ingroup io
-   *
-   *  This class supports reading from named files, using the inherited
-   *  functions from std::basic_ostream.  To control the associated
-   *  sequence, an instance of std::basic_filebuf is used, which this page
-   *  refers to as @c sb.
-   */
-  template<typename _CharT, typename _Traits>
-    class basic_ofstream : public basic_ostream<_CharT,_Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      // Non-standard types:
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_ostream<char_type, traits_type> __ostream_type;
-
-    private:
-      __filebuf_type _M_filebuf;
-
-    public:
-      // Constructors:
-      /**
-       *  @brief  Default constructor.
-       *
-       *  Initializes @c sb using its default constructor, and passes
-       *  @c &sb to the base class initializer.  Does not open any files
-       *  (you haven't given it a filename to open).
-       */
-      basic_ofstream(): __ostream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-
-      /**
-       *  @brief  Create an output file stream.
-       *  @param  s  Null terminated string specifying the filename.
-       *  @param  mode  Open file in specified mode (see std::ios_base).
-       *
-       *  @c ios_base::out|ios_base::trunc is automatically included in
-       *  @a mode.
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      explicit
-      basic_ofstream(const char* __s,
-       ios_base::openmode __mode = ios_base::out|ios_base::trunc)
-      : __ostream_type(), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-# 655 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
- /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The file is closed by the filebuf object, not the formatting
-       *  stream.
-       */
-      ~basic_ofstream()
-      { }
-
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_filebuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-       */
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-
-      /**
-       *  @brief  Wrapper to test for an open file.
-       *  @return  @c rdbuf()->is_open()
-       */
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 365. Lack of const-qualification in clause 27
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-
-      /**
-       *  @brief  Opens an external file.
-       *  @param  s  The name of the file.
-       *  @param  mode  The open mode flags.
-       *
-       *  Calls @c std::basic_filebuf::open(s,mode|out|trunc).  If that
-       *  function fails, @c failbit is set in the stream's error state.
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      void
-      open(const char* __s,
-    ios_base::openmode __mode = ios_base::out | ios_base::trunc)
-      {
- if (!_M_filebuf.open(__s, __mode | ios_base::out))
-   this->setstate(ios_base::failbit);
- else
-   // _GLIBCXX_RESOLVE_LIB_DEFECTS
-   // 409. Closing an fstream should clear error state
-   this->clear();
-      }
-# 734 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
- /**
-       *  @brief  Close the file.
-       *
-       *  Calls @c std::basic_filebuf::close().  If that function
-       *  fails, @c failbit is set in the stream's error state.
-       */
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-
-
-  // [27.8.1.11] Template class basic_fstream
-  /**
-   *  @brief  Controlling input and output for files.
-   *  @ingroup io
-   *
-   *  This class supports reading from and writing to named files, using
-   *  the inherited functions from std::basic_iostream.  To control the
-   *  associated sequence, an instance of std::basic_filebuf is used, which
-   *  this page refers to as @c sb.
-   */
-  template<typename _CharT, typename _Traits>
-    class basic_fstream : public basic_iostream<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      // Non-standard types:
-      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
-      typedef basic_ios<char_type, traits_type> __ios_type;
-      typedef basic_iostream<char_type, traits_type> __iostream_type;
-
-    private:
-      __filebuf_type _M_filebuf;
-
-    public:
-      // Constructors/destructor:
-      /**
-       *  @brief  Default constructor.
-       *
-       *  Initializes @c sb using its default constructor, and passes
-       *  @c &sb to the base class initializer.  Does not open any files
-       *  (you haven't given it a filename to open).
-       */
-      basic_fstream()
-      : __iostream_type(), _M_filebuf()
-      { this->init(&_M_filebuf); }
-
-      /**
-       *  @brief  Create an input/output file stream.
-       *  @param  s  Null terminated string specifying the filename.
-       *  @param  mode  Open file in specified mode (see std::ios_base).
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      explicit
-      basic_fstream(const char* __s,
-      ios_base::openmode __mode = ios_base::in | ios_base::out)
-      : __iostream_type(0), _M_filebuf()
-      {
- this->init(&_M_filebuf);
- this->open(__s, __mode);
-      }
-# 824 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
- /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The file is closed by the filebuf object, not the formatting
-       *  stream.
-       */
-      ~basic_fstream()
-      { }
-
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_filebuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-       */
-      __filebuf_type*
-      rdbuf() const
-      { return const_cast<__filebuf_type*>(&_M_filebuf); }
-
-      /**
-       *  @brief  Wrapper to test for an open file.
-       *  @return  @c rdbuf()->is_open()
-       */
-      bool
-      is_open()
-      { return _M_filebuf.is_open(); }
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 365. Lack of const-qualification in clause 27
-      bool
-      is_open() const
-      { return _M_filebuf.is_open(); }
-
-      /**
-       *  @brief  Opens an external file.
-       *  @param  s  The name of the file.
-       *  @param  mode  The open mode flags.
-       *
-       *  Calls @c std::basic_filebuf::open(s,mode).  If that
-       *  function fails, @c failbit is set in the stream's error state.
-       *
-       *  Tip:  When using std::string to hold the filename, you must use
-       *  .c_str() before passing it to this constructor.
-       */
-      void
-      open(const char* __s,
-    ios_base::openmode __mode = ios_base::in | ios_base::out)
-      {
- if (!_M_filebuf.open(__s, __mode))
-   this->setstate(ios_base::failbit);
- else
-   // _GLIBCXX_RESOLVE_LIB_DEFECTS
-   // 409. Closing an fstream should clear error state
-   this->clear();
-      }
-# 903 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
- /**
-       *  @brief  Close the file.
-       *
-       *  Calls @c std::basic_filebuf::close().  If that function
-       *  fails, @c failbit is set in the stream's error state.
-       */
-      void
-      close()
-      {
- if (!_M_filebuf.close())
-   this->setstate(ios_base::failbit);
-      }
-    };
-
-
-} // namespace
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 1 3
-// File based streams -*- C++ -*-
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006,
-// 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file bits/fstream.tcc
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{fstream}
- */
-
-//
-// ISO C++ 14882: 27.8  File-based streams
-//
-# 39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    _M_allocate_internal_buffer()
-    {
-      // Allocate internal buffer only if one doesn't already exist
-      // (either allocated or provided by the user via setbuf).
-      if (!_M_buf_allocated && !_M_buf)
- {
-   _M_buf = new char_type[_M_buf_size];
-   _M_buf_allocated = true;
- }
-    }
-
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    _M_destroy_internal_buffer() throw()
-    {
-      if (_M_buf_allocated)
- {
-   delete [] _M_buf;
-   _M_buf = 0;
-   _M_buf_allocated = false;
- }
-      delete [] _M_ext_buf;
-      _M_ext_buf = 0;
-      _M_ext_buf_size = 0;
-      _M_ext_next = 0;
-      _M_ext_end = 0;
-    }
-
-  template<typename _CharT, typename _Traits>
-    basic_filebuf<_CharT, _Traits>::
-    basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
-    _M_mode(ios_base::openmode(0)), _M_state_beg(), _M_state_cur(),
-    _M_state_last(), _M_buf(0), _M_buf_size(8192),
-    _M_buf_allocated(false), _M_reading(false), _M_writing(false), _M_pback(),
-    _M_pback_cur_save(0), _M_pback_end_save(0), _M_pback_init(false),
-    _M_codecvt(0), _M_ext_buf(0), _M_ext_buf_size(0), _M_ext_next(0),
-    _M_ext_end(0)
-    {
-      if (has_facet<__codecvt_type>(this->_M_buf_locale))
- _M_codecvt = &use_facet<__codecvt_type>(this->_M_buf_locale);
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    open(const char* __s, ios_base::openmode __mode)
-    {
-      __filebuf_type *__ret = 0;
-      if (!this->is_open())
- {
-   _M_file.open(__s, __mode);
-   if (this->is_open())
-     {
-       _M_allocate_internal_buffer();
-       _M_mode = __mode;
-
-       // Setup initial buffer to 'uncommitted' mode.
-       _M_reading = false;
-       _M_writing = false;
-       _M_set_buffer(-1);
-
-       // Reset to initial state.
-       _M_state_last = _M_state_cur = _M_state_beg;
-
-       // 27.8.1.3,4
-       if ((__mode & ios_base::ate)
-    && this->seekoff(0, ios_base::end, __mode)
-    == pos_type(off_type(-1)))
-  this->close();
-       else
-  __ret = this;
-     }
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    close()
-    {
-      if (!this->is_open())
- return 0;
-
-      bool __testfail = false;
-      {
- // NB: Do this here so that re-opened filebufs will be cool...
- struct __close_sentry
- {
-   basic_filebuf *__fb;
-   __close_sentry (basic_filebuf *__fbi): __fb(__fbi) { }
-   ~__close_sentry ()
-   {
-     __fb->_M_mode = ios_base::openmode(0);
-     __fb->_M_pback_init = false;
-     __fb->_M_destroy_internal_buffer();
-     __fb->_M_reading = false;
-     __fb->_M_writing = false;
-     __fb->_M_set_buffer(-1);
-     __fb->_M_state_last = __fb->_M_state_cur = __fb->_M_state_beg;
-   }
- } __cs (this);
-
- if (true)
-   {
-     if (!_M_terminate_output())
-       __testfail = true;
-   }
- if (false)
-   {
-     _M_file.close();
-                            ;
-   }
- if (false)
-   { __testfail = true; }
-      }
-
-      if (!_M_file.close())
- __testfail = true;
-
-      if (__testfail)
- return 0;
-      else
- return this;
-    }
-
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    showmanyc()
-    {
-      streamsize __ret = -1;
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin && this->is_open())
- {
-   // For a stateful encoding (-1) the pending sequence might be just
-   // shift and unshift prefixes with no actual character.
-   __ret = this->egptr() - this->gptr();
-
-
-
-
-
-
-
-   if (__check_facet(_M_codecvt).encoding() >= 0)
-
-     __ret += _M_file.showmanyc() / _M_codecvt->max_length();
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    underflow()
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin)
- {
-   if (_M_writing)
-     {
-       if (overflow() == traits_type::eof())
-  return __ret;
-       _M_set_buffer(-1);
-       _M_writing = false;
-     }
-   // Check for pback madness, and if so switch back to the
-   // normal buffers and jet outta here before expensive
-   // fileops happen...
-   _M_destroy_pback();
-
-   if (this->gptr() < this->egptr())
-     return traits_type::to_int_type(*this->gptr());
-
-   // Get and convert input sequence.
-   const size_t __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
-
-   // Will be set to true if ::read() returns 0 indicating EOF.
-   bool __got_eof = false;
-   // Number of internal characters produced.
-   streamsize __ilen = 0;
-   codecvt_base::result __r = codecvt_base::ok;
-   if (__check_facet(_M_codecvt).always_noconv())
-     {
-       __ilen = _M_file.xsgetn(reinterpret_cast<char*>(this->eback()),
-          __buflen);
-       if (__ilen == 0)
-  __got_eof = true;
-     }
-   else
-     {
-              // Worst-case number of external bytes.
-       // XXX Not done encoding() == -1.
-       const int __enc = _M_codecvt->encoding();
-       streamsize __blen; // Minimum buffer size.
-       streamsize __rlen; // Number of chars to read.
-       if (__enc > 0)
-  __blen = __rlen = __buflen * __enc;
-       else
-  {
-    __blen = __buflen + _M_codecvt->max_length() - 1;
-    __rlen = __buflen;
-  }
-       const streamsize __remainder = _M_ext_end - _M_ext_next;
-       __rlen = __rlen > __remainder ? __rlen - __remainder : 0;
-
-       // An imbue in 'read' mode implies first converting the external
-       // chars already present.
-       if (_M_reading && this->egptr() == this->eback() && __remainder)
-  __rlen = 0;
-
-       // Allocate buffer if necessary and move unconverted
-       // bytes to front.
-       if (_M_ext_buf_size < __blen)
-  {
-    char* __buf = new char[__blen];
-    if (__remainder)
-      __builtin_memcpy(__buf, _M_ext_next, __remainder);
-
-    delete [] _M_ext_buf;
-    _M_ext_buf = __buf;
-    _M_ext_buf_size = __blen;
-  }
-       else if (__remainder)
-  __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
-
-       _M_ext_next = _M_ext_buf;
-       _M_ext_end = _M_ext_buf + __remainder;
-       _M_state_last = _M_state_cur;
-
-       do
-  {
-    if (__rlen > 0)
-      {
-        // Sanity check!
-        // This may fail if the return value of
-        // codecvt::max_length() is bogus.
-        if (_M_ext_end - _M_ext_buf + __rlen > _M_ext_buf_size)
-   {
-     __throw_ios_failure(("basic_filebuf::underflow " "codecvt::max_length() " "is not valid"));
-
-
-   }
-        streamsize __elen = _M_file.xsgetn(_M_ext_end, __rlen);
-        if (__elen == 0)
-   __got_eof = true;
-        else if (__elen == -1)
-   break;
-        _M_ext_end += __elen;
-      }
-
-    char_type* __iend = this->eback();
-    if (_M_ext_next < _M_ext_end)
-      __r = _M_codecvt->in(_M_state_cur, _M_ext_next,
-      _M_ext_end, _M_ext_next,
-      this->eback(),
-      this->eback() + __buflen, __iend);
-    if (__r == codecvt_base::noconv)
-      {
-        size_t __avail = _M_ext_end - _M_ext_buf;
-        __ilen = std::min(__avail, __buflen);
-        traits_type::copy(this->eback(),
-     reinterpret_cast<char_type*>
-     (_M_ext_buf), __ilen);
-        _M_ext_next = _M_ext_buf + __ilen;
-      }
-    else
-      __ilen = __iend - this->eback();
-
-    // _M_codecvt->in may return error while __ilen > 0: this is
-    // ok, and actually occurs in case of mixed encodings (e.g.,
-    // XML files).
-    if (__r == codecvt_base::error)
-      break;
-
-    __rlen = 1;
-  }
-       while (__ilen == 0 && !__got_eof);
-     }
-
-   if (__ilen > 0)
-     {
-       _M_set_buffer(__ilen);
-       _M_reading = true;
-       __ret = traits_type::to_int_type(*this->gptr());
-     }
-   else if (__got_eof)
-     {
-       // If the actual end of file is reached, set 'uncommitted'
-       // mode, thus allowing an immediate write without an
-       // intervening seek.
-       _M_set_buffer(-1);
-       _M_reading = false;
-       // However, reaching it while looping on partial means that
-       // the file has got an incomplete character.
-       if (__r == codecvt_base::partial)
-  __throw_ios_failure(("basic_filebuf::underflow " "incomplete character in file"));
-
-     }
-   else if (__r == codecvt_base::error)
-     __throw_ios_failure(("basic_filebuf::underflow " "invalid byte sequence in file"));
-
-   else
-     __throw_ios_failure(("basic_filebuf::underflow " "error reading the file"));
-
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    pbackfail(int_type __i)
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testin = _M_mode & ios_base::in;
-      if (__testin)
- {
-   if (_M_writing)
-     {
-       if (overflow() == traits_type::eof())
-  return __ret;
-       _M_set_buffer(-1);
-       _M_writing = false;
-     }
-   // Remember whether the pback buffer is active, otherwise below
-   // we may try to store in it a second char (libstdc++/9761).
-   const bool __testpb = _M_pback_init;
-   const bool __testeof = traits_type::eq_int_type(__i, __ret);
-   int_type __tmp;
-   if (this->eback() < this->gptr())
-     {
-       this->gbump(-1);
-       __tmp = traits_type::to_int_type(*this->gptr());
-     }
-   else if (this->seekoff(-1, ios_base::cur) != pos_type(off_type(-1)))
-     {
-       __tmp = this->underflow();
-       if (traits_type::eq_int_type(__tmp, __ret))
-  return __ret;
-     }
-   else
-     {
-       // At the beginning of the buffer, need to make a
-       // putback position available.  But the seek may fail
-       // (f.i., at the beginning of a file, see
-       // libstdc++/9439) and in that case we return
-       // traits_type::eof().
-       return __ret;
-     }
-
-   // Try to put back __i into input sequence in one of three ways.
-   // Order these tests done in is unspecified by the standard.
-   if (!__testeof && traits_type::eq_int_type(__i, __tmp))
-     __ret = __i;
-   else if (__testeof)
-     __ret = traits_type::not_eof(__i);
-   else if (!__testpb)
-     {
-       _M_create_pback();
-       _M_reading = true;
-       *this->gptr() = traits_type::to_char_type(__i);
-       __ret = __i;
-     }
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::int_type
-    basic_filebuf<_CharT, _Traits>::
-    overflow(int_type __c)
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testeof = traits_type::eq_int_type(__c, __ret);
-      const bool __testout = _M_mode & ios_base::out;
-      if (__testout)
- {
-          if (_M_reading)
-            {
-              _M_destroy_pback();
-              const int __gptr_off = _M_get_ext_pos(_M_state_last);
-              if (_M_seek(__gptr_off, ios_base::cur, _M_state_last)
-                  == pos_type(off_type(-1)))
-                return __ret;
-            }
-   if (this->pbase() < this->pptr())
-     {
-       // If appropriate, append the overflow char.
-       if (!__testeof)
-  {
-    *this->pptr() = traits_type::to_char_type(__c);
-    this->pbump(1);
-  }
-
-       // Convert pending sequence to external representation,
-       // and output.
-       if (_M_convert_to_external(this->pbase(),
-      this->pptr() - this->pbase()))
-  {
-    _M_set_buffer(0);
-    __ret = traits_type::not_eof(__c);
-  }
-     }
-   else if (_M_buf_size > 1)
-     {
-       // Overflow in 'uncommitted' mode: set _M_writing, set
-       // the buffer to the initial 'write' mode, and put __c
-       // into the buffer.
-       _M_set_buffer(0);
-       _M_writing = true;
-       if (!__testeof)
-  {
-    *this->pptr() = traits_type::to_char_type(__c);
-    this->pbump(1);
-  }
-       __ret = traits_type::not_eof(__c);
-     }
-   else
-     {
-       // Unbuffered.
-       char_type __conv = traits_type::to_char_type(__c);
-       if (__testeof || _M_convert_to_external(&__conv, 1))
-  {
-    _M_writing = true;
-    __ret = traits_type::not_eof(__c);
-  }
-     }
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    bool
-    basic_filebuf<_CharT, _Traits>::
-    _M_convert_to_external(_CharT* __ibuf, streamsize __ilen)
-    {
-      // Sizes of external and pending output.
-      streamsize __elen;
-      streamsize __plen;
-      if (__check_facet(_M_codecvt).always_noconv())
- {
-   __elen = _M_file.xsputn(reinterpret_cast<char*>(__ibuf), __ilen);
-   __plen = __ilen;
- }
-      else
- {
-   // Worst-case number of external bytes needed.
-   // XXX Not done encoding() == -1.
-   streamsize __blen = __ilen * _M_codecvt->max_length();
-   char* __buf = static_cast<char*>(__builtin_alloca(__blen));
-
-   char* __bend;
-   const char_type* __iend;
-   codecvt_base::result __r;
-   __r = _M_codecvt->out(_M_state_cur, __ibuf, __ibuf + __ilen,
-    __iend, __buf, __buf + __blen, __bend);
-
-   if (__r == codecvt_base::ok || __r == codecvt_base::partial)
-     __blen = __bend - __buf;
-   else if (__r == codecvt_base::noconv)
-     {
-       // Same as the always_noconv case above.
-       __buf = reinterpret_cast<char*>(__ibuf);
-       __blen = __ilen;
-     }
-   else
-     __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error"));
-
-
-   __elen = _M_file.xsputn(__buf, __blen);
-   __plen = __blen;
-
-   // Try once more for partial conversions.
-   if (__r == codecvt_base::partial && __elen == __plen)
-     {
-       const char_type* __iresume = __iend;
-       streamsize __rlen = this->pptr() - __iend;
-       __r = _M_codecvt->out(_M_state_cur, __iresume,
-        __iresume + __rlen, __iend, __buf,
-        __buf + __blen, __bend);
-       if (__r != codecvt_base::error)
-  {
-    __rlen = __bend - __buf;
-    __elen = _M_file.xsputn(__buf, __rlen);
-    __plen = __rlen;
-  }
-       else
-  __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error"));
-
-     }
- }
-      return __elen == __plen;
-    }
-
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    xsgetn(_CharT* __s, streamsize __n)
-    {
-      // Clear out pback buffer before going on to the real deal...
-      streamsize __ret = 0;
-      if (_M_pback_init)
- {
-   if (__n > 0 && this->gptr() == this->eback())
-     {
-       *__s++ = *this->gptr(); // emulate non-underflowing sbumpc
-       this->gbump(1);
-       __ret = 1;
-       --__n;
-     }
-   _M_destroy_pback();
- }
-      else if (_M_writing)
- {
-    if (overflow() == traits_type::eof())
-      return __ret;
-    _M_set_buffer(-1);
-    _M_writing = false;
-  }
-
-      // Optimization in the always_noconv() case, to be generalized in the
-      // future: when __n > __buflen we read directly instead of using the
-      // buffer repeatedly.
-      const bool __testin = _M_mode & ios_base::in;
-      const streamsize __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
-
-      if (__n > __buflen && __check_facet(_M_codecvt).always_noconv()
-     && __testin)
-   {
-     // First, copy the chars already present in the buffer.
-     const streamsize __avail = this->egptr() - this->gptr();
-     if (__avail != 0)
-       {
-        traits_type::copy(__s, this->gptr(), __avail);
-         __s += __avail;
-        this->setg(this->eback(), this->gptr() + __avail,
-     this->egptr());
-        __ret += __avail;
-        __n -= __avail;
-       }
-
-     // Need to loop in case of short reads (relatively common
-     // with pipes).
-     streamsize __len;
-     for (;;)
-       {
-         __len = _M_file.xsgetn(reinterpret_cast<char*>(__s),
-           __n);
-         if (__len == -1)
-    __throw_ios_failure(("basic_filebuf::xsgetn " "error reading the file"));
-
-         if (__len == 0)
-    break;
-
-         __n -= __len;
-         __ret += __len;
-         if (__n == 0)
-    break;
-
-         __s += __len;
-       }
-
-     if (__n == 0)
-       {
-         _M_set_buffer(0);
-         _M_reading = true;
-       }
-     else if (__len == 0)
-       {
-         // If end of file is reached, set 'uncommitted'
-         // mode, thus allowing an immediate write without
-         // an intervening seek.
-         _M_set_buffer(-1);
-         _M_reading = false;
-       }
-   }
-      else
-   __ret += __streambuf_type::xsgetn(__s, __n);
-
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    streamsize
-    basic_filebuf<_CharT, _Traits>::
-    xsputn(const _CharT* __s, streamsize __n)
-    {
-      streamsize __ret = 0;
-      // Optimization in the always_noconv() case, to be generalized in the
-      // future: when __n is sufficiently large we write directly instead of
-      // using the buffer.
-      const bool __testout = _M_mode & ios_base::out;
-      if (__check_facet(_M_codecvt).always_noconv()
-     && __testout && !_M_reading)
- {
-   // Measurement would reveal the best choice.
-   const streamsize __chunk = 1ul << 10;
-   streamsize __bufavail = this->epptr() - this->pptr();
-
-   // Don't mistake 'uncommitted' mode buffered with unbuffered.
-   if (!_M_writing && _M_buf_size > 1)
-     __bufavail = _M_buf_size - 1;
-
-   const streamsize __limit = std::min(__chunk, __bufavail);
-   if (__n >= __limit)
-     {
-       const streamsize __buffill = this->pptr() - this->pbase();
-       const char* __buf = reinterpret_cast<const char*>(this->pbase());
-       __ret = _M_file.xsputn_2(__buf, __buffill,
-           reinterpret_cast<const char*>(__s),
-           __n);
-       if (__ret == __buffill + __n)
-  {
-    _M_set_buffer(0);
-    _M_writing = true;
-  }
-       if (__ret > __buffill)
-  __ret -= __buffill;
-       else
-  __ret = 0;
-     }
-   else
-     __ret = __streambuf_type::xsputn(__s, __n);
- }
-       else
-  __ret = __streambuf_type::xsputn(__s, __n);
-       return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::__streambuf_type*
-    basic_filebuf<_CharT, _Traits>::
-    setbuf(char_type* __s, streamsize __n)
-    {
-      if (!this->is_open())
- {
-   if (__s == 0 && __n == 0)
-     _M_buf_size = 1;
-   else if (__s && __n > 0)
-     {
-       // This is implementation-defined behavior, and assumes that
-       // an external char_type array of length __n exists and has
-       // been pre-allocated. If this is not the case, things will
-       // quickly blow up. When __n > 1, __n - 1 positions will be
-       // used for the get area, __n - 1 for the put area and 1
-       // position to host the overflow char of a full put area.
-       // When __n == 1, 1 position will be used for the get area
-       // and 0 for the put area, as in the unbuffered case above.
-       _M_buf = __s;
-       _M_buf_size = __n;
-     }
- }
-      return this;
-    }
-
-
-  // According to 27.8.1.4 p11 - 13, seekoff should ignore the last
-  // argument (of type openmode).
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode)
-    {
-      int __width = 0;
-      if (_M_codecvt)
- __width = _M_codecvt->encoding();
-      if (__width < 0)
- __width = 0;
-
-      pos_type __ret = pos_type(off_type(-1));
-      const bool __testfail = __off != 0 && __width <= 0;
-      if (this->is_open() && !__testfail)
- {
-   // tellg and tellp queries do not affect any state, unless
-   // ! always_noconv and the put sequence is not empty.
-   // In that case, determining the position requires converting the
-   // put sequence. That doesn't use ext_buf, so requires a flush.
-   bool __no_movement = __way == ios_base::cur && __off == 0
-     && (!_M_writing || _M_codecvt->always_noconv());
-
-   // Ditch any pback buffers to avoid confusion.
-   if (!__no_movement)
-     _M_destroy_pback();
-
-   // Correct state at destination. Note that this is the correct
-   // state for the current position during output, because
-   // codecvt::unshift() returns the state to the initial state.
-   // This is also the correct state at the end of the file because
-   // an unshift sequence should have been written at the end.
-   __state_type __state = _M_state_beg;
-   off_type __computed_off = __off * __width;
-   if (_M_reading && __way == ios_base::cur)
-     {
-       __state = _M_state_last;
-       __computed_off += _M_get_ext_pos(__state);
-     }
-   if (!__no_movement)
-     __ret = _M_seek(__computed_off, __way, __state);
-   else
-     {
-       if (_M_writing)
-  __computed_off = this->pptr() - this->pbase();
-
-        off_type __file_off = _M_file.seekoff(0, ios_base::cur);
-        if (__file_off != off_type(-1))
-  {
-    __ret = __file_off + __computed_off;
-    __ret.state(__state);
-  }
-     }
- }
-      return __ret;
-    }
-
-  // _GLIBCXX_RESOLVE_LIB_DEFECTS
-  // 171. Strange seekpos() semantics due to joint position
-  // According to the resolution of DR 171, seekpos should ignore the last
-  // argument (of type openmode).
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    seekpos(pos_type __pos, ios_base::openmode)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      if (this->is_open())
- {
-   // Ditch any pback buffers to avoid confusion.
-   _M_destroy_pback();
-   __ret = _M_seek(off_type(__pos), ios_base::beg, __pos.state());
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    typename basic_filebuf<_CharT, _Traits>::pos_type
-    basic_filebuf<_CharT, _Traits>::
-    _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      if (_M_terminate_output())
- {
-   off_type __file_off = _M_file.seekoff(__off, __way);
-   if (__file_off != off_type(-1))
-     {
-       _M_reading = false;
-       _M_writing = false;
-       _M_ext_next = _M_ext_end = _M_ext_buf;
-       _M_set_buffer(-1);
-       _M_state_cur = __state;
-       __ret = __file_off;
-       __ret.state(_M_state_cur);
-     }
- }
-      return __ret;
-    }
-
-  // Returns the distance from the end of the ext buffer to the point
-  // corresponding to gptr(). This is a negative value. Updates __state
-  // from eback() correspondence to gptr().
-  template<typename _CharT, typename _Traits>
-    int basic_filebuf<_CharT, _Traits>::
-    _M_get_ext_pos(__state_type& __state)
-    {
-      if (_M_codecvt->always_noconv())
-        return this->gptr() - this->egptr();
-      else
-        {
-          // Calculate offset from _M_ext_buf that corresponds to
-          // gptr(). Precondition: __state == _M_state_last, which
-          // corresponds to eback().
-          const int __gptr_off =
-            _M_codecvt->length(__state, _M_ext_buf, _M_ext_next,
-                               this->gptr() - this->eback());
-          return _M_ext_buf + __gptr_off - _M_ext_end;
-        }
-    }
-
-  template<typename _CharT, typename _Traits>
-    bool
-    basic_filebuf<_CharT, _Traits>::
-    _M_terminate_output()
-    {
-      // Part one: update the output sequence.
-      bool __testvalid = true;
-      if (this->pbase() < this->pptr())
- {
-   const int_type __tmp = this->overflow();
-   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-     __testvalid = false;
- }
-
-      // Part two: output unshift sequence.
-      if (_M_writing && !__check_facet(_M_codecvt).always_noconv()
-   && __testvalid)
- {
-   // Note: this value is arbitrary, since there is no way to
-   // get the length of the unshift sequence from codecvt,
-   // without calling unshift.
-   const size_t __blen = 128;
-   char __buf[__blen];
-   codecvt_base::result __r;
-   streamsize __ilen = 0;
-
-   do
-     {
-       char* __next;
-       __r = _M_codecvt->unshift(_M_state_cur, __buf,
-     __buf + __blen, __next);
-       if (__r == codecvt_base::error)
-  __testvalid = false;
-       else if (__r == codecvt_base::ok ||
-         __r == codecvt_base::partial)
-  {
-    __ilen = __next - __buf;
-    if (__ilen > 0)
-      {
-        const streamsize __elen = _M_file.xsputn(__buf, __ilen);
-        if (__elen != __ilen)
-   __testvalid = false;
-      }
-  }
-     }
-   while (__r == codecvt_base::partial && __ilen > 0 && __testvalid);
-
-   if (__testvalid)
-     {
-       // This second call to overflow() is required by the standard,
-       // but it's not clear why it's needed, since the output buffer
-       // should be empty by this point (it should have been emptied
-       // in the first call to overflow()).
-       const int_type __tmp = this->overflow();
-       if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-  __testvalid = false;
-     }
- }
-      return __testvalid;
-    }
-
-  template<typename _CharT, typename _Traits>
-    int
-    basic_filebuf<_CharT, _Traits>::
-    sync()
-    {
-      // Make sure that the internal buffer resyncs its idea of
-      // the file position with the external file.
-      int __ret = 0;
-      if (this->pbase() < this->pptr())
- {
-   const int_type __tmp = this->overflow();
-   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
-     __ret = -1;
- }
-      return __ret;
-    }
-
-  template<typename _CharT, typename _Traits>
-    void
-    basic_filebuf<_CharT, _Traits>::
-    imbue(const locale& __loc)
-    {
-      bool __testvalid = true;
-
-      const __codecvt_type* _M_codecvt_tmp = 0;
-      if (__builtin_expect(has_facet<__codecvt_type>(__loc), true))
- _M_codecvt_tmp = &use_facet<__codecvt_type>(__loc);
-
-      if (this->is_open())
- {
-   // encoding() == -1 is ok only at the beginning.
-   if ((_M_reading || _M_writing)
-       && __check_facet(_M_codecvt).encoding() == -1)
-     __testvalid = false;
-   else
-     {
-       if (_M_reading)
-  {
-    if (__check_facet(_M_codecvt).always_noconv())
-      {
-        if (_M_codecvt_tmp
-     && !__check_facet(_M_codecvt_tmp).always_noconv())
-   __testvalid = this->seekoff(0, ios_base::cur, _M_mode)
-                 != pos_type(off_type(-1));
-      }
-    else
-      {
-        // External position corresponding to gptr().
-        _M_ext_next = _M_ext_buf
-   + _M_codecvt->length(_M_state_last, _M_ext_buf,
-          _M_ext_next,
-          this->gptr() - this->eback());
-        const streamsize __remainder = _M_ext_end - _M_ext_next;
-        if (__remainder)
-   __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
-
-        _M_ext_next = _M_ext_buf;
-        _M_ext_end = _M_ext_buf + __remainder;
-        _M_set_buffer(-1);
-        _M_state_last = _M_state_cur = _M_state_beg;
-      }
-  }
-       else if (_M_writing && (__testvalid = _M_terminate_output()))
-  _M_set_buffer(-1);
-     }
- }
-
-      if (__testvalid)
- _M_codecvt = _M_codecvt_tmp;
-      else
- _M_codecvt = 0;
-    }
-
-  // Inhibit implicit instantiations for required instantiations,
-  // which are defined via explicit instantiations elsewhere.
-
-  extern template class basic_filebuf<char>;
-  extern template class basic_ifstream<char>;
-  extern template class basic_ofstream<char>;
-  extern template class basic_fstream<char>;
-
-
-  extern template class basic_filebuf<wchar_t>;
-  extern template class basic_ifstream<wchar_t>;
-  extern template class basic_ofstream<wchar_t>;
-  extern template class basic_fstream<wchar_t>;
-
-
-
-
-} // namespace std
-# 921 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
-# 10 "./pca.h" 2
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 1 3
-// Standard stream manipulators -*- C++ -*-
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005
-// 2006, 2007, 2008, 2009, 2010
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/iomanip
- *  This is a Standard C++ Library header.
- */
-
-//
-// ISO C++ 14882: 27.6.3  Standard manipulators
-//
-# 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
-# 47 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  // [27.6.3] standard manipulators
-  // Also see DR 183.
-
-  struct _Resetiosflags { ios_base::fmtflags _M_mask; };
-
-  /**
-   *  @brief  Manipulator for @c setf.
-   *  @param  mask  A format flags mask.
-   *
-   *  Sent to a stream object, this manipulator resets the specified flags,
-   *  via @e stream.setf(0,mask).
-  */
-  inline _Resetiosflags
-  resetiosflags(ios_base::fmtflags __mask)
-  { return { __mask }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Resetiosflags __f)
-    {
-      __is.setf(ios_base::fmtflags(0), __f._M_mask);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
-    {
-      __os.setf(ios_base::fmtflags(0), __f._M_mask);
-      return __os;
-    }
-
-
-  struct _Setiosflags { ios_base::fmtflags _M_mask; };
-
-  /**
-   *  @brief  Manipulator for @c setf.
-   *  @param  mask  A format flags mask.
-   *
-   *  Sent to a stream object, this manipulator sets the format flags
-   *  to @a mask.
-  */
-  inline _Setiosflags
-  setiosflags(ios_base::fmtflags __mask)
-  { return { __mask }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setiosflags __f)
-    {
-      __is.setf(__f._M_mask);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
-    {
-      __os.setf(__f._M_mask);
-      return __os;
-    }
-
-
-  struct _Setbase { int _M_base; };
-
-  /**
-   *  @brief  Manipulator for @c setf.
-   *  @param  base  A numeric base.
-   *
-   *  Sent to a stream object, this manipulator changes the
-   *  @c ios_base::basefield flags to @c oct, @c dec, or @c hex when @a base
-   *  is 8, 10, or 16, accordingly, and to 0 if @a base is any other value.
-  */
-  inline _Setbase
-  setbase(int __base)
-  { return { __base }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setbase __f)
-    {
-      __is.setf(__f._M_base == 8 ? ios_base::oct :
-  __f._M_base == 10 ? ios_base::dec :
-  __f._M_base == 16 ? ios_base::hex :
-  ios_base::fmtflags(0), ios_base::basefield);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
-    {
-      __os.setf(__f._M_base == 8 ? ios_base::oct :
-  __f._M_base == 10 ? ios_base::dec :
-  __f._M_base == 16 ? ios_base::hex :
-  ios_base::fmtflags(0), ios_base::basefield);
-      return __os;
-    }
-
-
-  template<typename _CharT>
-    struct _Setfill { _CharT _M_c; };
-
-  /**
-   *  @brief  Manipulator for @c fill.
-   *  @param  c  The new fill character.
-   *
-   *  Sent to a stream object, this manipulator calls @c fill(c) for that
-   *  object.
-  */
-  template<typename _CharT>
-    inline _Setfill<_CharT>
-    setfill(_CharT __c)
-    { return { __c }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setfill<_CharT> __f)
-    {
-      __is.fill(__f._M_c);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
-    {
-      __os.fill(__f._M_c);
-      return __os;
-    }
-
-
-  struct _Setprecision { int _M_n; };
-
-  /**
-   *  @brief  Manipulator for @c precision.
-   *  @param  n  The new precision.
-   *
-   *  Sent to a stream object, this manipulator calls @c precision(n) for
-   *  that object.
-  */
-  inline _Setprecision
-  setprecision(int __n)
-  { return { __n }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setprecision __f)
-    {
-      __is.precision(__f._M_n);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
-    {
-      __os.precision(__f._M_n);
-      return __os;
-    }
-
-
-  struct _Setw { int _M_n; };
-
-  /**
-   *  @brief  Manipulator for @c width.
-   *  @param  n  The new width.
-   *
-   *  Sent to a stream object, this manipulator calls @c width(n) for
-   *  that object.
-  */
-  inline _Setw
-  setw(int __n)
-  { return { __n }; }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, _Setw __f)
-    {
-      __is.width(__f._M_n);
-      return __is;
-    }
-
-  template<typename _CharT, typename _Traits>
-    inline basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
-    {
-      __os.width(__f._M_n);
-      return __os;
-    }
-# 315 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
- // Inhibit implicit instantiations for required instantiations,
-  // which are defined via explicit instantiations elsewhere.  
-  // NB:  This syntax is a GNU extension.
-
-  extern template ostream& operator<<(ostream&, _Setfill<char>);
-  extern template ostream& operator<<(ostream&, _Setiosflags);
-  extern template ostream& operator<<(ostream&, _Resetiosflags);
-  extern template ostream& operator<<(ostream&, _Setbase);
-  extern template ostream& operator<<(ostream&, _Setprecision);
-  extern template ostream& operator<<(ostream&, _Setw);
-  extern template istream& operator>>(istream&, _Setfill<char>);
-  extern template istream& operator>>(istream&, _Setiosflags);
-  extern template istream& operator>>(istream&, _Resetiosflags);
-  extern template istream& operator>>(istream&, _Setbase);
-  extern template istream& operator>>(istream&, _Setprecision);
-  extern template istream& operator>>(istream&, _Setw);
-
-
-  extern template wostream& operator<<(wostream&, _Setfill<wchar_t>);
-  extern template wostream& operator<<(wostream&, _Setiosflags);
-  extern template wostream& operator<<(wostream&, _Resetiosflags);
-  extern template wostream& operator<<(wostream&, _Setbase);
-  extern template wostream& operator<<(wostream&, _Setprecision);
-  extern template wostream& operator<<(wostream&, _Setw);
-  extern template wistream& operator>>(wistream&, _Setfill<wchar_t>);
-  extern template wistream& operator>>(wistream&, _Setiosflags);
-  extern template wistream& operator>>(wistream&, _Resetiosflags);
-  extern template wistream& operator>>(wistream&, _Setbase);
-  extern template wistream& operator>>(wistream&, _Setprecision);
-  extern template wistream& operator>>(wistream&, _Setw);
-
-
-
-
-} // namespace
-# 12 "./pca.h" 2
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2011-2014 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-/*
- * HLS Linear Algebra Library Header File
- */
-# 43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h"
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2014-2015 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-// Matrix Multiply functions
-// -------------------------
-// MATRIX_MULTIPLY           : Entry point function.
-// MATRIX_MULTIPLY_TOP       : Top level function that selects implementation architecture and internal types based on traits class.
-// MATRIX_MULTIPLY_DEFAULT   : Default architecture.
-// MATRIX_MULTIPLY_ALT1      : Improved throughput for rolled floating point implementations at the expense of an additional memory.
-// MATRIX_MULTIPLY_ALT2      : Further rolled floating point throughput improvement for small matrix sizes. Requires larger internal memory.
-// MATRIX_MULTIPLY_ADD_TREE  : Architecture using an adder tree for fully unrolled floating point implementations.
-// MATRIX_MULTIPLY_FULL      : Default architecture including directives to fully unroll inner loop, fixed point implementations
-
-// Change Log
-// ----------
-// 2015.3:
-//  * Default architecture selected based on data type
-//  * Removed default architecture choice macros
-//  * Added default inner loop pipelining value set via configuration traits class
-//  * Correction to internal ap_fixed types bit width
-//  * Added MATRIX_MULTIPLY_FULL architecture
-// 
-// 2015.1:
-//  * Linear Algebra Library update.
-//  * No changes
-// 
-// 2014.1:
-//  * Initial release
-
-
-
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 62 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h" 2
+# 36 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h" 2
 # 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_complex.h" 1
 /*****************************************************************************
  *
@@ -48296,51 +47520,7 @@ namespace hls {
 
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 63 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h" 2
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2008-2014 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-
-
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 36 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h" 2
-
+# 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/utils/x_hls_matrix_utils.h" 2
 # 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_math.h" 1
 /*****************************************************************************
  *
@@ -56658,7435 +55838,12 @@ inline __attribute__((always_inline)) ConjugateTranspose() { _ssdm_SpecConstant(
 
 
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 64 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h" 2
-
-# 1 "/usr/include/assert.h" 1 3 4
-/* Copyright (C) 1991,1992,1994-2001,2003,2004,2007,2011,2012
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- *	ISO C99 Standard: 7.2 Diagnostics	<assert.h>
- */
-# 44 "/usr/include/assert.h" 3 4
-/* void assert (int expression);
-
-   If NDEBUG is defined, do nothing.
-   If not, and EXPRESSION is zero, print an error message and abort.  */
-# 65 "/usr/include/assert.h" 3 4
-extern "C" {
-
-/* This prints an "Assertion failed" message and aborts.  */
-extern void __assert_fail (const char *__assertion, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
-
-/* Likewise, but prints the error text for ERRNUM.  */
-extern void __assert_perror_fail (int __errnum, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
-
-
-/* The following is not at all used here but needed for standard
-   compliance.  */
-extern void __assert (const char *__assertion, const char *__file, int __line)
-     throw () __attribute__ ((__noreturn__));
-
-
-}
-# 98 "/usr/include/assert.h" 3 4
-/* Version 2.4 and later of GCC define a magical variable `__PRETTY_FUNCTION__'
-   which contains the name of the function currently being defined.
-   This is broken in G++ before version 2.6.
-   C9x has a similar variable called __func__, but prefer the GCC one since
-   it demangles C++ function names.  */
-# 66 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h" 2
-
-namespace hls {
-
-  // ===================================================================================================================
-  // Default traits struct defining variable types and architecture selection
-  template<
-    class TransposeFormA,
-    class TransposeFormB,
-    int RowsA,
-    int ColsA,
-    int RowsB,
-    int ColsB,
-    typename InputType,
-    typename OutputType>
-  struct matrix_multiply_traits {
-    static const int RowsATrans = ( TransposeFormA::TransposeType != 0 ? ColsA : RowsA);
-    static const int ColsATrans = ( TransposeFormA::TransposeType != 0 ? RowsA : ColsA);
-    static const int RowsBTrans = ( TransposeFormB::TransposeType != 0 ? ColsB : RowsB);
-    static const int ColsBTrans = ( TransposeFormB::TransposeType != 0 ? RowsB : ColsB);
-    static const int B_UNROLL_DIM = ( TransposeFormB::TransposeType != 0 ? 1 : 2); // Determine B input unroll dimension for MATRIX_MULTIPLY_ADD_ALT 1&2 architectures
-    static const int A_FULL_UNROLL_DIM = ( TransposeFormA::TransposeType != 0 ? 1 : 2); // Determine A input unroll dimension for MATRIX_MULTIPLY_ADD_TREE and MATRIX_MULTIPLY_FULL architectures
-    static const int B_FULL_UNROLL_DIM = ( TransposeFormB::TransposeType != 0 ? 2 : 1); // Determine B input unroll dimension for MATRIX_MULTIPLY_ADD_TREE and MATRIX_MULTIPLY_FULL architectures
-    typedef InputType INPUT_T;
-    typedef typename x_traits<InputType,InputType>::MULT_T MULT_T;
-    typedef typename x_traits_d<InputType,ColsATrans>::ACCUM_T ACCUM_T;
-    static const int ARCH = 2; // Select implementation:
-                                            // 0: MATRIX_MULTIPLY_DEFAULT 
-                                            // 1: MATRIX_MULTIPLY_ALT1    
-                                            // 2: MATRIX_MULTIPLY_ALT2    
-                                            // 3: MATRIX_MULTIPLY_ADD_TREE
-                                            // 4: MATRIX_MULTIPLY_FULL    
-    static const int INNER_II = 1; // Specify the pipelining target for the inner loop
-    static const int UNROLL_FACTOR = 1; // Specify the inner loop unrolling factor
-
-public :
-inline __attribute__((always_inline)) matrix_multiply_traits() { _ssdm_SpecConstant(&RowsATrans); _ssdm_SpecConstant(&ColsATrans); _ssdm_SpecConstant(&RowsBTrans); _ssdm_SpecConstant(&ColsBTrans); _ssdm_SpecConstant(&B_UNROLL_DIM); _ssdm_SpecConstant(&A_FULL_UNROLL_DIM); _ssdm_SpecConstant(&B_FULL_UNROLL_DIM); _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&UNROLL_FACTOR); }
-# 99 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h"
-};
-
-  // Specialization for ap_fixed
-  template<
-    class TransposeFormA,
-    class TransposeFormB,
-    int RowsA,
-    int ColsA,
-    int RowsB,
-    int ColsB,
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1,
-    int W2, int I2, ap_q_mode Q2, ap_o_mode O2, int N2>
-  struct matrix_multiply_traits
-  <TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, ap_fixed<W1, I1, Q1, O1, N1>, ap_fixed<W2, I2, Q2, O2, N2> > {
-    static const int RowsATrans = ( TransposeFormA::TransposeType != 0 ? ColsA : RowsA);
-    static const int ColsATrans = ( TransposeFormA::TransposeType != 0 ? RowsA : ColsA);
-    static const int RowsBTrans = ( TransposeFormB::TransposeType != 0 ? ColsB : RowsB);
-    static const int ColsBTrans = ( TransposeFormB::TransposeType != 0 ? RowsB : ColsB);
-    static const int B_UNROLL_DIM = ( TransposeFormB::TransposeType != 0 ? 1 : 2);
-    static const int A_FULL_UNROLL_DIM = ( TransposeFormA::TransposeType != 0 ? 1 : 2);
-    static const int B_FULL_UNROLL_DIM = ( TransposeFormB::TransposeType != 0 ? 2 : 1);
-    typedef ap_fixed<W1, I1, Q1, O1 ,N1> INPUT_T;
-    typedef ap_fixed<W1+W1, I1+I1, SC_TRN, SC_WRAP, 0> MULT_T;
-    typedef ap_fixed<W1+W1+BitWidth<ColsATrans>::Value, I1+I1+BitWidth<ColsATrans>::Value, SC_TRN, SC_WRAP, 0> ACCUM_T;
-    static const int ARCH = 0;
-    static const int INNER_II = 1;
-    static const int UNROLL_FACTOR = 1;
-
-public :
-inline __attribute__((always_inline)) matrix_multiply_traits
-  <TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, ap_fixed<W1, I1, Q1, O1, N1>, ap_fixed<W2, I2, Q2, O2, N2> >() { _ssdm_SpecConstant(&RowsATrans); _ssdm_SpecConstant(&ColsATrans); _ssdm_SpecConstant(&RowsBTrans); _ssdm_SpecConstant(&ColsBTrans); _ssdm_SpecConstant(&B_UNROLL_DIM); _ssdm_SpecConstant(&A_FULL_UNROLL_DIM); _ssdm_SpecConstant(&B_FULL_UNROLL_DIM); _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&UNROLL_FACTOR); }
-# 126 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h"
-};
-
-  // Further specialization for x_complex<ap_fixed>
-  template<
-    class TransposeFormA,
-    class TransposeFormB,
-    int RowsA,
-    int ColsA,
-    int RowsB,
-    int ColsB,
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1,
-    int W2, int I2, ap_q_mode Q2, ap_o_mode O2, int N2>
-  struct matrix_multiply_traits
-  <TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, x_complex<ap_fixed<W1, I1, Q1, O1, N1> >, x_complex<ap_fixed<W2, I2, Q2, O2, N2> > > {
-    static const int RowsATrans = ( TransposeFormA::TransposeType != 0 ? ColsA : RowsA);
-    static const int ColsATrans = ( TransposeFormA::TransposeType != 0 ? RowsA : ColsA);
-    static const int RowsBTrans = ( TransposeFormB::TransposeType != 0 ? ColsB : RowsB);
-    static const int ColsBTrans = ( TransposeFormB::TransposeType != 0 ? RowsB : ColsB);
-    static const int B_UNROLL_DIM = ( TransposeFormB::TransposeType != 0 ? 1 : 2);
-    static const int A_FULL_UNROLL_DIM = ( TransposeFormA::TransposeType != 0 ? 1 : 2);
-    static const int B_FULL_UNROLL_DIM = ( TransposeFormB::TransposeType != 0 ? 2 : 1);
-    typedef x_complex< ap_fixed<W1, I1, SC_TRN, SC_WRAP, 0> > INPUT_T;
-    typedef x_complex< ap_fixed<W1+W1, I1+I1, SC_TRN, SC_WRAP, 0> > MULT_T;
-    typedef x_complex< ap_fixed<W1+W1+BitWidth<ColsATrans>::Value, I1+I1+BitWidth<ColsATrans>::Value, SC_TRN, SC_WRAP, 0> > ACCUM_T;
-    static const int ARCH = 0;
-    static const int INNER_II = 1;
-    static const int UNROLL_FACTOR = 1;
-
-public :
-inline __attribute__((always_inline)) matrix_multiply_traits
-  <TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, x_complex<ap_fixed<W1, I1, Q1, O1, N1> >, x_complex<ap_fixed<W2, I2, Q2, O2, N2> > >() { _ssdm_SpecConstant(&RowsATrans); _ssdm_SpecConstant(&ColsATrans); _ssdm_SpecConstant(&RowsBTrans); _ssdm_SpecConstant(&ColsBTrans); _ssdm_SpecConstant(&B_UNROLL_DIM); _ssdm_SpecConstant(&A_FULL_UNROLL_DIM); _ssdm_SpecConstant(&B_FULL_UNROLL_DIM); _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&UNROLL_FACTOR); }
-# 153 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h"
-};
-
-  // ===================================================================================================================
-  // MATRIX_MULTIPLY_DEFAULT: Default architecture
-  // o Fixed point implementation maps well to DSP48 cascades
-  // o Floating point adders get used sequentially as an accumulator giving a long latency 
-  template<
-    class TransposeFormA,
-    class TransposeFormB,
-    int RowsA,
-    int ColsA,
-    int RowsB,
-    int ColsB,
-    int RowsC,
-    int ColsC,
-    typename MULTIPLIER_TRAITS,
-    typename InputType,
-    typename OutputType>
-  void matrix_multiply_default(const InputType A [RowsA][ColsA],
-                               const InputType B [RowsB][ColsB],
-                               OutputType C [RowsC][ColsC])
-  {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(B,RowsB);_ssdm_SpecArrayDimSize(C,RowsC);
-    // Check defined array dimensions are compatible
-    // - The ROWS and COLS value of the traits considers the transpose operation request for A & B
-    ((MULTIPLIER_TRAITS::ColsATrans == MULTIPLIER_TRAITS::RowsBTrans) ? static_cast<void> (0) : __assert_fail ("MULTIPLIER_TRAITS::ColsATrans == MULTIPLIER_TRAITS::RowsBTrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 177, __PRETTY_FUNCTION__));
-    ((RowsC == MULTIPLIER_TRAITS::RowsATrans) ? static_cast<void> (0) : __assert_fail ("RowsC == MULTIPLIER_TRAITS::RowsATrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 178, __PRETTY_FUNCTION__));
-    ((ColsC == MULTIPLIER_TRAITS::ColsBTrans) ? static_cast<void> (0) : __assert_fail ("ColsC == MULTIPLIER_TRAITS::ColsBTrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 179, __PRETTY_FUNCTION__));
-
-    // Use the traits struct to specify the correct type for the intermediate variables
-    typename MULTIPLIER_TRAITS::INPUT_T cast_in_a, cast_in_b;
-    typename MULTIPLIER_TRAITS::MULT_T mult;
-    typename MULTIPLIER_TRAITS::ACCUM_T recast_mult, sum_mult;
-
-    a_row_loop: for (int r = 0; r < MULTIPLIER_TRAITS::RowsATrans; r++) {
-      b_col_loop: for (int c = 0; c < MULTIPLIER_TRAITS::ColsBTrans; c++) {
-        a_col_loop: for (int k = 0; k < MULTIPLIER_TRAITS::ColsATrans; k++) {
-_ssdm_op_SpecPipeline(MULTIPLIER_TRAITS::INNER_II, 1, 1, 0, "");
- cast_in_a = GetMatrixElement<TransposeFormA,RowsA,ColsA,InputType>(A, r, k);
-          cast_in_b = GetMatrixElement<TransposeFormB,RowsB,ColsB,InputType>(B, k, c);
-          mult = cast_in_a * cast_in_b;
-
-          // Cast mult to the correct output size before adding.
-          recast_mult = mult;
-          if (k==0)
-            sum_mult = recast_mult;
-          else
-            sum_mult += recast_mult;
-
-          // Store result
-          if (k==MULTIPLIER_TRAITS::ColsATrans-1) C[r][c] = sum_mult;
-        }
-      }
-    }
-  }
-
-  // ===================================================================================================================
-  // MATRIX_MULTIPLY_ALT1: Improved throughput for rolled floating point implementations at the expense of an additional 
-  // memory.
-  // o Moves the inner loop defined in matrix_multiply_default up one level of nesting and uses an internal memory to store
-  //   partial results
-  // o For matrix sizes where the common dimension (A rows & B cols) is greater than the latency of the accumulation adder 
-  //   this implementation will achieve full throughput for the inner loop once it is pipelined.
-  // o For smaller matrix sizes use matrix_multiply_alt2 to achieve full throughput in the inner loop.
-  template<
-    class TransposeFormA,
-    class TransposeFormB,
-    int RowsA,
-    int ColsA,
-    int RowsB,
-    int ColsB,
-    int RowsC,
-    int ColsC,
-    typename MULTIPLIER_TRAITS,
-    typename InputType,
-    typename OutputType>
-  void matrix_multiply_alt1(const InputType A [RowsA][ColsA],
-                            const InputType B [RowsB][ColsB],
-                            OutputType C [RowsC][ColsC])
-  {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(B,RowsB);_ssdm_SpecArrayDimSize(C,RowsC);
-    // Check defined array dimensions are compatible
-    // - The ROWS and COLS value of the traits considers the transpose operation request for A & B
-    ((MULTIPLIER_TRAITS::ColsATrans == MULTIPLIER_TRAITS::RowsBTrans) ? static_cast<void> (0) : __assert_fail ("MULTIPLIER_TRAITS::ColsATrans == MULTIPLIER_TRAITS::RowsBTrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 234, __PRETTY_FUNCTION__));
-    ((RowsC == MULTIPLIER_TRAITS::RowsATrans) ? static_cast<void> (0) : __assert_fail ("RowsC == MULTIPLIER_TRAITS::RowsATrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 235, __PRETTY_FUNCTION__));
-    ((ColsC == MULTIPLIER_TRAITS::ColsBTrans) ? static_cast<void> (0) : __assert_fail ("ColsC == MULTIPLIER_TRAITS::ColsBTrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 236, __PRETTY_FUNCTION__));
-
-    // Use the traits struct to specify the correct type for the intermediate variables
-    typename MULTIPLIER_TRAITS::INPUT_T cast_in_a, cast_in_b;
-    typename MULTIPLIER_TRAITS::MULT_T mult;
-    typename MULTIPLIER_TRAITS::ACCUM_T recast_mult;
-    typename MULTIPLIER_TRAITS::ACCUM_T sum_mult[MULTIPLIER_TRAITS::ColsBTrans];
-
-_ssdm_SpecArrayPartition( B, MULTIPLIER_TRAITS::B_UNROLL_DIM, "CYCLIC", MULTIPLIER_TRAITS::UNROLL_FACTOR, "");
-_ssdm_SpecArrayPartition( C, 2, "CYCLIC", MULTIPLIER_TRAITS::UNROLL_FACTOR, "");
-_ssdm_SpecArrayPartition( sum_mult, 1, "CYCLIC", MULTIPLIER_TRAITS::UNROLL_FACTOR, "");
-
- a_row_loop: for (int r = 0; r < MULTIPLIER_TRAITS::RowsATrans; r++) {
-      a_col_loop: for (int k = 0; k < MULTIPLIER_TRAITS::ColsATrans; k++) {
-        b_col_loop: for (int c = 0; c < MULTIPLIER_TRAITS::ColsBTrans; c++) {
-_ssdm_op_SpecPipeline(MULTIPLIER_TRAITS::INNER_II, 1, 1, 0, "");
-_ssdm_Unroll(1, 0, MULTIPLIER_TRAITS::UNROLL_FACTOR, "");
- // Multiply
-          cast_in_a = GetMatrixElement<TransposeFormA,RowsA,ColsA,InputType>(A, r, k);
-          cast_in_b = GetMatrixElement<TransposeFormB,RowsB,ColsB,InputType>(B, k, c);
-          mult = cast_in_a * cast_in_b;
-          // Cast mult to the correct output size before adding.
-          recast_mult = mult;
-          // Sum
-          if (k==0) {
-            // Initialise
-            sum_mult[c] = recast_mult;
-          } else if (k==MULTIPLIER_TRAITS::ColsATrans-1) {
-            // Store result
-            C[r][c] = sum_mult[c] + recast_mult;
-          } else {
-            // Accumulate
-            sum_mult[c] = sum_mult[c] + recast_mult;
-          }
-        }
-      }
-    }
-  }
-
-  // ===================================================================================================================
-  // MATRIX_MULTIPLY_ALT2: Further rolled floating point throughput improvement for small matrix sizes. Requires larger 
-  // internal memory.
-  template<
-    class TransposeFormA,
-    class TransposeFormB,
-    int RowsA,
-    int ColsA,
-    int RowsB,
-    int ColsB,
-    int RowsC,
-    int ColsC,
-    typename MULTIPLIER_TRAITS,
-    typename InputType,
-    typename OutputType>
-  void matrix_multiply_alt2(const InputType A [RowsA][ColsA],
-                            const InputType B [RowsB][ColsB],
-                            OutputType C [RowsC][ColsC])
-  {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(B,RowsB);_ssdm_SpecArrayDimSize(C,RowsC);
-    // Check defined array dimensions are compatible
-    // - The ROWS and COLS value of the traits considers the transpose operation request for A & B
-    ((MULTIPLIER_TRAITS::ColsATrans == MULTIPLIER_TRAITS::RowsBTrans) ? static_cast<void> (0) : __assert_fail ("MULTIPLIER_TRAITS::ColsATrans == MULTIPLIER_TRAITS::RowsBTrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 296, __PRETTY_FUNCTION__));
-    ((RowsC == MULTIPLIER_TRAITS::RowsATrans) ? static_cast<void> (0) : __assert_fail ("RowsC == MULTIPLIER_TRAITS::RowsATrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 297, __PRETTY_FUNCTION__));
-    ((ColsC == MULTIPLIER_TRAITS::ColsBTrans) ? static_cast<void> (0) : __assert_fail ("ColsC == MULTIPLIER_TRAITS::ColsBTrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 298, __PRETTY_FUNCTION__));
-
-    // Use the traits struct to specify the correct type for the intermediate variables
-    typename MULTIPLIER_TRAITS::INPUT_T cast_in_a, cast_in_b;
-    typename MULTIPLIER_TRAITS::MULT_T mult;
-    typename MULTIPLIER_TRAITS::ACCUM_T recast_mult;
-    typename MULTIPLIER_TRAITS::ACCUM_T sum_mult[MULTIPLIER_TRAITS::RowsATrans][MULTIPLIER_TRAITS::ColsBTrans];
-
-_ssdm_SpecArrayPartition( B, MULTIPLIER_TRAITS::B_UNROLL_DIM, "CYCLIC", MULTIPLIER_TRAITS::UNROLL_FACTOR, "");
-_ssdm_SpecArrayPartition( C, 2, "CYCLIC", MULTIPLIER_TRAITS::UNROLL_FACTOR, "");
-_ssdm_SpecArrayPartition( sum_mult, 2, "CYCLIC", MULTIPLIER_TRAITS::UNROLL_FACTOR, "");
-
- a_col_loop: for (int k = 0; k < MULTIPLIER_TRAITS::ColsATrans; k++) {
-      a_row_loop: for (int r = 0; r < MULTIPLIER_TRAITS::RowsATrans; r++) {
-        b_col_loop: for (int c = 0; c < MULTIPLIER_TRAITS::ColsBTrans; c++) {
-_ssdm_op_SpecPipeline(MULTIPLIER_TRAITS::INNER_II, 1, 1, 0, "");
-_ssdm_Unroll(1, 0, MULTIPLIER_TRAITS::UNROLL_FACTOR, "");
- // Multiply
-          cast_in_a = GetMatrixElement<TransposeFormA,RowsA,ColsA,InputType>(A, r, k);
-          cast_in_b = GetMatrixElement<TransposeFormB,RowsB,ColsB,InputType>(B, k, c);
-          mult = cast_in_a * cast_in_b;
-          // Cast mult to the correct output size before adding.
-          recast_mult = mult;
-          // Sum
-          if (k==0) {
-            // Initialise
-            sum_mult[r][c] = recast_mult;
-          } else if (k==MULTIPLIER_TRAITS::ColsATrans-1) {
-            // Store result
-            C[r][c] = sum_mult[r][c] + recast_mult;
-          } else {
-            // Accumulate
-            sum_mult[r][c] = sum_mult[r][c] + recast_mult;
-          }
-        }
-      }
-    }
-  }
-
-  // ===================================================================================================================
-  // MATRIX_MULTIPLY_ADD_TREE: Architecture using an adder tree
-  // o Optimized for unrolled floating-point. In fixed-point, this adds overhead.
-  template<
-    class TransposeFormA,
-    class TransposeFormB,
-    int RowsA,
-    int ColsA,
-    int RowsB,
-    int ColsB,
-    int RowsC,
-    int ColsC,
-    typename MULTIPLIER_TRAITS,
-    typename InputType,
-    typename OutputType>
-  void matrix_multiply_add_tree(const InputType A [RowsA][ColsA],
-                                const InputType B [RowsB][ColsB],
-                                OutputType C [RowsC][ColsC])
-  {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(B,RowsB);_ssdm_SpecArrayDimSize(C,RowsC);
-
-    // Check defined array dimensions are compatible
-    // - The ROWS and COLS value of the traits considers the transpose operation request for A & B
-    ((MULTIPLIER_TRAITS::ColsATrans == MULTIPLIER_TRAITS::RowsBTrans) ? static_cast<void> (0) : __assert_fail ("MULTIPLIER_TRAITS::ColsATrans == MULTIPLIER_TRAITS::RowsBTrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 359, __PRETTY_FUNCTION__));
-    ((RowsC == MULTIPLIER_TRAITS::RowsATrans) ? static_cast<void> (0) : __assert_fail ("RowsC == MULTIPLIER_TRAITS::RowsATrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 360, __PRETTY_FUNCTION__));
-    ((ColsC == MULTIPLIER_TRAITS::ColsBTrans) ? static_cast<void> (0) : __assert_fail ("ColsC == MULTIPLIER_TRAITS::ColsBTrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 361, __PRETTY_FUNCTION__));
-
-_ssdm_SpecArrayPartition( A, MULTIPLIER_TRAITS::A_FULL_UNROLL_DIM, "COMPLETE", 0, "");
-_ssdm_SpecArrayPartition( B, MULTIPLIER_TRAITS::B_FULL_UNROLL_DIM, "COMPLETE", 0, "");
-
- // Use the traits struct to specify the correct type for the intermediate variables
-    typename MULTIPLIER_TRAITS::INPUT_T cast_in_a, cast_in_b;
-    typename MULTIPLIER_TRAITS::MULT_T mult;
-
-    // Determine the number of ranks for the adder tree and declare array
-    // o The adder_tree is larger than required as each rank only needs to be half the size of the previous rank
-    const unsigned a_cols_log2 = BitWidth<MULTIPLIER_TRAITS::ColsATrans>::Value;
-    const unsigned a_cols_sub1_log2 = BitWidth<MULTIPLIER_TRAITS::ColsATrans-1>::Value;
-    const unsigned num_ranks = (a_cols_log2 != a_cols_sub1_log2 ? a_cols_log2 : a_cols_log2 + 1);
-
-    typename MULTIPLIER_TRAITS::ACCUM_T adder_tree[num_ranks][MULTIPLIER_TRAITS::ColsATrans];
-
-    a_row_loop: for (int i=0; i < MULTIPLIER_TRAITS::RowsATrans; i++) {
-      b_col_loop: for (int j=0; j < MULTIPLIER_TRAITS::ColsBTrans; j++) {
-        // Fully unrolled inner loop
-_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
- a_col_loop: for (int k=0; k < MULTIPLIER_TRAITS::ColsATrans; k++) {
-          cast_in_a = GetMatrixElement<TransposeFormA,RowsA,ColsA,InputType>(A, i, k);
-          cast_in_b = GetMatrixElement<TransposeFormB,RowsB,ColsB,InputType>(B, k, j);
-          mult = cast_in_a * cast_in_b;
-          // Assign multiplier output to the first rank of the adder tree array
-          adder_tree[num_ranks-1][k] = mult;
-        }
-
-        // Build adder tree
-        unsigned rank_size = MULTIPLIER_TRAITS::ColsATrans;
-        add_level_loop: for(int adder_tree_rank=num_ranks-2; adder_tree_rank>=0; adder_tree_rank--) {
-          unsigned prev_rank_is_odd = rank_size % 2;
-          rank_size = (rank_size+1) / 2; // rank size
-          // Fixed loop size so it can be unrolled.
-          add_col_loop: for(int jj=0; jj<((MULTIPLIER_TRAITS::ColsATrans+1)/2); jj++) {
-            if (jj<rank_size) {
-              if ( prev_rank_is_odd && jj == rank_size-1 ) {
-                // Bypass, no adder required.
-                adder_tree[adder_tree_rank][jj] = adder_tree[adder_tree_rank+1][(jj*2)];
-              } else {
-                adder_tree[adder_tree_rank][jj] = adder_tree[adder_tree_rank+1][jj*2] + adder_tree[adder_tree_rank+1][(jj*2)+1];
-              }
-            }
-          }
-        }
-        // Store result
-        C[i][j] = adder_tree[0][0];
-      }
-    }
-  }
-
-  // ===================================================================================================================
-  // MATRIX_MULTIPLY_FULL: Default architecture including directives to fully unroll inner loop, fixed point implementations
-  // o Fixed point implementation maps well to DSP48 cascades
-  template<
-    class TransposeFormA,
-    class TransposeFormB,
-    int RowsA,
-    int ColsA,
-    int RowsB,
-    int ColsB,
-    int RowsC,
-    int ColsC,
-    typename MULTIPLIER_TRAITS,
-    typename InputType,
-    typename OutputType>
-  void matrix_multiply_full(const InputType A [RowsA][ColsA],
-                            const InputType B [RowsB][ColsB],
-                            OutputType C [RowsC][ColsC])
-  {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(B,RowsB);_ssdm_SpecArrayDimSize(C,RowsC);
-    // Check defined array dimensions are compatible
-    // - The ROWS and COLS value of the traits considers the transpose operation request for A & B
-    ((MULTIPLIER_TRAITS::ColsATrans == MULTIPLIER_TRAITS::RowsBTrans) ? static_cast<void> (0) : __assert_fail ("MULTIPLIER_TRAITS::ColsATrans == MULTIPLIER_TRAITS::RowsBTrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 434, __PRETTY_FUNCTION__));
-    ((RowsC == MULTIPLIER_TRAITS::RowsATrans) ? static_cast<void> (0) : __assert_fail ("RowsC == MULTIPLIER_TRAITS::RowsATrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 435, __PRETTY_FUNCTION__));
-    ((ColsC == MULTIPLIER_TRAITS::ColsBTrans) ? static_cast<void> (0) : __assert_fail ("ColsC == MULTIPLIER_TRAITS::ColsBTrans", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_matrix_multiply.h", 436, __PRETTY_FUNCTION__));
-
-    // Use the traits struct to specify the correct type for the intermediate variables
-    typename MULTIPLIER_TRAITS::INPUT_T cast_in_a, cast_in_b;
-    typename MULTIPLIER_TRAITS::MULT_T mult;
-    typename MULTIPLIER_TRAITS::ACCUM_T recast_mult, sum_mult;
-
-_ssdm_SpecArrayPartition( A, MULTIPLIER_TRAITS::A_FULL_UNROLL_DIM, "COMPLETE", 0, "");
-_ssdm_SpecArrayPartition( B, MULTIPLIER_TRAITS::B_FULL_UNROLL_DIM, "COMPLETE", 0, "");
-
- a_row_loop: for (int r = 0; r < MULTIPLIER_TRAITS::RowsATrans; r++) {
-      b_col_loop: for (int c = 0; c < MULTIPLIER_TRAITS::ColsBTrans; c++) {
-        // Fully unrolled inner loop
-_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
- a_col_loop: for (int k = 0; k < MULTIPLIER_TRAITS::ColsATrans; k++) {
-
-          cast_in_a = GetMatrixElement<TransposeFormA,RowsA,ColsA,InputType>(A, r, k);
-          cast_in_b = GetMatrixElement<TransposeFormB,RowsB,ColsB,InputType>(B, k, c);
-          mult = cast_in_a * cast_in_b;
-
-          // Cast mult to the correct output size before adding.
-          recast_mult = mult;
-          if (k==0)
-            sum_mult = recast_mult;
-          else
-            sum_mult += recast_mult;
-
-          // Store result
-          if (k==MULTIPLIER_TRAITS::ColsATrans-1) C[r][c] = sum_mult;
-        }
-      }
-    }
-  }
-
-  // ===================================================================================================================
-  // MATRIX_MULTIPLY_TOP: Top level function that selects implementation architecture and internal types based on the 
-  // traits class provided via the MULTIPLIER_TRAITS template parameter. 
-  // o Call this function directly if you wish to override the default architecture choice or internal types
-  template<
-    class TransposeFormA,
-    class TransposeFormB,
-    int RowsA,
-    int ColsA,
-    int RowsB,
-    int ColsB,
-    int RowsC,
-    int ColsC,
-    typename MULTIPLIER_TRAITS,
-    typename InputType,
-    typename OutputType>
-  void matrix_multiply_top(const InputType A [RowsA][ColsA],
-                           const InputType B [RowsB][ColsB],
-                           OutputType C [RowsC][ColsC])
-  {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(B,RowsB);_ssdm_SpecArrayDimSize(C,RowsC);
-
-    switch(MULTIPLIER_TRAITS::ARCH) {
-    case 0:
-      matrix_multiply_default<TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, RowsC, ColsC, MULTIPLIER_TRAITS, InputType, OutputType> (A, B, C);
-      break;
-    case 1:
-      matrix_multiply_alt1<TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, RowsC, ColsC, MULTIPLIER_TRAITS, InputType, OutputType> (A, B, C);
-      break;
-    case 2:
-      matrix_multiply_alt2<TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, RowsC, ColsC, MULTIPLIER_TRAITS, InputType, OutputType> (A, B, C);
-      break;
-    case 3:
-      matrix_multiply_add_tree<TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, RowsC, ColsC, MULTIPLIER_TRAITS, InputType, OutputType> (A, B, C);
-      break;
-    case 4:
-      matrix_multiply_full<TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, RowsC, ColsC, MULTIPLIER_TRAITS, InputType, OutputType> (A, B, C);
-      break;
-    default:
-      matrix_multiply_default<TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, RowsC, ColsC, MULTIPLIER_TRAITS, InputType, OutputType> (A, B, C);
-    }
-  }
-
-  // ===================================================================================================================
-  // MATRIX_MULTIPLY: Entry point function.
-  // o Template parameters:
-  //  - TransposeFormA : Defines if the A matix is transposed before the multiplication. Valid values are: 
-  //                     NoTranspose, Transpose, ConjugateTranspose
-  //  - TransposeFormB : Defines if the A matix is transposed before the multiplication.
-  //  - RowsA          : Defines the number of rows in the A matrix
-  //  - ColsA          : Defines the number of columns in the A matrix
-  //  - RowsB          : Defines the number of rows in the B matrix
-  //  - ColsB          : Defines the number of columns in the B matrix
-  //  - RowsC          : Defines the number of rows in the C matrix
-  //  - ColsC          : Defines the number of columns in the C matrix
-  //  - InputType      : Input data type
-  //  - OutputType     : Output data type
-  // o Arguments:
-  //  - A              : First input matrix
-  //  - B              : Second input matrix
-  //  - C              : AB product output matrix
-  template<
-    class TransposeFormA,
-    class TransposeFormB,
-    int RowsA,
-    int ColsA,
-    int RowsB,
-    int ColsB,
-    int RowsC,
-    int ColsC,
-    typename InputType,
-    typename OutputType>
-  void matrix_multiply(const InputType A [RowsA][ColsA],
-                       const InputType B [RowsB][ColsB],
-                       OutputType C [RowsC][ColsC])
-  {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(B,RowsB);_ssdm_SpecArrayDimSize(C,RowsC);
-    // Define default traits struct for template type
-    typedef matrix_multiply_traits<TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, InputType, OutputType> DEFAULT_MULTIPLIER_TRAITS;
-    // Call top level function
-    matrix_multiply_top<TransposeFormA, TransposeFormB, RowsA, ColsA, RowsB, ColsB, RowsC, ColsC, DEFAULT_MULTIPLIER_TRAITS, InputType, OutputType> (A, B, C);
-  }
-}
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 2
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_cholesky.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2013-2015 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-// Cholesky functions
-// ------------------
-// CHOLESKY                 : Entry point function
-// CHOLESKY_TOP             : Top level function that selects implementation architecture and internal types based on a traits class.
-// CHOLESKY_BASIC           : Basic implementation requiring lower resource
-// CHOLESKY_ALT             : Lower latency architecture requiring more resources
-// CHOLESKY_ALT2            : Further improved latency architecture requiring higher resource
-
-// Change Log
-// ----------
-// 2015.3:
-//  * Changed default architecture to CHOLESKY_ALT
-//  * Added default inner loop pipelining and unrolling factors set via configuration traits class
-//  * Added additional configuration traits class parameter, LowerTriangularL
-//
-// 2015.1:
-//  * Linear Algebra Library update
-//  * Added a third cholesky implementation with further throughput enhancements.
-//
-// 2014.1:
-//  * Initial release.
-
-
-
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 58 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_cholesky.h" 2
-
-
-
-namespace hls {
-
-  // ===================================================================================================================
-  // Default traits struct defining the internal variable types for the cholesky function
-  template<
-    bool LowerTriangularL,
-    int RowsColsA,
-    typename InputType,
-    typename OutputType>
-  struct cholesky_traits {
-    typedef InputType PROD_T;
-    typedef InputType ACCUM_T;
-    typedef InputType ADD_T;
-    typedef InputType DIAG_T;
-    typedef InputType RECIP_DIAG_T;
-    typedef InputType OFF_DIAG_T;
-    typedef OutputType L_OUTPUT_T;
-    static const int ARCH = 1; // Select implementation: 0=Basic, 1=Lower latency architecture, 2=Further improved latency architecture
-    static const int INNER_II = 1; // Specify the pipelining target for the inner loop
-    static const int UNROLL_FACTOR = 1; // Specify the inner loop unrolling factor for the CHOLESKY_ALT2 architecture(2) to increase throughput
-    static const int UNROLL_DIM = (LowerTriangularL==true?1:2); // Dimension to unroll matrix
-    static const int ARCH2_ZERO_LOOP = true; // Additional implementation "switch" for the CHOLESKY_ALT2 architecture (2).
-
-public :
-inline __attribute__((always_inline)) cholesky_traits() { _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&UNROLL_FACTOR); _ssdm_SpecConstant(&UNROLL_DIM); _ssdm_SpecConstant(&ARCH2_ZERO_LOOP); }
-# 83 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_cholesky.h"
-};
-
-  // Specialization for complex
-  template<
-    bool LowerTriangularL,
-    int RowsColsA,
-    typename InputBaseType,
-    typename OutputBaseType>
-  struct cholesky_traits
-  <LowerTriangularL, RowsColsA, x_complex<InputBaseType>, x_complex<OutputBaseType> > {
-    typedef x_complex<InputBaseType> PROD_T;
-    typedef x_complex<InputBaseType> ACCUM_T;
-    typedef x_complex<InputBaseType> ADD_T;
-    typedef x_complex<InputBaseType> DIAG_T;
-    typedef InputBaseType RECIP_DIAG_T;
-    typedef x_complex<InputBaseType> OFF_DIAG_T;
-    typedef x_complex<OutputBaseType> L_OUTPUT_T;
-    static const int ARCH = 1;
-    static const int INNER_II = 1;
-    static const int UNROLL_FACTOR = 1;
-    static const int UNROLL_DIM = (LowerTriangularL==true?1:2);
-    static const int ARCH2_ZERO_LOOP = true;
-
-public :
-inline __attribute__((always_inline)) cholesky_traits
-  <LowerTriangularL, RowsColsA, x_complex<InputBaseType>, x_complex<OutputBaseType> >() { _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&UNROLL_FACTOR); _ssdm_SpecConstant(&UNROLL_DIM); _ssdm_SpecConstant(&ARCH2_ZERO_LOOP); }
-# 105 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_cholesky.h"
-};
-
-  // Specialization for ap_fixed
-  template<
-    bool LowerTriangularL,
-    int RowsColsA,
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1,
-    int W2, int I2, ap_q_mode Q2, ap_o_mode O2, int N2>
-  struct cholesky_traits
-  <LowerTriangularL, RowsColsA, ap_fixed<W1, I1, Q1, O1, N1>, ap_fixed<W2, I2, Q2, O2, N2> > {
-    typedef ap_fixed<W1+W1 , I1+I1 , SC_RND_CONV, SC_SAT, 0> PROD_T;
-    typedef ap_fixed<(W1+W1)+BitWidth<RowsColsA>::Value,(I1+I1)+BitWidth<RowsColsA>::Value, SC_RND_CONV, SC_SAT, 0> ACCUM_T;
-    typedef ap_fixed<W1+1 , I1+1 , SC_RND_CONV, SC_SAT, 0> ADD_T ;
-    typedef ap_fixed<(W1+1)*2 , I1+1 , SC_RND_CONV, SC_SAT, 0> DIAG_T; // Takes result of sqrt
-    typedef ap_fixed<(W1+1)*2 , I1+1 , SC_RND_CONV, SC_SAT, 0> OFF_DIAG_T; // Takes result of /
-    typedef ap_fixed<2+(W2-I2)+W2 , 2+(W2-I2) , SC_RND_CONV, SC_SAT, 0> RECIP_DIAG_T;
-    typedef ap_fixed<W2 , I2 , SC_RND_CONV, SC_SAT, 0> L_OUTPUT_T; // Takes new L value.  Same as L output but saturation set
-    static const int ARCH = 1;
-    static const int INNER_II = 1;
-    static const int UNROLL_FACTOR = 1;
-    static const int UNROLL_DIM = (LowerTriangularL==true?1:2);
-    static const int ARCH2_ZERO_LOOP = true;
-
-public :
-inline __attribute__((always_inline)) cholesky_traits
-  <LowerTriangularL, RowsColsA, ap_fixed<W1, I1, Q1, O1, N1>, ap_fixed<W2, I2, Q2, O2, N2> >() { _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&UNROLL_FACTOR); _ssdm_SpecConstant(&UNROLL_DIM); _ssdm_SpecConstant(&ARCH2_ZERO_LOOP); }
-# 127 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_cholesky.h"
-};
-
-  // Further specialization for hls::complex<ap_fixed>
-  template<
-    bool LowerTriangularL,
-    int RowsColsA,
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1,
-    int W2, int I2, ap_q_mode Q2, ap_o_mode O2, int N2>
-  struct cholesky_traits
-  <LowerTriangularL, RowsColsA, x_complex<ap_fixed<W1, I1, Q1, O1, N1> >, x_complex< ap_fixed<W2, I2, Q2, O2, N2> > > {
-    typedef x_complex< ap_fixed<W1+W1 , I1+I1 , SC_RND_CONV, SC_SAT, 0> > PROD_T;
-    typedef x_complex< ap_fixed<(W1+W1)+BitWidth<RowsColsA>::Value,(I1+I1)+BitWidth<RowsColsA>::Value, SC_RND_CONV, SC_SAT, 0> > ACCUM_T;
-    typedef x_complex< ap_fixed<W1+1 , I1+1 , SC_RND_CONV, SC_SAT, 0> > ADD_T ;
-    typedef x_complex< ap_fixed<(W1+1)*2 , I1+1 , SC_RND_CONV, SC_SAT, 0> > DIAG_T; // Takes result of sqrt
-    typedef x_complex< ap_fixed<(W1+1)*2 , I1+1 , SC_RND_CONV, SC_SAT, 0> > OFF_DIAG_T; // Takes result of /
-    typedef ap_fixed<2+(W2-I2)+W2 , 2+(W2-I2) , SC_RND_CONV, SC_SAT, 0> RECIP_DIAG_T;
-    typedef x_complex< ap_fixed<W2 , I2 , SC_RND_CONV, SC_SAT, 0> > L_OUTPUT_T; // Takes new L value.  Same as L output but saturation set
-    static const int ARCH = 1;
-    static const int INNER_II = 1;
-    static const int UNROLL_FACTOR = 1;
-    static const int UNROLL_DIM = (LowerTriangularL==true?1:2);
-    static const int ARCH2_ZERO_LOOP = true;
-
-public :
-inline __attribute__((always_inline)) cholesky_traits
-  <LowerTriangularL, RowsColsA, x_complex<ap_fixed<W1, I1, Q1, O1, N1> >, x_complex< ap_fixed<W2, I2, Q2, O2, N2> > >() { _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&UNROLL_FACTOR); _ssdm_SpecConstant(&UNROLL_DIM); _ssdm_SpecConstant(&ARCH2_ZERO_LOOP); }
-# 149 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_cholesky.h"
-};
-
-  // ===================================================================================================================
-  // Helper functions
-
-  // Square root
-  // o Overloaded versions of the sqrt function
-  // o The square root of a complex number is expensive.  However, the diagonal values of a Cholesky decomposition are always
-  //   real so we don't need a full complex square root.
-  template<typename T_IN, typename T_OUT> int cholesky_sqrt_op(T_IN a, T_OUT &b){
-    Function_cholesky_sqrt_op_real:;
-    const T_IN ZERO = 0;
-    if(a<ZERO){
-      b = ZERO;
-      return(1);
-    }
-    b = x_sqrt(a);
-    return (0);
-  }
-  template<typename T_IN, typename T_OUT> int cholesky_sqrt_op(x_complex<T_IN> din, x_complex<T_OUT> &dout){
-    Function_cholesky_sqrt_op_complex:;
-    const T_IN ZERO = 0;
-    T_IN a = din.real();
-    dout.imag(ZERO);
-
-    if(a<ZERO){
-      dout.real(ZERO);
-      return(1);
-    }
-
-    dout.real(x_sqrt(a));
-    return (0);
-  }
-
-  // Reciprocal square root.
-  template <
-      typename InputType,
-      typename OutputType>
-  void cholesky_rsqrt(InputType x, OutputType &res) {
-    Function_cholesky_rsqrt_default:;
-    res = x_rsqrt(x);
-  }
-  template <
-      int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1,
-      int W2, int I2, ap_q_mode Q2, ap_o_mode O2, int N2>
-  void cholesky_rsqrt(ap_fixed<W1, I1, Q1, O1, N1> x, ap_fixed<W2, I2, Q2, O2, N2> &res) {
-    Function_cholesky_rsqrt_fixed:;
-    ap_fixed<W2, I2, Q2, O2, N2> one = 1;
-    ap_fixed<W1, I1, Q1, O1, N1> sqrt_res;
-    ap_fixed<W2, I2, Q2, O2, N2> sqrt_res_cast;
-    sqrt_res = x_sqrt(x);
-    sqrt_res_cast = sqrt_res;
-    res = one / sqrt_res_cast;
-  }
-
-  // Local multiplier to handle a complex case currently not supported by the x_complex class
-  // - Complex multiplied by a real of a different type
-  // - Required for complex fixed point implementations
-  template <
-      typename AType,
-      typename BType,
-      typename CType>
-  void cholesky_prod_sum_mult(AType A, BType B, CType &C)
-  {
-    Function_cholesky_prod_sum_mult_real:;
-    C = A * B;
-  }
-  template <
-      typename AType,
-      typename BType,
-      typename CType>
-  void cholesky_prod_sum_mult(x_complex<AType> A, BType B, x_complex<CType> &C)
-  {
-    Function_cholesky_prod_sum_mult_complex:;
-    C.real(A.real()*B);
-    C.imag(A.imag()*B);
-  }
-
-  // ===================================================================================================================
-  // CHOLESKY_BASIC
-  template <
-    bool LowerTriangularL,
-    int RowsColsA,
-    typename CholeskyTraits,
-    class InputType,
-    class OutputType>
-  int cholesky_basic(const InputType A[RowsColsA][RowsColsA],
-                   OutputType L[RowsColsA][RowsColsA]){_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(L,RowsColsA);
-
-    int return_code = 0;
-
-    // Use the traits struct to specify the correct type for the intermediate variables. This is really only needed for
-    // fixed point.
-    typename CholeskyTraits::PROD_T prod;
-    typename CholeskyTraits::ACCUM_T sum[RowsColsA];
-    typename CholeskyTraits::ACCUM_T A_cast_to_sum; // A with the same dimensions as sum.
-    typename CholeskyTraits::ACCUM_T prod_cast_to_sum; // prod with the same dimensions as sum.
-
-    typename CholeskyTraits::ADD_T A_minus_sum;
-    typename CholeskyTraits::DIAG_T new_L_diag; // sqrt(A_minus_sum)
-    typename CholeskyTraits::OFF_DIAG_T new_L_off_diag; // sum/L
-    typename CholeskyTraits::OFF_DIAG_T L_cast_to_new_L_off_diag;
-
-    typename CholeskyTraits::L_OUTPUT_T new_L;
-    OutputType retrieved_L;
-    // Internal memory used to aviod read access from function output argument L.
-    // NOTE: The internal matrix only needs to be triangular but optimization using a 1-D array it will require addition 
-    // logic to generate the indexes. Refer to the cholesky_alt function.
-    OutputType L_internal[RowsColsA][RowsColsA];
-
-    col_loop: for(int j = 0; j < RowsColsA; j++) {
-      sum[j] = 0;
-
-      // Calculate the diagonal value for this column
-      diag_loop: for(int k = 0; k < RowsColsA; k++) {
-        if(k <= (j-1)) {
-          if(LowerTriangularL == true){
-            retrieved_L = L_internal[j][k];
-          } else {
-            retrieved_L = L_internal[k][j];
-          }
-          sum[j] += x_conj_sq(retrieved_L);
-        }
-      }
-      A_cast_to_sum = A[j][j];
-
-      A_minus_sum = A_cast_to_sum - sum[j];
-
-      if(cholesky_sqrt_op(A_minus_sum, new_L_diag)){
-
-
-
-        return_code = 1;
-      }
-
-      // Round to target format using method specifed by traits defined types.
-      new_L = new_L_diag;
-
-      if(LowerTriangularL == true){
-        L_internal[j][j] = new_L;
-        L[j][j] = new_L;
-      } else {
-        L_internal[j][j] = x_conj(new_L);
-        L[j][j] = x_conj(new_L);
-      }
-
-      // Calculate the off diagonal values for this column
-      off_diag_loop: for(int i = 0; i < RowsColsA; i++) {
-
-        if(i > j) {
-          if(LowerTriangularL == true){
-            sum[j] = A[i][j];
-          } else {
-            sum[j] = x_conj(A[j][i]);
-          }
-
-          sum_loop: for(int k = 0; k < RowsColsA; k++) {
-_ssdm_op_SpecPipeline(CholeskyTraits::INNER_II, 1, 1, 0, "");
- if(k <= (j - 1)) {
-
-              if(LowerTriangularL == true){
-                prod = -L_internal[i][k] * x_conj(L_internal[j][k]);
-              } else {
-                prod = -x_conj(L_internal[k][i]) * (L_internal[k][j]);
-              }
-
-              prod_cast_to_sum = prod;
-              sum[j]+= prod_cast_to_sum;
-            }
-          }
-
-          new_L_off_diag = sum[j];
-
-          L_cast_to_new_L_off_diag = L_internal[j][j];
-
-          // Diagonal is always real, avoid complex division
-          new_L_off_diag = new_L_off_diag / x_real(L_cast_to_new_L_off_diag);
-
-          // Round to target format using method specifed by traits defined types.
-          new_L = new_L_off_diag;
-
-          if(LowerTriangularL == true){
-            L[i][j] = new_L;
-            L_internal[i][j] = new_L;
-          } else{
-            L[j][i] = x_conj(new_L);
-            L_internal[j][i] = x_conj(new_L);
-          }
-        } else if(i < j){
-          if(LowerTriangularL == true){
-            L[i][j] = 0;
-          } else{
-            L[j][i] = 0;
-          }
-        }
-      }
-    }
-    return(return_code);
-  }
-
-  // ===================================================================================================================
-  // CHOLESKY_ALT: Alternative architecture with improved latency at the expense of higher resource
-  template <
-    bool LowerTriangularL,
-    int RowsColsA,
-    typename CholeskyTraits,
-    class InputType,
-    class OutputType>
-  int cholesky_alt(const InputType A[RowsColsA][RowsColsA], OutputType L[RowsColsA][RowsColsA])
-  {_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(L,RowsColsA);
-    int return_code = 0;
-
-    // Optimize internal memories
-    // - For complex data types the diagonal will be real only, plus for fixed point it must be stored to a
-    //   higher precision.
-    // - Requires additional logic to generate the memory indexes
-    // - For smaller matrix sizes there maybe be an increase in memory usage
-    OutputType L_internal[(RowsColsA*RowsColsA-RowsColsA)/2];
-    typename CholeskyTraits::RECIP_DIAG_T diag_internal[RowsColsA];
-
-    typename CholeskyTraits::ACCUM_T square_sum;
-    typename CholeskyTraits::ACCUM_T A_cast_to_sum;
-    typename CholeskyTraits::ADD_T A_minus_sum;
-    typename CholeskyTraits::DIAG_T A_minus_sum_cast_diag;
-    typename CholeskyTraits::DIAG_T new_L_diag;
-    typename CholeskyTraits::RECIP_DIAG_T new_L_diag_recip;
-    typename CholeskyTraits::PROD_T prod;
-    typename CholeskyTraits::ACCUM_T prod_cast_to_sum;
-    typename CholeskyTraits::ACCUM_T product_sum;
-    typename CholeskyTraits::OFF_DIAG_T prod_cast_to_off_diag;
-    typename CholeskyTraits::RECIP_DIAG_T L_diag_recip;
-    typename CholeskyTraits::OFF_DIAG_T new_L_off_diag;
-    typename CholeskyTraits::L_OUTPUT_T new_L;
-    typename CholeskyTraits::L_OUTPUT_T new_L_recip;
-
-    row_loop: for(int i = 0; i < RowsColsA; i++) {
-      // Index generation for optimized/packed L_internal memory
-      int i_sub1 = i-1;
-      int i_off = ((i_sub1*i_sub1-i_sub1)/2)+i_sub1;
-
-      // Off diagonal calculation
-      square_sum = 0;
-      col_loop: for(int j = 0; j < i; j++) {
-_ssdm_op_SpecLoopTripCount(0, 1+RowsColsA/2, 0, "");
- // Index generation
-        int j_sub1 = j-1;
-        int j_off = ((j_sub1*j_sub1-j_sub1)/2)+j_sub1;
-        // Prime the off-diagonal sum with target elements A value.
-        if(LowerTriangularL == true){
-          product_sum = A[i][j];
-        } else {
-          product_sum = x_conj(A[j][i]);
-        }
-        sum_loop: for(int k = 0; k < j; k++) {
-_ssdm_op_SpecLoopTripCount(0, 1+RowsColsA/2, 0, "");
-_ssdm_op_SpecPipeline(CholeskyTraits::INNER_II, 1, 1, 0, "");
- prod = -L_internal[i_off+k] * x_conj(L_internal[j_off+k]);
-          prod_cast_to_sum = prod;
-          product_sum+=prod_cast_to_sum;
-        }
-        prod_cast_to_off_diag = product_sum;
-        // Fetch diagonal value
-        L_diag_recip = diag_internal[j];
-        // Diagonal is stored in its reciprocal form so only need to multiply the product sum
-        cholesky_prod_sum_mult(prod_cast_to_off_diag,L_diag_recip,new_L_off_diag);
-        // Round to target format using method specifed by traits defined types.
-        new_L = new_L_off_diag;
-        // Build sum for use in diagonal calculation for this row.
-        square_sum += x_conj_sq(new_L);
-        // Store result
-        L_internal[i_off+j] = new_L;
-        if(LowerTriangularL == true){
-          L[i][j] = new_L; // store in lower triangle
-          L[j][i] = 0; // Zero upper
-        } else{
-          L[j][i] = x_conj(new_L); // store in upper triangle
-          L[i][j] = 0; // Zero lower
-        }
-      }
-
-      // Diagonal calculation
-      A_cast_to_sum = A[i][i];
-      A_minus_sum = A_cast_to_sum - square_sum;
-      if(cholesky_sqrt_op(A_minus_sum, new_L_diag)){
-
-
-
-        return_code = 1;
-      }
-      // Round to target format using method specifed by traits defined types.
-      new_L = new_L_diag;
-      // Generate the reciprocal of the diagonal for internal use to aviod the latency of a divide in every off-diagonal calculation
-      A_minus_sum_cast_diag = A_minus_sum;
-      cholesky_rsqrt(x_real(A_minus_sum_cast_diag),new_L_diag_recip);
-      // Store diagonal value
-      diag_internal[i] = new_L_diag_recip;
-      if(LowerTriangularL == true){
-        L[i][i] = new_L;
-      } else {
-        L[i][i] = x_conj(new_L);
-      }
-    }
-    return(return_code);
-  }
-
-  // ===================================================================================================================
-  // CHOLESKY_ALT2: Further improved latency architecture requiring higher resource
-  template <
-    bool LowerTriangularL,
-    int RowsColsA,
-    typename CholeskyTraits,
-    class InputType,
-    class OutputType>
-  int cholesky_alt2(const InputType A[RowsColsA][RowsColsA], OutputType L[RowsColsA][RowsColsA])
-  {_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(L,RowsColsA);
-    int return_code = 0;
-
-    // To avoid array index calculations every iteration this architecture uses a simple 2D array rather than a 
-    // optimized/packed triangular matrix.
-    OutputType L_internal[RowsColsA][RowsColsA];
-    OutputType prod_column_top;
-    typename CholeskyTraits::ACCUM_T square_sum_array[RowsColsA];
-    typename CholeskyTraits::ACCUM_T A_cast_to_sum;
-    typename CholeskyTraits::ADD_T A_minus_sum;
-    typename CholeskyTraits::DIAG_T A_minus_sum_cast_diag;
-    typename CholeskyTraits::DIAG_T new_L_diag;
-    typename CholeskyTraits::RECIP_DIAG_T new_L_diag_recip;
-    typename CholeskyTraits::PROD_T prod;
-    typename CholeskyTraits::ACCUM_T prod_cast_to_sum;
-    typename CholeskyTraits::ACCUM_T product_sum;
-    typename CholeskyTraits::ACCUM_T product_sum_array[RowsColsA];
-    typename CholeskyTraits::OFF_DIAG_T prod_cast_to_off_diag;
-    typename CholeskyTraits::OFF_DIAG_T new_L_off_diag;
-    typename CholeskyTraits::L_OUTPUT_T new_L;
-
-_ssdm_SpecArrayPartition( A, CholeskyTraits::UNROLL_DIM, "CYCLIC", CholeskyTraits::UNROLL_FACTOR, "");
-_ssdm_SpecArrayPartition( L, CholeskyTraits::UNROLL_DIM, "CYCLIC", CholeskyTraits::UNROLL_FACTOR, "");
-_ssdm_SpecArrayPartition( L_internal, CholeskyTraits::UNROLL_DIM, "CYCLIC", CholeskyTraits::UNROLL_FACTOR, "");
-_ssdm_SpecArrayPartition( square_sum_array, 1, "CYCLIC", CholeskyTraits::UNROLL_FACTOR, "");
-_ssdm_SpecArrayPartition( product_sum_array, 1, "CYCLIC", CholeskyTraits::UNROLL_FACTOR, "");
-
- col_loop: for(int j = 0; j < RowsColsA; j++) {
-
-      // Diagonal calculation
-      A_cast_to_sum = A[j][j];
-      if ( j==0 ) {
-        A_minus_sum = A_cast_to_sum;
-      } else {
-        A_minus_sum = A_cast_to_sum - square_sum_array[j];
-      }
-      if(cholesky_sqrt_op(A_minus_sum, new_L_diag)){
-
-
-
-        return_code = 1;
-      }
-      // Round to target format using method specifed by traits defined types.
-      new_L = new_L_diag;
-      // Generate the reciprocal of the diagonal for internal use to aviod the latency of a divide in every off-diagonal calculation
-      A_minus_sum_cast_diag = A_minus_sum;
-      cholesky_rsqrt(x_real(A_minus_sum_cast_diag),new_L_diag_recip);
-      // Store diagonal value
-      if(LowerTriangularL == true){
-        L[j][j] = new_L;
-      } else {
-        L[j][j] = x_conj(new_L);
-      }
-
-      sum_loop: for(int k = 0; k <= j; k++) {
-        // Define average trip count for reporting, loop reduces in length for every iteration of col_loop
-_ssdm_op_SpecLoopTripCount(0, 1+RowsColsA/2, 0, "");
- // Same value used in all calcs
-        // o Implement -1* here
-        prod_column_top = -x_conj(L_internal[j][k]);
-
-        // NOTE: Using a fixed loop length combined with a "if" to implement reducing loop length
-        // o Ensures the inner loop can achieve the maximum II (1)
-        // o May introduce a small overhead resolving the "if" statement but HLS struggled to schedule when the variable
-        //   loop bound expression was used.
-        // o Will report inaccurate trip count as it will reduce by one with the col_loop
-        // o Variable loop bound code: row_loop: for(int i = j+1; i < RowsColsA; i++) {
-        row_loop: for(int i = 0; i < RowsColsA; i++) {
-          // IMPORTANT: row_loop must not merge with sum_loop as the merged loop becomes variable length and HLS will struggle with scheduling
-_ssdm_SpecLoopFlatten(1, "");
-_ssdm_op_SpecPipeline(CholeskyTraits::INNER_II, 1, 1, 0, "");
-_ssdm_Unroll(1, 0, CholeskyTraits::UNROLL_FACTOR, "");
-
- if ( i > j ) {
-            prod = L_internal[i][k] * prod_column_top;
-            prod_cast_to_sum = prod;
-
-            if (k==0) {
-              // Prime first sum
-              if(LowerTriangularL == true){
-                A_cast_to_sum = A[i][j];
-              } else {
-                A_cast_to_sum = x_conj(A[j][i]);
-              }
-              product_sum = A_cast_to_sum;
-            } else {
-              product_sum = product_sum_array[i];
-            }
-
-            if (k < j) {
-              // Accumulate row sum of columns
-              product_sum_array[i]= product_sum +prod_cast_to_sum;
-            } else {
-              // Final calculation for off diagonal value
-              prod_cast_to_off_diag = product_sum;
-              // Diagonal is stored in its reciprocal form so only need to multiply the product sum
-              cholesky_prod_sum_mult(prod_cast_to_off_diag,new_L_diag_recip,new_L_off_diag);
-              // Round to target format using method specifed by traits defined types.
-              new_L = new_L_off_diag;
-              // Build sum for use in diagonal calculation for this row.
-              if ( k == 0 ) {
-                square_sum_array[i] = x_conj_sq(new_L);
-              } else {
-                square_sum_array[i] += x_conj_sq(new_L);
-              }
-              // Store result
-              L_internal[i][j] = new_L;
-              // NOTE: Use the upper/lower triangle zeroing in the subsequent loop so the double memory access does not 
-              // become a bottleneck
-              // o Results in a further increase of DSP resources due to the higher II of this loop.
-              // o Retaining the zeroing operation here can give this a loop a max II of 2 and HLS will resource share. 
-              if(LowerTriangularL == true){
-                L[i][j] = new_L; // Store in lower triangle
-                if (!CholeskyTraits::ARCH2_ZERO_LOOP)
-                  L[j][i] = 0; // Zero upper
-              } else{
-                L[j][i] = x_conj(new_L); // Store in upper triangle
-                if (!CholeskyTraits::ARCH2_ZERO_LOOP)
-                  L[i][j] = 0; // Zero lower
-              }
-            }
-          }
-        }
-      }
-    }
-    // Zero upper/lower triangle
-    // o Use separate loop to ensure main calcuation can achieve an II of 1
-    // o As noted above this may increase the DSP resources.
-    // o Required when unrolling the inner loop due to array dimension access
-    if (CholeskyTraits::ARCH2_ZERO_LOOP) {
-      zero_rows_loop: for(int i = 0; i < RowsColsA-1; i++) {
-        zero_cols_loop: for(int j = i+1; j < RowsColsA; j++) {
-            // Define average trip count for reporting, loop reduces in length for every iteration of zero_rows_loop
-_ssdm_op_SpecLoopTripCount(0, 1+RowsColsA/2, 0, "");
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- if(LowerTriangularL == true){
-              L[i][j] = 0; // Zero upper
-            } else{
-              L[j][i] = 0; // Zero lower
-            }
-        }
-      }
-    }
-    return(return_code);
-  }
-
-  // ===================================================================================================================
-  // CHOLESKY_TOP: Top level function that selects implementation architecture and internal types based on the 
-  // traits class provided via the CholeskyTraits template parameter.
-  // o Call this function directly if you wish to override the default architecture choice or internal types
-  template <
-    bool LowerTriangularL,
-    int RowsColsA,
-    typename CholeskyTraits,
-    class InputType,
-    class OutputType>
-  int cholesky_top(const InputType A[RowsColsA][RowsColsA],
-                   OutputType L[RowsColsA][RowsColsA]){_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(L,RowsColsA);
-    switch(CholeskyTraits::ARCH) {
-    case 0:
-      return cholesky_basic<LowerTriangularL,RowsColsA,CholeskyTraits,InputType,OutputType>(A,L);
-    case 1:
-      return cholesky_alt<LowerTriangularL,RowsColsA,CholeskyTraits,InputType,OutputType>(A,L);
-    case 2:
-      return cholesky_alt2<LowerTriangularL,RowsColsA,CholeskyTraits,InputType,OutputType>(A,L);
-    default:
-      return cholesky_basic<LowerTriangularL,RowsColsA,CholeskyTraits,InputType,OutputType>(A,L);
-    }
-  }
-  // ===================================================================================================================
-  // CHOLESKY: Entry point function.
-  // o Template parameters:
-  //  - LowerTriangularL : When false generates the result in the upper triangle
-  //  - RowsColsA        : Defines the matrix dimensions
-  //  - InputType        : Input data type
-  //  - OutputType       : Output data type
-  // o Arguments:
-  //  - A                : Hermitian/symmetric positive definite input matrix
-  //  - L                : Lower or upper triangular output matrix
-  // o Return values:
-  //  - 0                : Success
-  //  - 1                : Failure. The function attempted to find the square root of a negative number i.e. the input
-  //                       matrix A was not Hermitian/symmetric positive definite.
-  template <
-    bool LowerTriangularL,
-    int RowsColsA,
-    class InputType,
-    class OutputType>
-  int cholesky(const InputType A[RowsColsA][RowsColsA], OutputType L[RowsColsA][RowsColsA]){_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(L,RowsColsA);
-    typedef cholesky_traits<LowerTriangularL,RowsColsA,InputType,OutputType> DEFAULT_CholeskyTraits;
-    return cholesky_top<LowerTriangularL,RowsColsA,DEFAULT_CholeskyTraits,InputType,OutputType>(A,L);
-  }
-
-}
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 45 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 2
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_qrf.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2013-2015 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-// QRF functions
-// ------------------
-// QRF                 : Entry point function
-// QRF_TOP             : Top level function that selects implementation architecture and internal types based on a traits class.
-// QRF_BASIC           : Basic implementation requiring lower resource
-// QRF_ALT             : Optimized for throughput requiring more resources
-
-// Change Log
-// ----------
-// 2015.3:
-//  * Changed default architecture to QRF_ALT
-//  * Added default inner loop pipelining and unrolling factors set via configuration traits class
-// 
-// 2015.2:
-//  * CONFIG object declaration in the QRF_ALT function changed to "static" to ensure ROM inference.
-// 
-// 2015.1:
-//  * Linear Algebra Library update
-//  * Added 2nd implementation optimized for throughput selectable through the qrf_traits configuration class.
-// 
-// 2014.1:
-//  * Initial release.
-
-
-
-
-
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_stream.h" 1
-/* -*- c++ -*-*/
-/*
-#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
-#-
-#-  This file contains confidential and proprietary information
-#-  of Xilinx, Inc. and is protected under U.S. and
-#-  international copyright and other intellectual property
-#-  laws.
-#-
-#-  DISCLAIMER
-#-  This disclaimer is not a license and does not grant any
-#-  rights to the materials distributed herewith. Except as
-#-  otherwise provided in a valid license issued to you by
-#-  Xilinx, and to the maximum extent permitted by applicable
-#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-#-  (2) Xilinx shall not be liable (whether in contract or tort,
-#-  including negligence, or under any other theory of
-#-  liability) for any loss or damage of any kind or nature
-#-  related to, arising under or in connection with these
-#-  materials, including for any direct, or any indirect,
-#-  special, incidental, or consequential loss or damage
-#-  (including loss of data, profits, goodwill, or any type of
-#-  loss or damage suffered as a result of any action brought
-#-  by a third party) even if such damage or loss was
-#-  reasonably foreseeable or Xilinx had been advised of the
-#-  possibility of the same.
-#-
-#-  CRITICAL APPLICATIONS
-#-  Xilinx products are not designed or intended to be fail-
-#-  safe, or for use in any application requiring fail-safe
-#-  performance, such as life-support or safety devices or
-#-  systems, Class III medical devices, nuclear facilities,
-#-  applications related to the deployment of airbags, or any
-#-  other applications that could lead to death, personal
-#-  injury, or severe property or environmental damage
-#-  (individually and collectively, "Critical
-#-  Applications"). Customer assumes the sole risk and
-#-  liability of any use of Xilinx products in Critical
-#-  Applications, subject only to applicable laws and
-#-  regulations governing limitations on product liability.
-#-
-#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-#-  PART OF THIS FILE AT ALL TIMES. 
-#- ************************************************************************
-
- *
- *
- */
-
-
-
-
-/*
- * This file contains a C++ model of hls::stream.
- * It defines AutoESL synthesis model.
- */
-
-
-
-
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/etc/autopilot_enum.h" 1
-/*
-#-  (c) Copyright 2011-2016 Xilinx, Inc. All rights reserved.
-#-
-#-  This file contains confidential and proprietary information
-#-  of Xilinx, Inc. and is protected under U.S. and
-#-  international copyright and other intellectual property
-#-  laws.
-#-
-#-  DISCLAIMER
-#-  This disclaimer is not a license and does not grant any
-#-  rights to the materials distributed herewith. Except as
-#-  otherwise provided in a valid license issued to you by
-#-  Xilinx, and to the maximum extent permitted by applicable
-#-  law: (1) THESE MATERIALS ARE MADE AVAILABLE "AS IS" AND
-#-  WITH ALL FAULTS, AND XILINX HEREBY DISCLAIMS ALL WARRANTIES
-#-  AND CONDITIONS, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING
-#-  BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, NON-
-#-  INFRINGEMENT, OR FITNESS FOR ANY PARTICULAR PURPOSE; and
-#-  (2) Xilinx shall not be liable (whether in contract or tort,
-#-  including negligence, or under any other theory of
-#-  liability) for any loss or damage of any kind or nature
-#-  related to, arising under or in connection with these
-#-  materials, including for any direct, or any indirect,
-#-  special, incidental, or consequential loss or damage
-#-  (including loss of data, profits, goodwill, or any type of
-#-  loss or damage suffered as a result of any action brought
-#-  by a third party) even if such damage or loss was
-#-  reasonably foreseeable or Xilinx had been advised of the
-#-  possibility of the same.
-#-
-#-  CRITICAL APPLICATIONS
-#-  Xilinx products are not designed or intended to be fail-
-#-  safe, or for use in any application requiring fail-safe
-#-  performance, such as life-support or safety devices or
-#-  systems, Class III medical devices, nuclear facilities,
-#-  applications related to the deployment of airbags, or any
-#-  other applications that could lead to death, personal
-#-  injury, or severe property or environmental damage
-#-  (individually and collectively, "Critical
-#-  Applications"). Customer assumes the sole risk and
-#-  liability of any use of Xilinx products in Critical
-#-  Applications, subject only to applicable laws and
-#-  regulations governing limitations on product liability.
-#-
-#-  THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
-#-  PART OF THIS FILE AT ALL TIMES. 
-#- ************************************************************************
-
- *
- * $Id$
- */
-
-
-
-
-
-/* Data Types */
-enum SsdmDataTypes {
-    _ssdm_sc_int = 0,
-    _ssdm_c_int = _ssdm_sc_int,
-    _ssdm_sc_uint = 1,
-    _ssdm_c_uint = _ssdm_sc_uint,
-    _ssdm_sc_bigint = 2,
-    _ssdm_sc_biguint = 3,
-};
-
-
-/* Ports */
-enum SsdmPortTypes {
-    _ssdm_sc_in = 0,
-    _ssdm_sc_out = 1,
-    _ssdm_sc_inout = 2,
-    _ssdm_sc_in_clk,
-
-    _ssdm_fifo_in,
-    _ssdm_sc_fifo_in = _ssdm_fifo_in,
-    _ssdm_tlm_fifo_in = _ssdm_fifo_in,
-    _ssdm_fifo_out,
-    _ssdm_sc_fifo_out = _ssdm_fifo_out,
-    _ssdm_tlm_fifo_out = _ssdm_fifo_out,
-    _ssdm_fifo_inout,
-    _ssdm_sc_fifo_inout = _ssdm_fifo_inout,
-    _ssdm_tlm_fifo_inout = _ssdm_fifo_inout,
-    _ssdm_sc_bus,
-    _ssdm_hls_bus_port = _ssdm_sc_bus,
-    _ssdm_AXI4M_bus_port = _ssdm_sc_bus,
-    _ssdm_port_end,
-};
-
-
-/* Threads (Processes) */
-enum SsdmProcessTypes {
-    _ssdm_method = 0,
-    _ssdm_sc_method = _ssdm_method,
-    _ssdm_thread = 1,
-    _ssdm_sc_thread = _ssdm_thread,
-    _ssdm_cthread = 2,
-    _ssdm_sc_cthread = _ssdm_cthread,
-    _ssdm_process_end,
-};
-
-
-/* Threads (Processes) */
-enum SsdmSensitiveTypes {
-    _ssdm_sensitive = 0,
-    _ssdm_sensitive_pos,
-    _ssdm_sensitive_neg,
-    _ssdm_sensitive_reset0, /* Level = High*/
-    _ssdm_sensitive_reset1, /* Level = Low*/
-    _ssdm_sensitive_end,
-};
-
-
-/* Channels */
-enum SsdmChannelTypes {
-    _ssdm_sc_sig,
-    _ssdm_fifo,
-    _ssdm_sc_fifo = _ssdm_fifo,
-    _ssdm_mem_fifo,
-    _ssdm_sc_mem_fifo = _ssdm_mem_fifo,
-};
-
-/* Regions */
-enum SsdmRegionTypes {
-    _ssdm_region_reset,
-    _ssdm_region_protocol,
-    _ssdm_region_pipeline,
-    _ssdm_region_parallel,
-};
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 67 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_stream.h" 2
-
-
-namespace hls {
-
-
-
-
-
-//////////////////////////////////////////////
-// Synthesis models for stream
-//////////////////////////////////////////////
-template<typename __STREAM_T__>
-class stream
-{
-  public:
-    /// Constructors
-    inline __attribute__((always_inline)) stream() {
-    }
-
-    inline __attribute__((always_inline)) stream(const char* name) {
-    }
-
-  /// Make copy constructor and assignment operator private
-  private:
-    inline __attribute__((always_inline)) stream(const stream< __STREAM_T__ >& chn):V(chn.V) {
-    }
-
-    inline __attribute__((always_inline)) stream& operator= (const stream< __STREAM_T__ >& chn) {
-        V = chn.V;
-        return *this;
-    }
-
-  public:
-    /// Overload >> and << operators to implement read() and write()
-    inline __attribute__((always_inline)) void operator >> (__STREAM_T__& rdata) {
-        read(rdata);
-    }
-
-    inline __attribute__((always_inline)) void operator << (const __STREAM_T__& wdata) {
-        write(wdata);
-    }
-
-  /// Public API
-  public:
-    /// Empty & Full
-    inline __attribute__((always_inline)) bool empty() const {
-        bool tmp = _ssdm_StreamCanRead(&V);
-        return !tmp;
-    }
-
-    inline __attribute__((always_inline)) bool full() const {
-        bool tmp = _ssdm_StreamCanWrite(&V);
-        return !tmp;
-    }
-
-    /// Blocking read
-    inline __attribute__((always_inline)) void read(__STREAM_T__& dout) {
-        __STREAM_T__ tmp;
-        _ssdm_StreamRead(&V, &tmp);
-        dout = tmp;
-    }
-
-    inline __attribute__((always_inline)) __STREAM_T__ read() {
-        __STREAM_T__ tmp;
-        _ssdm_StreamRead(&V, &tmp);
-        return tmp;
-    }
-
-    /// Nonblocking read
-    inline __attribute__((always_inline)) bool read_nb(__STREAM_T__& dout) {
-        __STREAM_T__ tmp;
-        bool empty_n = _ssdm_StreamNbRead(&V, &tmp);
-        dout = tmp;
-        return empty_n;
-    }
-
-    /// Blocking write
-    inline __attribute__((always_inline)) void write(const __STREAM_T__& din) {
-        __STREAM_T__ tmp = din;
-        _ssdm_StreamWrite(&V, &tmp);
-    }
-
-    /// Nonblocking write
-    inline __attribute__((always_inline)) bool write_nb(const __STREAM_T__& din) {
-        __STREAM_T__ tmp = din;
-        bool full_n = _ssdm_StreamNbWrite(&V, &tmp);
-        return full_n;
-    }
-
-    /// Fifo size
-    inline __attribute__((always_inline)) unsigned size() {
-        unsigned size = _ssdm_StreamSize(&V);
-        return size;
-    }
-
-  public:
-    __STREAM_T__ V;
-};
-
-} // namespace hls
-
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 60 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_qrf.h" 2
-
-
-
-
-namespace hls {
-
-  // ===================================================================================================================
-  // Traits struct defining architecture selection
-  template<
-    int RowsA,
-    int ColsA,
-    typename InputType,
-    typename OutputType>
-  struct qrf_traits {
-    static const int ARCH = 1; // Select implementation. 0=Basic. 1=Lower latency/thoughput architecture.
-    static const int CALC_ROT_II = 1; // Specify the rotation calculation loop target II of the QRF_ALT architecture(1)
-    static const int UPDATE_II = 4; // Specify the pipelining target for the Q & R update loops
-    static const int UNROLL_FACTOR = 1; // Specify the unrolling factor for Q & R update loops of the QRF_ALT architecture(1)
-
-public :
-inline __attribute__((always_inline)) qrf_traits() { _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&CALC_ROT_II); _ssdm_SpecConstant(&UPDATE_II); _ssdm_SpecConstant(&UNROLL_FACTOR); }
-# 78 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_qrf.h"
-};
-
-  // ===================================================================================================================
-  // Helper functions
-  template <typename T> struct is_cmplx {
-    static const bool value = 0;
-
-public :
-inline __attribute__((always_inline)) is_cmplx() { _ssdm_SpecConstant(&value); }
-# 84 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_qrf.h"
-};
-
-  template <typename T> struct is_cmplx <x_complex<T> > {
-    static const bool value = 1;
-
-public :
-inline __attribute__((always_inline)) is_cmplx <x_complex<T> >() { _ssdm_SpecConstant(&value); }
-# 88 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_qrf.h"
-};
-
-  template <typename T> int qrf_require_extra_pass(const int rows, const int cols, T x) {
-    qrf_require_extra_pass_real:;
-    return 0;
-  }
-
-  template <typename T> int qrf_require_extra_pass(const int rows, const int cols, x_complex<T> x) {
-    qrf_require_extra_pass_complex:;
-    if (rows == cols) {
-      // Unitary transformation only required for square matrices
-      return 1;
-    } else {
-      return 0;
-    }
-  }
-
-  // Vector multiply
-  template <typename T> T qrf_vm(T a, T b, T c, T d) {
-    return a*c + b*d;
-  }
-
-  // Matrix-vector multiply
-  template <typename T> void qrf_mm(const T G[2][2], T &a, T &b) {_ssdm_SpecArrayDimSize(G,2);
-    T x, y;
-    x = qrf_vm(G[0][0], G[0][1], a, b);
-    y = qrf_vm(G[1][0], G[1][1], a, b);
-    a = x;
-    b = y;
-  }
-
-  // 
-  template <typename T> void qrf_mm_or_mag(const T G[2][2], T &a, T &b, const T mag, const int use_mag, const int extra_pass) {_ssdm_SpecArrayDimSize(G,2);
-    T x, y;
-    x = qrf_vm(G[0][0], G[0][1], a, b);
-    y = qrf_vm(G[1][0], G[1][1], a, b);
-    if (use_mag == 0) {
-      a = x;
-      b = y;
-    } else {
-      if (extra_pass == 1) {
-        // a = a;
-        b = x_real(mag);
-      } else {
-        a = x_real(mag);
-        b = 0;
-      }
-    }
-  }
-
-  // Magnitude computation for real Givens rotation, guarding against under-/overflow
-  // - Returns real-valued magnitude
-  template <typename T> T qrf_magnitude(T a, T b) {
-    Function_qrf_magnitude_real:;
-    const T ONE = 1.0;
-    const T ZERO = 0.0;
-    T abs_a, abs_b;
-    T y, mag;
-
-    abs_a = abs(a); // declared in x_hls_utils.h
-    abs_b = abs(b);
-    if (abs_a > abs_b) {
-      y = b/a;
-      mag = a*x_sqrt(ONE+y*y);
-
-    } else if (abs_b == ZERO) {
-      mag = ZERO;
-    } else {
-      y = a/b;
-      mag = b*x_sqrt(ONE+y*y);
-    }
-    return mag;
-  }
-
-  // Magnitude computation for complex Givens rotation, avoiding squaring values which have just been square-rooted
-  // and guarding against under-/overflow
-  // - Returns real-valued magnitude
-  template <typename T> T qrf_magnitude(x_complex<T> a, x_complex<T> b) {
-    Function_qrf_magnitude_complex:;
-
-    const T ONE = 1.0;
-    const T ZERO = 0.0;
-    T ar, ai, br, bi, d1, d2, d3, d3a, d3b, x1, x2, x3;
-    T a_largest, b_largest, largest;
-    ar = abs(a.real());
-    ai = abs(a.imag());
-    br = abs(b.real());
-    bi = abs(b.imag());
-
-    // Lower latency, builds tree structures.
-    if (ar > ai && ar > br && ar > bi) {
-      largest = ar;
-      d1 = ai;
-      d2 = br;
-      d3 = bi;
-    } else if (ai > ar && ai > br && ai > bi) {
-      largest = ai;
-      d1 = ar;
-      d2 = br;
-      d3 = bi;
-    } else if (br > ar && br > ai && br > bi) {
-      largest = br;
-      d1 = ar;
-      d2 = ai;
-      d3 = bi;
-    } else {
-      largest = bi;
-      d1 = ar;
-      d2 = ai;
-      d3 = br;
-    }
-
-    if (largest == ZERO) { // Avoid divide-by-zero
-      return ZERO;
-    } else {
-      x1 = d1/largest;
-      x2 = d2/largest;
-      x3 = d3/largest;
-      T x1_sqd = x1*x1;
-      T x2_sqd = x2*x2;
-      T x3_sqd = x3*x3;
-
-      T s1 = ONE + x1_sqd;
-      T s2 = x2_sqd + x3_sqd;
-      T s3 = s1 + s2;
-
-      return largest*x_sqrt(s3);
-    }
-  }
-
-  // ===================================================================================================================
-  // Real Givens rotation guarding against under-/overflow situations.
-  //
-  // Returns matrix G =  | c  s  |
-  //                     | ss cc |
-  //
-  // Note: argument 'extra_pass' is not used for the real case, but is present only to permit function overloading
-  //
-  template <typename T> void qrf_givens(int extra_pass, T a, T b, T &c, T &s, T &ss, T &cc, T &r){
-    Function_qrf_givens_real:;
-    const T ONE = 1.0;
-    const T ZERO = 0.0;
-    T mag;
-
-    mag = qrf_magnitude(a, b);
-
-    if (abs(a) == ZERO && abs(b) == ZERO) { // more efficient than  "if (mag == ZERO)"
-      c = x_copysign(ONE,a);
-      s = ZERO;
-    } else {
-      c = a / mag;
-      s = b / mag;
-    }
-    cc = c;
-    ss = -s;
-
-    r = mag;
-  }
-
-  // ===================================================================================================================
-  // Complex Givens rotation
-  //
-  // This implements a modified Givens rotation of the form:
-  //
-  // G = | c*  s* |
-  //     | -s  c  |
-  //
-  // to produce real diagonal elements suitable for subsquent computation of the inverse of input matrix A.
-  //
-  // Returns matrix G =  | c  s  |
-  //                     | ss cc |
-  //
-  // This implementation does not use the same approach as the version of qrf_givens() for real data, as that
-  // would require that a divider for complex data be implemented, which is expensive.
-  //
-  // When argument 'extra_pass' is set to 1, the function computes a unitary transformation rather than a standard Givens matrix.
-  // This is required to ensure that the bottom-rightmost element of the R matrix is real.  This transformation matrix has the form:
-  //
-  // G(trans) = | 1     0   |
-  //            | 0  e^-j*T |
-  // where T = Theta for the bottom-rightmost element
-  //
-  template <typename T> void qrf_givens(int extra_pass, x_complex<T> a, x_complex<T> b, x_complex<T> &c, x_complex<T> &s, x_complex<T> &ss, x_complex<T> &cc, x_complex<T> &r){
-    Function_qrf_givens_complex:;
-    const T ONE = 1.0;
-    const T ZERO = 0.0;
-    const x_complex<T> CZERO = ZERO;
-    T sqrt_mag_a_mag_b;
-    x_complex<T> c_tmp, s_tmp;
-
-    if (extra_pass == 0) {
-      // Standard modified Givens matrix, guarding against over-/underflow
-
-      sqrt_mag_a_mag_b = qrf_magnitude(a, b);
-
-      if (abs(a.real()) == ZERO && abs(a.imag()) == ZERO && abs(b.real()) == ZERO && abs(b.imag()) == ZERO) { // more efficient than "if (sqrt_mag_a_mag_b == ZERO)"
-        c_tmp = x_copysign(ONE,a.real());
-        s_tmp = ZERO;
-      } else {
-        c_tmp = a / sqrt_mag_a_mag_b;
-        s_tmp = b / sqrt_mag_a_mag_b;
-      }
-      c = x_conj(c_tmp);
-      cc = c_tmp;
-      s = x_conj(s_tmp);
-      ss = -s_tmp;
-
-      r.real() = sqrt_mag_a_mag_b;
-
-    } else {
-      // Transformation matrix to ensure real diagonal in R, guarding against over-/underflow
-
-      sqrt_mag_a_mag_b = qrf_magnitude(CZERO, b);
-
-      c_tmp = ONE;
-
-      if (abs(b.real()) == ZERO && abs(b.imag()) == ZERO) { // more efficient than "if (sqrt_mag_a_mag_b == ZERO)"
-        s_tmp = ONE;
-      } else {
-        s_tmp = b / sqrt_mag_a_mag_b;
-      }
-
-      c = c_tmp;
-      cc = x_conj(s_tmp);
-      s = ZERO;
-      ss = ZERO;
-
-      r.real() = sqrt_mag_a_mag_b;
-
-    }
-
-  }
-
-  // ===================================================================================================================
-  // Configuration class for QRF_ALT implementation
-  // o Determines the ROM content for the address sequence used to zero the array elements plus the number and size of 
-  //   the batches pushed through the inner loop. The batches consist of independent address accesses.
-  // o Initially calculates a static constant batch estimate which is used to size the look up tables.
-  // o Then an accurate batch count is generated by calculating the actually processing sequence.
-  template <int ROWS, int COLS, typename InputType> struct qrf_alt_config {
-    // Catch for div by 0 and ensure we infer a ROM for the lookup arrays
-    static const int ROWS_INT = (ROWS < 5 ? 5 : ROWS);
-    static const int COLS_INT = (COLS < 5 ? 5 : COLS);
-
-    // Intermediate values used to calculate NUM_BATCHES_EST for rectangular cases
-    static const int SEQ_LEN_FULL_SQ = (ROWS_INT*(ROWS_INT-1)/2);
-    static const int NUM_BATCHES_FULL_SQ_EST = SEQ_LEN_FULL_SQ * 4 / ROWS_INT;
-    static const int NUM_BATCHES_RECT_EST = NUM_BATCHES_FULL_SQ_EST - (ROWS_INT - COLS_INT) - (ROWS_INT/COLS_INT);
-
-    // Triangle + square
-    static const int SEQUENCE_LENGTH = (COLS_INT*(COLS_INT-1)/2)+((ROWS-COLS)*COLS)+(is_cmplx<InputType>::value && ROWS_INT == COLS_INT?1:0);
-    static const int NUM_BATCHES_EST = (ROWS_INT == COLS_INT? SEQUENCE_LENGTH * 4/ COLS_INT : NUM_BATCHES_RECT_EST);
-
-    // Actual number of batches calculated in the constructor
-    int NUM_BATCHES;
-    // SEQUENCE & BATCH_CNTS should implement as roms.
-    int BATCH_CNTS[NUM_BATCHES_EST];
-    int SEQUENCE[SEQUENCE_LENGTH][3];
-
-    qrf_alt_config() {_ssdm_SpecConstant(&NUM_BATCHES_EST);_ssdm_SpecConstant(&SEQUENCE_LENGTH);_ssdm_SpecConstant(&NUM_BATCHES_RECT_EST);_ssdm_SpecConstant(&NUM_BATCHES_FULL_SQ_EST);_ssdm_SpecConstant(&SEQ_LEN_FULL_SQ);_ssdm_SpecConstant(&COLS_INT);_ssdm_SpecConstant(&ROWS_INT);
-      int available[SEQUENCE_LENGTH][COLS];
-      int available_cnt[COLS];
-      int available_first[COLS];
-      int available_last[COLS];
-      int zeroed[COLS];
-      int a, b, num_avail, tmp;
-      int cnt = 0; // Counts how many pairs we process in a batch
-      int seq_cnt = 0;
-      int actual_num_batches;
-
-      // Initialize first column and counters
-      init_indices: for (int row=0;row<ROWS;row++) {
-        available[row][0]=row;
-      }
-      init_counts: for (int col=0;col<COLS;col++) {
-        if (col==0) {
-          available_cnt[col]=ROWS;
-          available_last[col]=ROWS;
-        } else {
-          available_cnt[col]=0;
-          available_last[col]=0;
-        }
-        available_first[col]=0;
-        zeroed[col] = 0;
-      }
-      // Increment through the processing sequence
-      NUM_BATCHES = 0; // Set to zero so we can test if we've completed within the estimate
-      px: for (int batch_num=0;batch_num < NUM_BATCHES_EST; batch_num++) {
-        cnt = 0;
-        check_col_indices: for(int col = COLS-1;col>=0;col--) {
-          num_avail = available_cnt[col];
-          if (num_avail > 1) {
-            read_indices: for(int rows = 0; rows < num_avail/2 ;rows++) {
-              if ( rows < num_avail/2 ) {
-                a = available[available_first[col]][col];
-                available_first[col]++;
-                b = available[available_first[col]][col];
-                available_first[col]++;
-                available_cnt[col]=available_cnt[col]-2;
-                if (b < a) {
-                  tmp = a;
-                  a = b;
-                  b = tmp;
-                }
-                // a & b are the row indexes we read from the memory for this rotation
-                SEQUENCE[seq_cnt][0] = a;
-                SEQUENCE[seq_cnt][1] = b;
-                SEQUENCE[seq_cnt][2] = col;
-                seq_cnt++;
-                cnt++;
-                available[available_last[col]][col] = a; // Non-zeroed element so store again
-                available_cnt[col]++;
-                available_last[col]++;
-                zeroed[col]++;
-                if (col < COLS-1) {
-                  available[available_last[col+1]][col+1]=b; // Zeroed, row available to the next column
-                  available_cnt[col+1]++;
-                  available_last[col+1]++;
-                }
-              }
-            }
-          }
-        }
-        BATCH_CNTS[batch_num] = cnt;
-        // Check for end condition
-        if ( (ROWS == COLS && zeroed[COLS-2] == 1) || (ROWS > COLS && zeroed[COLS-1] == ROWS - COLS) ) {
-          NUM_BATCHES = batch_num+1;
-          if ( is_cmplx<InputType>::value && ROWS == COLS ) {
-            // Add an extra rotation to ensure last element on the diagonal is real
-            NUM_BATCHES= batch_num+2;
-            BATCH_CNTS[batch_num+1] = 1;
-            SEQUENCE[seq_cnt][0] = ROWS-2;
-            SEQUENCE[seq_cnt][1] = ROWS-1;
-            SEQUENCE[seq_cnt][2] = ROWS-1;
-          }
-          break;
-        }
-      }
-      if ( NUM_BATCHES == 0 ) {
-
-
-
-
-      }
-    };
-  };
-
-  // ===================================================================================================================
-  // QRF_BASIC
-  template <
-    bool TransposedQ,
-    int RowsA,
-    int ColsA,
-    typename QRF_TRAITS,
-    typename InputType,
-    typename OutputType>
-    void qrf_basic(const InputType A[RowsA][ColsA],
-                         OutputType Q[RowsA][RowsA],
-                         OutputType R[RowsA][ColsA]) {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(Q,RowsA);_ssdm_SpecArrayDimSize(R,RowsA);
-
-      // Verify that template parameters are correct in simulation
-      if (RowsA < ColsA) {
-
-
-
-        exit(1);
-      }
-
-      // Buffers
-      OutputType Qi[RowsA][RowsA];
-      OutputType Ri[RowsA][ColsA];
-      OutputType G[2][2];
-
-      // Magnitude from Givens computation
-      OutputType mag;
-
-      // Flags for complex-valued case
-      const int DO_UNITARY_TF = qrf_require_extra_pass(RowsA, ColsA, mag);
-      int extra_pass = 0;
-
-      // Initialize Qi and initialize/load Ri
-      qrf_in_row_assign : for(int r=0; r<RowsA; r++){
-        qrf_in_col_assign_Qi : for(int c=0; c<RowsA; c++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- if (r == c) {
-            Qi[r][c] = 1.0;
-          } else {
-            Qi[r][c] = 0.0;
-          }
-        }
-        qrf_in_col_assign_Ri : for(int c=0; c<ColsA; c++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- Ri[r][c] = A[r][c];
-        }
-      }
-
-      qrf_col_loop : for(int j=0; j<ColsA; j++) {
-        // For complex data and square matrices, we perform an additional pass to ensure that the diagonal of R is real
-        // For non-square matrices, the modified Givens rotation ensures that the diagonal will be real-valued
-        if (DO_UNITARY_TF == 1) {
-          if (j == ColsA-1) {
-            extra_pass = 1;
-          } else {
-            extra_pass = 0;
-          }
-        } else {
-          extra_pass = 0;
-        }
-        qrf_row_loop : for(int i=RowsA-1; i>0; i--) {
-          if (i<=j-extra_pass) {
-            continue;
-          } else {
-            // Compute Givens values
-            qrf_givens(extra_pass, Ri[i-1][j], Ri[i][j], G[0][0], G[0][1], G[1][0], G[1][1], mag);
-
-            if (!extra_pass) {
-              Ri[i-1][j] = x_real(mag);
-            } else {
-              Ri[i][j] = x_real(mag);
-            }
-
-            qrf_r_update : for(int k=0; k<ColsA; k++) {
-_ssdm_op_SpecPipeline(QRF_TRAITS::UPDATE_II, 1, 1, 0, "");
- if (k < j+1) {
-                continue;
-              } else {
-                qrf_mm(G, Ri[i-1][k], Ri[i][k]);
-              }
-            }
-            qrf_q_update : for(int k=0; k<RowsA; k++) {
-_ssdm_op_SpecPipeline(QRF_TRAITS::UPDATE_II, 1, 1, 0, "");
- if (k < (i-(1+j)+extra_pass)) {
-                continue;
-              } else {
-                qrf_mm(G, Qi[i-1][k], Qi[i][k]);
-              }
-            }
-          } // end if i<=j
-        } // end qrf_row_loop
-      } // end qrf_col_loop
-
-      // Assign final outputs
-      qrf_out_row_assign : for(int r=0; r<RowsA; r++){
-        qrf_out_col_assign_Q : for(int c=0; c<RowsA; c++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- if (TransposedQ == true) {
-            Q[r][c] = Qi[r][c];
-          } else {
-            Q[c][r] = x_conj(Qi[r][c]);
-          }
-        }
-        qrf_out_col_assign_R : for(int c=0; c<ColsA; c++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- if (r <= c) {
-            // Values in the lower triangle are undefined
-            R[r][c] = Ri[r][c];
-          }
-        }
-      }
-
-    } // end template qrf_basic
-
-  // ===================================================================================================================
-  // QRF_ALT: Optimized for throughput.
-  template <
-    bool TransposedQ,
-    int RowsA,
-    int ColsA,
-    typename QRF_TRAITS,
-    typename InputType,
-    typename OutputType>
-  void qrf_alt(const InputType A[RowsA][ColsA],
-                     OutputType Q[RowsA][RowsA],
-                     OutputType R[RowsA][ColsA] ) {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(Q,RowsA);_ssdm_SpecArrayDimSize(R,RowsA);
-
-    // Verify that template parameters are correct in simulation
-    if (RowsA < ColsA) {
-
-
-
-      exit(1);
-    }
-
-    // Declare the ROMs defining the processing sequence
-    static const qrf_alt_config<RowsA,ColsA,InputType> CONFIG;
-_ssdm_SpecConstant(&CONFIG);
-# 572 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_qrf.h"
-
-
-    // Internal array memories
-    // IMPLEMENTATION TIP: To further increase the throughput of the function partion the q_i and r_i arrays on the column
-    // dimension and unroll the update_r/q loops by the same amount.
-    OutputType q_i[RowsA][RowsA];
-    OutputType r_i[RowsA][ColsA];
-
-_ssdm_SpecArrayPartition( q_i, 2, "CYCLIC", QRF_TRAITS::UNROLL_FACTOR, "");
-_ssdm_SpecArrayPartition( r_i, 2, "CYCLIC", QRF_TRAITS::UNROLL_FACTOR, "");
-
- hls::stream<int> to_rot[3];
-_ssdm_SpecStream( to_rot, 0, RowsA/2, "");
- int seq_cnt = 0;
-    int extra_pass = 0;
-    int extra_pass2 = 0;
-    int use_mag = 0;
-    int px_row1, px_row2, px_col, rot_row1, rot_row2, rot_col;
-    OutputType G[2][2];
-    OutputType mag = 0;
-    hls::stream<OutputType> rotations[5];
-_ssdm_SpecStream( rotations, 0, RowsA/2, "");
- OutputType G_delay[2][2];
-    OutputType mag_delay;
-
-    // Copy input data to local R memory and initialize Q
-    row_copy : for(int r=0; r<RowsA; r++){
-      // Merge loops to parallelize the A input read and the Q matrix prime.
-_ssdm_SpecLoopMerge(1, "");
- col_copy_q_i : for(int c=0; c<RowsA; c++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- if (r == c) {
-          q_i[r][c] = 1.0;
-        } else {
-          q_i[r][c] = 0.0;
-        }
-      }
-      col_copy_r_i : for(int c=0; c<ColsA; c++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- r_i[r][c] = A[r][c];
-      }
-    }
-
-    // Process R in batches of non-dependent array elements
-    px: for (int batch_num = 0; batch_num < CONFIG.NUM_BATCHES; batch_num++) {
-
-      calc_rotations: for(int px_cnt = 0; px_cnt < CONFIG.BATCH_CNTS[batch_num]; px_cnt++) {
-_ssdm_op_SpecLoopTripCount(1, RowsA/2, 0, "");
-_ssdm_op_SpecPipeline(QRF_TRAITS::CALC_ROT_II, 1, 1, 0, "");
- px_row1 = CONFIG.SEQUENCE[seq_cnt][0];
-        px_row2 = CONFIG.SEQUENCE[seq_cnt][1];
-        px_col = CONFIG.SEQUENCE[seq_cnt][2];
-        seq_cnt++;
-        extra_pass = 0;
-        if ( is_cmplx<InputType>::value && RowsA == ColsA && batch_num == CONFIG.NUM_BATCHES-1) {
-          extra_pass = 1;
-        }
-        qrf_givens(extra_pass, r_i[px_row1][px_col], r_i[px_row2][px_col], G[0][0], G[0][1], G[1][0], G[1][1], mag);
-        // Pass on rotation to next block to apply rotations
-        rotations[0].write(G[0][0]);
-        rotations[1].write(G[0][1]);
-        rotations[2].write(G[1][0]);
-        rotations[3].write(G[1][1]);
-        rotations[4].write(mag);
-        to_rot[0].write(px_row1);
-        to_rot[1].write(px_row2);
-        to_rot[2].write(px_col);
-      }
-
-      rotate: for(int px_cnt = 0; px_cnt < CONFIG.BATCH_CNTS[batch_num]; px_cnt++) {
-_ssdm_op_SpecLoopTripCount(1, RowsA/2, 0, "");
- G_delay[0][0] = rotations[0].read();
-        G_delay[0][1] = rotations[1].read();
-        G_delay[1][0] = rotations[2].read();
-        G_delay[1][1] = rotations[3].read();
-        mag_delay = rotations[4].read();
-        rot_row1 = to_rot[0].read();
-        rot_row2 = to_rot[1].read();
-        rot_col = to_rot[2].read();
-
-        extra_pass2 = 0;
-        if ( is_cmplx<InputType>::value && RowsA == ColsA && batch_num == CONFIG.NUM_BATCHES-1) {
-          extra_pass2 = 1;
-        }
-
-        // Merge the loops to maximize throughput, otherwise HLS will execute them sequentially and
-        // share hardware.
-_ssdm_SpecLoopMerge(1, "");
- update_r : for(int k=0; k<ColsA; k++) {
-_ssdm_op_SpecPipeline(QRF_TRAITS::UPDATE_II, 1, 1, 0, "");
-_ssdm_Unroll(1, 0, QRF_TRAITS::UNROLL_FACTOR, "");
- use_mag = 0;
-          if (k==rot_col) {
-            use_mag = 1;
-          }
-          qrf_mm_or_mag(G_delay, r_i[rot_row1][k], r_i[rot_row2][k], mag_delay, use_mag, extra_pass2);
-        }
-        update_q : for(int k=0; k<RowsA; k++) {
-_ssdm_op_SpecPipeline(QRF_TRAITS::UPDATE_II, 1, 1, 0, "");
-_ssdm_Unroll(1, 0, QRF_TRAITS::UNROLL_FACTOR, "");
- qrf_mm(G_delay, q_i[rot_row1][k], q_i[rot_row2][k]);
-        }
-      }
-    }
-
-    // Assign final outputs
-    row_assign_loop : for (int r=0;r<RowsA;r++) {
-      // Merge loops to parallelize the Q and R writes
-_ssdm_SpecLoopMerge(1, "");
- col_r_assign_loop : for (int c=0;c<ColsA;c++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- R[r][c] = r_i[r][c];
-      }
-      col_q_assign_loop : for (int c=0;c<RowsA;c++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- if (TransposedQ == true) {
-          Q[r][c] = q_i[r][c];
-        } else {
-          Q[c][r] = x_conj(q_i[r][c]);
-        }
-      }
-    }
-
-  } // end qrf_alt
-
-  // ===================================================================================================================
-  // QRF_TOP: Top level function that selects implementation architecture 
-  // o Call this function directly if you wish to override the default architecture choice
-  template <
-    bool TransposedQ,
-    int RowsA,
-    int ColsA,
-    typename QRF_TRAITS,
-    typename InputType,
-    typename OutputType>
-  void qrf_top(const InputType A[RowsA][ColsA],
-                     OutputType Q[RowsA][RowsA],
-                     OutputType R[RowsA][ColsA]) {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(Q,RowsA);_ssdm_SpecArrayDimSize(R,RowsA);
-    switch(QRF_TRAITS::ARCH) {
-    case 0:
-      qrf_basic<TransposedQ, RowsA, ColsA, QRF_TRAITS, InputType, OutputType>(A,Q,R);
-      break;
-    case 1:
-      qrf_alt<TransposedQ, RowsA, ColsA, QRF_TRAITS, InputType, OutputType>(A,Q,R);
-      break;
-    default:
-      qrf_basic<TransposedQ, RowsA, ColsA, QRF_TRAITS, InputType, OutputType>(A,Q,R);
-      break;
-    }
-  }
-
-  // ===================================================================================================================
-  // QRF: Entry point function.
-  // o Template parameters:
-  //  - TransposedQ      : Selects whether Q is output in transposed form
-  //  - RowsA            : Number of rows in input matrix A
-  //  - ColsA            : Number of columns in input matrix A
-  //  - InputType        : Input data type
-  //  - OutputType       : Output data type
-  // o Arguments:
-  //  - A                : Input matrix
-  //  - Q                : Orthogonal output matrix
-  //  - R                : Upper triangular output matrix
-  template <
-    bool TransposedQ,
-    int RowsA,
-    int ColsA,
-    typename InputType,
-    typename OutputType>
-    void qrf(const InputType A[RowsA][ColsA],
-                   OutputType Q[RowsA][RowsA],
-                   OutputType R[RowsA][ColsA]) {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(Q,RowsA);_ssdm_SpecArrayDimSize(R,RowsA);
-      typedef qrf_traits<RowsA,ColsA,InputType,OutputType> DEFAULT_QRF_TRAITS;
-      qrf_top<TransposedQ, RowsA, ColsA, DEFAULT_QRF_TRAITS, InputType, OutputType>(A,Q,R);
-    }
-} // end namespace hls
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 46 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 2
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_back_substitute.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2014-2015 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-// Back Substitution functions
-// ---------------------------
-// BACK_SUBSTITUTE       : Entry point function
-// BACK_SUBSTITUTE_TOP   : Top level function that selects implementation architecture and internal types based on a traits class.
-// BACK_SUBSTITUTE_BASIC : Implementation requiring lower resources
-// BACK_SUBSTITUTE_ALT   : Re-arranged loops to improve dependencies and throughput with increased resources.
-
-// Change Log
-// ----------
-// 2015.3:
-//  * Change default archtecture
-//  * Added default inner loop pipelining set via configuration traits class
-//  * Disabled explicit RESOURCE directive in back_substitute_recip
-// 
-// 2015.1:
-//  * Linear Algebra Library update.
-//  * Added 2nd implementation with improved loop dependencies and throughput, selected through the back_substitute_traits class.
-//  * Function prototype changed to return a is_singular flag.
-// 
-// 2014.1:
-//  * Initial release
-
-
-
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 57 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_back_substitute.h" 2
-
-
-namespace hls {
-
-  // ===================================================================================================================
-  // Default traits struct defining the internal variable types for the Back Substitution function
-  template<
-    int RowsColsA,
-    typename InputType,
-    typename OutputType>
-  struct back_substitute_traits {
-    typedef InputType RECIP_T;
-    typedef InputType MULT_T;
-    typedef InputType ADD_T;
-    typedef InputType MULTNEG_T;
-    static const int ARCH = 1; // Select implementation. 0=Basic. 1=Improved throughput.
-    static const int INNER_II = 1; // Specify the pipelining target for the main inner loop
-    static const int DIAG_II = 1; // Specify the pipelining target for the diag loop in BACK_SUBSTITUTE_ALT
-
-public :
-inline __attribute__((always_inline)) back_substitute_traits() { _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&DIAG_II); }
-# 75 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_back_substitute.h"
-};
-
-  // Specialization for ap_fixed
-  template<
-    int RowsColsA,
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1,
-    int W2, int I2, ap_q_mode Q2, ap_o_mode O2, int N2>
-  struct back_substitute_traits
-    <RowsColsA, ap_fixed<W1, I1, Q1, O1, N1>, ap_fixed<W2, I2, Q2, O2, N2> > {
-    static const int W = W1+(W1-I1)+(W1-I1); // Fractional growth is denominator fraction width + numerator full width
-    static const int I = I1+(W1-I1); // Integer growth is denominator int width + numerator fraction width
-    typedef ap_fixed<W, I, SC_TRN, SC_WRAP, 0> RECIP_T;
-    typedef ap_fixed<2*W, 2*I, SC_TRN, SC_WRAP, 0> MULT_T;
-    typedef ap_fixed<(2*W)+1, (2*I)+1, SC_TRN, SC_WRAP, 0> ADD_T;
-    typedef ap_fixed<2*W2, 2*I2, SC_TRN, SC_WRAP, 0> MULTNEG_T;
-    static const int ARCH = 1;
-    static const int INNER_II = 1;
-    static const int DIAG_II = 1;
-
-public :
-inline __attribute__((always_inline)) back_substitute_traits
-    <RowsColsA, ap_fixed<W1, I1, Q1, O1, N1>, ap_fixed<W2, I2, Q2, O2, N2> >() { _ssdm_SpecConstant(&W); _ssdm_SpecConstant(&I); _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&DIAG_II); }
-# 93 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_back_substitute.h"
-};
-
-  // Further specialization for x_complex<ap_fixed>
-  template<
-    int RowsColsA,
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1,
-    int W2, int I2, ap_q_mode Q2, ap_o_mode O2, int N2>
-  struct back_substitute_traits
-    <RowsColsA, x_complex<ap_fixed<W1, I1, Q1, O1, N1> >, x_complex< ap_fixed<W2, I2, Q2, O2, N2> > > {
-    static const int W = W1+(W1-I1)+(W1-I1); // Fractional growth is denominator fraction width + numerator full width
-    static const int I = I1+(W1-I1); // Integer growth is denominator int width + numerator fraction width
-    typedef x_complex< ap_fixed<W, I, SC_TRN, SC_WRAP, 0> > RECIP_T;
-    typedef x_complex< ap_fixed<(2*W)+1, (2*I)+1, SC_TRN, SC_WRAP, 0> > MULT_T;
-    typedef x_complex< ap_fixed<(2*W)+2, (2*I)+2, SC_TRN, SC_WRAP, 0> > ADD_T;
-    typedef x_complex< ap_fixed<(2*W2)+1,(2*I2)+1, SC_TRN, SC_WRAP, 0> > MULTNEG_T;
-    static const int ARCH = 1;
-    static const int INNER_II = 1;
-    static const int DIAG_II = 1;
-
-public :
-inline __attribute__((always_inline)) back_substitute_traits
-    <RowsColsA, x_complex<ap_fixed<W1, I1, Q1, O1, N1> >, x_complex< ap_fixed<W2, I2, Q2, O2, N2> > >() { _ssdm_SpecConstant(&W); _ssdm_SpecConstant(&I); _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&DIAG_II); }
-# 111 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_back_substitute.h"
-};
-
-  // ===================================================================================================================
-  // Helper functions
-
-  // IMPLEMENTATION TIP: Force the reciprocal to be implemented using a single-precision divider with the resource directive.
-  // This permits sharing of operators with the factorization function preceding the back-substitution
-  template <typename T> void back_substitute_recip(T x, T &one_over_x) {
-    // #pragma HLS resource variable=one_over_x core=FDiv
-    const T ONE = 1.0;
-    one_over_x = ONE/x;
-  }
-
-  // All diagonal elements of the factorization (Cholesky or QR) should be real.
-  // We can therefore use a real-valued divider (or reciprocal operator) to compute the diagonal inverse values.
-  //
-  // IMPLEMENTATION TIP: Force the reciprocal to be implemented using a single-precision divider with the resource directive.
-  // This permits sharing of operators with the factorization function preceding the back-substitution.
-  template <typename T> void back_substitute_recip(x_complex<T> x, x_complex<T> &one_over_x) {
-    // #pragma HLS resource variable=recip core=FDiv
-    T recip; // intermediate variable to allow directive to be applied
-    const x_complex<T> ONE = 1.0;
-    recip = ONE.real()/x.real();
-    one_over_x.real() = recip;
-    one_over_x.imag() = 0.0;
-  }
-
-  template<
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1,
-    int W2, int I2, ap_q_mode Q2, ap_o_mode O2, int N2>
-    void back_substitute_recip(ap_fixed<W1, I1, Q1, O1, N1> x,
-                               ap_fixed<W2, I2, Q2, O2, N2> &one_over_x) {
-    ap_fixed<W2, I2, Q2, O2, N2> ONE = 1; // Size to the output precision
-    one_over_x = ONE/x; // Infers a divider
-  }
-
-  template<
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1,
-    int W2, int I2, ap_q_mode Q2, ap_o_mode O2, int N2>
-    void back_substitute_recip(x_complex< ap_fixed<W1, I1, Q1, O1, N1> > x,
-                               x_complex< ap_fixed<W2, I2, Q2, O2, N2> > &one_over_x) {
-    x_complex< ap_fixed<W2, I2, Q2, O2, N2> > ONE; // Size to the output precision
-    ONE.real() = 1;
-    ONE.imag() = 0;
-    one_over_x.real() = ONE.real()/x.real(); // Infers a real-valued divider
-    one_over_x.imag() = 0;
-  }
-
-  // ===================================================================================================================
-  // BACK_SUBSTITUTE_BASIC
-  // o It is assumed that argument B is an internal buffer created in the calling function
-  //   and not an external interface, since the back substitution process reads and writes
-  //   from/to that buffer.
-  template<
-    int RowsColsA,
-    typename BackSubstituteTraits,
-    typename InputType,
-    typename OutputType>
-  void back_substitute_basic(const InputType A[RowsColsA][RowsColsA],
-                                   OutputType B[RowsColsA][RowsColsA],
-                                   int& is_singular) {_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(B,RowsColsA);
-
-    typename BackSubstituteTraits::RECIP_T diag_recip, diag_recip_calc;
-    OutputType subst_prod_m1;
-    OutputType subst_prod_m2;
-    typename BackSubstituteTraits::MULT_T subst_prod;
-    typename BackSubstituteTraits::ADD_T subst_prod_sum;
-    typename BackSubstituteTraits::ADD_T subst_sum;
-    typename BackSubstituteTraits::ADD_T diag_recip_low;
-    typename BackSubstituteTraits::MULTNEG_T neg_diag_prod;
-
-    is_singular = 0;
-    back_substitute_j : for (int j=0; j<RowsColsA; j++) {
-
-      back_substitute_recip(A[j][j],diag_recip);
-      B[j][j] = diag_recip;
-      if (x_real(diag_recip) == 0 && x_imag(diag_recip) == 0) {
-        is_singular = 1;
-      }
-
-      back_substitute_i : for (int i=0; i<RowsColsA; i++) {
-        if (i >= j) {
-          if (i == j) {
-            continue;
-          } else {
-            B[i][j] = 0; // Sets the lower triangle to zero for the final matrix mult to work
-          }
-        } else {
-          subst_sum = 0; // Equivalent to setting zeros in the upper triangle of the identity matrix we're "inverting against"
-          back_substitute_k : for (int k=0; k<RowsColsA; k++){
-_ssdm_op_SpecPipeline(BackSubstituteTraits::INNER_II, 1, 1, 0, "");
-
- if (k >= j) {
-              continue;
-            } else {
-              if (i > k) {
-               continue;
-              } else {
-                subst_prod_m1 = A[k][j]; // For fixed-point, re-size to higher precision of B
-                subst_prod_m2 = B[i][k];
-                subst_prod = subst_prod_m1 * subst_prod_m2;
-                subst_prod_sum = subst_prod; // Resize
-                subst_sum += subst_prod_sum;
-              }
-            }
-            diag_recip_low = diag_recip; // For fixed-point, reduce precision to match subst_sum for multiplication
-            // IMPLEMENTATION TIP: Use last subst_sum value below rather than reading from B to reduce error for fixed-point implementations.
-            // Implementing as "neg_diag_prod = -B[i][j] * B[j][j];" for fixed-point increases error by ~10%, but halves
-            // the DSP48 usage.
-            neg_diag_prod = -subst_sum * diag_recip_low;
-            B[i][j] = neg_diag_prod;
-          } // end i>=j
-        }
-      }
-    }
-  } // end template back_substitute_basic
-
-  // ===================================================================================================================
-  // BACK_SUBSTITUTE_ALT: Re-arrange loops to improve dependencies and throughput, utilizes additional internal buffers 
-  // for the diagonal and row accumulations. Arguement B is only written to.
-  template<
-    int RowsColsA,
-    typename BackSubstituteTraits,
-    typename InputType,
-    typename OutputType>
-  void back_substitute_alt(const InputType A[RowsColsA][RowsColsA],
-                                 OutputType B[RowsColsA][RowsColsA],
-                                 int& is_singular) {_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(B,RowsColsA);
-
-    typename BackSubstituteTraits::RECIP_T diag_recip, diag_recip_calc;
-    typename BackSubstituteTraits::RECIP_T diag[RowsColsA];
-
-    typename BackSubstituteTraits::MULT_T subst_prod;
-    typename BackSubstituteTraits::ADD_T subst_prod_sum;
-    typename BackSubstituteTraits::ADD_T final_sum;
-    typename BackSubstituteTraits::ADD_T subst_sum;
-    typename BackSubstituteTraits::ADD_T row_sum[RowsColsA][RowsColsA];
-
-    typename BackSubstituteTraits::ADD_T diag_recip_low;
-    typename BackSubstituteTraits::MULTNEG_T neg_diag_prod;
-    OutputType select_column_multiplier;
-    OutputType column_multiplier[RowsColsA];
-    OutputType subst_prod_m1;
-
-    is_singular = 0;
-    diag_loop: for (int i=0;i<RowsColsA;i++) {
-_ssdm_op_SpecPipeline(BackSubstituteTraits::DIAG_II, 1, 1, 0, "");
- back_substitute_recip(A[i][i],diag_recip_calc);
-      if (x_real(diag_recip_calc) == 0 && x_imag(diag_recip_calc) == 0) {
-        is_singular = 1;
-      }
-      diag[i] = diag_recip_calc;
-    }
-    a_col_b_row_loop: for (int i=0;i<RowsColsA;i++) {
-      diag_recip = diag[i];
-      diag_recip_low = diag_recip; // For fixed-point, reduce precision to match subst_sum for multiplication
-      a_row_loop: for (int j=0;j<RowsColsA;j++) {
-        if (j>=i) {
-          b_col_loop: for (int k=0;k<RowsColsA;k++) {
-_ssdm_op_SpecPipeline(BackSubstituteTraits::INNER_II, 1, 1, 0, "");
-
- // Interleaving column results to relax the dependency on the column_multiplier/result calculation
-            // o As a result we need an array to store the row accumulations
-            if (k<=i) {
-              if (i==j) {
-                // Top of the column
-                if (k==i) {
-                  // Just the diagonal
-                  select_column_multiplier = diag_recip;
-                } else {
-                  final_sum = row_sum[k][j];
-                  neg_diag_prod = -final_sum * diag_recip_low;
-                  select_column_multiplier = neg_diag_prod;
-                }
-                column_multiplier[k] = select_column_multiplier;
-                B[k][i] = select_column_multiplier; // (B[i][k]) Working with a upper triangular matrix
-              } else {
-                subst_prod_m1 = A[i][j]; // (A[j][i]) Working with a upper triangular matrix
-                subst_prod = subst_prod_m1 * column_multiplier[k];
-                subst_prod_sum = subst_prod; // Resize
-                if (k==i) {
-                  // First accumulation in the row sum
-                  subst_sum = subst_prod_sum;
-                } else {
-                  subst_sum = row_sum[k][j] + subst_prod_sum;
-                }
-                row_sum[k][j] = subst_sum;
-              }
-            } else {
-              B[k][i] = 0; // Zero lower triangle
-            }
-          }
-        } else {
-          continue;
-        }
-      }
-    }
-  } // end template back_substitute_alt
-
-  // ===================================================================================================================
-  // BACK_SUBSTITUTE_TOP: Top level function taking a BackSubstituteTraits template parameter which defines internal types
-  // o Call this function directly if you wish to override the default internal types
-  template<
-    int RowsColsA,
-    typename BackSubstituteTraits,
-    typename InputType,
-    typename OutputType>
-  void back_substitute_top(const InputType A[RowsColsA][RowsColsA],
-                                 OutputType B[RowsColsA][RowsColsA],
-                                 int& is_singular) {_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(B,RowsColsA);
-    switch(BackSubstituteTraits::ARCH) {
-    case 0:
-      back_substitute_basic<RowsColsA, BackSubstituteTraits, InputType, OutputType>(A, B, is_singular);
-      break;
-    case 1:
-      back_substitute_alt<RowsColsA, BackSubstituteTraits, InputType, OutputType>(A, B, is_singular);
-      break;
-    default:
-      back_substitute_basic<RowsColsA, BackSubstituteTraits, InputType, OutputType>(A, B, is_singular);
-      break;
-    }
-
-  }
-
-  // ===================================================================================================================
-  // BACK_SUBSTITUTE: Entry point function
-  // o Template parameters:
-  //  - RowsColsA   : Row and column dimensions
-  //  - InputType   : Input data type
-  //  - OutputType  : Output data type
-  // o Arguments:
-  //  - A           : Input matrix
-  //  - B           : Output matrix.
-  //  - is_singular : Indicates the diagonal of B contains zeros.
-  template<
-    int RowsColsA,
-    typename InputType,
-    typename OutputType>
-  void back_substitute(const InputType A[RowsColsA][RowsColsA],
-                             OutputType B[RowsColsA][RowsColsA],
-                             int& is_singular) {_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(B,RowsColsA);
-    typedef back_substitute_traits<RowsColsA, InputType, OutputType> DEFAULT_BACK_SUBSTITUTE_TRAITS;
-    back_substitute_top<RowsColsA, DEFAULT_BACK_SUBSTITUTE_TRAITS, InputType, OutputType>(A, B, is_singular);
-  }
-
-} // end namespace hls
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 47 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 2
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_qr_inverse.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2014-2015 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-// QR Inverse functions
-// ---------------------
-// QR_INVERSE      : Entry point function
-// QR_INVERSE_TOP  : Top level function that selects implementation architecture and internal types based on a traits class.
-
-// Change Log
-// ----------
-// 2015.3:
-//  * Updated sub-function traits class definitions to use defaults
-// 
-// 2015.1:
-//  * Linear Algebra Library update.
-//  * Function prototype changed to return A_singular flag via argument not return value.
-//  * Added qr_inverse_traits configuration class containing the sub-function configuration classes to enable customization.
-// 
-// 2014.1:
-//  * Initial release
-# 58 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_qr_inverse.h"
-namespace hls {
-
-  template<
-    int RowsColsA,
-    typename InputType,
-    typename OutputType>
-  struct qr_inverse_traits {
-    typedef float InternalType;
-    typedef qrf_traits<RowsColsA,RowsColsA,InputType,InternalType> QRF_CONFIG;
-    typedef back_substitute_traits<RowsColsA, InternalType, InternalType> BACK_SUB_CONFIG;
-    typedef matrix_multiply_traits<hls::NoTranspose,hls::NoTranspose,RowsColsA,RowsColsA,RowsColsA,RowsColsA,InternalType, OutputType> MULTIPLIER_CONFIG;
-  };
-
-  template<
-    int RowsColsA,
-    typename InputType,
-    typename OutputBaseType>
-  struct qr_inverse_traits
-  <RowsColsA, InputType, x_complex<OutputBaseType> > {
-    typedef x_complex<float> InternalType;
-    typedef qrf_traits<RowsColsA,RowsColsA,InputType,InternalType> QRF_CONFIG;
-    typedef back_substitute_traits<RowsColsA, InternalType, InternalType> BACK_SUB_CONFIG;
-    typedef matrix_multiply_traits<hls::NoTranspose,hls::NoTranspose,RowsColsA,RowsColsA,RowsColsA,RowsColsA,InternalType, x_complex<OutputBaseType> > MULTIPLIER_CONFIG;
-  };
-
-  // ===================================================================================================================
-  // QR_INVERSE_TOP: Top level function that selects implementation architecture and internal types based on the 
-  // traits class
-  // o Call this function directly if you wish to override the default architecture choice or internal types
-  template <
-    int RowsColsA,
-    typename QRInverseTraits,
-    typename InputType,
-    typename OutputType>
-  void qr_inverse_top(const InputType A[RowsColsA][RowsColsA],
-                            OutputType InverseA[RowsColsA][RowsColsA],
-                            int& A_singular) {_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(InverseA,RowsColsA);
-
-    // Define intermediate buffers
-    typename QRInverseTraits::InternalType Q[RowsColsA][RowsColsA];
-    typename QRInverseTraits::InternalType R[RowsColsA][RowsColsA];
-    typename QRInverseTraits::InternalType InverseR[RowsColsA][RowsColsA];
-
-    // Run QR factorization, get upper-triangular result in R, orthogonal/unitary matrix Q
-    const bool TRANSPOSED_Q = true; // Q is produced in transpose form such that Q*A = R
-    qrf_top<TRANSPOSED_Q, RowsColsA, RowsColsA, typename QRInverseTraits::QRF_CONFIG, InputType, typename QRInverseTraits::InternalType>(A, Q, R);
-
-    // Run back-substitution to compute R^-1
-    // This doesn't work in-place, so use an additional array InverseR
-    back_substitute_top<RowsColsA,typename QRInverseTraits::BACK_SUB_CONFIG, typename QRInverseTraits::InternalType, typename QRInverseTraits::InternalType>(R, InverseR, A_singular);
-
-    // A^-1 = R^-1*Qt
-    matrix_multiply_top<NoTranspose, NoTranspose, RowsColsA, RowsColsA, RowsColsA, RowsColsA, RowsColsA, RowsColsA, typename QRInverseTraits::MULTIPLIER_CONFIG, typename QRInverseTraits::InternalType, OutputType>(InverseR, Q, InverseA);
-
-  } // end template qr_inverse
-
-  // ===================================================================================================================
-  // QR_INVERSE: Entry point function.
-  // o Template parameters:
-  //  - RowsColsA        : Defines the matrix dimensions
-  //  - InputType        : Input data type
-  //  - OutputType       : Output data type
-  // o Arguments:
-  //  - A                : Input matrix A
-  //  - InverseA         : Inverse of input matrix
-  //  - A_singular       : Failure, matrix A is singular
-  template <
-    int RowsColsA,
-    typename InputType,
-    typename OutputType>
-  void qr_inverse(const InputType A[RowsColsA][RowsColsA],
-                        OutputType InverseA[RowsColsA][RowsColsA],
-                        int& A_singular) {_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(InverseA,RowsColsA);
-    typedef qr_inverse_traits<RowsColsA, InputType, OutputType> DEFAULT_QR_INVERSE_TRAITS;
-    qr_inverse_top<RowsColsA, DEFAULT_QR_INVERSE_TRAITS, InputType, OutputType>(A, InverseA, A_singular);
-  }
-} // end namespace hls
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 48 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 2
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_cholesky_inverse.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2014-2015 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-// Cholesky Inverse functions
-// --------------------------
-// CHOLESKY_INVERSE      : Entry point function
-// CHOLESKY_INVERSE_TOP  : Top level function that selects implementation architecture and internal types based on a traits class.
-
-// Change Log
-// ----------
-// 2015.3:
-//  * Updated cholesky_traits instantiation to pass LowerTriangularL template parameter
-// 
-// 2015.1:
-//  * Linear Algebra Library update.
-//  * Function prototype changed to return success flag via argument not return value.
-//  * Updated lower level functions calls to pass the corresponding configuration classes defined in the top-level 
-//    cholesky_inverse_traits class.
-// 
-// 2014.1:
-//  * Initial release
-
-
-
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 54 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_cholesky_inverse.h" 2
-
-
-
-
-
-namespace hls {
-
-  // ===================================================================================================================
-  // Default traits struct defining the internal variable types for the Cholesky Inverse function
-  template<
-    int RowsColsA,
-    typename InputType,
-    typename OutputType>
-  struct cholesky_inverse_traits {
-    typedef InputType CHOLESKY_OUT;
-    typedef cholesky_traits< false,RowsColsA,InputType,InputType> CHOLESKY_TRAITS;
-    typedef InputType BACK_SUBSTITUTE_OUT;
-    typedef back_substitute_traits<RowsColsA,InputType,InputType> BACK_SUBSTITUTE_TRAITS;
-    typedef matrix_multiply_traits<NoTranspose,ConjugateTranspose,RowsColsA,RowsColsA,RowsColsA,RowsColsA,InputType,OutputType> MATRIX_MULTIPLY_TRAITS;
-  };
-
-  // Specialization for ap_fixed
-  template<
-    int RowsColsA,
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1,
-    int W2, int I2, ap_q_mode Q2, ap_o_mode O2, int N2>
-  struct cholesky_inverse_traits
-    <RowsColsA, ap_fixed<W1, I1, Q1, O1, N1>, ap_fixed<W2, I2, Q2, O2, N2> > {
-    // Cholesky decomposition output precision
-    static const int CholeskyOutputW = W1;
-    static const int CholeskyOutputI = I1;
-    static const ap_q_mode CholeskyOutputQ = Q1;
-    static const ap_o_mode CholeskyOutputO = O1;
-    static const int CholeskyOutputN = N1;
-    typedef ap_fixed<CholeskyOutputW, CholeskyOutputI, CholeskyOutputQ, CholeskyOutputO, CholeskyOutputN> CHOLESKY_OUT;
-    typedef cholesky_traits< false, RowsColsA, ap_fixed<W1, I1, Q1, O1, N1>, CHOLESKY_OUT> CHOLESKY_TRAITS;
-    // Back substitution output precision
-    static const int BackSubstitutionOutW = W2;
-    static const int BackSubstitutionOutI = I2;
-    static const ap_q_mode BackSubstitutionOutQ = Q2;
-    static const ap_o_mode BackSubstitutionOutO = O2;
-    static const int BackSubstitutionOutN = N2;
-    typedef ap_fixed<BackSubstitutionOutW, BackSubstitutionOutI, BackSubstitutionOutQ, BackSubstitutionOutO, BackSubstitutionOutN> BACK_SUBSTITUTE_OUT;
-    typedef back_substitute_traits<RowsColsA, CHOLESKY_OUT, BACK_SUBSTITUTE_OUT > BACK_SUBSTITUTE_TRAITS;
-    typedef matrix_multiply_traits<NoTranspose,ConjugateTranspose,RowsColsA,RowsColsA,RowsColsA,RowsColsA,BACK_SUBSTITUTE_OUT, ap_fixed<W2, I2, Q2, O2, N2> > MATRIX_MULTIPLY_TRAITS;
-
-public :
-inline __attribute__((always_inline)) cholesky_inverse_traits
-    <RowsColsA, ap_fixed<W1, I1, Q1, O1, N1>, ap_fixed<W2, I2, Q2, O2, N2> >() { _ssdm_SpecConstant(&CholeskyOutputW); _ssdm_SpecConstant(&CholeskyOutputI); _ssdm_SpecConstant(&CholeskyOutputQ); _ssdm_SpecConstant(&CholeskyOutputO); _ssdm_SpecConstant(&CholeskyOutputN); _ssdm_SpecConstant(&BackSubstitutionOutW); _ssdm_SpecConstant(&BackSubstitutionOutI); _ssdm_SpecConstant(&BackSubstitutionOutQ); _ssdm_SpecConstant(&BackSubstitutionOutO); _ssdm_SpecConstant(&BackSubstitutionOutN); }
-# 99 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_cholesky_inverse.h"
-};
-
-  // Further specialization for hls::complex<ap_fixed>
-  template<
-    int RowsColsA,
-    int W1, int I1, ap_q_mode Q1, ap_o_mode O1, int N1,
-    int W2, int I2, ap_q_mode Q2, ap_o_mode O2, int N2>
-  struct cholesky_inverse_traits
-    <RowsColsA, x_complex<ap_fixed<W1, I1, Q1, O1, N1> >, x_complex< ap_fixed<W2, I2, Q2, O2, N2> > > {
-    // Cholesky decomposition output precision
-    static const int CholeskyOutputW = W1;
-    static const int CholeskyOutputI = I1;
-    static const ap_q_mode CholeskyOutputQ = Q1;
-    static const ap_o_mode CholeskyOutputO = O1;
-    static const int CholeskyOutputN = N1;
-    typedef x_complex< ap_fixed<CholeskyOutputW, CholeskyOutputI, CholeskyOutputQ, CholeskyOutputO, CholeskyOutputN> > CHOLESKY_OUT;
-    typedef cholesky_traits< false, RowsColsA, x_complex< ap_fixed<W1, I1, Q1, O1, N1> >, CHOLESKY_OUT > CHOLESKY_TRAITS;
-    // Back substitution output precision
-    static const int BackSubstitutionOutW = W2;
-    static const int BackSubstitutionOutI = I2;
-    static const ap_q_mode BackSubstitutionOutQ = Q2;
-    static const ap_o_mode BackSubstitutionOutO = O2;
-    static const int BackSubstitutionOutN = N2;
-    typedef x_complex< ap_fixed<BackSubstitutionOutW, BackSubstitutionOutI, BackSubstitutionOutQ, BackSubstitutionOutO, BackSubstitutionOutN> > BACK_SUBSTITUTE_OUT;
-    typedef back_substitute_traits<RowsColsA, CHOLESKY_OUT, BACK_SUBSTITUTE_OUT > BACK_SUBSTITUTE_TRAITS;
-    typedef matrix_multiply_traits<NoTranspose,ConjugateTranspose,RowsColsA,RowsColsA,RowsColsA,RowsColsA,BACK_SUBSTITUTE_OUT, x_complex< ap_fixed<W2, I2, Q2, O2, N2> > > MATRIX_MULTIPLY_TRAITS;
-
-public :
-inline __attribute__((always_inline)) cholesky_inverse_traits
-    <RowsColsA, x_complex<ap_fixed<W1, I1, Q1, O1, N1> >, x_complex< ap_fixed<W2, I2, Q2, O2, N2> > >() { _ssdm_SpecConstant(&CholeskyOutputW); _ssdm_SpecConstant(&CholeskyOutputI); _ssdm_SpecConstant(&CholeskyOutputQ); _ssdm_SpecConstant(&CholeskyOutputO); _ssdm_SpecConstant(&CholeskyOutputN); _ssdm_SpecConstant(&BackSubstitutionOutW); _ssdm_SpecConstant(&BackSubstitutionOutI); _ssdm_SpecConstant(&BackSubstitutionOutQ); _ssdm_SpecConstant(&BackSubstitutionOutO); _ssdm_SpecConstant(&BackSubstitutionOutN); }
-# 125 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_cholesky_inverse.h"
-};
-
-  // ===================================================================================================================
-  // CHOLESKY_INVERSE_TOP: Top level function taking a CholeskyInverseTraits template parameter which defines internal types
-  template <
-    int RowsColsA,
-    typename CholeskyInverseTraits,
-    typename InputType,
-    typename OutputType>
-  void cholesky_inverse_top(const InputType A[RowsColsA][RowsColsA],
-                                  OutputType InverseA[RowsColsA][RowsColsA],
-                                  int& cholesky_success) {_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(InverseA,RowsColsA);
-    // Define intermediate buffers
-    typename CholeskyInverseTraits::CHOLESKY_OUT U[RowsColsA][RowsColsA];
-    typename CholeskyInverseTraits::BACK_SUBSTITUTE_OUT U_inv[RowsColsA][RowsColsA];
-    int U_singular;
-
-    // Run Cholesky, get upper-triangular result
-    const bool LOWER_TRIANGULAR = false;
-    cholesky_success = cholesky_top<LOWER_TRIANGULAR, RowsColsA, typename CholeskyInverseTraits::CHOLESKY_TRAITS, InputType, typename CholeskyInverseTraits::CHOLESKY_OUT>(A, U);
-
-    // Run back-substitution to compute U^-1
-    // This doesn't work in-place, so use an additional array U_inv
-    back_substitute_top<RowsColsA, typename CholeskyInverseTraits::BACK_SUBSTITUTE_TRAITS, typename CholeskyInverseTraits::CHOLESKY_OUT, typename CholeskyInverseTraits::BACK_SUBSTITUTE_OUT>(U, U_inv,U_singular);
-
-    // A^-1 = U^-1*U^-t (equivalent to L-t*L-1)
-    matrix_multiply_top<NoTranspose, ConjugateTranspose, RowsColsA, RowsColsA, RowsColsA, RowsColsA, RowsColsA, RowsColsA, typename CholeskyInverseTraits::MATRIX_MULTIPLY_TRAITS, typename CholeskyInverseTraits::BACK_SUBSTITUTE_OUT, OutputType >(U_inv, U_inv, InverseA);
-
-  }
-
-  // ===================================================================================================================
-  // CHOLESKY_INVERSE: Entry point function.
-  // o Template parameters:
-  //  - RowsColsA        : Defines the matrix dimensions
-  //  - InputType        : Input data type
-  //  - OutputType       : Output data type
-  // o Arguments:
-  //  - A                : Square Hermitian/symmetric positive definite input matrix
-  //  - InverseA         : Inverse of input matrix
-  //  - cholesky_success : Indicates if A was successfully inverted. 0 = Success 1 = Failure. The function attempted to 
-  //                       find the square root of a negative number i.e. the input matrix A was not Hermitian/symmetric 
-  //                       positive definite.
-  template <
-    int RowsColsA,
-    typename InputType,
-    typename OutputType>
-  void cholesky_inverse(const InputType A[RowsColsA][RowsColsA],
-                              OutputType InverseA[RowsColsA][RowsColsA],
-                              int& cholesky_success) {_ssdm_SpecArrayDimSize(A,RowsColsA);_ssdm_SpecArrayDimSize(InverseA,RowsColsA);
-    typedef cholesky_inverse_traits<RowsColsA, InputType, OutputType> DEFAULT_CHOLESKY_INVERSE_TRAITS;
-    cholesky_inverse_top<RowsColsA, DEFAULT_CHOLESKY_INVERSE_TRAITS, InputType, OutputType>(A, InverseA, cholesky_success);
-  }
-
-} // end namespace hls
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 49 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 2
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h" 1
-/*****************************************************************************
- *
- *     Author: Xilinx, Inc.
- *
- *     This text contains proprietary, confidential information of
- *     Xilinx, Inc. , is distributed by under license from Xilinx,
- *     Inc., and may be used, copied and/or disclosed only pursuant to
- *     the terms of a valid license agreement with Xilinx, Inc.
- *
- *     XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS"
- *     AS A COURTESY TO YOU, SOLELY FOR USE IN DEVELOPING PROGRAMS AND
- *     SOLUTIONS FOR XILINX DEVICES.  BY PROVIDING THIS DESIGN, CODE,
- *     OR INFORMATION AS ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
- *     APPLICATION OR STANDARD, XILINX IS MAKING NO REPRESENTATION
- *     THAT THIS IMPLEMENTATION IS FREE FROM ANY CLAIMS OF INFRINGEMENT,
- *     AND YOU ARE RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE
- *     FOR YOUR IMPLEMENTATION.  XILINX EXPRESSLY DISCLAIMS ANY
- *     WARRANTY WHATSOEVER WITH RESPECT TO THE ADEQUACY OF THE
- *     IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
- *     REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE FROM CLAIMS OF
- *     INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *     FOR A PARTICULAR PURPOSE.
- *
- *     Xilinx products are not intended for use in life support appliances,
- *     devices, or systems. Use in such applications is expressly prohibited.
- *
- *     (c) Copyright 2014-2015 Xilinx Inc.
- *     All rights reserved.
- *
- *****************************************************************************/
-
-// SVD functions
-// ------------------
-// SVD                 : Entry point function
-// SVD_TOP             : Top level function that selects implementation architecture and internal types based on traits class
-// SVD_BASIC           : Default architecture
-// SVD_PAIRS           : Alternative architecture
-
-// Change Log
-// ----------
-// 2015.3:
-//  * Changed default architecture to SVD_PAIRS
-//  * Added default diagonal and off-diagonal loop pipelining and unrolling factors set via configuration traits class
-//  * Added additional overloaded forms of vm2x1 to simplify controlling resource utilization for complex data types implementations
-// 
-// 2015.1:
-//  * Linear Algebra Library update.
-//  * No changes
-// 
-// 2014.1:
-//  * Initial release
-
-
-
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h" 2
-
-
-
-
-
-# 1 "/usr/include/assert.h" 1 3 4
-/* Copyright (C) 1991,1992,1994-2001,2003,2004,2007,2011,2012
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- *	ISO C99 Standard: 7.2 Diagnostics	<assert.h>
- */
-# 44 "/usr/include/assert.h" 3 4
-/* void assert (int expression);
-
-   If NDEBUG is defined, do nothing.
-   If not, and EXPRESSION is zero, print an error message and abort.  */
-# 65 "/usr/include/assert.h" 3 4
-extern "C" {
-
-/* This prints an "Assertion failed" message and aborts.  */
-extern void __assert_fail (const char *__assertion, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
-
-/* Likewise, but prints the error text for ERRNUM.  */
-extern void __assert_perror_fail (int __errnum, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
-
-
-/* The following is not at all used here but needed for standard
-   compliance.  */
-extern void __assert (const char *__assertion, const char *__file, int __line)
-     throw () __attribute__ ((__noreturn__));
-
-
-}
-# 98 "/usr/include/assert.h" 3 4
-/* Version 2.4 and later of GCC define a magical variable `__PRETTY_FUNCTION__'
-   which contains the name of the function currently being defined.
-   This is broken in G++ before version 2.6.
-   C9x has a similar variable called __func__, but prefer the GCC one since
-   it demangles C++ function names.  */
-# 61 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h" 2
-
-
-namespace hls {
-
-  // ===================================================================================================================
-  // Default traits struct
-  template<
-    int RowsA,
-    int ColsA,
-    typename InputType,
-    typename OutputType>
-  struct svd_traits {
-    typedef OutputType SIntType;
-    typedef OutputType UIntType;
-    typedef OutputType VIntType;
-    typedef OutputType CSIntType;
-    static const int NUM_SWEEPS = 10; // Literature typically suggestions 6 to 10 iterations to successfully converge
-    static const int MIN_DIM = ( RowsA < ColsA ? RowsA : ColsA );
-    static const int ARCH = 1; // Select implementation. 0 = Basic loop engine. 1 = Pairs based engine
-    static const int OFF_DIAG_II = 8; // Specify the pipelining target for the off diagonal loop. Upto 4 memory accesses on single array in one iteration, use mulitple
-    static const int DIAG_II = 8; // Specify the pipelining target for the diagonal loop. >1 enables reuse of operators.
-    // IMPLEMENTATION TIP: Potential additional configuration parameters to fully unroll the "Pairs" based engine
-    // static const int UNROLL_FACTOR      = (MIN_DIM + 1) / 2; // Specify off-diagonal loop unrolling factor
-    // static const int DIAG_UNROLL_FACTOR = (MIN_DIM + 1) / 2; // Specify diagonal loop unrolling factor
-
-public :
-inline __attribute__((always_inline)) svd_traits() { _ssdm_SpecConstant(&NUM_SWEEPS); _ssdm_SpecConstant(&MIN_DIM); _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&OFF_DIAG_II); _ssdm_SpecConstant(&DIAG_II); }
-# 85 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h"
-};
-
-  // ===================================================================================================================
-  // Helper functions
-
-  // Compare 2 values relative magnitude
-  // - Replaces a test using EPS as a scaling factor:
-  //   abs(b) <= (e*abs(a)) where e = hls::numeric_limits<CSType>::epsilon()/2;
-  // - b is within/just outside the representable precision of a
-  template<typename T> bool within_precision(T a, T b) {
-    fp_struct<T> fs_a = a;
-    fp_struct<T> fs_b = b;
-    if ( (fs_b.exp + fs_a.SIG_BITS+1) < fs_a.exp || fs_b.exp == 0 ) {
-      return false;
-    } else {
-      return true;
-    }
-  }
-
-  // 2x1 vector dot product
-  // o Used throughout the code for non-vector operations to ease the application of resource sharing directives
-  // o When complex data type is used multiple version of this function will be created with a mix of complex and real
-  //   argument types.
-# 122 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h"
- // Define additional overloaded forms of vm2x1
-  // o Simplifies controlling resource utilization for complex data types implementations
-  // o Maps all forms of complex vm2x1 to a single complex only input
-
-    template<
-      typename AType,
-      typename BType,
-      typename CType>
-    void vm2x1_base(
-      AType a1, BType b1,
-      AType a2, BType b2,
-      CType &c)
-    {
-_ssdm_InlineSelf(2, "");
-# 134 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h"
-
-      // Disable the inlining of the base vm2x1 function and limit instances using the ALLOCATION directive
-      // #pragma HLS inline off
-      c = a1*b1 + a2*b2;
-    }
-    template<typename T>
-    void vm2x1(
-      T a1, x_complex<T> b1,
-      T a2, x_complex<T> b2,
-      x_complex<T>& c)
-    {
-      x_complex<T> c_a1,c_a2;
-      c_a1 = a1;
-      c_a2 = a2;
-      vm2x1_base(c_a1,b1,c_a2,b2,c);
-    }
-    template<typename T>
-    void vm2x1(
-      x_complex<T> a1, T b1,
-      x_complex<T> a2, T b2,
-      x_complex<T>& c)
-    {
-      x_complex<T> c_b1,c_b2;
-      c_b1 = b1;
-      c_b2 = b2;
-      vm2x1_base(a1,c_b1,a2,c_b2,c);
-    }
-    template<typename T>
-    void vm2x1(
-     T a1, T b1,
-     T a2, T b2,
-     T& c)
-    {
-      vm2x1_base(a1,b1,a2,b2,c);
-    }
-
-
-  // 2x2 matrix multiply
-  template<
-    typename AType,
-    typename BType,
-    typename CType>
-  void mm2x2(
-    AType a1, AType a2, AType a3, AType a4,
-    BType b1, BType b2, BType b3, BType b4,
-    CType &c1, CType &c2, CType &c3, CType &c4)
-  {
-    vm2x1(a1,b1,a2,b3,c1);
-    vm2x1(a1,b2,a2,b4,c2);
-    vm2x1(a3,b1,a4,b3,c3);
-    vm2x1(a3,b2,a4,b4,c4);
-  }
-
-  // Calculate the sin and cos of the complex input's phase angle and phase angle divided by 2
-  template<
-    typename InType,
-    typename CSType>
-  void calc_angle(
-    x_complex<InType> A,
-    CSType &cosThetaA, CSType &sinThetaA,
-    CSType &cosThetaAdiv2, CSType &sinThetaAdiv2,
-    bool &is_pos_real, bool &is_imag)
-  {
-    const InType inZERO = 0;
-    const CSType csZERO = 0;
-    const CSType csONE = 1;
-    // NOTE: Hard single precision floating point value
-    const float ONE_OVER_ROOT2 = 1.0f / sqrtf(2.0f);
-
-    CSType tanThetaA, cosThetaA_int, sinThetaA_int, tanThetaAdiv2, cosThetaAdiv2_int;
-
-    InType re = A.real();
-    InType im = A.imag();
-
-    // Helpers to avoid testing the sin and cos outputs for particular characteristics.
-    is_pos_real = false;
-    is_imag = false;
-
-    // Check for when effectively real only or imag only
-    if ( !within_precision(re,im) ) {
-      if ( x_isneg(re) ) {
-        // 180 degs (half is 90!)
-        cosThetaA = -csONE;
-        sinThetaA = csZERO;
-        cosThetaAdiv2 = csZERO;
-        sinThetaAdiv2 = csONE;
-      } else {
-        // 0 degs
-        cosThetaA = csONE;
-        sinThetaA = csZERO;
-        cosThetaAdiv2 = csONE;
-        sinThetaAdiv2 = csZERO;
-        is_pos_real = true;
-      }
-    } else if ( !within_precision(im,re) ) {
-      is_imag = true;
-      if ( x_isneg(im) ) {
-        // 270 deg
-        cosThetaA = csZERO;
-        sinThetaA = -csONE;
-        cosThetaAdiv2 = -ONE_OVER_ROOT2;
-        sinThetaAdiv2 = ONE_OVER_ROOT2;
-      } else {
-        // 90 deg
-        cosThetaA = csZERO;
-        sinThetaA = csONE;
-        cosThetaAdiv2 = ONE_OVER_ROOT2;
-        sinThetaAdiv2 = ONE_OVER_ROOT2;
-      }
-    } else {
-      // Basic
-      // Full angle values
-      tanThetaA = im/re;
-      cosThetaA_int = x_copysign(csONE,re) * x_rsqrt(csONE + tanThetaA * tanThetaA);
-      cosThetaA = cosThetaA_int;
-      sinThetaA_int = cosThetaA_int * tanThetaA;
-      sinThetaA = sinThetaA_int;
-
-      // Half angle values
-      // o Select the correct expression to minimize error in tan(thetaA/2)
-      //   - Avoid creating near eps values 
-      if ( x_isneg(cosThetaA_int) ) {
-        tanThetaAdiv2 = (csONE - cosThetaA_int)/ sinThetaA_int;
-      } else {
-        tanThetaAdiv2 = sinThetaA_int / (csONE + cosThetaA_int);
-      }
-      cosThetaAdiv2_int = x_rsqrt(csONE + tanThetaAdiv2 * tanThetaAdiv2);
-
-      cosThetaAdiv2 = cosThetaAdiv2_int;
-      sinThetaAdiv2 = cosThetaAdiv2_int * tanThetaAdiv2;
-    }
-  }
-
-  // ===================================================================================================================
-  // Diagonal processing functions
-
-  // Real 2x2 SVD function
-  template <
-    typename AInType,
-    typename CSType,
-    typename AOutType>
-  void svd2x2(
-    AInType w_in, AInType x_in, AInType y_in, AInType z_in,
-    CSType &uw_out, CSType &ux_out, CSType &uy_out, CSType &uz_out,
-    CSType &vw_out, CSType &vx_out, CSType &vy_out, CSType &vz_out,
-    AOutType &w_out, AOutType &x_out, AOutType &y_out, AOutType &z_out)
-  {
-    Function_svd2x2_real:;
-    // Inline to bring common lower level functions to this level of hierarchy to simplify the application
-    // of resource sharing directives.
-_ssdm_InlineSelf(0, "");
-
- const AOutType outZERO = 0;
-    CSType s1, c1, s2, c2;
-    AInType u1, u2;
-    x_complex<AInType> A, B;
-    CSType cosA_full, sinA_full, cosA_half, sinA_half;
-    CSType cosB_full, sinB_full, cosB_half, sinB_half;
-    bool A_is_pos_real, A_is_imag;
-    bool B_is_pos_real, B_is_imag;
-    CSType uw_int, ux_int, uy_int, uz_int;
-    CSType vw_int, vx_int, vy_int, vz_int;
-    AOutType w_out1, w_out2, z_out1, z_out2,
-                       w_out_int, z_out_int;
-
-    // Determine first half angle required to zero off-diagonal values
-    u1 = z_in - w_in;
-    u2 = y_in + x_in;
-    A.imag(u2);
-    A.real(u1);
-    calc_angle(A, cosA_full, sinA_full, cosA_half, sinA_half, A_is_pos_real, A_is_imag);
-
-    // Determine second half angle
-    u1 = z_in + w_in;
-    u2 = y_in - x_in;
-    B.imag(u2);
-    B.real(u1);
-    calc_angle(B,cosB_full, sinB_full, cosB_half, sinB_half, B_is_pos_real, B_is_imag);
-
-    // Combine half angles to produce left and right rotations
-    // IMPLEMENTATION TIP: There are common products in the following calculations. For parallel implementations these should be shared. 
-    // Consider in-lining these function calls.
-    vm2x1(cosA_half,cosB_half,sinA_half,sinB_half,c1);
-    vm2x1(sinA_half,cosB_half,-cosA_half,sinB_half,s1);
-    vm2x1(cosA_half,cosB_half,-sinA_half,sinB_half,c2);
-    vm2x1(sinA_half,cosB_half,cosA_half,sinB_half,s2);
-
-    // Build full U and V matrix
-    uw_int = c1;
-    ux_int = s1;
-    uy_int = -s1;
-    uz_int = c1;
-
-    vw_int = c2;
-    vx_int = s2;
-    vy_int = -s2;
-    vz_int = c2;
-
-    // Apply rotation
-    // - Uses the transpose version of U
-    // w_out
-    vm2x1(w_in,vw_int,x_in,vy_int,w_out1);
-    vm2x1(y_in,vw_int,z_in,vy_int,w_out2);
-    vm2x1(uw_int,w_out1,uy_int,w_out2,w_out_int);
-    // z_out
-    vm2x1(w_in,vx_int,x_in,vz_int,z_out1);
-    vm2x1(y_in,vx_int,z_in,vz_int,z_out2);
-    vm2x1(ux_int,z_out1,uz_int,z_out2,z_out_int);
-    x_out = outZERO;
-    y_out = outZERO;
-
-    // Ensure singular values are positive
-    if (x_isneg(w_out_int)) {
-      w_out = -w_out_int;
-      vw_int = -c2;
-      vy_int = s2;
-    } else {
-      w_out = w_out_int;
-    }
-    if (x_isneg(z_out_int)) {
-      z_out = -z_out_int;
-      vx_int = -s2;
-      vz_int = -c2;
-    } else {
-      z_out = z_out_int;
-    }
-
-    // Assign outputs
-    uw_out = uw_int;
-    ux_out = ux_int;
-    uy_out = uy_int;
-    uz_out = uz_int;
-    vw_out = vw_int;
-    vx_out = vx_int;
-    vy_out = vy_int;
-    vz_out = vz_int;
-  }
-
-  // Complex 2x2 SVD function
-  // o Calculates several additional rotations to convert the w,x,y & z values to real only before calling the real 2x2 svd 
-  //   function
-  template <
-    typename AInType,
-    typename CSType,
-    typename AOutType>
-  void svd2x2(
-    x_complex<AInType> w_in, x_complex<AInType> x_in, x_complex<AInType> y_in, x_complex<AInType> z_in,
-    x_complex<CSType> &uw_out, x_complex<CSType> &ux_out, x_complex<CSType> &uy_out, x_complex<CSType> &uz_out,
-    x_complex<CSType> &vw_out, x_complex<CSType> &vx_out, x_complex<CSType> &vy_out, x_complex<CSType> &vz_out,
-    x_complex<AOutType> &w_out, x_complex<AOutType> &x_out, x_complex<AOutType> &y_out, x_complex<AOutType> &z_out)
-  {
-    Function_svd2x2_complex:;
-    // Inline to bring common lower level functions to this level of hierarchy to simplify the application
-    // of resource sharing directives.
-_ssdm_InlineSelf(0, "");
-
- const x_complex<AInType> CMPLX_ZERO = 0;
-    const AInType REAL_ZERO = 0;
-    const CSType csZERO = 0;
-
-    AInType wMag, xMag, yMag, zMag;
-    CSType cosThetaW, sinThetaW, cosThetaWdiv2, sinThetaWdiv2,
-                      cosThetaX, sinThetaX, cosThetaXdiv2, sinThetaXdiv2,
-                      cosThetaY, sinThetaY, cosThetaYdiv2, sinThetaYdiv2,
-                      cosThetaZ, sinThetaZ, cosThetaZdiv2, sinThetaZdiv2,
-                      RotL1_w_re, RotL1_w_im, RotR1_w_re, RotR1_w_im,
-                      Rot2_C, Rot2_S, Rot2_Cdiv2, Rot2_Sdiv2,
-                      RotL2_w, RotL2_x, RotL2_y, RotL2_z,
-                      RotL3_w_re, RotL3_w_im, RotR3_w_im,
-                      RotL4_w, RotL4_x, RotL4_y, RotL4_z,
-                      RotR4_w, RotR4_x, RotR4_y, RotR4_z;
-
-    x_complex<CSType> RotL1_w, RotL1_x, RotL1_y, RotL1_z,
-                      RotR1_w, RotR1_x, RotR1_y, RotR1_z,
-                      RotL12_w, RotL12_x, RotL12_y, RotL12_z,
-                      RotL3_w, RotL3_x, RotL3_y, RotL3_z,
-                      RotR3_w, RotR3_x, RotR3_y, RotR3_z,
-                      Rot2_cmplx,
-                      RotL123_w, RotL123_x, RotL123_y, RotL123_z,
-                      RotR13_w, RotR13_x, RotR13_y, RotR13_z,
-                      uw_int, ux_int, uy_int, uz_int;
-
-    x_complex<AInType> w_int, x_int, x_int1, y_int, z_int, z_int1;
-    AInType w_out_re, x_out_re, y_out_re, z_out_re, w_int_re;
-
-    bool w_is_pos_real, w_is_imag,
-                       x_is_pos_real, x_is_imag,
-                       y_is_pos_real, y_is_imag,
-                       z_is_pos_real, z_is_imag,
-                       tmp_is_pos_real, tmp_is_imag;
-
-    // Determine sin and cos values of W and Y phase angles, ThetaW and ThetaY
-    calc_angle(w_in, cosThetaW, sinThetaW, cosThetaWdiv2, sinThetaWdiv2, w_is_pos_real, w_is_imag);
-    calc_angle(y_in, cosThetaY, sinThetaY, cosThetaYdiv2, sinThetaYdiv2, y_is_pos_real, y_is_imag);
-
-    // Rotation 1
-    // o 2-sided Unitary Complex rotation to make W and Y real
-    //        RotL1 = | exp(j*(ThetaY-ThetaW)/2)  0                         | 
-    //                | 0                         exp(-j*(ThetaY-ThetaW)/2) |
-    //        RotR1 = | exp(-j*(ThetaY+ThetaW)/2) 0                         |
-    //                |  0                        exp(-j*(ThetaY+ThetaW)/2) |
-    // o So
-    //   exp(j*(ThetaY-ThetaW)/2)  = cos((ThetaY-ThetaW)/2) + j sin((ThetaY-ThetaW)/2)
-    //                             = cos(ThetaY/2)cos(ThetaW/2) + sin(ThetaY/2)*sin(ThetaW/2) + j ( sin(ThetaY/2)cos(ThetaW/2) - cos(ThetaY/2)sin(ThetaW/2) )
-    //   exp(-j*(ThetaY+ThetaW)/2) = cos((ThetaY+ThetaW)/2) - j sin((ThetaY+ThetaW)/2)
-    //                             = cos(ThetaY/2)cos(ThetaW/2) - sin(ThetaY/2)*sin(ThetaW/2) - j ( sin(ThetaY/2)cos(ThetaW/2) + cos(ThetaY/2)sin(ThetaW/2) )
-    vm2x1(cosThetaYdiv2,cosThetaWdiv2,sinThetaYdiv2,sinThetaWdiv2,RotL1_w_re);
-    vm2x1(sinThetaYdiv2,cosThetaWdiv2,-cosThetaYdiv2,sinThetaWdiv2,RotL1_w_im);
-    RotL1_w.real(RotL1_w_re);
-    RotL1_w.imag(RotL1_w_im);
-    RotL1_x = 0; // Unused
-    RotL1_y = 0; // Unused
-    RotL1_z = x_conj(RotL1_w);
-
-    // IMPLEMENTATION TIP: The following calls duplicate the multiplies also implemented above. For parallel implementations
-    // these should be optimized/inlined.
-    vm2x1(cosThetaYdiv2,cosThetaWdiv2,-sinThetaYdiv2,sinThetaWdiv2,RotR1_w_re);
-    vm2x1(-sinThetaYdiv2,cosThetaWdiv2,-cosThetaYdiv2,sinThetaWdiv2,RotR1_w_im);
-    RotR1_w.real(RotR1_w_re);
-    RotR1_w.imag(RotR1_w_im);
-    RotR1_x = 0; // Unused
-    RotR1_y = 0; // Unused
-    RotR1_z = RotR1_w;
-
-    // Rotation 2
-    // o 1-sided real Givens rotation to zero Y
-    // o Use the magnitudes of W and Y and calculate the sin and the cos of the rotation required to zero Y
-    vm2x1(w_in.real(),cosThetaW,w_in.imag(),sinThetaW,wMag);
-    vm2x1(y_in.real(),cosThetaY,y_in.imag(),sinThetaY,yMag);
-
-    Rot2_cmplx.real(wMag);
-    Rot2_cmplx.imag(yMag);
-    calc_angle(Rot2_cmplx, Rot2_C, Rot2_S, Rot2_Cdiv2, Rot2_Sdiv2, tmp_is_pos_real,tmp_is_imag);
-    RotL2_w = Rot2_C;
-    RotL2_x = Rot2_S;
-    RotL2_y = -Rot2_S;
-    RotL2_z = Rot2_C;
-
-    // Combine left hand rotations 1 & 2
-    // o Using the constant value CMPLX_ZERO to obtain some optimization when the implementation allows.
-    // o Note that rotation 2 contains real only values
-    mm2x2(RotL2_w, RotL2_x, RotL2_y, RotL2_z, RotL1_w, CMPLX_ZERO, CMPLX_ZERO, RotL1_z, RotL12_w, RotL12_x, RotL12_y, RotL12_z);
-
-    // Update w,x,y & z values to reflect rotations
-    w_int.imag(0);
-    vm2x1(wMag, Rot2_C, yMag, Rot2_S, w_int_re);
-    w_int.real(w_int_re);
-    y_int = 0;
-    vm2x1(x_in, RotL12_w, z_in, RotL12_x, x_int1);
-    x_int = x_int1 * RotR1_z;
-    vm2x1(x_in, RotL12_y, z_in, RotL12_z, z_int1);
-    z_int = z_int1 * RotR1_z;
-
-    // Determine sin and cos values of the updated X and Z phase angles, ThetaX and ThetaZ
-    calc_angle(x_int, cosThetaX, sinThetaX, cosThetaXdiv2, sinThetaXdiv2, x_is_pos_real, x_is_imag);
-    calc_angle(z_int, cosThetaZ, sinThetaZ, cosThetaZdiv2, sinThetaZdiv2, z_is_pos_real, z_is_imag);
-
-    // Rotation 3
-    // o 2 additional 2-sided complex rotations to turn the updated X and Z into real only values.
-    // o The 2 rotations are combined into a single 2-sided complex rotation.
-    // o The first rotation rotates W and X - Rotation 3a:
-    //        RotL3a = | exp(-j*(ThetaX+ThetaW)/2)  0                         |
-    //                 | 0                          exp(-j*(ThetaX+ThetaW)/2) |
-    //        RotR3a = | exp(j*(ThetaX-ThetaW)/2)   0                         |
-    //                 | 0                          exp(-j*(ThetaX-ThetaW)/2) |
-    //   - Note ThetaW already equals 0 so the above simplifies to only use ThetaX
-    // o The second rotation rotates X and Z - Rotation 3b:
-    //        RotL3b = | exp(j*(ThetaZ-ThetaX)/2)   0                         |
-    //                 | 0                          exp(-j*(ThetaZ-ThetaX)/2) |
-    //        RotR3b = | exp(-j*(ThetaZ+ThetaX)/2)  0                         |
-    //                 | 0                          exp(-j*(ThetaZ+ThetaX)/2) |
-    //   - Note Following rotation 3a ThetaX equals 0 so this rotation simplifies to use only ThetaZ
-    // o Finally we can then combine these 2 rotations into single left and right unitary matrix giving the final rotation we'll use:
-    //        RotL3 =  | exp(j*(ThetaZ/2 - ThetaX))  0                  |
-    //                 | 0                           exp(j*-(ThetaZ/2)) |
-    //        RotR3 =  | exp(j*(ThetaX - ThetaZ/2))  0                  |
-    //                 | 0                           exp(j*-(ThetaZ/2)) |
-    // o So
-    //   exp(j*(ThetaZ/2 - ThetaX)) = cos(ThetaZ/2 - ThetaX) + j sin(ThetaZ/2 - ThetaX)
-    //                              = cos(ThetaZ/2)cos(ThetaX) + sin(ThetaZ/2)*sin(ThetaX) + j ( sin(ThetaZ/2)cos(ThetaX) - cos(ThetaZ/2)sin(ThetaX) )
-    //   exp(j*-(ThetaZ/2))         = cos(ThetaZ/2) - j sin(ThetaZ/2)
-    //   exp(j*(ThetaX - ThetaZ/2)) = cos(ThetaX - ThetaZ/2) + j sin(ThetaX - ThetaZ/2)
-    //                              = cos(ThetaX)cos(ThetaZ/2) + sin(ThetaX)*sin(ThetaZ/2) + j ( sin(ThetaX)cos(ThetaZ/2) - cos(ThetaX)sin(ThetaZ/2) )
-    vm2x1(cosThetaZdiv2,cosThetaX,sinThetaZdiv2,sinThetaX,RotL3_w_re);
-    vm2x1(sinThetaZdiv2,cosThetaX,-cosThetaZdiv2,sinThetaX,RotL3_w_im);
-    RotL3_w.real(RotL3_w_re);
-    RotL3_w.imag(RotL3_w_im);
-    RotL3_x = 0; // Unused
-    RotL3_y = 0; // Unused
-    RotL3_z.real(cosThetaZdiv2);
-    RotL3_z.imag(-sinThetaZdiv2);
-
-    RotR3_w.real( RotL3_w.real() );
-    // IMPLEMENTATION TIP: Below duplicates the multiplies implemented above. For parallel implementations these should be inlined 
-    vm2x1(cosThetaZdiv2,sinThetaX,-sinThetaZdiv2,cosThetaX,RotR3_w_im);
-    RotR3_w.imag(RotR3_w_im);
-    RotR3_x = 0; // Unused
-    RotR3_y = 0; // Unused
-    RotR3_z = RotL3_z;
-
-    // Combine rotation 3 with 2 & 1
-    mm2x2(RotL3_w, CMPLX_ZERO, CMPLX_ZERO, RotL3_z, RotL12_w, RotL12_x, RotL12_y, RotL12_z, RotL123_w, RotL123_x, RotL123_y, RotL123_z);
-    mm2x2(RotR1_w, CMPLX_ZERO, CMPLX_ZERO, RotR1_z, RotR3_w, CMPLX_ZERO, CMPLX_ZERO, RotR3_z, RotR13_w, RotR13_x, RotR13_y, RotR13_z);
-
-    // Calculate the magnitudes of X and Z for use in real SVD calculation
-    vm2x1(x_int.real(),cosThetaX,x_int.imag(),sinThetaX,xMag);
-    vm2x1(z_int.real(),cosThetaZ,z_int.imag(),sinThetaZ,zMag);
-
-    // Call real SVD function
-    svd2x2(w_int.real(), xMag, REAL_ZERO, zMag, RotL4_w, RotL4_x, RotL4_y, RotL4_z, RotR4_w, RotR4_x, RotR4_y, RotR4_z, w_out_re, x_out_re, y_out_re, z_out_re);
-
-    // Generate and assign outputs
-    // o The combined U values (Left rotations) must be Hermitian Transposed.
-    // o Note the rotation values output by the SVD function are real only
-    w_out = w_out_re;
-    x_out = x_out_re; // Zero'ed by the SVD function
-    y_out = y_out_re; // Zero'ed by the SVD function
-    z_out = z_out_re;
-
-    mm2x2(RotL4_w, RotL4_y, RotL4_x, RotL4_z, RotL123_w, RotL123_x, RotL123_y, RotL123_z, uw_int, ux_int, uy_int, uz_int);
-    uw_out = x_conj(uw_int);
-    ux_out = x_conj(uy_int); // Transposed
-    uy_out = x_conj(ux_int); // Transposed
-    uz_out = x_conj(uz_int);
-
-    mm2x2(RotR13_w, RotR13_x, RotR13_y, RotR13_z, RotR4_w, RotR4_x, RotR4_y, RotR4_z, vw_out, vx_out, vy_out, vz_out);
-
-  }
-
-  // ===================================================================================================================
-  // SVD_BASIC: Top level function taking a SVDTraits template parameter to defines internal types
-  template<
-    int RowsA,
-    int ColsA,
-    class SVDTraits,
-    typename InputType,
-    typename OutputType>
-  void svd_basic( const InputType A[RowsA][ColsA],
-                       OutputType S[RowsA][ColsA],
-                       OutputType U[RowsA][RowsA],
-                       OutputType V[ColsA][ColsA] )
-  {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
-    // Initially only supporting square matrix
-    ((RowsA==ColsA) ? static_cast<void> (0) : __assert_fail ("RowsA==ColsA", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h", 577, __PRETTY_FUNCTION__));
-
-    // Internal memories for partial results
-    typename SVDTraits::SIntType s_in[RowsA][ColsA];
-    typename SVDTraits::UIntType u_in[RowsA][ColsA];
-    typename SVDTraits::VIntType v_in[RowsA][ColsA];
-
-    // Current S,U,V values being worked on
-    typename SVDTraits::SIntType w_in, x_in, y_in, z_in;
-    typename SVDTraits::SIntType w_out, x_out, y_out, z_out;
-    typename SVDTraits::UIntType uw_in, ux_in, uy_in, uz_in;
-    typename SVDTraits::UIntType uw_out, ux_out, uy_out, uz_out;
-    typename SVDTraits::VIntType vw_in, vx_in, vy_in, vz_in;
-    typename SVDTraits::VIntType vw_out, vx_out, vy_out, vz_out;
-
-    // 2x2 Rotation values
-    typename SVDTraits::CSIntType uw_new, ux_new, uy_new, uz_new;
-    typename SVDTraits::CSIntType vw_new, vx_new, vy_new, vz_new;
-
-    sweep_loop: for(int sweepnum = 0; sweepnum < SVDTraits::NUM_SWEEPS; sweepnum++) {
-      // NOTE: Using the minimum dimension. i.e. will process a square matrix
-      row_loop: for(int top_left = 0; top_left < SVDTraits::MIN_DIM; top_left++) {
-        col_loop: for(int bottom_right = top_left+1; bottom_right< SVDTraits::MIN_DIM; bottom_right++) {
-           // Fetch w,x,y,z values
-           if (sweepnum == 0 && top_left == 0) {
-             if (bottom_right == 1) {
-               w_in =A[top_left] [top_left];
-               x_in =A[top_left] [bottom_right];
-               y_in =A[bottom_right][top_left];
-             } else {
-               // Now revist values already updated in first diagonal pass
-               w_in =s_in[top_left] [top_left];
-               x_in =s_in[top_left] [bottom_right];
-               y_in =s_in[bottom_right][top_left];
-             }
-             z_in =A[bottom_right][bottom_right];
-           } else {
-             w_in =s_in[top_left] [top_left];
-             x_in =s_in[top_left] [bottom_right];
-             y_in =s_in[bottom_right][top_left];
-             z_in =s_in[bottom_right][bottom_right];
-           }
-
-           // Diagonal
-           svd2x2(w_in, x_in, y_in, z_in, uw_new, ux_new, uy_new, uz_new, vw_new, vx_new, vy_new, vz_new, w_out, x_out, y_out, z_out);
-
-           // Update S on diagonal
-           s_in[top_left] [top_left] = w_out;
-           s_in[top_left] [bottom_right] = x_out;
-           s_in[bottom_right][top_left] = y_out;
-           s_in[bottom_right][bottom_right] = z_out;
-           if (sweepnum == SVDTraits::NUM_SWEEPS-1) {
-             S[top_left] [top_left] = w_out;
-             S[top_left] [bottom_right] = x_out;
-             S[bottom_right][top_left] = y_out;
-             S[bottom_right][bottom_right] = z_out;
-           }
-
-           // Update U & V
-           // o On the diagonal use a 2x2 as per the sigma
-           // o Need to create the indentity in U & V at the start
-           if (sweepnum == 0 && top_left == 0) {
-             if (bottom_right==1) {
-               uw_in = 1;
-               vw_in = 1;
-             } else {
-               // Now re-visiting diagonal values where I has been set
-               uw_in = u_in[top_left][top_left];
-               vw_in = v_in[top_left][top_left];
-             }
-
-             ux_in = 0;
-             uy_in = 0;
-             uz_in = 1;
-
-             vx_in = 0;
-             vy_in = 0;
-             vz_in = 1;
-           } else {
-             uw_in = u_in[top_left] [top_left];
-             ux_in = u_in[top_left] [bottom_right];
-             uy_in = u_in[bottom_right][top_left];
-             uz_in = u_in[bottom_right][bottom_right];
-             vw_in = v_in[top_left] [top_left];
-             vx_in = v_in[top_left] [bottom_right];
-             vy_in = v_in[bottom_right][top_left];
-             vz_in = v_in[bottom_right][bottom_right];
-           }
-
-           mm2x2(uw_in, ux_in, uy_in, uz_in, uw_new, ux_new, uy_new, uz_new, uw_out, ux_out, uy_out, uz_out);
-           mm2x2(vw_in, vx_in, vy_in, vz_in, vw_new, vx_new, vy_new, vz_new, vw_out, vx_out, vy_out, vz_out);
-
-           u_in[top_left] [top_left] = uw_out;
-           u_in[top_left] [bottom_right] = ux_out;
-           u_in[bottom_right][top_left] = uy_out;
-           u_in[bottom_right][bottom_right] = uz_out;
-           v_in[top_left] [top_left] = vw_out;
-           v_in[top_left] [bottom_right] = vx_out;
-           v_in[bottom_right][top_left] = vy_out;
-           v_in[bottom_right][bottom_right] = vz_out;
-           if (sweepnum == SVDTraits::NUM_SWEEPS-1) {
-             U[top_left] [top_left] = uw_out;
-             U[top_left] [bottom_right] = ux_out;
-             U[bottom_right][top_left] = uy_out;
-             U[bottom_right][bottom_right] = uz_out;
-             V[top_left] [top_left] = vw_out;
-             V[top_left] [bottom_right] = vx_out;
-             V[bottom_right][top_left] = vy_out;
-             V[bottom_right][bottom_right] = vz_out;
-           }
-
-           // Off-diagonal
-           // Col updates
-           off_col: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
-_ssdm_op_SpecPipeline(SVDTraits::OFF_DIAG_II, 1, 1, 0, "");
- if (off_col != bottom_right && off_col != top_left) {
-                 if (sweepnum == 0 && top_left == 0 && bottom_right == 1) {
-                   w_in =A[top_left][off_col];
-                 } else {
-                   w_in =s_in[top_left][off_col];
-                 }
-                 if (sweepnum == 0 && top_left == 0 && off_col > bottom_right) {
-                   y_in =A[bottom_right][off_col];
-                 } else {
-                   y_in =s_in[bottom_right][off_col];
-                 }
-
-                 // U must be Hermitian transposed before it is applied to A
-                 vm2x1(x_conj(uw_new),w_in,x_conj(uy_new),y_in,w_out);
-                 vm2x1(x_conj(ux_new),w_in,x_conj(uz_new),y_in,y_out);
-
-                 //Store off-diagonal updates
-                 s_in[top_left] [off_col] = w_out;
-                 s_in[bottom_right][off_col] = y_out;
-                 if (sweepnum == SVDTraits::NUM_SWEEPS-1) {
-                   S[top_left] [off_col] = w_out;
-                   S[bottom_right][off_col] = y_out;
-                 }
-               }
-           }
-           // Row update
-           off_row: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-_ssdm_op_SpecPipeline(SVDTraits::OFF_DIAG_II, 1, 1, 0, "");
- if (off_row != bottom_right && off_row != top_left) {
-               if (sweepnum == 0 && top_left== 0 && bottom_right == 1) {
-                 w_in =A[off_row][top_left];
-                 vw_in = 0;
-                 uw_in = 0;
-               } else {
-                 w_in = s_in[off_row][top_left];
-                 vw_in = v_in[off_row][top_left];
-                 uw_in = u_in[off_row][top_left];
-               }
-               if (sweepnum == 0 && top_left == 0 && off_row > bottom_right) {
-                 x_in = A[off_row][bottom_right];
-               } else {
-                 x_in = s_in[off_row][bottom_right];
-               }
-               if (sweepnum == 0 && top_left == 0) {
-                 vx_in = 0;
-                 ux_in = 0;
-               } else {
-                 vx_in = v_in[off_row][bottom_right];
-                 ux_in = u_in[off_row][bottom_right];
-               }
-
-               vm2x1(w_in,vw_new,x_in,vy_new,w_out);
-               vm2x1(w_in,vx_new,x_in,vz_new,x_out);
-
-               vm2x1(vw_in,vw_new,vx_in,vy_new,vw_out);
-               vm2x1(vw_in,vx_new,vx_in,vz_new,vx_out);
-
-               vm2x1(uw_in,uw_new,ux_in,uy_new,uw_out);
-               vm2x1(uw_in,ux_new,ux_in,uz_new,ux_out);
-
-               //Store off-diagonal updates
-               s_in[off_row][top_left] = w_out;
-               s_in[off_row][bottom_right] = x_out;
-               v_in[off_row][top_left] = vw_out;
-               v_in[off_row][bottom_right] = vx_out;
-               u_in[off_row][top_left] = uw_out;
-               u_in[off_row][bottom_right] = ux_out;
-               if (sweepnum==SVDTraits::NUM_SWEEPS-1) {
-                 S[off_row][top_left] = w_out;
-                 S[off_row][bottom_right] = x_out;
-                 V[off_row][top_left] = vw_out;
-                 V[off_row][bottom_right] = vx_out;
-                 U[off_row][top_left] = uw_out;
-                 U[off_row][bottom_right] = ux_out;
-               }
-             }
-           }
-        }
-      }
-    }
-
-  }
-
-  // ===================================================================================================================
-  // SVD_PAIRS: Alternative architecture with improved parallelization/pipelining at the expense of higher resource
-  // requirements.
-  // - Processes the input matrix by pairs of columns.
-  // - IMPLEMENTATION TIP: If a fully unrolled implementation is required partion the function's input/output argument arrays on the column
-  //   dimension. 
-  template<
-    int RowsA,
-    int ColsA,
-    class SVDTraits,
-    typename InputType,
-    typename OutputType>
-  void svd_pairs( const InputType A[RowsA][ColsA],
-                       OutputType S[RowsA][ColsA],
-                       OutputType U[RowsA][RowsA],
-                       OutputType V[ColsA][ColsA] )
-  {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
-    // Initially only supporting square matrix
-    ((RowsA==ColsA) ? static_cast<void> (0) : __assert_fail ("RowsA==ColsA", "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/linear_algebra/hls_svd.h", 793, __PRETTY_FUNCTION__));
-
-    const int ODD_DIM = (SVDTraits::MIN_DIM % 2 == 1 ? 1 : 0);
-
-    // The number of diagonal/column processors used in one step. In a single step all rows/columns of the input array
-    // will be processed.
-    const int NUM_PROCESSORS = (SVDTraits::MIN_DIM + 1) / 2;
-
-    // The number of steps required to process the whole input matrix for one sweep iteration.
-    const int NUM_STEPS = SVDTraits::MIN_DIM+ODD_DIM-1;
-
-    // Defines the number of banks (or pages) of the internal memory. 
-    // - The step_loop reads from one page and writes to the other,  ping pongs between two pages for each iteration/step.
-    const int BANKS = 2;
-
-    // Stores the current indexes being process by each columns/diagonal processor. The "pairs".
-    int diag1_i[BANKS][NUM_PROCESSORS];
-    int diag2_i[BANKS][NUM_PROCESSORS];
-
-    int d1_i, d2_i, c1_i, c2_i;
-    bool col_swap = false;
-
-    // Internal memories for partial results
-    typename SVDTraits::SIntType s_col1[NUM_PROCESSORS][BANKS][RowsA+ODD_DIM];
-    typename SVDTraits::SIntType s_col2[NUM_PROCESSORS][BANKS][RowsA+ODD_DIM];
-    typename SVDTraits::UIntType u_col1[NUM_PROCESSORS][BANKS][RowsA+ODD_DIM];
-    typename SVDTraits::UIntType u_col2[NUM_PROCESSORS][BANKS][RowsA+ODD_DIM];
-    typename SVDTraits::UIntType v_col1[NUM_PROCESSORS][BANKS][RowsA+ODD_DIM];
-    typename SVDTraits::UIntType v_col2[NUM_PROCESSORS][BANKS][RowsA+ODD_DIM];
-
-    // Current S,U,V values being worked on, used in each column processor
-    typename SVDTraits::SIntType w_in, x_in, y_in, z_in;
-    typename SVDTraits::SIntType w_int1, x_int1, y_int1, z_int1;
-    typename SVDTraits::SIntType w_int2, x_int2, y_int2, z_int2;
-    typename SVDTraits::SIntType w_out, x_out, y_out, z_out;
-    typename SVDTraits::UIntType uw_in, ux_in, uy_in, uz_in;
-    typename SVDTraits::UIntType uw_out, ux_out, uy_out, uz_out;
-    typename SVDTraits::VIntType vw_in, vx_in, vy_in, vz_in;
-    typename SVDTraits::VIntType vw_out, vx_out, vy_out, vz_out;
-
-    typename SVDTraits::SIntType w_out_sel, x_out_sel, y_out_sel, z_out_sel;
-    typename SVDTraits::UIntType uw_out_sel, ux_out_sel, uy_out_sel, uz_out_sel;
-    typename SVDTraits::VIntType vw_out_sel, vx_out_sel, vy_out_sel, vz_out_sel;
-
-    // Diagonal processor results - 2x2 Rotation values (U &V) and S
-    typename SVDTraits::SIntType diag_w_out[NUM_PROCESSORS];
-    typename SVDTraits::SIntType diag_x_out[NUM_PROCESSORS];
-    typename SVDTraits::SIntType diag_y_out[NUM_PROCESSORS];
-    typename SVDTraits::SIntType diag_z_out[NUM_PROCESSORS];
-    typename SVDTraits::CSIntType uw_new[NUM_PROCESSORS];
-    typename SVDTraits::CSIntType ux_new[NUM_PROCESSORS];
-    typename SVDTraits::CSIntType uy_new[NUM_PROCESSORS];
-    typename SVDTraits::CSIntType uz_new[NUM_PROCESSORS];
-    typename SVDTraits::CSIntType vw_new[NUM_PROCESSORS];
-    typename SVDTraits::CSIntType vx_new[NUM_PROCESSORS];
-    typename SVDTraits::CSIntType vy_new[NUM_PROCESSORS];
-    typename SVDTraits::CSIntType vz_new[NUM_PROCESSORS];
-    // Local copies to avoid multiple reads
-    typename SVDTraits::CSIntType uw_new_px, ux_new_px, uy_new_px, uz_new_px;
-    typename SVDTraits::CSIntType vw_new_px, vx_new_px, vy_new_px, vz_new_px;
-
-    // IMPLEMENTATION TIP: Additional directives for fully unrolling
-    // #pragma HLS ARRAY_PARTITION variable=diag1_i cyclic dim=2 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=diag2_i cyclic dim=2 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=s_col1 cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=s_col2 cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=u_col1 cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=u_col2 cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=v_col1 cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=v_col2 cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=diag_w_out cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=diag_x_out cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=diag_y_out cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=diag_z_out cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=uw_new cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=ux_new cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=uy_new cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=uz_new cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=vw_new cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=vx_new cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=vy_new cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-    // #pragma HLS ARRAY_PARTITION variable=vz_new cyclic dim=1 factor=SVDTraits::UNROLL_FACTOR
-
-    // Load column memories
-    // - Up-front transfer but can be pipeled/data flow
-    col_load: for(int col=0;col < NUM_PROCESSORS;col++){
-      diag1_i[0][col] = 2*col;
-      diag2_i[0][col] = 2*col+1;
-      row_load: for(int row=0;row < RowsA+ODD_DIM; row++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- if (ODD_DIM) {
-            // When odd dimensions the first column of the first processor is padded with 0's
-            if (row==0) {
-              s_col1[col][0][row] = 0;
-              s_col2[col][0][row] = 0;
-            } else {
-              if ( col == 0 ) {
-                s_col1[col][0][row] = 0;
-              } else {
-                s_col1[col][0][row] = A[row-1][2*col-1];
-              }
-              s_col2[col][0][row] = A[row-1][2*col];
-            }
-          } else {
-            s_col1[col][0][row] = A[row][2*col];
-            s_col2[col][0][row] = A[row][2*col+1];
-          }
-      }
-    }
-
-    sweep_loop: for(int sweepnum = 0; sweepnum < SVDTraits::NUM_SWEEPS; sweepnum++) {
-      step_loop: for(int step = 0; step < NUM_STEPS; step++) {
-        const int INPUT_BANK = ((sweepnum*NUM_STEPS)+step) % BANKS;
-        const int OUTPUT_BANK = ((sweepnum*NUM_STEPS)+step+1) % BANKS;
-
-        // Indepent loop to remove any dependency on the processor loops
-        diag_index_update: for(int px = 0; px < NUM_PROCESSORS; px++) {
-            // #pragma HLS UNROLL FACTOR = SVDTraits::UNROLL_FACTOR
-            if (px==0) {
-              diag1_i[OUTPUT_BANK][px] = diag1_i[INPUT_BANK][px]; // Unchanged
-              diag1_i[OUTPUT_BANK][px+1] = diag2_i[INPUT_BANK][px];
-            } else if (px==NUM_PROCESSORS-1) {
-              diag2_i[OUTPUT_BANK][px] = diag1_i[INPUT_BANK][px];
-              diag2_i[OUTPUT_BANK][px-1] = diag2_i[INPUT_BANK][px];
-            } else {
-              diag1_i[OUTPUT_BANK][px+1] = diag1_i[INPUT_BANK][px];
-              diag2_i[OUTPUT_BANK][px-1] = diag2_i[INPUT_BANK][px];
-            }
-        }
-
-        // Diagonal processor loop
-        // - In a separeate loop as we need the rotations from each diagonal processor before updating the 
-        //   off diagonal values
-        diag_px: for(int px = 0; px < NUM_PROCESSORS; px++) {
-            // IMPLEMENTATION TIP: Additional directives for fully unrolling
-            // #pragma HLS UNROLL FACTOR = SVDTraits::DIAG_UNROLL_FACTOR
-_ssdm_op_SpecPipeline(SVDTraits::DIAG_II, 1, 1, 0, "");
- if (diag1_i[INPUT_BANK][px] < diag2_i[INPUT_BANK][px]) {
-              d1_i = diag1_i[INPUT_BANK][px];
-              d2_i = diag2_i[INPUT_BANK][px];
-              col_swap = false;
-            } else {
-              d2_i = diag1_i[INPUT_BANK][px];
-              d1_i = diag2_i[INPUT_BANK][px];
-              col_swap = true;
-            }
-            // Fetch diagonal inputs; w, x, y, z
-            if ( !col_swap ) {
-              w_in = s_col1[px][INPUT_BANK][d1_i];
-              x_in = s_col2[px][INPUT_BANK][d1_i];
-              y_in = s_col1[px][INPUT_BANK][d2_i];
-              z_in = s_col2[px][INPUT_BANK][d2_i];
-            } else {
-              w_in = s_col2[px][INPUT_BANK][d1_i];
-              x_in = s_col1[px][INPUT_BANK][d1_i];
-              y_in = s_col2[px][INPUT_BANK][d2_i];
-              z_in = s_col1[px][INPUT_BANK][d2_i];
-            }
-            // Diagonal processor
-            if ( ODD_DIM && px == 0 ) {
-              // Column 0 is padded with zeros. w and y for this diagonal group will be 0 so pass through
-              diag_w_out[px] = w_in;
-              diag_x_out[px] = x_in;
-              diag_y_out[px] = y_in;
-              diag_z_out[px] = z_in;
-              uw_new[px] = 1;
-              ux_new[px] = 0;
-              uy_new[px] = 0;
-              uz_new[px] = 1;
-              vw_new[px] = 1;
-              vx_new[px] = 0;
-              vy_new[px] = 0;
-              vz_new[px] = 1;
-            } else {
-              svd2x2(w_in, x_in, y_in, z_in,
-                     uw_new[px], ux_new[px], uy_new[px], uz_new[px],
-                     vw_new[px], vx_new[px], vy_new[px], vz_new[px],
-                     diag_w_out[px], diag_x_out[px], diag_y_out[px], diag_z_out[px]);
-            }
-        }
-
-        // Off-diagonal processors
-        off_diag_px: for(int px = 0; px < NUM_PROCESSORS; px++) {
-          // IMPLEMENTATION TIP: Additional directives for fully unrolling
-          // #pragma HLS UNROLL FACTOR = SVDTraits::UNROLL_FACTOR
-          if (diag1_i[INPUT_BANK][px] < diag2_i[INPUT_BANK][px]) {
-            c1_i = diag1_i[INPUT_BANK][px];
-            c2_i = diag2_i[INPUT_BANK][px];
-            col_swap = false;
-          } else {
-            c2_i = diag1_i[INPUT_BANK][px];
-            c1_i = diag2_i[INPUT_BANK][px];
-            col_swap = true;
-          }
-          // Fetch new U rotations for this column to avoid multiple access to the uX_new arrays
-          uw_new_px = uw_new[px];
-          ux_new_px = ux_new[px];
-          uy_new_px = uy_new[px];
-          uz_new_px = uz_new[px];
-          off_diag_loop: for(int off_px = 0; off_px < NUM_PROCESSORS; off_px++) {
-_ssdm_op_SpecPipeline(SVDTraits::OFF_DIAG_II, 1, 1, 0, "");
- // Inline mm2x2 function to enable resource sharing
-_ssdm_InlineAll(1, "");
- // Additional pragmas sometime required when HLS is unable to identifiy that there are no inter loop dependencies. 
-              // o HLS can identify false dependencies on the column memories between loops. All the outputs in the 
-              //   loop are written to a different memory "bank"/region using the INPUT_BANK and OUTPUT_BANK indices
-              // #pragma HLS dependence variable=s_col1 inter false
-              // #pragma HLS dependence variable=s_col2 inter false
-              // #pragma HLS dependence variable=u_col1 inter false
-              // #pragma HLS dependence variable=u_col2 inter false
-              // #pragma HLS dependence variable=v_col1 inter false
-              // #pragma HLS dependence variable=v_col2 inter false
-
-              // Determine index to use
-              if (diag1_i[INPUT_BANK][off_px] < diag2_i[INPUT_BANK][off_px]) {
-                d1_i = diag1_i[INPUT_BANK][off_px];
-                d2_i = diag2_i[INPUT_BANK][off_px];
-              } else {
-                d2_i = diag1_i[INPUT_BANK][off_px];
-                d1_i = diag2_i[INPUT_BANK][off_px];
-              }
-              // Fetch stored U and V values
-              if (sweepnum == 0 && step == 0) {
-                // First sweep construct identity
-                if (px == off_px) {
-                  uw_in = 1;
-                  ux_in = 0;
-                  uy_in = 0;
-                  uz_in = 1;
-                  vw_in = 1;
-                  vx_in = 0;
-                  vy_in = 0;
-                  vz_in = 1;
-                } else {
-                  uw_in = 0;
-                  ux_in = 0;
-                  uy_in = 0;
-                  uz_in = 0;
-                  vw_in = 0;
-                  vx_in = 0;
-                  vy_in = 0;
-                  vz_in = 0;
-                }
-              } else {
-                // Using the diagonal indexes of the other column processors
-                if ( !col_swap ) {
-                  uw_in = u_col1[px][INPUT_BANK][d1_i];
-                  ux_in = u_col2[px][INPUT_BANK][d1_i];
-                  uy_in = u_col1[px][INPUT_BANK][d2_i];
-                  uz_in = u_col2[px][INPUT_BANK][d2_i];
-                  vw_in = v_col1[px][INPUT_BANK][d1_i];
-                  vx_in = v_col2[px][INPUT_BANK][d1_i];
-                  vy_in = v_col1[px][INPUT_BANK][d2_i];
-                  vz_in = v_col2[px][INPUT_BANK][d2_i];
-                } else {
-                  uw_in = u_col2[px][INPUT_BANK][d1_i];
-                  ux_in = u_col1[px][INPUT_BANK][d1_i];
-                  uy_in = u_col2[px][INPUT_BANK][d2_i];
-                  uz_in = u_col1[px][INPUT_BANK][d2_i];
-                  vw_in = v_col2[px][INPUT_BANK][d1_i];
-                  vx_in = v_col1[px][INPUT_BANK][d1_i];
-                  vy_in = v_col2[px][INPUT_BANK][d2_i];
-                  vz_in = v_col1[px][INPUT_BANK][d2_i];
-                }
-              }
-              // Fetch S values when not overlapping with this columns diagonal
-              if ( off_px != px ) {
-                if ( !col_swap ) {
-                  w_in = s_col1[px][INPUT_BANK][d1_i];
-                  x_in = s_col2[px][INPUT_BANK][d1_i];
-                  y_in = s_col1[px][INPUT_BANK][d2_i];
-                  z_in = s_col2[px][INPUT_BANK][d2_i];
-                } else {
-                  w_in = s_col2[px][INPUT_BANK][d1_i];
-                  x_in = s_col1[px][INPUT_BANK][d1_i];
-                  y_in = s_col2[px][INPUT_BANK][d2_i];
-                  z_in = s_col1[px][INPUT_BANK][d2_i];
-                }
-              } else {
-                // Otherwise use values output by diagonal processor
-                w_in = diag_w_out[px];
-                x_in = diag_x_out[px];
-                y_in = diag_y_out[px];
-                z_in = diag_z_out[px];
-              }
-
-              // Update S values
-              if ( off_px < px ) {
-                // S values must be pre-multiplied with earlier columns new U rotation values before
-                // the V rotations due to this columns processor are applied
-
-                // U must be Hermitian transposed before it is applied to S
-                mm2x2(x_conj(uw_new[off_px]), x_conj(uy_new[off_px]), x_conj(ux_new[off_px]), x_conj(uz_new[off_px]),
-                      w_in, x_in, y_in, z_in,
-                      w_int1, x_int1, y_int1, z_int1);
-              } else {
-                w_int1 = w_in;
-                x_int1 = x_in;
-                y_int1 = y_in;
-                z_int1 = z_in;
-              }
-
-              if ( off_px != px ) {
-                // Non-diagonal S values must be post-multiplied with V rotations
-                mm2x2(w_int1, x_int1, y_int1, z_int1,
-                      vw_new[px], vx_new[px], vy_new[px], vz_new[px],
-                      w_int2, x_int2, y_int2, z_int2);
-              } else {
-                w_int2 = w_int1;
-                x_int2 = x_int1;
-                y_int2 = y_int1;
-                z_int2 = z_int1;
-              }
-
-              if ( off_px > px ) {
-                // S values must be post-multiplied with subsequent columns new U rotation values after
-                // the V rotations due to this columns processor are applied
-
-                // U must be Hermitian transposed before it is applied to S
-                mm2x2(x_conj(uw_new[off_px]), x_conj(uy_new[off_px]), x_conj(ux_new[off_px]), x_conj(uz_new[off_px]),
-                      w_int2, x_int2, y_int2, z_int2,
-                      w_out, x_out, y_out, z_out);
-              } else {
-                w_out = w_int2;
-                x_out = x_int2;
-                y_out = y_int2;
-                z_out = z_int2;
-              }
-
-              // Update U and V values
-              mm2x2(uw_in, ux_in, uy_in, uz_in,
-                    uw_new_px, ux_new_px, uy_new_px, uz_new_px,
-                    uw_out, ux_out, uy_out, uz_out);
-              mm2x2(vw_in, vx_in, vy_in, vz_in,
-                    vw_new[px], vx_new[px], vy_new[px], vz_new[px],
-                    vw_out, vx_out, vy_out, vz_out);
-
-              // If the current indices for this column have required the column sources to be swapped we need to do the
-              // same on the output
-              if ( !col_swap ) {
-                w_out_sel = w_out;
-                x_out_sel = x_out;
-                y_out_sel = y_out;
-                z_out_sel = z_out;
-
-                uw_out_sel = uw_out;
-                ux_out_sel = ux_out;
-                uy_out_sel = uy_out;
-                uz_out_sel = uz_out;
-
-                vw_out_sel = vw_out;
-                vx_out_sel = vx_out;
-                vy_out_sel = vy_out;
-                vz_out_sel = vz_out;
-              } else {
-                w_out_sel = x_out;
-                x_out_sel = w_out;
-                y_out_sel = z_out;
-                z_out_sel = y_out;
-
-                uw_out_sel = ux_out;
-                ux_out_sel = uw_out;
-                uy_out_sel = uz_out;
-                uz_out_sel = uy_out;
-
-                vw_out_sel = vx_out;
-                vx_out_sel = vw_out;
-                vy_out_sel = vz_out;
-                vz_out_sel = vy_out;
-              }
-
-              // Store updated values in the correct column memory
-              if (px==0) {
-                s_col1[px] [OUTPUT_BANK][d1_i] = w_out_sel;
-                s_col1[px+1][OUTPUT_BANK][d1_i] = x_out_sel;
-                s_col1[px] [OUTPUT_BANK][d2_i] = y_out_sel;
-                s_col1[px+1][OUTPUT_BANK][d2_i] = z_out_sel;
-
-                u_col1[px] [OUTPUT_BANK][d1_i] = uw_out_sel;
-                u_col1[px+1][OUTPUT_BANK][d1_i] = ux_out_sel;
-                u_col1[px] [OUTPUT_BANK][d2_i] = uy_out_sel;
-                u_col1[px+1][OUTPUT_BANK][d2_i] = uz_out_sel;
-
-                v_col1[px] [OUTPUT_BANK][d1_i] = vw_out_sel;
-                v_col1[px+1][OUTPUT_BANK][d1_i] = vx_out_sel;
-                v_col1[px] [OUTPUT_BANK][d2_i] = vy_out_sel;
-                v_col1[px+1][OUTPUT_BANK][d2_i] = vz_out_sel;
-              } else if (px==NUM_PROCESSORS-1) {
-                s_col2[px] [OUTPUT_BANK][d1_i] = w_out_sel;
-                s_col2[px-1][OUTPUT_BANK][d1_i] = x_out_sel;
-                s_col2[px] [OUTPUT_BANK][d2_i] = y_out_sel;
-                s_col2[px-1][OUTPUT_BANK][d2_i] = z_out_sel;
-
-                u_col2[px] [OUTPUT_BANK][d1_i] = uw_out_sel;
-                u_col2[px-1][OUTPUT_BANK][d1_i] = ux_out_sel;
-                u_col2[px] [OUTPUT_BANK][d2_i] = uy_out_sel;
-                u_col2[px-1][OUTPUT_BANK][d2_i] = uz_out_sel;
-
-                v_col2[px] [OUTPUT_BANK][d1_i] = vw_out_sel;
-                v_col2[px-1][OUTPUT_BANK][d1_i] = vx_out_sel;
-                v_col2[px] [OUTPUT_BANK][d2_i] = vy_out_sel;
-                v_col2[px-1][OUTPUT_BANK][d2_i] = vz_out_sel;
-              } else {
-                s_col1[px+1][OUTPUT_BANK][d1_i] = w_out_sel;
-                s_col2[px-1][OUTPUT_BANK][d1_i] = x_out_sel;
-                s_col1[px+1][OUTPUT_BANK][d2_i] = y_out_sel;
-                s_col2[px-1][OUTPUT_BANK][d2_i] = z_out_sel;
-
-                u_col1[px+1][OUTPUT_BANK][d1_i] = uw_out_sel;
-                u_col2[px-1][OUTPUT_BANK][d1_i] = ux_out_sel;
-                u_col1[px+1][OUTPUT_BANK][d2_i] = uy_out_sel;
-                u_col2[px-1][OUTPUT_BANK][d2_i] = uz_out_sel;
-
-                v_col1[px+1][OUTPUT_BANK][d1_i] = vw_out_sel;
-                v_col2[px-1][OUTPUT_BANK][d1_i] = vx_out_sel;
-                v_col1[px+1][OUTPUT_BANK][d2_i] = vy_out_sel;
-                v_col2[px-1][OUTPUT_BANK][d2_i] = vz_out_sel;
-              }
-          }
-        }
-      }
-    }
-    // Transfer results
-    col_store: for(int col=0;col < NUM_PROCESSORS;col++){
-      row_store: for(int row=0;row < RowsA; row++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
- if (ODD_DIM) {
-            if ( col != 0 ) {
-              S[row][2*col-1] = s_col1[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row+1];
-              U[row][2*col-1] = u_col1[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row+1];
-              V[row][2*col-1] = v_col1[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row+1];
-            }
-            S[row][2*col] = s_col2[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row+1];
-            U[row][2*col] = u_col2[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row+1];
-            V[row][2*col] = v_col2[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row+1];
-          } else {
-            S[row][2*col] = s_col1[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row];
-            S[row][2*col+1] = s_col2[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row];
-            U[row][2*col] = u_col1[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row];
-            U[row][2*col+1] = u_col2[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row];
-            V[row][2*col] = v_col1[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row];
-            V[row][2*col+1] = v_col2[col][(SVDTraits::NUM_SWEEPS*(NUM_STEPS)) % BANKS][row];
-          }
-      }
-    }
-  }
-
-  // ===================================================================================================================
-  // SVD_TOP: Top level function that selects implementation architecture and internal types based on the 
-  // traits class provided via the SVDTraits template parameter.
-  // o Call this function directly if you wish to override the default architecture choice or internal types
-  template<
-    int RowsA,
-    int ColsA,
-    class SVDTraits,
-    typename InputType,
-    typename OutputType>
-  void svd_top( const InputType A[RowsA][ColsA],
-                      OutputType S[RowsA][ColsA],
-                      OutputType U[RowsA][RowsA],
-                      OutputType V[ColsA][ColsA] ) {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
-    switch(SVDTraits::ARCH) {
-    case 0:
-      svd_basic<RowsA,ColsA,SVDTraits,InputType,OutputType>(A,S,U,V);
-      break;
-    case 1:
-      svd_pairs<RowsA,ColsA,SVDTraits,InputType,OutputType>(A,S,U,V);
-      break;
-    default:
-      svd_basic<RowsA,ColsA,SVDTraits,InputType,OutputType>(A,S,U,V);
-      break;
-    }
-  }
-
-  // ===================================================================================================================
-  // SVD: Entry point function
-  // Template parameters:
-  //  - RowsA      : Row dimension
-  //  - ColsA      : Column dimension
-  //  - InputType  : Input data type
-  //  - OutputType : Output data type
-  // Arguments:
-  //  - A          : Input matrix
-  //  - S          : Singular values of input matrix
-  //  - U          : Left singular vectors of input matrix
-  //  - V          : Right singular vectors of input matrix
-  template<
-    int RowsA,
-    int ColsA,
-    typename InputType,
-    typename OutputType>
-  void svd( const InputType A[RowsA][ColsA],
-                  OutputType S[RowsA][ColsA],
-                  OutputType U[RowsA][RowsA],
-                  OutputType V[ColsA][ColsA] ) {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
-    typedef svd_traits<RowsA,ColsA,InputType,OutputType> DEFAULT_SVD_TRAITS;
-    svd_top<RowsA,ColsA,DEFAULT_SVD_TRAITS,InputType,OutputType>(A,S,U,V);
-  }
-}
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 50 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls_linear_algebra.h" 2
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 13 "./pca.h" 2
-
-# 1 "./svd.h" 1
-
-
-
-# 1 "./dut.h" 1
-//===========================================================================
-// dut.h
-//===========================================================================
-// @brief: This header file defines the interface for the core functions.
-
-
-
-
-
-
-
-# 1 "./pca.h" 1
-//===========================================================================
-// pca.h
-//===========================================================================
-// @brief: TODO
-# 10 "./dut.h" 2
-
-
-// Top function for synthesis
-void dut (
-  hls::stream<float> &strm_in,
-  hls::stream<float> &strm_out
-);
-
-void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
-void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out);
-# 5 "./svd.h" 2
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/ap_fixed.h" 1
-
-
-
-// XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 6 "./svd.h" 2
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 1 3
-// The template and inlines for the -*- C++ -*- complex number classes.
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/complex
- *  This is a Standard C++ Library header.
- */
-
-//
-// ISO C++ 14882: 26.2  Complex Numbers
-// Note: this is not a conforming implementation.
-// Initially implemented by Ulrich Drepper <drepper@cygnus.com>
-// Improved by Gabriel Dos Reis <dosreis@cmla.ens-cachan.fr>
-//
-# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
-
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3
-// -*- C++ -*- C forwarding header.
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/cmath
- *  This is a Standard C++ Library file.  You should @c \#include this file
- *  in your programs, rather than any of the @a *.h implementation files.
- *
- *  This is the C++ version of the Standard C Library header @c math.h,
- *  and its contents are (mostly) the same as that header, but are all
- *  contained in the namespace @c std (except for names which are defined
- *  as macros in C).
- */
-
-//
-// ISO C++ 14882: 26.5  C library
-//
-# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-# 50 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-// Get rid of those macros defined in <math.h> in lieu of real functions.
-# 76 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  inline double
-  abs(double __x)
-  { return __builtin_fabs(__x); }
-
-  inline float
-  abs(float __x)
-  { return __builtin_fabsf(__x); }
-
-  inline long double
-  abs(long double __x)
-  { return __builtin_fabsl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    abs(_Tp __x)
-    { return __builtin_fabs(__x); }
-
-  using ::acos;
-
-  inline float
-  acos(float __x)
-  { return __builtin_acosf(__x); }
-
-  inline long double
-  acos(long double __x)
-  { return __builtin_acosl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    acos(_Tp __x)
-    { return __builtin_acos(__x); }
-
-  using ::asin;
-
-  inline float
-  asin(float __x)
-  { return __builtin_asinf(__x); }
-
-  inline long double
-  asin(long double __x)
-  { return __builtin_asinl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    asin(_Tp __x)
-    { return __builtin_asin(__x); }
-
-  using ::atan;
-
-  inline float
-  atan(float __x)
-  { return __builtin_atanf(__x); }
-
-  inline long double
-  atan(long double __x)
-  { return __builtin_atanl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    atan(_Tp __x)
-    { return __builtin_atan(__x); }
-
-  using ::atan2;
-
-  inline float
-  atan2(float __y, float __x)
-  { return __builtin_atan2f(__y, __x); }
-
-  inline long double
-  atan2(long double __y, long double __x)
-  { return __builtin_atan2l(__y, __x); }
-
-  template<typename _Tp, typename _Up>
-    inline
-    typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
-    atan2(_Tp __y, _Up __x)
-    {
-      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
-      return atan2(__type(__y), __type(__x));
-    }
-
-  using ::ceil;
-
-  inline float
-  ceil(float __x)
-  { return __builtin_ceilf(__x); }
-
-  inline long double
-  ceil(long double __x)
-  { return __builtin_ceill(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    ceil(_Tp __x)
-    { return __builtin_ceil(__x); }
-
-  using ::cos;
-
-  inline float
-  cos(float __x)
-  { return __builtin_cosf(__x); }
-
-  inline long double
-  cos(long double __x)
-  { return __builtin_cosl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    cos(_Tp __x)
-    { return __builtin_cos(__x); }
-
-  using ::cosh;
-
-  inline float
-  cosh(float __x)
-  { return __builtin_coshf(__x); }
-
-  inline long double
-  cosh(long double __x)
-  { return __builtin_coshl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    cosh(_Tp __x)
-    { return __builtin_cosh(__x); }
-
-  using ::exp;
-
-  inline float
-  exp(float __x)
-  { return __builtin_expf(__x); }
-
-  inline long double
-  exp(long double __x)
-  { return __builtin_expl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    exp(_Tp __x)
-    { return __builtin_exp(__x); }
-
-  using ::fabs;
-
-  inline float
-  fabs(float __x)
-  { return __builtin_fabsf(__x); }
-
-  inline long double
-  fabs(long double __x)
-  { return __builtin_fabsl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    fabs(_Tp __x)
-    { return __builtin_fabs(__x); }
-
-  using ::floor;
-
-  inline float
-  floor(float __x)
-  { return __builtin_floorf(__x); }
-
-  inline long double
-  floor(long double __x)
-  { return __builtin_floorl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    floor(_Tp __x)
-    { return __builtin_floor(__x); }
-
-  using ::fmod;
-
-  inline float
-  fmod(float __x, float __y)
-  { return __builtin_fmodf(__x, __y); }
-
-  inline long double
-  fmod(long double __x, long double __y)
-  { return __builtin_fmodl(__x, __y); }
-
-  using ::frexp;
-
-  inline float
-  frexp(float __x, int* __exp)
-  { return __builtin_frexpf(__x, __exp); }
-
-  inline long double
-  frexp(long double __x, int* __exp)
-  { return __builtin_frexpl(__x, __exp); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    frexp(_Tp __x, int* __exp)
-    { return __builtin_frexp(__x, __exp); }
-
-  using ::ldexp;
-
-  inline float
-  ldexp(float __x, int __exp)
-  { return __builtin_ldexpf(__x, __exp); }
-
-  inline long double
-  ldexp(long double __x, int __exp)
-  { return __builtin_ldexpl(__x, __exp); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-  ldexp(_Tp __x, int __exp)
-  { return __builtin_ldexp(__x, __exp); }
-
-  using ::log;
-
-  inline float
-  log(float __x)
-  { return __builtin_logf(__x); }
-
-  inline long double
-  log(long double __x)
-  { return __builtin_logl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    log(_Tp __x)
-    { return __builtin_log(__x); }
-
-  using ::log10;
-
-  inline float
-  log10(float __x)
-  { return __builtin_log10f(__x); }
-
-  inline long double
-  log10(long double __x)
-  { return __builtin_log10l(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    log10(_Tp __x)
-    { return __builtin_log10(__x); }
-
-  using ::modf;
-
-  inline float
-  modf(float __x, float* __iptr)
-  { return __builtin_modff(__x, __iptr); }
-
-  inline long double
-  modf(long double __x, long double* __iptr)
-  { return __builtin_modfl(__x, __iptr); }
-
-  using ::pow;
-
-  inline float
-  pow(float __x, float __y)
-  { return __builtin_powf(__x, __y); }
-
-  inline long double
-  pow(long double __x, long double __y)
-  { return __builtin_powl(__x, __y); }
-
-
-  // _GLIBCXX_RESOLVE_LIB_DEFECTS
-  // DR 550. What should the return type of pow(float,int) be?
-  inline double
-  pow(double __x, int __i)
-  { return __builtin_powi(__x, __i); }
-
-  inline float
-  pow(float __x, int __n)
-  { return __builtin_powif(__x, __n); }
-
-  inline long double
-  pow(long double __x, int __n)
-  { return __builtin_powil(__x, __n); }
-
-
-  template<typename _Tp, typename _Up>
-    inline
-    typename __gnu_cxx::__promote_2<_Tp, _Up>::__type
-    pow(_Tp __x, _Up __y)
-    {
-      typedef typename __gnu_cxx::__promote_2<_Tp, _Up>::__type __type;
-      return pow(__type(__x), __type(__y));
-    }
-
-  using ::sin;
-
-  inline float
-  sin(float __x)
-  { return __builtin_sinf(__x); }
-
-  inline long double
-  sin(long double __x)
-  { return __builtin_sinl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    sin(_Tp __x)
-    { return __builtin_sin(__x); }
-
-  using ::sinh;
-
-  inline float
-  sinh(float __x)
-  { return __builtin_sinhf(__x); }
-
-  inline long double
-  sinh(long double __x)
-  { return __builtin_sinhl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    sinh(_Tp __x)
-    { return __builtin_sinh(__x); }
-
-  using ::sqrt;
-
-  inline float
-  sqrt(float __x)
-  { return __builtin_sqrtf(__x); }
-
-  inline long double
-  sqrt(long double __x)
-  { return __builtin_sqrtl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    sqrt(_Tp __x)
-    { return __builtin_sqrt(__x); }
-
-  using ::tan;
-
-  inline float
-  tan(float __x)
-  { return __builtin_tanf(__x); }
-
-  inline long double
-  tan(long double __x)
-  { return __builtin_tanl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    tan(_Tp __x)
-    { return __builtin_tan(__x); }
-
-  using ::tanh;
-
-  inline float
-  tanh(float __x)
-  { return __builtin_tanhf(__x); }
-
-  inline long double
-  tanh(long double __x)
-  { return __builtin_tanhl(__x); }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_integer<_Tp>::__value,
-        double>::__type
-    tanh(_Tp __x)
-    { return __builtin_tanh(__x); }
-
-
-} // namespace
-
-
-
-
-// These are possible macros imported from C99-land.
-# 480 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-# 730 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3
- template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    fpclassify(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_fpclassify(0, 1, 4,
-      3, 2, __type(__f));
-    }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isfinite(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isfinite(__type(__f));
-    }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isinf(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isinf(__type(__f));
-    }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isnan(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isnan(__type(__f));
-    }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isnormal(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isnormal(__type(__f));
-    }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    signbit(_Tp __f)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_signbit(__type(__f));
-    }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isgreater(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isgreater(__type(__f1), __type(__f2));
-    }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isgreaterequal(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isgreaterequal(__type(__f1), __type(__f2));
-    }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isless(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isless(__type(__f1), __type(__f2));
-    }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    islessequal(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_islessequal(__type(__f1), __type(__f2));
-    }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    islessgreater(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_islessgreater(__type(__f1), __type(__f2));
-    }
-
-  template<typename _Tp>
-    inline typename __gnu_cxx::__enable_if<__is_arithmetic<_Tp>::__value,
-        int>::__type
-    isunordered(_Tp __f1, _Tp __f2)
-    {
-      typedef typename __gnu_cxx::__promote<_Tp>::__type __type;
-      return __builtin_isunordered(__type(__f1), __type(__f2));
-    }
-
-
-
-
-} // namespace
-# 46 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 1 3
-// String based streams -*- C++ -*-
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file include/sstream
- *  This is a Standard C++ Library header.
- */
-
-//
-// ISO C++ 14882: 27.7  String-based streams
-//
-# 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 3
-
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  // [27.7.1] template class basic_stringbuf
-  /**
-   *  @brief  The actual work of input and output (for std::string).
-   *  @ingroup io
-   *
-   *  This class associates either or both of its input and output sequences
-   *  with a sequence of characters, which can be initialized from, or made
-   *  available as, a @c std::basic_string.  (Paraphrased from [27.7.1]/1.)
-   *
-   *  For this class, open modes (of type @c ios_base::openmode) have
-   *  @c in set if the input sequence can be read, and @c out set if the
-   *  output sequence can be written.
-  */
-  template<typename _CharT, typename _Traits, typename _Alloc>
-    class basic_stringbuf : public basic_streambuf<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 251. basic_stringbuf missing allocator_type
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
-      typedef basic_string<char_type, _Traits, _Alloc> __string_type;
-      typedef typename __string_type::size_type __size_type;
-
-    protected:
-      /// Place to stash in || out || in | out settings for current stringbuf.
-      ios_base::openmode _M_mode;
-
-      // Data Members:
-      __string_type _M_string;
-
-    public:
-      // Constructors:
-      /**
-       *  @brief  Starts with an empty string buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  The default constructor initializes the parent class using its
-       *  own default ctor.
-      */
-      explicit
-      basic_stringbuf(ios_base::openmode __mode = ios_base::in | ios_base::out)
-      : __streambuf_type(), _M_mode(__mode), _M_string()
-      { }
-
-      /**
-       *  @brief  Starts with an existing string buffer.
-       *  @param  str  A string to copy as a starting buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  This constructor initializes the parent class using its
-       *  own default ctor.
-      */
-      explicit
-      basic_stringbuf(const __string_type& __str,
-        ios_base::openmode __mode = ios_base::in | ios_base::out)
-      : __streambuf_type(), _M_mode(), _M_string(__str.data(), __str.size())
-      { _M_stringbuf_init(__mode); }
-
-      // Get and set:
-      /**
-       *  @brief  Copying out the string buffer.
-       *  @return  A copy of one of the underlying sequences.
-       *
-       *  <em>If the buffer is only created in input mode, the underlying
-       *  character sequence is equal to the input sequence; otherwise, it
-       *  is equal to the output sequence.</em> [27.7.1.2]/1
-      */
-      __string_type
-      str() const
-      {
- __string_type __ret;
- if (this->pptr())
-   {
-     // The current egptr() may not be the actual string end.
-     if (this->pptr() > this->egptr())
-       __ret = __string_type(this->pbase(), this->pptr());
-     else
-        __ret = __string_type(this->pbase(), this->egptr());
-   }
- else
-   __ret = _M_string;
- return __ret;
-      }
-
-      /**
-       *  @brief  Setting a new buffer.
-       *  @param  s  The string to use as a new sequence.
-       *
-       *  Deallocates any previous stored sequence, then copies @a s to
-       *  use as a new one.
-      */
-      void
-      str(const __string_type& __s)
-      {
- // Cannot use _M_string = __s, since v3 strings are COW.
- _M_string.assign(__s.data(), __s.size());
- _M_stringbuf_init(_M_mode);
-      }
-
-    protected:
-      // Common initialization code goes here.
-      void
-      _M_stringbuf_init(ios_base::openmode __mode)
-      {
- _M_mode = __mode;
- __size_type __len = 0;
- if (_M_mode & (ios_base::ate | ios_base::app))
-   __len = _M_string.size();
- _M_sync(const_cast<char_type*>(_M_string.data()), 0, __len);
-      }
-
-      virtual streamsize
-      showmanyc()
-      {
- streamsize __ret = -1;
- if (_M_mode & ios_base::in)
-   {
-     _M_update_egptr();
-     __ret = this->egptr() - this->gptr();
-   }
- return __ret;
-      }
-
-      virtual int_type
-      underflow();
-
-      virtual int_type
-      pbackfail(int_type __c = traits_type::eof());
-
-      virtual int_type
-      overflow(int_type __c = traits_type::eof());
-
-      /**
-       *  @brief  Manipulates the buffer.
-       *  @param  s  Pointer to a buffer area.
-       *  @param  n  Size of @a s.
-       *  @return  @c this
-       *
-       *  If no buffer has already been created, and both @a s and @a n are
-       *  non-zero, then @c s is used as a buffer; see
-       *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/bk01pt11ch25s02.html
-       *  for more.
-      */
-      virtual __streambuf_type*
-      setbuf(char_type* __s, streamsize __n)
-      {
- if (__s && __n >= 0)
-   {
-     // This is implementation-defined behavior, and assumes
-     // that an external char_type array of length __n exists
-     // and has been pre-allocated. If this is not the case,
-     // things will quickly blow up.
-
-     // Step 1: Destroy the current internal array.
-     _M_string.clear();
-
-     // Step 2: Use the external array.
-     _M_sync(__s, __n, 0);
-   }
- return this;
-      }
-
-      virtual pos_type
-      seekoff(off_type __off, ios_base::seekdir __way,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-
-      virtual pos_type
-      seekpos(pos_type __sp,
-       ios_base::openmode __mode = ios_base::in | ios_base::out);
-
-      // Internal function for correctly updating the internal buffer
-      // for a particular _M_string, due to initialization or re-sizing
-      // of an existing _M_string.
-      void
-      _M_sync(char_type* __base, __size_type __i, __size_type __o);
-
-      // Internal function for correctly updating egptr() to the actual
-      // string end.
-      void
-      _M_update_egptr()
-      {
- const bool __testin = _M_mode & ios_base::in;
- if (this->pptr() && this->pptr() > this->egptr())
-   {
-     if (__testin)
-       this->setg(this->eback(), this->gptr(), this->pptr());
-     else
-       this->setg(this->pptr(), this->pptr(), this->pptr());
-   }
-      }
-
-      // Works around the issue with pbump, part of the protected
-      // interface of basic_streambuf, taking just an int.
-      void
-      _M_pbump(char_type* __pbeg, char_type* __pend, off_type __off);
-    };
-
-
-  // [27.7.2] Template class basic_istringstream
-  /**
-   *  @brief  Controlling input for std::string.
-   *  @ingroup io
-   *
-   *  This class supports reading from objects of type std::basic_string,
-   *  using the inherited functions from std::basic_istream.  To control
-   *  the associated sequence, an instance of std::basic_stringbuf is used,
-   *  which this page refers to as @c sb.
-  */
-  template<typename _CharT, typename _Traits, typename _Alloc>
-    class basic_istringstream : public basic_istream<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 251. basic_stringbuf missing allocator_type
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      // Non-standard types:
-      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
-      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
-      typedef basic_istream<char_type, traits_type> __istream_type;
-
-    private:
-      __stringbuf_type _M_stringbuf;
-
-    public:
-      // Constructors:
-      /**
-       *  @brief  Default constructor starts with an empty string buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  @c ios_base::in is automatically included in @a mode.
-       *
-       *  Initializes @c sb using @c mode|in, and passes @c &sb to the base
-       *  class initializer.  Does not allocate any buffer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_istringstream(ios_base::openmode __mode = ios_base::in)
-      : __istream_type(), _M_stringbuf(__mode | ios_base::in)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  Starts with an existing string buffer.
-       *  @param  str  A string to copy as a starting buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  @c ios_base::in is automatically included in @a mode.
-       *
-       *  Initializes @c sb using @a str and @c mode|in, and passes @c &sb
-       *  to the base class initializer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_istringstream(const __string_type& __str,
-     ios_base::openmode __mode = ios_base::in)
-      : __istream_type(), _M_stringbuf(__str, __mode | ios_base::in)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The buffer is deallocated by the stringbuf object, not the
-       *  formatting stream.
-      */
-      ~basic_istringstream()
-      { }
-
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_stringbuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-      */
-      __stringbuf_type*
-      rdbuf() const
-      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
-
-      /**
-       *  @brief  Copying out the string buffer.
-       *  @return  @c rdbuf()->str()
-      */
-      __string_type
-      str() const
-      { return _M_stringbuf.str(); }
-
-      /**
-       *  @brief  Setting a new buffer.
-       *  @param  s  The string to use as a new sequence.
-       *
-       *  Calls @c rdbuf()->str(s).
-      */
-      void
-      str(const __string_type& __s)
-      { _M_stringbuf.str(__s); }
-    };
-
-
-  // [27.7.3] Template class basic_ostringstream
-  /**
-   *  @brief  Controlling output for std::string.
-   *  @ingroup io
-   *
-   *  This class supports writing to objects of type std::basic_string,
-   *  using the inherited functions from std::basic_ostream.  To control
-   *  the associated sequence, an instance of std::basic_stringbuf is used,
-   *  which this page refers to as @c sb.
-  */
-  template <typename _CharT, typename _Traits, typename _Alloc>
-    class basic_ostringstream : public basic_ostream<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 251. basic_stringbuf missing allocator_type
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      // Non-standard types:
-      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
-      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
-      typedef basic_ostream<char_type, traits_type> __ostream_type;
-
-    private:
-      __stringbuf_type _M_stringbuf;
-
-    public:
-      // Constructors/destructor:
-      /**
-       *  @brief  Default constructor starts with an empty string buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  @c ios_base::out is automatically included in @a mode.
-       *
-       *  Initializes @c sb using @c mode|out, and passes @c &sb to the base
-       *  class initializer.  Does not allocate any buffer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_ostringstream(ios_base::openmode __mode = ios_base::out)
-      : __ostream_type(), _M_stringbuf(__mode | ios_base::out)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  Starts with an existing string buffer.
-       *  @param  str  A string to copy as a starting buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  @c ios_base::out is automatically included in @a mode.
-       *
-       *  Initializes @c sb using @a str and @c mode|out, and passes @c &sb
-       *  to the base class initializer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_ostringstream(const __string_type& __str,
-     ios_base::openmode __mode = ios_base::out)
-      : __ostream_type(), _M_stringbuf(__str, __mode | ios_base::out)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The buffer is deallocated by the stringbuf object, not the
-       *  formatting stream.
-      */
-      ~basic_ostringstream()
-      { }
-
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_stringbuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-      */
-      __stringbuf_type*
-      rdbuf() const
-      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
-
-      /**
-       *  @brief  Copying out the string buffer.
-       *  @return  @c rdbuf()->str()
-      */
-      __string_type
-      str() const
-      { return _M_stringbuf.str(); }
-
-      /**
-       *  @brief  Setting a new buffer.
-       *  @param  s  The string to use as a new sequence.
-       *
-       *  Calls @c rdbuf()->str(s).
-      */
-      void
-      str(const __string_type& __s)
-      { _M_stringbuf.str(__s); }
-    };
-
-
-  // [27.7.4] Template class basic_stringstream
-  /**
-   *  @brief  Controlling input and output for std::string.
-   *  @ingroup io
-   *
-   *  This class supports reading from and writing to objects of type
-   *  std::basic_string, using the inherited functions from
-   *  std::basic_iostream.  To control the associated sequence, an instance
-   *  of std::basic_stringbuf is used, which this page refers to as @c sb.
-  */
-  template <typename _CharT, typename _Traits, typename _Alloc>
-    class basic_stringstream : public basic_iostream<_CharT, _Traits>
-    {
-    public:
-      // Types:
-      typedef _CharT char_type;
-      typedef _Traits traits_type;
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 251. basic_stringbuf missing allocator_type
-      typedef _Alloc allocator_type;
-      typedef typename traits_type::int_type int_type;
-      typedef typename traits_type::pos_type pos_type;
-      typedef typename traits_type::off_type off_type;
-
-      // Non-standard Types:
-      typedef basic_string<_CharT, _Traits, _Alloc> __string_type;
-      typedef basic_stringbuf<_CharT, _Traits, _Alloc> __stringbuf_type;
-      typedef basic_iostream<char_type, traits_type> __iostream_type;
-
-    private:
-      __stringbuf_type _M_stringbuf;
-
-    public:
-      // Constructors/destructors
-      /**
-       *  @brief  Default constructor starts with an empty string buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  Initializes @c sb using @c mode, and passes @c &sb to the base
-       *  class initializer.  Does not allocate any buffer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_stringstream(ios_base::openmode __m = ios_base::out | ios_base::in)
-      : __iostream_type(), _M_stringbuf(__m)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  Starts with an existing string buffer.
-       *  @param  str  A string to copy as a starting buffer.
-       *  @param  mode  Whether the buffer can read, or write, or both.
-       *
-       *  Initializes @c sb using @a str and @c mode, and passes @c &sb
-       *  to the base class initializer.
-       *
-       *  That's a lie.  We initialize the base class with NULL, because the
-       *  string class does its own memory management.
-      */
-      explicit
-      basic_stringstream(const __string_type& __str,
-    ios_base::openmode __m = ios_base::out | ios_base::in)
-      : __iostream_type(), _M_stringbuf(__str, __m)
-      { this->init(&_M_stringbuf); }
-
-      /**
-       *  @brief  The destructor does nothing.
-       *
-       *  The buffer is deallocated by the stringbuf object, not the
-       *  formatting stream.
-      */
-      ~basic_stringstream()
-      { }
-
-      // Members:
-      /**
-       *  @brief  Accessing the underlying buffer.
-       *  @return  The current basic_stringbuf buffer.
-       *
-       *  This hides both signatures of std::basic_ios::rdbuf().
-      */
-      __stringbuf_type*
-      rdbuf() const
-      { return const_cast<__stringbuf_type*>(&_M_stringbuf); }
-
-      /**
-       *  @brief  Copying out the string buffer.
-       *  @return  @c rdbuf()->str()
-      */
-      __string_type
-      str() const
-      { return _M_stringbuf.str(); }
-
-      /**
-       *  @brief  Setting a new buffer.
-       *  @param  s  The string to use as a new sequence.
-       *
-       *  Calls @c rdbuf()->str(s).
-      */
-      void
-      str(const __string_type& __s)
-      { _M_stringbuf.str(__s); }
-    };
-
-
-} // namespace
-
-
-
-# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 1 3
-// String based streams -*- C++ -*-
-
-// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
-// 2006, 2007, 2008, 2009, 2010, 2011
-// Free Software Foundation, Inc.
-//
-// This file is part of the GNU ISO C++ Library.  This library is free
-// software; you can redistribute it and/or modify it under the
-// terms of the GNU General Public License as published by the
-// Free Software Foundation; either version 3, or (at your option)
-// any later version.
-
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// Under Section 7 of GPL version 3, you are granted additional
-// permissions described in the GCC Runtime Library Exception, version
-// 3.1, as published by the Free Software Foundation.
-
-// You should have received a copy of the GNU General Public License and
-// a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
-// <http://www.gnu.org/licenses/>.
-
-/** @file bits/sstream.tcc
- *  This is an internal header file, included by other library headers.
- *  Do not attempt to use it directly. @headername{sstream}
- */
-
-//
-// ISO C++ 14882: 27.7  String-based streams
-//
-# 39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/sstream.tcc" 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    pbackfail(int_type __c)
-    {
-      int_type __ret = traits_type::eof();
-      if (this->eback() < this->gptr())
- {
-   // Try to put back __c into input sequence in one of three ways.
-   // Order these tests done in is unspecified by the standard.
-   const bool __testeof = traits_type::eq_int_type(__c, __ret);
-   if (!__testeof)
-     {
-       const bool __testeq = traits_type::eq(traits_type::
-          to_char_type(__c),
-          this->gptr()[-1]);
-       const bool __testout = this->_M_mode & ios_base::out;
-       if (__testeq || __testout)
-  {
-    this->gbump(-1);
-    if (!__testeq)
-      *this->gptr() = traits_type::to_char_type(__c);
-    __ret = __c;
-  }
-     }
-   else
-     {
-       this->gbump(-1);
-       __ret = traits_type::not_eof(__c);
-     }
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    overflow(int_type __c)
-    {
-      const bool __testout = this->_M_mode & ios_base::out;
-      if (__builtin_expect(!__testout, false))
- return traits_type::eof();
-
-      const bool __testeof = traits_type::eq_int_type(__c, traits_type::eof());
-      if (__builtin_expect(__testeof, false))
- return traits_type::not_eof(__c);
-
-      const __size_type __capacity = _M_string.capacity();
-      const __size_type __max_size = _M_string.max_size();
-      const bool __testput = this->pptr() < this->epptr();
-      if (__builtin_expect(!__testput && __capacity == __max_size, false))
- return traits_type::eof();
-
-      // Try to append __c into output sequence in one of two ways.
-      // Order these tests done in is unspecified by the standard.
-      const char_type __conv = traits_type::to_char_type(__c);
-      if (!__testput)
- {
-   // NB: Start ostringstream buffers at 512 chars.  This is an
-   // experimental value (pronounced "arbitrary" in some of the
-   // hipper English-speaking countries), and can be changed to
-   // suit particular needs.
-   //
-   // _GLIBCXX_RESOLVE_LIB_DEFECTS
-   // 169. Bad efficiency of overflow() mandated
-   // 432. stringbuf::overflow() makes only one write position
-   //      available
-   const __size_type __opt_len = std::max(__size_type(2 * __capacity),
-       __size_type(512));
-   const __size_type __len = std::min(__opt_len, __max_size);
-   __string_type __tmp;
-   __tmp.reserve(__len);
-   if (this->pbase())
-     __tmp.assign(this->pbase(), this->epptr() - this->pbase());
-   __tmp.push_back(__conv);
-   _M_string.swap(__tmp);
-   _M_sync(const_cast<char_type*>(_M_string.data()),
-    this->gptr() - this->eback(), this->pptr() - this->pbase());
- }
-      else
- *this->pptr() = __conv;
-      this->pbump(1);
-      return __c;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::int_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    underflow()
-    {
-      int_type __ret = traits_type::eof();
-      const bool __testin = this->_M_mode & ios_base::in;
-      if (__testin)
- {
-   // Update egptr() to match the actual string end.
-   _M_update_egptr();
-
-   if (this->gptr() < this->egptr())
-     __ret = traits_type::to_int_type(*this->gptr());
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::pos_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode __mode)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      bool __testin = (ios_base::in & this->_M_mode & __mode) != 0;
-      bool __testout = (ios_base::out & this->_M_mode & __mode) != 0;
-      const bool __testboth = __testin && __testout && __way != ios_base::cur;
-      __testin &= !(__mode & ios_base::out);
-      __testout &= !(__mode & ios_base::in);
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // 453. basic_stringbuf::seekoff need not always fail for an empty stream.
-      const char_type* __beg = __testin ? this->eback() : this->pbase();
-      if ((__beg || !__off) && (__testin || __testout || __testboth))
- {
-   _M_update_egptr();
-
-   off_type __newoffi = __off;
-   off_type __newoffo = __newoffi;
-   if (__way == ios_base::cur)
-     {
-       __newoffi += this->gptr() - __beg;
-       __newoffo += this->pptr() - __beg;
-     }
-   else if (__way == ios_base::end)
-     __newoffo = __newoffi += this->egptr() - __beg;
-
-   if ((__testin || __testboth)
-       && __newoffi >= 0
-       && this->egptr() - __beg >= __newoffi)
-     {
-       this->setg(this->eback(), this->eback() + __newoffi,
-    this->egptr());
-       __ret = pos_type(__newoffi);
-     }
-   if ((__testout || __testboth)
-       && __newoffo >= 0
-       && this->egptr() - __beg >= __newoffo)
-     {
-       _M_pbump(this->pbase(), this->epptr(), __newoffo);
-       __ret = pos_type(__newoffo);
-     }
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    typename basic_stringbuf<_CharT, _Traits, _Alloc>::pos_type
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    seekpos(pos_type __sp, ios_base::openmode __mode)
-    {
-      pos_type __ret = pos_type(off_type(-1));
-      const bool __testin = (ios_base::in & this->_M_mode & __mode) != 0;
-      const bool __testout = (ios_base::out & this->_M_mode & __mode) != 0;
-
-      const char_type* __beg = __testin ? this->eback() : this->pbase();
-      if ((__beg || !off_type(__sp)) && (__testin || __testout))
- {
-   _M_update_egptr();
-
-   const off_type __pos(__sp);
-   const bool __testpos = (0 <= __pos
-      && __pos <= this->egptr() - __beg);
-   if (__testpos)
-     {
-       if (__testin)
-  this->setg(this->eback(), this->eback() + __pos,
-      this->egptr());
-       if (__testout)
-  _M_pbump(this->pbase(), this->epptr(), __pos);
-       __ret = __sp;
-     }
- }
-      return __ret;
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    void
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    _M_sync(char_type* __base, __size_type __i, __size_type __o)
-    {
-      const bool __testin = _M_mode & ios_base::in;
-      const bool __testout = _M_mode & ios_base::out;
-      char_type* __endg = __base + _M_string.size();
-      char_type* __endp = __base + _M_string.capacity();
-
-      if (__base != _M_string.data())
- {
-   // setbuf: __i == size of buffer area (_M_string.size() == 0).
-   __endg += __i;
-   __i = 0;
-   __endp = __endg;
- }
-
-      if (__testin)
- this->setg(__base, __base + __i, __endg);
-      if (__testout)
- {
-   _M_pbump(__base, __endp, __o);
-   // egptr() always tracks the string end.  When !__testin,
-   // for the correct functioning of the streambuf inlines
-   // the other get area pointers are identical.
-   if (!__testin)
-     this->setg(__endg, __endg, __endg);
- }
-    }
-
-  template <class _CharT, class _Traits, class _Alloc>
-    void
-    basic_stringbuf<_CharT, _Traits, _Alloc>::
-    _M_pbump(char_type* __pbeg, char_type* __pend, off_type __off)
-    {
-      this->setp(__pbeg, __pend);
-      while (__off > __gnu_cxx::__numeric_traits<int>::__max)
- {
-   this->pbump(__gnu_cxx::__numeric_traits<int>::__max);
-   __off -= __gnu_cxx::__numeric_traits<int>::__max;
- }
-      this->pbump(__off);
-    }
-
-  // Inhibit implicit instantiations for required instantiations,
-  // which are defined via explicit instantiations elsewhere.
-
-  extern template class basic_stringbuf<char>;
-  extern template class basic_istringstream<char>;
-  extern template class basic_ostringstream<char>;
-  extern template class basic_stringstream<char>;
-
-
-  extern template class basic_stringbuf<wchar_t>;
-  extern template class basic_istringstream<wchar_t>;
-  extern template class basic_ostringstream<wchar_t>;
-  extern template class basic_stringstream<wchar_t>;
-
-
-
-
-} // namespace std
-# 580 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/sstream" 2 3
-# 47 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  /**
-   * @defgroup complex_numbers Complex Numbers
-   * @ingroup numerics
-   *
-   * Classes and functions for complex numbers.
-   * @{
-   */
-
-  // Forward declarations.
-  template<typename _Tp> class complex;
-  template<> class complex<float>;
-  template<> class complex<double>;
-  template<> class complex<long double>;
-
-  ///  Return magnitude of @a z.
-  template<typename _Tp> _Tp abs(const complex<_Tp>&);
-  ///  Return phase angle of @a z.
-  template<typename _Tp> _Tp arg(const complex<_Tp>&);
-  ///  Return @a z magnitude squared.
-  template<typename _Tp> _Tp norm(const complex<_Tp>&);
-
-  ///  Return complex conjugate of @a z.
-  template<typename _Tp> complex<_Tp> conj(const complex<_Tp>&);
-  ///  Return complex with magnitude @a rho and angle @a theta.
-  template<typename _Tp> complex<_Tp> polar(const _Tp&, const _Tp& = 0);
-
-  // Transcendentals:
-  /// Return complex cosine of @a z.
-  template<typename _Tp> complex<_Tp> cos(const complex<_Tp>&);
-  /// Return complex hyperbolic cosine of @a z.
-  template<typename _Tp> complex<_Tp> cosh(const complex<_Tp>&);
-  /// Return complex base e exponential of @a z.
-  template<typename _Tp> complex<_Tp> exp(const complex<_Tp>&);
-  /// Return complex natural logarithm of @a z.
-  template<typename _Tp> complex<_Tp> log(const complex<_Tp>&);
-  /// Return complex base 10 logarithm of @a z.
-  template<typename _Tp> complex<_Tp> log10(const complex<_Tp>&);
-
-  // DR 844.
-  /// Return @a x to the @a y'th power.
-  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, int);
-
-  /// Return @a x to the @a y'th power.
-  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&, const _Tp&);
-  /// Return @a x to the @a y'th power.
-  template<typename _Tp> complex<_Tp> pow(const complex<_Tp>&,
-                                          const complex<_Tp>&);
-  /// Return @a x to the @a y'th power.
-  template<typename _Tp> complex<_Tp> pow(const _Tp&, const complex<_Tp>&);
-  /// Return complex sine of @a z.
-  template<typename _Tp> complex<_Tp> sin(const complex<_Tp>&);
-  /// Return complex hyperbolic sine of @a z.
-  template<typename _Tp> complex<_Tp> sinh(const complex<_Tp>&);
-  /// Return complex square root of @a z.
-  template<typename _Tp> complex<_Tp> sqrt(const complex<_Tp>&);
-  /// Return complex tangent of @a z.
-  template<typename _Tp> complex<_Tp> tan(const complex<_Tp>&);
-  /// Return complex hyperbolic tangent of @a z.
-  template<typename _Tp> complex<_Tp> tanh(const complex<_Tp>&);
-
-
-  // 26.2.2  Primary template class complex
-  /**
-   *  Template to represent complex numbers.
-   *
-   *  Specializations for float, double, and long double are part of the
-   *  library.  Results with any other type are not guaranteed.
-   *
-   *  @param  Tp  Type of real and imaginary values.
-  */
-  template<typename _Tp>
-    struct complex
-    {
-      /// Value typedef.
-      typedef _Tp value_type;
-
-      ///  Default constructor.  First parameter is x, second parameter is y.
-      ///  Unspecified parameters default to 0.
-                         complex(const _Tp& __r = _Tp(), const _Tp& __i = _Tp())
-      : _M_real(__r), _M_imag(__i) { }
-
-      // Lets the compiler synthesize the copy constructor   
-      // complex (const complex<_Tp>&);
-      ///  Copy constructor.
-      template<typename _Up>
-                           complex(const complex<_Up>& __z)
- : _M_real(__z.real()), _M_imag(__z.imag()) { }
-# 149 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
- ///  Return real part of complex number.
-      _Tp&
-      real() { return _M_real; }
-
-      ///  Return real part of complex number.
-      const _Tp&
-      real() const { return _M_real; }
-
-      ///  Return imaginary part of complex number.
-      _Tp&
-      imag() { return _M_imag; }
-
-      ///  Return imaginary part of complex number.
-      const _Tp&
-      imag() const { return _M_imag; }
-
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // DR 387. std::complex over-encapsulated.
-      void
-      real(_Tp __val) { _M_real = __val; }
-
-      void
-      imag(_Tp __val) { _M_imag = __val; }
-
-      /// Assign this complex number to scalar @a t.
-      complex<_Tp>& operator=(const _Tp&);
-
-      /// Add @a t to this complex number.
-      // 26.2.5/1
-      complex<_Tp>&
-      operator+=(const _Tp& __t)
-      {
- _M_real += __t;
- return *this;
-      }
-
-      /// Subtract @a t from this complex number.
-      // 26.2.5/3
-      complex<_Tp>&
-      operator-=(const _Tp& __t)
-      {
- _M_real -= __t;
- return *this;
-      }
-
-      /// Multiply this complex number by @a t.
-      complex<_Tp>& operator*=(const _Tp&);
-      /// Divide this complex number by @a t.
-      complex<_Tp>& operator/=(const _Tp&);
-
-      // Lets the compiler synthesize the
-      // copy and assignment operator
-      // complex<_Tp>& operator= (const complex<_Tp>&);
-      /// Assign this complex number to complex @a z.
-      template<typename _Up>
-        complex<_Tp>& operator=(const complex<_Up>&);
-      /// Add @a z to this complex number.
-      template<typename _Up>
-        complex<_Tp>& operator+=(const complex<_Up>&);
-      /// Subtract @a z from this complex number.
-      template<typename _Up>
-        complex<_Tp>& operator-=(const complex<_Up>&);
-      /// Multiply this complex number by @a z.
-      template<typename _Up>
-        complex<_Tp>& operator*=(const complex<_Up>&);
-      /// Divide this complex number by @a z.
-      template<typename _Up>
-        complex<_Tp>& operator/=(const complex<_Up>&);
-
-      const complex __rep() const
-      { return *this; }
-
-    private:
-      _Tp _M_real;
-      _Tp _M_imag;
-    };
-
-  template<typename _Tp>
-    complex<_Tp>&
-    complex<_Tp>::operator=(const _Tp& __t)
-    {
-     _M_real = __t;
-     _M_imag = _Tp();
-     return *this;
-    }
-
-  // 26.2.5/5
-  template<typename _Tp>
-    complex<_Tp>&
-    complex<_Tp>::operator*=(const _Tp& __t)
-    {
-      _M_real *= __t;
-      _M_imag *= __t;
-      return *this;
-    }
-
-  // 26.2.5/7
-  template<typename _Tp>
-    complex<_Tp>&
-    complex<_Tp>::operator/=(const _Tp& __t)
-    {
-      _M_real /= __t;
-      _M_imag /= __t;
-      return *this;
-    }
-
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator=(const complex<_Up>& __z)
-    {
-      _M_real = __z.real();
-      _M_imag = __z.imag();
-      return *this;
-    }
-
-  // 26.2.5/9
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator+=(const complex<_Up>& __z)
-    {
-      _M_real += __z.real();
-      _M_imag += __z.imag();
-      return *this;
-    }
-
-  // 26.2.5/11
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator-=(const complex<_Up>& __z)
-    {
-      _M_real -= __z.real();
-      _M_imag -= __z.imag();
-      return *this;
-    }
-
-  // 26.2.5/13
-  // XXX: This is a grammar school implementation.
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator*=(const complex<_Up>& __z)
-    {
-      const _Tp __r = _M_real * __z.real() - _M_imag * __z.imag();
-      _M_imag = _M_real * __z.imag() + _M_imag * __z.real();
-      _M_real = __r;
-      return *this;
-    }
-
-  // 26.2.5/15
-  // XXX: This is a grammar school implementation.
-  template<typename _Tp>
-    template<typename _Up>
-    complex<_Tp>&
-    complex<_Tp>::operator/=(const complex<_Up>& __z)
-    {
-      const _Tp __r = _M_real * __z.real() + _M_imag * __z.imag();
-      const _Tp __n = std::norm(__z);
-      _M_imag = (_M_imag * __z.real() - _M_real * __z.imag()) / __n;
-      _M_real = __r / __n;
-      return *this;
-    }
-
-  // Operators:
-  //@{
-  ///  Return new complex value @a x plus @a y.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r += __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r += __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __y;
-      __r += __x;
-      return __r;
-    }
-  //@}
-
-  //@{
-  ///  Return new complex value @a x minus @a y.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r -= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r -= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r(__x, -__y.imag());
-      __r -= __y.real();
-      return __r;
-    }
-  //@}
-
-  //@{
-  ///  Return new complex value @a x times @a y.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator*(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r *= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator*(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r *= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator*(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __y;
-      __r *= __x;
-      return __r;
-    }
-  //@}
-
-  //@{
-  ///  Return new complex value @a x divided by @a y.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator/(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r /= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator/(const complex<_Tp>& __x, const _Tp& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r /= __y;
-      return __r;
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator/(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      complex<_Tp> __r = __x;
-      __r /= __y;
-      return __r;
-    }
-  //@}
-
-  ///  Return @a x.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator+(const complex<_Tp>& __x)
-    { return __x; }
-
-  ///  Return complex negation of @a x.
-  template<typename _Tp>
-    inline complex<_Tp>
-    operator-(const complex<_Tp>& __x)
-    { return complex<_Tp>(-__x.real(), -__x.imag()); }
-
-  //@{
-  ///  Return true if @a x is equal to @a y.
-  template<typename _Tp>
-    inline bool
-    operator==(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __x.real() == __y.real() && __x.imag() == __y.imag(); }
-
-  template<typename _Tp>
-    inline bool
-    operator==(const complex<_Tp>& __x, const _Tp& __y)
-    { return __x.real() == __y && __x.imag() == _Tp(); }
-
-  template<typename _Tp>
-    inline bool
-    operator==(const _Tp& __x, const complex<_Tp>& __y)
-    { return __x == __y.real() && _Tp() == __y.imag(); }
-  //@}
-
-  //@{
-  ///  Return false if @a x is equal to @a y.
-  template<typename _Tp>
-    inline bool
-    operator!=(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __x.real() != __y.real() || __x.imag() != __y.imag(); }
-
-  template<typename _Tp>
-    inline bool
-    operator!=(const complex<_Tp>& __x, const _Tp& __y)
-    { return __x.real() != __y || __x.imag() != _Tp(); }
-
-  template<typename _Tp>
-    inline bool
-    operator!=(const _Tp& __x, const complex<_Tp>& __y)
-    { return __x != __y.real() || _Tp() != __y.imag(); }
-  //@}
-
-  ///  Extraction operator for complex values.
-  template<typename _Tp, typename _CharT, class _Traits>
-    basic_istream<_CharT, _Traits>&
-    operator>>(basic_istream<_CharT, _Traits>& __is, complex<_Tp>& __x)
-    {
-      _Tp __re_x, __im_x;
-      _CharT __ch;
-      __is >> __ch;
-      if (__ch == '(')
- {
-   __is >> __re_x >> __ch;
-   if (__ch == ',')
-     {
-       __is >> __im_x >> __ch;
-       if (__ch == ')')
-  __x = complex<_Tp>(__re_x, __im_x);
-       else
-  __is.setstate(ios_base::failbit);
-     }
-   else if (__ch == ')')
-     __x = __re_x;
-   else
-     __is.setstate(ios_base::failbit);
- }
-      else
- {
-   __is.putback(__ch);
-   __is >> __re_x;
-   __x = __re_x;
- }
-      return __is;
-    }
-
-  ///  Insertion operator for complex values.
-  template<typename _Tp, typename _CharT, class _Traits>
-    basic_ostream<_CharT, _Traits>&
-    operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
-    {
-      basic_ostringstream<_CharT, _Traits> __s;
-      __s.flags(__os.flags());
-      __s.imbue(__os.getloc());
-      __s.precision(__os.precision());
-      __s << '(' << __x.real() << ',' << __x.imag() << ')';
-      return __os << __s.str();
-    }
-
-  // Values
-# 542 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
- template<typename _Tp>
-    inline _Tp&
-    real(complex<_Tp>& __z)
-    { return __z.real(); }
-
-  template<typename _Tp>
-    inline const _Tp&
-    real(const complex<_Tp>& __z)
-    { return __z.real(); }
-
-  template<typename _Tp>
-    inline _Tp&
-    imag(complex<_Tp>& __z)
-    { return __z.imag(); }
-
-  template<typename _Tp>
-    inline const _Tp&
-    imag(const complex<_Tp>& __z)
-    { return __z.imag(); }
-
-
-  // 26.2.7/3 abs(__z):  Returns the magnitude of __z.
-  template<typename _Tp>
-    inline _Tp
-    __complex_abs(const complex<_Tp>& __z)
-    {
-      _Tp __x = __z.real();
-      _Tp __y = __z.imag();
-      const _Tp __s = std::max(abs(__x), abs(__y));
-      if (__s == _Tp()) // well ...
-        return __s;
-      __x /= __s;
-      __y /= __s;
-      return __s * sqrt(__x * __x + __y * __y);
-    }
-
-
-  inline float
-  __complex_abs(__complex__ float __z) { return __builtin_cabsf(__z); }
-
-  inline double
-  __complex_abs(__complex__ double __z) { return __builtin_cabs(__z); }
-
-  inline long double
-  __complex_abs(const __complex__ long double& __z)
-  { return __builtin_cabsl(__z); }
-
-  template<typename _Tp>
-    inline _Tp
-    abs(const complex<_Tp>& __z) { return __complex_abs(__z.__rep()); }
-
-
-
-
-
-
-
-  // 26.2.7/4: arg(__z): Returns the phase angle of __z.
-  template<typename _Tp>
-    inline _Tp
-    __complex_arg(const complex<_Tp>& __z)
-    { return atan2(__z.imag(), __z.real()); }
-
-
-  inline float
-  __complex_arg(__complex__ float __z) { return __builtin_cargf(__z); }
-
-  inline double
-  __complex_arg(__complex__ double __z) { return __builtin_carg(__z); }
-
-  inline long double
-  __complex_arg(const __complex__ long double& __z)
-  { return __builtin_cargl(__z); }
-
-  template<typename _Tp>
-    inline _Tp
-    arg(const complex<_Tp>& __z) { return __complex_arg(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.7/5: norm(__z) returns the squared magnitude of __z.
-  //     As defined, norm() is -not- a norm is the common mathematical
-  //     sens used in numerics.  The helper class _Norm_helper<> tries to
-  //     distinguish between builtin floating point and the rest, so as
-  //     to deliver an answer as close as possible to the real value.
-  template<bool>
-    struct _Norm_helper
-    {
-      template<typename _Tp>
-        static inline _Tp _S_do_it(const complex<_Tp>& __z)
-        {
-          const _Tp __x = __z.real();
-          const _Tp __y = __z.imag();
-          return __x * __x + __y * __y;
-        }
-    };
-
-  template<>
-    struct _Norm_helper<true>
-    {
-      template<typename _Tp>
-        static inline _Tp _S_do_it(const complex<_Tp>& __z)
-        {
-          _Tp __res = std::abs(__z);
-          return __res * __res;
-        }
-    };
-
-  template<typename _Tp>
-    inline _Tp
-    norm(const complex<_Tp>& __z)
-    {
-      return _Norm_helper<__is_floating<_Tp>::__value
- && !0>::_S_do_it(__z);
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    polar(const _Tp& __rho, const _Tp& __theta)
-    { return complex<_Tp>(__rho * cos(__theta), __rho * sin(__theta)); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    conj(const complex<_Tp>& __z)
-    { return complex<_Tp>(__z.real(), -__z.imag()); }
-
-  // Transcendentals
-
-  // 26.2.8/1 cos(__z):  Returns the cosine of __z.
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_cos(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(cos(__x) * cosh(__y), -sin(__x) * sinh(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_cos(__complex__ float __z) { return __builtin_ccosf(__z); }
-
-  inline __complex__ double
-  __complex_cos(__complex__ double __z) { return __builtin_ccos(__z); }
-
-  inline __complex__ long double
-  __complex_cos(const __complex__ long double& __z)
-  { return __builtin_ccosl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    cos(const complex<_Tp>& __z) { return __complex_cos(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/2 cosh(__z): Returns the hyperbolic cosine of __z.
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_cosh(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(cosh(__x) * cos(__y), sinh(__x) * sin(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_cosh(__complex__ float __z) { return __builtin_ccoshf(__z); }
-
-  inline __complex__ double
-  __complex_cosh(__complex__ double __z) { return __builtin_ccosh(__z); }
-
-  inline __complex__ long double
-  __complex_cosh(const __complex__ long double& __z)
-  { return __builtin_ccoshl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    cosh(const complex<_Tp>& __z) { return __complex_cosh(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/3 exp(__z): Returns the complex base e exponential of x
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_exp(const complex<_Tp>& __z)
-    { return std::polar(exp(__z.real()), __z.imag()); }
-
-
-  inline __complex__ float
-  __complex_exp(__complex__ float __z) { return __builtin_cexpf(__z); }
-
-  inline __complex__ double
-  __complex_exp(__complex__ double __z) { return __builtin_cexp(__z); }
-
-  inline __complex__ long double
-  __complex_exp(const __complex__ long double& __z)
-  { return __builtin_cexpl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    exp(const complex<_Tp>& __z) { return __complex_exp(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/5 log(__z): Returns the natural complex logarithm of __z.
-  //                    The branch cut is along the negative axis.
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_log(const complex<_Tp>& __z)
-    { return complex<_Tp>(log(std::abs(__z)), std::arg(__z)); }
-
-
-  inline __complex__ float
-  __complex_log(__complex__ float __z) { return __builtin_clogf(__z); }
-
-  inline __complex__ double
-  __complex_log(__complex__ double __z) { return __builtin_clog(__z); }
-
-  inline __complex__ long double
-  __complex_log(const __complex__ long double& __z)
-  { return __builtin_clogl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    log(const complex<_Tp>& __z) { return __complex_log(__z.__rep()); }
-
-
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    log10(const complex<_Tp>& __z)
-    { return std::log(__z) / log(_Tp(10.0)); }
-
-  // 26.2.8/10 sin(__z): Returns the sine of __z.
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_sin(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(sin(__x) * cosh(__y), cos(__x) * sinh(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_sin(__complex__ float __z) { return __builtin_csinf(__z); }
-
-  inline __complex__ double
-  __complex_sin(__complex__ double __z) { return __builtin_csin(__z); }
-
-  inline __complex__ long double
-  __complex_sin(const __complex__ long double& __z)
-  { return __builtin_csinl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    sin(const complex<_Tp>& __z) { return __complex_sin(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/11 sinh(__z): Returns the hyperbolic sine of __z.
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_sinh(const complex<_Tp>& __z)
-    {
-      const _Tp __x = __z.real();
-      const _Tp __y = __z.imag();
-      return complex<_Tp>(sinh(__x) * cos(__y), cosh(__x) * sin(__y));
-    }
-
-
-  inline __complex__ float
-  __complex_sinh(__complex__ float __z) { return __builtin_csinhf(__z); }
-
-  inline __complex__ double
-  __complex_sinh(__complex__ double __z) { return __builtin_csinh(__z); }
-
-  inline __complex__ long double
-  __complex_sinh(const __complex__ long double& __z)
-  { return __builtin_csinhl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    sinh(const complex<_Tp>& __z) { return __complex_sinh(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/13 sqrt(__z): Returns the complex square root of __z.
-  //                     The branch cut is on the negative axis.
-  template<typename _Tp>
-    complex<_Tp>
-    __complex_sqrt(const complex<_Tp>& __z)
-    {
-      _Tp __x = __z.real();
-      _Tp __y = __z.imag();
-
-      if (__x == _Tp())
-        {
-          _Tp __t = sqrt(abs(__y) / 2);
-          return complex<_Tp>(__t, __y < _Tp() ? -__t : __t);
-        }
-      else
-        {
-          _Tp __t = sqrt(2 * (std::abs(__z) + abs(__x)));
-          _Tp __u = __t / 2;
-          return __x > _Tp()
-            ? complex<_Tp>(__u, __y / __t)
-            : complex<_Tp>(abs(__y) / __t, __y < _Tp() ? -__u : __u);
-        }
-    }
-
-
-  inline __complex__ float
-  __complex_sqrt(__complex__ float __z) { return __builtin_csqrtf(__z); }
-
-  inline __complex__ double
-  __complex_sqrt(__complex__ double __z) { return __builtin_csqrt(__z); }
-
-  inline __complex__ long double
-  __complex_sqrt(const __complex__ long double& __z)
-  { return __builtin_csqrtl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    sqrt(const complex<_Tp>& __z) { return __complex_sqrt(__z.__rep()); }
-
-
-
-
-
-
-  // 26.2.8/14 tan(__z):  Return the complex tangent of __z.
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_tan(const complex<_Tp>& __z)
-    { return std::sin(__z) / std::cos(__z); }
-
-
-  inline __complex__ float
-  __complex_tan(__complex__ float __z) { return __builtin_ctanf(__z); }
-
-  inline __complex__ double
-  __complex_tan(__complex__ double __z) { return __builtin_ctan(__z); }
-
-  inline __complex__ long double
-  __complex_tan(const __complex__ long double& __z)
-  { return __builtin_ctanl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    tan(const complex<_Tp>& __z) { return __complex_tan(__z.__rep()); }
-
-
-
-
-
-
-
-  // 26.2.8/15 tanh(__z):  Returns the hyperbolic tangent of __z.
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_tanh(const complex<_Tp>& __z)
-    { return std::sinh(__z) / std::cosh(__z); }
-
-
-  inline __complex__ float
-  __complex_tanh(__complex__ float __z) { return __builtin_ctanhf(__z); }
-
-  inline __complex__ double
-  __complex_tanh(__complex__ double __z) { return __builtin_ctanh(__z); }
-
-  inline __complex__ long double
-  __complex_tanh(const __complex__ long double& __z)
-  { return __builtin_ctanhl(__z); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    tanh(const complex<_Tp>& __z) { return __complex_tanh(__z.__rep()); }
-
-
-
-
-
-
-
-  // 26.2.8/9  pow(__x, __y): Returns the complex power base of __x
-  //                          raised to the __y-th power.  The branch
-  //                          cut is on the negative axis.
-
-  template<typename _Tp>
-    complex<_Tp>
-    __complex_pow_unsigned(complex<_Tp> __x, unsigned __n)
-    {
-      complex<_Tp> __y = __n % 2 ? __x : complex<_Tp>(1);
-
-      while (__n >>= 1)
-        {
-          __x *= __x;
-          if (__n % 2)
-            __y *= __x;
-        }
-
-      return __y;
-    }
-
-  // _GLIBCXX_RESOLVE_LIB_DEFECTS
-  // DR 844. complex pow return type is ambiguous.
-  template<typename _Tp>
-    inline complex<_Tp>
-    pow(const complex<_Tp>& __z, int __n)
-    {
-      return __n < 0
-        ? complex<_Tp>(1) / std::__complex_pow_unsigned(__z, -__n)
-        : std::__complex_pow_unsigned(__z, __n);
-    }
-
-
-  template<typename _Tp>
-    complex<_Tp>
-    pow(const complex<_Tp>& __x, const _Tp& __y)
-    {
-
-
-
-
-      if (__x.imag() == _Tp() && __x.real() > _Tp())
-        return pow(__x.real(), __y);
-
-      complex<_Tp> __t = std::log(__x);
-      return std::polar(exp(__y * __t.real()), __y * __t.imag());
-    }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    __complex_pow(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __x == _Tp() ? _Tp() : std::exp(__y * std::log(__x)); }
-
-
-  inline __complex__ float
-  __complex_pow(__complex__ float __x, __complex__ float __y)
-  { return __builtin_cpowf(__x, __y); }
-
-  inline __complex__ double
-  __complex_pow(__complex__ double __x, __complex__ double __y)
-  { return __builtin_cpow(__x, __y); }
-
-  inline __complex__ long double
-  __complex_pow(const __complex__ long double& __x,
-  const __complex__ long double& __y)
-  { return __builtin_cpowl(__x, __y); }
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    pow(const complex<_Tp>& __x, const complex<_Tp>& __y)
-    { return __complex_pow(__x.__rep(), __y.__rep()); }
-
-
-
-
-
-
-
-  template<typename _Tp>
-    inline complex<_Tp>
-    pow(const _Tp& __x, const complex<_Tp>& __y)
-    {
-      return __x > _Tp() ? std::polar(pow(__x, __y.real()),
-          __y.imag() * log(__x))
-                  : std::pow(complex<_Tp>(__x), __y);
-    }
-
-  // 26.2.3  complex specializations
-  // complex<float> specialization
-  template<>
-    struct complex<float>
-    {
-      typedef float value_type;
-      typedef __complex__ float _ComplexT;
-
-                         complex(_ComplexT __z) : _M_value(__z) { }
-
-                         complex(float __r = 0.0f, float __i = 0.0f)
-
-
-
-
-
-
-      {
- __real__ _M_value = __r;
- __imag__ _M_value = __i;
-      }
-
-
-      explicit complex(const complex<double>&);
-      explicit complex(const complex<long double>&);
-# 1072 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
- float&
-      real() { return __real__ _M_value; }
-
-      const float&
-      real() const { return __real__ _M_value; }
-
-      float&
-      imag() { return __imag__ _M_value; }
-
-      const float&
-      imag() const { return __imag__ _M_value; }
-
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // DR 387. std::complex over-encapsulated.
-      void
-      real(float __val) { __real__ _M_value = __val; }
-
-      void
-      imag(float __val) { __imag__ _M_value = __val; }
-
-      complex&
-      operator=(float __f)
-      {
- _M_value = __f;
- return *this;
-      }
-
-      complex&
-      operator+=(float __f)
-      {
- _M_value += __f;
- return *this;
-      }
-
-      complex&
-      operator-=(float __f)
-      {
- _M_value -= __f;
- return *this;
-      }
-
-      complex&
-      operator*=(float __f)
-      {
- _M_value *= __f;
- return *this;
-      }
-
-      complex&
-      operator/=(float __f)
-      {
- _M_value /= __f;
- return *this;
-      }
-
-      // Let the compiler synthesize the copy and assignment
-      // operator.  It always does a pretty good job.
-      // complex& operator=(const complex&);
-
-      template<typename _Tp>
-        complex&
-        operator=(const complex<_Tp>& __z)
- {
-   __real__ _M_value = __z.real();
-   __imag__ _M_value = __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator+=(const complex<_Tp>& __z)
- {
-   __real__ _M_value += __z.real();
-   __imag__ _M_value += __z.imag();
-   return *this;
- }
-
-      template<class _Tp>
-        complex&
-        operator-=(const complex<_Tp>& __z)
- {
-   __real__ _M_value -= __z.real();
-   __imag__ _M_value -= __z.imag();
-   return *this;
- }
-
-      template<class _Tp>
-        complex&
-        operator*=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value *= __t;
-   return *this;
- }
-
-      template<class _Tp>
-        complex&
-        operator/=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value /= __t;
-   return *this;
- }
-
-      const _ComplexT __rep() const { return _M_value; }
-
-    private:
-      _ComplexT _M_value;
-    };
-
-  // 26.2.3  complex specializations
-  // complex<double> specialization
-  template<>
-    struct complex<double>
-    {
-      typedef double value_type;
-      typedef __complex__ double _ComplexT;
-
-                         complex(_ComplexT __z) : _M_value(__z) { }
-
-                         complex(double __r = 0.0, double __i = 0.0)
-
-
-
-
-
-
-      {
- __real__ _M_value = __r;
- __imag__ _M_value = __i;
-      }
-
-
-                         complex(const complex<float>& __z)
-      : _M_value(__z.__rep()) { }
-
-      explicit complex(const complex<long double>&);
-# 1224 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
- double&
-      real() { return __real__ _M_value; }
-
-      const double&
-      real() const { return __real__ _M_value; }
-
-      double&
-      imag() { return __imag__ _M_value; }
-
-      const double&
-      imag() const { return __imag__ _M_value; }
-
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // DR 387. std::complex over-encapsulated.
-      void
-      real(double __val) { __real__ _M_value = __val; }
-
-      void
-      imag(double __val) { __imag__ _M_value = __val; }
-
-      complex&
-      operator=(double __d)
-      {
- _M_value = __d;
- return *this;
-      }
-
-      complex&
-      operator+=(double __d)
-      {
- _M_value += __d;
- return *this;
-      }
-
-      complex&
-      operator-=(double __d)
-      {
- _M_value -= __d;
- return *this;
-      }
-
-      complex&
-      operator*=(double __d)
-      {
- _M_value *= __d;
- return *this;
-      }
-
-      complex&
-      operator/=(double __d)
-      {
- _M_value /= __d;
- return *this;
-      }
-
-      // The compiler will synthesize this, efficiently.
-      // complex& operator=(const complex&);
-
-      template<typename _Tp>
-        complex&
-        operator=(const complex<_Tp>& __z)
- {
-   __real__ _M_value = __z.real();
-   __imag__ _M_value = __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator+=(const complex<_Tp>& __z)
- {
-   __real__ _M_value += __z.real();
-   __imag__ _M_value += __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator-=(const complex<_Tp>& __z)
- {
-   __real__ _M_value -= __z.real();
-   __imag__ _M_value -= __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator*=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value *= __t;
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
-        operator/=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value /= __t;
-   return *this;
- }
-
-      const _ComplexT __rep() const { return _M_value; }
-
-    private:
-      _ComplexT _M_value;
-    };
-
-  // 26.2.3  complex specializations
-  // complex<long double> specialization
-  template<>
-    struct complex<long double>
-    {
-      typedef long double value_type;
-      typedef __complex__ long double _ComplexT;
-
-                         complex(_ComplexT __z) : _M_value(__z) { }
-
-                         complex(long double __r = 0.0L,
-     long double __i = 0.0L)
-
-
-
-
-
-
-      {
- __real__ _M_value = __r;
- __imag__ _M_value = __i;
-      }
-
-
-                         complex(const complex<float>& __z)
-      : _M_value(__z.__rep()) { }
-
-                         complex(const complex<double>& __z)
-      : _M_value(__z.__rep()) { }
-# 1377 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/complex" 3
- long double&
-      real() { return __real__ _M_value; }
-
-      const long double&
-      real() const { return __real__ _M_value; }
-
-      long double&
-      imag() { return __imag__ _M_value; }
-
-      const long double&
-      imag() const { return __imag__ _M_value; }
-
-
-      // _GLIBCXX_RESOLVE_LIB_DEFECTS
-      // DR 387. std::complex over-encapsulated.
-      void
-      real(long double __val) { __real__ _M_value = __val; }
-
-      void
-      imag(long double __val) { __imag__ _M_value = __val; }
-
-      complex&
-      operator=(long double __r)
-      {
- _M_value = __r;
- return *this;
-      }
-
-      complex&
-      operator+=(long double __r)
-      {
- _M_value += __r;
- return *this;
-      }
-
-      complex&
-      operator-=(long double __r)
-      {
- _M_value -= __r;
- return *this;
-      }
-
-      complex&
-      operator*=(long double __r)
-      {
- _M_value *= __r;
- return *this;
-      }
-
-      complex&
-      operator/=(long double __r)
-      {
- _M_value /= __r;
- return *this;
-      }
-
-      // The compiler knows how to do this efficiently
-      // complex& operator=(const complex&);
-
-      template<typename _Tp>
-        complex&
-        operator=(const complex<_Tp>& __z)
- {
-   __real__ _M_value = __z.real();
-   __imag__ _M_value = __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator+=(const complex<_Tp>& __z)
- {
-   __real__ _M_value += __z.real();
-   __imag__ _M_value += __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator-=(const complex<_Tp>& __z)
- {
-   __real__ _M_value -= __z.real();
-   __imag__ _M_value -= __z.imag();
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator*=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value *= __t;
-   return *this;
- }
-
-      template<typename _Tp>
-        complex&
- operator/=(const complex<_Tp>& __z)
- {
-   _ComplexT __t;
-   __real__ __t = __z.real();
-   __imag__ __t = __z.imag();
-   _M_value /= __t;
-   return *this;
- }
-
-      const _ComplexT __rep() const { return _M_value; }
-
-    private:
-      _ComplexT _M_value;
-    };
-
-  // These bits have to be at the end of this file, so that the
-  // specializations have all been defined.
-  inline
-  complex<float>::complex(const complex<double>& __z)
-  : _M_value(__z.__rep()) { }
-
-  inline
-  complex<float>::complex(const complex<long double>& __z)
-  : _M_value(__z.__rep()) { }
-
-  inline
-  complex<double>::complex(const complex<long double>& __z)
-  : _M_value(__z.__rep()) { }
-
-  // Inhibit implicit instantiations for required instantiations,
-  // which are defined via explicit instantiations elsewhere.
-  // NB:  This syntax is a GNU extension.
-
-  extern template istream& operator>>(istream&, complex<float>&);
-  extern template ostream& operator<<(ostream&, const complex<float>&);
-  extern template istream& operator>>(istream&, complex<double>&);
-  extern template ostream& operator<<(ostream&, const complex<double>&);
-  extern template istream& operator>>(istream&, complex<long double>&);
-  extern template ostream& operator<<(ostream&, const complex<long double>&);
-
-
-  extern template wistream& operator>>(wistream&, complex<float>&);
-  extern template wostream& operator<<(wostream&, const complex<float>&);
-  extern template wistream& operator>>(wistream&, complex<double>&);
-  extern template wostream& operator<<(wostream&, const complex<double>&);
-  extern template wistream& operator>>(wistream&, complex<long double>&);
-  extern template wostream& operator<<(wostream&, const complex<long double>&);
-
-
-
-  // @} group complex_numbers
-
-
-} // namespace
-
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-
-  // See ext/type_traits.h for the primary template.
-  template<typename _Tp, typename _Up>
-    struct __promote_2<std::complex<_Tp>, _Up>
-    {
-    public:
-      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
-    };
-
-  template<typename _Tp, typename _Up>
-    struct __promote_2<_Tp, std::complex<_Up> >
-    {
-    public:
-      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
-    };
-
-  template<typename _Tp, typename _Up>
-    struct __promote_2<std::complex<_Tp>, std::complex<_Up> >
-    {
-    public:
-      typedef std::complex<typename __promote_2<_Tp, _Up>::__type> __type;
-    };
-
-
-} // namespace
-# 7 "./svd.h" 2
-
-
-
-# 1 "/usr/include/assert.h" 1 3 4
-/* Copyright (C) 1991,1992,1994-2001,2003,2004,2007,2011,2012
-   Free Software Foundation, Inc.
-   This file is part of the GNU C Library.
-
-   The GNU C Library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-
-   The GNU C Library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with the GNU C Library; if not, see
-   <http://www.gnu.org/licenses/>.  */
-
-/*
- *	ISO C99 Standard: 7.2 Diagnostics	<assert.h>
- */
-# 44 "/usr/include/assert.h" 3 4
-/* void assert (int expression);
-
-   If NDEBUG is defined, do nothing.
-   If not, and EXPRESSION is zero, print an error message and abort.  */
-# 65 "/usr/include/assert.h" 3 4
-extern "C" {
-
-/* This prints an "Assertion failed" message and aborts.  */
-extern void __assert_fail (const char *__assertion, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
-
-/* Likewise, but prints the error text for ERRNUM.  */
-extern void __assert_perror_fail (int __errnum, const char *__file,
-      unsigned int __line, const char *__function)
-     throw () __attribute__ ((__noreturn__));
-
-
-/* The following is not at all used here but needed for standard
-   compliance.  */
-extern void __assert (const char *__assertion, const char *__file, int __line)
-     throw () __attribute__ ((__noreturn__));
-
-
-}
-# 98 "/usr/include/assert.h" 3 4
-/* Version 2.4 and later of GCC define a magical variable `__PRETTY_FUNCTION__'
-   which contains the name of the function currently being defined.
-   This is broken in G++ before version 2.6.
-   C9x has a similar variable called __func__, but prefer the GCC one since
-   it demangles C++ function names.  */
-# 11 "./svd.h" 2
-
-
+# 8 "./svd.h" 2
+
+// #include "hls/utils/x_hls_utils.h"
+// #include <assert.h>
+// #include <iostream>
+// #include <iomanip>
 
 
 namespace svd {
@@ -64548,184 +56305,6 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
     }
   }
 
-// ===================================================================================================================
-// SVD_BASIC: Top level function taking a SVDTraits template parameter to defines internal types
-  template<
-  int RowsA,
-  int ColsA,
-  class SVDTraits,
-  typename InputType,
-  typename OutputType>
-  void svd_basic( const InputType A[RowsA][ColsA],
-                  OutputType S[RowsA][ColsA],
-                  OutputType U[RowsA][RowsA],
-                  OutputType V[ColsA][ColsA],
-                  hls::stream<float> & pca_in, hls::stream<float> & pca_out)
-  {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
-  // Initially only supporting square matrix
-
-
-
-
-  // Internal memories for partial results
-  typename SVDTraits::SIntType s_in[RowsA][ColsA];
-  typename SVDTraits::UIntType u_in[RowsA][ColsA];
-  typename SVDTraits::VIntType v_in[RowsA][ColsA];
-
-  // Current S,U,V values being worked on
-  typename SVDTraits::SIntType w_in, x_in, y_in, z_in;
-  typename SVDTraits::SIntType w_out, x_out, y_out, z_out;
-  typename SVDTraits::UIntType uw_in, ux_in, uy_in, uz_in;
-  typename SVDTraits::UIntType uw_out, ux_out, uy_out, uz_out;
-  typename SVDTraits::VIntType vw_in, vx_in, vy_in, vz_in;
-  typename SVDTraits::VIntType vw_out, vx_out, vy_out, vz_out;
-
-  // 2x2 Rotation values
-  typename SVDTraits::CSIntType uw_new, ux_new, uy_new, uz_new;
-  typename SVDTraits::CSIntType vw_new, vx_new, vy_new, vz_new;
-
-  for(int i=0; i<RowsA; i++){
-    for(int j=0; j<ColsA; j++){
-      U[i][j] = i==j?1:0;
-      V[i][j] = i==j?1:0;
-      S[i][j] = A[i][j];
-    }
-  }
-
-  sweep_loop: for(int sweepnum = 0; sweepnum < SVDTraits::NUM_SWEEPS; sweepnum++) {
-      for (int distance = 2; distance < RowsA+1; distance ++){
-        for (int offset = 0; offset < distance; offset ++){
-          float new_j[RowsA][2][2];
-          float new_k[RowsA][2][2];
-
-          //diag
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            int bottom_right = top_left + distance - 1;
-
-            pca_in.write(1);
-
-            //std::cout << "write to fpga" << std::endl;
-            pca_in.write((float)top_left);
-            pca_in.write((float)bottom_right);
-            pca_in.write(S[top_left] [top_left] );
-            pca_in.write(S[top_left] [bottom_right]);
-            pca_in.write(S[bottom_right][top_left] );
-            pca_in.write(S[bottom_right][bottom_right]);
-            pca_in.write(U[top_left] [top_left] );
-            pca_in.write(U[top_left] [bottom_right]);
-            pca_in.write(U[bottom_right][top_left] );
-            pca_in.write(U[bottom_right][bottom_right]);
-            pca_in.write(V[top_left] [top_left] );
-            pca_in.write(V[top_left] [bottom_right]);
-            pca_in.write(V[bottom_right][top_left] );
-            pca_in.write(V[bottom_right][bottom_right]);
-
-            for(int i=0;i<RowsA;i++){
-              pca_in.write(U[i][top_left] );
-              pca_in.write(U[i][bottom_right]);
-              pca_in.write(V[i][top_left] );
-              pca_in.write(V[i][bottom_right]);
-            }
-          }
-
-          //std::cout << "run dut" << std::endl;
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            dut(pca_in, pca_out);
-          }
-
-          //wb
-          //std::cout << "read from fpga" << std::endl;
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            int bottom_right = top_left + distance - 1;
-
-            S[top_left] [top_left] = pca_out.read();
-            S[top_left] [bottom_right] = pca_out.read();
-            S[bottom_right][top_left] = pca_out.read();
-            S[bottom_right][bottom_right] = pca_out.read();
-            U[top_left] [top_left] = pca_out.read();
-            U[top_left] [bottom_right] = pca_out.read();
-            U[bottom_right][top_left] = pca_out.read();
-            U[bottom_right][bottom_right] = pca_out.read();
-            V[top_left] [top_left] = pca_out.read();
-            V[top_left] [bottom_right] = pca_out.read();
-            V[bottom_right][top_left] = pca_out.read();
-            V[bottom_right][bottom_right] = pca_out.read();
-            //exit(0);
-            for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-              if (off_row == top_left || off_row == bottom_right) continue;
-              V[off_row][top_left] = pca_out.read();
-              V[off_row][bottom_right] = pca_out.read();
-              U[off_row][top_left] = pca_out.read();
-              U[off_row][bottom_right] = pca_out.read();
-            }
-
-
-            new_j[top_left][0][0] = pca_out.read();
-            new_j[top_left][0][1] = pca_out.read();
-            new_j[top_left][1][0] = pca_out.read();
-            new_j[top_left][1][1] = pca_out.read();
-
-            new_k[top_left][0][0] = pca_out.read();
-            new_k[top_left][0][1] = pca_out.read();
-            new_k[top_left][1][0] = pca_out.read();
-            new_k[top_left][1][1] = pca_out.read();
-
-
-          }
-
-          //off diag
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            int bottom_right = top_left + distance - 1;
-
-            pca_in.write(2);
-            pca_in.write((float)top_left);
-            pca_in.write((float)bottom_right);
-
-            //init
-            float s_col_temp[2][ColsA];
-            for(int i=0;i<ColsA;i++){
-              pca_in.write(S[top_left] [i]);
-              pca_in.write(S[bottom_right][i]);
-            }
-
-            float s_row_temp[RowsA][2];
-            for(int i=0;i<RowsA;i++){
-              pca_in.write(S[i][top_left] );
-              pca_in.write(S[i][bottom_right]);
-            }
-
-            pca_in.write(new_j[top_left][0][0]);
-            pca_in.write(new_j[top_left][0][1]);
-            pca_in.write(new_j[top_left][1][0]);
-            pca_in.write(new_j[top_left][1][1]);
-
-            pca_in.write(new_k[top_left][0][0]);
-            pca_in.write(new_k[top_left][0][1]);
-            pca_in.write(new_k[top_left][1][0]);
-            pca_in.write(new_k[top_left][1][1]);
-
-            dut(pca_in, pca_out);
-
-            //wb
-            off_col_wb: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
-              if (off_col == top_left || off_col == bottom_right) continue;
-              S[top_left][off_col] = pca_out.read();
-              S[bottom_right][off_col] = pca_out.read();
-            }
-
-
-            off_row_wb_s: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-              if (off_row == top_left || off_row == bottom_right) continue;
-              S[off_row][top_left] = pca_out.read();
-              S[off_row][bottom_right] = pca_out.read();
-            }
-          }
-        }
-      }
-    }
-  }
-
-
   inline void init_block_index(int & top_left, int & bottom_right, int idx1, int idx2){
     top_left = idx1;
     bottom_right = idx2;
@@ -64750,9 +56329,9 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
                       hls::stream<float> & pca_in, hls::stream<float> & pca_out)
   {_ssdm_SpecArrayDimSize(A,RowsA);_ssdm_SpecArrayDimSize(S,RowsA);_ssdm_SpecArrayDimSize(U,RowsA);_ssdm_SpecArrayDimSize(V,ColsA);
     // Initially only supporting square matrix
-
-
-
+    // #ifndef __SYNTHESIS__
+    // assert(RowsA==ColsA);
+    // #endif
 
     // Internal memories for partial results
     typename SVDTraits::SIntType s_in[RowsA][ColsA];
@@ -64778,7 +56357,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
     for(int i=0; i<RowsA; i++){
       rd_buffer:for(int j=0; j<ColsA; j++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 689 "./svd.h"
+# 511 "./svd.h"
 
         S[i][j] = A[i][j];
         U[i][j] = i==j?1:0;
@@ -64833,7 +56412,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         //read diag
         svd_rd_diag:for (int proc = 0; proc < n_proc; proc++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 741 "./svd.h"
+# 563 "./svd.h"
 
           init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
 
@@ -64915,7 +56494,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         //write back diag and cols
         svd_wb_diag:for (int proc = 0; proc < n_proc; proc++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 820 "./svd.h"
+# 642 "./svd.h"
 
           init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
           if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -64942,7 +56521,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         for (int proc = 0; proc < n_proc; proc++){
           svd_rd_off_r:for (int i=0; i<ColsA; i++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 844 "./svd.h"
+# 666 "./svd.h"
 
             if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
             if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -65014,7 +56593,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         for (int proc = 0; proc < n_proc; proc++){
           svd_wb_off_r:for (int i=0; i<ColsA; i++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 913 "./svd.h"
+# 735 "./svd.h"
 
             if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
             if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -65033,7 +56612,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         for (int proc = 0; proc < n_proc; proc++){
           svd_rd_off_c:for (int i=0; i<ColsA; i++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 929 "./svd.h"
+# 751 "./svd.h"
 
             if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
             if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -65129,7 +56708,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
 
 
-const int VEC_SIZ = 28 * 28;
+const int VEC_SIZ = 4 * 4;
 
 class PCA {
   public:
@@ -65176,28 +56755,4000 @@ public :
 inline __attribute__((always_inline)) MY_CONFIG_SVD() { _ssdm_SpecConstant(&NUM_SWEEPS); _ssdm_SpecConstant(&DIAG_II); _ssdm_SpecConstant(&OFF_DIAG_II); _ssdm_SpecConstant(&ARCH); }
 # 62 "./pca.h"
 };
-
-struct MY_CONFIG_MULT: hls::matrix_multiply_traits<hls::NoTranspose,
- hls::NoTranspose,
- 10,
- VEC_SIZ,
- VEC_SIZ,
- 100,
- fix32_t,
- fix32_t>{
- static const int ARCH = 2;
- static const int INNER_II = 100;
- static const int UNROLL_FACTOR = 1;
-
-public :
-inline __attribute__((always_inline)) MY_CONFIG_MULT() { _ssdm_SpecConstant(&ARCH); _ssdm_SpecConstant(&INNER_II); _ssdm_SpecConstant(&UNROLL_FACTOR); }
-# 75 "./pca.h"
-};
 # 7 "dut.cpp" 2
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 1 3
+// File based streams -*- C++ -*-
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010, 2011
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file include/fstream
+ *  This is a Standard C++ Library header.
+ */
+
+//
+// ISO C++ 14882: 27.8  File-based streams
+//
+# 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+
+
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 1 3
+// Locale support (codecvt) -*- C++ -*-
+
+// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008,
+// 2009, 2010, 2011  Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file bits/codecvt.h
+ *  This is an internal header file, included by other library headers.
+ *  Do not attempt to use it directly. @headername{locale}
+ */
+
+//
+// ISO C++ 14882: 22.2.1.5 Template class codecvt
+//
+
+// Written by Benjamin Kosnik <bkoz@redhat.com>
+# 40 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/codecvt.h" 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  /// Empty base class for codecvt facet [22.2.1.5].
+  class codecvt_base
+  {
+  public:
+    enum result
+    {
+      ok,
+      partial,
+      error,
+      noconv
+    };
+  };
+
+  /**
+   *  @brief  Common base for codecvt functions.
+   *
+   *  This template class provides implementations of the public functions
+   *  that forward to the protected virtual functions.
+   *
+   *  This template also provides abstract stubs for the protected virtual
+   *  functions.
+  */
+  template<typename _InternT, typename _ExternT, typename _StateT>
+    class __codecvt_abstract_base
+    : public locale::facet, public codecvt_base
+    {
+    public:
+      // Types:
+      typedef codecvt_base::result result;
+      typedef _InternT intern_type;
+      typedef _ExternT extern_type;
+      typedef _StateT state_type;
+
+      // 22.2.1.5.1 codecvt members
+      /**
+       *  @brief  Convert from internal to external character set.
+       *
+       *  Converts input string of intern_type to output string of
+       *  extern_type.  This is analogous to wcsrtombs.  It does this by
+       *  calling codecvt::do_out.
+       *
+       *  The source and destination character sets are determined by the
+       *  facet's locale, internal and external types.
+       *
+       *  The characters in [from,from_end) are converted and written to
+       *  [to,to_end).  from_next and to_next are set to point to the
+       *  character following the last successfully converted character,
+       *  respectively.  If the result needed no conversion, from_next and
+       *  to_next are not affected.
+       *
+       *  The @a state argument should be initialized if the input is at the
+       *  beginning and carried from a previous call if continuing
+       *  conversion.  There are no guarantees about how @a state is used.
+       *
+       *  The result returned is a member of codecvt_base::result.  If
+       *  all the input is converted, returns codecvt_base::ok.  If no
+       *  conversion is necessary, returns codecvt_base::noconv.  If
+       *  the input ends early or there is insufficient space in the
+       *  output, returns codecvt_base::partial.  Otherwise the
+       *  conversion failed and codecvt_base::error is returned.
+       *
+       *  @param  state  Persistent conversion state data.
+       *  @param  from  Start of input.
+       *  @param  from_end  End of input.
+       *  @param  from_next  Returns start of unconverted data.
+       *  @param  to  Start of output buffer.
+       *  @param  to_end  End of output buffer.
+       *  @param  to_next  Returns start of unused output area.
+       *  @return  codecvt_base::result.
+      */
+      result
+      out(state_type& __state, const intern_type* __from,
+   const intern_type* __from_end, const intern_type*& __from_next,
+   extern_type* __to, extern_type* __to_end,
+   extern_type*& __to_next) const
+      {
+ return this->do_out(__state, __from, __from_end, __from_next,
+       __to, __to_end, __to_next);
+      }
+
+      /**
+       *  @brief  Reset conversion state.
+       *
+       *  Writes characters to output that would restore @a state to initial
+       *  conditions.  The idea is that if a partial conversion occurs, then
+       *  the converting the characters written by this function would leave
+       *  the state in initial conditions, rather than partial conversion
+       *  state.  It does this by calling codecvt::do_unshift().
+       *
+       *  For example, if 4 external characters always converted to 1 internal
+       *  character, and input to in() had 6 external characters with state
+       *  saved, this function would write two characters to the output and
+       *  set the state to initialized conditions.
+       *
+       *  The source and destination character sets are determined by the
+       *  facet's locale, internal and external types.
+       *
+       *  The result returned is a member of codecvt_base::result.  If the
+       *  state could be reset and data written, returns codecvt_base::ok.  If
+       *  no conversion is necessary, returns codecvt_base::noconv.  If the
+       *  output has insufficient space, returns codecvt_base::partial.
+       *  Otherwise the reset failed and codecvt_base::error is returned.
+       *
+       *  @param  state  Persistent conversion state data.
+       *  @param  to  Start of output buffer.
+       *  @param  to_end  End of output buffer.
+       *  @param  to_next  Returns start of unused output area.
+       *  @return  codecvt_base::result.
+      */
+      result
+      unshift(state_type& __state, extern_type* __to, extern_type* __to_end,
+       extern_type*& __to_next) const
+      { return this->do_unshift(__state, __to,__to_end,__to_next); }
+
+      /**
+       *  @brief  Convert from external to internal character set.
+       *
+       *  Converts input string of extern_type to output string of
+       *  intern_type.  This is analogous to mbsrtowcs.  It does this by
+       *  calling codecvt::do_in.
+       *
+       *  The source and destination character sets are determined by the
+       *  facet's locale, internal and external types.
+       *
+       *  The characters in [from,from_end) are converted and written to
+       *  [to,to_end).  from_next and to_next are set to point to the
+       *  character following the last successfully converted character,
+       *  respectively.  If the result needed no conversion, from_next and
+       *  to_next are not affected.
+       *
+       *  The @a state argument should be initialized if the input is at the
+       *  beginning and carried from a previous call if continuing
+       *  conversion.  There are no guarantees about how @a state is used.
+       *
+       *  The result returned is a member of codecvt_base::result.  If
+       *  all the input is converted, returns codecvt_base::ok.  If no
+       *  conversion is necessary, returns codecvt_base::noconv.  If
+       *  the input ends early or there is insufficient space in the
+       *  output, returns codecvt_base::partial.  Otherwise the
+       *  conversion failed and codecvt_base::error is returned.
+       *
+       *  @param  state  Persistent conversion state data.
+       *  @param  from  Start of input.
+       *  @param  from_end  End of input.
+       *  @param  from_next  Returns start of unconverted data.
+       *  @param  to  Start of output buffer.
+       *  @param  to_end  End of output buffer.
+       *  @param  to_next  Returns start of unused output area.
+       *  @return  codecvt_base::result.
+      */
+      result
+      in(state_type& __state, const extern_type* __from,
+  const extern_type* __from_end, const extern_type*& __from_next,
+  intern_type* __to, intern_type* __to_end,
+  intern_type*& __to_next) const
+      {
+ return this->do_in(__state, __from, __from_end, __from_next,
+      __to, __to_end, __to_next);
+      }
+
+      int
+      encoding() const throw()
+      { return this->do_encoding(); }
+
+      bool
+      always_noconv() const throw()
+      { return this->do_always_noconv(); }
+
+      int
+      length(state_type& __state, const extern_type* __from,
+      const extern_type* __end, size_t __max) const
+      { return this->do_length(__state, __from, __end, __max); }
+
+      int
+      max_length() const throw()
+      { return this->do_max_length(); }
+
+    protected:
+      explicit
+      __codecvt_abstract_base(size_t __refs = 0) : locale::facet(__refs) { }
+
+      virtual
+      ~__codecvt_abstract_base() { }
+
+      /**
+       *  @brief  Convert from internal to external character set.
+       *
+       *  Converts input string of intern_type to output string of
+       *  extern_type.  This function is a hook for derived classes to change
+       *  the value returned.  @see out for more information.
+      */
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const = 0;
+
+      virtual result
+      do_unshift(state_type& __state, extern_type* __to,
+   extern_type* __to_end, extern_type*& __to_next) const = 0;
+
+      virtual result
+      do_in(state_type& __state, const extern_type* __from,
+     const extern_type* __from_end, const extern_type*& __from_next,
+     intern_type* __to, intern_type* __to_end,
+     intern_type*& __to_next) const = 0;
+
+      virtual int
+      do_encoding() const throw() = 0;
+
+      virtual bool
+      do_always_noconv() const throw() = 0;
+
+      virtual int
+      do_length(state_type&, const extern_type* __from,
+  const extern_type* __end, size_t __max) const = 0;
+
+      virtual int
+      do_max_length() const throw() = 0;
+    };
+
+
+
+  /**
+   *  @brief  Primary class template codecvt.
+   *  @ingroup locales
+   *
+   *  NB: Generic, mostly useless implementation.
+   *
+  */
+   template<typename _InternT, typename _ExternT, typename _StateT>
+    class codecvt
+    : public __codecvt_abstract_base<_InternT, _ExternT, _StateT>
+    {
+    public:
+      // Types:
+      typedef codecvt_base::result result;
+      typedef _InternT intern_type;
+      typedef _ExternT extern_type;
+      typedef _StateT state_type;
+
+    protected:
+      __c_locale _M_c_locale_codecvt;
+
+    public:
+      static locale::id id;
+
+      explicit
+      codecvt(size_t __refs = 0)
+      : __codecvt_abstract_base<_InternT, _ExternT, _StateT> (__refs) { }
+
+      explicit
+      codecvt(__c_locale __cloc, size_t __refs = 0);
+
+    protected:
+      virtual
+      ~codecvt() { }
+
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const;
+
+      virtual result
+      do_unshift(state_type& __state, extern_type* __to,
+   extern_type* __to_end, extern_type*& __to_next) const;
+
+      virtual result
+      do_in(state_type& __state, const extern_type* __from,
+     const extern_type* __from_end, const extern_type*& __from_next,
+     intern_type* __to, intern_type* __to_end,
+     intern_type*& __to_next) const;
+
+      virtual int
+      do_encoding() const throw();
+
+      virtual bool
+      do_always_noconv() const throw();
+
+      virtual int
+      do_length(state_type&, const extern_type* __from,
+  const extern_type* __end, size_t __max) const;
+
+      virtual int
+      do_max_length() const throw();
+    };
+
+  template<typename _InternT, typename _ExternT, typename _StateT>
+    locale::id codecvt<_InternT, _ExternT, _StateT>::id;
+
+  /// class codecvt<char, char, mbstate_t> specialization.
+  template<>
+    class codecvt<char, char, mbstate_t>
+    : public __codecvt_abstract_base<char, char, mbstate_t>
+    {
+    public:
+      // Types:
+      typedef char intern_type;
+      typedef char extern_type;
+      typedef mbstate_t state_type;
+
+    protected:
+      __c_locale _M_c_locale_codecvt;
+
+    public:
+      static locale::id id;
+
+      explicit
+      codecvt(size_t __refs = 0);
+
+      explicit
+      codecvt(__c_locale __cloc, size_t __refs = 0);
+
+    protected:
+      virtual
+      ~codecvt();
+
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const;
+
+      virtual result
+      do_unshift(state_type& __state, extern_type* __to,
+   extern_type* __to_end, extern_type*& __to_next) const;
+
+      virtual result
+      do_in(state_type& __state, const extern_type* __from,
+     const extern_type* __from_end, const extern_type*& __from_next,
+     intern_type* __to, intern_type* __to_end,
+     intern_type*& __to_next) const;
+
+      virtual int
+      do_encoding() const throw();
+
+      virtual bool
+      do_always_noconv() const throw();
+
+      virtual int
+      do_length(state_type&, const extern_type* __from,
+  const extern_type* __end, size_t __max) const;
+
+      virtual int
+      do_max_length() const throw();
+  };
+
+
+  /// class codecvt<wchar_t, char, mbstate_t> specialization.
+  template<>
+    class codecvt<wchar_t, char, mbstate_t>
+    : public __codecvt_abstract_base<wchar_t, char, mbstate_t>
+    {
+    public:
+      // Types:
+      typedef wchar_t intern_type;
+      typedef char extern_type;
+      typedef mbstate_t state_type;
+
+    protected:
+      __c_locale _M_c_locale_codecvt;
+
+    public:
+      static locale::id id;
+
+      explicit
+      codecvt(size_t __refs = 0);
+
+      explicit
+      codecvt(__c_locale __cloc, size_t __refs = 0);
+
+    protected:
+      virtual
+      ~codecvt();
+
+      virtual result
+      do_out(state_type& __state, const intern_type* __from,
+      const intern_type* __from_end, const intern_type*& __from_next,
+      extern_type* __to, extern_type* __to_end,
+      extern_type*& __to_next) const;
+
+      virtual result
+      do_unshift(state_type& __state,
+   extern_type* __to, extern_type* __to_end,
+   extern_type*& __to_next) const;
+
+      virtual result
+      do_in(state_type& __state,
+      const extern_type* __from, const extern_type* __from_end,
+      const extern_type*& __from_next,
+      intern_type* __to, intern_type* __to_end,
+      intern_type*& __to_next) const;
+
+      virtual
+      int do_encoding() const throw();
+
+      virtual
+      bool do_always_noconv() const throw();
+
+      virtual
+      int do_length(state_type&, const extern_type* __from,
+      const extern_type* __end, size_t __max) const;
+
+      virtual int
+      do_max_length() const throw();
+    };
+
+
+  /// class codecvt_byname [22.2.1.6].
+  template<typename _InternT, typename _ExternT, typename _StateT>
+    class codecvt_byname : public codecvt<_InternT, _ExternT, _StateT>
+    {
+    public:
+      explicit
+      codecvt_byname(const char* __s, size_t __refs = 0)
+      : codecvt<_InternT, _ExternT, _StateT>(__refs)
+      {
+ if (__builtin_strcmp(__s, "C") != 0
+     && __builtin_strcmp(__s, "POSIX") != 0)
+   {
+     this->_S_destroy_c_locale(this->_M_c_locale_codecvt);
+     this->_S_create_c_locale(this->_M_c_locale_codecvt, __s);
+   }
+      }
+
+    protected:
+      virtual
+      ~codecvt_byname() { }
+    };
+
+  // Inhibit implicit instantiations for required instantiations,
+  // which are defined via explicit instantiations elsewhere.
+
+  extern template class codecvt_byname<char, char, mbstate_t>;
+
+  extern template
+    const codecvt<char, char, mbstate_t>&
+    use_facet<codecvt<char, char, mbstate_t> >(const locale&);
+
+  extern template
+    bool
+    has_facet<codecvt<char, char, mbstate_t> >(const locale&);
+
+
+  extern template class codecvt_byname<wchar_t, char, mbstate_t>;
+
+  extern template
+    const codecvt<wchar_t, char, mbstate_t>&
+    use_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
+
+  extern template
+    bool
+    has_facet<codecvt<wchar_t, char, mbstate_t> >(const locale&);
 
 
 
 
+} // namespace std
+# 42 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
+// -*- C++ -*- forwarding header.
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file include/cstdio
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c stdio.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+
+//
+// ISO C++ 14882: 27.8.2  C Library files
+//
+# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+
+
+# 1 "/usr/include/stdio.h" 1 3 4
+/* Define ISO C stdio on top of C++ iostreams.
+   Copyright (C) 1991, 1994-2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/*
+ *	ISO C99 Standard: 7.19 Input/output	<stdio.h>
+ */
+
+
+
+
+
+
+
+extern "C" {
+
+
+
+
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+# 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+# 34 "/usr/include/stdio.h" 2 3 4
+# 74 "/usr/include/stdio.h" 3 4
+# 1 "/usr/include/libio.h" 1 3 4
+/* Copyright (C) 1991-1995,1997-2007,2009,2011,2012
+   Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+   Written by Per Bothner <bothner@cygnus.com>.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.
+
+   As a special exception, if you link the code in this file with
+   files compiled with a GNU compiler to produce an executable,
+   that does not cause the resulting executable to be covered by
+   the GNU Lesser General Public License.  This exception does not
+   however invalidate any other reasons why the executable file
+   might be covered by the GNU Lesser General Public License.
+   This exception applies to code released by its copyright holders
+   in files containing the exception.  */
+
+
+
+
+
+
+# 1 "/usr/include/_G_config.h" 1 3 4
+/* This file is needed by libio to define various configuration parameters.
+   These are always the same in the GNU C library.  */
+
+
+
+
+/* Define types for libio in terms of the standard internal type names.  */
+# 16 "/usr/include/_G_config.h" 3 4
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 1 3 4
+/*===---- stddef.h - Basic type definitions --------------------------------===
+ *
+ * Copyright (c) 2008 Eli Friedman
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ *===-----------------------------------------------------------------------===
+ */
+# 56 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/stddef.h" 3 4
+/* Some C libraries expect to see a wint_t here. Others (notably MinGW) will use
+__WINT_TYPE__ directly; accommodate both by requiring __need_wint_t */
+# 16 "/usr/include/_G_config.h" 2 3 4
+
+
+
+
+# 1 "/usr/include/wchar.h" 1 3 4
+/* Copyright (C) 1995-2008, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/*
+ *      ISO C99 Standard: 7.24
+ *	Extended multibyte and wide character utilities	<wchar.h>
+ */
+# 897 "/usr/include/wchar.h" 3 4
+/* Undefine all __need_* constants in case we are included to get those
+   constants but the whole file was already read.  */
+# 21 "/usr/include/_G_config.h" 2 3 4
+typedef struct
+{
+  __off_t __pos;
+  __mbstate_t __state;
+} _G_fpos_t;
+typedef struct
+{
+  __off64_t __pos;
+  __mbstate_t __state;
+} _G_fpos64_t;
+# 45 "/usr/include/_G_config.h" 3 4
+/* These library features are always available in the GNU C library.  */
+
+
+
+
+
+
+
+/* This is defined by <bits/stat.h> if `st_blksize' exists.  */
+# 33 "/usr/include/libio.h" 2 3 4
+/* ALL of these should be defined in _G_config.h */
+# 48 "/usr/include/libio.h" 3 4
+/* This define avoids name pollution if we're using GNU stdarg.h */
+# 87 "/usr/include/libio.h" 3 4
+/* Magic numbers and bits for the _flags field.
+   The magic numbers use the high-order bits of _flags;
+   the remaining bits are available for variable flags.
+   Note: The magic numbers must all be negative if stdio
+   emulation is desired. */
+# 125 "/usr/include/libio.h" 3 4
+/* These are "formatting flags" matching the iostream fmtflags enum values. */
+# 145 "/usr/include/libio.h" 3 4
+struct _IO_jump_t; struct _IO_FILE;
+
+/* Handle lock.  */
+
+
+
+
+
+
+
+typedef void _IO_lock_t;
+
+
+
+/* A streammarker remembers a position in a buffer. */
+
+struct _IO_marker {
+  struct _IO_marker *_next;
+  struct _IO_FILE *_sbuf;
+  /* If _pos >= 0
+ it points to _buf->Gbase()+_pos. FIXME comment */
+  /* if _pos < 0, it points to _buf->eBptr()+_pos. FIXME comment */
+  int _pos;
+# 178 "/usr/include/libio.h" 3 4
+};
+
+/* This is the structure from the libstdc++ codecvt class.  */
+enum __codecvt_result
+{
+  __codecvt_ok,
+  __codecvt_partial,
+  __codecvt_error,
+  __codecvt_noconv
+};
+# 246 "/usr/include/libio.h" 3 4
+struct _IO_FILE {
+  int _flags; /* High-order word is _IO_MAGIC; rest is flags. */
+
+
+  /* The following pointers correspond to the C++ streambuf protocol. */
+  /* Note:  Tk uses the _IO_read_ptr and _IO_read_end fields directly. */
+  char* _IO_read_ptr; /* Current read pointer */
+  char* _IO_read_end; /* End of get area. */
+  char* _IO_read_base; /* Start of putback+get area. */
+  char* _IO_write_base; /* Start of put area. */
+  char* _IO_write_ptr; /* Current put pointer. */
+  char* _IO_write_end; /* End of put area. */
+  char* _IO_buf_base; /* Start of reserve area. */
+  char* _IO_buf_end; /* End of reserve area. */
+  /* The following fields are used to support backing up and undo. */
+  char *_IO_save_base; /* Pointer to start of non-current get area. */
+  char *_IO_backup_base; /* Pointer to first valid character of backup area */
+  char *_IO_save_end; /* Pointer to end of non-current get area. */
+
+  struct _IO_marker *_markers;
+
+  struct _IO_FILE *_chain;
+
+  int _fileno;
+
+
+
+  int _flags2;
+
+  __off_t _old_offset; /* This used to be _offset but it's too small.  */
+
+
+  /* 1+column number of pbase(); 0 is unknown. */
+  unsigned short _cur_column;
+  signed char _vtable_offset;
+  char _shortbuf[1];
+
+  /*  char* _save_gptr;  char* _save_egptr; */
+
+  _IO_lock_t *_lock;
+# 294 "/usr/include/libio.h" 3 4
+ __off64_t _offset;
+# 303 "/usr/include/libio.h" 3 4
+ void *__pad1;
+  void *__pad2;
+  void *__pad3;
+  void *__pad4;
+  size_t __pad5;
+
+  int _mode;
+  /* Make sure we don't get into trouble again.  */
+  char _unused2[15 * sizeof (int) - 4 * sizeof (void *) - sizeof (size_t)];
+
+};
+
+
+
+
+
+struct _IO_FILE_plus;
+
+extern struct _IO_FILE_plus _IO_2_1_stdin_;
+extern struct _IO_FILE_plus _IO_2_1_stdout_;
+extern struct _IO_FILE_plus _IO_2_1_stderr_;
+# 335 "/usr/include/libio.h" 3 4
+/* Functions to do I/O and file management for a stream.  */
+
+/* Read NBYTES bytes from COOKIE into a buffer pointed to by BUF.
+   Return number of bytes read.  */
+typedef __ssize_t __io_read_fn (void *__cookie, char *__buf, size_t __nbytes);
+
+/* Write N bytes pointed to by BUF to COOKIE.  Write all N bytes
+   unless there is an error.  Return number of bytes written.  If
+   there is an error, return 0 and do not write anything.  If the file
+   has been opened for append (__mode.__append set), then set the file
+   pointer to the end of the file and then do the write; if not, just
+   write at the current file pointer.  */
+typedef __ssize_t __io_write_fn (void *__cookie, const char *__buf,
+     size_t __n);
+
+/* Move COOKIE's file position to *POS bytes from the
+   beginning of the file (if W is SEEK_SET),
+   the current position (if W is SEEK_CUR),
+   or the end of the file (if W is SEEK_END).
+   Set *POS to the new file position.
+   Returns zero if successful, nonzero if not.  */
+typedef int __io_seek_fn (void *__cookie, __off64_t *__pos, int __w);
+
+/* Close COOKIE.  */
+typedef int __io_close_fn (void *__cookie);
+
+
+
+/* User-visible names for the above.  */
+typedef __io_read_fn cookie_read_function_t;
+typedef __io_write_fn cookie_write_function_t;
+typedef __io_seek_fn cookie_seek_function_t;
+typedef __io_close_fn cookie_close_function_t;
+
+/* The structure with the cookie function pointers.  */
+typedef struct
+{
+  __io_read_fn *read; /* Read bytes.  */
+  __io_write_fn *write; /* Write bytes.  */
+  __io_seek_fn *seek; /* Seek/tell file position.  */
+  __io_close_fn *close; /* Close file.  */
+} _IO_cookie_io_functions_t;
+typedef _IO_cookie_io_functions_t cookie_io_functions_t;
+
+struct _IO_cookie_file;
+
+/* Initialize one of those.  */
+extern void _IO_cookie_init (struct _IO_cookie_file *__cfile, int __read_write,
+        void *__cookie, _IO_cookie_io_functions_t __fns);
+
+
+
+
+extern "C" {
+
+
+extern int __underflow (_IO_FILE *);
+extern int __uflow (_IO_FILE *);
+extern int __overflow (_IO_FILE *, int);
+# 435 "/usr/include/libio.h" 3 4
+extern int _IO_getc (_IO_FILE *__fp);
+extern int _IO_putc (int __c, _IO_FILE *__fp);
+extern int _IO_feof (_IO_FILE *__fp) throw ();
+extern int _IO_ferror (_IO_FILE *__fp) throw ();
+
+extern int _IO_peekc_locked (_IO_FILE *__fp);
+
+/* This one is for Emacs. */
+
+
+
+extern void _IO_flockfile (_IO_FILE *) throw ();
+extern void _IO_funlockfile (_IO_FILE *) throw ();
+extern int _IO_ftrylockfile (_IO_FILE *) throw ();
+# 465 "/usr/include/libio.h" 3 4
+extern int _IO_vfscanf (_IO_FILE * __restrict, const char * __restrict,
+   __gnuc_va_list, int *__restrict);
+extern int _IO_vfprintf (_IO_FILE *__restrict, const char *__restrict,
+    __gnuc_va_list);
+extern __ssize_t _IO_padn (_IO_FILE *, int, __ssize_t);
+extern size_t _IO_sgetn (_IO_FILE *, void *, size_t);
+
+extern __off64_t _IO_seekoff (_IO_FILE *, __off64_t, int, int);
+extern __off64_t _IO_seekpos (_IO_FILE *, __off64_t, int);
+
+extern void _IO_free_backup_area (_IO_FILE *) throw ();
+# 527 "/usr/include/libio.h" 3 4
+}
+# 75 "/usr/include/stdio.h" 2 3 4
+
+
+
+
+typedef __gnuc_va_list va_list;
+# 107 "/usr/include/stdio.h" 3 4
+/* The type of the second argument to `fgetpos' and `fsetpos'.  */
+
+
+typedef _G_fpos_t fpos_t;
+
+
+
+
+
+typedef _G_fpos64_t fpos64_t;
+
+
+/* The possibilities for the third argument to `setvbuf'.  */
+
+
+
+
+
+/* Default buffer size.  */
+
+
+
+
+
+/* End of file character.
+   Some things throughout the library rely on this being -1.  */
+
+
+
+
+
+/* The possibilities for the third argument to `fseek'.
+   These values should not be changed.  */
+# 150 "/usr/include/stdio.h" 3 4
+/* Default path prefix for `tempnam' and `tmpnam'.  */
+
+
+
+
+/* Get the values:
+   L_tmpnam	How long an array of chars must be to be passed to `tmpnam'.
+   TMP_MAX	The minimum number of unique filenames generated by tmpnam
+		(and tempnam when it uses tmpnam's name space),
+		or tempnam (the two are separate).
+   L_ctermid	How long an array to pass to `ctermid'.
+   L_cuserid	How long an array to pass to `cuserid'.
+   FOPEN_MAX	Minimum number of files that can be open at once.
+   FILENAME_MAX	Maximum length of a filename.  */
+
+
+# 1 "/usr/include/bits/stdio_lim.h" 1 3 4
+/* Copyright (C) 1994, 1997, 1998, 1999, 2009 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+# 165 "/usr/include/stdio.h" 2 3 4
+
+
+/* Standard streams.  */
+extern struct _IO_FILE *stdin; /* Standard input stream.  */
+extern struct _IO_FILE *stdout; /* Standard output stream.  */
+extern struct _IO_FILE *stderr; /* Standard error output stream.  */
+/* C89/C99 say they're macros.  Make them happy.  */
+
+
+
+
+
+/* Remove file FILENAME.  */
+extern int remove (const char *__filename) throw ();
+/* Rename file OLD to NEW.  */
+extern int rename (const char *__old, const char *__new) throw ();
+
+
+
+/* Rename file OLD relative to OLDFD to NEW relative to NEWFD.  */
+extern int renameat (int __oldfd, const char *__old, int __newfd,
+       const char *__new) throw ();
+
+
+
+/* Create a temporary file and open it read/write.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+
+extern FILE *tmpfile (void) /* Ignore */;
+# 205 "/usr/include/stdio.h" 3 4
+extern FILE *tmpfile64 (void) /* Ignore */;
+
+
+/* Generate a temporary filename.  */
+extern char *tmpnam (char *__s) throw () /* Ignore */;
+
+
+
+/* This is the reentrant variant of `tmpnam'.  The only difference is
+   that it does not allow S to be NULL.  */
+extern char *tmpnam_r (char *__s) throw () /* Ignore */;
+
+
+
+
+/* Generate a unique temporary filename using up to five characters of PFX
+   if it is not NULL.  The directory to put this file in is searched for
+   as follows: First the environment variable "TMPDIR" is checked.
+   If it contains the name of a writable directory, that directory is used.
+   If not and if DIR is not NULL, that value is checked.  If that fails,
+   P_tmpdir is tried and finally "/tmp".  The storage for the filename
+   is allocated by `malloc'.  */
+extern char *tempnam (const char *__dir, const char *__pfx)
+     throw () __attribute__ ((__malloc__)) /* Ignore */;
+
+
+
+
+/* Close STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fclose (FILE *__stream);
+/* Flush STREAM, or all streams if STREAM is NULL.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fflush (FILE *__stream);
+
+
+
+/* Faster versions when locking is not required.
+
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern int fflush_unlocked (FILE *__stream);
+
+
+
+/* Close all streams.
+
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern int fcloseall (void);
+
+
+
+
+
+/* Open a file and create a new stream for it.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern FILE *fopen (const char *__restrict __filename,
+      const char *__restrict __modes) /* Ignore */;
+/* Open a file, replacing an existing stream with it.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern FILE *freopen (const char *__restrict __filename,
+        const char *__restrict __modes,
+        FILE *__restrict __stream) /* Ignore */;
+# 297 "/usr/include/stdio.h" 3 4
+extern FILE *fopen64 (const char *__restrict __filename,
+        const char *__restrict __modes) /* Ignore */;
+extern FILE *freopen64 (const char *__restrict __filename,
+   const char *__restrict __modes,
+   FILE *__restrict __stream) /* Ignore */;
+
+
+
+/* Create a new stream that refers to an existing system file descriptor.  */
+extern FILE *fdopen (int __fd, const char *__modes) throw () /* Ignore */;
+
+
+
+/* Create a new stream that refers to the given magic cookie,
+   and uses the given functions for input and output.  */
+extern FILE *fopencookie (void *__restrict __magic_cookie,
+     const char *__restrict __modes,
+     _IO_cookie_io_functions_t __io_funcs) throw () /* Ignore */;
+
+
+
+/* Create a new stream that refers to a memory buffer.  */
+extern FILE *fmemopen (void *__s, size_t __len, const char *__modes)
+  throw () /* Ignore */;
+
+/* Open a stream that writes into a malloc'd buffer that is expanded as
+   necessary.  *BUFLOC and *SIZELOC are updated with the buffer's location
+   and the number of characters written on fflush or fclose.  */
+extern FILE *open_memstream (char **__bufloc, size_t *__sizeloc) throw () /* Ignore */;
+
+
+
+
+/* If BUF is NULL, make STREAM unbuffered.
+   Else make it use buffer BUF, of size BUFSIZ.  */
+extern void setbuf (FILE *__restrict __stream, char *__restrict __buf) throw ();
+/* Make STREAM use buffering mode MODE.
+   If BUF is not NULL, use N bytes of it for buffering;
+   else allocate an internal buffer N bytes long.  */
+extern int setvbuf (FILE *__restrict __stream, char *__restrict __buf,
+      int __modes, size_t __n) throw ();
+
+
+
+/* If BUF is NULL, make STREAM unbuffered.
+   Else make it use SIZE bytes of BUF for buffering.  */
+extern void setbuffer (FILE *__restrict __stream, char *__restrict __buf,
+         size_t __size) throw ();
+
+/* Make STREAM line-buffered.  */
+extern void setlinebuf (FILE *__stream) throw ();
+
+
+
+
+/* Write formatted output to STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fprintf (FILE *__restrict __stream,
+      const char *__restrict __format, ...);
+/* Write formatted output to stdout.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int printf (const char *__restrict __format, ...);
+/* Write formatted output to S.  */
+extern int sprintf (char *__restrict __s,
+      const char *__restrict __format, ...) throw ();
+
+/* Write formatted output to S from argument list ARG.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int vfprintf (FILE *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg);
+/* Write formatted output to stdout from argument list ARG.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int vprintf (const char *__restrict __format, __gnuc_va_list __arg);
+/* Write formatted output to S from argument list ARG.  */
+extern int vsprintf (char *__restrict __s, const char *__restrict __format,
+       __gnuc_va_list __arg) throw ();
+
+
+
+
+/* Maximum chars of output to write in MAXLEN.  */
+extern int snprintf (char *__restrict __s, size_t __maxlen,
+       const char *__restrict __format, ...)
+     throw () __attribute__ ((__format__ (__printf__, 3, 4)));
+
+extern int vsnprintf (char *__restrict __s, size_t __maxlen,
+        const char *__restrict __format, __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__printf__, 3, 0)));
+
+
+
+
+/* Write formatted output to a string dynamically allocated with `malloc'.
+   Store the address of the string in *PTR.  */
+extern int vasprintf (char **__restrict __ptr, const char *__restrict __f,
+        __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__printf__, 2, 0))) /* Ignore */;
+extern int __asprintf (char **__restrict __ptr,
+         const char *__restrict __fmt, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3))) /* Ignore */;
+extern int asprintf (char **__restrict __ptr,
+       const char *__restrict __fmt, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3))) /* Ignore */;
+
+
+
+/* Write formatted output to a file descriptor.  */
+extern int vdprintf (int __fd, const char *__restrict __fmt,
+       __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__printf__, 2, 0)));
+extern int dprintf (int __fd, const char *__restrict __fmt, ...)
+     __attribute__ ((__format__ (__printf__, 2, 3)));
+
+
+
+
+/* Read formatted input from STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fscanf (FILE *__restrict __stream,
+     const char *__restrict __format, ...) /* Ignore */;
+/* Read formatted input from stdin.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int scanf (const char *__restrict __format, ...) /* Ignore */;
+/* Read formatted input from S.  */
+extern int sscanf (const char *__restrict __s,
+     const char *__restrict __format, ...) throw ();
+# 467 "/usr/include/stdio.h" 3 4
+/* Read formatted input from S into argument list ARG.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int vfscanf (FILE *__restrict __s, const char *__restrict __format,
+      __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__scanf__, 2, 0))) /* Ignore */;
+
+/* Read formatted input from stdin into argument list ARG.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int vscanf (const char *__restrict __format, __gnuc_va_list __arg)
+     __attribute__ ((__format__ (__scanf__, 1, 0))) /* Ignore */;
+
+/* Read formatted input from S into argument list ARG.  */
+extern int vsscanf (const char *__restrict __s,
+      const char *__restrict __format, __gnuc_va_list __arg)
+     throw () __attribute__ ((__format__ (__scanf__, 2, 0)));
+# 527 "/usr/include/stdio.h" 3 4
+/* Read a character from STREAM.
+
+   These functions are possible cancellation points and therefore not
+   marked with __THROW.  */
+extern int fgetc (FILE *__stream);
+extern int getc (FILE *__stream);
+
+/* Read a character from stdin.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int getchar (void);
+
+
+/* The C standard explicitly says this is a macro, so we always do the
+   optimization for it.  */
+
+
+
+/* These are defined in POSIX.1:1996.
+
+   These functions are possible cancellation points and therefore not
+   marked with __THROW.  */
+extern int getc_unlocked (FILE *__stream);
+extern int getchar_unlocked (void);
+
+
+
+/* Faster version when locking is not necessary.
+
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern int fgetc_unlocked (FILE *__stream);
+
+
+
+
+/* Write a character to STREAM.
+
+   These functions are possible cancellation points and therefore not
+   marked with __THROW.
+
+   These functions is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fputc (int __c, FILE *__stream);
+extern int putc (int __c, FILE *__stream);
+
+/* Write a character to stdout.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int putchar (int __c);
+
+
+/* The C standard explicitly says this can be a macro,
+   so we always do the optimization for it.  */
+
+
+
+/* Faster version when locking is not necessary.
+
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern int fputc_unlocked (int __c, FILE *__stream);
+
+
+
+/* These are defined in POSIX.1:1996.
+
+   These functions are possible cancellation points and therefore not
+   marked with __THROW.  */
+extern int putc_unlocked (int __c, FILE *__stream);
+extern int putchar_unlocked (int __c);
+
+
+
+
+
+/* Get a word (int) from STREAM.  */
+extern int getw (FILE *__stream);
+
+/* Write a word (int) to STREAM.  */
+extern int putw (int __w, FILE *__stream);
+
+
+
+
+/* Get a newline-terminated string of finite length from STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+     /* Ignore */;
+
+
+
+/* Get a newline-terminated string from stdin, removing the newline.
+   DO NOT USE THIS FUNCTION!!  There is no limit on how much it will read.
+
+   The function has been officially removed in ISO C11.  This opportunity
+   is used to also remove it from the GNU feature list.  It is now only
+   available when explicitly using an old ISO C, Unix, or POSIX standard.
+   GCC defines _GNU_SOURCE when building C++ code and the function is still
+   in C++11, so it is also available for C++.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern char *gets (char *__s) /* Ignore */ __attribute__ ((__deprecated__));
+
+
+
+
+/* This function does the same as `fgets' but does not lock the stream.
+
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern char *fgets_unlocked (char *__restrict __s, int __n,
+        FILE *__restrict __stream) /* Ignore */;
+
+
+
+
+/* Read up to (and including) a DELIMITER from STREAM into *LINEPTR
+   (and null-terminate it). *LINEPTR is a pointer returned from malloc (or
+   NULL), pointing to *N characters of space.  It is realloc'd as
+   necessary.  Returns the number of characters read (not including the
+   null terminator), or -1 on error or EOF.
+
+   These functions are not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation they are cancellation points and
+   therefore not marked with __THROW.  */
+extern __ssize_t __getdelim (char **__restrict __lineptr,
+          size_t *__restrict __n, int __delimiter,
+          FILE *__restrict __stream) /* Ignore */;
+extern __ssize_t getdelim (char **__restrict __lineptr,
+        size_t *__restrict __n, int __delimiter,
+        FILE *__restrict __stream) /* Ignore */;
+
+/* Like `getdelim', but reads up to a newline.
+
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern __ssize_t getline (char **__restrict __lineptr,
+       size_t *__restrict __n,
+       FILE *__restrict __stream) /* Ignore */;
+
+
+
+
+/* Write a string to STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fputs (const char *__restrict __s, FILE *__restrict __stream);
+
+/* Write a string, followed by a newline, to stdout.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int puts (const char *__s);
+
+
+/* Push a character back onto the input buffer of STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int ungetc (int __c, FILE *__stream);
+
+
+/* Read chunks of generic data from STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern size_t fread (void *__restrict __ptr, size_t __size,
+       size_t __n, FILE *__restrict __stream) /* Ignore */;
+/* Write chunks of generic data to STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern size_t fwrite (const void *__restrict __ptr, size_t __size,
+        size_t __n, FILE *__restrict __s);
+
+
+
+/* This function does the same as `fputs' but does not lock the stream.
+
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */
+extern int fputs_unlocked (const char *__restrict __s,
+      FILE *__restrict __stream);
+
+
+
+/* Faster versions when locking is not necessary.
+
+   These functions are not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation they are cancellation points and
+   therefore not marked with __THROW.  */
+extern size_t fread_unlocked (void *__restrict __ptr, size_t __size,
+         size_t __n, FILE *__restrict __stream) /* Ignore */;
+extern size_t fwrite_unlocked (const void *__restrict __ptr, size_t __size,
+          size_t __n, FILE *__restrict __stream);
+
+
+
+
+/* Seek to a certain position on STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fseek (FILE *__stream, long int __off, int __whence);
+/* Return the current position of STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern long int ftell (FILE *__stream) /* Ignore */;
+/* Rewind to the beginning of STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern void rewind (FILE *__stream);
+
+
+/* The Single Unix Specification, Version 2, specifies an alternative,
+   more adequate interface for the two functions above which deal with
+   file offset.  `long int' is not the right type.  These definitions
+   are originally defined in the Large File Support API.  */
+
+
+
+/* Seek to a certain position on STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fseeko (FILE *__stream, __off_t __off, int __whence);
+/* Return the current position of STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern __off_t ftello (FILE *__stream) /* Ignore */;
+# 794 "/usr/include/stdio.h" 3 4
+/* Get STREAM's position.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fgetpos (FILE *__restrict __stream, fpos_t *__restrict __pos);
+/* Set STREAM's position.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int fsetpos (FILE *__stream, const fpos_t *__pos);
+# 818 "/usr/include/stdio.h" 3 4
+extern int fseeko64 (FILE *__stream, __off64_t __off, int __whence);
+extern __off64_t ftello64 (FILE *__stream) /* Ignore */;
+extern int fgetpos64 (FILE *__restrict __stream, fpos64_t *__restrict __pos);
+extern int fsetpos64 (FILE *__stream, const fpos64_t *__pos);
+
+
+
+/* Clear the error and EOF indicators for STREAM.  */
+extern void clearerr (FILE *__stream) throw ();
+/* Return the EOF indicator for STREAM.  */
+extern int feof (FILE *__stream) throw () /* Ignore */;
+/* Return the error indicator for STREAM.  */
+extern int ferror (FILE *__stream) throw () /* Ignore */;
+
+
+
+/* Faster versions when locking is not required.  */
+extern void clearerr_unlocked (FILE *__stream) throw ();
+extern int feof_unlocked (FILE *__stream) throw () /* Ignore */;
+extern int ferror_unlocked (FILE *__stream) throw () /* Ignore */;
+
+
+
+
+/* Print a message describing the meaning of the value of errno.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern void perror (const char *__s);
+
+
+/* Provide the declarations for `sys_errlist' and `sys_nerr' if they
+   are available on this system.  Even if available, these variables
+   should not be used directly.  The `strerror' function provides
+   all the necessary functionality.  */
+
+
+# 1 "/usr/include/bits/sys_errlist.h" 1 3 4
+/* Declare sys_errlist and sys_nerr, or don't.  Compatibility (do) version.
+   Copyright (C) 2002, 2012 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+
+
+
+/* sys_errlist and sys_nerr are deprecated.  Use strerror instead.  */
+
+
+extern int sys_nerr;
+extern const char *const sys_errlist[];
+
+
+extern int _sys_nerr;
+extern const char *const _sys_errlist[];
+# 854 "/usr/include/stdio.h" 2 3 4
+
+
+
+/* Return the system file descriptor for STREAM.  */
+extern int fileno (FILE *__stream) throw () /* Ignore */;
+
+
+
+/* Faster version when locking is not required.  */
+extern int fileno_unlocked (FILE *__stream) throw () /* Ignore */;
+
+
+
+
+
+/* Create a new stream connected to a pipe running the given command.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern FILE *popen (const char *__command, const char *__modes) /* Ignore */;
+
+/* Close a stream opened by popen and return the status of its child.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */
+extern int pclose (FILE *__stream);
+
+
+
+
+/* Return the name of the controlling terminal.  */
+extern char *ctermid (char *__s) throw ();
+
+
+
+
+/* Return the name of the current user.  */
+extern char *cuserid (char *__s);
+
+
+
+
+struct obstack; /* See <obstack.h>.  */
+
+/* Write formatted output to an obstack.  */
+extern int obstack_printf (struct obstack *__restrict __obstack,
+      const char *__restrict __format, ...)
+     throw () __attribute__ ((__format__ (__printf__, 2, 3)));
+extern int obstack_vprintf (struct obstack *__restrict __obstack,
+       const char *__restrict __format,
+       __gnuc_va_list __args)
+     throw () __attribute__ ((__format__ (__printf__, 2, 0)));
+
+
+
+
+/* These are defined in POSIX.1:1996.  */
+
+/* Acquire ownership of STREAM.  */
+extern void flockfile (FILE *__stream) throw ();
+
+/* Try to acquire ownership of STREAM but do not block if it is not
+   possible.  */
+extern int ftrylockfile (FILE *__stream) throw () /* Ignore */;
+
+/* Relinquish the ownership granted for STREAM.  */
+extern void funlockfile (FILE *__stream) throw ();
+# 931 "/usr/include/stdio.h" 3 4
+/* If we are compiling with optimizing read this file.  It contains
+   several optimizing inline functions and macros.  */
+# 943 "/usr/include/stdio.h" 3 4
+}
+# 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 2 3
+
+
+
+
+// Get rid of those macros defined in <stdio.h> in lieu of real functions.
+# 91 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+namespace std
+{
+  using ::FILE;
+  using ::fpos_t;
+
+  using ::clearerr;
+  using ::fclose;
+  using ::feof;
+  using ::ferror;
+  using ::fflush;
+  using ::fgetc;
+  using ::fgetpos;
+  using ::fgets;
+  using ::fopen;
+  using ::fprintf;
+  using ::fputc;
+  using ::fputs;
+  using ::fread;
+  using ::freopen;
+  using ::fscanf;
+  using ::fseek;
+  using ::fsetpos;
+  using ::ftell;
+  using ::fwrite;
+  using ::getc;
+  using ::getchar;
+  using ::gets;
+  using ::perror;
+  using ::printf;
+  using ::putc;
+  using ::putchar;
+  using ::puts;
+  using ::remove;
+  using ::rename;
+  using ::rewind;
+  using ::scanf;
+  using ::setbuf;
+  using ::setvbuf;
+  using ::sprintf;
+  using ::sscanf;
+  using ::tmpfile;
+  using ::tmpnam;
+  using ::ungetc;
+  using ::vfprintf;
+  using ::vprintf;
+  using ::vsprintf;
+} // namespace
+# 147 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+namespace __gnu_cxx
+{
+# 165 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+ using ::snprintf;
+  using ::vfscanf;
+  using ::vscanf;
+  using ::vsnprintf;
+  using ::vsscanf;
+
+} // namespace __gnu_cxx
+
+namespace std
+{
+  using ::__gnu_cxx::snprintf;
+  using ::__gnu_cxx::vfscanf;
+  using ::__gnu_cxx::vscanf;
+  using ::__gnu_cxx::vsnprintf;
+  using ::__gnu_cxx::vsscanf;
+} // namespace std
+# 43 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 1 3
+// Wrapper of C-language FILE struct -*- C++ -*-
+
+// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+//
+// ISO C++ 14882: 27.8  File-based streams
+//
+
+/** @file bits/basic_file.h
+ *  This is an internal header file, included by other library headers.
+ *  Do not attempt to use it directly. @headername{ios}
+ */
+# 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 3
+
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 1 3
+// Underlying io library details -*- C++ -*-
+
+// Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file bits/c++io.h
+ *  This is an internal header file, included by other library headers.
+ *  Do not attempt to use it directly. @headername{ios}
+ */
+
+// c_io_stdio.h - Defines for using "C" stdio.h
+
+
+
+
+
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 1 3
+// -*- C++ -*- forwarding header.
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file include/cstdio
+ *  This is a Standard C++ Library file.  You should @c \#include this file
+ *  in your programs, rather than any of the @a *.h implementation files.
+ *
+ *  This is the C++ version of the Standard C Library header @c stdio.h,
+ *  and its contents are (mostly) the same as that header, but are all
+ *  contained in the namespace @c std (except for names which are defined
+ *  as macros in C).
+ */
+
+//
+// ISO C++ 14882: 27.8.2  C Library files
+//
+# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cstdio" 3
+# 37 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++io.h" 2 3
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  typedef __gthread_mutex_t __c_lock;
+
+  // for basic_file.h
+  typedef FILE __c_file;
+
+
+} // namespace
+# 41 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/basic_file.h" 2 3
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  // Generic declaration.
+  template<typename _CharT>
+    class __basic_file;
+
+  // Specialization.
+  template<>
+    class __basic_file<char>
+    {
+      // Underlying data source/sink.
+      __c_file* _M_cfile;
+
+      // True iff we opened _M_cfile, and thus must close it ourselves.
+      bool _M_cfile_created;
+
+    public:
+      __basic_file(__c_lock* __lock = 0) throw ();
+
+      __basic_file*
+      open(const char* __name, ios_base::openmode __mode, int __prot = 0664);
+
+      __basic_file*
+      sys_open(__c_file* __file, ios_base::openmode);
+
+      __basic_file*
+      sys_open(int __fd, ios_base::openmode __mode) throw ();
+
+      __basic_file*
+      close();
+
+      __attribute__ ((__pure__)) bool
+      is_open() const throw ();
+
+      __attribute__ ((__pure__)) int
+      fd() throw ();
+
+      __attribute__ ((__pure__)) __c_file*
+      file() throw ();
+
+      ~__basic_file();
+
+      streamsize
+      xsputn(const char* __s, streamsize __n);
+
+      streamsize
+      xsputn_2(const char* __s1, streamsize __n1,
+        const char* __s2, streamsize __n2);
+
+      streamsize
+      xsgetn(char* __s, streamsize __n);
+
+      streamoff
+      seekoff(streamoff __off, ios_base::seekdir __way) throw ();
+
+      int
+      sync();
+
+      streamsize
+      showmanyc();
+    };
+
+
+} // namespace
+# 44 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  // [27.8.1.1] template class basic_filebuf
+  /**
+   *  @brief  The actual work of input and output (for files).
+   *  @ingroup io
+   *
+   *  This class associates both its input and output sequence with an
+   *  external disk file, and maintains a joint file position for both
+   *  sequences.  Many of its semantics are described in terms of similar
+   *  behavior in the Standard C Library's @c FILE streams.
+   */
+  // Requirements on traits_type, specific to this class:
+  // traits_type::pos_type must be fpos<traits_type::state_type>
+  // traits_type::off_type must be streamoff
+  // traits_type::state_type must be Assignable and DefaultConstructible,
+  // and traits_type::state_type() must be the initial state for codecvt.
+  template<typename _CharT, typename _Traits>
+    class basic_filebuf : public basic_streambuf<_CharT, _Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+      typedef basic_streambuf<char_type, traits_type> __streambuf_type;
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef __basic_file<char> __file_type;
+      typedef typename traits_type::state_type __state_type;
+      typedef codecvt<char_type, char, __state_type> __codecvt_type;
+
+      friend class ios_base; // For sync_with_stdio.
+
+    protected:
+      // Data Members:
+      // MT lock inherited from libio or other low-level io library.
+      __c_lock _M_lock;
+
+      // External buffer.
+      __file_type _M_file;
+
+      /// Place to stash in || out || in | out settings for current filebuf.
+      ios_base::openmode _M_mode;
+
+      // Beginning state type for codecvt.
+      __state_type _M_state_beg;
+
+      // During output, the state that corresponds to pptr(),
+      // during input, the state that corresponds to egptr() and
+      // _M_ext_next.
+      __state_type _M_state_cur;
+
+      // Not used for output. During input, the state that corresponds
+      // to eback() and _M_ext_buf.
+      __state_type _M_state_last;
+
+      /// Pointer to the beginning of internal buffer.
+      char_type* _M_buf;
+
+      /**
+       *  Actual size of internal buffer. This number is equal to the size
+       *  of the put area + 1 position, reserved for the overflow char of
+       *  a full area.
+       */
+      size_t _M_buf_size;
+
+      // Set iff _M_buf is allocated memory from _M_allocate_internal_buffer.
+      bool _M_buf_allocated;
+
+      /**
+       *  _M_reading == false && _M_writing == false for @b uncommitted mode;
+       *  _M_reading == true for @b read mode;
+       *  _M_writing == true for @b write mode;
+       *
+       *  NB: _M_reading == true && _M_writing == true is unused.
+       */
+      bool _M_reading;
+      bool _M_writing;
+
+      //@{
+      /**
+       *  Necessary bits for putback buffer management.
+       *
+       *  @note pbacks of over one character are not currently supported.
+       */
+      char_type _M_pback;
+      char_type* _M_pback_cur_save;
+      char_type* _M_pback_end_save;
+      bool _M_pback_init;
+      //@}
+
+      // Cached codecvt facet.
+      const __codecvt_type* _M_codecvt;
+
+      /**
+       *  Buffer for external characters. Used for input when
+       *  codecvt::always_noconv() == false. When valid, this corresponds
+       *  to eback().
+       */
+      char* _M_ext_buf;
+
+      /**
+       *  Size of buffer held by _M_ext_buf.
+       */
+      streamsize _M_ext_buf_size;
+
+      /**
+       *  Pointers into the buffer held by _M_ext_buf that delimit a
+       *  subsequence of bytes that have been read but not yet converted.
+       *  When valid, _M_ext_next corresponds to egptr().
+       */
+      const char* _M_ext_next;
+      char* _M_ext_end;
+
+      /**
+       *  Initializes pback buffers, and moves normal buffers to safety.
+       *  Assumptions:
+       *  _M_in_cur has already been moved back
+       */
+      void
+      _M_create_pback()
+      {
+ if (!_M_pback_init)
+   {
+     _M_pback_cur_save = this->gptr();
+     _M_pback_end_save = this->egptr();
+     this->setg(&_M_pback, &_M_pback, &_M_pback + 1);
+     _M_pback_init = true;
+   }
+      }
+
+      /**
+       *  Deactivates pback buffer contents, and restores normal buffer.
+       *  Assumptions:
+       *  The pback buffer has only moved forward.
+       */
+      void
+      _M_destroy_pback() throw()
+      {
+ if (_M_pback_init)
+   {
+     // Length _M_in_cur moved in the pback buffer.
+     _M_pback_cur_save += this->gptr() != this->eback();
+     this->setg(_M_buf, _M_pback_cur_save, _M_pback_end_save);
+     _M_pback_init = false;
+   }
+      }
+
+    public:
+      // Constructors/destructor:
+      /**
+       *  @brief  Does not open any files.
+       *
+       *  The default constructor initializes the parent class using its
+       *  own default ctor.
+       */
+      basic_filebuf();
+
+      /**
+       *  @brief  The destructor closes the file first.
+       */
+      virtual
+      ~basic_filebuf()
+      { this->close(); }
+
+      // Members:
+      /**
+       *  @brief  Returns true if the external file is open.
+       */
+      bool
+      is_open() const throw()
+      { return _M_file.is_open(); }
+
+      /**
+       *  @brief  Opens an external file.
+       *  @param  s  The name of the file.
+       *  @param  mode  The open mode flags.
+       *  @return  @c this on success, NULL on failure
+       *
+       *  If a file is already open, this function immediately fails.
+       *  Otherwise it tries to open the file named @a s using the flags
+       *  given in @a mode.
+       *
+       *  Table 92, adapted here, gives the relation between openmode
+       *  combinations and the equivalent fopen() flags.
+       *  (NB: lines app, in|out|app, in|app, binary|app, binary|in|out|app,
+       *  and binary|in|app per DR 596)
+       *  +---------------------------------------------------------+
+       *  | ios_base Flag combination            stdio equivalent   |
+       *  |binary  in  out  trunc  app                              |
+       *  +---------------------------------------------------------+
+       *  |             +                        w                  |
+       *  |             +           +            a                  |
+       *  |                         +            a                  |
+       *  |             +     +                  w                  |
+       *  |         +                            r                  |
+       *  |         +   +                        r+                 |
+       *  |         +   +     +                  w+                 |
+       *  |         +   +           +            a+                 |
+       *  |         +               +            a+                 |
+       *  +---------------------------------------------------------+
+       *  |   +         +                        wb                 |
+       *  |   +         +           +            ab                 |
+       *  |   +                     +            ab                 |
+       *  |   +         +     +                  wb                 |
+       *  |   +     +                            rb                 |
+       *  |   +     +   +                        r+b                |
+       *  |   +     +   +     +                  w+b                |
+       *  |   +     +   +           +            a+b                |
+       *  |   +     +               +            a+b                |
+       *  +---------------------------------------------------------+
+       */
+      __filebuf_type*
+      open(const char* __s, ios_base::openmode __mode);
+# 280 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+ /**
+       *  @brief  Closes the currently associated file.
+       *  @return  @c this on success, NULL on failure
+       *
+       *  If no file is currently open, this function immediately fails.
+       *
+       *  If a <em>put buffer area</em> exists, @c overflow(eof) is
+       *  called to flush all the characters.  The file is then
+       *  closed.
+       *
+       *  If any operations fail, this function also fails.
+       */
+      __filebuf_type*
+      close();
+
+    protected:
+      void
+      _M_allocate_internal_buffer();
+
+      void
+      _M_destroy_internal_buffer() throw();
+
+      // [27.8.1.4] overridden virtual functions
+      virtual streamsize
+      showmanyc();
+
+      // Stroustrup, 1998, p. 628
+      // underflow() and uflow() functions are called to get the next
+      // character from the real input source when the buffer is empty.
+      // Buffered input uses underflow()
+
+      virtual int_type
+      underflow();
+
+      virtual int_type
+      pbackfail(int_type __c = _Traits::eof());
+
+      // Stroustrup, 1998, p 648
+      // The overflow() function is called to transfer characters to the
+      // real output destination when the buffer is full. A call to
+      // overflow(c) outputs the contents of the buffer plus the
+      // character c.
+      // 27.5.2.4.5
+      // Consume some sequence of the characters in the pending sequence.
+      virtual int_type
+      overflow(int_type __c = _Traits::eof());
+
+      // Convert internal byte sequence to external, char-based
+      // sequence via codecvt.
+      bool
+      _M_convert_to_external(char_type*, streamsize);
+
+      /**
+       *  @brief  Manipulates the buffer.
+       *  @param  s  Pointer to a buffer area.
+       *  @param  n  Size of @a s.
+       *  @return  @c this
+       *
+       *  If no file has been opened, and both @a s and @a n are zero, then
+       *  the stream becomes unbuffered.  Otherwise, @c s is used as a
+       *  buffer; see
+       *  http://gcc.gnu.org/onlinedocs/libstdc++/manual/bk01pt11ch25s02.html
+       *  for more.
+       */
+      virtual __streambuf_type*
+      setbuf(char_type* __s, streamsize __n);
+
+      virtual pos_type
+      seekoff(off_type __off, ios_base::seekdir __way,
+       ios_base::openmode __mode = ios_base::in | ios_base::out);
+
+      virtual pos_type
+      seekpos(pos_type __pos,
+       ios_base::openmode __mode = ios_base::in | ios_base::out);
+
+      // Common code for seekoff, seekpos, and overflow
+      pos_type
+      _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state);
+
+      int
+      _M_get_ext_pos(__state_type &__state);
+
+      virtual int
+      sync();
+
+      virtual void
+      imbue(const locale& __loc);
+
+      virtual streamsize
+      xsgetn(char_type* __s, streamsize __n);
+
+      virtual streamsize
+      xsputn(const char_type* __s, streamsize __n);
+
+      // Flushes output buffer, then writes unshift sequence.
+      bool
+      _M_terminate_output();
+
+      /**
+       *  This function sets the pointers of the internal buffer, both get
+       *  and put areas. Typically:
+       *
+       *   __off == egptr() - eback() upon underflow/uflow (@b read mode);
+       *   __off == 0 upon overflow (@b write mode);
+       *   __off == -1 upon open, setbuf, seekoff/pos (@b uncommitted mode).
+       *
+       *  NB: epptr() - pbase() == _M_buf_size - 1, since _M_buf_size
+       *  reflects the actual allocated memory and the last cell is reserved
+       *  for the overflow char of a full put area.
+       */
+      void
+      _M_set_buffer(streamsize __off)
+      {
+  const bool __testin = _M_mode & ios_base::in;
+  const bool __testout = _M_mode & ios_base::out;
+
+ if (__testin && __off > 0)
+   this->setg(_M_buf, _M_buf, _M_buf + __off);
+ else
+   this->setg(_M_buf, _M_buf, _M_buf);
+
+ if (__testout && __off == 0 && _M_buf_size > 1 )
+   this->setp(_M_buf, _M_buf + _M_buf_size - 1);
+ else
+   this->setp(0, 0);
+      }
+    };
+
+  // [27.8.1.5] Template class basic_ifstream
+  /**
+   *  @brief  Controlling input for files.
+   *  @ingroup io
+   *
+   *  This class supports reading from named files, using the inherited
+   *  functions from std::basic_istream.  To control the associated
+   *  sequence, an instance of std::basic_filebuf is used, which this page
+   *  refers to as @c sb.
+   */
+  template<typename _CharT, typename _Traits>
+    class basic_ifstream : public basic_istream<_CharT, _Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+      // Non-standard types:
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef basic_istream<char_type, traits_type> __istream_type;
+
+    private:
+      __filebuf_type _M_filebuf;
+
+    public:
+      // Constructors/Destructors:
+      /**
+       *  @brief  Default constructor.
+       *
+       *  Initializes @c sb using its default constructor, and passes
+       *  @c &sb to the base class initializer.  Does not open any files
+       *  (you haven't given it a filename to open).
+       */
+      basic_ifstream() : __istream_type(), _M_filebuf()
+      { this->init(&_M_filebuf); }
+
+      /**
+       *  @brief  Create an input file stream.
+       *  @param  s  Null terminated string specifying the filename.
+       *  @param  mode  Open file in specified mode (see std::ios_base).
+       *
+       *  @c ios_base::in is automatically included in @a mode.
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      explicit
+      basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
+      : __istream_type(), _M_filebuf()
+      {
+ this->init(&_M_filebuf);
+ this->open(__s, __mode);
+      }
+# 484 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+ /**
+       *  @brief  The destructor does nothing.
+       *
+       *  The file is closed by the filebuf object, not the formatting
+       *  stream.
+       */
+      ~basic_ifstream()
+      { }
+
+      // Members:
+      /**
+       *  @brief  Accessing the underlying buffer.
+       *  @return  The current basic_filebuf buffer.
+       *
+       *  This hides both signatures of std::basic_ios::rdbuf().
+       */
+      __filebuf_type*
+      rdbuf() const
+      { return const_cast<__filebuf_type*>(&_M_filebuf); }
+
+      /**
+       *  @brief  Wrapper to test for an open file.
+       *  @return  @c rdbuf()->is_open()
+       */
+      bool
+      is_open()
+      { return _M_filebuf.is_open(); }
+
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // 365. Lack of const-qualification in clause 27
+      bool
+      is_open() const
+      { return _M_filebuf.is_open(); }
+
+      /**
+       *  @brief  Opens an external file.
+       *  @param  s  The name of the file.
+       *  @param  mode  The open mode flags.
+       *
+       *  Calls @c std::basic_filebuf::open(s,mode|in).  If that function
+       *  fails, @c failbit is set in the stream's error state.
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      void
+      open(const char* __s, ios_base::openmode __mode = ios_base::in)
+      {
+ if (!_M_filebuf.open(__s, __mode | ios_base::in))
+   this->setstate(ios_base::failbit);
+ else
+   // _GLIBCXX_RESOLVE_LIB_DEFECTS
+   // 409. Closing an fstream should clear error state
+   this->clear();
+      }
+# 561 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+ /**
+       *  @brief  Close the file.
+       *
+       *  Calls @c std::basic_filebuf::close().  If that function
+       *  fails, @c failbit is set in the stream's error state.
+       */
+      void
+      close()
+      {
+ if (!_M_filebuf.close())
+   this->setstate(ios_base::failbit);
+      }
+    };
+
+
+  // [27.8.1.8] Template class basic_ofstream
+  /**
+   *  @brief  Controlling output for files.
+   *  @ingroup io
+   *
+   *  This class supports reading from named files, using the inherited
+   *  functions from std::basic_ostream.  To control the associated
+   *  sequence, an instance of std::basic_filebuf is used, which this page
+   *  refers to as @c sb.
+   */
+  template<typename _CharT, typename _Traits>
+    class basic_ofstream : public basic_ostream<_CharT,_Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+      // Non-standard types:
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef basic_ostream<char_type, traits_type> __ostream_type;
+
+    private:
+      __filebuf_type _M_filebuf;
+
+    public:
+      // Constructors:
+      /**
+       *  @brief  Default constructor.
+       *
+       *  Initializes @c sb using its default constructor, and passes
+       *  @c &sb to the base class initializer.  Does not open any files
+       *  (you haven't given it a filename to open).
+       */
+      basic_ofstream(): __ostream_type(), _M_filebuf()
+      { this->init(&_M_filebuf); }
+
+      /**
+       *  @brief  Create an output file stream.
+       *  @param  s  Null terminated string specifying the filename.
+       *  @param  mode  Open file in specified mode (see std::ios_base).
+       *
+       *  @c ios_base::out|ios_base::trunc is automatically included in
+       *  @a mode.
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      explicit
+      basic_ofstream(const char* __s,
+       ios_base::openmode __mode = ios_base::out|ios_base::trunc)
+      : __ostream_type(), _M_filebuf()
+      {
+ this->init(&_M_filebuf);
+ this->open(__s, __mode);
+      }
+# 655 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+ /**
+       *  @brief  The destructor does nothing.
+       *
+       *  The file is closed by the filebuf object, not the formatting
+       *  stream.
+       */
+      ~basic_ofstream()
+      { }
+
+      // Members:
+      /**
+       *  @brief  Accessing the underlying buffer.
+       *  @return  The current basic_filebuf buffer.
+       *
+       *  This hides both signatures of std::basic_ios::rdbuf().
+       */
+      __filebuf_type*
+      rdbuf() const
+      { return const_cast<__filebuf_type*>(&_M_filebuf); }
+
+      /**
+       *  @brief  Wrapper to test for an open file.
+       *  @return  @c rdbuf()->is_open()
+       */
+      bool
+      is_open()
+      { return _M_filebuf.is_open(); }
+
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // 365. Lack of const-qualification in clause 27
+      bool
+      is_open() const
+      { return _M_filebuf.is_open(); }
+
+      /**
+       *  @brief  Opens an external file.
+       *  @param  s  The name of the file.
+       *  @param  mode  The open mode flags.
+       *
+       *  Calls @c std::basic_filebuf::open(s,mode|out|trunc).  If that
+       *  function fails, @c failbit is set in the stream's error state.
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      void
+      open(const char* __s,
+    ios_base::openmode __mode = ios_base::out | ios_base::trunc)
+      {
+ if (!_M_filebuf.open(__s, __mode | ios_base::out))
+   this->setstate(ios_base::failbit);
+ else
+   // _GLIBCXX_RESOLVE_LIB_DEFECTS
+   // 409. Closing an fstream should clear error state
+   this->clear();
+      }
+# 734 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+ /**
+       *  @brief  Close the file.
+       *
+       *  Calls @c std::basic_filebuf::close().  If that function
+       *  fails, @c failbit is set in the stream's error state.
+       */
+      void
+      close()
+      {
+ if (!_M_filebuf.close())
+   this->setstate(ios_base::failbit);
+      }
+    };
+
+
+  // [27.8.1.11] Template class basic_fstream
+  /**
+   *  @brief  Controlling input and output for files.
+   *  @ingroup io
+   *
+   *  This class supports reading from and writing to named files, using
+   *  the inherited functions from std::basic_iostream.  To control the
+   *  associated sequence, an instance of std::basic_filebuf is used, which
+   *  this page refers to as @c sb.
+   */
+  template<typename _CharT, typename _Traits>
+    class basic_fstream : public basic_iostream<_CharT, _Traits>
+    {
+    public:
+      // Types:
+      typedef _CharT char_type;
+      typedef _Traits traits_type;
+      typedef typename traits_type::int_type int_type;
+      typedef typename traits_type::pos_type pos_type;
+      typedef typename traits_type::off_type off_type;
+
+      // Non-standard types:
+      typedef basic_filebuf<char_type, traits_type> __filebuf_type;
+      typedef basic_ios<char_type, traits_type> __ios_type;
+      typedef basic_iostream<char_type, traits_type> __iostream_type;
+
+    private:
+      __filebuf_type _M_filebuf;
+
+    public:
+      // Constructors/destructor:
+      /**
+       *  @brief  Default constructor.
+       *
+       *  Initializes @c sb using its default constructor, and passes
+       *  @c &sb to the base class initializer.  Does not open any files
+       *  (you haven't given it a filename to open).
+       */
+      basic_fstream()
+      : __iostream_type(), _M_filebuf()
+      { this->init(&_M_filebuf); }
+
+      /**
+       *  @brief  Create an input/output file stream.
+       *  @param  s  Null terminated string specifying the filename.
+       *  @param  mode  Open file in specified mode (see std::ios_base).
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      explicit
+      basic_fstream(const char* __s,
+      ios_base::openmode __mode = ios_base::in | ios_base::out)
+      : __iostream_type(0), _M_filebuf()
+      {
+ this->init(&_M_filebuf);
+ this->open(__s, __mode);
+      }
+# 824 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+ /**
+       *  @brief  The destructor does nothing.
+       *
+       *  The file is closed by the filebuf object, not the formatting
+       *  stream.
+       */
+      ~basic_fstream()
+      { }
+
+      // Members:
+      /**
+       *  @brief  Accessing the underlying buffer.
+       *  @return  The current basic_filebuf buffer.
+       *
+       *  This hides both signatures of std::basic_ios::rdbuf().
+       */
+      __filebuf_type*
+      rdbuf() const
+      { return const_cast<__filebuf_type*>(&_M_filebuf); }
+
+      /**
+       *  @brief  Wrapper to test for an open file.
+       *  @return  @c rdbuf()->is_open()
+       */
+      bool
+      is_open()
+      { return _M_filebuf.is_open(); }
+
+      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      // 365. Lack of const-qualification in clause 27
+      bool
+      is_open() const
+      { return _M_filebuf.is_open(); }
+
+      /**
+       *  @brief  Opens an external file.
+       *  @param  s  The name of the file.
+       *  @param  mode  The open mode flags.
+       *
+       *  Calls @c std::basic_filebuf::open(s,mode).  If that
+       *  function fails, @c failbit is set in the stream's error state.
+       *
+       *  Tip:  When using std::string to hold the filename, you must use
+       *  .c_str() before passing it to this constructor.
+       */
+      void
+      open(const char* __s,
+    ios_base::openmode __mode = ios_base::in | ios_base::out)
+      {
+ if (!_M_filebuf.open(__s, __mode))
+   this->setstate(ios_base::failbit);
+ else
+   // _GLIBCXX_RESOLVE_LIB_DEFECTS
+   // 409. Closing an fstream should clear error state
+   this->clear();
+      }
+# 903 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 3
+ /**
+       *  @brief  Close the file.
+       *
+       *  Calls @c std::basic_filebuf::close().  If that function
+       *  fails, @c failbit is set in the stream's error state.
+       */
+      void
+      close()
+      {
+ if (!_M_filebuf.close())
+   this->setstate(ios_base::failbit);
+      }
+    };
+
+
+} // namespace
+
+
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 1 3
+// File based streams -*- C++ -*-
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006,
+// 2007, 2008, 2009, 2010, 2011
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file bits/fstream.tcc
+ *  This is an internal header file, included by other library headers.
+ *  Do not attempt to use it directly. @headername{fstream}
+ */
+
+//
+// ISO C++ 14882: 27.8  File-based streams
+//
+# 39 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/fstream.tcc" 3
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  template<typename _CharT, typename _Traits>
+    void
+    basic_filebuf<_CharT, _Traits>::
+    _M_allocate_internal_buffer()
+    {
+      // Allocate internal buffer only if one doesn't already exist
+      // (either allocated or provided by the user via setbuf).
+      if (!_M_buf_allocated && !_M_buf)
+ {
+   _M_buf = new char_type[_M_buf_size];
+   _M_buf_allocated = true;
+ }
+    }
+
+  template<typename _CharT, typename _Traits>
+    void
+    basic_filebuf<_CharT, _Traits>::
+    _M_destroy_internal_buffer() throw()
+    {
+      if (_M_buf_allocated)
+ {
+   delete [] _M_buf;
+   _M_buf = 0;
+   _M_buf_allocated = false;
+ }
+      delete [] _M_ext_buf;
+      _M_ext_buf = 0;
+      _M_ext_buf_size = 0;
+      _M_ext_next = 0;
+      _M_ext_end = 0;
+    }
+
+  template<typename _CharT, typename _Traits>
+    basic_filebuf<_CharT, _Traits>::
+    basic_filebuf() : __streambuf_type(), _M_lock(), _M_file(&_M_lock),
+    _M_mode(ios_base::openmode(0)), _M_state_beg(), _M_state_cur(),
+    _M_state_last(), _M_buf(0), _M_buf_size(8192),
+    _M_buf_allocated(false), _M_reading(false), _M_writing(false), _M_pback(),
+    _M_pback_cur_save(0), _M_pback_end_save(0), _M_pback_init(false),
+    _M_codecvt(0), _M_ext_buf(0), _M_ext_buf_size(0), _M_ext_next(0),
+    _M_ext_end(0)
+    {
+      if (has_facet<__codecvt_type>(this->_M_buf_locale))
+ _M_codecvt = &use_facet<__codecvt_type>(this->_M_buf_locale);
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
+    basic_filebuf<_CharT, _Traits>::
+    open(const char* __s, ios_base::openmode __mode)
+    {
+      __filebuf_type *__ret = 0;
+      if (!this->is_open())
+ {
+   _M_file.open(__s, __mode);
+   if (this->is_open())
+     {
+       _M_allocate_internal_buffer();
+       _M_mode = __mode;
+
+       // Setup initial buffer to 'uncommitted' mode.
+       _M_reading = false;
+       _M_writing = false;
+       _M_set_buffer(-1);
+
+       // Reset to initial state.
+       _M_state_last = _M_state_cur = _M_state_beg;
+
+       // 27.8.1.3,4
+       if ((__mode & ios_base::ate)
+    && this->seekoff(0, ios_base::end, __mode)
+    == pos_type(off_type(-1)))
+  this->close();
+       else
+  __ret = this;
+     }
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::__filebuf_type*
+    basic_filebuf<_CharT, _Traits>::
+    close()
+    {
+      if (!this->is_open())
+ return 0;
+
+      bool __testfail = false;
+      {
+ // NB: Do this here so that re-opened filebufs will be cool...
+ struct __close_sentry
+ {
+   basic_filebuf *__fb;
+   __close_sentry (basic_filebuf *__fbi): __fb(__fbi) { }
+   ~__close_sentry ()
+   {
+     __fb->_M_mode = ios_base::openmode(0);
+     __fb->_M_pback_init = false;
+     __fb->_M_destroy_internal_buffer();
+     __fb->_M_reading = false;
+     __fb->_M_writing = false;
+     __fb->_M_set_buffer(-1);
+     __fb->_M_state_last = __fb->_M_state_cur = __fb->_M_state_beg;
+   }
+ } __cs (this);
+
+ if (true)
+   {
+     if (!_M_terminate_output())
+       __testfail = true;
+   }
+ if (false)
+   {
+     _M_file.close();
+                            ;
+   }
+ if (false)
+   { __testfail = true; }
+      }
+
+      if (!_M_file.close())
+ __testfail = true;
+
+      if (__testfail)
+ return 0;
+      else
+ return this;
+    }
+
+  template<typename _CharT, typename _Traits>
+    streamsize
+    basic_filebuf<_CharT, _Traits>::
+    showmanyc()
+    {
+      streamsize __ret = -1;
+      const bool __testin = _M_mode & ios_base::in;
+      if (__testin && this->is_open())
+ {
+   // For a stateful encoding (-1) the pending sequence might be just
+   // shift and unshift prefixes with no actual character.
+   __ret = this->egptr() - this->gptr();
+
+
+
+
+
+
+
+   if (__check_facet(_M_codecvt).encoding() >= 0)
+
+     __ret += _M_file.showmanyc() / _M_codecvt->max_length();
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::int_type
+    basic_filebuf<_CharT, _Traits>::
+    underflow()
+    {
+      int_type __ret = traits_type::eof();
+      const bool __testin = _M_mode & ios_base::in;
+      if (__testin)
+ {
+   if (_M_writing)
+     {
+       if (overflow() == traits_type::eof())
+  return __ret;
+       _M_set_buffer(-1);
+       _M_writing = false;
+     }
+   // Check for pback madness, and if so switch back to the
+   // normal buffers and jet outta here before expensive
+   // fileops happen...
+   _M_destroy_pback();
+
+   if (this->gptr() < this->egptr())
+     return traits_type::to_int_type(*this->gptr());
+
+   // Get and convert input sequence.
+   const size_t __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
+
+   // Will be set to true if ::read() returns 0 indicating EOF.
+   bool __got_eof = false;
+   // Number of internal characters produced.
+   streamsize __ilen = 0;
+   codecvt_base::result __r = codecvt_base::ok;
+   if (__check_facet(_M_codecvt).always_noconv())
+     {
+       __ilen = _M_file.xsgetn(reinterpret_cast<char*>(this->eback()),
+          __buflen);
+       if (__ilen == 0)
+  __got_eof = true;
+     }
+   else
+     {
+              // Worst-case number of external bytes.
+       // XXX Not done encoding() == -1.
+       const int __enc = _M_codecvt->encoding();
+       streamsize __blen; // Minimum buffer size.
+       streamsize __rlen; // Number of chars to read.
+       if (__enc > 0)
+  __blen = __rlen = __buflen * __enc;
+       else
+  {
+    __blen = __buflen + _M_codecvt->max_length() - 1;
+    __rlen = __buflen;
+  }
+       const streamsize __remainder = _M_ext_end - _M_ext_next;
+       __rlen = __rlen > __remainder ? __rlen - __remainder : 0;
+
+       // An imbue in 'read' mode implies first converting the external
+       // chars already present.
+       if (_M_reading && this->egptr() == this->eback() && __remainder)
+  __rlen = 0;
+
+       // Allocate buffer if necessary and move unconverted
+       // bytes to front.
+       if (_M_ext_buf_size < __blen)
+  {
+    char* __buf = new char[__blen];
+    if (__remainder)
+      __builtin_memcpy(__buf, _M_ext_next, __remainder);
+
+    delete [] _M_ext_buf;
+    _M_ext_buf = __buf;
+    _M_ext_buf_size = __blen;
+  }
+       else if (__remainder)
+  __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
+
+       _M_ext_next = _M_ext_buf;
+       _M_ext_end = _M_ext_buf + __remainder;
+       _M_state_last = _M_state_cur;
+
+       do
+  {
+    if (__rlen > 0)
+      {
+        // Sanity check!
+        // This may fail if the return value of
+        // codecvt::max_length() is bogus.
+        if (_M_ext_end - _M_ext_buf + __rlen > _M_ext_buf_size)
+   {
+     __throw_ios_failure(("basic_filebuf::underflow " "codecvt::max_length() " "is not valid"));
+
+
+   }
+        streamsize __elen = _M_file.xsgetn(_M_ext_end, __rlen);
+        if (__elen == 0)
+   __got_eof = true;
+        else if (__elen == -1)
+   break;
+        _M_ext_end += __elen;
+      }
+
+    char_type* __iend = this->eback();
+    if (_M_ext_next < _M_ext_end)
+      __r = _M_codecvt->in(_M_state_cur, _M_ext_next,
+      _M_ext_end, _M_ext_next,
+      this->eback(),
+      this->eback() + __buflen, __iend);
+    if (__r == codecvt_base::noconv)
+      {
+        size_t __avail = _M_ext_end - _M_ext_buf;
+        __ilen = std::min(__avail, __buflen);
+        traits_type::copy(this->eback(),
+     reinterpret_cast<char_type*>
+     (_M_ext_buf), __ilen);
+        _M_ext_next = _M_ext_buf + __ilen;
+      }
+    else
+      __ilen = __iend - this->eback();
+
+    // _M_codecvt->in may return error while __ilen > 0: this is
+    // ok, and actually occurs in case of mixed encodings (e.g.,
+    // XML files).
+    if (__r == codecvt_base::error)
+      break;
+
+    __rlen = 1;
+  }
+       while (__ilen == 0 && !__got_eof);
+     }
+
+   if (__ilen > 0)
+     {
+       _M_set_buffer(__ilen);
+       _M_reading = true;
+       __ret = traits_type::to_int_type(*this->gptr());
+     }
+   else if (__got_eof)
+     {
+       // If the actual end of file is reached, set 'uncommitted'
+       // mode, thus allowing an immediate write without an
+       // intervening seek.
+       _M_set_buffer(-1);
+       _M_reading = false;
+       // However, reaching it while looping on partial means that
+       // the file has got an incomplete character.
+       if (__r == codecvt_base::partial)
+  __throw_ios_failure(("basic_filebuf::underflow " "incomplete character in file"));
+
+     }
+   else if (__r == codecvt_base::error)
+     __throw_ios_failure(("basic_filebuf::underflow " "invalid byte sequence in file"));
+
+   else
+     __throw_ios_failure(("basic_filebuf::underflow " "error reading the file"));
+
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::int_type
+    basic_filebuf<_CharT, _Traits>::
+    pbackfail(int_type __i)
+    {
+      int_type __ret = traits_type::eof();
+      const bool __testin = _M_mode & ios_base::in;
+      if (__testin)
+ {
+   if (_M_writing)
+     {
+       if (overflow() == traits_type::eof())
+  return __ret;
+       _M_set_buffer(-1);
+       _M_writing = false;
+     }
+   // Remember whether the pback buffer is active, otherwise below
+   // we may try to store in it a second char (libstdc++/9761).
+   const bool __testpb = _M_pback_init;
+   const bool __testeof = traits_type::eq_int_type(__i, __ret);
+   int_type __tmp;
+   if (this->eback() < this->gptr())
+     {
+       this->gbump(-1);
+       __tmp = traits_type::to_int_type(*this->gptr());
+     }
+   else if (this->seekoff(-1, ios_base::cur) != pos_type(off_type(-1)))
+     {
+       __tmp = this->underflow();
+       if (traits_type::eq_int_type(__tmp, __ret))
+  return __ret;
+     }
+   else
+     {
+       // At the beginning of the buffer, need to make a
+       // putback position available.  But the seek may fail
+       // (f.i., at the beginning of a file, see
+       // libstdc++/9439) and in that case we return
+       // traits_type::eof().
+       return __ret;
+     }
+
+   // Try to put back __i into input sequence in one of three ways.
+   // Order these tests done in is unspecified by the standard.
+   if (!__testeof && traits_type::eq_int_type(__i, __tmp))
+     __ret = __i;
+   else if (__testeof)
+     __ret = traits_type::not_eof(__i);
+   else if (!__testpb)
+     {
+       _M_create_pback();
+       _M_reading = true;
+       *this->gptr() = traits_type::to_char_type(__i);
+       __ret = __i;
+     }
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::int_type
+    basic_filebuf<_CharT, _Traits>::
+    overflow(int_type __c)
+    {
+      int_type __ret = traits_type::eof();
+      const bool __testeof = traits_type::eq_int_type(__c, __ret);
+      const bool __testout = _M_mode & ios_base::out;
+      if (__testout)
+ {
+          if (_M_reading)
+            {
+              _M_destroy_pback();
+              const int __gptr_off = _M_get_ext_pos(_M_state_last);
+              if (_M_seek(__gptr_off, ios_base::cur, _M_state_last)
+                  == pos_type(off_type(-1)))
+                return __ret;
+            }
+   if (this->pbase() < this->pptr())
+     {
+       // If appropriate, append the overflow char.
+       if (!__testeof)
+  {
+    *this->pptr() = traits_type::to_char_type(__c);
+    this->pbump(1);
+  }
+
+       // Convert pending sequence to external representation,
+       // and output.
+       if (_M_convert_to_external(this->pbase(),
+      this->pptr() - this->pbase()))
+  {
+    _M_set_buffer(0);
+    __ret = traits_type::not_eof(__c);
+  }
+     }
+   else if (_M_buf_size > 1)
+     {
+       // Overflow in 'uncommitted' mode: set _M_writing, set
+       // the buffer to the initial 'write' mode, and put __c
+       // into the buffer.
+       _M_set_buffer(0);
+       _M_writing = true;
+       if (!__testeof)
+  {
+    *this->pptr() = traits_type::to_char_type(__c);
+    this->pbump(1);
+  }
+       __ret = traits_type::not_eof(__c);
+     }
+   else
+     {
+       // Unbuffered.
+       char_type __conv = traits_type::to_char_type(__c);
+       if (__testeof || _M_convert_to_external(&__conv, 1))
+  {
+    _M_writing = true;
+    __ret = traits_type::not_eof(__c);
+  }
+     }
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    bool
+    basic_filebuf<_CharT, _Traits>::
+    _M_convert_to_external(_CharT* __ibuf, streamsize __ilen)
+    {
+      // Sizes of external and pending output.
+      streamsize __elen;
+      streamsize __plen;
+      if (__check_facet(_M_codecvt).always_noconv())
+ {
+   __elen = _M_file.xsputn(reinterpret_cast<char*>(__ibuf), __ilen);
+   __plen = __ilen;
+ }
+      else
+ {
+   // Worst-case number of external bytes needed.
+   // XXX Not done encoding() == -1.
+   streamsize __blen = __ilen * _M_codecvt->max_length();
+   char* __buf = static_cast<char*>(__builtin_alloca(__blen));
+
+   char* __bend;
+   const char_type* __iend;
+   codecvt_base::result __r;
+   __r = _M_codecvt->out(_M_state_cur, __ibuf, __ibuf + __ilen,
+    __iend, __buf, __buf + __blen, __bend);
+
+   if (__r == codecvt_base::ok || __r == codecvt_base::partial)
+     __blen = __bend - __buf;
+   else if (__r == codecvt_base::noconv)
+     {
+       // Same as the always_noconv case above.
+       __buf = reinterpret_cast<char*>(__ibuf);
+       __blen = __ilen;
+     }
+   else
+     __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error"));
+
+
+   __elen = _M_file.xsputn(__buf, __blen);
+   __plen = __blen;
+
+   // Try once more for partial conversions.
+   if (__r == codecvt_base::partial && __elen == __plen)
+     {
+       const char_type* __iresume = __iend;
+       streamsize __rlen = this->pptr() - __iend;
+       __r = _M_codecvt->out(_M_state_cur, __iresume,
+        __iresume + __rlen, __iend, __buf,
+        __buf + __blen, __bend);
+       if (__r != codecvt_base::error)
+  {
+    __rlen = __bend - __buf;
+    __elen = _M_file.xsputn(__buf, __rlen);
+    __plen = __rlen;
+  }
+       else
+  __throw_ios_failure(("basic_filebuf::_M_convert_to_external " "conversion error"));
+
+     }
+ }
+      return __elen == __plen;
+    }
+
+  template<typename _CharT, typename _Traits>
+    streamsize
+    basic_filebuf<_CharT, _Traits>::
+    xsgetn(_CharT* __s, streamsize __n)
+    {
+      // Clear out pback buffer before going on to the real deal...
+      streamsize __ret = 0;
+      if (_M_pback_init)
+ {
+   if (__n > 0 && this->gptr() == this->eback())
+     {
+       *__s++ = *this->gptr(); // emulate non-underflowing sbumpc
+       this->gbump(1);
+       __ret = 1;
+       --__n;
+     }
+   _M_destroy_pback();
+ }
+      else if (_M_writing)
+ {
+    if (overflow() == traits_type::eof())
+      return __ret;
+    _M_set_buffer(-1);
+    _M_writing = false;
+  }
+
+      // Optimization in the always_noconv() case, to be generalized in the
+      // future: when __n > __buflen we read directly instead of using the
+      // buffer repeatedly.
+      const bool __testin = _M_mode & ios_base::in;
+      const streamsize __buflen = _M_buf_size > 1 ? _M_buf_size - 1 : 1;
+
+      if (__n > __buflen && __check_facet(_M_codecvt).always_noconv()
+     && __testin)
+   {
+     // First, copy the chars already present in the buffer.
+     const streamsize __avail = this->egptr() - this->gptr();
+     if (__avail != 0)
+       {
+        traits_type::copy(__s, this->gptr(), __avail);
+         __s += __avail;
+        this->setg(this->eback(), this->gptr() + __avail,
+     this->egptr());
+        __ret += __avail;
+        __n -= __avail;
+       }
+
+     // Need to loop in case of short reads (relatively common
+     // with pipes).
+     streamsize __len;
+     for (;;)
+       {
+         __len = _M_file.xsgetn(reinterpret_cast<char*>(__s),
+           __n);
+         if (__len == -1)
+    __throw_ios_failure(("basic_filebuf::xsgetn " "error reading the file"));
+
+         if (__len == 0)
+    break;
+
+         __n -= __len;
+         __ret += __len;
+         if (__n == 0)
+    break;
+
+         __s += __len;
+       }
+
+     if (__n == 0)
+       {
+         _M_set_buffer(0);
+         _M_reading = true;
+       }
+     else if (__len == 0)
+       {
+         // If end of file is reached, set 'uncommitted'
+         // mode, thus allowing an immediate write without
+         // an intervening seek.
+         _M_set_buffer(-1);
+         _M_reading = false;
+       }
+   }
+      else
+   __ret += __streambuf_type::xsgetn(__s, __n);
+
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    streamsize
+    basic_filebuf<_CharT, _Traits>::
+    xsputn(const _CharT* __s, streamsize __n)
+    {
+      streamsize __ret = 0;
+      // Optimization in the always_noconv() case, to be generalized in the
+      // future: when __n is sufficiently large we write directly instead of
+      // using the buffer.
+      const bool __testout = _M_mode & ios_base::out;
+      if (__check_facet(_M_codecvt).always_noconv()
+     && __testout && !_M_reading)
+ {
+   // Measurement would reveal the best choice.
+   const streamsize __chunk = 1ul << 10;
+   streamsize __bufavail = this->epptr() - this->pptr();
+
+   // Don't mistake 'uncommitted' mode buffered with unbuffered.
+   if (!_M_writing && _M_buf_size > 1)
+     __bufavail = _M_buf_size - 1;
+
+   const streamsize __limit = std::min(__chunk, __bufavail);
+   if (__n >= __limit)
+     {
+       const streamsize __buffill = this->pptr() - this->pbase();
+       const char* __buf = reinterpret_cast<const char*>(this->pbase());
+       __ret = _M_file.xsputn_2(__buf, __buffill,
+           reinterpret_cast<const char*>(__s),
+           __n);
+       if (__ret == __buffill + __n)
+  {
+    _M_set_buffer(0);
+    _M_writing = true;
+  }
+       if (__ret > __buffill)
+  __ret -= __buffill;
+       else
+  __ret = 0;
+     }
+   else
+     __ret = __streambuf_type::xsputn(__s, __n);
+ }
+       else
+  __ret = __streambuf_type::xsputn(__s, __n);
+       return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::__streambuf_type*
+    basic_filebuf<_CharT, _Traits>::
+    setbuf(char_type* __s, streamsize __n)
+    {
+      if (!this->is_open())
+ {
+   if (__s == 0 && __n == 0)
+     _M_buf_size = 1;
+   else if (__s && __n > 0)
+     {
+       // This is implementation-defined behavior, and assumes that
+       // an external char_type array of length __n exists and has
+       // been pre-allocated. If this is not the case, things will
+       // quickly blow up. When __n > 1, __n - 1 positions will be
+       // used for the get area, __n - 1 for the put area and 1
+       // position to host the overflow char of a full put area.
+       // When __n == 1, 1 position will be used for the get area
+       // and 0 for the put area, as in the unbuffered case above.
+       _M_buf = __s;
+       _M_buf_size = __n;
+     }
+ }
+      return this;
+    }
+
+
+  // According to 27.8.1.4 p11 - 13, seekoff should ignore the last
+  // argument (of type openmode).
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::pos_type
+    basic_filebuf<_CharT, _Traits>::
+    seekoff(off_type __off, ios_base::seekdir __way, ios_base::openmode)
+    {
+      int __width = 0;
+      if (_M_codecvt)
+ __width = _M_codecvt->encoding();
+      if (__width < 0)
+ __width = 0;
+
+      pos_type __ret = pos_type(off_type(-1));
+      const bool __testfail = __off != 0 && __width <= 0;
+      if (this->is_open() && !__testfail)
+ {
+   // tellg and tellp queries do not affect any state, unless
+   // ! always_noconv and the put sequence is not empty.
+   // In that case, determining the position requires converting the
+   // put sequence. That doesn't use ext_buf, so requires a flush.
+   bool __no_movement = __way == ios_base::cur && __off == 0
+     && (!_M_writing || _M_codecvt->always_noconv());
+
+   // Ditch any pback buffers to avoid confusion.
+   if (!__no_movement)
+     _M_destroy_pback();
+
+   // Correct state at destination. Note that this is the correct
+   // state for the current position during output, because
+   // codecvt::unshift() returns the state to the initial state.
+   // This is also the correct state at the end of the file because
+   // an unshift sequence should have been written at the end.
+   __state_type __state = _M_state_beg;
+   off_type __computed_off = __off * __width;
+   if (_M_reading && __way == ios_base::cur)
+     {
+       __state = _M_state_last;
+       __computed_off += _M_get_ext_pos(__state);
+     }
+   if (!__no_movement)
+     __ret = _M_seek(__computed_off, __way, __state);
+   else
+     {
+       if (_M_writing)
+  __computed_off = this->pptr() - this->pbase();
+
+        off_type __file_off = _M_file.seekoff(0, ios_base::cur);
+        if (__file_off != off_type(-1))
+  {
+    __ret = __file_off + __computed_off;
+    __ret.state(__state);
+  }
+     }
+ }
+      return __ret;
+    }
+
+  // _GLIBCXX_RESOLVE_LIB_DEFECTS
+  // 171. Strange seekpos() semantics due to joint position
+  // According to the resolution of DR 171, seekpos should ignore the last
+  // argument (of type openmode).
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::pos_type
+    basic_filebuf<_CharT, _Traits>::
+    seekpos(pos_type __pos, ios_base::openmode)
+    {
+      pos_type __ret = pos_type(off_type(-1));
+      if (this->is_open())
+ {
+   // Ditch any pback buffers to avoid confusion.
+   _M_destroy_pback();
+   __ret = _M_seek(off_type(__pos), ios_base::beg, __pos.state());
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    typename basic_filebuf<_CharT, _Traits>::pos_type
+    basic_filebuf<_CharT, _Traits>::
+    _M_seek(off_type __off, ios_base::seekdir __way, __state_type __state)
+    {
+      pos_type __ret = pos_type(off_type(-1));
+      if (_M_terminate_output())
+ {
+   off_type __file_off = _M_file.seekoff(__off, __way);
+   if (__file_off != off_type(-1))
+     {
+       _M_reading = false;
+       _M_writing = false;
+       _M_ext_next = _M_ext_end = _M_ext_buf;
+       _M_set_buffer(-1);
+       _M_state_cur = __state;
+       __ret = __file_off;
+       __ret.state(_M_state_cur);
+     }
+ }
+      return __ret;
+    }
+
+  // Returns the distance from the end of the ext buffer to the point
+  // corresponding to gptr(). This is a negative value. Updates __state
+  // from eback() correspondence to gptr().
+  template<typename _CharT, typename _Traits>
+    int basic_filebuf<_CharT, _Traits>::
+    _M_get_ext_pos(__state_type& __state)
+    {
+      if (_M_codecvt->always_noconv())
+        return this->gptr() - this->egptr();
+      else
+        {
+          // Calculate offset from _M_ext_buf that corresponds to
+          // gptr(). Precondition: __state == _M_state_last, which
+          // corresponds to eback().
+          const int __gptr_off =
+            _M_codecvt->length(__state, _M_ext_buf, _M_ext_next,
+                               this->gptr() - this->eback());
+          return _M_ext_buf + __gptr_off - _M_ext_end;
+        }
+    }
+
+  template<typename _CharT, typename _Traits>
+    bool
+    basic_filebuf<_CharT, _Traits>::
+    _M_terminate_output()
+    {
+      // Part one: update the output sequence.
+      bool __testvalid = true;
+      if (this->pbase() < this->pptr())
+ {
+   const int_type __tmp = this->overflow();
+   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
+     __testvalid = false;
+ }
+
+      // Part two: output unshift sequence.
+      if (_M_writing && !__check_facet(_M_codecvt).always_noconv()
+   && __testvalid)
+ {
+   // Note: this value is arbitrary, since there is no way to
+   // get the length of the unshift sequence from codecvt,
+   // without calling unshift.
+   const size_t __blen = 128;
+   char __buf[__blen];
+   codecvt_base::result __r;
+   streamsize __ilen = 0;
+
+   do
+     {
+       char* __next;
+       __r = _M_codecvt->unshift(_M_state_cur, __buf,
+     __buf + __blen, __next);
+       if (__r == codecvt_base::error)
+  __testvalid = false;
+       else if (__r == codecvt_base::ok ||
+         __r == codecvt_base::partial)
+  {
+    __ilen = __next - __buf;
+    if (__ilen > 0)
+      {
+        const streamsize __elen = _M_file.xsputn(__buf, __ilen);
+        if (__elen != __ilen)
+   __testvalid = false;
+      }
+  }
+     }
+   while (__r == codecvt_base::partial && __ilen > 0 && __testvalid);
+
+   if (__testvalid)
+     {
+       // This second call to overflow() is required by the standard,
+       // but it's not clear why it's needed, since the output buffer
+       // should be empty by this point (it should have been emptied
+       // in the first call to overflow()).
+       const int_type __tmp = this->overflow();
+       if (traits_type::eq_int_type(__tmp, traits_type::eof()))
+  __testvalid = false;
+     }
+ }
+      return __testvalid;
+    }
+
+  template<typename _CharT, typename _Traits>
+    int
+    basic_filebuf<_CharT, _Traits>::
+    sync()
+    {
+      // Make sure that the internal buffer resyncs its idea of
+      // the file position with the external file.
+      int __ret = 0;
+      if (this->pbase() < this->pptr())
+ {
+   const int_type __tmp = this->overflow();
+   if (traits_type::eq_int_type(__tmp, traits_type::eof()))
+     __ret = -1;
+ }
+      return __ret;
+    }
+
+  template<typename _CharT, typename _Traits>
+    void
+    basic_filebuf<_CharT, _Traits>::
+    imbue(const locale& __loc)
+    {
+      bool __testvalid = true;
+
+      const __codecvt_type* _M_codecvt_tmp = 0;
+      if (__builtin_expect(has_facet<__codecvt_type>(__loc), true))
+ _M_codecvt_tmp = &use_facet<__codecvt_type>(__loc);
+
+      if (this->is_open())
+ {
+   // encoding() == -1 is ok only at the beginning.
+   if ((_M_reading || _M_writing)
+       && __check_facet(_M_codecvt).encoding() == -1)
+     __testvalid = false;
+   else
+     {
+       if (_M_reading)
+  {
+    if (__check_facet(_M_codecvt).always_noconv())
+      {
+        if (_M_codecvt_tmp
+     && !__check_facet(_M_codecvt_tmp).always_noconv())
+   __testvalid = this->seekoff(0, ios_base::cur, _M_mode)
+                 != pos_type(off_type(-1));
+      }
+    else
+      {
+        // External position corresponding to gptr().
+        _M_ext_next = _M_ext_buf
+   + _M_codecvt->length(_M_state_last, _M_ext_buf,
+          _M_ext_next,
+          this->gptr() - this->eback());
+        const streamsize __remainder = _M_ext_end - _M_ext_next;
+        if (__remainder)
+   __builtin_memmove(_M_ext_buf, _M_ext_next, __remainder);
+
+        _M_ext_next = _M_ext_buf;
+        _M_ext_end = _M_ext_buf + __remainder;
+        _M_set_buffer(-1);
+        _M_state_last = _M_state_cur = _M_state_beg;
+      }
+  }
+       else if (_M_writing && (__testvalid = _M_terminate_output()))
+  _M_set_buffer(-1);
+     }
+ }
+
+      if (__testvalid)
+ _M_codecvt = _M_codecvt_tmp;
+      else
+ _M_codecvt = 0;
+    }
+
+  // Inhibit implicit instantiations for required instantiations,
+  // which are defined via explicit instantiations elsewhere.
+
+  extern template class basic_filebuf<char>;
+  extern template class basic_ifstream<char>;
+  extern template class basic_ofstream<char>;
+  extern template class basic_fstream<char>;
+
+
+  extern template class basic_filebuf<wchar_t>;
+  extern template class basic_ifstream<wchar_t>;
+  extern template class basic_ofstream<wchar_t>;
+  extern template class basic_fstream<wchar_t>;
+
+
+
+
+} // namespace std
+# 921 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/fstream" 2 3
+# 8 "dut.cpp" 2
+
+# 1 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 1 3
+// Standard stream manipulators -*- C++ -*-
+
+// Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005
+// 2006, 2007, 2008, 2009, 2010
+// Free Software Foundation, Inc.
+//
+// This file is part of the GNU ISO C++ Library.  This library is free
+// software; you can redistribute it and/or modify it under the
+// terms of the GNU General Public License as published by the
+// Free Software Foundation; either version 3, or (at your option)
+// any later version.
+
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// Under Section 7 of GPL version 3, you are granted additional
+// permissions described in the GCC Runtime Library Exception, version
+// 3.1, as published by the Free Software Foundation.
+
+// You should have received a copy of the GNU General Public License and
+// a copy of the GCC Runtime Library Exception along with this program;
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+// <http://www.gnu.org/licenses/>.
+
+/** @file include/iomanip
+ *  This is a Standard C++ Library header.
+ */
+
+//
+// ISO C++ 14882: 27.6.3  Standard manipulators
+//
+# 38 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+# 47 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  // [27.6.3] standard manipulators
+  // Also see DR 183.
+
+  struct _Resetiosflags { ios_base::fmtflags _M_mask; };
+
+  /**
+   *  @brief  Manipulator for @c setf.
+   *  @param  mask  A format flags mask.
+   *
+   *  Sent to a stream object, this manipulator resets the specified flags,
+   *  via @e stream.setf(0,mask).
+  */
+  inline _Resetiosflags
+  resetiosflags(ios_base::fmtflags __mask)
+  { return { __mask }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Resetiosflags __f)
+    {
+      __is.setf(ios_base::fmtflags(0), __f._M_mask);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+    {
+      __os.setf(ios_base::fmtflags(0), __f._M_mask);
+      return __os;
+    }
+
+
+  struct _Setiosflags { ios_base::fmtflags _M_mask; };
+
+  /**
+   *  @brief  Manipulator for @c setf.
+   *  @param  mask  A format flags mask.
+   *
+   *  Sent to a stream object, this manipulator sets the format flags
+   *  to @a mask.
+  */
+  inline _Setiosflags
+  setiosflags(ios_base::fmtflags __mask)
+  { return { __mask }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setiosflags __f)
+    {
+      __is.setf(__f._M_mask);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+    {
+      __os.setf(__f._M_mask);
+      return __os;
+    }
+
+
+  struct _Setbase { int _M_base; };
+
+  /**
+   *  @brief  Manipulator for @c setf.
+   *  @param  base  A numeric base.
+   *
+   *  Sent to a stream object, this manipulator changes the
+   *  @c ios_base::basefield flags to @c oct, @c dec, or @c hex when @a base
+   *  is 8, 10, or 16, accordingly, and to 0 if @a base is any other value.
+  */
+  inline _Setbase
+  setbase(int __base)
+  { return { __base }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setbase __f)
+    {
+      __is.setf(__f._M_base == 8 ? ios_base::oct :
+  __f._M_base == 10 ? ios_base::dec :
+  __f._M_base == 16 ? ios_base::hex :
+  ios_base::fmtflags(0), ios_base::basefield);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+    {
+      __os.setf(__f._M_base == 8 ? ios_base::oct :
+  __f._M_base == 10 ? ios_base::dec :
+  __f._M_base == 16 ? ios_base::hex :
+  ios_base::fmtflags(0), ios_base::basefield);
+      return __os;
+    }
+
+
+  template<typename _CharT>
+    struct _Setfill { _CharT _M_c; };
+
+  /**
+   *  @brief  Manipulator for @c fill.
+   *  @param  c  The new fill character.
+   *
+   *  Sent to a stream object, this manipulator calls @c fill(c) for that
+   *  object.
+  */
+  template<typename _CharT>
+    inline _Setfill<_CharT>
+    setfill(_CharT __c)
+    { return { __c }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setfill<_CharT> __f)
+    {
+      __is.fill(__f._M_c);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+    {
+      __os.fill(__f._M_c);
+      return __os;
+    }
+
+
+  struct _Setprecision { int _M_n; };
+
+  /**
+   *  @brief  Manipulator for @c precision.
+   *  @param  n  The new precision.
+   *
+   *  Sent to a stream object, this manipulator calls @c precision(n) for
+   *  that object.
+  */
+  inline _Setprecision
+  setprecision(int __n)
+  { return { __n }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setprecision __f)
+    {
+      __is.precision(__f._M_n);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+    {
+      __os.precision(__f._M_n);
+      return __os;
+    }
+
+
+  struct _Setw { int _M_n; };
+
+  /**
+   *  @brief  Manipulator for @c width.
+   *  @param  n  The new width.
+   *
+   *  Sent to a stream object, this manipulator calls @c width(n) for
+   *  that object.
+  */
+  inline _Setw
+  setw(int __n)
+  { return { __n }; }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_istream<_CharT, _Traits>&
+    operator>>(basic_istream<_CharT, _Traits>& __is, _Setw __f)
+    {
+      __is.width(__f._M_n);
+      return __is;
+    }
+
+  template<typename _CharT, typename _Traits>
+    inline basic_ostream<_CharT, _Traits>&
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+    {
+      __os.width(__f._M_n);
+      return __os;
+    }
+# 315 "/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iomanip" 3
+ // Inhibit implicit instantiations for required instantiations,
+  // which are defined via explicit instantiations elsewhere.  
+  // NB:  This syntax is a GNU extension.
+
+  extern template ostream& operator<<(ostream&, _Setfill<char>);
+  extern template ostream& operator<<(ostream&, _Setiosflags);
+  extern template ostream& operator<<(ostream&, _Resetiosflags);
+  extern template ostream& operator<<(ostream&, _Setbase);
+  extern template ostream& operator<<(ostream&, _Setprecision);
+  extern template ostream& operator<<(ostream&, _Setw);
+  extern template istream& operator>>(istream&, _Setfill<char>);
+  extern template istream& operator>>(istream&, _Setiosflags);
+  extern template istream& operator>>(istream&, _Resetiosflags);
+  extern template istream& operator>>(istream&, _Setbase);
+  extern template istream& operator>>(istream&, _Setprecision);
+  extern template istream& operator>>(istream&, _Setw);
+
+
+  extern template wostream& operator<<(wostream&, _Setfill<wchar_t>);
+  extern template wostream& operator<<(wostream&, _Setiosflags);
+  extern template wostream& operator<<(wostream&, _Resetiosflags);
+  extern template wostream& operator<<(wostream&, _Setbase);
+  extern template wostream& operator<<(wostream&, _Setprecision);
+  extern template wostream& operator<<(wostream&, _Setw);
+  extern template wistream& operator>>(wistream&, _Setfill<wchar_t>);
+  extern template wistream& operator>>(wistream&, _Setiosflags);
+  extern template wistream& operator>>(wistream&, _Resetiosflags);
+  extern template wistream& operator>>(wistream&, _Setbase);
+  extern template wistream& operator>>(wistream&, _Setprecision);
+  extern template wistream& operator>>(wistream&, _Setw);
+
+
+
+
+} // namespace
+# 10 "dut.cpp" 2
+// #include "hls_linear_algebra.h"
 
 
 using namespace std;
@@ -65323,7 +60874,7 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   float A[100];
 
   LOOP_ROW:
-  for (int i = 0; i < 784; i++) {
+  for (int i = 0; i < VEC_SIZ; i++) {
     // store A[i]
     /*
     LOOP_ST_A:
@@ -65331,7 +60882,7 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
       A[m] = strm_in.read();
     }*/
     LOOP_COL:
-    for (int j = 0; j < 784; j++) {
+    for (int j = 0; j < VEC_SIZ; j++) {
       // calculate A[j] dot B[j]
       LOOP_DOT_PROD:
       for (int k = 0; k < 100; k++) {
@@ -65346,7 +60897,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         else
           result += A[k] * strm_in.read();
         // write back result XXT[i][j]
-        if (k == 99) strm_out.write(result);
+        if (k == 100 -1) strm_out.write(result);
       }
     }
   }
@@ -65366,7 +60917,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
 void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   float result = 0;
-  float A[784];
+  float A[VEC_SIZ];
 
   LOOP_ROW:
   for (int i = 0; i < 10; i++) {
@@ -65380,7 +60931,7 @@ void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
     for (int j = 0; j < 100; j++) {
       // calculate A[j] dot B[j]
       LOOP_DOT_PROD:
-      for (int k = 0; k < 784; k++) {
+      for (int k = 0; k < VEC_SIZ; k++) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 # 190 "dut.cpp"
 
@@ -65392,7 +60943,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         }
         result += A[k] * strm_in.read();
         // write back result XXT[i][j]
-        if (k == 783) strm_out.write(result);
+        if (k == VEC_SIZ-1) strm_out.write(result);
       }
     }
   }

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_matmul'" level="0">
-<item name = "Date">Mon Dec  5 02:26:25 2022
+<item name = "Date">Tue Dec  6 01:12:57 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">307328010, 307328010, 307328010, 307328010, none</column>
+<column name="">128009, 128009, 128009, 128009, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- LOOP_ROW_LOOP_COL_LOOP_DOT_PROD">307328008, 307328008, 14, 5, 1, 61465600, yes</column>
+<column name="- LOOP_ROW_LOOP_COL_LOOP_DOT_PROD">128007, 128007, 13, 5, 1, 25600, yes</column>
 </table>
 </item>
 </section>

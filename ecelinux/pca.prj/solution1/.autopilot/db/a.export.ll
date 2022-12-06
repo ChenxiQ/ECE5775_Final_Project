@@ -1,8 +1,8 @@
-; ModuleID = '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.2.bc'
+; ModuleID = '/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
-@llvm_global_ctors_1 = appending global [3 x void ()*] [void ()* @_GLOBAL__I_a, void ()* @_GLOBAL__I_a1968, void ()* @_GLOBAL__I_a1945]
+@llvm_global_ctors_1 = appending global [3 x void ()*] [void ()* @_GLOBAL__I_a, void ()* @_GLOBAL__I_a1967, void ()* @_GLOBAL__I_a1945]
 @llvm_global_ctors_0 = appending global [3 x i32] [i32 65535, i32 65535, i32 65535]
 @dut_str = internal unnamed_addr constant [4 x i8] c"dut\00"
 @ap_fifo_str = internal unnamed_addr constant [8 x i8] c"ap_fifo\00"
@@ -23,14 +23,14 @@ define internal fastcc void @dut_update_off_diag_r(float* %strm_in_V, float* %st
   br label %.preheader
 
 .preheader:                                       ; preds = %0, %.preheader.preheader
-  %indvar_flatten = phi i19 [ 0, %0 ], [ %indvar_flatten_next, %.preheader.preheader ]
-  %exitcond_flatten = icmp eq i19 %indvar_flatten, -217744
-  %indvar_flatten_next = add i19 %indvar_flatten, 1
+  %indvar_flatten = phi i7 [ 0, %0 ], [ %indvar_flatten_next, %.preheader.preheader ]
+  %exitcond_flatten = icmp eq i7 %indvar_flatten, -16
+  %indvar_flatten_next = add i7 %indvar_flatten, 1
   br i1 %exitcond_flatten, label %1, label %.preheader.preheader
 
 .preheader.preheader:                             ; preds = %.preheader
   call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @L_svd_calc_off_r_str)
-  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 306544, i64 306544, i64 306544)
+  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 112, i64 112, i64 112)
   call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1810) nounwind
   %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str1810)
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1807) nounwind
@@ -89,12 +89,12 @@ define internal fastcc void @dut_matmul(float* %strm_in_V, float* %strm_out_V) {
   br label %1
 
 ; <label>:1                                       ; preds = %0, %._crit_edge9
-  %indvar_flatten1 = phi i26 [ 0, %0 ], [ %indvar_flatten_next1, %._crit_edge9 ]
-  %indvar_flatten = phi i17 [ 0, %0 ], [ %indvar_flatten_next, %._crit_edge9 ]
-  %j = phi i10 [ 0, %0 ], [ %j_mid2, %._crit_edge9 ]
+  %indvar_flatten1 = phi i15 [ 0, %0 ], [ %indvar_flatten_next1, %._crit_edge9 ]
+  %indvar_flatten = phi i12 [ 0, %0 ], [ %indvar_flatten_next, %._crit_edge9 ]
+  %j = phi i5 [ 0, %0 ], [ %j_mid2, %._crit_edge9 ]
   %k = phi i7 [ 0, %0 ], [ %k_1, %._crit_edge9 ]
-  %exitcond_flatten1 = icmp eq i26 %indvar_flatten1, -5643264
-  %indvar_flatten_next1 = add i26 %indvar_flatten1, 1
+  %exitcond_flatten1 = icmp eq i15 %indvar_flatten1, -7168
+  %indvar_flatten_next1 = add i15 %indvar_flatten1, 1
   br i1 %exitcond_flatten1, label %7, label %.reset6
 
 ; <label>:2                                       ; preds = %.reset6
@@ -138,27 +138,27 @@ define internal fastcc void @dut_matmul(float* %strm_in_V, float* %strm_out_V) {
 ._crit_edge9:                                     ; preds = %6, %5
   %empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([14 x i8]* @p_str1806, i32 %tmp_1)
   %k_1 = add i7 %k_mid2, 1
-  %indvar_flatten_op = add i17 %indvar_flatten, 1
-  %indvar_flatten_next = select i1 %exitcond_flatten, i17 1, i17 %indvar_flatten_op
+  %indvar_flatten_op = add i12 %indvar_flatten, 1
+  %indvar_flatten_next = select i1 %exitcond_flatten, i12 1, i12 %indvar_flatten_op
   br label %1
 
 .reset6:                                          ; preds = %1
   call void (...)* @_ssdm_op_SpecLoopName([32 x i8]* @LOOP_ROW_LOOP_COL_LOOP_DOT_PRO)
-  %empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 61465600, i64 61465600, i64 61465600)
-  %exitcond_flatten = icmp eq i17 %indvar_flatten, -52672
-  %j_mid = select i1 %exitcond_flatten, i10 0, i10 %j
-  %tmp20 = icmp eq i10 %j, 0
+  %empty_13 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 25600, i64 25600, i64 25600)
+  %exitcond_flatten = icmp eq i12 %indvar_flatten, 1600
+  %j_mid = select i1 %exitcond_flatten, i5 0, i5 %j
+  %tmp20 = icmp eq i5 %j, 0
   %tmp_mid = or i1 %exitcond_flatten, %tmp20
   %not_exitcond_flatten = xor i1 %exitcond_flatten, true
   %exitcond = icmp eq i7 %k, -28
   %exitcond_mid = and i1 %exitcond, %not_exitcond_flatten
-  %j_1 = add i10 %j_mid, 1
+  %j_1 = add i5 %j_mid, 1
   call void (...)* @_ssdm_op_SpecLoopName([23 x i8]* @LOOP_COL_LOOP_DOT_PROD_str)
   %tmp_7 = or i1 %exitcond_mid, %exitcond_flatten
   %k_mid2 = select i1 %tmp_7, i7 0, i7 %k
-  %tmp_mid1 = icmp eq i10 %j_1, 0
+  %tmp_mid1 = icmp eq i5 %j_1, 0
   %tmp_mid2 = select i1 %exitcond_mid, i1 %tmp_mid1, i1 %tmp_mid
-  %j_mid2 = select i1 %exitcond_mid, i10 %j_1, i10 %j_mid
+  %j_mid2 = select i1 %exitcond_mid, i5 %j_1, i5 %j_mid
   call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str1806) nounwind
   %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str1806)
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1807) nounwind
@@ -219,21 +219,21 @@ _ifconv:
 
 ; <label>:0                                       ; preds = %_ifconv
   call fastcc void @dut_calc_svd(float* %strm_in_V, float* %strm_out_V)
-  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 ; <label>:1                                       ; preds = %_ifconv
   call fastcc void @dut_update_off_diag_r(float* %strm_in_V, float* %strm_out_V)
-  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 .preheader.i:                                     ; preds = %_ifconv, %.preheader
-  %indvar_flatten = phi i19 [ %indvar_flatten_next, %.preheader ], [ 0, %_ifconv ]
-  %exitcond_flatten = icmp eq i19 %indvar_flatten, -217744
-  %indvar_flatten_next = add i19 %indvar_flatten, 1
-  br i1 %exitcond_flatten, label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit", label %.preheader
+  %indvar_flatten = phi i7 [ %indvar_flatten_next, %.preheader ], [ 0, %_ifconv ]
+  %exitcond_flatten = icmp eq i7 %indvar_flatten, -16
+  %indvar_flatten_next = add i7 %indvar_flatten, 1
+  br i1 %exitcond_flatten, label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit", label %.preheader
 
 .preheader:                                       ; preds = %.preheader.i
   call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @L_svd_calc_off_c_str)
-  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 306544, i64 306544, i64 306544)
+  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 112, i64 112, i64 112)
   call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1809) nounwind
   %tmp_32_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str1809)
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1807) nounwind
@@ -256,16 +256,16 @@ _ifconv:
 
 ; <label>:2                                       ; preds = %_ifconv
   call fastcc void @dut_matmul(float* %strm_in_V, float* %strm_out_V)
-  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 ; <label>:3                                       ; preds = %_ifconv
   call fastcc void @dut_backproj(float* %strm_in_V, float* %strm_out_V)
   br label %._crit_edge
 
 ._crit_edge:                                      ; preds = %3, %_ifconv
-  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
-"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit": ; preds = %.preheader.i, %._crit_edge, %2, %1, %0
+"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit":  ; preds = %.preheader.i, %._crit_edge, %2, %1, %0
   ret void
 }
 
@@ -275,13 +275,13 @@ define internal fastcc void @dut_calc_svd(float* %strm_in_V, float* %strm_out_V)
   br label %1
 
 ; <label>:1                                       ; preds = %_ifconv, %0
-  %proc = phi i9 [ 0, %0 ], [ %proc_1, %_ifconv ]
-  %exitcond = icmp eq i9 %proc, -120
-  %proc_1 = add i9 %proc, 1
+  %proc = phi i4 [ 0, %0 ], [ %proc_1, %_ifconv ]
+  %exitcond = icmp eq i4 %proc, -8
+  %proc_1 = add i4 %proc, 1
   br i1 %exitcond, label %2, label %_ifconv
 
 _ifconv:                                          ; preds = %1
-  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 392, i64 392, i64 392)
+  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
   call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str1811) nounwind
   %tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str1811)
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1807) nounwind
@@ -491,36 +491,36 @@ define internal fastcc { float, float } @"dut_calc_angle<float, float>"(float %A
 define internal fastcc void @dut_backproj(float* %strm_in_V, float* %strm_out_V) {
   %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
   %empty_21 = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str)
-  %A = alloca [784 x float], align 16
+  %A = alloca [16 x float], align 16
   br label %1
 
 ; <label>:1                                       ; preds = %0, %._crit_edge8
-  %indvar_flatten2 = phi i20 [ 0, %0 ], [ %indvar_flatten_next2, %._crit_edge8 ]
-  %indvar_flatten = phi i17 [ 0, %0 ], [ %indvar_flatten_next, %._crit_edge8 ]
+  %indvar_flatten2 = phi i14 [ 0, %0 ], [ %indvar_flatten_next2, %._crit_edge8 ]
+  %indvar_flatten = phi i12 [ 0, %0 ], [ %indvar_flatten_next, %._crit_edge8 ]
   %j = phi i7 [ 0, %0 ], [ %j_mid2, %._crit_edge8 ]
   %p_03_2 = phi float [ 0.000000e+00, %0 ], [ %result, %._crit_edge8 ]
-  %k = phi i10 [ 0, %0 ], [ %k_2, %._crit_edge8 ]
-  %exitcond_flatten2 = icmp eq i20 %indvar_flatten2, -264576
-  %indvar_flatten_next2 = add i20 %indvar_flatten2, 1
+  %k = phi i5 [ 0, %0 ], [ %k_2, %._crit_edge8 ]
+  %exitcond_flatten2 = icmp eq i14 %indvar_flatten2, -384
+  %indvar_flatten_next2 = add i14 %indvar_flatten2, 1
   br i1 %exitcond_flatten2, label %4, label %.reset6
 
 ; <label>:2                                       ; preds = %.reset6
   %tmp = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
-  %tmp_s = zext i10 %k_mid2 to i64
-  %A_addr = getelementptr inbounds [784 x float]* %A, i64 0, i64 %tmp_s
+  %tmp_s = zext i5 %k_mid2 to i64
+  %A_addr = getelementptr inbounds [16 x float]* %A, i64 0, i64 %tmp_s
   store float %tmp, float* %A_addr, align 4
   br label %._crit_edge
 
 ._crit_edge:                                      ; preds = %2, %.reset6
-  %tmp_1 = icmp eq i10 %k_mid2, 0
+  %tmp_1 = icmp eq i5 %k_mid2, 0
   %p_03_2_22 = select i1 %tmp_1, float 0.000000e+00, float %p_03_2
-  %tmp_2 = zext i10 %k_mid2 to i64
-  %A_addr_3 = getelementptr inbounds [784 x float]* %A, i64 0, i64 %tmp_2
+  %tmp_2 = zext i5 %k_mid2 to i64
+  %A_addr_3 = getelementptr inbounds [16 x float]* %A, i64 0, i64 %tmp_2
   %A_load = load float* %A_addr_3, align 4
   %tmp_74 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
   %tmp_3 = fmul float %A_load, %tmp_74
   %result = fadd float %p_03_2_22, %tmp_3
-  %tmp_4 = icmp eq i10 %k_mid2, -241
+  %tmp_4 = icmp eq i5 %k_mid2, 15
   br i1 %tmp_4, label %3, label %._crit_edge8
 
 ; <label>:3                                       ; preds = %._crit_edge
@@ -529,25 +529,25 @@ define internal fastcc void @dut_backproj(float* %strm_in_V, float* %strm_out_V)
 
 ._crit_edge8:                                     ; preds = %3, %._crit_edge
   %empty_23 = call i32 (...)* @_ssdm_op_SpecRegionEnd([14 x i8]* @p_str1806, i32 %tmp_9)
-  %k_2 = add i10 %k_mid2, 1
-  %indvar_flatten_op = add i17 %indvar_flatten, 1
-  %indvar_flatten_next = select i1 %exitcond_flatten, i17 1, i17 %indvar_flatten_op
+  %k_2 = add i5 %k_mid2, 1
+  %indvar_flatten_op = add i12 %indvar_flatten, 1
+  %indvar_flatten_next = select i1 %exitcond_flatten, i12 1, i12 %indvar_flatten_op
   br label %1
 
 .reset6:                                          ; preds = %1
   call void (...)* @_ssdm_op_SpecLoopName([32 x i8]* @LOOP_ROW_LOOP_COL_LOOP_DOT_PRO)
-  %empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784000, i64 784000, i64 784000)
-  %exitcond_flatten = icmp eq i17 %indvar_flatten, -52672
+  %empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16000, i64 16000, i64 16000)
+  %exitcond_flatten = icmp eq i12 %indvar_flatten, 1600
   %j_mid = select i1 %exitcond_flatten, i7 0, i7 %j
   %tmp31 = icmp eq i7 %j, 0
   %tmp_mid = or i1 %exitcond_flatten, %tmp31
   %not_exitcond_flatten = xor i1 %exitcond_flatten, true
-  %exitcond = icmp eq i10 %k, -240
+  %exitcond = icmp eq i5 %k, -16
   %exitcond_mid = and i1 %exitcond, %not_exitcond_flatten
   %j_2 = add i7 %j_mid, 1
   call void (...)* @_ssdm_op_SpecLoopName([23 x i8]* @LOOP_COL_LOOP_DOT_PROD_str)
   %tmp_17 = or i1 %exitcond_mid, %exitcond_flatten
-  %k_mid2 = select i1 %tmp_17, i10 0, i10 %k
+  %k_mid2 = select i1 %tmp_17, i5 0, i5 %k
   %tmp_mid1 = icmp eq i7 %j_2, 0
   %tmp_mid2 = select i1 %exitcond_mid, i1 %tmp_mid1, i1 %tmp_mid
   %j_mid2 = select i1 %exitcond_mid, i7 %j_2, i7 %j_mid
@@ -688,7 +688,7 @@ declare float @_autotb_FifoWrite_float(float*, float)
 
 declare float @_autotb_FifoRead_float(float*)
 
-declare void @_GLOBAL__I_a1968() nounwind section ".text.startup"
+declare void @_GLOBAL__I_a1967() nounwind section ".text.startup"
 
 declare void @_GLOBAL__I_a1945() nounwind section ".text.startup"
 
@@ -869,34 +869,34 @@ declare void @_GLOBAL__I_a() nounwind section ".text.startup"
 !168 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [100]*", metadata !"fix32_t*"}
 !169 = metadata !{metadata !"kernel_arg_name", metadata !"X", metadata !"mean"}
 !170 = metadata !{null, metadata !167, metadata !2, metadata !171, metadata !4, metadata !172, metadata !6}
-!171 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [100]*", metadata !"fix32_t [784]*"}
+!171 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [100]*", metadata !"fix32_t [16]*"}
 !172 = metadata !{metadata !"kernel_arg_name", metadata !"X", metadata !"XXT"}
 !173 = metadata !{null, metadata !174, metadata !175, metadata !176, metadata !177, metadata !178, metadata !6}
 !174 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1, i32 1, i32 1}
 !175 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none", metadata !"none"}
-!176 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [784]*", metadata !"fix32_t [784]*", metadata !"fix32_t [784]*", metadata !"fix32_t [784]*"}
+!176 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [16]*", metadata !"fix32_t [16]*", metadata !"fix32_t [16]*", metadata !"fix32_t [16]*"}
 !177 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !"", metadata !""}
 !178 = metadata !{metadata !"kernel_arg_name", metadata !"XXT", metadata !"S", metadata !"U", metadata !"V"}
 !179 = metadata !{null, metadata !180, metadata !58, metadata !181, metadata !60, metadata !182, metadata !6}
 !180 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1, i32 1}
-!181 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [784]*", metadata !"fix32_t [784]*", metadata !"fix32_t [784]*"}
+!181 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [16]*", metadata !"fix32_t [16]*", metadata !"fix32_t [16]*"}
 !182 = metadata !{metadata !"kernel_arg_name", metadata !"tsf_mat", metadata !"S", metadata !"U"}
 !183 = metadata !{null, metadata !180, metadata !58, metadata !184, metadata !60, metadata !185, metadata !6}
-!184 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [784]*", metadata !"fix32_t [100]*", metadata !"fix32_t [100]*"}
+!184 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [16]*", metadata !"fix32_t [100]*", metadata !"fix32_t [100]*"}
 !185 = metadata !{metadata !"kernel_arg_name", metadata !"tsf_mat", metadata !"X", metadata !"Y"}
 !186 = metadata !{null, metadata !167, metadata !2, metadata !187, metadata !4, metadata !89, metadata !6}
 !187 = metadata !{metadata !"kernel_arg_type", metadata !"int*", metadata !"int*"}
 !188 = metadata !{null, metadata !189, metadata !175, metadata !190, metadata !177, metadata !191, metadata !6}
 !189 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0, i32 1}
-!190 = metadata !{metadata !"kernel_arg_type", metadata !"int*", metadata !"int", metadata !"int", metadata !"fix32_t [784]*"}
+!190 = metadata !{metadata !"kernel_arg_type", metadata !"int*", metadata !"int", metadata !"int", metadata !"fix32_t [16]*"}
 !191 = metadata !{metadata !"kernel_arg_name", metadata !"arr", metadata !"l", metadata !"h", metadata !"S"}
 !192 = metadata !{null, metadata !155, metadata !9, metadata !193, metadata !11, metadata !194, metadata !6}
-!193 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [784]*"}
+!193 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [16]*"}
 !194 = metadata !{metadata !"kernel_arg_name", metadata !"S"}
 !195 = metadata !{null, metadata !196, metadata !197, metadata !198, metadata !199, metadata !200, metadata !6}
 !196 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1, i32 1, i32 1, i32 0, i32 0}
 !197 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none"}
-!198 = metadata !{metadata !"kernel_arg_type", metadata !"const float [784]*", metadata !"float [784]*", metadata !"float [784]*", metadata !"float [784]*", metadata !"hls::stream<float> &", metadata !"hls::stream<float> &"}
+!198 = metadata !{metadata !"kernel_arg_type", metadata !"const float [16]*", metadata !"float [16]*", metadata !"float [16]*", metadata !"float [16]*", metadata !"hls::stream<float> &", metadata !"hls::stream<float> &"}
 !199 = metadata !{metadata !"kernel_arg_type_qual", metadata !"const", metadata !"", metadata !"", metadata !"", metadata !"", metadata !""}
 !200 = metadata !{metadata !"kernel_arg_name", metadata !"A", metadata !"S", metadata !"U", metadata !"V", metadata !"pca_in", metadata !"pca_out"}
 !201 = metadata !{null, metadata !202, metadata !175, metadata !203, metadata !177, metadata !204, metadata !6}

@@ -6,7 +6,7 @@
 
 # This points to the common directory where all the
 # Xillybus files are stored
-XILLYBUS_TAR="/classes/ece5775/zedboard/zedboard_project.tgz"
+XILLYBUS_TAR="zedboard_project_f.tgz"
 WORKDIR="./zedboard_project"
 
 # HLS generated verilog files directory

@@ -1003,9 +1003,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="7" bw="9" op_0_bw="9" op_1_bw="0">
+<node id="7" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-:0  %proc = phi i9 [ 0, %0 ], [ %proc_1, %_ifconv ]
+:0  %proc = phi i4 [ 0, %0 ], [ %proc_1, %_ifconv ]
 
 ]]></node>
 <StgValue><ssdm name="proc"/></StgValue>
@@ -1018,9 +1018,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="8" bw="1" op_0_bw="9" op_1_bw="9">
+<node id="8" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-:1  %exitcond = icmp eq i9 %proc, -120
+:1  %exitcond = icmp eq i4 %proc, -8
 
 ]]></node>
 <StgValue><ssdm name="exitcond"/></StgValue>
@@ -1033,9 +1033,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="9" bw="9" op_0_bw="9" op_1_bw="9">
+<node id="9" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-:2  %proc_1 = add i9 %proc, 1
+:2  %proc_1 = add i4 %proc, 1
 
 ]]></node>
 <StgValue><ssdm name="proc_1"/></StgValue>
@@ -9205,7 +9205,7 @@ _ifconv:125  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_
 
 <node id="12" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-_ifconv:0  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 392, i64 392, i64 392)
+_ifconv:0  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
 
 ]]></node>
 <StgValue><ssdm name="empty_19"/></StgValue>

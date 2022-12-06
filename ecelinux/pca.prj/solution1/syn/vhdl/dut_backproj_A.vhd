@@ -12,10 +12,10 @@ use ieee.std_logic_unsigned.all;
 
 entity dut_backproj_A_ram is 
     generic(
-            mem_type    : string := "block"; 
+            mem_type    : string := "distributed"; 
             dwidth     : integer := 32; 
-            awidth     : integer := 10; 
-            mem_size    : integer := 784
+            awidth     : integer := 4; 
+            mem_size    : integer := 16
     ); 
     port (
           addr0     : in std_logic_vector(awidth-1 downto 0); 
@@ -35,7 +35,7 @@ type mem_array is array (0 to mem_size-1) of std_logic_vector (dwidth-1 downto 0
 shared variable ram : mem_array;
 
 attribute syn_ramstyle : string; 
-attribute syn_ramstyle of ram : variable is "block_ram";
+attribute syn_ramstyle of ram : variable is "select_ram";
 attribute ram_style : string;
 attribute ram_style of ram : variable is mem_type;
 attribute EQUIVALENT_REGISTER_REMOVAL : string;
@@ -77,8 +77,8 @@ use IEEE.std_logic_1164.all;
 entity dut_backproj_A is
     generic (
         DataWidth : INTEGER := 32;
-        AddressRange : INTEGER := 784;
-        AddressWidth : INTEGER := 10);
+        AddressRange : INTEGER := 16;
+        AddressWidth : INTEGER := 4);
     port (
         reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;

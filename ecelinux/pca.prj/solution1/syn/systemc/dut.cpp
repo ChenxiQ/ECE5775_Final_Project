@@ -35,7 +35,7 @@ const sc_lv<32> dut::ap_const_lv32_7 = "111";
 const sc_lv<32> dut::ap_const_lv32_8 = "1000";
 const sc_lv<32> dut::ap_const_lv32_3 = "11";
 const sc_lv<32> dut::ap_const_lv32_1 = "1";
-const sc_lv<19> dut::ap_const_lv19_0 = "0000000000000000000";
+const sc_lv<7> dut::ap_const_lv7_0 = "0000000";
 const sc_lv<32> dut::ap_const_lv32_9 = "1001";
 const sc_lv<32> dut::ap_const_lv32_2 = "10";
 const sc_lv<32> dut::ap_const_lv32_1F = "11111";
@@ -44,8 +44,8 @@ const sc_lv<32> dut::ap_const_lv32_1E = "11110";
 const sc_lv<9> dut::ap_const_lv9_181 = "110000001";
 const sc_lv<8> dut::ap_const_lv8_7F = "1111111";
 const sc_lv<32> dut::ap_const_lv32_36 = "110110";
-const sc_lv<19> dut::ap_const_lv19_4AD70 = "1001010110101110000";
-const sc_lv<19> dut::ap_const_lv19_1 = "1";
+const sc_lv<7> dut::ap_const_lv7_70 = "1110000";
+const sc_lv<7> dut::ap_const_lv7_1 = "1";
 const sc_lv<32> dut::ap_const_lv32_A = "1010";
 
 dut::dut(sc_module_name name) : sc_module(name), mVcdFile(0) {
@@ -750,7 +750,7 @@ void dut::thread_ap_clk_no_reset_() {
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st2_fsm_1.read()) && 
          esl_seteq<1,32,32>(ap_const_lv32_3, p_Val2_5_fu_295_p3.read()))) {
-        indvar_flatten_reg_109 = ap_const_lv19_0;
+        indvar_flatten_reg_109 = ap_const_lv7_0;
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ppiten_pp0_it1.read()) && 
                 esl_seteq<1,1,1>(exitcond_flatten_reg_339.read(), ap_const_lv1_0) && 
                 esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_pp0_stg0_fsm_3.read()) && 
@@ -999,7 +999,7 @@ void dut::thread_ap_sig_cseq_ST_st3_fsm_2() {
 }
 
 void dut::thread_exitcond_flatten_fu_302_p2() {
-    exitcond_flatten_fu_302_p2 = (!indvar_flatten_phi_fu_113_p4.read().is_01() || !ap_const_lv19_4AD70.is_01())? sc_lv<1>(): sc_lv<1>(indvar_flatten_phi_fu_113_p4.read() == ap_const_lv19_4AD70);
+    exitcond_flatten_fu_302_p2 = (!indvar_flatten_phi_fu_113_p4.read().is_01() || !ap_const_lv7_70.is_01())? sc_lv<1>(): sc_lv<1>(indvar_flatten_phi_fu_113_p4.read() == ap_const_lv7_70);
 }
 
 void dut::thread_grp_dut_backproj_fu_136_ap_start() {
@@ -1123,7 +1123,7 @@ void dut::thread_grp_fu_156_p1() {
 }
 
 void dut::thread_indvar_flatten_next_fu_308_p2() {
-    indvar_flatten_next_fu_308_p2 = (!indvar_flatten_phi_fu_113_p4.read().is_01() || !ap_const_lv19_1.is_01())? sc_lv<19>(): (sc_biguint<19>(indvar_flatten_phi_fu_113_p4.read()) + sc_biguint<19>(ap_const_lv19_1));
+    indvar_flatten_next_fu_308_p2 = (!indvar_flatten_phi_fu_113_p4.read().is_01() || !ap_const_lv7_1.is_01())? sc_lv<7>(): (sc_biguint<7>(indvar_flatten_phi_fu_113_p4.read()) + sc_biguint<7>(ap_const_lv7_1));
 }
 
 void dut::thread_indvar_flatten_phi_fu_113_p4() {

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_calc_svd'
 ================================================================
-* Date:           Mon Dec  5 02:26:27 2022
+* Date:           Tue Dec  6 01:12:59 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -25,24 +25,24 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +------+------+------+------+---------+
-    |   Latency   |   Interval  | Pipeline|
-    |  min |  max |  min |  max |   Type  |
-    +------+------+------+------+---------+
-    |  7975|  7975|  7975|  7975|   none  |
-    +------+------+------+------+---------+
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  295|  295|  295|  295|   none  |
+    +-----+-----+-----+-----+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +-----------------+------+------+----------+-----------+-----------+------+----------+
-        |                 |   Latency   | Iteration|  Initiation Interval  | Trip |          |
-        |    Loop Name    |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
-        +-----------------+------+------+----------+-----------+-----------+------+----------+
-        |- svd_calc_diag  |  7973|  7973|       154|         20|          1|   392|    yes   |
-        +-----------------+------+------+----------+-----------+-----------+------+----------+
+        +-----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                 |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- svd_calc_diag  |  293|  293|       154|         20|          1|     8|    yes   |
+        +-----------------+-----+-----+----------+-----------+-----------+------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -404,15 +404,15 @@ ST_1: stg_159 [1/1] 1.57ns
 :2  br label %1
 
 
- <State 2>: 2.03ns
+ <State 2>: 1.88ns
 ST_2: proc [1/1] 0.00ns
-:0  %proc = phi i9 [ 0, %0 ], [ %proc_1, %_ifconv ]
+:0  %proc = phi i4 [ 0, %0 ], [ %proc_1, %_ifconv ]
 
-ST_2: exitcond [1/1] 2.03ns
-:1  %exitcond = icmp eq i9 %proc, -120
+ST_2: exitcond [1/1] 1.88ns
+:1  %exitcond = icmp eq i4 %proc, -8
 
-ST_2: proc_1 [1/1] 1.84ns
-:2  %proc_1 = add i9 %proc, 1
+ST_2: proc_1 [1/1] 0.80ns
+:2  %proc_1 = add i4 %proc, 1
 
 ST_2: stg_163 [1/1] 0.00ns
 :3  br i1 %exitcond, label %2, label %_ifconv
@@ -2164,7 +2164,7 @@ _ifconv:125  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_
 
  <State 155>: 4.38ns
 ST_155: empty_19 [1/1] 0.00ns
-_ifconv:0  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 392, i64 392, i64 392)
+_ifconv:0  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
 
 ST_155: stg_645 [1/1] 0.00ns
 _ifconv:1  call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str1811) nounwind

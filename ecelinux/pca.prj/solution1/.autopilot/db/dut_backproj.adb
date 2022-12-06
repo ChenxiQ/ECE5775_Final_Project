@@ -84,7 +84,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -125,7 +125,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -170,7 +170,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>20</bitwidth>
+            <bitwidth>14</bitwidth>
           </Value>
           <oprand_edges>
             <count>4</count>
@@ -200,7 +200,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>17</bitwidth>
+            <bitwidth>12</bitwidth>
           </Value>
           <oprand_edges>
             <count>4</count>
@@ -226,7 +226,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -304,7 +304,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>10</bitwidth>
+            <bitwidth>5</bitwidth>
           </Value>
           <oprand_edges>
             <count>4</count>
@@ -362,7 +362,7 @@
               <rtlName>indvar_flatten_next2_fu_183_p2</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>20</bitwidth>
+            <bitwidth>14</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -443,7 +443,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -486,7 +486,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -528,7 +528,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -570,7 +570,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -612,7 +612,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -654,7 +654,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -696,7 +696,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -738,7 +738,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -780,7 +780,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -798,7 +798,7 @@
               <rtlName>k_mid2_fu_245_p3</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>10</bitwidth>
+            <bitwidth>5</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -823,7 +823,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -865,7 +865,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -908,7 +908,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -951,7 +951,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -994,7 +994,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1036,7 +1036,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1077,7 +1077,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1095,7 +1095,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>10</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -1120,7 +1120,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1162,7 +1162,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1203,7 +1203,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1245,7 +1245,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1288,7 +1288,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1329,7 +1329,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1347,7 +1347,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>10</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -1372,7 +1372,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1414,7 +1414,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1457,7 +1457,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1499,7 +1499,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1541,7 +1541,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1583,7 +1583,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1626,7 +1626,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1669,7 +1669,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1710,7 +1710,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1728,7 +1728,7 @@
               <rtlName>k_2_fu_307_p2</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>10</bitwidth>
+            <bitwidth>5</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -1756,7 +1756,7 @@
               <rtlName>indvar_flatten_op_fu_275_p2</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>17</bitwidth>
+            <bitwidth>12</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -1784,7 +1784,7 @@
               <rtlName>indvar_flatten_next_fu_281_p3</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>17</bitwidth>
+            <bitwidth>12</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -1836,7 +1836,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1907,7 +1907,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>20</bitwidth>
+            <bitwidth>14</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>0</content>
@@ -1930,7 +1930,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>17</bitwidth>
+            <bitwidth>12</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>0</content>
@@ -1999,7 +1999,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>10</bitwidth>
+            <bitwidth>5</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>0</content>
@@ -2022,10 +2022,10 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>20</bitwidth>
+            <bitwidth>14</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>784000</content>
+          <content>16000</content>
         </item>
         <item class_id_reference="16" object_id="_56">
           <Value>
@@ -2045,7 +2045,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>20</bitwidth>
+            <bitwidth>14</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>1</content>
@@ -2091,10 +2091,10 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>10</bitwidth>
+            <bitwidth>5</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>783</content>
+          <content>15</content>
         </item>
         <item class_id_reference="16" object_id="_59">
           <Value>
@@ -2114,7 +2114,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>10</bitwidth>
+            <bitwidth>5</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>1</content>
@@ -2137,7 +2137,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>17</bitwidth>
+            <bitwidth>12</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>1</content>
@@ -2160,10 +2160,10 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>17</bitwidth>
+            <bitwidth>12</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>78400</content>
+          <content>1600</content>
         </item>
         <item class_id_reference="16" object_id="_62">
           <Value>
@@ -2206,10 +2206,10 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>10</bitwidth>
+            <bitwidth>5</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>784</content>
+          <content>16</content>
         </item>
         <item class_id_reference="16" object_id="_64">
           <Value>
@@ -3166,7 +3166,7 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>3136010</mMinLatency>
+        <mMinLatency>64010</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -3213,9 +3213,9 @@
         </basic_blocks>
         <mII>4</mII>
         <mDepth>13</mDepth>
-        <mMinTripCount>784000</mMinTripCount>
-        <mMaxTripCount>784000</mMaxTripCount>
-        <mMinLatency>3136008</mMinLatency>
+        <mMinTripCount>16000</mMinTripCount>
+        <mMaxTripCount>16000</mMaxTripCount>
+        <mMinLatency>64008</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -4034,11 +4034,11 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>20</second>
+              <second>14</second>
             </item>
             <item>
               <first>(1P1)</first>
-              <second>20</second>
+              <second>10</second>
             </item>
             <item>
               <first>FF</first>
@@ -4046,7 +4046,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>7</second>
+              <second>5</second>
             </item>
           </second>
         </item>
@@ -4057,11 +4057,11 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>17</second>
+              <second>12</second>
             </item>
             <item>
               <first>(1P1)</first>
-              <second>17</second>
+              <second>11</second>
             </item>
             <item>
               <first>FF</first>
@@ -4069,7 +4069,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>6</second>
+              <second>5</second>
             </item>
           </second>
         </item>
@@ -4080,11 +4080,11 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>10</second>
+              <second>5</second>
             </item>
             <item>
               <first>(1P1)</first>
-              <second>9</second>
+              <second>6</second>
             </item>
             <item>
               <first>FF</first>
@@ -4092,7 +4092,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>4</second>
+              <second>3</second>
             </item>
           </second>
         </item>
@@ -4153,7 +4153,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>20</second>
+              <second>14</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -4165,7 +4165,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>20</second>
+              <second>14</second>
             </item>
           </second>
         </item>
@@ -4184,7 +4184,7 @@
             </item>
             <item>
               <first>(2P2)</first>
-              <second>17</second>
+              <second>12</second>
             </item>
             <item>
               <first>FF</first>
@@ -4192,7 +4192,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>17</second>
+              <second>12</second>
             </item>
           </second>
         </item>
@@ -4203,7 +4203,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>17</second>
+              <second>12</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -4215,7 +4215,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>17</second>
+              <second>12</second>
             </item>
           </second>
         </item>
@@ -4303,7 +4303,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>10</second>
+              <second>5</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -4315,7 +4315,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>10</second>
+              <second>5</second>
             </item>
           </second>
         </item>
@@ -4334,7 +4334,7 @@
             </item>
             <item>
               <first>(2P2)</first>
-              <second>10</second>
+              <second>5</second>
             </item>
             <item>
               <first>FF</first>
@@ -4342,7 +4342,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>10</second>
+              <second>5</second>
             </item>
           </second>
         </item>
@@ -4422,7 +4422,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>10</second>
+              <second>5</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -4434,7 +4434,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>4</second>
+              <second>2</second>
             </item>
           </second>
         </item>
@@ -4445,11 +4445,11 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>10</second>
+              <second>5</second>
             </item>
             <item>
               <first>(1P1)</first>
-              <second>9</second>
+              <second>4</second>
             </item>
             <item>
               <first>FF</first>
@@ -4457,7 +4457,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>4</second>
+              <second>2</second>
             </item>
           </second>
         </item>
@@ -4549,7 +4549,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0Words)</first>
-              <second>784</second>
+              <second>16</second>
             </item>
             <item>
               <first>(1Bits)</first>
@@ -4561,19 +4561,19 @@
             </item>
             <item>
               <first>(3W*Bits*Banks)</first>
-              <second>25088</second>
+              <second>512</second>
             </item>
             <item>
               <first>BRAM</first>
-              <second>2</second>
+              <second>0</second>
             </item>
             <item>
               <first>FF</first>
-              <second>0</second>
+              <second>64</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>0</second>
+              <second>8</second>
             </item>
           </second>
         </item>
@@ -4592,15 +4592,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>10</second>
+              <second>4</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>30</second>
+              <second>12</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>10</second>
+              <second>4</second>
             </item>
           </second>
         </item>
@@ -4661,15 +4661,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>20</second>
+              <second>14</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>40</second>
+              <second>28</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>20</second>
+              <second>14</second>
             </item>
           </second>
         </item>
@@ -4684,15 +4684,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>20</second>
+              <second>14</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>40</second>
+              <second>28</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>20</second>
+              <second>14</second>
             </item>
           </second>
         </item>
@@ -4707,15 +4707,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>17</second>
+              <second>12</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>34</second>
+              <second>24</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>17</second>
+              <second>12</second>
             </item>
           </second>
         </item>
@@ -4730,15 +4730,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>17</second>
+              <second>12</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>34</second>
+              <second>24</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>17</second>
+              <second>12</second>
             </item>
           </second>
         </item>
@@ -4799,15 +4799,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>10</second>
+              <second>5</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>20</second>
+              <second>10</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>10</second>
+              <second>5</second>
             </item>
           </second>
         </item>
@@ -4822,15 +4822,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>10</second>
+              <second>5</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>20</second>
+              <second>10</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>10</second>
+              <second>5</second>
             </item>
           </second>
         </item>
@@ -5070,7 +5070,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>20</second>
+              <second>14</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -5078,7 +5078,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>20</second>
+              <second>14</second>
             </item>
           </second>
         </item>
@@ -5089,7 +5089,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>20</second>
+              <second>14</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -5097,7 +5097,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>20</second>
+              <second>14</second>
             </item>
           </second>
         </item>
@@ -5108,7 +5108,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>17</second>
+              <second>12</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -5116,7 +5116,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>17</second>
+              <second>12</second>
             </item>
           </second>
         </item>
@@ -5127,7 +5127,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>17</second>
+              <second>12</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -5135,7 +5135,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>17</second>
+              <second>12</second>
             </item>
           </second>
         </item>
@@ -5184,7 +5184,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>10</second>
+              <second>5</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -5192,7 +5192,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>10</second>
+              <second>5</second>
             </item>
           </second>
         </item>
@@ -5203,7 +5203,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>10</second>
+              <second>5</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -5211,7 +5211,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>10</second>
+              <second>5</second>
             </item>
           </second>
         </item>
@@ -5222,7 +5222,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>10</second>
+              <second>5</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -5230,7 +5230,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>10</second>
+              <second>5</second>
             </item>
           </second>
         </item>

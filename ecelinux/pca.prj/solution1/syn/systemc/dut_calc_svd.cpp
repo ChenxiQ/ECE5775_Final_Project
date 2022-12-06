@@ -59,9 +59,9 @@ const sc_lv<32> dut_calc_svd::ap_const_lv32_A = "1010";
 const sc_lv<32> dut_calc_svd::ap_const_lv32_B = "1011";
 const sc_lv<32> dut_calc_svd::ap_const_lv32_C = "1100";
 const sc_lv<32> dut_calc_svd::ap_const_lv32_D = "1101";
-const sc_lv<9> dut_calc_svd::ap_const_lv9_0 = "000000000";
-const sc_lv<9> dut_calc_svd::ap_const_lv9_188 = "110001000";
-const sc_lv<9> dut_calc_svd::ap_const_lv9_1 = "1";
+const sc_lv<4> dut_calc_svd::ap_const_lv4_0 = "0000";
+const sc_lv<4> dut_calc_svd::ap_const_lv4_8 = "1000";
+const sc_lv<4> dut_calc_svd::ap_const_lv4_1 = "1";
 const sc_lv<32> dut_calc_svd::ap_const_lv32_80000000 = "10000000000000000000000000000000";
 const sc_lv<32> dut_calc_svd::ap_const_lv32_1F = "11111";
 const sc_lv<2> dut_calc_svd::ap_const_lv2_0 = "00";
@@ -1387,7 +1387,7 @@ void dut_calc_svd::thread_ap_clk_no_reset_() {
         proc_reg_70 = proc_1_reg_373.read();
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st1_fsm_0.read()) && 
                 !esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_0))) {
-        proc_reg_70 = ap_const_lv9_0;
+        proc_reg_70 = ap_const_lv4_0;
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_pp0_stg0_fsm_1.read()) && !((esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ppiten_pp0_it1.read()) && 
   ap_sig_326.read()) || (esl_seteq<1,1,1>(ap_const_logic_1, ap_reg_ppiten_pp0_it7.read()) && 
@@ -2154,7 +2154,7 @@ void dut_calc_svd::thread_ap_sig_cseq_ST_st1_fsm_0() {
 }
 
 void dut_calc_svd::thread_exitcond_fu_199_p2() {
-    exitcond_fu_199_p2 = (!proc_phi_fu_74_p4.read().is_01() || !ap_const_lv9_188.is_01())? sc_lv<1>(): sc_lv<1>(proc_phi_fu_74_p4.read() == ap_const_lv9_188);
+    exitcond_fu_199_p2 = (!proc_phi_fu_74_p4.read().is_01() || !ap_const_lv4_8.is_01())? sc_lv<1>(): sc_lv<1>(proc_phi_fu_74_p4.read() == ap_const_lv4_8);
 }
 
 void dut_calc_svd::thread_grp_dut_calc_angle_float_float_s_fu_81_A_M_imag() {
@@ -3006,7 +3006,7 @@ void dut_calc_svd::thread_p_Val2_s_fu_267_p1() {
 }
 
 void dut_calc_svd::thread_proc_1_fu_205_p2() {
-    proc_1_fu_205_p2 = (!proc_phi_fu_74_p4.read().is_01() || !ap_const_lv9_1.is_01())? sc_lv<9>(): (sc_biguint<9>(proc_phi_fu_74_p4.read()) + sc_biguint<9>(ap_const_lv9_1));
+    proc_1_fu_205_p2 = (!proc_phi_fu_74_p4.read().is_01() || !ap_const_lv4_1.is_01())? sc_lv<4>(): (sc_biguint<4>(proc_phi_fu_74_p4.read()) + sc_biguint<4>(ap_const_lv4_1));
 }
 
 void dut_calc_svd::thread_proc_phi_fu_74_p4() {

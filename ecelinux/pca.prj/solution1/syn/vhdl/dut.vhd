@@ -29,7 +29,7 @@ end;
 architecture behav of dut is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "dut,hls_ip_2016_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=9.384600,HLS_SYN_LAT=63006983,HLS_SYN_TPT=none,HLS_SYN_MEM=3,HLS_SYN_DSP=69,HLS_SYN_FF=9787,HLS_SYN_LUT=13810}";
+    "dut,hls_ip_2016_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=9.384600,HLS_SYN_LAT=32518,HLS_SYN_TPT=none,HLS_SYN_MEM=1,HLS_SYN_DSP=69,HLS_SYN_FF=9710,HLS_SYN_LUT=13564}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_st1_fsm_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000001";
@@ -53,7 +53,7 @@ architecture behav of dut is
     constant ap_const_lv32_8 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001000";
     constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
-    constant ap_const_lv19_0 : STD_LOGIC_VECTOR (18 downto 0) := "0000000000000000000";
+    constant ap_const_lv7_0 : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
     constant ap_const_lv32_9 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001001";
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
     constant ap_const_lv32_1F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011111";
@@ -62,8 +62,8 @@ architecture behav of dut is
     constant ap_const_lv9_181 : STD_LOGIC_VECTOR (8 downto 0) := "110000001";
     constant ap_const_lv8_7F : STD_LOGIC_VECTOR (7 downto 0) := "01111111";
     constant ap_const_lv32_36 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000110110";
-    constant ap_const_lv19_4AD70 : STD_LOGIC_VECTOR (18 downto 0) := "1001010110101110000";
-    constant ap_const_lv19_1 : STD_LOGIC_VECTOR (18 downto 0) := "0000000000000000001";
+    constant ap_const_lv7_70 : STD_LOGIC_VECTOR (6 downto 0) := "1110000";
+    constant ap_const_lv7_1 : STD_LOGIC_VECTOR (6 downto 0) := "0000001";
     constant ap_const_lv32_A : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001010";
 
     signal ap_CS_fsm : STD_LOGIC_VECTOR (10 downto 0) := "00000000001";
@@ -91,7 +91,7 @@ architecture behav of dut is
     signal ap_reg_ppiten_pp0_it3 : STD_LOGIC := '0';
     signal strm_out_V_blk_n : STD_LOGIC;
     signal ap_reg_ppstg_exitcond_flatten_reg_339_pp0_iter2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal indvar_flatten_reg_109 : STD_LOGIC_VECTOR (18 downto 0);
+    signal indvar_flatten_reg_109 : STD_LOGIC_VECTOR (6 downto 0);
     signal grp_fu_152_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal reg_160 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_sig_131 : BOOLEAN;
@@ -110,8 +110,8 @@ architecture behav of dut is
     signal exitcond_flatten_fu_302_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_sig_165 : BOOLEAN;
     signal ap_reg_ppstg_exitcond_flatten_reg_339_pp0_iter1 : STD_LOGIC_VECTOR (0 downto 0);
-    signal indvar_flatten_next_fu_308_p2 : STD_LOGIC_VECTOR (18 downto 0);
-    signal indvar_flatten_next_reg_343 : STD_LOGIC_VECTOR (18 downto 0);
+    signal indvar_flatten_next_fu_308_p2 : STD_LOGIC_VECTOR (6 downto 0);
+    signal indvar_flatten_next_reg_343 : STD_LOGIC_VECTOR (6 downto 0);
     signal tmp_33_reg_348 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_34_reg_353 : STD_LOGIC_VECTOR (31 downto 0);
     signal tmp_35_reg_358 : STD_LOGIC_VECTOR (31 downto 0);
@@ -151,7 +151,7 @@ architecture behav of dut is
     signal grp_dut_matmul_fu_144_strm_in_V_read : STD_LOGIC;
     signal grp_dut_matmul_fu_144_strm_out_V_din : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_dut_matmul_fu_144_strm_out_V_write : STD_LOGIC;
-    signal indvar_flatten_phi_fu_113_p4 : STD_LOGIC_VECTOR (18 downto 0);
+    signal indvar_flatten_phi_fu_113_p4 : STD_LOGIC_VECTOR (6 downto 0);
     signal ap_reg_grp_dut_calc_svd_fu_120_ap_start : STD_LOGIC := '0';
     signal ap_sig_cseq_ST_st23_fsm_9 : STD_LOGIC;
     signal ap_sig_297 : BOOLEAN;
@@ -528,7 +528,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_sig_cseq_ST_st2_fsm_1) and (ap_const_lv32_3 = p_Val2_5_fu_295_p3))) then 
-                indvar_flatten_reg_109 <= ap_const_lv19_0;
+                indvar_flatten_reg_109 <= ap_const_lv7_0;
             elsif (((ap_const_logic_1 = ap_reg_ppiten_pp0_it1) and (exitcond_flatten_reg_339 = ap_const_lv1_0) and (ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_3) and not((((ap_const_logic_1 = ap_reg_ppiten_pp0_it1) and ap_sig_131) or ((ap_const_logic_1 = ap_reg_ppiten_pp0_it3) and ap_sig_165))))) then 
                 indvar_flatten_reg_109 <= indvar_flatten_next_reg_343;
             end if; 
@@ -957,7 +957,7 @@ begin
         end if; 
     end process;
 
-    exitcond_flatten_fu_302_p2 <= "1" when (indvar_flatten_phi_fu_113_p4 = ap_const_lv19_4AD70) else "0";
+    exitcond_flatten_fu_302_p2 <= "1" when (indvar_flatten_phi_fu_113_p4 = ap_const_lv7_70) else "0";
     grp_dut_backproj_fu_136_ap_start <= ap_reg_grp_dut_backproj_fu_136_ap_start;
     grp_dut_calc_svd_fu_120_ap_start <= ap_reg_grp_dut_calc_svd_fu_120_ap_start;
     grp_dut_matmul_fu_144_ap_start <= ap_reg_grp_dut_matmul_fu_144_ap_start;
@@ -1038,7 +1038,7 @@ begin
         end if; 
     end process;
 
-    indvar_flatten_next_fu_308_p2 <= std_logic_vector(unsigned(indvar_flatten_phi_fu_113_p4) + unsigned(ap_const_lv19_1));
+    indvar_flatten_next_fu_308_p2 <= std_logic_vector(unsigned(indvar_flatten_phi_fu_113_p4) + unsigned(ap_const_lv7_1));
 
     indvar_flatten_phi_fu_113_p4_assign_proc : process(ap_reg_ppiten_pp0_it1, exitcond_flatten_reg_339, ap_sig_cseq_ST_pp0_stg0_fsm_3, indvar_flatten_reg_109, indvar_flatten_next_reg_343)
     begin

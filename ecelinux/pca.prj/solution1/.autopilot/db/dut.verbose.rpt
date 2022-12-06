@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut'
 ================================================================
-* Date:           Mon Dec  5 02:26:31 2022
+* Date:           Tue Dec  6 01:13:02 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -25,32 +25,32 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+-----------+-----+-----------+---------+
-    |     Latency     |     Interval    | Pipeline|
-    | min |    max    | min |    max    |   Type  |
-    +-----+-----------+-----+-----------+---------+
-    |    3|  307328013|    4|  307328014|   none  |
-    +-----+-----------+-----+-----------+---------+
+    +-----+--------+-----+--------+---------+
+    |    Latency   |   Interval   | Pipeline|
+    | min |   max  | min |   max  |   Type  |
+    +-----+--------+-----+--------+---------+
+    |    3|  128012|    4|  128013|   none  |
+    +-----+--------+-----+--------+---------+
 
     + Detail: 
         * Instance: 
-        +----------------------------------+-----------------------+-----------+-----------+-----------+-----------+---------+
-        |                                  |                       |        Latency        |        Interval       | Pipeline|
-        |             Instance             |         Module        |    min    |    max    |    min    |    max    |   Type  |
-        +----------------------------------+-----------------------+-----------+-----------+-----------+-----------+---------+
-        |grp_dut_calc_svd_fu_120           |dut_calc_svd           |       7975|       7975|       7975|       7975|   none  |
-        |grp_dut_update_off_diag_r_fu_128  |dut_update_off_diag_r  |    4291632|    4291632|    4291632|    4291632|   none  |
-        |grp_dut_backproj_fu_136           |dut_backproj           |    3136010|    3136010|    3136010|    3136010|   none  |
-        |grp_dut_matmul_fu_144             |dut_matmul             |  307328010|  307328010|  307328010|  307328010|   none  |
-        +----------------------------------+-----------------------+-----------+-----------+-----------+-----------+---------+
+        +----------------------------------+-----------------------+--------+--------+--------+--------+---------+
+        |                                  |                       |     Latency     |     Interval    | Pipeline|
+        |             Instance             |         Module        |   min  |   max  |   min  |   max  |   Type  |
+        +----------------------------------+-----------------------+--------+--------+--------+--------+---------+
+        |grp_dut_calc_svd_fu_120           |dut_calc_svd           |     295|     295|     295|     295|   none  |
+        |grp_dut_update_off_diag_r_fu_128  |dut_update_off_diag_r  |    1584|    1584|    1584|    1584|   none  |
+        |grp_dut_backproj_fu_136           |dut_backproj           |   64010|   64010|   64010|   64010|   none  |
+        |grp_dut_matmul_fu_144             |dut_matmul             |  128009|  128009|  128009|  128009|   none  |
+        +----------------------------------+-----------------------+--------+--------+--------+--------+---------+
 
         * Loop: 
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
-        |                    |      Latency      | Iteration|  Initiation Interval  |  Trip  |          |
-        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
-        |- L_svd_calc_off_c  |  1839276|  1839276|        19|          6|          1|  306544|    yes   |
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                    |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- L_svd_calc_off_c  |  684|  684|        19|          6|          1|   112|    yes   |
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
 
 
 
@@ -62,18 +62,18 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      -|       0|    453|
+|Expression       |        -|      -|       0|    437|
 |FIFO             |        -|      -|       -|      -|
-|Instance         |        3|     69|    9311|  13147|
+|Instance         |        1|     69|    9258|  12941|
 |Memory           |        -|      -|       -|      -|
-|Multiplexer      |        -|      -|       -|    209|
-|Register         |        -|      -|     476|      1|
+|Multiplexer      |        -|      -|       -|    185|
+|Register         |        -|      -|     452|      1|
 +-----------------+---------+-------+--------+-------+
-|Total            |        3|     69|    9787|  13810|
+|Total            |        1|     69|    9710|  13564|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
-|Utilization (%)  |        1|     31|       9|     25|
+|Utilization (%)  |    ~0   |     31|       9|     25|
 +-----------------+---------+-------+--------+-------+
 
 + Detail: 
@@ -81,14 +81,14 @@
     +--------------------------------------+----------------------------------+---------+-------+------+------+
     |               Instance               |              Module              | BRAM_18K| DSP48E|  FF  |  LUT |
     +--------------------------------------+----------------------------------+---------+-------+------+------+
-    |grp_dut_backproj_fu_136               |dut_backproj                      |        2|      5|   609|  1066|
-    |grp_dut_calc_svd_fu_120               |dut_calc_svd                      |        0|     49|  6621|  9360|
+    |grp_dut_backproj_fu_136               |dut_backproj                      |        0|      5|   636|  1002|
+    |grp_dut_calc_svd_fu_120               |dut_calc_svd                      |        0|     49|  6611|  9344|
     |dut_fadd_32ns_32ns_32_5_full_dsp_U35  |dut_fadd_32ns_32ns_32_5_full_dsp  |        0|      2|   205|   390|
     |dut_fmul_32ns_32ns_32_4_max_dsp_U36   |dut_fmul_32ns_32ns_32_4_max_dsp   |        0|      3|   143|   321|
-    |grp_dut_matmul_fu_144                 |dut_matmul                        |        1|      5|   590|  1023|
-    |grp_dut_update_off_diag_r_fu_128      |dut_update_off_diag_r             |        0|      5|  1143|   987|
+    |grp_dut_matmul_fu_144                 |dut_matmul                        |        1|      5|   544|   937|
+    |grp_dut_update_off_diag_r_fu_128      |dut_update_off_diag_r             |        0|      5|  1119|   947|
     +--------------------------------------+----------------------------------+---------+-------+------+------+
-    |Total                                 |                                  |        3|     69|  9311| 13147|
+    |Total                                 |                                  |        1|     69|  9258| 12941|
     +--------------------------------------+----------------------------------+---------+-------+------+------+
 
     * DSP48: 
@@ -104,13 +104,13 @@
     +-------------------------------+----------+-------+---+-----+------------+------------+
     |         Variable Name         | Operation| DSP48E| FF| LUT | Bitwidth P0| Bitwidth P1|
     +-------------------------------+----------+-------+---+-----+------------+------------+
-    |indvar_flatten_next_fu_308_p2  |     +    |      0|  0|   19|          19|           1|
+    |indvar_flatten_next_fu_308_p2  |     +    |      0|  0|    7|           7|           1|
     |sh_assign_fu_195_p2            |     +    |      0|  0|    9|           8|           9|
     |p_Val2_8_i_i_fu_289_p2         |     -    |      0|  0|   32|           1|          32|
     |tmp_22_i_i_fu_209_p2           |     -    |      0|  0|    8|           7|           8|
     |ap_sig_131                     |    and   |      0|  0|    1|           1|           1|
     |ap_sig_165                     |    and   |      0|  0|    1|           1|           1|
-    |exitcond_flatten_fu_302_p2     |   icmp   |      0|  0|    7|          19|          19|
+    |exitcond_flatten_fu_302_p2     |   icmp   |      0|  0|    3|           7|           6|
     |tmp_24_i_i_fu_248_p2           |   lshr   |      0|  0|   63|          24|          24|
     |ap_sig_143                     |    or    |      0|  0|    1|           1|           1|
     |p_Val2_3_fu_282_p3             |  select  |      0|  0|   32|           1|          32|
@@ -118,7 +118,7 @@
     |sh_assign_1_fu_219_p3          |  select  |      0|  0|    9|           1|           9|
     |tmp_26_i_i_fu_254_p2           |    shl   |      0|  0|  239|          78|          78|
     +-------------------------------+----------+-------+---+-----+------------+------------+
-    |Total                          |          |      0|  0|  453|         162|         247|
+    |Total                          |          |      0|  0|  437|         138|         234|
     +-------------------------------+----------+-------+---+-----+------------+------------+
 
     * Multiplexer: 
@@ -131,15 +131,15 @@
     |grp_fu_152_p1                 |  32|          3|   32|         96|
     |grp_fu_156_p0                 |  32|          5|   32|        160|
     |grp_fu_156_p1                 |  32|          3|   32|         96|
-    |indvar_flatten_phi_fu_113_p4  |  19|          2|   19|         38|
-    |indvar_flatten_reg_109        |  19|          2|   19|         38|
+    |indvar_flatten_phi_fu_113_p4  |   7|          2|    7|         14|
+    |indvar_flatten_reg_109        |   7|          2|    7|         14|
     |strm_in_V_blk_n               |   1|          2|    1|          2|
     |strm_in_V_read                |   1|          6|    1|          6|
     |strm_out_V_blk_n              |   1|          2|    1|          2|
     |strm_out_V_din                |  32|          5|   32|        160|
     |strm_out_V_write              |   1|          6|    1|          6|
     +------------------------------+----+-----------+-----+-----------+
-    |Total                         | 209|         53|  204|        714|
+    |Total                         | 185|         53|  180|        666|
     +------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -156,8 +156,8 @@
     |ap_reg_ppiten_pp0_it2                             |   1|   0|    1|          0|
     |ap_reg_ppiten_pp0_it3                             |   1|   0|    1|          0|
     |exitcond_flatten_reg_339                          |   1|   0|    1|          0|
-    |indvar_flatten_next_reg_343                       |  19|   0|   19|          0|
-    |indvar_flatten_reg_109                            |  19|   0|   19|          0|
+    |indvar_flatten_next_reg_343                       |   7|   0|    7|          0|
+    |indvar_flatten_reg_109                            |   7|   0|    7|          0|
     |isNeg_reg_324                                     |   1|   0|    1|          0|
     |loc_V_1_reg_319                                   |  23|   0|   23|          0|
     |p_Result_s_reg_314                                |   1|   0|    1|          0|
@@ -176,7 +176,7 @@
     |tmp_i_i_16_reg_378                                |  32|   0|   32|          0|
     |exitcond_flatten_reg_339                          |   0|   1|    1|          0|
     +--------------------------------------------------+----+----+-----+-----------+
-    |Total                                             | 476|   1|  477|          0|
+    |Total                                             | 452|   1|  453|          0|
     +--------------------------------------------------+----+----+-----+-----------+
 
 
@@ -412,24 +412,24 @@ ST_3: stg_61 [1/2] 0.00ns
 :0  call fastcc void @dut_matmul(float* %strm_in_V, float* %strm_out_V)
 
 ST_3: stg_62 [1/1] 0.00ns
-:1  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 ST_3: stg_63 [1/1] 0.00ns
-._crit_edge:0  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+._crit_edge:0  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 
- <State 4>: 2.33ns
+ <State 4>: 1.97ns
 ST_4: indvar_flatten [1/1] 0.00ns
-.preheader.i:0  %indvar_flatten = phi i19 [ %indvar_flatten_next, %.preheader ], [ 0, %_ifconv ]
+.preheader.i:0  %indvar_flatten = phi i7 [ %indvar_flatten_next, %.preheader ], [ 0, %_ifconv ]
 
-ST_4: exitcond_flatten [1/1] 2.33ns
-.preheader.i:1  %exitcond_flatten = icmp eq i19 %indvar_flatten, -217744
+ST_4: exitcond_flatten [1/1] 1.97ns
+.preheader.i:1  %exitcond_flatten = icmp eq i7 %indvar_flatten, -16
 
-ST_4: indvar_flatten_next [1/1] 2.08ns
-.preheader.i:2  %indvar_flatten_next = add i19 %indvar_flatten, 1
+ST_4: indvar_flatten_next [1/1] 1.72ns
+.preheader.i:2  %indvar_flatten_next = add i7 %indvar_flatten, 1
 
 ST_4: stg_67 [1/1] 0.00ns
-.preheader.i:3  br i1 %exitcond_flatten, label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit", label %.preheader
+.preheader.i:3  br i1 %exitcond_flatten, label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit", label %.preheader
 
 
  <State 5>: 4.38ns
@@ -570,7 +570,7 @@ ST_22: stg_101 [1/1] 0.00ns
 .preheader:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @L_svd_calc_off_c_str)
 
 ST_22: empty_15 [1/1] 0.00ns
-.preheader:1  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 306544, i64 306544, i64 306544)
+.preheader:1  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 112, i64 112, i64 112)
 
 ST_22: stg_103 [1/1] 0.00ns
 .preheader:2  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1809) nounwind
@@ -596,18 +596,18 @@ ST_23: stg_109 [1/2] 0.00ns
 :0  call fastcc void @dut_update_off_diag_r(float* %strm_in_V, float* %strm_out_V)
 
 ST_23: stg_110 [1/1] 0.00ns
-:1  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 ST_23: stg_111 [1/2] 0.00ns
 :0  call fastcc void @dut_calc_svd(float* %strm_in_V, float* %strm_out_V)
 
 ST_23: stg_112 [1/1] 0.00ns
-:1  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 
  <State 24>: 0.00ns
 ST_24: stg_113 [1/1] 0.00ns
-update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit:0  ret void
+update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit:0  ret void
 
 
 
@@ -1160,8 +1160,8 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 
 <comp id="109" class="1005" name="indvar_flatten_reg_109">
 <pin_list>
-<pin id="110" dir="0" index="0" bw="19" slack="1"/>
-<pin id="111" dir="1" index="1" bw="19" slack="1"/>
+<pin id="110" dir="0" index="0" bw="7" slack="1"/>
+<pin id="111" dir="1" index="1" bw="7" slack="1"/>
 </pin_list>
 <bind>
 <opset="indvar_flatten (phireg) "/>
@@ -1170,11 +1170,11 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 
 <comp id="113" class="1004" name="indvar_flatten_phi_fu_113">
 <pin_list>
-<pin id="114" dir="0" index="0" bw="19" slack="0"/>
+<pin id="114" dir="0" index="0" bw="7" slack="0"/>
 <pin id="115" dir="0" index="1" bw="0" slack="2147483647"/>
 <pin id="116" dir="0" index="2" bw="1" slack="1"/>
 <pin id="117" dir="0" index="3" bw="0" slack="2147483647"/>
-<pin id="118" dir="1" index="4" bw="19" slack="0"/>
+<pin id="118" dir="1" index="4" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
@@ -1548,8 +1548,8 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 
 <comp id="302" class="1004" name="exitcond_flatten_fu_302">
 <pin_list>
-<pin id="303" dir="0" index="0" bw="19" slack="0"/>
-<pin id="304" dir="0" index="1" bw="19" slack="0"/>
+<pin id="303" dir="0" index="0" bw="7" slack="0"/>
+<pin id="304" dir="0" index="1" bw="7" slack="0"/>
 <pin id="305" dir="1" index="2" bw="1" slack="1"/>
 </pin_list>
 <bind>
@@ -1560,9 +1560,9 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 
 <comp id="308" class="1004" name="indvar_flatten_next_fu_308">
 <pin_list>
-<pin id="309" dir="0" index="0" bw="19" slack="0"/>
+<pin id="309" dir="0" index="0" bw="7" slack="0"/>
 <pin id="310" dir="0" index="1" bw="1" slack="0"/>
-<pin id="311" dir="1" index="2" bw="19" slack="0"/>
+<pin id="311" dir="1" index="2" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -1632,8 +1632,8 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 
 <comp id="343" class="1005" name="indvar_flatten_next_reg_343">
 <pin_list>
-<pin id="344" dir="0" index="0" bw="19" slack="0"/>
-<pin id="345" dir="1" index="1" bw="19" slack="0"/>
+<pin id="344" dir="0" index="0" bw="7" slack="0"/>
+<pin id="345" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opset="indvar_flatten_next "/>
@@ -2012,10 +2012,10 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 | Operation|          Functional Unit         |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
-|          |      grp_dut_calc_svd_fu_120     |    0    |    49   |  34.266 |   6527  |   8711  |
-|   call   | grp_dut_update_off_diag_r_fu_128 |    0    |    5    |  7.756  |   1091  |   897   |
-|          |      grp_dut_backproj_fu_136     |    2    |    5    |  6.284  |   672   |   980   |
-|          |       grp_dut_matmul_fu_144      |    1    |    5    |  4.713  |   657   |   923   |
+|          |      grp_dut_calc_svd_fu_120     |    0    |    49   |  34.266 |   6517  |   8705  |
+|   call   | grp_dut_update_off_diag_r_fu_128 |    0    |    5    |  7.756  |   1067  |   881   |
+|          |      grp_dut_backproj_fu_136     |    0    |    5    |  6.284  |   693   |   947   |
+|          |       grp_dut_matmul_fu_144      |    1    |    5    |  4.713  |   611   |   879   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |   fadd   |            grp_fu_152            |    0    |    2    |    0    |   205   |   390   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
@@ -2033,9 +2033,9 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 |          |        p_Val2_8_i_i_fu_289       |    0    |    0    |    0    |    0    |    32   |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |    add   |         sh_assign_fu_195         |    0    |    0    |    0    |    0    |    8    |
-|          |    indvar_flatten_next_fu_308    |    0    |    0    |    0    |    0    |    19   |
+|          |    indvar_flatten_next_fu_308    |    0    |    0    |    0    |    0    |    7    |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
-|   icmp   |      exitcond_flatten_fu_302     |    0    |    0    |    0    |    0    |    7    |
+|   icmp   |      exitcond_flatten_fu_302     |    0    |    0    |    0    |    0    |    3    |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |   read   |          grp_read_fu_96          |    0    |    0    |    0    |    0    |    0    |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
@@ -2061,7 +2061,7 @@ stg_113               (ret              ) [ 0000000000000000000000000]
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 |bitconcatenate|         p_Result_1_fu_227        |    0    |    0    |    0    |    0    |    0    |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
-|   Total  |                                  |    3    |    69   |  53.019 |   9295  |  12520  |
+|   Total  |                                  |    1    |    69   |  53.019 |   9236  |  12405  |
 |----------|----------------------------------|---------|---------|---------|---------|---------|
 
 Memories:
@@ -2072,8 +2072,8 @@ N/A
 |                           |   FF   |
 +---------------------------+--------+
 |  exitcond_flatten_reg_339 |    1   |
-|indvar_flatten_next_reg_343|   19   |
-|   indvar_flatten_reg_109  |   19   |
+|indvar_flatten_next_reg_343|    7   |
+|   indvar_flatten_reg_109  |    7   |
 |       isNeg_reg_324       |    1   |
 |      loc_V_1_reg_319      |   23   |
 |     p_Result_s_reg_314    |    1   |
@@ -2091,7 +2091,7 @@ N/A
 |     tmp_i10_i_reg_388     |   32   |
 |     tmp_i_i_16_reg_378    |   32   |
 +---------------------------+--------+
-|           Total           |   457  |
+|           Total           |   433  |
 +---------------------------+--------+
 
 * Multiplexer (MUX) list: 
@@ -2112,10 +2112,10 @@ N/A
 +-----------+--------+--------+--------+--------+--------+
 |           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+--------+
-|  Function |    3   |   69   |   53   |  9295  |  12520 |
+|  Function |    1   |   69   |   53   |  9236  |  12405 |
 |   Memory  |    -   |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |    -   |    6   |    -   |   128  |
-|  Register |    -   |    -   |    -   |   457  |    -   |
+|  Register |    -   |    -   |    -   |   433  |    -   |
 +-----------+--------+--------+--------+--------+--------+
-|   Total   |    3   |   69   |   59   |  9752  |  12648 |
+|   Total   |    1   |   69   |   59   |  9669  |  12533 |
 +-----------+--------+--------+--------+--------+--------+

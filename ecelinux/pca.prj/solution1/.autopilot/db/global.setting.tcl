@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
 set SourceFiles {sc {} c {../../dut.cpp ../../pca.cpp}}
 set SourceFlags {sc {} c {{ } { }}}
-set DirectiveFile {/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/solution1.directive}
+set DirectiveFile {/home/kh548/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/solution1.directive}
 set TBFiles {verilog {../../data ../../pca_test.cpp} bc {../../data ../../pca_test.cpp} sc {../../data ../../pca_test.cpp} vhdl {../../data ../../pca_test.cpp} c {} cas {../../data ../../pca_test.cpp}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -84,7 +84,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -126,7 +126,7 @@
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -195,7 +195,7 @@
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -266,7 +266,7 @@
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -338,7 +338,7 @@
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -400,14 +400,14 @@
               <id>13</id>
               <name>p_Result_1</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>364</lineNumber>
               <contextFuncName>mantissa</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -471,14 +471,14 @@
               <id>14</id>
               <name>tmp_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>368</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -533,14 +533,14 @@
               <id>15</id>
               <name>tmp_i_i_i_cast1</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>338</lineNumber>
               <contextFuncName>expv</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -602,14 +602,14 @@
               <id>16</id>
               <name>sh_assign</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>338</lineNumber>
               <contextFuncName>expv</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -672,14 +672,14 @@
               <id>17</id>
               <name>isNeg</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -736,14 +736,14 @@
               <id>18</id>
               <name>tmp_22_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -799,14 +799,14 @@
               <id>19</id>
               <name>tmp_22_i_i_cast</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -861,14 +861,14 @@
               <id>20</id>
               <name>sh_assign_1</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -925,14 +925,14 @@
               <id>21</id>
               <name>sh_assign_1_cast</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -987,14 +987,14 @@
               <id>22</id>
               <name>sh_assign_1_cast_cast</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1049,14 +1049,14 @@
               <id>23</id>
               <name>tmp_23_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1111,14 +1111,14 @@
               <id>24</id>
               <name>tmp_24_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1174,14 +1174,14 @@
               <id>25</id>
               <name>tmp_26_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1237,14 +1237,14 @@
               <id>26</id>
               <name>tmp</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>374</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1301,14 +1301,14 @@
               <id>27</id>
               <name>tmp_s</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>374</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1363,14 +1363,14 @@
               <id>28</id>
               <name>tmp_8</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>374</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1428,14 +1428,14 @@
               <id>29</id>
               <name>p_Val2_3</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1492,14 +1492,14 @@
               <id>30</id>
               <name>p_Val2_8_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>383</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1555,14 +1555,14 @@
               <id>31</id>
               <name>p_Val2_5</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>383</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1626,7 +1626,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1678,7 +1678,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1722,7 +1722,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1763,7 +1763,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1807,7 +1807,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1852,7 +1852,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>19</bitwidth>
+            <bitwidth>7</bitwidth>
           </Value>
           <oprand_edges>
             <count>4</count>
@@ -1910,7 +1910,7 @@
               <rtlName>indvar_flatten_next_fu_308_p2</rtlName>
               <coreName/>
             </Obj>
-            <bitwidth>19</bitwidth>
+            <bitwidth>7</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -1958,19 +1958,19 @@
               <fileName>./svd.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>441</lineNumber>
-              <contextFuncName>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</contextFuncName>
+              <contextFuncName>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>441</second>
                     </item>
@@ -2008,19 +2008,19 @@
               <fileName>./svd.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>442</lineNumber>
-              <contextFuncName>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</contextFuncName>
+              <contextFuncName>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>442</second>
                     </item>
@@ -2059,19 +2059,19 @@
               <fileName>./svd.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>443</lineNumber>
-              <contextFuncName>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</contextFuncName>
+              <contextFuncName>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>443</second>
                     </item>
@@ -2110,19 +2110,19 @@
               <fileName>./svd.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>444</lineNumber>
-              <contextFuncName>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</contextFuncName>
+              <contextFuncName>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>444</second>
                     </item>
@@ -2161,19 +2161,19 @@
               <fileName>./svd.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>446</lineNumber>
-              <contextFuncName>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</contextFuncName>
+              <contextFuncName>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>446</second>
                     </item>
@@ -2212,19 +2212,19 @@
               <fileName>./svd.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>447</lineNumber>
-              <contextFuncName>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</contextFuncName>
+              <contextFuncName>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>447</second>
                     </item>
@@ -2268,14 +2268,14 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>3</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>450</second>
                     </item>
@@ -2324,14 +2324,14 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>3</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>450</second>
                     </item>
@@ -2380,14 +2380,14 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>3</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>450</second>
                     </item>
@@ -2436,14 +2436,14 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>3</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>451</second>
                     </item>
@@ -2492,14 +2492,14 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>3</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>451</second>
                     </item>
@@ -2548,14 +2548,14 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>3</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>451</second>
                     </item>
@@ -2599,19 +2599,19 @@
               <fileName>./svd.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>454</lineNumber>
-              <contextFuncName>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</contextFuncName>
+              <contextFuncName>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>454</second>
                     </item>
@@ -2649,19 +2649,19 @@
               <fileName>./svd.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>455</lineNumber>
-              <contextFuncName>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</contextFuncName>
+              <contextFuncName>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>455</second>
                     </item>
@@ -2700,19 +2700,19 @@
               <fileName>./svd.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>439</lineNumber>
-              <contextFuncName>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</contextFuncName>
+              <contextFuncName>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
                         <first>./svd.h</first>
-                        <second>update_off_diag_c&amp;lt;784, 784, MY_CONFIG_SVD&amp;gt;</second>
+                        <second>update_off_diag_c&amp;lt;16, 16, MY_CONFIG_SVD&amp;gt;</second>
                       </first>
                       <second>439</second>
                     </item>
@@ -2753,7 +2753,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2797,7 +2797,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2838,7 +2838,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2882,7 +2882,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2923,7 +2923,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2964,7 +2964,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/kh548/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -3380,7 +3380,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>19</bitwidth>
+            <bitwidth>7</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>0</content>
@@ -3403,10 +3403,10 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>19</bitwidth>
+            <bitwidth>7</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>306544</content>
+          <content>112</content>
         </item>
         <item class_id_reference="16" object_id="_75">
           <Value>
@@ -3426,7 +3426,7 @@
               <rtlName/>
               <coreName/>
             </Obj>
-            <bitwidth>19</bitwidth>
+            <bitwidth>7</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>1</content>
@@ -3714,7 +3714,7 @@
           <Obj>
             <type>3</type>
             <id>76</id>
-            <name>update_off_diag_c&lt;784, 784, MY_CONFIG_SVD&gt;.exit</name>
+            <name>update_off_diag_c&lt;16, 16, MY_CONFIG_SVD&gt;.exit</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -4577,7 +4577,7 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>307328013</mMinLatency>
+        <mMinLatency>128012</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -4604,7 +4604,7 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>307328012</mMinLatency>
+        <mMinLatency>128011</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -4625,9 +4625,9 @@
         </basic_blocks>
         <mII>6</mII>
         <mDepth>19</mDepth>
-        <mMinTripCount>306544</mMinTripCount>
-        <mMaxTripCount>306544</mMaxTripCount>
-        <mMinLatency>1839276</mMinLatency>
+        <mMinTripCount>112</mMinTripCount>
+        <mMaxTripCount>112</mMaxTripCount>
+        <mMinLatency>684</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -5860,7 +5860,7 @@
             <item_version>0</item_version>
             <item>
               <first>BRAM</first>
-              <second>2</second>
+              <second>0</second>
             </item>
             <item>
               <first>DSP48E</first>
@@ -5868,11 +5868,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>609</second>
+              <second>636</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1066</second>
+              <second>1002</second>
             </item>
           </second>
         </item>
@@ -5887,11 +5887,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>6621</second>
+              <second>6611</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>9360</second>
+              <second>9344</second>
             </item>
           </second>
         </item>
@@ -5910,11 +5910,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>590</second>
+              <second>544</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1023</second>
+              <second>937</second>
             </item>
           </second>
         </item>
@@ -5929,11 +5929,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>1143</second>
+              <second>1119</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>987</second>
+              <second>947</second>
             </item>
           </second>
         </item>
@@ -6017,11 +6017,11 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>19</second>
+              <second>7</second>
             </item>
             <item>
               <first>(1P1)</first>
-              <second>19</second>
+              <second>6</second>
             </item>
             <item>
               <first>FF</first>
@@ -6029,7 +6029,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>7</second>
+              <second>3</second>
             </item>
           </second>
         </item>
@@ -6040,7 +6040,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>19</second>
+              <second>7</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -6052,7 +6052,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>19</second>
+              <second>7</second>
             </item>
           </second>
         </item>
@@ -6413,15 +6413,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>19</second>
+              <second>7</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>38</second>
+              <second>14</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>19</second>
+              <second>7</second>
             </item>
           </second>
         </item>
@@ -6436,15 +6436,15 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>19</second>
+              <second>7</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>38</second>
+              <second>14</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>19</second>
+              <second>7</second>
             </item>
           </second>
         </item>
@@ -6764,7 +6764,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>19</second>
+              <second>7</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -6772,7 +6772,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>19</second>
+              <second>7</second>
             </item>
           </second>
         </item>
@@ -6783,7 +6783,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>19</second>
+              <second>7</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -6791,7 +6791,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>19</second>
+              <second>7</second>
             </item>
           </second>
         </item>

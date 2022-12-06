@@ -22,8 +22,8 @@ using namespace sc_dt;
 struct dut_backproj_A_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 32;
-  static const unsigned AddressRange = 784;
-  static const unsigned AddressWidth = 10;
+  static const unsigned AddressRange = 16;
+  static const unsigned AddressWidth = 4;
 
 //latency = 1
 //input_reg = 1
@@ -79,8 +79,8 @@ SC_MODULE(dut_backproj_A) {
 
 
 static const unsigned DataWidth = 32;
-static const unsigned AddressRange = 784;
-static const unsigned AddressWidth = 10;
+static const unsigned AddressRange = 16;
+static const unsigned AddressWidth = 4;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;

@@ -777,7 +777,7 @@ _ifconv:29  switch i32 %p_Val2_5, label %._crit_edge [
 
 <node id="38" bw="0" op_0_bw="0">
 <![CDATA[
-:1  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -797,7 +797,7 @@ _ifconv:29  switch i32 %p_Val2_5, label %._crit_edge [
 
 <node id="73" bw="0" op_0_bw="0">
 <![CDATA[
-._crit_edge:0  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+._crit_edge:0  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -813,9 +813,9 @@ _ifconv:29  switch i32 %p_Val2_5, label %._crit_edge [
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="40" bw="19" op_0_bw="19" op_1_bw="0">
+<node id="40" bw="7" op_0_bw="7" op_1_bw="0">
 <![CDATA[
-.preheader.i:0  %indvar_flatten = phi i19 [ %indvar_flatten_next, %.preheader ], [ 0, %_ifconv ]
+.preheader.i:0  %indvar_flatten = phi i7 [ %indvar_flatten_next, %.preheader ], [ 0, %_ifconv ]
 
 ]]></node>
 <StgValue><ssdm name="indvar_flatten"/></StgValue>
@@ -828,9 +828,9 @@ _ifconv:29  switch i32 %p_Val2_5, label %._crit_edge [
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="41" bw="1" op_0_bw="19" op_1_bw="19">
+<node id="41" bw="1" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.preheader.i:1  %exitcond_flatten = icmp eq i19 %indvar_flatten, -217744
+.preheader.i:1  %exitcond_flatten = icmp eq i7 %indvar_flatten, -16
 
 ]]></node>
 <StgValue><ssdm name="exitcond_flatten"/></StgValue>
@@ -843,9 +843,9 @@ _ifconv:29  switch i32 %p_Val2_5, label %._crit_edge [
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="42" bw="19" op_0_bw="19" op_1_bw="19">
+<node id="42" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.preheader.i:2  %indvar_flatten_next = add i19 %indvar_flatten, 1
+.preheader.i:2  %indvar_flatten_next = add i7 %indvar_flatten, 1
 
 ]]></node>
 <StgValue><ssdm name="indvar_flatten_next"/></StgValue>
@@ -860,7 +860,7 @@ _ifconv:29  switch i32 %p_Val2_5, label %._crit_edge [
 
 <node id="43" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-.preheader.i:3  br i1 %exitcond_flatten, label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit", label %.preheader
+.preheader.i:3  br i1 %exitcond_flatten, label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit", label %.preheader
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1474,7 +1474,7 @@ _ifconv:29  switch i32 %p_Val2_5, label %._crit_edge [
 
 <node id="46" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader:1  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 306544, i64 306544, i64 306544)
+.preheader:1  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 112, i64 112, i64 112)
 
 ]]></node>
 <StgValue><ssdm name="empty_15"/></StgValue>
@@ -1605,7 +1605,7 @@ _ifconv:29  switch i32 %p_Val2_5, label %._crit_edge [
 
 <node id="68" bw="0" op_0_bw="0">
 <![CDATA[
-:1  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1637,7 +1637,7 @@ _ifconv:29  switch i32 %p_Val2_5, label %._crit_edge [
 
 <node id="71" bw="0" op_0_bw="0">
 <![CDATA[
-:1  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1655,7 +1655,7 @@ _ifconv:29  switch i32 %p_Val2_5, label %._crit_edge [
 
 <node id="75" bw="0">
 <![CDATA[
-update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit:0  ret void
+update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit:0  ret void
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

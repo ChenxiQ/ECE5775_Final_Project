@@ -136,8 +136,8 @@ set RtlHierarchyInfo {[
 	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fmul_32ns_32ns_32_4_max_dsp_U36", "Parent" : "0", "Child" : []}]}
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "3", "Max" : "307328013"}
-	, {"Name" : "Interval", "Min" : "4", "Max" : "307328014"}
+	{"Name" : "Latency", "Min" : "3", "Max" : "128012"}
+	, {"Name" : "Interval", "Min" : "4", "Max" : "128013"}
 ]}
 
 set Spec2ImplPortList { 
@@ -150,8 +150,8 @@ set busDeadlockParameterList {
 
 # RTL port scheduling information:
 set fifoSchedulingInfoList { 
-	strm_in_V { fifo_read 1839269 has_conditional }
-	strm_out_V { fifo_write 613092 has_conditional }
+	strm_in_V { fifo_read 677 has_conditional }
+	strm_out_V { fifo_write 228 has_conditional }
 }
 
 # RTL bus port read request latency information:

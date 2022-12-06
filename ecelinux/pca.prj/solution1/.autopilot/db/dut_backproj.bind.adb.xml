@@ -141,7 +141,7 @@
 
 <node id="5" bw="32" op_0_bw="64">
 <![CDATA[
-:2  %A = alloca [784 x float], align 16
+:2  %A = alloca [16 x float], align 16
 
 ]]></node>
 <StgValue><ssdm name="A"/><MemPortTyVec>2 3 </MemPortTyVec>
@@ -173,9 +173,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="8" bw="20" op_0_bw="20" op_1_bw="0">
+<node id="8" bw="14" op_0_bw="14" op_1_bw="0">
 <![CDATA[
-:0  %indvar_flatten2 = phi i20 [ 0, %0 ], [ %indvar_flatten_next2, %._crit_edge8 ]
+:0  %indvar_flatten2 = phi i14 [ 0, %0 ], [ %indvar_flatten_next2, %._crit_edge8 ]
 
 ]]></node>
 <StgValue><ssdm name="indvar_flatten2"/></StgValue>
@@ -188,9 +188,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="9" bw="17" op_0_bw="17" op_1_bw="0">
+<node id="9" bw="12" op_0_bw="12" op_1_bw="0">
 <![CDATA[
-:1  %indvar_flatten = phi i17 [ 0, %0 ], [ %indvar_flatten_next, %._crit_edge8 ]
+:1  %indvar_flatten = phi i12 [ 0, %0 ], [ %indvar_flatten_next, %._crit_edge8 ]
 
 ]]></node>
 <StgValue><ssdm name="indvar_flatten"/></StgValue>
@@ -233,9 +233,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="12" bw="10" op_0_bw="10" op_1_bw="0">
+<node id="12" bw="5" op_0_bw="5" op_1_bw="0">
 <![CDATA[
-:4  %k = phi i10 [ 0, %0 ], [ %k_2, %._crit_edge8 ]
+:4  %k = phi i5 [ 0, %0 ], [ %k_2, %._crit_edge8 ]
 
 ]]></node>
 <StgValue><ssdm name="k"/></StgValue>
@@ -248,9 +248,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="13" bw="1" op_0_bw="20" op_1_bw="20">
+<node id="13" bw="1" op_0_bw="14" op_1_bw="14">
 <![CDATA[
-:5  %exitcond_flatten2 = icmp eq i20 %indvar_flatten2, -264576
+:5  %exitcond_flatten2 = icmp eq i14 %indvar_flatten2, -384
 
 ]]></node>
 <StgValue><ssdm name="exitcond_flatten2"/></StgValue>
@@ -263,9 +263,9 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<node id="14" bw="20" op_0_bw="20" op_1_bw="20">
+<node id="14" bw="14" op_0_bw="14" op_1_bw="14">
 <![CDATA[
-:6  %indvar_flatten_next2 = add i20 %indvar_flatten2, 1
+:6  %indvar_flatten_next2 = add i14 %indvar_flatten2, 1
 
 ]]></node>
 <StgValue><ssdm name="indvar_flatten_next2"/></StgValue>
@@ -294,9 +294,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="19" bw="1" op_0_bw="17" op_1_bw="17">
+<node id="19" bw="1" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-.reset6:2  %exitcond_flatten = icmp eq i17 %indvar_flatten, -52672
+.reset6:2  %exitcond_flatten = icmp eq i12 %indvar_flatten, 1600
 
 ]]></node>
 <StgValue><ssdm name="exitcond_flatten"/></StgValue>
@@ -374,9 +374,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="24" bw="1" op_0_bw="10" op_1_bw="10">
+<node id="24" bw="1" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-.reset6:7  %exitcond = icmp eq i10 %k, -240
+.reset6:7  %exitcond = icmp eq i5 %k, -16
 
 ]]></node>
 <StgValue><ssdm name="exitcond"/></StgValue>
@@ -438,9 +438,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="29" bw="10" op_0_bw="1" op_1_bw="10" op_2_bw="10">
+<node id="29" bw="5" op_0_bw="1" op_1_bw="5" op_2_bw="5">
 <![CDATA[
-.reset6:12  %k_mid2 = select i1 %tmp_17, i10 0, i10 %k
+.reset6:12  %k_mid2 = select i1 %tmp_17, i5 0, i5 %k
 
 ]]></node>
 <StgValue><ssdm name="k_mid2"/></StgValue>
@@ -518,9 +518,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="60" bw="17" op_0_bw="17" op_1_bw="17">
+<node id="60" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-._crit_edge8:2  %indvar_flatten_op = add i17 %indvar_flatten, 1
+._crit_edge8:2  %indvar_flatten_op = add i12 %indvar_flatten, 1
 
 ]]></node>
 <StgValue><ssdm name="indvar_flatten_op"/></StgValue>
@@ -534,9 +534,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="61" bw="17" op_0_bw="1" op_1_bw="17" op_2_bw="17">
+<node id="61" bw="12" op_0_bw="1" op_1_bw="12" op_2_bw="12">
 <![CDATA[
-._crit_edge8:3  %indvar_flatten_next = select i1 %exitcond_flatten, i17 1, i17 %indvar_flatten_op
+._crit_edge8:3  %indvar_flatten_next = select i1 %exitcond_flatten, i12 1, i12 %indvar_flatten_op
 
 ]]></node>
 <StgValue><ssdm name="indvar_flatten_next"/></StgValue>
@@ -571,9 +571,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="39" bw="64" op_0_bw="10">
+<node id="39" bw="64" op_0_bw="5">
 <![CDATA[
-:1  %tmp_s = zext i10 %k_mid2 to i64
+:1  %tmp_s = zext i5 %k_mid2 to i64
 
 ]]></node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
@@ -588,9 +588,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="40" bw="10" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<node id="40" bw="4" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:2  %A_addr = getelementptr inbounds [784 x float]* %A, i64 0, i64 %tmp_s
+:2  %A_addr = getelementptr inbounds [16 x float]* %A, i64 0, i64 %tmp_s
 
 ]]></node>
 <StgValue><ssdm name="A_addr"/></StgValue>
@@ -605,7 +605,7 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="41" bw="0" op_0_bw="32" op_1_bw="10">
+<node id="41" bw="0" op_0_bw="32" op_1_bw="4">
 <![CDATA[
 :3  store float %tmp, float* %A_addr, align 4
 
@@ -624,9 +624,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="44" bw="1" op_0_bw="10" op_1_bw="10">
+<node id="44" bw="1" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-._crit_edge:0  %tmp_1 = icmp eq i10 %k_mid2, 0
+._crit_edge:0  %tmp_1 = icmp eq i5 %k_mid2, 0
 
 ]]></node>
 <StgValue><ssdm name="tmp_1"/></StgValue>
@@ -640,9 +640,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="46" bw="64" op_0_bw="10">
+<node id="46" bw="64" op_0_bw="5">
 <![CDATA[
-._crit_edge:2  %tmp_2 = zext i10 %k_mid2 to i64
+._crit_edge:2  %tmp_2 = zext i5 %k_mid2 to i64
 
 ]]></node>
 <StgValue><ssdm name="tmp_2"/></StgValue>
@@ -656,9 +656,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="47" bw="10" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<node id="47" bw="4" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-._crit_edge:3  %A_addr_3 = getelementptr inbounds [784 x float]* %A, i64 0, i64 %tmp_2
+._crit_edge:3  %A_addr_3 = getelementptr inbounds [16 x float]* %A, i64 0, i64 %tmp_2
 
 ]]></node>
 <StgValue><ssdm name="A_addr_3"/></StgValue>
@@ -672,7 +672,7 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="48" bw="32" op_0_bw="10">
+<node id="48" bw="32" op_0_bw="4">
 <![CDATA[
 ._crit_edge:4  %A_load = load float* %A_addr_3, align 4
 
@@ -704,9 +704,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="52" bw="1" op_0_bw="10" op_1_bw="10">
+<node id="52" bw="1" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-._crit_edge:8  %tmp_4 = icmp eq i10 %k_mid2, -241
+._crit_edge:8  %tmp_4 = icmp eq i5 %k_mid2, 15
 
 ]]></node>
 <StgValue><ssdm name="tmp_4"/></StgValue>
@@ -736,9 +736,9 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="59" bw="10" op_0_bw="10" op_1_bw="10">
+<node id="59" bw="5" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-._crit_edge8:1  %k_2 = add i10 %k_mid2, 1
+._crit_edge8:1  %k_2 = add i5 %k_mid2, 1
 
 ]]></node>
 <StgValue><ssdm name="k_2"/></StgValue>
@@ -755,7 +755,7 @@
 </and_exp></or_exp>
 </condition>
 
-<node id="48" bw="32" op_0_bw="10">
+<node id="48" bw="32" op_0_bw="4">
 <![CDATA[
 ._crit_edge:4  %A_load = load float* %A_addr_3, align 4
 
@@ -976,7 +976,7 @@
 
 <node id="18" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.reset6:1  %empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784000, i64 784000, i64 784000)
+.reset6:1  %empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16000, i64 16000, i64 16000)
 
 ]]></node>
 <StgValue><ssdm name="empty_24"/></StgValue>

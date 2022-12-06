@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Dec  6 01:08:49 2022
+# Process ID: 18421
+# Current directory: /home/kh548/ece5775/ECE5775_Final_Project/ecelinux
+# Command line: vivado -mode batch -source xillydemo-vivado.tcl
+# Log file: /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/vivado.log
+# Journal file: /home/kh548/ece5775/ECE5775_Final_Project/ecelinux/vivado.jou
+#-----------------------------------------------------------
+source xillydemo-vivado.tcl
+couldn't read file "xillydemo-vivado.tcl": no such file or directory
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  6 01:09:00 2022...

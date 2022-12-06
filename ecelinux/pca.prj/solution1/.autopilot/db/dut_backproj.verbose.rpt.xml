@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_backproj'" level="0">
-<item name = "Date">Mon Dec  5 02:26:28 2022
+<item name = "Date">Tue Dec  6 01:13:00 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.73, 1.25</column>
+<column name="ap_clk">10.00, 8.63, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">3136010, 3136010, 3136010, 3136010, none</column>
+<column name="">64010, 64010, 64010, 64010, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- LOOP_ROW_LOOP_COL_LOOP_DOT_PROD">3136008, 3136008, 13, 4, 1, 784000, yes</column>
+<column name="- LOOP_ROW_LOOP_COL_LOOP_DOT_PROD">64008, 64008, 13, 4, 1, 16000, yes</column>
 </table>
 </item>
 </section>
@@ -48,14 +48,14 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 167</column>
+<column name="Expression">-, -, 0, 133</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, 5, 348, 711</column>
-<column name="Memory">2, -, 0, 0</column>
-<column name="Multiplexer">-, -, -, 186</column>
-<column name="Register">-, -, 261, 2</column>
+<column name="Memory">0, -, 64, 8</column>
+<column name="Multiplexer">-, -, -, 148</column>
+<column name="Register">-, -, 224, 2</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
-<specialColumn name="Utilization (%)">~0, 2, ~0, 2</specialColumn>
+<specialColumn name="Utilization (%)">0, 2, ~0, 1</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -72,7 +72,7 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="A_U">dut_backproj_A, 2, 0, 0, 784, 32, 1, 25088</column>
+<column name="A_U">dut_backproj_A, 0, 64, 8, 16, 32, 1, 512</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -81,45 +81,45 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="indvar_flatten_next2_fu_183_p2">+, 0, 0, 20, 20, 1</column>
-<column name="indvar_flatten_op_fu_275_p2">+, 0, 0, 17, 17, 1</column>
+<column name="indvar_flatten_next2_fu_183_p2">+, 0, 0, 14, 14, 1</column>
+<column name="indvar_flatten_op_fu_275_p2">+, 0, 0, 12, 12, 1</column>
 <column name="j_2_fu_233_p2">+, 0, 0, 7, 7, 1</column>
-<column name="k_2_fu_307_p2">+, 0, 0, 10, 10, 1</column>
+<column name="k_2_fu_307_p2">+, 0, 0, 5, 5, 1</column>
 <column name="ap_sig_126">and, 0, 0, 1, 1, 1</column>
 <column name="ap_sig_205">and, 0, 0, 1, 1, 1</column>
 <column name="ap_sig_98">and, 0, 0, 1, 1, 1</column>
 <column name="exitcond_mid_fu_227_p2">and, 0, 0, 1, 1, 1</column>
-<column name="exitcond_flatten2_fu_177_p2">icmp, 0, 0, 7, 20, 20</column>
-<column name="exitcond_flatten_fu_189_p2">icmp, 0, 0, 6, 17, 17</column>
-<column name="exitcond_fu_221_p2">icmp, 0, 0, 4, 10, 9</column>
+<column name="exitcond_flatten2_fu_177_p2">icmp, 0, 0, 5, 14, 10</column>
+<column name="exitcond_flatten_fu_189_p2">icmp, 0, 0, 5, 12, 11</column>
+<column name="exitcond_fu_221_p2">icmp, 0, 0, 3, 5, 6</column>
 <column name="tmp31_fu_203_p2">icmp, 0, 0, 3, 7, 1</column>
-<column name="tmp_1_fu_293_p2">icmp, 0, 0, 4, 10, 1</column>
-<column name="tmp_4_fu_302_p2">icmp, 0, 0, 4, 10, 9</column>
+<column name="tmp_1_fu_293_p2">icmp, 0, 0, 2, 5, 1</column>
+<column name="tmp_4_fu_302_p2">icmp, 0, 0, 2, 5, 4</column>
 <column name="tmp_mid1_fu_253_p2">icmp, 0, 0, 3, 7, 1</column>
 <column name="tmp_17_fu_239_p2">or, 0, 0, 1, 1, 1</column>
 <column name="tmp_mid_fu_209_p2">or, 0, 0, 1, 1, 1</column>
 <column name="grp_fu_168_p0">select, 0, 0, 32, 1, 1</column>
-<column name="indvar_flatten_next_fu_281_p3">select, 0, 0, 17, 1, 1</column>
+<column name="indvar_flatten_next_fu_281_p3">select, 0, 0, 12, 1, 1</column>
 <column name="j_mid2_fu_267_p3">select, 0, 0, 7, 1, 7</column>
 <column name="j_mid_fu_195_p3">select, 0, 0, 7, 1, 1</column>
-<column name="k_mid2_fu_245_p3">select, 0, 0, 10, 1, 1</column>
+<column name="k_mid2_fu_245_p3">select, 0, 0, 5, 1, 1</column>
 <column name="tmp_mid2_fu_259_p3">select, 0, 0, 1, 1, 1</column>
 <column name="not_exitcond_flatten_fu_215_p2">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="A_address0">10, 3, 10, 30</column>
+<column name="A_address0">4, 3, 4, 12</column>
 <column name="ap_NS_fsm">1, 7, 1, 7</column>
 <column name="ap_reg_ppiten_pp0_it3">1, 2, 1, 2</column>
-<column name="indvar_flatten2_phi_fu_116_p4">20, 2, 20, 40</column>
-<column name="indvar_flatten2_reg_112">20, 2, 20, 40</column>
-<column name="indvar_flatten_phi_fu_127_p4">17, 2, 17, 34</column>
-<column name="indvar_flatten_reg_123">17, 2, 17, 34</column>
+<column name="indvar_flatten2_phi_fu_116_p4">14, 2, 14, 28</column>
+<column name="indvar_flatten2_reg_112">14, 2, 14, 28</column>
+<column name="indvar_flatten_phi_fu_127_p4">12, 2, 12, 24</column>
+<column name="indvar_flatten_reg_123">12, 2, 12, 24</column>
 <column name="j_phi_fu_138_p4">7, 2, 7, 14</column>
 <column name="j_reg_134">7, 2, 7, 14</column>
-<column name="k_phi_fu_161_p4">10, 2, 10, 20</column>
-<column name="k_reg_157">10, 2, 10, 20</column>
+<column name="k_phi_fu_161_p4">5, 2, 5, 10</column>
+<column name="k_reg_157">5, 2, 5, 10</column>
 <column name="p_03_2_phi_fu_149_p4">32, 2, 32, 64</column>
 <column name="p_03_2_reg_145">32, 2, 32, 64</column>
 <column name="strm_in_V_blk_n">1, 2, 1, 2</column>
@@ -135,15 +135,15 @@
 <column name="ap_reg_ppiten_pp0_it3">1, 0, 1, 0</column>
 <column name="ap_reg_ppstg_tmp_1_reg_352_pp0_iter1">1, 0, 1, 0</column>
 <column name="exitcond_flatten2_reg_320">1, 0, 1, 0</column>
-<column name="indvar_flatten2_reg_112">20, 0, 20, 0</column>
-<column name="indvar_flatten_next2_reg_324">20, 0, 20, 0</column>
-<column name="indvar_flatten_next_reg_347">17, 0, 17, 0</column>
-<column name="indvar_flatten_reg_123">17, 0, 17, 0</column>
+<column name="indvar_flatten2_reg_112">14, 0, 14, 0</column>
+<column name="indvar_flatten_next2_reg_324">14, 0, 14, 0</column>
+<column name="indvar_flatten_next_reg_347">12, 0, 12, 0</column>
+<column name="indvar_flatten_reg_123">12, 0, 12, 0</column>
 <column name="j_mid2_reg_342">7, 0, 7, 0</column>
 <column name="j_reg_134">7, 0, 7, 0</column>
-<column name="k_2_reg_371">10, 0, 10, 0</column>
-<column name="k_mid2_reg_329">10, 0, 10, 0</column>
-<column name="k_reg_157">10, 0, 10, 0</column>
+<column name="k_2_reg_371">5, 0, 5, 0</column>
+<column name="k_mid2_reg_329">5, 0, 5, 0</column>
+<column name="k_reg_157">5, 0, 5, 0</column>
 <column name="p_03_2_reg_145">32, 0, 32, 0</column>
 <column name="result_reg_391">32, 0, 32, 0</column>
 <column name="tmp_1_reg_352">1, 0, 1, 0</column>

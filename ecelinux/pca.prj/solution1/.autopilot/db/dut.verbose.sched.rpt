@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut'
 ================================================================
-* Date:           Mon Dec  5 02:26:28 2022
+* Date:           Tue Dec  6 01:13:00 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -25,24 +25,24 @@
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+-----------+-----+-----------+---------+
-    |     Latency     |     Interval    | Pipeline|
-    | min |    max    | min |    max    |   Type  |
-    +-----+-----------+-----+-----------+---------+
-    |    3|  307328013|    4|  307328014|   none  |
-    +-----+-----------+-----+-----------+---------+
+    +-----+--------+-----+--------+---------+
+    |    Latency   |   Interval   | Pipeline|
+    | min |   max  | min |   max  |   Type  |
+    +-----+--------+-----+--------+---------+
+    |    3|  128012|    4|  128013|   none  |
+    +-----+--------+-----+--------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
-        |                    |      Latency      | Iteration|  Initiation Interval  |  Trip  |          |
-        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
-        |- L_svd_calc_off_c  |  1839276|  1839276|        19|          6|          1|  306544|    yes   |
-        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                    |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- L_svd_calc_off_c  |  684|  684|        19|          6|          1|   112|    yes   |
+        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -254,24 +254,24 @@ ST_3: stg_61 [1/2] 0.00ns
 :0  call fastcc void @dut_matmul(float* %strm_in_V, float* %strm_out_V)
 
 ST_3: stg_62 [1/1] 0.00ns
-:1  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 ST_3: stg_63 [1/1] 0.00ns
-._crit_edge:0  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+._crit_edge:0  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 
- <State 4>: 2.33ns
+ <State 4>: 1.97ns
 ST_4: indvar_flatten [1/1] 0.00ns
-.preheader.i:0  %indvar_flatten = phi i19 [ %indvar_flatten_next, %.preheader ], [ 0, %_ifconv ]
+.preheader.i:0  %indvar_flatten = phi i7 [ %indvar_flatten_next, %.preheader ], [ 0, %_ifconv ]
 
-ST_4: exitcond_flatten [1/1] 2.33ns
-.preheader.i:1  %exitcond_flatten = icmp eq i19 %indvar_flatten, -217744
+ST_4: exitcond_flatten [1/1] 1.97ns
+.preheader.i:1  %exitcond_flatten = icmp eq i7 %indvar_flatten, -16
 
-ST_4: indvar_flatten_next [1/1] 2.08ns
-.preheader.i:2  %indvar_flatten_next = add i19 %indvar_flatten, 1
+ST_4: indvar_flatten_next [1/1] 1.72ns
+.preheader.i:2  %indvar_flatten_next = add i7 %indvar_flatten, 1
 
 ST_4: stg_67 [1/1] 0.00ns
-.preheader.i:3  br i1 %exitcond_flatten, label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit", label %.preheader
+.preheader.i:3  br i1 %exitcond_flatten, label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit", label %.preheader
 
 
  <State 5>: 4.38ns
@@ -412,7 +412,7 @@ ST_22: stg_101 [1/1] 0.00ns
 .preheader:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @L_svd_calc_off_c_str)
 
 ST_22: empty_15 [1/1] 0.00ns
-.preheader:1  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 306544, i64 306544, i64 306544)
+.preheader:1  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 112, i64 112, i64 112)
 
 ST_22: stg_103 [1/1] 0.00ns
 .preheader:2  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str1809) nounwind
@@ -438,18 +438,18 @@ ST_23: stg_109 [1/2] 0.00ns
 :0  call fastcc void @dut_update_off_diag_r(float* %strm_in_V, float* %strm_out_V)
 
 ST_23: stg_110 [1/1] 0.00ns
-:1  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 ST_23: stg_111 [1/2] 0.00ns
 :0  call fastcc void @dut_calc_svd(float* %strm_in_V, float* %strm_out_V)
 
 ST_23: stg_112 [1/1] 0.00ns
-:1  br label %"update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit"
+:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
 
 
  <State 24>: 0.00ns
 ST_24: stg_113 [1/1] 0.00ns
-update_off_diag_c<784, 784, MY_CONFIG_SVD>.exit:0  ret void
+update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit:0  ret void
 
 
 

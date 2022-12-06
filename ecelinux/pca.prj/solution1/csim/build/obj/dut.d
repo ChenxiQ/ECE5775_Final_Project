@@ -1,15 +1,16 @@
 obj/dut.o: ../../../../dut.cpp ../../../../pca.h ../../../../typedefs.h \
+ ../../../../svd.h ../../../../dut.h \
+ /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls_stream.h \
+ /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/utils/x_hls_matrix_utils.h \
+ /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/ap_fixed.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/ap_int.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/etc/ap_int_sim.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/etc/ap_private.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/etc/ap_fixed_sim.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/etc/ap_int_sim.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/ap_fixed.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/ap_int.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls_linear_algebra.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/hls_matrix_multiply.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/utils/x_hls_complex.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/utils/x_hls_defines.h \
+ /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/ap_int.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/utils/x_hls_traits.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls_half.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/floating_point_v7_0_bitacc_cmodel.h \
@@ -17,8 +18,6 @@ obj/dut.o: ../../../../dut.cpp ../../../../pca.h ../../../../typedefs.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/mpfr.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/utils/x_hls_utils.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/utils/x_hls_defines.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/utils/x_hls_matrix_utils.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/utils/x_hls_complex.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls_math.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/utils/x_hls_defines.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/utils/x_hls_utils.h \
@@ -41,16 +40,4 @@ obj/dut.o: ../../../../dut.cpp ../../../../pca.h ../../../../typedefs.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/utils/x_hls_defines.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/hls_hotbm_tables.h \
  /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/hls_sqrt.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/hls_cholesky.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/hls_qrf.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls_stream.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/hls_back_substitute.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/hls_qr_inverse.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/hls_qrf.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/hls_back_substitute.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/hls_matrix_multiply.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/hls_cholesky_inverse.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/hls_cholesky.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/hls_svd.h \
- /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/utils/x_hls_utils.h \
- ../../../../svd.h ../../../../dut.h
+ /opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/include/hls/linear_algebra/utils/x_hls_complex.h
