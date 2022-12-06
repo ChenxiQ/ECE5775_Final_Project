@@ -7,15 +7,15 @@
 #define PCA_H
 
 #include "typedefs.h"
-#include <fstream>
-#include <iostream>
-#include <iomanip>
-#include "hls_linear_algebra.h"
+// #include <fstream>
+// #include <iostream>
+// #include <iomanip>
+//#include "hls_linear_algebra.h"
 #include "svd.h"
 
 #define IMG_NUM 100
-#define IMG_H 28
-#define IMG_W 28
+#define IMG_H 4
+#define IMG_W 4
 #define K 10
 const int VEC_SIZ = IMG_H * IMG_W; 
 
@@ -61,17 +61,5 @@ struct MY_CONFIG_SVD : svd::svd_traits<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>{
  static const int ARCH = 0;
 };
 
-struct MY_CONFIG_MULT: hls::matrix_multiply_traits<hls::NoTranspose,
- hls::NoTranspose,
- K,
- VEC_SIZ,
- VEC_SIZ,
- IMG_NUM,
- fix32_t, 
- fix32_t>{
- static const int ARCH = 2;
- static const int INNER_II = 100;
- static const int UNROLL_FACTOR = 1;
-};
 
 #endif

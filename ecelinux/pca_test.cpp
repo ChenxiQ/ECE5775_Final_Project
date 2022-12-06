@@ -7,7 +7,7 @@
 #include <fstream>
 #include "pca.h"
 #include "timer.h"
-#include "hls_linear_algebra.h"
+//#include "hls_linear_algebra.h"
 #include "typedefs.h"
 
 using namespace std;
@@ -21,7 +21,7 @@ using namespace std;
 //------------------------------------------------------------------------
 
 void read_test_images(uint8_t test_images[IMG_NUM][VEC_SIZ]) {
-  std::ifstream infile("data/image.dat");
+  std::ifstream infile("data/image_ds.dat");
   if (infile.is_open()) {
     for (int index = 0; index < IMG_NUM; index++) {
       for (int pixel = 0; pixel < VEC_SIZ; pixel++) {
@@ -134,7 +134,7 @@ int main(){
   // read test images and labels
   read_test_images(test_images);
   read_test_labels(test_labels);
-  bit32_t test_image;
+  uint8_t test_image;
   float correct = 0.0;
   
   // Timer

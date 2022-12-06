@@ -2,14 +2,14 @@
 #define SVD_H
  
  #include "dut.h"
-#include "ap_fixed.h"
+//#include "ap_fixed.h"
 #include <complex>
 #include "hls/linear_algebra/utils/x_hls_matrix_utils.h"
-#include "hls/utils/x_hls_utils.h"
 #include "hls/linear_algebra/utils/x_hls_complex.h"
-#include <assert.h>
-#include <iostream>
-#include <iomanip>
+// #include "hls/utils/x_hls_utils.h"
+// #include <assert.h>
+// #include <iostream>
+// #include <iomanip>
 
 
 namespace svd {
@@ -458,184 +458,6 @@ namespace svd {
     }
   }
 
-// ===================================================================================================================
-// SVD_BASIC: Top level function taking a SVDTraits template parameter to defines internal types
-  template<
-  int RowsA,
-  int ColsA,
-  class SVDTraits,
-  typename InputType,
-  typename OutputType>
-  void svd_basic( const InputType A[RowsA][ColsA],
-                  OutputType S[RowsA][ColsA],
-                  OutputType U[RowsA][RowsA],
-                  OutputType V[ColsA][ColsA], 
-                  hls::stream<float> & pca_in, hls::stream<float> & pca_out) 
-  {
-  // Initially only supporting square matrix
-  #ifndef __SYNTHESIS__
-  assert(RowsA==ColsA);
-  #endif
-
-  // Internal memories for partial results
-  typename SVDTraits::SIntType s_in[RowsA][ColsA];
-  typename SVDTraits::UIntType u_in[RowsA][ColsA];
-  typename SVDTraits::VIntType v_in[RowsA][ColsA];
-
-  // Current S,U,V values being worked on
-  typename SVDTraits::SIntType w_in, x_in, y_in, z_in;
-  typename SVDTraits::SIntType w_out, x_out, y_out, z_out;
-  typename SVDTraits::UIntType uw_in, ux_in, uy_in, uz_in;
-  typename SVDTraits::UIntType uw_out, ux_out, uy_out, uz_out;
-  typename SVDTraits::VIntType vw_in, vx_in, vy_in, vz_in;
-  typename SVDTraits::VIntType vw_out, vx_out, vy_out, vz_out;
-
-  // 2x2 Rotation values
-  typename SVDTraits::CSIntType uw_new, ux_new, uy_new, uz_new;
-  typename SVDTraits::CSIntType vw_new, vx_new, vy_new, vz_new;
-
-  for(int i=0; i<RowsA; i++){
-    for(int j=0; j<ColsA; j++){
-      U[i][j] = i==j?1:0;
-      V[i][j] = i==j?1:0;
-      S[i][j] = A[i][j];
-    }
-  }
-
-  sweep_loop: for(int sweepnum = 0; sweepnum < SVDTraits::NUM_SWEEPS; sweepnum++) {
-      for (int distance = 2; distance < RowsA+1; distance ++){
-        for (int offset = 0; offset < distance; offset ++){
-          float new_j[RowsA][2][2];
-          float new_k[RowsA][2][2]; 
-
-          //diag
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            int bottom_right = top_left + distance - 1;
-            
-            pca_in.write(1);
-
-            //std::cout << "write to fpga" << std::endl;
-            pca_in.write((float)top_left);
-            pca_in.write((float)bottom_right);
-            pca_in.write(S[top_left]    [top_left]    );
-            pca_in.write(S[top_left]    [bottom_right]);
-            pca_in.write(S[bottom_right][top_left]    );
-            pca_in.write(S[bottom_right][bottom_right]);
-            pca_in.write(U[top_left]    [top_left]    );
-            pca_in.write(U[top_left]    [bottom_right]);
-            pca_in.write(U[bottom_right][top_left]    );
-            pca_in.write(U[bottom_right][bottom_right]);
-            pca_in.write(V[top_left]    [top_left]    );
-            pca_in.write(V[top_left]    [bottom_right]);
-            pca_in.write(V[bottom_right][top_left]    );
-            pca_in.write(V[bottom_right][bottom_right]);
-
-            for(int i=0;i<RowsA;i++){
-              pca_in.write(U[i][top_left]    );
-              pca_in.write(U[i][bottom_right]);
-              pca_in.write(V[i][top_left]    );
-              pca_in.write(V[i][bottom_right]);
-            }
-          }
-
-          //std::cout << "run dut" << std::endl;
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            dut(pca_in, pca_out);
-          }
-          
-          //wb
-          //std::cout << "read from fpga" << std::endl;
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            int bottom_right = top_left + distance - 1;
-      
-            S[top_left]    [top_left]     = pca_out.read();
-            S[top_left]    [bottom_right] = pca_out.read();
-            S[bottom_right][top_left]     = pca_out.read();
-            S[bottom_right][bottom_right] = pca_out.read();
-            U[top_left]    [top_left]     = pca_out.read();
-            U[top_left]    [bottom_right] = pca_out.read();
-            U[bottom_right][top_left]     = pca_out.read();
-            U[bottom_right][bottom_right] = pca_out.read();
-            V[top_left]    [top_left]     = pca_out.read();
-            V[top_left]    [bottom_right] = pca_out.read();
-            V[bottom_right][top_left]     = pca_out.read();
-            V[bottom_right][bottom_right] = pca_out.read();
-            //exit(0);
-            for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-              if (off_row == top_left || off_row == bottom_right) continue;
-              V[off_row][top_left]     = pca_out.read();
-              V[off_row][bottom_right] = pca_out.read();
-              U[off_row][top_left]     = pca_out.read();
-              U[off_row][bottom_right] = pca_out.read();
-            }
-       
-
-            new_j[top_left][0][0] = pca_out.read();
-            new_j[top_left][0][1] = pca_out.read();
-            new_j[top_left][1][0] = pca_out.read();
-            new_j[top_left][1][1] = pca_out.read();
-
-            new_k[top_left][0][0] = pca_out.read();
-            new_k[top_left][0][1] = pca_out.read();
-            new_k[top_left][1][0] = pca_out.read();
-            new_k[top_left][1][1] = pca_out.read();
-
-            
-          }
-          
-          //off diag
-          for (int top_left = offset; top_left + distance - 1 < RowsA; top_left+=distance){
-            int bottom_right = top_left + distance - 1;
-
-            pca_in.write(2);
-            pca_in.write((float)top_left);
-            pca_in.write((float)bottom_right);
-
-            //init
-            float s_col_temp[2][ColsA];
-            for(int i=0;i<ColsA;i++){
-              pca_in.write(S[top_left]    [i]);
-              pca_in.write(S[bottom_right][i]);
-            }
-
-            float s_row_temp[RowsA][2];
-            for(int i=0;i<RowsA;i++){
-              pca_in.write(S[i][top_left]    );
-              pca_in.write(S[i][bottom_right]);
-            }
-
-            pca_in.write(new_j[top_left][0][0]);
-            pca_in.write(new_j[top_left][0][1]);
-            pca_in.write(new_j[top_left][1][0]);
-            pca_in.write(new_j[top_left][1][1]);
-            
-            pca_in.write(new_k[top_left][0][0]);
-            pca_in.write(new_k[top_left][0][1]);
-            pca_in.write(new_k[top_left][1][0]);
-            pca_in.write(new_k[top_left][1][1]);
-
-            dut(pca_in, pca_out);
-
-            //wb
-            off_col_wb: for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
-              if (off_col == top_left || off_col == bottom_right) continue;
-              S[top_left][off_col]     = pca_out.read();
-              S[bottom_right][off_col] = pca_out.read();
-            }
-            
-            
-            off_row_wb_s: for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-              if (off_row == top_left || off_row == bottom_right) continue;
-              S[off_row][top_left]     = pca_out.read();
-              S[off_row][bottom_right] = pca_out.read();
-            }
-          }
-        }
-      }
-    }
-  }
-
-
   inline void init_block_index(int & top_left, int & bottom_right, int idx1, int idx2){
     top_left = idx1;
     bottom_right = idx2;
@@ -660,9 +482,9 @@ namespace svd {
                       hls::stream<float> & pca_in, hls::stream<float> & pca_out) 
   {
     // Initially only supporting square matrix
-    #ifndef __SYNTHESIS__
-    assert(RowsA==ColsA);
-    #endif
+    // #ifndef __SYNTHESIS__
+    // assert(RowsA==ColsA);
+    // #endif
 
     // Internal memories for partial results
     typename SVDTraits::SIntType s_in[RowsA][ColsA];

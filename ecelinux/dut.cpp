@@ -7,7 +7,7 @@
 #include <fstream>
 #include <iostream>
 #include <iomanip>
-#include "hls_linear_algebra.h"
+// #include "hls_linear_algebra.h"
 #include "svd.h"
 
 using namespace std;
@@ -130,10 +130,10 @@ void dut(
 
 void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   float result = 0;
-  float A[100];
+  float A[IMG_NUM];
 
   LOOP_ROW:
-  for (int i = 0; i < 784; i++) {
+  for (int i = 0; i < VEC_SIZ; i++) {
     // store A[i]
     /*
     LOOP_ST_A:
@@ -141,10 +141,10 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
       A[m] = strm_in.read();
     }*/
     LOOP_COL:
-    for (int j = 0; j < 784; j++) {
+    for (int j = 0; j < VEC_SIZ; j++) {
       // calculate A[j] dot B[j]
       LOOP_DOT_PROD:
-      for (int k = 0; k < 100; k++) {
+      for (int k = 0; k < IMG_NUM; k++) {
         if (j == 0){
           A[k] = strm_in.read();
         }
@@ -153,7 +153,7 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
         else
           result += A[k] * strm_in.read();
         // write back result XXT[i][j]
-        if (k == 99)  strm_out.write(result);
+        if (k == IMG_NUM-1)  strm_out.write(result);
       }
     }
   }
@@ -173,10 +173,10 @@ void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
 
 void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
   float result = 0;
-  float A[784];
+  float A[VEC_SIZ];
 
   LOOP_ROW:
-  for (int i = 0; i < 10; i++) {
+  for (int i = 0; i < K; i++) {
     // store A[i]
     /*
     LOOP_ST_A:
@@ -184,10 +184,10 @@ void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
       A[m] = strm_in.read();
     }*/
     LOOP_COL:
-    for (int j = 0; j < 100; j++) {
+    for (int j = 0; j < IMG_NUM; j++) {
       // calculate A[j] dot B[j]
       LOOP_DOT_PROD:
-      for (int k = 0; k < 784; k++) {
+      for (int k = 0; k < VEC_SIZ; k++) {
         if (j == 0) {
           A[k] = strm_in.read();
         }
@@ -196,7 +196,7 @@ void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
         }
         result += A[k] * strm_in.read();
         // write back result XXT[i][j]
-        if (k == 783)  strm_out.write(result);
+        if (k == VEC_SIZ-1)  strm_out.write(result);
       }
     }
   }

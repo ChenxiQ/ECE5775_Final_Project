@@ -14,7 +14,7 @@ CFLAGS = -I${INC_PATH}  -DHLS_NO_XIL_FPO_LIB
 all: sw
 
 sw: pca.cpp pca_test.cpp dut.cpp
-	@echo "Compiling & executing cordic software program on ARM ..."
+	@echo "Compiling & executing PCA software program on ARM ..."
 	g++ ${CFLAGS}  pca.cpp pca_test.cpp dut.cpp -o pca-arm
 	./pca-arm
 
