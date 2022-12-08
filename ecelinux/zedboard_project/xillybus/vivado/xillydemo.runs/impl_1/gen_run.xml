@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1670327805">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1670508949">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="xillydemo.vdi"/>
   <File Type="BG-DRC" Name="xillydemo.drc"/>
@@ -108,27 +108,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../src/fpga-design/dut_update_off_diag_r.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../src/fpga-design/dut_matmul.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../src/fpga-design/dut_matmul_A.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../src/fpga-design/dut_fsqrt_32ns_32ns_32_12.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -185,20 +164,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../src/fpga-design/dut_backproj.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../src/fpga-design/dut_backproj_A.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../src/fifo_8x2048.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -214,6 +179,27 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../vivado-essentials/system.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vivado-essentials/vga_fifo/vga_fifo.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vivado-essentials/fifo_8x2048/fifo_8x2048.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../vivado-essentials/fifo_32x512/fifo_32x512.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -300,7 +286,4 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="vga_fifo"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_32x512"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_8x2048"/>
 </GenRun>

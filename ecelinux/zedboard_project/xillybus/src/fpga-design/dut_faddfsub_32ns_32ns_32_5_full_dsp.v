@@ -10,7 +10,7 @@
 
 module dut_faddfsub_32ns_32ns_32_5_full_dsp
 #(parameter
-    ID         = 16,
+    ID         = 2,
     NUM_STAGE  = 5,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

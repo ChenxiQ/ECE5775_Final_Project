@@ -44802,32 +44802,6 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
       strm_out.write(vx_new);
       strm_out.write(vy_new);
       strm_out.write(vz_new);
-
-      // Update U & V
-      // o On the diagonal use a 2x2 as per the sigma
-      // o Need to create the indentity in U & V at the start
-
-      uw_in = strm_in.read();
-      ux_in = strm_in.read();
-      uy_in = strm_in.read();
-      uz_in = strm_in.read();
-      vw_in = strm_in.read();
-      vx_in = strm_in.read();
-      vy_in = strm_in.read();
-      vz_in = strm_in.read();
-
-      mm2x2(uw_in, ux_in, uy_in, uz_in, uw_new, ux_new, uy_new, uz_new, uw_out, ux_out, uy_out, uz_out);
-      mm2x2(vw_in, vx_in, vy_in, vz_in, vw_new, vx_new, vy_new, vz_new, vw_out, vx_out, vy_out, vz_out);
-
-      strm_out.write(uw_out);
-      strm_out.write(ux_out);
-      strm_out.write(uy_out);
-      strm_out.write(uz_out);
-      strm_out.write(vw_out);
-      strm_out.write(vx_out);
-      strm_out.write(vy_out);
-      strm_out.write(vz_out);
-
     }
 
   }
@@ -44862,7 +44836,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
       // 2 cols update
       svd_calc_off_r:for (int off_row = 0; off_row < SVDTraits::MIN_DIM - 2; off_row++) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 417 "./svd.h"
+# 391 "./svd.h"
 
         w_in = strm_in.read();
         vw_in = strm_in.read();
@@ -44930,7 +44904,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
       // 2 rows updates
       svd_calc_off_c:for (int off_col = 0; off_col < SVDTraits::MIN_DIM - 2; off_col++) {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 482 "./svd.h"
+# 456 "./svd.h"
 
 
         uw_new = strm_in.read();
@@ -45005,7 +44979,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
     for(int i=0; i<RowsA; i++){
       rd_buffer:for(int j=0; j<ColsA; j++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 554 "./svd.h"
+# 528 "./svd.h"
 
         S[i][j] = A[i][j];
         U[i][j] = i==j?1:0;
@@ -45028,7 +45002,8 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
       for (int step = 0; step < RowsA-1; step ++){
 
-        //std::cout << sweepnum << " " << step << std::endl;
+        std::cout << "sweep=" << sweepnum << " step=" << step << '\r';
+
         //init buffers
         InputType S_block_buffer[n_proc][2][2];
         InputType U_block_buffer[n_proc][2][2];
@@ -45060,7 +45035,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         //read diag
         svd_rd_diag:for (int proc = 0; proc < n_proc; proc++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 606 "./svd.h"
+# 581 "./svd.h"
 
           init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
 
@@ -45094,15 +45069,6 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
           pca_in.write(S_block_buffer[proc][0][1]);
           pca_in.write(S_block_buffer[proc][1][0]);
           pca_in.write(S_block_buffer[proc][1][1]);
-
-          pca_in.write(U_block_buffer[proc][0][0]);
-          pca_in.write(U_block_buffer[proc][0][1]);
-          pca_in.write(U_block_buffer[proc][1][0]);
-          pca_in.write(U_block_buffer[proc][1][1]);
-          pca_in.write(V_block_buffer[proc][0][0]);
-          pca_in.write(V_block_buffer[proc][0][1]);
-          pca_in.write(V_block_buffer[proc][1][0]);
-          pca_in.write(V_block_buffer[proc][1][1]);
         }
 
         dut(pca_in, pca_out);
@@ -45112,37 +45078,61 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
           if (top_left == RowsA || bottom_right == RowsA) continue;
 
           // Update S on diagonal
-          S_block_buffer[proc][0][0] = pca_out.read();
-          S_block_buffer[proc][0][1] = pca_out.read();
-          S_block_buffer[proc][1][0] = pca_out.read();
-          S_block_buffer[proc][1][1] = pca_out.read();
+          w_out = pca_out.read();
+          x_out = pca_out.read();
+          y_out = pca_out.read();
+          z_out = pca_out.read();
+          S_block_buffer[proc][0][0] = w_out;
+          S_block_buffer[proc][0][1] = x_out;
+          S_block_buffer[proc][1][0] = y_out;
+          S_block_buffer[proc][1][1] = z_out;
 
           //log J,k
-          J2x2[proc][0][0] = pca_out.read();
-          J2x2[proc][0][1] = pca_out.read();
-          J2x2[proc][1][0] = pca_out.read();
-          J2x2[proc][1][1] = pca_out.read();
+          uw_new = pca_out.read();
+          ux_new = pca_out.read();
+          uy_new = pca_out.read();
+          uz_new = pca_out.read();
+          J2x2[proc][0][0] = uw_new;
+          J2x2[proc][0][1] = ux_new;
+          J2x2[proc][1][0] = uy_new;
+          J2x2[proc][1][1] = uz_new;
 
-          K2x2[proc][0][0] = pca_out.read();
-          K2x2[proc][0][1] = pca_out.read();
-          K2x2[proc][1][0] = pca_out.read();
-          K2x2[proc][1][1] = pca_out.read();
+          vw_new = pca_out.read();
+          vx_new = pca_out.read();
+          vy_new = pca_out.read();
+          vz_new = pca_out.read();
+          K2x2[proc][0][0] = vw_new;
+          K2x2[proc][0][1] = vx_new;
+          K2x2[proc][1][0] = vy_new;
+          K2x2[proc][1][1] = vz_new;
 
-          U_block_buffer[proc][0][0] = pca_out.read();
-          U_block_buffer[proc][0][1] = pca_out.read();
-          U_block_buffer[proc][1][0] = pca_out.read();
-          U_block_buffer[proc][1][1] = pca_out.read();
-          V_block_buffer[proc][0][0] = pca_out.read();
-          V_block_buffer[proc][0][1] = pca_out.read();
-          V_block_buffer[proc][1][0] = pca_out.read();
-          V_block_buffer[proc][1][1] = pca_out.read();
+          uw_in = U_block_buffer[proc][0][0];
+          ux_in = U_block_buffer[proc][0][1];
+          uy_in = U_block_buffer[proc][1][0];
+          uz_in = U_block_buffer[proc][1][1];
+          vw_in = V_block_buffer[proc][0][0];
+          vx_in = V_block_buffer[proc][0][1];
+          vy_in = V_block_buffer[proc][1][0];
+          vz_in = V_block_buffer[proc][1][1];
+
+          mm2x2(uw_in, ux_in, uy_in, uz_in, uw_new, ux_new, uy_new, uz_new, uw_out, ux_out, uy_out, uz_out);
+          mm2x2(vw_in, vx_in, vy_in, vz_in, vw_new, vx_new, vy_new, vz_new, vw_out, vx_out, vy_out, vz_out);
+
+          U_block_buffer[proc][0][0] = uw_out;
+          U_block_buffer[proc][0][1] = ux_out;
+          U_block_buffer[proc][1][0] = uy_out;
+          U_block_buffer[proc][1][1] = uz_out;
+          V_block_buffer[proc][0][0] = vw_out;
+          V_block_buffer[proc][0][1] = vx_out;
+          V_block_buffer[proc][1][0] = vy_out;
+          V_block_buffer[proc][1][1] = vz_out;
 
         }
 
         //write back diag and cols
         svd_wb_diag:for (int proc = 0; proc < n_proc; proc++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 685 "./svd.h"
+# 675 "./svd.h"
 
           init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
           if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -45169,7 +45159,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         for (int proc = 0; proc < n_proc; proc++){
           svd_rd_off_r:for (int i=0; i<ColsA; i++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 709 "./svd.h"
+# 699 "./svd.h"
 
             if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
             if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -45185,7 +45175,6 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         }
 
         //update 2 cols
-        pca_in.write(2);
         for (int proc = 0; proc < n_proc; proc++){
           // 2 cols update
           for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
@@ -45197,42 +45186,38 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
             }
             if (top_left == RowsA || bottom_right == RowsA) continue;
             if (off_row != bottom_right && off_row != top_left) {
-              pca_in.write(S_c_buffer[proc][off_row][0]);
-              pca_in.write(V_c_buffer[proc][off_row][0]);
-              pca_in.write(U_c_buffer[proc][off_row][0]);
-              pca_in.write(S_c_buffer[proc][off_row][1]);
-              pca_in.write(V_c_buffer[proc][off_row][1]);
-              pca_in.write(U_c_buffer[proc][off_row][1]);
+              w_in = S_c_buffer[proc][off_row][0];
+              vw_in = V_c_buffer[proc][off_row][0];
+              uw_in = U_c_buffer[proc][off_row][0];
 
-              pca_in.write(K2x2[proc][0][0]);
-              pca_in.write(K2x2[proc][0][1]);
-              pca_in.write(K2x2[proc][1][0]);
-              pca_in.write(K2x2[proc][1][1]);
+              x_in = S_c_buffer[proc][off_row][1];
+              vx_in = V_c_buffer[proc][off_row][1];
+              ux_in = U_c_buffer[proc][off_row][1];
 
-              pca_in.write(J2x2[proc][0][0]);
-              pca_in.write(J2x2[proc][0][1]);
-              pca_in.write(J2x2[proc][1][0]);
-              pca_in.write(J2x2[proc][1][1]);
-            }
-          }
-        }
-        dut(pca_in, pca_out);
-        for (int proc = 0; proc < n_proc; proc++){
-          // 2 cols update
-          for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-            //#pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
-            if (off_row == 0) {
-              init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
-            }
-            if (top_left == RowsA || bottom_right == RowsA) continue;
-            if (off_row != bottom_right && off_row != top_left) {
+              vw_new = K2x2[proc][0][0];
+              vx_new = K2x2[proc][0][1];
+              vy_new = K2x2[proc][1][0];
+              vz_new = K2x2[proc][1][1];
+
+              uw_new = J2x2[proc][0][0];
+              ux_new = J2x2[proc][0][1];
+              uy_new = J2x2[proc][1][0];
+              uz_new = J2x2[proc][1][1];
+
+              vm2x1(w_in,vw_new,x_in,vy_new,w_out);
+              vm2x1(w_in,vx_new,x_in,vz_new,x_out);
+              vm2x1(vw_in,vw_new,vx_in,vy_new,vw_out);
+              vm2x1(vw_in,vx_new,vx_in,vz_new,vx_out);
+              vm2x1(uw_in,uw_new,ux_in,uy_new,uw_out);
+              vm2x1(uw_in,ux_new,ux_in,uz_new,ux_out);
+
               //Store off-diagonal updates
-              S_c_buffer[proc][off_row][0] = pca_out.read();
-              S_c_buffer[proc][off_row][1] = pca_out.read();
-              V_c_buffer[proc][off_row][0] = pca_out.read();
-              V_c_buffer[proc][off_row][1] = pca_out.read();
-              U_c_buffer[proc][off_row][0] = pca_out.read();
-              U_c_buffer[proc][off_row][1] = pca_out.read();
+              S_c_buffer[proc][off_row][0] = w_out ;
+              S_c_buffer[proc][off_row][1] = x_out ;
+              V_c_buffer[proc][off_row][0] = vw_out;
+              V_c_buffer[proc][off_row][1] = vx_out;
+              U_c_buffer[proc][off_row][0] = uw_out;
+              U_c_buffer[proc][off_row][1] = ux_out;
             }
           }
         }
@@ -45241,7 +45226,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         for (int proc = 0; proc < n_proc; proc++){
           svd_wb_off_r:for (int i=0; i<ColsA; i++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 778 "./svd.h"
+# 763 "./svd.h"
 
             if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
             if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -45260,7 +45245,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         for (int proc = 0; proc < n_proc; proc++){
           svd_rd_off_c:for (int i=0; i<ColsA; i++){
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 794 "./svd.h"
+# 779 "./svd.h"
 
             if (i == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
             if (top_left == RowsA || bottom_right == RowsA) continue;
@@ -45272,7 +45257,6 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         }
 
         //update 2 rows
-        pca_in.write(3);
         for (int proc = 0; proc < n_proc; proc++){
           // Off-diagonal
           // 2 rows updates
@@ -45286,29 +45270,21 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
             //#pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
             if (off_col != bottom_right && off_col != top_left) {
 
-              pca_in.write(J2x2[proc][0][0]);
-              pca_in.write(J2x2[proc][0][1]);
-              pca_in.write(J2x2[proc][1][0]);
-              pca_in.write(J2x2[proc][1][1]);
+              uw_new = J2x2[proc][0][0];
+              ux_new = J2x2[proc][0][1];
+              uy_new = J2x2[proc][1][0];
+              uz_new = J2x2[proc][1][1];
 
-              pca_in.write(S_r_buffer[proc][0][off_col]);
-              pca_in.write(S_r_buffer[proc][1][off_col]);
-            }
-          }
-        }
+              w_in = S_r_buffer[proc][0][off_col];
+              y_in = S_r_buffer[proc][1][off_col];
 
-        dut(pca_in, pca_out);
+              // U must be Hermitian transposed before it is applied to A
+              vm2x1(hls::x_conj(uw_new),w_in,hls::x_conj(uy_new),y_in,w_out);
+              vm2x1(hls::x_conj(ux_new),w_in,hls::x_conj(uz_new),y_in,y_out);
 
-        for (int proc = 0; proc < n_proc; proc++){
-          // Off-diagonal
-          // 2 rows updates
-          for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
-            if (off_col == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
-            if (top_left == RowsA || bottom_right == RowsA) continue;
-            if (off_col != bottom_right && off_col != top_left) {
               //Store off-diagonal updates
-              S_r_buffer[proc][0][off_col] = pca_out.read();
-              S_r_buffer[proc][1][off_col] = pca_out.read();
+              S_r_buffer[proc][0][off_col] = w_out;
+              S_r_buffer[proc][1][off_col] = y_out;
             }
           }
         }
@@ -45326,6 +45302,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
         }
       }
     }
+    std::cout << std::endl;
   }
 
 
@@ -49420,7 +49397,7 @@ void dut(
       svd::calc_svd<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD>(strm_in, strm_out);
     break;
     }
-
+    /*
     case 2:{
     svd::update_off_diag_r<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD>(strm_in, strm_out);
     break;
@@ -49432,7 +49409,7 @@ void dut(
     }
 
     // Calculate covairance matrix multiplication
-    case 4:{
+    case 4:{ 
       matmul(strm_in, strm_out);
       break;
     }
@@ -49441,7 +49418,7 @@ void dut(
     case 5:{
       backproj(strm_in, strm_out);
     }
-
+    */
     default:
     break;
   }
@@ -49516,86 +49493,6 @@ void dut(
   // cout<< "end" <<endl;
   */
 
-}
-
-void matmul(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
-  float result = 0;
-  float A[100];
-
-  LOOP_ROW:
-  for (int i = 0; i < VEC_SIZ; i++) {
-    // store A[i]
-    /*
-    LOOP_ST_A:
-    for (int m = 0; m < 100; m++) {
-      A[m] = strm_in.read();
-    }*/
-    LOOP_COL:
-    for (int j = 0; j < VEC_SIZ; j++) {
-      // calculate A[j] dot B[j]
-      LOOP_DOT_PROD:
-      for (int k = 0; k < 100; k++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 148 "dut.cpp"
-
-        if (j == 0){
-          A[k] = strm_in.read();
-        }
-        if (k == 0)
-          result = A[k] * strm_in.read();
-        else
-          result += A[k] * strm_in.read();
-        // write back result XXT[i][j]
-        if (k == 100 -1) strm_out.write(result);
-      }
-    }
-  }
-  // // Store a
-  // for (int i = 0; i < 100; i++ ) {
-
-  // }
-
-  // for (int input_num = 0; input_num < 100; input_num++) {
-  //   a[] = strm_in.read();
-  //   b = strm_in.read();
-  //   #pragma HLS unroll
-  //   buffer += a * b;
-  // }
-  // strm_out.write(buffer);
-}
-
-void backproj(hls::stream<fix32_t> &strm_in, hls::stream<fix32_t> &strm_out) {
-  float result = 0;
-  float A[VEC_SIZ];
-
-  LOOP_ROW:
-  for (int i = 0; i < 10; i++) {
-    // store A[i]
-    /*
-    LOOP_ST_A:
-    for (int m = 0; m < 784; m++) {
-      A[m] = strm_in.read();
-    }*/
-    LOOP_COL:
-    for (int j = 0; j < 100; j++) {
-      // calculate A[j] dot B[j]
-      LOOP_DOT_PROD:
-      for (int k = 0; k < VEC_SIZ; k++) {
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
-# 191 "dut.cpp"
-
-        if (j == 0) {
-          A[k] = strm_in.read();
-        }
-        if (k == 0) {
-          result = 0;
-        }
-        result += A[k] * strm_in.read();
-        // write back result XXT[i][j]
-        if (k == VEC_SIZ-1) strm_out.write(result);
-      }
-    }
-  }
 }
 
 class ssdm_global_array_dutpp0cppaplinecpp {

@@ -10,7 +10,7 @@
 
 module dut_fsqrt_32ns_32ns_32_12
 #(parameter
-    ID         = 29,
+    ID         = 15,
     NUM_STAGE  = 12,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

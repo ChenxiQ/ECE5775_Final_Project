@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_calc_svd'
 ================================================================
-* Date:           Tue Dec  6 06:53:41 2022
+* Date:           Thu Dec  8 09:14:19 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      8.44|        1.25|
+    |ap_clk  |  10.00|      8.16|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |  327|  327|  327|  327|   none  |
+    |  264|  264|  264|  264|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                 |  Latency  | Iteration|  Initiation Interval  | Trip |          |
         |    Loop Name    | min | max |  Latency |  achieved |   target  | Count| Pipelined|
         +-----------------+-----+-----+----------+-----------+-----------+------+----------+
-        |- svd_calc_diag  |  325|  325|       186|         20|          1|     8|    yes   |
+        |- svd_calc_diag  |  262|  262|       179|         12|          1|     8|    yes   |
         +-----------------+-----+-----+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -67,22 +67,22 @@ HasImplIP: 0
 IsGatedGlobalClock: 0
 
 + Individual pipeline summary: 
-  * Pipeline-0: initiation interval (II) = 20, depth = 186
+  * Pipeline-0: initiation interval (II) = 12, depth = 179
 
 
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states: 188
+* Number of FSM states: 181
 * Pipeline: 1
-  Pipeline-0: II = 20, D = 186, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 }
+  Pipeline-0: II = 12, D = 179, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 }
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 
 	2  / true
 2 --> 
-	188  / (exitcond)
+	181  / (exitcond)
 	3  / (!exitcond)
 3 --> 
 	4  / true
@@ -439,32 +439,18 @@ IsGatedGlobalClock: 0
 179 --> 
 	180  / true
 180 --> 
-	181  / true
-181 --> 
-	182  / true
-182 --> 
-	183  / true
-183 --> 
-	184  / true
-184 --> 
-	185  / true
-185 --> 
-	186  / true
-186 --> 
-	187  / true
-187 --> 
 	2  / true
-188 --> 
+181 --> 
 * FSM state operations: 
 
  <State 1>: 1.57ns
 ST_1: empty [1/1] 0.00ns
-:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str42, [1 x i8]* @p_str43, [1 x i8]* @p_str44, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str45)
+:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str35, [1 x i8]* @p_str36, [1 x i8]* @p_str37, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str38)
 
-ST_1: empty_18 [1/1] 0.00ns
-:1  %empty_18 = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str46, [1 x i8]* @p_str47, [1 x i8]* @p_str48, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str49)
+ST_1: empty_8 [1/1] 0.00ns
+:1  %empty_8 = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str39, [1 x i8]* @p_str40, [1 x i8]* @p_str41, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str42)
 
-ST_1: stg_191 [1/1] 1.57ns
+ST_1: stg_184 [1/1] 1.57ns
 :2  br label %1
 
 
@@ -478,98 +464,98 @@ ST_2: exitcond [1/1] 1.88ns
 ST_2: proc_1 [1/1] 0.80ns
 :2  %proc_1 = add i4 %proc, 1
 
-ST_2: stg_195 [1/1] 0.00ns
+ST_2: stg_188 [1/1] 0.00ns
 :3  br i1 %exitcond, label %2, label %_ifconv
 
 
  <State 3>: 4.38ns
-ST_3: tmp_65 [1/1] 4.38ns
-_ifconv:4  %tmp_65 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_3: tmp_20 [1/1] 4.38ns
+_ifconv:4  %tmp_20 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 4>: 4.38ns
-ST_4: tmp_66 [1/1] 4.38ns
-_ifconv:5  %tmp_66 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_4: tmp_21 [1/1] 4.38ns
+_ifconv:5  %tmp_21 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 5>: 4.38ns
-ST_5: tmp_67 [1/1] 4.38ns
-_ifconv:6  %tmp_67 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_5: tmp_22 [1/1] 4.38ns
+_ifconv:6  %tmp_22 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 6>: 7.26ns
-ST_6: tmp_68 [1/1] 4.38ns
-_ifconv:7  %tmp_68 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_6: tmp_23 [1/1] 4.38ns
+_ifconv:7  %tmp_23 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 ST_6: u2 [5/5] 7.26ns
-_ifconv:9  %u2 = fadd float %tmp_67, %tmp_66
+_ifconv:9  %u2 = fadd float %tmp_22, %tmp_21
 
 ST_6: u2_1 [5/5] 7.26ns
-_ifconv:14  %u2_1 = fsub float %tmp_67, %tmp_66
+_ifconv:14  %u2_1 = fsub float %tmp_22, %tmp_21
 
 
  <State 7>: 7.26ns
 ST_7: u1 [5/5] 7.26ns
-_ifconv:8  %u1 = fsub float %tmp_68, %tmp_65
+_ifconv:8  %u1 = fsub float %tmp_23, %tmp_20
 
 ST_7: u2 [4/5] 7.26ns
-_ifconv:9  %u2 = fadd float %tmp_67, %tmp_66
+_ifconv:9  %u2 = fadd float %tmp_22, %tmp_21
 
 ST_7: u1_1 [5/5] 7.26ns
-_ifconv:13  %u1_1 = fadd float %tmp_68, %tmp_65
+_ifconv:13  %u1_1 = fadd float %tmp_23, %tmp_20
 
 ST_7: u2_1 [4/5] 7.26ns
-_ifconv:14  %u2_1 = fsub float %tmp_67, %tmp_66
+_ifconv:14  %u2_1 = fsub float %tmp_22, %tmp_21
 
 
  <State 8>: 7.26ns
 ST_8: u1 [4/5] 7.26ns
-_ifconv:8  %u1 = fsub float %tmp_68, %tmp_65
+_ifconv:8  %u1 = fsub float %tmp_23, %tmp_20
 
 ST_8: u2 [3/5] 7.26ns
-_ifconv:9  %u2 = fadd float %tmp_67, %tmp_66
+_ifconv:9  %u2 = fadd float %tmp_22, %tmp_21
 
 ST_8: u1_1 [4/5] 7.26ns
-_ifconv:13  %u1_1 = fadd float %tmp_68, %tmp_65
+_ifconv:13  %u1_1 = fadd float %tmp_23, %tmp_20
 
 ST_8: u2_1 [3/5] 7.26ns
-_ifconv:14  %u2_1 = fsub float %tmp_67, %tmp_66
+_ifconv:14  %u2_1 = fsub float %tmp_22, %tmp_21
 
 
  <State 9>: 7.26ns
 ST_9: u1 [3/5] 7.26ns
-_ifconv:8  %u1 = fsub float %tmp_68, %tmp_65
+_ifconv:8  %u1 = fsub float %tmp_23, %tmp_20
 
 ST_9: u2 [2/5] 7.26ns
-_ifconv:9  %u2 = fadd float %tmp_67, %tmp_66
+_ifconv:9  %u2 = fadd float %tmp_22, %tmp_21
 
 ST_9: u1_1 [3/5] 7.26ns
-_ifconv:13  %u1_1 = fadd float %tmp_68, %tmp_65
+_ifconv:13  %u1_1 = fadd float %tmp_23, %tmp_20
 
 ST_9: u2_1 [2/5] 7.26ns
-_ifconv:14  %u2_1 = fsub float %tmp_67, %tmp_66
+_ifconv:14  %u2_1 = fsub float %tmp_22, %tmp_21
 
 
  <State 10>: 7.26ns
 ST_10: u1 [2/5] 7.26ns
-_ifconv:8  %u1 = fsub float %tmp_68, %tmp_65
+_ifconv:8  %u1 = fsub float %tmp_23, %tmp_20
 
 ST_10: u2 [1/5] 7.26ns
-_ifconv:9  %u2 = fadd float %tmp_67, %tmp_66
+_ifconv:9  %u2 = fadd float %tmp_22, %tmp_21
 
 ST_10: u1_1 [2/5] 7.26ns
-_ifconv:13  %u1_1 = fadd float %tmp_68, %tmp_65
+_ifconv:13  %u1_1 = fadd float %tmp_23, %tmp_20
 
 ST_10: u2_1 [1/5] 7.26ns
-_ifconv:14  %u2_1 = fsub float %tmp_67, %tmp_66
+_ifconv:14  %u2_1 = fsub float %tmp_22, %tmp_21
 
 
  <State 11>: 7.26ns
 ST_11: u1 [1/5] 7.26ns
-_ifconv:8  %u1 = fsub float %tmp_68, %tmp_65
+_ifconv:8  %u1 = fsub float %tmp_23, %tmp_20
 
 ST_11: u1_1 [1/5] 7.26ns
-_ifconv:13  %u1_1 = fadd float %tmp_68, %tmp_65
+_ifconv:13  %u1_1 = fadd float %tmp_23, %tmp_20
 
 
  <State 12>: 7.83ns
@@ -600,9 +586,6 @@ _ifconv:10  %call_ret = call fastcc { float, float } @"dut_calc_angle<float, flo
 ST_15: call_ret1 [117/119] 8.16ns
 _ifconv:15  %call_ret1 = call fastcc { float, float } @"dut_calc_angle<float, float>"(float %u1_1, float %u2_1)
 
-ST_15: tmp_69 [1/1] 4.38ns
-_ifconv:99  %tmp_69 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
-
 
  <State 16>: 8.16ns
 ST_16: call_ret [115/119] 8.16ns
@@ -610,9 +593,6 @@ _ifconv:10  %call_ret = call fastcc { float, float } @"dut_calc_angle<float, flo
 
 ST_16: call_ret1 [116/119] 8.16ns
 _ifconv:15  %call_ret1 = call fastcc { float, float } @"dut_calc_angle<float, float>"(float %u1_1, float %u2_1)
-
-ST_16: tmp_70 [1/1] 4.38ns
-_ifconv:100  %tmp_70 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 17>: 8.16ns
@@ -622,9 +602,6 @@ _ifconv:10  %call_ret = call fastcc { float, float } @"dut_calc_angle<float, flo
 ST_17: call_ret1 [115/119] 8.16ns
 _ifconv:15  %call_ret1 = call fastcc { float, float } @"dut_calc_angle<float, float>"(float %u1_1, float %u2_1)
 
-ST_17: tmp_71 [1/1] 4.38ns
-_ifconv:101  %tmp_71 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
-
 
  <State 18>: 8.16ns
 ST_18: call_ret [113/119] 8.16ns
@@ -632,9 +609,6 @@ _ifconv:10  %call_ret = call fastcc { float, float } @"dut_calc_angle<float, flo
 
 ST_18: call_ret1 [114/119] 8.16ns
 _ifconv:15  %call_ret1 = call fastcc { float, float } @"dut_calc_angle<float, float>"(float %u1_1, float %u2_1)
-
-ST_18: tmp_72 [1/1] 4.38ns
-_ifconv:102  %tmp_72 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 19>: 8.16ns
@@ -644,9 +618,6 @@ _ifconv:10  %call_ret = call fastcc { float, float } @"dut_calc_angle<float, flo
 ST_19: call_ret1 [113/119] 8.16ns
 _ifconv:15  %call_ret1 = call fastcc { float, float } @"dut_calc_angle<float, float>"(float %u1_1, float %u2_1)
 
-ST_19: tmp_73 [1/1] 4.38ns
-_ifconv:103  %tmp_73 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
-
 
  <State 20>: 8.16ns
 ST_20: call_ret [111/119] 8.16ns
@@ -654,9 +625,6 @@ _ifconv:10  %call_ret = call fastcc { float, float } @"dut_calc_angle<float, flo
 
 ST_20: call_ret1 [112/119] 8.16ns
 _ifconv:15  %call_ret1 = call fastcc { float, float } @"dut_calc_angle<float, float>"(float %u1_1, float %u2_1)
-
-ST_20: tmp_74 [1/1] 4.38ns
-_ifconv:104  %tmp_74 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 21>: 8.16ns
@@ -666,9 +634,6 @@ _ifconv:10  %call_ret = call fastcc { float, float } @"dut_calc_angle<float, flo
 ST_21: call_ret1 [111/119] 8.16ns
 _ifconv:15  %call_ret1 = call fastcc { float, float } @"dut_calc_angle<float, float>"(float %u1_1, float %u2_1)
 
-ST_21: tmp_75 [1/1] 4.38ns
-_ifconv:105  %tmp_75 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
-
 
  <State 22>: 8.16ns
 ST_22: call_ret [109/119] 8.16ns
@@ -676,9 +641,6 @@ _ifconv:10  %call_ret = call fastcc { float, float } @"dut_calc_angle<float, flo
 
 ST_22: call_ret1 [110/119] 8.16ns
 _ifconv:15  %call_ret1 = call fastcc { float, float } @"dut_calc_angle<float, float>"(float %u1_1, float %u2_1)
-
-ST_22: tmp_76 [1/1] 4.38ns
-_ifconv:106  %tmp_76 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 
  <State 23>: 8.16ns
@@ -1566,31 +1528,31 @@ _ifconv:17  %sinB_half = extractvalue { float, float } %call_ret1, 1
 ST_132: tmp_i [4/4] 5.70ns
 _ifconv:18  %tmp_i = fmul float %cosA_half, %cosB_half
 
-ST_132: tmp_i6 [4/4] 5.70ns
-_ifconv:24  %tmp_i6 = fmul float %sinA_half, %cosB_half
+ST_132: tmp_i1 [4/4] 5.70ns
+_ifconv:24  %tmp_i1 = fmul float %sinA_half, %cosB_half
 
 
  <State 133>: 7.07ns
 ST_133: tmp_i [3/4] 5.70ns
 _ifconv:18  %tmp_i = fmul float %cosA_half, %cosB_half
 
-ST_133: tmp_i6 [3/4] 5.70ns
-_ifconv:24  %tmp_i6 = fmul float %sinA_half, %cosB_half
+ST_133: tmp_i1 [3/4] 5.70ns
+_ifconv:24  %tmp_i1 = fmul float %sinA_half, %cosB_half
 
-ST_133: tmp_4_to_int [1/1] 0.00ns
-_ifconv:27  %tmp_4_to_int = bitcast float %sinA_half to i32
+ST_133: tmp_9_to_int [1/1] 0.00ns
+_ifconv:27  %tmp_9_to_int = bitcast float %sinA_half to i32
 
-ST_133: tmp_4_neg [1/1] 1.37ns
-_ifconv:28  %tmp_4_neg = xor i32 %tmp_4_to_int, -2147483648
+ST_133: tmp_9_neg [1/1] 1.37ns
+_ifconv:28  %tmp_9_neg = xor i32 %tmp_9_to_int, -2147483648
 
-ST_133: a2_assign_3 [1/1] 0.00ns
-_ifconv:29  %a2_assign_3 = bitcast i32 %tmp_4_neg to float
+ST_133: a2_assign_1 [1/1] 0.00ns
+_ifconv:29  %a2_assign_1 = bitcast i32 %tmp_9_neg to float
 
-ST_133: tmp_3_i7 [4/4] 5.70ns
-_ifconv:30  %tmp_3_i7 = fmul float %a2_assign_3, %sinB_half
+ST_133: tmp_3_i2 [4/4] 5.70ns
+_ifconv:30  %tmp_3_i2 = fmul float %a2_assign_1, %sinB_half
 
-ST_133: tmp_3_i8 [4/4] 5.70ns
-_ifconv:32  %tmp_3_i8 = fmul float %cosA_half, %sinB_half
+ST_133: tmp_3_i3 [4/4] 5.70ns
+_ifconv:32  %tmp_3_i3 = fmul float %cosA_half, %sinB_half
 
 
  <State 134>: 7.07ns
@@ -1600,26 +1562,26 @@ _ifconv:18  %tmp_i = fmul float %cosA_half, %cosB_half
 ST_134: tmp_3_i [4/4] 5.70ns
 _ifconv:19  %tmp_3_i = fmul float %sinA_half, %sinB_half
 
-ST_134: tmp_to_int [1/1] 0.00ns
-_ifconv:21  %tmp_to_int = bitcast float %cosA_half to i32
+ST_134: tmp_8_to_int [1/1] 0.00ns
+_ifconv:21  %tmp_8_to_int = bitcast float %cosA_half to i32
 
-ST_134: tmp_neg [1/1] 1.37ns
-_ifconv:22  %tmp_neg = xor i32 %tmp_to_int, -2147483648
+ST_134: tmp_8_neg [1/1] 1.37ns
+_ifconv:22  %tmp_8_neg = xor i32 %tmp_8_to_int, -2147483648
 
 ST_134: a2_assign [1/1] 0.00ns
-_ifconv:23  %a2_assign = bitcast i32 %tmp_neg to float
+_ifconv:23  %a2_assign = bitcast i32 %tmp_8_neg to float
 
-ST_134: tmp_i6 [2/4] 5.70ns
-_ifconv:24  %tmp_i6 = fmul float %sinA_half, %cosB_half
+ST_134: tmp_i1 [2/4] 5.70ns
+_ifconv:24  %tmp_i1 = fmul float %sinA_half, %cosB_half
 
-ST_134: tmp_3_i6 [4/4] 5.70ns
-_ifconv:25  %tmp_3_i6 = fmul float %a2_assign, %sinB_half
+ST_134: tmp_3_i1 [4/4] 5.70ns
+_ifconv:25  %tmp_3_i1 = fmul float %a2_assign, %sinB_half
 
-ST_134: tmp_3_i7 [3/4] 5.70ns
-_ifconv:30  %tmp_3_i7 = fmul float %a2_assign_3, %sinB_half
+ST_134: tmp_3_i2 [3/4] 5.70ns
+_ifconv:30  %tmp_3_i2 = fmul float %a2_assign_1, %sinB_half
 
-ST_134: tmp_3_i8 [3/4] 5.70ns
-_ifconv:32  %tmp_3_i8 = fmul float %cosA_half, %sinB_half
+ST_134: tmp_3_i3 [3/4] 5.70ns
+_ifconv:32  %tmp_3_i3 = fmul float %cosA_half, %sinB_half
 
 
  <State 135>: 5.70ns
@@ -1629,109 +1591,97 @@ _ifconv:18  %tmp_i = fmul float %cosA_half, %cosB_half
 ST_135: tmp_3_i [3/4] 5.70ns
 _ifconv:19  %tmp_3_i = fmul float %sinA_half, %sinB_half
 
-ST_135: tmp_i6 [1/4] 5.70ns
-_ifconv:24  %tmp_i6 = fmul float %sinA_half, %cosB_half
+ST_135: tmp_i1 [1/4] 5.70ns
+_ifconv:24  %tmp_i1 = fmul float %sinA_half, %cosB_half
 
-ST_135: tmp_3_i6 [3/4] 5.70ns
-_ifconv:25  %tmp_3_i6 = fmul float %a2_assign, %sinB_half
+ST_135: tmp_3_i1 [3/4] 5.70ns
+_ifconv:25  %tmp_3_i1 = fmul float %a2_assign, %sinB_half
 
-ST_135: tmp_3_i7 [2/4] 5.70ns
-_ifconv:30  %tmp_3_i7 = fmul float %a2_assign_3, %sinB_half
+ST_135: tmp_3_i2 [2/4] 5.70ns
+_ifconv:30  %tmp_3_i2 = fmul float %a2_assign_1, %sinB_half
 
-ST_135: tmp_3_i8 [2/4] 5.70ns
-_ifconv:32  %tmp_3_i8 = fmul float %cosA_half, %sinB_half
+ST_135: tmp_3_i3 [2/4] 5.70ns
+_ifconv:32  %tmp_3_i3 = fmul float %cosA_half, %sinB_half
 
 
  <State 136>: 5.70ns
 ST_136: tmp_3_i [2/4] 5.70ns
 _ifconv:19  %tmp_3_i = fmul float %sinA_half, %sinB_half
 
-ST_136: tmp_3_i6 [2/4] 5.70ns
-_ifconv:25  %tmp_3_i6 = fmul float %a2_assign, %sinB_half
+ST_136: tmp_3_i1 [2/4] 5.70ns
+_ifconv:25  %tmp_3_i1 = fmul float %a2_assign, %sinB_half
 
-ST_136: tmp_3_i7 [1/4] 5.70ns
-_ifconv:30  %tmp_3_i7 = fmul float %a2_assign_3, %sinB_half
+ST_136: tmp_3_i2 [1/4] 5.70ns
+_ifconv:30  %tmp_3_i2 = fmul float %a2_assign_1, %sinB_half
 
-ST_136: tmp_3_i8 [1/4] 5.70ns
-_ifconv:32  %tmp_3_i8 = fmul float %cosA_half, %sinB_half
+ST_136: tmp_3_i3 [1/4] 5.70ns
+_ifconv:32  %tmp_3_i3 = fmul float %cosA_half, %sinB_half
 
 
  <State 137>: 7.26ns
 ST_137: tmp_3_i [1/4] 5.70ns
 _ifconv:19  %tmp_3_i = fmul float %sinA_half, %sinB_half
 
-ST_137: tmp_3_i6 [1/4] 5.70ns
-_ifconv:25  %tmp_3_i6 = fmul float %a2_assign, %sinB_half
+ST_137: tmp_3_i1 [1/4] 5.70ns
+_ifconv:25  %tmp_3_i1 = fmul float %a2_assign, %sinB_half
 
 ST_137: vz_int_1 [5/5] 7.26ns
-_ifconv:31  %vz_int_1 = fadd float %tmp_i, %tmp_3_i7
+_ifconv:31  %vz_int_1 = fadd float %tmp_i, %tmp_3_i2
 
 ST_137: vy_int_1 [5/5] 7.26ns
-_ifconv:33  %vy_int_1 = fadd float %tmp_i6, %tmp_3_i8
+_ifconv:33  %vy_int_1 = fadd float %tmp_i1, %tmp_3_i3
 
 
  <State 138>: 7.26ns
-ST_138: tmp_42 [5/5] 7.26ns
-_ifconv:20  %tmp_42 = fadd float %tmp_i, %tmp_3_i
-
-ST_138: tmp_43 [5/5] 7.26ns
-_ifconv:26  %tmp_43 = fadd float %tmp_i6, %tmp_3_i6
-
 ST_138: vz_int_1 [4/5] 7.26ns
-_ifconv:31  %vz_int_1 = fadd float %tmp_i, %tmp_3_i7
+_ifconv:31  %vz_int_1 = fadd float %tmp_i, %tmp_3_i2
 
 ST_138: vy_int_1 [4/5] 7.26ns
-_ifconv:33  %vy_int_1 = fadd float %tmp_i6, %tmp_3_i8
+_ifconv:33  %vy_int_1 = fadd float %tmp_i1, %tmp_3_i3
 
 
  <State 139>: 7.26ns
-ST_139: tmp_42 [4/5] 7.26ns
-_ifconv:20  %tmp_42 = fadd float %tmp_i, %tmp_3_i
-
-ST_139: tmp_43 [4/5] 7.26ns
-_ifconv:26  %tmp_43 = fadd float %tmp_i6, %tmp_3_i6
-
 ST_139: vz_int_1 [3/5] 7.26ns
-_ifconv:31  %vz_int_1 = fadd float %tmp_i, %tmp_3_i7
+_ifconv:31  %vz_int_1 = fadd float %tmp_i, %tmp_3_i2
 
 ST_139: vy_int_1 [3/5] 7.26ns
-_ifconv:33  %vy_int_1 = fadd float %tmp_i6, %tmp_3_i8
+_ifconv:33  %vy_int_1 = fadd float %tmp_i1, %tmp_3_i3
 
 
  <State 140>: 7.26ns
-ST_140: tmp_42 [3/5] 7.26ns
-_ifconv:20  %tmp_42 = fadd float %tmp_i, %tmp_3_i
+ST_140: tmp_13 [5/5] 7.26ns
+_ifconv:20  %tmp_13 = fadd float %tmp_i, %tmp_3_i
 
-ST_140: tmp_43 [3/5] 7.26ns
-_ifconv:26  %tmp_43 = fadd float %tmp_i6, %tmp_3_i6
+ST_140: tmp_14 [5/5] 7.26ns
+_ifconv:26  %tmp_14 = fadd float %tmp_i1, %tmp_3_i1
 
 ST_140: vz_int_1 [2/5] 7.26ns
-_ifconv:31  %vz_int_1 = fadd float %tmp_i, %tmp_3_i7
+_ifconv:31  %vz_int_1 = fadd float %tmp_i, %tmp_3_i2
 
 ST_140: vy_int_1 [2/5] 7.26ns
-_ifconv:33  %vy_int_1 = fadd float %tmp_i6, %tmp_3_i8
+_ifconv:33  %vy_int_1 = fadd float %tmp_i1, %tmp_3_i3
 
 
  <State 141>: 7.26ns
-ST_141: tmp_42 [2/5] 7.26ns
-_ifconv:20  %tmp_42 = fadd float %tmp_i, %tmp_3_i
+ST_141: tmp_13 [4/5] 7.26ns
+_ifconv:20  %tmp_13 = fadd float %tmp_i, %tmp_3_i
 
-ST_141: tmp_43 [2/5] 7.26ns
-_ifconv:26  %tmp_43 = fadd float %tmp_i6, %tmp_3_i6
+ST_141: tmp_14 [4/5] 7.26ns
+_ifconv:26  %tmp_14 = fadd float %tmp_i1, %tmp_3_i1
 
 ST_141: vz_int_1 [1/5] 7.26ns
-_ifconv:31  %vz_int_1 = fadd float %tmp_i, %tmp_3_i7
+_ifconv:31  %vz_int_1 = fadd float %tmp_i, %tmp_3_i2
 
 ST_141: vy_int_1 [1/5] 7.26ns
-_ifconv:33  %vy_int_1 = fadd float %tmp_i6, %tmp_3_i8
+_ifconv:33  %vy_int_1 = fadd float %tmp_i1, %tmp_3_i3
 
 
  <State 142>: 7.26ns
-ST_142: tmp_42 [1/5] 7.26ns
-_ifconv:20  %tmp_42 = fadd float %tmp_i, %tmp_3_i
+ST_142: tmp_13 [3/5] 7.26ns
+_ifconv:20  %tmp_13 = fadd float %tmp_i, %tmp_3_i
 
-ST_142: tmp_43 [1/5] 7.26ns
-_ifconv:26  %tmp_43 = fadd float %tmp_i6, %tmp_3_i6
+ST_142: tmp_14 [3/5] 7.26ns
+_ifconv:26  %tmp_14 = fadd float %tmp_i1, %tmp_3_i1
 
 ST_142: vy_int_to_int [1/1] 0.00ns
 _ifconv:37  %vy_int_to_int = bitcast float %vy_int_1 to i32
@@ -1742,819 +1692,481 @@ _ifconv:38  %vy_int_neg = xor i32 %vy_int_to_int, -2147483648
 ST_142: vy_int [1/1] 0.00ns
 _ifconv:39  %vy_int = bitcast i32 %vy_int_neg to float
 
-ST_142: tmp_i7 [4/4] 5.70ns
-_ifconv:40  %tmp_i7 = fmul float %tmp_65, %vz_int_1
+ST_142: tmp_i2 [4/4] 5.70ns
+_ifconv:40  %tmp_i2 = fmul float %tmp_20, %vz_int_1
 
-ST_142: tmp_3_i9 [4/4] 5.70ns
-_ifconv:41  %tmp_3_i9 = fmul float %tmp_66, %vy_int
-
-
- <State 143>: 5.70ns
-ST_143: tmp_i7 [3/4] 5.70ns
-_ifconv:40  %tmp_i7 = fmul float %tmp_65, %vz_int_1
-
-ST_143: tmp_3_i9 [3/4] 5.70ns
-_ifconv:41  %tmp_3_i9 = fmul float %tmp_66, %vy_int
-
-ST_143: tmp_i8 [4/4] 5.70ns
-_ifconv:43  %tmp_i8 = fmul float %tmp_67, %vz_int_1
-
-ST_143: tmp_3_i1 [4/4] 5.70ns
-_ifconv:44  %tmp_3_i1 = fmul float %tmp_68, %vy_int
+ST_142: tmp_3_i4 [4/4] 5.70ns
+_ifconv:41  %tmp_3_i4 = fmul float %tmp_21, %vy_int
 
 
- <State 144>: 5.70ns
-ST_144: tmp_i7 [2/4] 5.70ns
-_ifconv:40  %tmp_i7 = fmul float %tmp_65, %vz_int_1
+ <State 143>: 7.26ns
+ST_143: tmp_13 [2/5] 7.26ns
+_ifconv:20  %tmp_13 = fadd float %tmp_i, %tmp_3_i
 
-ST_144: tmp_3_i9 [2/4] 5.70ns
-_ifconv:41  %tmp_3_i9 = fmul float %tmp_66, %vy_int
+ST_143: tmp_14 [2/5] 7.26ns
+_ifconv:26  %tmp_14 = fadd float %tmp_i1, %tmp_3_i1
 
-ST_144: tmp_i8 [3/4] 5.70ns
-_ifconv:43  %tmp_i8 = fmul float %tmp_67, %vz_int_1
+ST_143: tmp_i2 [3/4] 5.70ns
+_ifconv:40  %tmp_i2 = fmul float %tmp_20, %vz_int_1
 
-ST_144: tmp_3_i1 [3/4] 5.70ns
-_ifconv:44  %tmp_3_i1 = fmul float %tmp_68, %vy_int
+ST_143: tmp_3_i4 [3/4] 5.70ns
+_ifconv:41  %tmp_3_i4 = fmul float %tmp_21, %vy_int
 
-ST_144: tmp_i1 [4/4] 5.70ns
-_ifconv:49  %tmp_i1 = fmul float %tmp_65, %vy_int_1
+ST_143: tmp_i3 [4/4] 5.70ns
+_ifconv:43  %tmp_i3 = fmul float %tmp_22, %vz_int_1
 
-ST_144: tmp_3_i3 [4/4] 5.70ns
-_ifconv:50  %tmp_3_i3 = fmul float %tmp_66, %vz_int_1
+ST_143: tmp_3_i5 [4/4] 5.70ns
+_ifconv:44  %tmp_3_i5 = fmul float %tmp_23, %vy_int
+
+
+ <State 144>: 7.26ns
+ST_144: tmp_13 [1/5] 7.26ns
+_ifconv:20  %tmp_13 = fadd float %tmp_i, %tmp_3_i
+
+ST_144: tmp_14 [1/5] 7.26ns
+_ifconv:26  %tmp_14 = fadd float %tmp_i1, %tmp_3_i1
+
+ST_144: tmp_i2 [2/4] 5.70ns
+_ifconv:40  %tmp_i2 = fmul float %tmp_20, %vz_int_1
+
+ST_144: tmp_3_i4 [2/4] 5.70ns
+_ifconv:41  %tmp_3_i4 = fmul float %tmp_21, %vy_int
+
+ST_144: tmp_i3 [3/4] 5.70ns
+_ifconv:43  %tmp_i3 = fmul float %tmp_22, %vz_int_1
+
+ST_144: tmp_3_i5 [3/4] 5.70ns
+_ifconv:44  %tmp_3_i5 = fmul float %tmp_23, %vy_int
 
 
  <State 145>: 5.70ns
-ST_145: tmp_i7 [1/4] 5.70ns
-_ifconv:40  %tmp_i7 = fmul float %tmp_65, %vz_int_1
+ST_145: tmp_i2 [1/4] 5.70ns
+_ifconv:40  %tmp_i2 = fmul float %tmp_20, %vz_int_1
 
-ST_145: tmp_3_i9 [1/4] 5.70ns
-_ifconv:41  %tmp_3_i9 = fmul float %tmp_66, %vy_int
+ST_145: tmp_3_i4 [1/4] 5.70ns
+_ifconv:41  %tmp_3_i4 = fmul float %tmp_21, %vy_int
 
-ST_145: tmp_i8 [2/4] 5.70ns
-_ifconv:43  %tmp_i8 = fmul float %tmp_67, %vz_int_1
+ST_145: tmp_i3 [2/4] 5.70ns
+_ifconv:43  %tmp_i3 = fmul float %tmp_22, %vz_int_1
 
-ST_145: tmp_3_i1 [2/4] 5.70ns
-_ifconv:44  %tmp_3_i1 = fmul float %tmp_68, %vy_int
-
-ST_145: tmp_i1 [3/4] 5.70ns
-_ifconv:49  %tmp_i1 = fmul float %tmp_65, %vy_int_1
-
-ST_145: tmp_3_i3 [3/4] 5.70ns
-_ifconv:50  %tmp_3_i3 = fmul float %tmp_66, %vz_int_1
-
-ST_145: tmp_i2 [4/4] 5.70ns
-_ifconv:52  %tmp_i2 = fmul float %tmp_67, %vy_int_1
-
-ST_145: tmp_3_i4 [4/4] 5.70ns
-_ifconv:53  %tmp_3_i4 = fmul float %tmp_68, %vz_int_1
+ST_145: tmp_3_i5 [2/4] 5.70ns
+_ifconv:44  %tmp_3_i5 = fmul float %tmp_23, %vy_int
 
 
- <State 146>: 7.07ns
-ST_146: uy_int_to_int [1/1] 0.00ns
-_ifconv:34  %uy_int_to_int = bitcast float %tmp_43 to i32
+ <State 146>: 7.26ns
+ST_146: w_out1 [5/5] 7.26ns
+_ifconv:42  %w_out1 = fadd float %tmp_i2, %tmp_3_i4
 
-ST_146: uy_int_neg [1/1] 1.37ns
-_ifconv:35  %uy_int_neg = xor i32 %uy_int_to_int, -2147483648
+ST_146: tmp_i3 [1/4] 5.70ns
+_ifconv:43  %tmp_i3 = fmul float %tmp_22, %vz_int_1
 
-ST_146: uy_int [1/1] 0.00ns
-_ifconv:36  %uy_int = bitcast i32 %uy_int_neg to float
-
-ST_146: tmp_i8 [1/4] 5.70ns
-_ifconv:43  %tmp_i8 = fmul float %tmp_67, %vz_int_1
-
-ST_146: tmp_3_i1 [1/4] 5.70ns
-_ifconv:44  %tmp_3_i1 = fmul float %tmp_68, %vy_int
-
-ST_146: tmp_i1 [2/4] 5.70ns
-_ifconv:49  %tmp_i1 = fmul float %tmp_65, %vy_int_1
-
-ST_146: tmp_3_i3 [2/4] 5.70ns
-_ifconv:50  %tmp_3_i3 = fmul float %tmp_66, %vz_int_1
-
-ST_146: tmp_i2 [3/4] 5.70ns
-_ifconv:52  %tmp_i2 = fmul float %tmp_67, %vy_int_1
-
-ST_146: tmp_3_i4 [3/4] 5.70ns
-_ifconv:53  %tmp_3_i4 = fmul float %tmp_68, %vz_int_1
-
-ST_146: tmp_i_i [4/4] 5.70ns
-_ifconv:107  %tmp_i_i = fmul float %tmp_69, %tmp_42
-
-ST_146: tmp_3_i_i [4/4] 5.70ns
-_ifconv:108  %tmp_3_i_i = fmul float %tmp_70, %uy_int
+ST_146: tmp_3_i5 [1/4] 5.70ns
+_ifconv:44  %tmp_3_i5 = fmul float %tmp_23, %vy_int
 
 
- <State 147>: 5.70ns
-ST_147: tmp_i1 [1/4] 5.70ns
-_ifconv:49  %tmp_i1 = fmul float %tmp_65, %vy_int_1
+ <State 147>: 7.26ns
+ST_147: w_out1 [4/5] 7.26ns
+_ifconv:42  %w_out1 = fadd float %tmp_i2, %tmp_3_i4
 
-ST_147: tmp_3_i3 [1/4] 5.70ns
-_ifconv:50  %tmp_3_i3 = fmul float %tmp_66, %vz_int_1
+ST_147: w_out2 [5/5] 7.26ns
+_ifconv:45  %w_out2 = fadd float %tmp_i3, %tmp_3_i5
 
-ST_147: tmp_i2 [2/4] 5.70ns
-_ifconv:52  %tmp_i2 = fmul float %tmp_67, %vy_int_1
+ST_147: tmp_i5 [4/4] 5.70ns
+_ifconv:49  %tmp_i5 = fmul float %tmp_20, %vy_int_1
 
-ST_147: tmp_3_i4 [2/4] 5.70ns
-_ifconv:53  %tmp_3_i4 = fmul float %tmp_68, %vz_int_1
-
-ST_147: tmp_i_i [3/4] 5.70ns
-_ifconv:107  %tmp_i_i = fmul float %tmp_69, %tmp_42
-
-ST_147: tmp_3_i_i [3/4] 5.70ns
-_ifconv:108  %tmp_3_i_i = fmul float %tmp_70, %uy_int
-
-ST_147: tmp_i1_i [4/4] 5.70ns
-_ifconv:110  %tmp_i1_i = fmul float %tmp_69, %tmp_43
-
-ST_147: tmp_3_i2_i [4/4] 5.70ns
-_ifconv:111  %tmp_3_i2_i = fmul float %tmp_70, %tmp_42
+ST_147: tmp_3_i7 [4/4] 5.70ns
+_ifconv:50  %tmp_3_i7 = fmul float %tmp_21, %vz_int_1
 
 
  <State 148>: 7.26ns
-ST_148: w_out1 [5/5] 7.26ns
-_ifconv:42  %w_out1 = fadd float %tmp_i7, %tmp_3_i9
+ST_148: w_out1 [3/5] 7.26ns
+_ifconv:42  %w_out1 = fadd float %tmp_i2, %tmp_3_i4
 
-ST_148: w_out2 [5/5] 7.26ns
-_ifconv:45  %w_out2 = fadd float %tmp_i8, %tmp_3_i1
+ST_148: w_out2 [4/5] 7.26ns
+_ifconv:45  %w_out2 = fadd float %tmp_i3, %tmp_3_i5
 
-ST_148: tmp_i2 [1/4] 5.70ns
-_ifconv:52  %tmp_i2 = fmul float %tmp_67, %vy_int_1
+ST_148: tmp_i5 [3/4] 5.70ns
+_ifconv:49  %tmp_i5 = fmul float %tmp_20, %vy_int_1
 
-ST_148: tmp_3_i4 [1/4] 5.70ns
-_ifconv:53  %tmp_3_i4 = fmul float %tmp_68, %vz_int_1
+ST_148: tmp_3_i7 [3/4] 5.70ns
+_ifconv:50  %tmp_3_i7 = fmul float %tmp_21, %vz_int_1
 
-ST_148: tmp_i_i [2/4] 5.70ns
-_ifconv:107  %tmp_i_i = fmul float %tmp_69, %tmp_42
+ST_148: tmp_i6 [4/4] 5.70ns
+_ifconv:52  %tmp_i6 = fmul float %tmp_22, %vy_int_1
 
-ST_148: tmp_3_i_i [2/4] 5.70ns
-_ifconv:108  %tmp_3_i_i = fmul float %tmp_70, %uy_int
-
-ST_148: tmp_i1_i [3/4] 5.70ns
-_ifconv:110  %tmp_i1_i = fmul float %tmp_69, %tmp_43
-
-ST_148: tmp_3_i2_i [3/4] 5.70ns
-_ifconv:111  %tmp_3_i2_i = fmul float %tmp_70, %tmp_42
-
-ST_148: tmp_i4_i [4/4] 5.70ns
-_ifconv:113  %tmp_i4_i = fmul float %tmp_71, %tmp_42
-
-ST_148: tmp_3_i5_i [4/4] 5.70ns
-_ifconv:114  %tmp_3_i5_i = fmul float %tmp_72, %uy_int
+ST_148: tmp_3_i8 [4/4] 5.70ns
+_ifconv:53  %tmp_3_i8 = fmul float %tmp_23, %vz_int_1
 
 
  <State 149>: 7.26ns
-ST_149: w_out1 [4/5] 7.26ns
-_ifconv:42  %w_out1 = fadd float %tmp_i7, %tmp_3_i9
+ST_149: w_out1 [2/5] 7.26ns
+_ifconv:42  %w_out1 = fadd float %tmp_i2, %tmp_3_i4
 
-ST_149: w_out2 [4/5] 7.26ns
-_ifconv:45  %w_out2 = fadd float %tmp_i8, %tmp_3_i1
+ST_149: w_out2 [3/5] 7.26ns
+_ifconv:45  %w_out2 = fadd float %tmp_i3, %tmp_3_i5
 
-ST_149: z_out1 [5/5] 7.26ns
-_ifconv:51  %z_out1 = fadd float %tmp_i1, %tmp_3_i3
+ST_149: tmp_i5 [2/4] 5.70ns
+_ifconv:49  %tmp_i5 = fmul float %tmp_20, %vy_int_1
 
-ST_149: z_out2 [5/5] 7.26ns
-_ifconv:54  %z_out2 = fadd float %tmp_i2, %tmp_3_i4
+ST_149: tmp_3_i7 [2/4] 5.70ns
+_ifconv:50  %tmp_3_i7 = fmul float %tmp_21, %vz_int_1
 
-ST_149: tmp_i_i [1/4] 5.70ns
-_ifconv:107  %tmp_i_i = fmul float %tmp_69, %tmp_42
+ST_149: tmp_i6 [3/4] 5.70ns
+_ifconv:52  %tmp_i6 = fmul float %tmp_22, %vy_int_1
 
-ST_149: tmp_3_i_i [1/4] 5.70ns
-_ifconv:108  %tmp_3_i_i = fmul float %tmp_70, %uy_int
-
-ST_149: tmp_i1_i [2/4] 5.70ns
-_ifconv:110  %tmp_i1_i = fmul float %tmp_69, %tmp_43
-
-ST_149: tmp_3_i2_i [2/4] 5.70ns
-_ifconv:111  %tmp_3_i2_i = fmul float %tmp_70, %tmp_42
-
-ST_149: tmp_i4_i [3/4] 5.70ns
-_ifconv:113  %tmp_i4_i = fmul float %tmp_71, %tmp_42
-
-ST_149: tmp_3_i5_i [3/4] 5.70ns
-_ifconv:114  %tmp_3_i5_i = fmul float %tmp_72, %uy_int
-
-ST_149: tmp_i7_i [4/4] 5.70ns
-_ifconv:116  %tmp_i7_i = fmul float %tmp_71, %tmp_43
-
-ST_149: tmp_3_i8_i [4/4] 5.70ns
-_ifconv:117  %tmp_3_i8_i = fmul float %tmp_72, %tmp_42
+ST_149: tmp_3_i8 [3/4] 5.70ns
+_ifconv:53  %tmp_3_i8 = fmul float %tmp_23, %vz_int_1
 
 
  <State 150>: 7.26ns
-ST_150: w_out1 [3/5] 7.26ns
-_ifconv:42  %w_out1 = fadd float %tmp_i7, %tmp_3_i9
+ST_150: w_out1 [1/5] 7.26ns
+_ifconv:42  %w_out1 = fadd float %tmp_i2, %tmp_3_i4
 
-ST_150: w_out2 [3/5] 7.26ns
-_ifconv:45  %w_out2 = fadd float %tmp_i8, %tmp_3_i1
+ST_150: w_out2 [2/5] 7.26ns
+_ifconv:45  %w_out2 = fadd float %tmp_i3, %tmp_3_i5
 
-ST_150: z_out1 [4/5] 7.26ns
-_ifconv:51  %z_out1 = fadd float %tmp_i1, %tmp_3_i3
+ST_150: tmp_i5 [1/4] 5.70ns
+_ifconv:49  %tmp_i5 = fmul float %tmp_20, %vy_int_1
 
-ST_150: z_out2 [4/5] 7.26ns
-_ifconv:54  %z_out2 = fadd float %tmp_i2, %tmp_3_i4
+ST_150: tmp_3_i7 [1/4] 5.70ns
+_ifconv:50  %tmp_3_i7 = fmul float %tmp_21, %vz_int_1
 
-ST_150: tmp_57 [5/5] 7.26ns
-_ifconv:109  %tmp_57 = fadd float %tmp_i_i, %tmp_3_i_i
+ST_150: tmp_i6 [2/4] 5.70ns
+_ifconv:52  %tmp_i6 = fmul float %tmp_22, %vy_int_1
 
-ST_150: tmp_i1_i [1/4] 5.70ns
-_ifconv:110  %tmp_i1_i = fmul float %tmp_69, %tmp_43
-
-ST_150: tmp_3_i2_i [1/4] 5.70ns
-_ifconv:111  %tmp_3_i2_i = fmul float %tmp_70, %tmp_42
-
-ST_150: tmp_i4_i [2/4] 5.70ns
-_ifconv:113  %tmp_i4_i = fmul float %tmp_71, %tmp_42
-
-ST_150: tmp_3_i5_i [2/4] 5.70ns
-_ifconv:114  %tmp_3_i5_i = fmul float %tmp_72, %uy_int
-
-ST_150: tmp_i7_i [3/4] 5.70ns
-_ifconv:116  %tmp_i7_i = fmul float %tmp_71, %tmp_43
-
-ST_150: tmp_3_i8_i [3/4] 5.70ns
-_ifconv:117  %tmp_3_i8_i = fmul float %tmp_72, %tmp_42
+ST_150: tmp_3_i8 [2/4] 5.70ns
+_ifconv:53  %tmp_3_i8 = fmul float %tmp_23, %vz_int_1
 
 
  <State 151>: 7.26ns
-ST_151: w_out1 [2/5] 7.26ns
-_ifconv:42  %w_out1 = fadd float %tmp_i7, %tmp_3_i9
+ST_151: w_out2 [1/5] 7.26ns
+_ifconv:45  %w_out2 = fadd float %tmp_i3, %tmp_3_i5
 
-ST_151: w_out2 [2/5] 7.26ns
-_ifconv:45  %w_out2 = fadd float %tmp_i8, %tmp_3_i1
+ST_151: tmp_i4 [4/4] 5.70ns
+_ifconv:46  %tmp_i4 = fmul float %tmp_13, %w_out1
 
-ST_151: z_out1 [3/5] 7.26ns
-_ifconv:51  %z_out1 = fadd float %tmp_i1, %tmp_3_i3
+ST_151: tmp_i6 [1/4] 5.70ns
+_ifconv:52  %tmp_i6 = fmul float %tmp_22, %vy_int_1
 
-ST_151: z_out2 [3/5] 7.26ns
-_ifconv:54  %z_out2 = fadd float %tmp_i2, %tmp_3_i4
-
-ST_151: tmp_57 [4/5] 7.26ns
-_ifconv:109  %tmp_57 = fadd float %tmp_i_i, %tmp_3_i_i
-
-ST_151: tmp_58 [5/5] 7.26ns
-_ifconv:112  %tmp_58 = fadd float %tmp_i1_i, %tmp_3_i2_i
-
-ST_151: tmp_i4_i [1/4] 5.70ns
-_ifconv:113  %tmp_i4_i = fmul float %tmp_71, %tmp_42
-
-ST_151: tmp_3_i5_i [1/4] 5.70ns
-_ifconv:114  %tmp_3_i5_i = fmul float %tmp_72, %uy_int
-
-ST_151: tmp_i7_i [2/4] 5.70ns
-_ifconv:116  %tmp_i7_i = fmul float %tmp_71, %tmp_43
-
-ST_151: tmp_3_i8_i [2/4] 5.70ns
-_ifconv:117  %tmp_3_i8_i = fmul float %tmp_72, %tmp_42
+ST_151: tmp_3_i8 [1/4] 5.70ns
+_ifconv:53  %tmp_3_i8 = fmul float %tmp_23, %vz_int_1
 
 
- <State 152>: 7.26ns
-ST_152: w_out1 [1/5] 7.26ns
-_ifconv:42  %w_out1 = fadd float %tmp_i7, %tmp_3_i9
+ <State 152>: 7.07ns
+ST_152: uy_int_to_int [1/1] 0.00ns
+_ifconv:34  %uy_int_to_int = bitcast float %tmp_14 to i32
 
-ST_152: w_out2 [1/5] 7.26ns
-_ifconv:45  %w_out2 = fadd float %tmp_i8, %tmp_3_i1
+ST_152: uy_int_neg [1/1] 1.37ns
+_ifconv:35  %uy_int_neg = xor i32 %uy_int_to_int, -2147483648
 
-ST_152: z_out1 [2/5] 7.26ns
-_ifconv:51  %z_out1 = fadd float %tmp_i1, %tmp_3_i3
+ST_152: uy_int [1/1] 0.00ns
+_ifconv:36  %uy_int = bitcast i32 %uy_int_neg to float
 
-ST_152: z_out2 [2/5] 7.26ns
-_ifconv:54  %z_out2 = fadd float %tmp_i2, %tmp_3_i4
+ST_152: tmp_i4 [3/4] 5.70ns
+_ifconv:46  %tmp_i4 = fmul float %tmp_13, %w_out1
 
-ST_152: tmp_57 [3/5] 7.26ns
-_ifconv:109  %tmp_57 = fadd float %tmp_i_i, %tmp_3_i_i
-
-ST_152: tmp_58 [4/5] 7.26ns
-_ifconv:112  %tmp_58 = fadd float %tmp_i1_i, %tmp_3_i2_i
-
-ST_152: tmp_59 [5/5] 7.26ns
-_ifconv:115  %tmp_59 = fadd float %tmp_i4_i, %tmp_3_i5_i
-
-ST_152: tmp_i7_i [1/4] 5.70ns
-_ifconv:116  %tmp_i7_i = fmul float %tmp_71, %tmp_43
-
-ST_152: tmp_3_i8_i [1/4] 5.70ns
-_ifconv:117  %tmp_3_i8_i = fmul float %tmp_72, %tmp_42
+ST_152: tmp_3_i6 [4/4] 5.70ns
+_ifconv:47  %tmp_3_i6 = fmul float %uy_int, %w_out2
 
 
  <State 153>: 7.26ns
-ST_153: z_out1 [1/5] 7.26ns
-_ifconv:51  %z_out1 = fadd float %tmp_i1, %tmp_3_i3
+ST_153: tmp_i4 [2/4] 5.70ns
+_ifconv:46  %tmp_i4 = fmul float %tmp_13, %w_out1
 
-ST_153: z_out2 [1/5] 7.26ns
-_ifconv:54  %z_out2 = fadd float %tmp_i2, %tmp_3_i4
+ST_153: tmp_3_i6 [3/4] 5.70ns
+_ifconv:47  %tmp_3_i6 = fmul float %uy_int, %w_out2
 
-ST_153: tmp_57 [2/5] 7.26ns
-_ifconv:109  %tmp_57 = fadd float %tmp_i_i, %tmp_3_i_i
+ST_153: z_out1 [5/5] 7.26ns
+_ifconv:51  %z_out1 = fadd float %tmp_i5, %tmp_3_i7
 
-ST_153: tmp_58 [3/5] 7.26ns
-_ifconv:112  %tmp_58 = fadd float %tmp_i1_i, %tmp_3_i2_i
-
-ST_153: tmp_59 [4/5] 7.26ns
-_ifconv:115  %tmp_59 = fadd float %tmp_i4_i, %tmp_3_i5_i
-
-ST_153: tmp_60 [5/5] 7.26ns
-_ifconv:118  %tmp_60 = fadd float %tmp_i7_i, %tmp_3_i8_i
+ST_153: z_out2 [5/5] 7.26ns
+_ifconv:54  %z_out2 = fadd float %tmp_i6, %tmp_3_i8
 
 
  <State 154>: 7.26ns
-ST_154: tmp_57 [1/5] 7.26ns
-_ifconv:109  %tmp_57 = fadd float %tmp_i_i, %tmp_3_i_i
+ST_154: tmp_i4 [1/4] 5.70ns
+_ifconv:46  %tmp_i4 = fmul float %tmp_13, %w_out1
 
-ST_154: tmp_58 [2/5] 7.26ns
-_ifconv:112  %tmp_58 = fadd float %tmp_i1_i, %tmp_3_i2_i
+ST_154: tmp_3_i6 [2/4] 5.70ns
+_ifconv:47  %tmp_3_i6 = fmul float %uy_int, %w_out2
 
-ST_154: tmp_59 [3/5] 7.26ns
-_ifconv:115  %tmp_59 = fadd float %tmp_i4_i, %tmp_3_i5_i
+ST_154: z_out1 [4/5] 7.26ns
+_ifconv:51  %z_out1 = fadd float %tmp_i5, %tmp_3_i7
 
-ST_154: tmp_60 [4/5] 7.26ns
-_ifconv:118  %tmp_60 = fadd float %tmp_i7_i, %tmp_3_i8_i
+ST_154: z_out2 [4/5] 7.26ns
+_ifconv:54  %z_out2 = fadd float %tmp_i6, %tmp_3_i8
 
 
  <State 155>: 7.26ns
-ST_155: tmp_i9 [4/4] 5.70ns
-_ifconv:46  %tmp_i9 = fmul float %tmp_42, %w_out1
+ST_155: tmp_3_i6 [1/4] 5.70ns
+_ifconv:47  %tmp_3_i6 = fmul float %uy_int, %w_out2
 
-ST_155: tmp_3_i2 [4/4] 5.70ns
-_ifconv:47  %tmp_3_i2 = fmul float %uy_int, %w_out2
+ST_155: z_out1 [3/5] 7.26ns
+_ifconv:51  %z_out1 = fadd float %tmp_i5, %tmp_3_i7
 
-ST_155: tmp_58 [1/5] 7.26ns
-_ifconv:112  %tmp_58 = fadd float %tmp_i1_i, %tmp_3_i2_i
-
-ST_155: tmp_59 [2/5] 7.26ns
-_ifconv:115  %tmp_59 = fadd float %tmp_i4_i, %tmp_3_i5_i
-
-ST_155: tmp_60 [3/5] 7.26ns
-_ifconv:118  %tmp_60 = fadd float %tmp_i7_i, %tmp_3_i8_i
+ST_155: z_out2 [3/5] 7.26ns
+_ifconv:54  %z_out2 = fadd float %tmp_i6, %tmp_3_i8
 
 
  <State 156>: 7.26ns
-ST_156: tmp_i9 [3/4] 5.70ns
-_ifconv:46  %tmp_i9 = fmul float %tmp_42, %w_out1
+ST_156: w_out_int [5/5] 7.26ns
+_ifconv:48  %w_out_int = fadd float %tmp_i4, %tmp_3_i6
 
-ST_156: tmp_3_i2 [3/4] 5.70ns
-_ifconv:47  %tmp_3_i2 = fmul float %uy_int, %w_out2
+ST_156: z_out1 [2/5] 7.26ns
+_ifconv:51  %z_out1 = fadd float %tmp_i5, %tmp_3_i7
 
-ST_156: tmp_i3 [4/4] 5.70ns
-_ifconv:55  %tmp_i3 = fmul float %tmp_43, %z_out1
-
-ST_156: tmp_3_i5 [4/4] 5.70ns
-_ifconv:56  %tmp_3_i5 = fmul float %tmp_42, %z_out2
-
-ST_156: tmp_59 [1/5] 7.26ns
-_ifconv:115  %tmp_59 = fadd float %tmp_i4_i, %tmp_3_i5_i
-
-ST_156: tmp_60 [2/5] 7.26ns
-_ifconv:118  %tmp_60 = fadd float %tmp_i7_i, %tmp_3_i8_i
+ST_156: z_out2 [2/5] 7.26ns
+_ifconv:54  %z_out2 = fadd float %tmp_i6, %tmp_3_i8
 
 
  <State 157>: 7.26ns
-ST_157: tmp_i9 [2/4] 5.70ns
-_ifconv:46  %tmp_i9 = fmul float %tmp_42, %w_out1
+ST_157: w_out_int [4/5] 7.26ns
+_ifconv:48  %w_out_int = fadd float %tmp_i4, %tmp_3_i6
 
-ST_157: tmp_3_i2 [2/4] 5.70ns
-_ifconv:47  %tmp_3_i2 = fmul float %uy_int, %w_out2
+ST_157: z_out1 [1/5] 7.26ns
+_ifconv:51  %z_out1 = fadd float %tmp_i5, %tmp_3_i7
 
-ST_157: tmp_i3 [3/4] 5.70ns
-_ifconv:55  %tmp_i3 = fmul float %tmp_43, %z_out1
-
-ST_157: tmp_3_i5 [3/4] 5.70ns
-_ifconv:56  %tmp_3_i5 = fmul float %tmp_42, %z_out2
-
-ST_157: tmp_60 [1/5] 7.26ns
-_ifconv:118  %tmp_60 = fadd float %tmp_i7_i, %tmp_3_i8_i
+ST_157: z_out2 [1/5] 7.26ns
+_ifconv:54  %z_out2 = fadd float %tmp_i6, %tmp_3_i8
 
 
- <State 158>: 5.70ns
-ST_158: tmp_i9 [1/4] 5.70ns
-_ifconv:46  %tmp_i9 = fmul float %tmp_42, %w_out1
-
-ST_158: tmp_3_i2 [1/4] 5.70ns
-_ifconv:47  %tmp_3_i2 = fmul float %uy_int, %w_out2
-
-ST_158: tmp_i3 [2/4] 5.70ns
-_ifconv:55  %tmp_i3 = fmul float %tmp_43, %z_out1
-
-ST_158: tmp_3_i5 [2/4] 5.70ns
-_ifconv:56  %tmp_3_i5 = fmul float %tmp_42, %z_out2
+ <State 158>: 7.26ns
+ST_158: w_out_int [3/5] 7.26ns
+_ifconv:48  %w_out_int = fadd float %tmp_i4, %tmp_3_i6
 
 
  <State 159>: 7.26ns
-ST_159: w_out_int [5/5] 7.26ns
-_ifconv:48  %w_out_int = fadd float %tmp_i9, %tmp_3_i2
-
-ST_159: tmp_i3 [1/4] 5.70ns
-_ifconv:55  %tmp_i3 = fmul float %tmp_43, %z_out1
-
-ST_159: tmp_3_i5 [1/4] 5.70ns
-_ifconv:56  %tmp_3_i5 = fmul float %tmp_42, %z_out2
+ST_159: w_out_int [2/5] 7.26ns
+_ifconv:48  %w_out_int = fadd float %tmp_i4, %tmp_3_i6
 
 
  <State 160>: 7.26ns
-ST_160: w_out_int [4/5] 7.26ns
-_ifconv:48  %w_out_int = fadd float %tmp_i9, %tmp_3_i2
-
-ST_160: z_out_int [5/5] 7.26ns
-_ifconv:57  %z_out_int = fadd float %tmp_i3, %tmp_3_i5
+ST_160: w_out_int [1/5] 7.26ns
+_ifconv:48  %w_out_int = fadd float %tmp_i4, %tmp_3_i6
 
 
- <State 161>: 7.26ns
-ST_161: w_out_int [3/5] 7.26ns
-_ifconv:48  %w_out_int = fadd float %tmp_i9, %tmp_3_i2
+ <State 161>: 6.79ns
+ST_161: tmp_i7 [4/4] 5.70ns
+_ifconv:55  %tmp_i7 = fmul float %tmp_14, %z_out1
 
-ST_161: z_out_int [4/5] 7.26ns
-_ifconv:57  %z_out_int = fadd float %tmp_i3, %tmp_3_i5
+ST_161: tmp_3_i9 [4/4] 5.70ns
+_ifconv:56  %tmp_3_i9 = fmul float %tmp_13, %z_out2
 
-
- <State 162>: 7.26ns
-ST_162: w_out_int [2/5] 7.26ns
-_ifconv:48  %w_out_int = fadd float %tmp_i9, %tmp_3_i2
-
-ST_162: z_out_int [3/5] 7.26ns
-_ifconv:57  %z_out_int = fadd float %tmp_i3, %tmp_3_i5
+ST_161: tmp_5 [1/1] 6.79ns
+_ifconv:64  %tmp_5 = fcmp olt float %w_out_int, 0.000000e+00
 
 
- <State 163>: 7.26ns
-ST_163: w_out_int [1/5] 7.26ns
-_ifconv:48  %w_out_int = fadd float %tmp_i9, %tmp_3_i2
+ <State 162>: 5.70ns
+ST_162: tmp_i7 [3/4] 5.70ns
+_ifconv:55  %tmp_i7 = fmul float %tmp_14, %z_out1
 
-ST_163: z_out_int [2/5] 7.26ns
-_ifconv:57  %z_out_int = fadd float %tmp_i3, %tmp_3_i5
-
-
- <State 164>: 7.26ns
-ST_164: z_out_int [1/5] 7.26ns
-_ifconv:57  %z_out_int = fadd float %tmp_i3, %tmp_3_i5
-
-ST_164: tmp_4 [1/1] 6.79ns
-_ifconv:64  %tmp_4 = fcmp olt float %w_out_int, 0.000000e+00
+ST_162: tmp_3_i9 [3/4] 5.70ns
+_ifconv:56  %tmp_3_i9 = fmul float %tmp_13, %z_out2
 
 
- <State 165>: 6.79ns
-ST_165: tmp_9 [1/1] 6.79ns
-_ifconv:80  %tmp_9 = fcmp olt float %z_out_int, 0.000000e+00
+ <State 163>: 5.70ns
+ST_163: tmp_i7 [2/4] 5.70ns
+_ifconv:55  %tmp_i7 = fmul float %tmp_14, %z_out1
+
+ST_163: tmp_3_i9 [2/4] 5.70ns
+_ifconv:56  %tmp_3_i9 = fmul float %tmp_13, %z_out2
 
 
- <State 166>: 0.00ns
+ <State 164>: 5.70ns
+ST_164: tmp_i7 [1/4] 5.70ns
+_ifconv:55  %tmp_i7 = fmul float %tmp_14, %z_out1
 
- <State 167>: 5.13ns
-ST_167: c_write_assign_17_to_int [1/1] 0.00ns
-_ifconv:58  %c_write_assign_17_to_int = bitcast float %w_out_int to i32
+ST_164: tmp_3_i9 [1/4] 5.70ns
+_ifconv:56  %tmp_3_i9 = fmul float %tmp_13, %z_out2
 
-ST_167: tmp_s [1/1] 0.00ns
-_ifconv:59  %tmp_s = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %c_write_assign_17_to_int, i32 23, i32 30)
 
-ST_167: tmp [1/1] 0.00ns
-_ifconv:60  %tmp = trunc i32 %c_write_assign_17_to_int to i23
+ <State 165>: 0.00ns
 
-ST_167: notlhs [1/1] 2.00ns
-_ifconv:61  %notlhs = icmp ne i8 %tmp_s, -1
+ <State 166>: 7.26ns
+ST_166: z_out_int [5/5] 7.26ns
+_ifconv:57  %z_out_int = fadd float %tmp_i7, %tmp_3_i9
 
-ST_167: notrhs [1/1] 2.39ns
+
+ <State 167>: 7.26ns
+ST_167: z_out_int [4/5] 7.26ns
+_ifconv:57  %z_out_int = fadd float %tmp_i7, %tmp_3_i9
+
+
+ <State 168>: 7.26ns
+ST_168: z_out_int [3/5] 7.26ns
+_ifconv:57  %z_out_int = fadd float %tmp_i7, %tmp_3_i9
+
+ST_168: c_write_assign_6_to_int [1/1] 0.00ns
+_ifconv:58  %c_write_assign_6_to_int = bitcast float %w_out_int to i32
+
+ST_168: tmp_4 [1/1] 0.00ns
+_ifconv:59  %tmp_4 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %c_write_assign_6_to_int, i32 23, i32 30)
+
+ST_168: tmp [1/1] 0.00ns
+_ifconv:60  %tmp = trunc i32 %c_write_assign_6_to_int to i23
+
+ST_168: notlhs [1/1] 2.00ns
+_ifconv:61  %notlhs = icmp ne i8 %tmp_4, -1
+
+ST_168: notrhs [1/1] 2.39ns
 _ifconv:62  %notrhs = icmp eq i23 %tmp, 0
 
-ST_167: tmp_3 [1/1] 0.00ns (grouped into LUT with out node tmp_5)
+ST_168: tmp_3 [1/1] 0.00ns (grouped into LUT with out node tmp_6)
 _ifconv:63  %tmp_3 = or i1 %notrhs, %notlhs
 
-ST_167: tmp_5 [1/1] 1.37ns (out node of the LUT)
-_ifconv:65  %tmp_5 = and i1 %tmp_3, %tmp_4
+ST_168: tmp_6 [1/1] 1.37ns (out node of the LUT)
+_ifconv:65  %tmp_6 = and i1 %tmp_3, %tmp_5
 
-ST_167: w_out_neg [1/1] 0.00ns (grouped into LUT with out node w_out_3)
-_ifconv:66  %w_out_neg = xor i32 %c_write_assign_17_to_int, -2147483648
+ST_168: w_out_neg [1/1] 0.00ns (grouped into LUT with out node w_out_3)
+_ifconv:66  %w_out_neg = xor i32 %c_write_assign_6_to_int, -2147483648
 
-ST_167: w_out [1/1] 0.00ns (grouped into LUT with out node w_out_3)
+ST_168: w_out [1/1] 0.00ns (grouped into LUT with out node w_out_3)
 _ifconv:67  %w_out = bitcast i32 %w_out_neg to float
 
-ST_167: w_out_3 [1/1] 1.37ns (out node of the LUT)
-_ifconv:71  %w_out_3 = select i1 %tmp_5, float %w_out, float %w_out_int
+ST_168: w_out_3 [1/1] 1.37ns (out node of the LUT)
+_ifconv:71  %w_out_3 = select i1 %tmp_6, float %w_out, float %w_out_int
 
 
- <State 168>: 4.38ns
-ST_168: stg_668 [1/1] 4.38ns
+ <State 169>: 7.26ns
+ST_169: z_out_int [2/5] 7.26ns
+_ifconv:57  %z_out_int = fadd float %tmp_i7, %tmp_3_i9
+
+ST_169: stg_599 [1/1] 4.38ns
 _ifconv:87  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %w_out_3)
 
 
- <State 169>: 4.38ns
-ST_169: stg_669 [1/1] 4.38ns
+ <State 170>: 7.26ns
+ST_170: z_out_int [1/5] 7.26ns
+_ifconv:57  %z_out_int = fadd float %tmp_i7, %tmp_3_i9
+
+ST_170: stg_601 [1/1] 4.38ns
 _ifconv:88  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float 0.000000e+00)
 
 
- <State 170>: 8.44ns
-ST_170: vw_int_to_int [1/1] 0.00ns
-_ifconv:68  %vw_int_to_int = bitcast float %vz_int_1 to i32
+ <State 171>: 8.16ns
+ST_171: c_write_assign_9_to_int [1/1] 0.00ns
+_ifconv:74  %c_write_assign_9_to_int = bitcast float %z_out_int to i32
 
-ST_170: vw_int_neg [1/1] 1.37ns
-_ifconv:69  %vw_int_neg = xor i32 %vw_int_to_int, -2147483648
+ST_171: tmp_7 [1/1] 0.00ns
+_ifconv:75  %tmp_7 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %c_write_assign_9_to_int, i32 23, i32 30)
 
-ST_170: vw_int [1/1] 0.00ns
-_ifconv:70  %vw_int = bitcast i32 %vw_int_neg to float
+ST_171: tmp_2 [1/1] 0.00ns
+_ifconv:76  %tmp_2 = trunc i32 %c_write_assign_9_to_int to i23
 
-ST_170: vw_int_3 [1/1] 1.37ns
-_ifconv:72  %vw_int_3 = select i1 %tmp_5, float %vw_int, float %vz_int_1
+ST_171: notlhs2 [1/1] 2.00ns
+_ifconv:77  %notlhs2 = icmp ne i8 %tmp_7, -1
 
-ST_170: vx_int [1/1] 1.37ns
-_ifconv:73  %vx_int = select i1 %tmp_5, float %vy_int_1, float %vy_int
+ST_171: notrhs3 [1/1] 2.39ns
+_ifconv:78  %notrhs3 = icmp eq i23 %tmp_2, 0
 
-ST_170: c_write_assign_20_to_int [1/1] 0.00ns
-_ifconv:74  %c_write_assign_20_to_int = bitcast float %z_out_int to i32
-
-ST_170: tmp_6 [1/1] 0.00ns
-_ifconv:75  %tmp_6 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %c_write_assign_20_to_int, i32 23, i32 30)
-
-ST_170: tmp_39 [1/1] 0.00ns
-_ifconv:76  %tmp_39 = trunc i32 %c_write_assign_20_to_int to i23
-
-ST_170: notlhs2 [1/1] 2.00ns
-_ifconv:77  %notlhs2 = icmp ne i8 %tmp_6, -1
-
-ST_170: notrhs3 [1/1] 2.39ns
-_ifconv:78  %notrhs3 = icmp eq i23 %tmp_39, 0
-
-ST_170: tmp_8 [1/1] 0.00ns (grouped into LUT with out node tmp_10)
+ST_171: tmp_8 [1/1] 0.00ns (grouped into LUT with out node tmp_10)
 _ifconv:79  %tmp_8 = or i1 %notrhs3, %notlhs2
 
-ST_170: tmp_10 [1/1] 1.37ns (out node of the LUT)
+ST_171: tmp_9 [1/1] 6.79ns
+_ifconv:80  %tmp_9 = fcmp olt float %z_out_int, 0.000000e+00
+
+ST_171: tmp_10 [1/1] 1.37ns (out node of the LUT)
 _ifconv:81  %tmp_10 = and i1 %tmp_8, %tmp_9
 
-ST_170: z_out_neg [1/1] 0.00ns (grouped into LUT with out node z_out_3)
-_ifconv:82  %z_out_neg = xor i32 %c_write_assign_20_to_int, -2147483648
-
-ST_170: z_out [1/1] 0.00ns (grouped into LUT with out node z_out_3)
-_ifconv:83  %z_out = bitcast i32 %z_out_neg to float
-
-ST_170: z_out_3 [1/1] 1.37ns (out node of the LUT)
-_ifconv:84  %z_out_3 = select i1 %tmp_10, float %z_out, float %z_out_int
-
-ST_170: vy_int_2 [1/1] 1.37ns
-_ifconv:85  %vy_int_2 = select i1 %tmp_10, float %vy_int, float %vy_int_1
-
-ST_170: vz_int [1/1] 1.37ns
-_ifconv:86  %vz_int = select i1 %tmp_10, float %vw_int, float %vz_int_1
-
-ST_170: stg_687 [1/1] 4.38ns
+ST_171: stg_610 [1/1] 4.38ns
 _ifconv:89  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float 0.000000e+00)
 
-ST_170: tmp_i_i1 [4/4] 5.70ns
-_ifconv:119  %tmp_i_i1 = fmul float %tmp_73, %vw_int_3
 
-ST_170: tmp_3_i_i1 [4/4] 5.70ns
-_ifconv:120  %tmp_3_i_i1 = fmul float %tmp_74, %vx_int
+ <State 172>: 5.75ns
+ST_172: z_out_neg [1/1] 0.00ns (grouped into LUT with out node z_out_3)
+_ifconv:82  %z_out_neg = xor i32 %c_write_assign_9_to_int, -2147483648
 
+ST_172: z_out [1/1] 0.00ns (grouped into LUT with out node z_out_3)
+_ifconv:83  %z_out = bitcast i32 %z_out_neg to float
 
- <State 171>: 5.70ns
-ST_171: stg_690 [1/1] 4.38ns
+ST_172: z_out_3 [1/1] 1.37ns (out node of the LUT)
+_ifconv:84  %z_out_3 = select i1 %tmp_10, float %z_out, float %z_out_int
+
+ST_172: stg_614 [1/1] 4.38ns
 _ifconv:90  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %z_out_3)
 
-ST_171: tmp_i_i1 [3/4] 5.70ns
-_ifconv:119  %tmp_i_i1 = fmul float %tmp_73, %vw_int_3
 
-ST_171: tmp_3_i_i1 [3/4] 5.70ns
-_ifconv:120  %tmp_3_i_i1 = fmul float %tmp_74, %vx_int
-
-ST_171: tmp_i1_i1 [4/4] 5.70ns
-_ifconv:122  %tmp_i1_i1 = fmul float %tmp_73, %vy_int_2
-
-ST_171: tmp_3_i2_i1 [4/4] 5.70ns
-_ifconv:123  %tmp_3_i2_i1 = fmul float %tmp_74, %vz_int
+ <State 173>: 4.38ns
+ST_173: stg_615 [1/1] 4.38ns
+_ifconv:91  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_13)
 
 
- <State 172>: 5.70ns
-ST_172: stg_695 [1/1] 4.38ns
-_ifconv:91  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_42)
-
-ST_172: tmp_i_i1 [2/4] 5.70ns
-_ifconv:119  %tmp_i_i1 = fmul float %tmp_73, %vw_int_3
-
-ST_172: tmp_3_i_i1 [2/4] 5.70ns
-_ifconv:120  %tmp_3_i_i1 = fmul float %tmp_74, %vx_int
-
-ST_172: tmp_i1_i1 [3/4] 5.70ns
-_ifconv:122  %tmp_i1_i1 = fmul float %tmp_73, %vy_int_2
-
-ST_172: tmp_3_i2_i1 [3/4] 5.70ns
-_ifconv:123  %tmp_3_i2_i1 = fmul float %tmp_74, %vz_int
+ <State 174>: 4.38ns
+ST_174: stg_616 [1/1] 4.38ns
+_ifconv:92  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_14)
 
 
- <State 173>: 5.70ns
-ST_173: stg_700 [1/1] 4.38ns
-_ifconv:92  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_43)
-
-ST_173: tmp_i_i1 [1/4] 5.70ns
-_ifconv:119  %tmp_i_i1 = fmul float %tmp_73, %vw_int_3
-
-ST_173: tmp_3_i_i1 [1/4] 5.70ns
-_ifconv:120  %tmp_3_i_i1 = fmul float %tmp_74, %vx_int
-
-ST_173: tmp_i1_i1 [2/4] 5.70ns
-_ifconv:122  %tmp_i1_i1 = fmul float %tmp_73, %vy_int_2
-
-ST_173: tmp_3_i2_i1 [2/4] 5.70ns
-_ifconv:123  %tmp_3_i2_i1 = fmul float %tmp_74, %vz_int
-
-
- <State 174>: 7.26ns
-ST_174: stg_705 [1/1] 4.38ns
+ <State 175>: 4.38ns
+ST_175: stg_617 [1/1] 4.38ns
 _ifconv:93  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %uy_int)
 
-ST_174: tmp_61 [5/5] 7.26ns
-_ifconv:121  %tmp_61 = fadd float %tmp_i_i1, %tmp_3_i_i1
 
-ST_174: tmp_i1_i1 [1/4] 5.70ns
-_ifconv:122  %tmp_i1_i1 = fmul float %tmp_73, %vy_int_2
-
-ST_174: tmp_3_i2_i1 [1/4] 5.70ns
-_ifconv:123  %tmp_3_i2_i1 = fmul float %tmp_74, %vz_int
+ <State 176>: 4.38ns
+ST_176: stg_618 [1/1] 4.38ns
+_ifconv:94  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_13)
 
 
- <State 175>: 7.26ns
-ST_175: stg_709 [1/1] 4.38ns
-_ifconv:94  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_42)
+ <State 177>: 7.12ns
+ST_177: vw_int_to_int [1/1] 0.00ns
+_ifconv:68  %vw_int_to_int = bitcast float %vz_int_1 to i32
 
-ST_175: tmp_61 [4/5] 7.26ns
-_ifconv:121  %tmp_61 = fadd float %tmp_i_i1, %tmp_3_i_i1
+ST_177: vw_int_neg [1/1] 1.37ns
+_ifconv:69  %vw_int_neg = xor i32 %vw_int_to_int, -2147483648
 
-ST_175: tmp_62 [5/5] 7.26ns
-_ifconv:124  %tmp_62 = fadd float %tmp_i1_i1, %tmp_3_i2_i1
+ST_177: vw_int [1/1] 0.00ns
+_ifconv:70  %vw_int = bitcast i32 %vw_int_neg to float
 
+ST_177: vw_int_3 [1/1] 1.37ns
+_ifconv:72  %vw_int_3 = select i1 %tmp_6, float %vw_int, float %vz_int_1
 
- <State 176>: 7.26ns
-ST_176: stg_712 [1/1] 4.38ns
+ST_177: vx_int [1/1] 1.37ns
+_ifconv:73  %vx_int = select i1 %tmp_6, float %vy_int_1, float %vy_int
+
+ST_177: vy_int_2 [1/1] 1.37ns
+_ifconv:85  %vy_int_2 = select i1 %tmp_10, float %vy_int, float %vy_int_1
+
+ST_177: vz_int [1/1] 1.37ns
+_ifconv:86  %vz_int = select i1 %tmp_10, float %vw_int, float %vz_int_1
+
+ST_177: stg_626 [1/1] 4.38ns
 _ifconv:95  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %vw_int_3)
 
-ST_176: tmp_61 [3/5] 7.26ns
-_ifconv:121  %tmp_61 = fadd float %tmp_i_i1, %tmp_3_i_i1
 
-ST_176: tmp_62 [4/5] 7.26ns
-_ifconv:124  %tmp_62 = fadd float %tmp_i1_i1, %tmp_3_i2_i1
-
-
- <State 177>: 7.26ns
-ST_177: stg_715 [1/1] 4.38ns
+ <State 178>: 4.38ns
+ST_178: stg_627 [1/1] 4.38ns
 _ifconv:96  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %vy_int_2)
 
-ST_177: tmp_61 [2/5] 7.26ns
-_ifconv:121  %tmp_61 = fadd float %tmp_i_i1, %tmp_3_i_i1
 
-ST_177: tmp_62 [3/5] 7.26ns
-_ifconv:124  %tmp_62 = fadd float %tmp_i1_i1, %tmp_3_i2_i1
-
-ST_177: tmp_i4_i1 [4/4] 5.70ns
-_ifconv:125  %tmp_i4_i1 = fmul float %tmp_75, %vw_int_3
-
-ST_177: tmp_3_i5_i1 [4/4] 5.70ns
-_ifconv:126  %tmp_3_i5_i1 = fmul float %tmp_76, %vx_int
-
-
- <State 178>: 7.26ns
-ST_178: stg_720 [1/1] 4.38ns
+ <State 179>: 4.38ns
+ST_179: stg_628 [1/1] 4.38ns
 _ifconv:97  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %vx_int)
 
-ST_178: tmp_61 [1/5] 7.26ns
-_ifconv:121  %tmp_61 = fadd float %tmp_i_i1, %tmp_3_i_i1
 
-ST_178: tmp_62 [2/5] 7.26ns
-_ifconv:124  %tmp_62 = fadd float %tmp_i1_i1, %tmp_3_i2_i1
+ <State 180>: 4.38ns
+ST_180: empty_9 [1/1] 0.00ns
+_ifconv:0  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
 
-ST_178: tmp_i4_i1 [3/4] 5.70ns
-_ifconv:125  %tmp_i4_i1 = fmul float %tmp_75, %vw_int_3
+ST_180: stg_630 [1/1] 0.00ns
+_ifconv:1  call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str) nounwind
 
-ST_178: tmp_3_i5_i1 [3/4] 5.70ns
-_ifconv:126  %tmp_3_i5_i1 = fmul float %tmp_76, %vx_int
+ST_180: tmp_s [1/1] 0.00ns
+_ifconv:2  %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str)
 
-ST_178: tmp_i7_i1 [4/4] 5.70ns
-_ifconv:128  %tmp_i7_i1 = fmul float %tmp_75, %vy_int_2
+ST_180: stg_632 [1/1] 0.00ns
+_ifconv:3  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
 
-ST_178: tmp_3_i8_i1 [4/4] 5.70ns
-_ifconv:129  %tmp_3_i8_i1 = fmul float %tmp_76, %vz_int
-
-
- <State 179>: 7.26ns
-ST_179: stg_727 [1/1] 4.38ns
+ST_180: stg_633 [1/1] 4.38ns
 _ifconv:98  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %vz_int)
 
-ST_179: tmp_62 [1/5] 7.26ns
-_ifconv:124  %tmp_62 = fadd float %tmp_i1_i1, %tmp_3_i2_i1
+ST_180: empty_10 [1/1] 0.00ns
+_ifconv:99  %empty_10 = call i32 (...)* @_ssdm_op_SpecRegionEnd([14 x i8]* @p_str, i32 %tmp_s)
 
-ST_179: tmp_i4_i1 [2/4] 5.70ns
-_ifconv:125  %tmp_i4_i1 = fmul float %tmp_75, %vw_int_3
-
-ST_179: tmp_3_i5_i1 [2/4] 5.70ns
-_ifconv:126  %tmp_3_i5_i1 = fmul float %tmp_76, %vx_int
-
-ST_179: tmp_i7_i1 [3/4] 5.70ns
-_ifconv:128  %tmp_i7_i1 = fmul float %tmp_75, %vy_int_2
-
-ST_179: tmp_3_i8_i1 [3/4] 5.70ns
-_ifconv:129  %tmp_3_i8_i1 = fmul float %tmp_76, %vz_int
+ST_180: stg_635 [1/1] 0.00ns
+_ifconv:100  br label %1
 
 
- <State 180>: 5.70ns
-ST_180: tmp_i4_i1 [1/4] 5.70ns
-_ifconv:125  %tmp_i4_i1 = fmul float %tmp_75, %vw_int_3
-
-ST_180: tmp_3_i5_i1 [1/4] 5.70ns
-_ifconv:126  %tmp_3_i5_i1 = fmul float %tmp_76, %vx_int
-
-ST_180: tmp_i7_i1 [2/4] 5.70ns
-_ifconv:128  %tmp_i7_i1 = fmul float %tmp_75, %vy_int_2
-
-ST_180: tmp_3_i8_i1 [2/4] 5.70ns
-_ifconv:129  %tmp_3_i8_i1 = fmul float %tmp_76, %vz_int
-
-ST_180: stg_737 [1/1] 4.38ns
-_ifconv:131  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_57)
-
-
- <State 181>: 7.26ns
-ST_181: tmp_63 [5/5] 7.26ns
-_ifconv:127  %tmp_63 = fadd float %tmp_i4_i1, %tmp_3_i5_i1
-
-ST_181: tmp_i7_i1 [1/4] 5.70ns
-_ifconv:128  %tmp_i7_i1 = fmul float %tmp_75, %vy_int_2
-
-ST_181: tmp_3_i8_i1 [1/4] 5.70ns
-_ifconv:129  %tmp_3_i8_i1 = fmul float %tmp_76, %vz_int
-
-ST_181: stg_741 [1/1] 4.38ns
-_ifconv:132  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_58)
-
-
- <State 182>: 7.26ns
-ST_182: tmp_63 [4/5] 7.26ns
-_ifconv:127  %tmp_63 = fadd float %tmp_i4_i1, %tmp_3_i5_i1
-
-ST_182: tmp_64 [5/5] 7.26ns
-_ifconv:130  %tmp_64 = fadd float %tmp_i7_i1, %tmp_3_i8_i1
-
-ST_182: stg_744 [1/1] 4.38ns
-_ifconv:133  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_59)
-
-
- <State 183>: 7.26ns
-ST_183: tmp_63 [3/5] 7.26ns
-_ifconv:127  %tmp_63 = fadd float %tmp_i4_i1, %tmp_3_i5_i1
-
-ST_183: tmp_64 [4/5] 7.26ns
-_ifconv:130  %tmp_64 = fadd float %tmp_i7_i1, %tmp_3_i8_i1
-
-ST_183: stg_747 [1/1] 4.38ns
-_ifconv:134  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_60)
-
-
- <State 184>: 7.26ns
-ST_184: tmp_63 [2/5] 7.26ns
-_ifconv:127  %tmp_63 = fadd float %tmp_i4_i1, %tmp_3_i5_i1
-
-ST_184: tmp_64 [3/5] 7.26ns
-_ifconv:130  %tmp_64 = fadd float %tmp_i7_i1, %tmp_3_i8_i1
-
-ST_184: stg_750 [1/1] 4.38ns
-_ifconv:135  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_61)
-
-
- <State 185>: 7.26ns
-ST_185: tmp_63 [1/5] 7.26ns
-_ifconv:127  %tmp_63 = fadd float %tmp_i4_i1, %tmp_3_i5_i1
-
-ST_185: tmp_64 [2/5] 7.26ns
-_ifconv:130  %tmp_64 = fadd float %tmp_i7_i1, %tmp_3_i8_i1
-
-ST_185: stg_753 [1/1] 4.38ns
-_ifconv:136  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_62)
-
-
- <State 186>: 7.26ns
-ST_186: tmp_64 [1/5] 7.26ns
-_ifconv:130  %tmp_64 = fadd float %tmp_i7_i1, %tmp_3_i8_i1
-
-ST_186: stg_755 [1/1] 4.38ns
-_ifconv:137  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_63)
-
-
- <State 187>: 4.38ns
-ST_187: empty_19 [1/1] 0.00ns
-_ifconv:0  %empty_19 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
-
-ST_187: stg_757 [1/1] 0.00ns
-_ifconv:1  call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str7) nounwind
-
-ST_187: tmp_1 [1/1] 0.00ns
-_ifconv:2  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str7)
-
-ST_187: stg_759 [1/1] 0.00ns
-_ifconv:3  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind
-
-ST_187: stg_760 [1/1] 4.38ns
-_ifconv:138  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_64)
-
-ST_187: empty_20 [1/1] 0.00ns
-_ifconv:139  %empty_20 = call i32 (...)* @_ssdm_op_SpecRegionEnd([14 x i8]* @p_str7, i32 %tmp_1)
-
-ST_187: stg_762 [1/1] 0.00ns
-_ifconv:140  br label %1
-
-
- <State 188>: 0.00ns
-ST_188: stg_763 [1/1] 0.00ns
+ <State 181>: 0.00ns
+ST_181: stg_636 [1/1] 0.00ns
 :0  ret void
 
 
@@ -2756,13 +2368,6 @@ N/A
 	State 179
 	State 180
 	State 181
-	State 182
-	State 183
-	State 184
-	State 185
-	State 186
-	State 187
-	State 188
 
 
 ============================================================

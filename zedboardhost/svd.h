@@ -456,23 +456,6 @@ namespace svd {
           write (fdw, (void*)&(input), sizeof(input));
           input = S_block_buffer[proc][1][1];
           write (fdw, (void*)&(input), sizeof(input));
-
-          input = U_block_buffer[proc][0][0];
-          write (fdw, (void*)&(input), sizeof(input));
-          input = U_block_buffer[proc][0][1];
-          write (fdw, (void*)&(input), sizeof(input));
-          input = U_block_buffer[proc][1][0];
-          write (fdw, (void*)&(input), sizeof(input));
-          input = U_block_buffer[proc][1][1];
-          write (fdw, (void*)&(input), sizeof(input));
-          input = V_block_buffer[proc][0][0];
-          write (fdw, (void*)&(input), sizeof(input));
-          input = V_block_buffer[proc][0][1];
-          write (fdw, (void*)&(input), sizeof(input));
-          input = V_block_buffer[proc][1][0];
-          write (fdw, (void*)&(input), sizeof(input));
-          input = V_block_buffer[proc][1][1];
-          write (fdw, (void*)&(input), sizeof(input));
         }
 
         //dut(pca_in, pca_out);
@@ -483,49 +466,65 @@ namespace svd {
 
           // Update S on diagonal
           read (fdr, (void*)&output, sizeof(output));
-          S_block_buffer[proc][0][0] = output;
+          w_out = output;
           read (fdr, (void*)&output, sizeof(output));
-          S_block_buffer[proc][0][1] = output;
+          x_out = output;
           read (fdr, (void*)&output, sizeof(output));
-          S_block_buffer[proc][1][0] = output;
+          y_out = output;
           read (fdr, (void*)&output, sizeof(output));
-          S_block_buffer[proc][1][1] = output;
+          z_out = output;
+          S_block_buffer[proc][0][0] = w_out;
+          S_block_buffer[proc][0][1] = x_out;
+          S_block_buffer[proc][1][0] = y_out;
+          S_block_buffer[proc][1][1] = z_out;
 
           //log J,k
           read (fdr, (void*)&output, sizeof(output));
-          J2x2[proc][0][0] = output;
+          uw_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          J2x2[proc][0][1] = output;
+          ux_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          J2x2[proc][1][0] = output;
+          uy_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          J2x2[proc][1][1] = output;
+          uz_new = output;
+          J2x2[proc][0][0] = uw_new;
+          J2x2[proc][0][1] = ux_new;
+          J2x2[proc][1][0] = uy_new;
+          J2x2[proc][1][1] = uz_new;
 
           read (fdr, (void*)&output, sizeof(output));
-          K2x2[proc][0][0] = output;
+          vw_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          K2x2[proc][0][1] = output;
+          vx_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          K2x2[proc][1][0] = output;
+          vy_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          K2x2[proc][1][1] = output;
+          vz_new = output;
+          K2x2[proc][0][0] = vw_new;
+          K2x2[proc][0][1] = vx_new;
+          K2x2[proc][1][0] = vy_new;
+          K2x2[proc][1][1] = vz_new;
 
-          read (fdr, (void*)&output, sizeof(output));
-          U_block_buffer[proc][0][0] = output;
-          read (fdr, (void*)&output, sizeof(output));
-          U_block_buffer[proc][0][1] = output;
-          read (fdr, (void*)&output, sizeof(output));
-          U_block_buffer[proc][1][0] = output;
-          read (fdr, (void*)&output, sizeof(output));
-          U_block_buffer[proc][1][1] = output;
-          read (fdr, (void*)&output, sizeof(output));
-          V_block_buffer[proc][0][0] = output;
-          read (fdr, (void*)&output, sizeof(output));
-          V_block_buffer[proc][0][1] = output;
-          read (fdr, (void*)&output, sizeof(output));
-          V_block_buffer[proc][1][0] = output;
-          read (fdr, (void*)&output, sizeof(output));
-          V_block_buffer[proc][1][1] = output;
+          uw_in = U_block_buffer[proc][0][0];
+          ux_in = U_block_buffer[proc][0][1];
+          uy_in = U_block_buffer[proc][1][0];
+          uz_in = U_block_buffer[proc][1][1];
+          vw_in = V_block_buffer[proc][0][0];
+          vx_in = V_block_buffer[proc][0][1];
+          vy_in = V_block_buffer[proc][1][0];
+          vz_in = V_block_buffer[proc][1][1];
+
+          mm2x2(uw_in, ux_in, uy_in, uz_in, uw_new, ux_new, uy_new, uz_new, uw_out, ux_out, uy_out, uz_out);
+          mm2x2(vw_in, vx_in, vy_in, vz_in, vw_new, vx_new, vy_new, vz_new, vw_out, vx_out, vy_out, vz_out);
+
+          U_block_buffer[proc][0][0] = uw_out;
+          U_block_buffer[proc][0][1] = ux_out;
+          U_block_buffer[proc][1][0] = uy_out;
+          U_block_buffer[proc][1][1] = uz_out;
+          V_block_buffer[proc][0][0] = vw_out;
+          V_block_buffer[proc][0][1] = vx_out;
+          V_block_buffer[proc][1][0] = vy_out;
+          V_block_buffer[proc][1][1] = vz_out;
 
         }
 
@@ -569,8 +568,6 @@ namespace svd {
         }
 
         //update 2 cols
-        input = 2;
-        write (fdw, (void*)&(input), sizeof(input));
         for (int proc = 0; proc < n_proc; proc++){
           // 2 cols update
           for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
@@ -582,62 +579,38 @@ namespace svd {
             }
             if (top_left == RowsA || bottom_right == RowsA) continue;
             if (off_row != bottom_right && off_row != top_left) {
-              input = S_c_buffer[proc][off_row][0];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = V_c_buffer[proc][off_row][0];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = U_c_buffer[proc][off_row][0];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = S_c_buffer[proc][off_row][1];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = V_c_buffer[proc][off_row][1];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = U_c_buffer[proc][off_row][1];
-              write (fdw, (void*)&(input), sizeof(input));
+              w_in  = S_c_buffer[proc][off_row][0];
+              vw_in = V_c_buffer[proc][off_row][0];
+              uw_in = U_c_buffer[proc][off_row][0];
 
-              input = K2x2[proc][0][0];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = K2x2[proc][0][1];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = K2x2[proc][1][0];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = K2x2[proc][1][1];
-              write (fdw, (void*)&(input), sizeof(input));
+              x_in  = S_c_buffer[proc][off_row][1];
+              vx_in = V_c_buffer[proc][off_row][1];
+              ux_in = U_c_buffer[proc][off_row][1];
 
-              input = J2x2[proc][0][0];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = J2x2[proc][0][1];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = J2x2[proc][1][0];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = J2x2[proc][1][1];
-              write (fdw, (void*)&(input), sizeof(input));
-            }
-          }
-        }
-        //dut(pca_in, pca_out);
-        for (int proc = 0; proc < n_proc; proc++){
-          // 2 cols update
-          for (int off_row = 0; off_row < SVDTraits::MIN_DIM; off_row++) {
-            //#pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
-            if (off_row == 0) {
-              init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
-            }
-            if (top_left == RowsA || bottom_right == RowsA) continue;
-            if (off_row != bottom_right && off_row != top_left) {
+              vw_new = K2x2[proc][0][0];
+              vx_new = K2x2[proc][0][1];
+              vy_new = K2x2[proc][1][0];
+              vz_new = K2x2[proc][1][1];
+
+              uw_new = J2x2[proc][0][0];
+              ux_new = J2x2[proc][0][1];
+              uy_new = J2x2[proc][1][0];
+              uz_new = J2x2[proc][1][1];
+
+              vm2x1(w_in,vw_new,x_in,vy_new,w_out);
+              vm2x1(w_in,vx_new,x_in,vz_new,x_out);
+              vm2x1(vw_in,vw_new,vx_in,vy_new,vw_out);
+              vm2x1(vw_in,vx_new,vx_in,vz_new,vx_out);
+              vm2x1(uw_in,uw_new,ux_in,uy_new,uw_out);
+              vm2x1(uw_in,ux_new,ux_in,uz_new,ux_out);
+
               //Store off-diagonal updates
-              read (fdr, (void*)&output, sizeof(output));
-              S_c_buffer[proc][off_row][0] = output;
-              read (fdr, (void*)&output, sizeof(output));
-              S_c_buffer[proc][off_row][1] = output;
-              read (fdr, (void*)&output, sizeof(output));
-              V_c_buffer[proc][off_row][0] = output;
-              read (fdr, (void*)&output, sizeof(output));
-              V_c_buffer[proc][off_row][1] = output;
-              read (fdr, (void*)&output, sizeof(output));
-              U_c_buffer[proc][off_row][0] = output;
-              read (fdr, (void*)&output, sizeof(output));
-              U_c_buffer[proc][off_row][1] = output;
+              S_c_buffer[proc][off_row][0] = w_out ;
+              S_c_buffer[proc][off_row][1] = x_out ;
+              V_c_buffer[proc][off_row][0] = vw_out;
+              V_c_buffer[proc][off_row][1] = vx_out;
+              U_c_buffer[proc][off_row][0] = uw_out;
+              U_c_buffer[proc][off_row][1] = ux_out;
             }
           }
         }
@@ -671,8 +644,6 @@ namespace svd {
         }
         
         //update 2 rows
-        input = 3;
-        write (fdw, (void*)&(input), sizeof(input));
         for (int proc = 0; proc < n_proc; proc++){
           // Off-diagonal
           // 2 rows updates
@@ -686,37 +657,21 @@ namespace svd {
             //#pragma HLS PIPELINE //II = SVDTraits::OFF_DIAG_II
             if (off_col != bottom_right && off_col != top_left) {
 
-              input = J2x2[proc][0][0];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = J2x2[proc][0][1];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = J2x2[proc][1][0];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = J2x2[proc][1][1];
-              write (fdw, (void*)&(input), sizeof(input));
+              uw_new = J2x2[proc][0][0];
+              ux_new = J2x2[proc][0][1];
+              uy_new = J2x2[proc][1][0];
+              uz_new = J2x2[proc][1][1];
 
-              input = S_r_buffer[proc][0][off_col];
-              write (fdw, (void*)&(input), sizeof(input));
-              input = S_r_buffer[proc][1][off_col];
-              write (fdw, (void*)&(input), sizeof(input));
-            }
-          }
-        }
+              w_in = S_r_buffer[proc][0][off_col];
+              y_in = S_r_buffer[proc][1][off_col];
+       
+              // U must be Hermitian transposed before it is applied to A
+              vm2x1(hls::x_conj(uw_new),w_in,hls::x_conj(uy_new),y_in,w_out);
+              vm2x1(hls::x_conj(ux_new),w_in,hls::x_conj(uz_new),y_in,y_out);
 
-        //dut(pca_in, pca_out);
-
-        for (int proc = 0; proc < n_proc; proc++){
-          // Off-diagonal
-          // 2 rows updates
-          for (int off_col = 0; off_col < SVDTraits::MIN_DIM; off_col++) {
-            if (off_col == 0) init_block_index(top_left, bottom_right, diag_1[proc], diag_2[proc]);
-            if (top_left == RowsA || bottom_right == RowsA) continue;
-            if (off_col != bottom_right && off_col != top_left) {
               //Store off-diagonal updates
-              read (fdr, (void*)&output, sizeof(output));
-              S_r_buffer[proc][0][off_col] = output;
-              read (fdr, (void*)&output, sizeof(output));
-              S_r_buffer[proc][1][off_col] = output;
+              S_r_buffer[proc][0][off_col] = w_out;
+              S_r_buffer[proc][1][off_col] = y_out;
             }
           }
         }

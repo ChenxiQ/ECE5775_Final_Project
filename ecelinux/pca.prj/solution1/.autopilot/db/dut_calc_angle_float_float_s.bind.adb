@@ -973,7 +973,7 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>tmp_78</name>
+						<name>tmp_25</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>309</lineNumber>
@@ -1140,7 +1140,7 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>tmp_16</name>
+						<name>tmp_17</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>309</lineNumber>
@@ -1196,7 +1196,7 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>tmp_17</name>
+						<name>tmp_18</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>32</lineNumber>
@@ -1245,7 +1245,7 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>tmp_18</name>
+						<name>tmp_19</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>32</lineNumber>
@@ -1344,7 +1344,7 @@
 					<Obj>
 						<type>0</type>
 						<id>31</id>
-						<name>tmp_2</name>
+						<name>tmp_9</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>186</lineNumber>
@@ -1658,7 +1658,7 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>tmp_19</name>
+						<name>tmp_20</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>186</lineNumber>
@@ -1702,7 +1702,7 @@
 					<Obj>
 						<type>0</type>
 						<id>39</id>
-						<name>tmp_79</name>
+						<name>tmp_26</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>186</lineNumber>
@@ -2010,7 +2010,7 @@
 					<Obj>
 						<type>0</type>
 						<id>47</id>
-						<name>tmp_8</name>
+						<name>tmp_6</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>197</lineNumber>
@@ -2121,7 +2121,7 @@
 					<Obj>
 						<type>0</type>
 						<id>51</id>
-						<name>tmp_7</name>
+						<name>tmp_5</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>195</lineNumber>
@@ -2360,7 +2360,7 @@
 					<Obj>
 						<type>0</type>
 						<id>58</id>
-						<name>tmp_i_i2</name>
+						<name>tmp_i_i1</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>416</lineNumber>
@@ -2465,7 +2465,7 @@
 					<Obj>
 						<type>0</type>
 						<id>60</id>
-						<name>tmp_4</name>
+						<name>tmp_2</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>202</lineNumber>
@@ -2534,7 +2534,7 @@
 					<Obj>
 						<type>0</type>
 						<id>63</id>
-						<name>tmp_77</name>
+						<name>tmp_24</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>309</lineNumber>
@@ -2701,7 +2701,7 @@
 					<Obj>
 						<type>0</type>
 						<id>66</id>
-						<name>tmp_24</name>
+						<name>tmp_14</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>309</lineNumber>
@@ -2757,7 +2757,7 @@
 					<Obj>
 						<type>0</type>
 						<id>67</id>
-						<name>tmp_25</name>
+						<name>tmp_15</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>17</lineNumber>
@@ -2806,7 +2806,7 @@
 					<Obj>
 						<type>0</type>
 						<id>68</id>
-						<name>tmp_26</name>
+						<name>tmp_16</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>17</lineNumber>
@@ -3106,7 +3106,7 @@
 					<Obj>
 						<type>0</type>
 						<id>75</id>
-						<name>tmp_12</name>
+						<name>tmp_11</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>309</lineNumber>
@@ -3162,7 +3162,7 @@
 					<Obj>
 						<type>0</type>
 						<id>76</id>
-						<name>tmp_13</name>
+						<name>tmp_12</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>17</lineNumber>
@@ -3211,7 +3211,7 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>tmp_14</name>
+						<name>tmp_13</name>
 						<fileName>./svd.h</fileName>
 						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>17</lineNumber>
@@ -10325,7 +10325,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_12_fu_300</first>
+			<first>tmp_11_fu_300</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -10333,7 +10333,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_14_fu_304</first>
+			<first>tmp_13_fu_304</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -10341,7 +10341,23 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_16_fu_309</first>
+			<first>tmp_14_fu_368</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>66</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_16_fu_372</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>68</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_17_fu_309</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -10349,7 +10365,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_18_fu_313</first>
+			<first>tmp_19_fu_313</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -10357,7 +10373,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_19_fu_330</first>
+			<first>tmp_20_fu_330</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -10389,23 +10405,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_24_fu_368</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>66</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_26_fu_372</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>68</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_77_fu_274</first>
+			<first>tmp_24_fu_274</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -10413,7 +10413,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_78_fu_264</first>
+			<first>tmp_25_fu_264</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -10421,7 +10421,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_79_fu_340</first>
+			<first>tmp_26_fu_340</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -11227,7 +11227,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_13_reg_469</first>
+			<first>tmp_12_reg_469</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -11235,7 +11235,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_14_reg_474</first>
+			<first>tmp_13_reg_474</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -11243,7 +11243,15 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_17_reg_439</first>
+			<first>tmp_15_reg_454</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>67</item>
+			</second>
+		</item>
+		<item>
+			<first>tmp_18_reg_439</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -11259,15 +11267,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_25_reg_454</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>67</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_2_reg_487</first>
+			<first>tmp_9_reg_487</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -11275,7 +11275,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_i_i2_reg_541</first>
+			<first>tmp_i_i1_reg_541</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date              : Tue Dec  6 07:06:58 2022
+| Date              : Thu Dec  8 09:23:12 2022
 | Host              : en-ec-ecelinux-16.coecis.cornell.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command           : report_clock_utilization -file xillydemo_clock_utilization_routed.rpt
 | Design            : xillydemo
@@ -52,8 +52,8 @@ Table of Contents
 +-------+-------+-----------------+------------+----------------+--------------+------+-------------------+---------------+-------------+-----------------+--------------+---------------------+-----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
 | GlbID | SrcId | Driver Type/Pin | Constraint | Site           | Clock Region | Root | Clock Delay Group | Clock Regions | Clock Loads | Non-Clock Loads | Clock Period | Clock               | Driver Pin                                                                                          | Net                                                                             |
 +-------+-------+-----------------+------------+----------------+--------------+------+-------------------+---------------+-------------+-----------------+--------------+---------------------+-----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
-| g0    | src0  | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |      |                   |             6 |       18326 |               0 |       10.000 | clk_fpga_1          | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1       |
-| g1    | src1  | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |      |                   |             3 |         194 |               0 |       15.385 | vga_clk_ins/clkout0 | xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk_ins/clkout1_buf/O   | xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk |
+| g0    | src0  | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |      |                   |             6 |       14499 |               0 |       10.000 | clk_fpga_1          | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG/O | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1       |
+| g1    | src1  | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |      |                   |             2 |         194 |               0 |       15.385 | vga_clk_ins/clkout0 | xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk_ins/clkout1_buf/O   | xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk |
 | g2    | src2  | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |      |                   |             2 |           4 |               0 |       10.000 | gclk                | clk_100_IBUF_BUFG_inst/O                                                                            | clk_100_IBUF_BUFG                                                               |
 +-------+-------+-----------------+------------+----------------+--------------+------+-------------------+---------------+-------------+-----------------+--------------+---------------------+-----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
@@ -89,12 +89,12 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    3 |    50 |    2 |    50 |  197 | 20000 |   12 |  4000 |    0 |     0 |    0 |    30 |    0 |    60 |
-| X1Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |   14 |    50 |   50 | 25600 |    3 |  3400 |    0 |     0 |    0 |    30 |    0 |    40 |
-| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 2508 |  9600 |  110 |  1600 |    0 |     0 |    0 |    10 |    5 |    20 |
-| X1Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3740 | 20800 |  218 |  3400 |    0 |     0 |    0 |    30 |   15 |    40 |
-| X0Y2              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1683 |  9600 |   57 |  1600 |    0 |     0 |    0 |    10 |    9 |    20 |
-| X1Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 4148 | 20800 |  151 |  3400 |    0 |     0 |    0 |    30 |   22 |    40 |
+| X0Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    3 |    50 |    2 |    50 |  561 | 20000 |    9 |  4000 |    0 |     0 |    0 |    30 |    0 |    60 |
+| X1Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |   14 |    50 |  319 | 25600 |    5 |  3400 |    0 |     0 |    0 |    30 |    0 |    40 |
+| X0Y1              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 2665 |  9600 |  138 |  1600 |    0 |     0 |    0 |    10 |   11 |    20 |
+| X1Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2394 | 20800 |  147 |  3400 |    0 |     0 |    0 |    30 |    2 |    40 |
+| X0Y2              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 1471 |  9600 |   40 |  1600 |    0 |     0 |    0 |    10 |    7 |    20 |
+| X1Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 2503 | 20800 |  110 |  3400 |    0 |     0 |    0 |    30 |   11 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Used Global Clocks includes only global clock resources based on load placement but does not consider global clock resources used to traverse a clock region. Therefore the actual total of Used Global Clocks may be higher.
 ** RAMB36 site can be used as two RAMB18/FIFO18 sites.
@@ -107,7 +107,7 @@ Table of Contents
 |    | X0 | X1 |
 +----+----+----+
 | Y2 |  1 |  1 |
-| Y1 |  2 |  1 |
+| Y1 |  1 |  1 |
 | Y0 |  3 |  3 |
 +----+----+----+
 * Used Global Clocks includes only global clock resources based on load placement but does not consider global clock resources used to traverse a clock region. Therefore the actual total of Used Global Clocks may be higher.
@@ -119,8 +119,8 @@ Table of Contents
 +-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
 | GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                             |
 +-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
-| g0    | n/a   | BUFG/O          | None       |           0 |             133 | 128 |      8 |    0 |   0 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1       |
-| g1    | n/a   | BUFG/O          | None       |           0 |              73 |  71 |      6 |    0 |   0 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk |
+| g0    | n/a   | BUFG/O          | None       |           0 |             455 | 450 |      4 |    0 |   0 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1       |
+| g1    | n/a   | BUFG/O          | None       |           0 |             114 | 112 |      6 |    0 |   0 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk |
 | g2    | n/a   | BUFG/O          | None       |           0 |               2 |   1 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | clk_100_IBUF_BUFG                                                               |
 +-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
@@ -129,25 +129,24 @@ Table of Contents
 8. Cell Type Counts per Global Clock: Region X1Y0
 -------------------------------------------------
 
-+-------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
-| GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                             |
-+-------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
-| g0    | n/a   | BUFG/O          | None       |           0 |              50 | 50 |      3 |    0 |   0 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1       |
-| g1    | n/a   | BUFG/O          | None       |           0 |              14 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk |
-| g2    | n/a   | BUFG/O          | None       |           1 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   1 |       0 | clk_100_IBUF_BUFG                                                               |
-+-------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
++-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
+| GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                             |
++-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
+| g0    | n/a   | BUFG/O          | None       |           0 |             321 | 319 |      5 |    0 |   0 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1       |
+| g1    | n/a   | BUFG/O          | None       |           0 |              14 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk |
+| g2    | n/a   | BUFG/O          | None       |           1 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   1 |       0 | clk_100_IBUF_BUFG                                                               |
++-------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
 
 
 9. Cell Type Counts per Global Clock: Region X0Y1
 -------------------------------------------------
 
-+-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
-| GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                             |
-+-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
-| g0    | n/a   | BUFG/O          | None       |           0 |            2491 | 2486 |    110 |    0 |   5 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1       |
-| g1    | n/a   | BUFG/O          | None       |           0 |              23 |   23 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk |
-+-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------+
++-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
+| GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                       |
++-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
+| g0    | n/a   | BUFG/O          | None       |           0 |            2678 | 2665 |    138 |    1 |  11 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1 |
++-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
 
 
@@ -157,7 +156,7 @@ Table of Contents
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
 | GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                       |
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
-| g0    | n/a   | BUFG/O          | None       |           0 |            3762 | 3740 |    218 |    2 |  15 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1 |
+| g0    | n/a   | BUFG/O          | None       |           0 |            2400 | 2394 |    147 |    1 |   2 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1 |
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
 
@@ -168,7 +167,7 @@ Table of Contents
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
 | GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                       |
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
-| g0    | n/a   | BUFG/O          | None       |           0 |            1694 | 1683 |     57 |    0 |   9 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1 |
+| g0    | n/a   | BUFG/O          | None       |           0 |            1479 | 1471 |     40 |    0 |   7 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1 |
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
 
@@ -179,7 +178,7 @@ Table of Contents
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
 | GlbID | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                       |
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
-| g0    | n/a   | BUFG/O          | None       |           0 |            4171 | 4148 |    151 |    0 |  22 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1 |
+| g0    | n/a   | BUFG/O          | None       |           0 |            2514 | 2503 |    110 |    0 |  11 |  0 |    0 |   0 |       0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1 |
 +-------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------+
 * Note: Multiple constraint types applied to the driver. Please check for potential conflicts.
 
@@ -190,16 +189,16 @@ Table of Contents
 +-------+-----------------+-------------------+------------+-------------+---------------+----------+-------------+----------+-------------+----+---------------------------------------------------------------------------+
 | GlbID | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clock Loads | GT | Net                                                                       |
 +-------+-----------------+-------------------+------------+-------------+---------------+----------+-------------+----------+-------------+----+---------------------------------------------------------------------------+
-| g0    | BUFG/O          | n/a               | clk_fpga_1 |      10.000 | {0.000 5.000} |          |       12301 |        0 |           0 |  0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1 |
+| g0    | BUFG/O          | n/a               | clk_fpga_1 |      10.000 | {0.000 5.000} |          |        9847 |        0 |           0 |  0 | xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1 |
 +-------+-----------------+-------------------+------------+-------------+---------------+----------+-------------+----------+-------------+----+---------------------------------------------------------------------------+
 
 
 +----+-------+-------+
 |    | X0    | X1    |
 +----+-------+-------+
-| Y2 |  1694 |  4171 |
-| Y1 |  2491 |  3762 |
-| Y0 |   133 |    50 |
+| Y2 |  1479 |  2514 |
+| Y1 |  2678 |  2400 |
+| Y0 |   455 |   321 |
 +----+-------+-------+
 
 
@@ -209,17 +208,17 @@ Table of Contents
 +-------+-----------------+-------------------+---------------------+-------------+---------------+----------+-------------+----------+-------------+----+---------------------------------------------------------------------------------+
 | GlbID | Driver Type/Pin | Driver Region (D) | Clock               | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clock Loads | GT | Net                                                                             |
 +-------+-----------------+-------------------+---------------------+-------------+---------------+----------+-------------+----------+-------------+----+---------------------------------------------------------------------------------+
-| g1    | BUFG/O          | n/a               | vga_clk_ins/clkout0 |      15.385 | {0.000 7.692} |          |         110 |        0 |           0 |  0 | xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk |
+| g1    | BUFG/O          | n/a               | vga_clk_ins/clkout0 |      15.385 | {0.000 7.692} |          |         128 |        0 |           0 |  0 | xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk |
 +-------+-----------------+-------------------+---------------------+-------------+---------------+----------+-------------+----------+-------------+----+---------------------------------------------------------------------------------+
 
 
-+----+-----+-----+
-|    | X0  | X1  |
-+----+-----+-----+
-| Y2 |   0 |   0 |
-| Y1 |  23 |   0 |
-| Y0 |  73 |  14 |
-+----+-----+-----+
++----+------+-----+
+|    | X0   | X1  |
++----+------+-----+
+| Y2 |    0 |   0 |
+| Y1 |    0 |   0 |
+| Y0 |  114 |  14 |
++----+------+-----+
 
 
 15. Load Cell Placement Summary for Global Clock g2
@@ -256,7 +255,7 @@ set_property LOC IOB_X0Y26 [get_ports clk_100]
 #startgroup
 create_pblock {CLKAG_xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk}
 add_cells_to_pblock [get_pblocks  {CLKAG_xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk"}]]]
-resize_pblock [get_pblocks {CLKAG_xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+resize_pblock [get_pblocks {CLKAG_xillybus_ins/system_i/vivado_system_i/xillyvga_0/inst/xillyvga_core_ins/vga_clk}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
 #endgroup
 
 # Clock net "xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/FCLK_CLK1" driven by instance "xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst/buffer_fclk_clk_1.FCLK_CLK_1_BUFG" located at site "BUFGCTRL_X0Y16"

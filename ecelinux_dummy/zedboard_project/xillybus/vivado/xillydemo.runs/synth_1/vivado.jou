@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Dec  8 09:25:48 2022
+# Process ID: 46320
+# Current directory: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1
+# Command line: vivado -log xillydemo.vds -mode batch -messageDb vivado.pb -notrace -source xillydemo.tcl
+# Log file: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/xillydemo.vds
+# Journal file: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source xillydemo.tcl -notrace

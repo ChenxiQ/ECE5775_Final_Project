@@ -1,0 +1,55 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="vm2x1_base" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="svd_alt" label="rd_buffer" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_rd_diag" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="calc_svd" label="svd_calc_diag" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_wb_diag" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_rd_off_r" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="update_off_diag_r" label="svd_calc_off_r" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_wb_off_r" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_rd_off_c" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="update_off_diag_c" label="svd_calc_off_c" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="svd_wb_off_c" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="svd_alt" label="wb_buffer" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="matmul" label="LOOP_ST_A" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="matmul" label="LOOP_DOT_PROD" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="backproj" label="LOOP_ST_A" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="backproj" label="LOOP_DOT_PROD" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

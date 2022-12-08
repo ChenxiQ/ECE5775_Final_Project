@@ -67,7 +67,7 @@ void dut_calc_angle_float_float_s::thread_grp_fu_100_ce() {
 }
 
 void dut_calc_angle_float_float_s::thread_grp_fu_100_p0() {
-    grp_fu_100_p0 = (!tmp_18_fu_313_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_18_fu_313_p2.read()[0].to_bool())? ap_const_lv32_3F800000: ap_const_lv32_BF800000);
+    grp_fu_100_p0 = (!tmp_19_fu_313_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_19_fu_313_p2.read()[0].to_bool())? ap_const_lv32_3F800000: ap_const_lv32_BF800000);
 }
 
 void dut_calc_angle_float_float_s::thread_grp_fu_104_ce() {
@@ -291,19 +291,19 @@ void dut_calc_angle_float_float_s::thread_notlhs5_fu_278_p2() {
 }
 
 void dut_calc_angle_float_float_s::thread_notlhs9_fu_344_p2() {
-    notlhs9_fu_344_p2 = (!tmp_19_fu_330_p4.read().is_01() || !ap_const_lv8_FF.is_01())? sc_lv<1>(): sc_lv<1>(tmp_19_fu_330_p4.read() != ap_const_lv8_FF);
+    notlhs9_fu_344_p2 = (!tmp_20_fu_330_p4.read().is_01() || !ap_const_lv8_FF.is_01())? sc_lv<1>(): sc_lv<1>(tmp_20_fu_330_p4.read() != ap_const_lv8_FF);
 }
 
 void dut_calc_angle_float_float_s::thread_notrhs1_fu_350_p2() {
-    notrhs1_fu_350_p2 = (!tmp_79_fu_340_p1.read().is_01() || !ap_const_lv23_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_79_fu_340_p1.read() == ap_const_lv23_0);
+    notrhs1_fu_350_p2 = (!tmp_26_fu_340_p1.read().is_01() || !ap_const_lv23_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_26_fu_340_p1.read() == ap_const_lv23_0);
 }
 
 void dut_calc_angle_float_float_s::thread_notrhs6_fu_284_p2() {
-    notrhs6_fu_284_p2 = (!tmp_77_fu_274_p1.read().is_01() || !ap_const_lv23_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_77_fu_274_p1.read() == ap_const_lv23_0);
+    notrhs6_fu_284_p2 = (!tmp_24_fu_274_p1.read().is_01() || !ap_const_lv23_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_24_fu_274_p1.read() == ap_const_lv23_0);
 }
 
 void dut_calc_angle_float_float_s::thread_notrhs8_fu_268_p2() {
-    notrhs8_fu_268_p2 = (!tmp_78_fu_264_p1.read().is_01() || !ap_const_lv23_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_78_fu_264_p1.read() == ap_const_lv23_0);
+    notrhs8_fu_268_p2 = (!tmp_25_fu_264_p1.read().is_01() || !ap_const_lv23_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_25_fu_264_p1.read() == ap_const_lv23_0);
 }
 
 void dut_calc_angle_float_float_s::thread_notrhs_fu_294_p2() {
@@ -319,7 +319,7 @@ void dut_calc_angle_float_float_s::thread_notrhs_i_fu_228_p2() {
 }
 
 void dut_calc_angle_float_float_s::thread_p_1_fu_392_p3() {
-    p_1_fu_392_p3 = (!ap_reg_ppstg_tmp_14_reg_474_pp0_iter116.read()[0].is_01())? sc_lv<32>(): ((ap_reg_ppstg_tmp_14_reg_474_pp0_iter116.read()[0].to_bool())? ap_const_lv32_3F800000: ap_const_lv32_0);
+    p_1_fu_392_p3 = (!ap_reg_ppstg_tmp_13_reg_474_pp0_iter116.read()[0].is_01())? sc_lv<32>(): ((ap_reg_ppstg_tmp_13_reg_474_pp0_iter116.read()[0].to_bool())? ap_const_lv32_3F800000: ap_const_lv32_0);
 }
 
 void dut_calc_angle_float_float_s::thread_p_Val2_7_fu_194_p1() {
@@ -331,7 +331,7 @@ void dut_calc_angle_float_float_s::thread_p_Val2_s_fu_179_p1() {
 }
 
 void dut_calc_angle_float_float_s::thread_p_s_fu_385_p3() {
-    p_s_fu_385_p3 = (!ap_reg_ppstg_tmp_14_reg_474_pp0_iter116.read()[0].is_01())? sc_lv<32>(): ((ap_reg_ppstg_tmp_14_reg_474_pp0_iter116.read()[0].to_bool())? ap_const_lv32_0: ap_const_lv32_3F800000);
+    p_s_fu_385_p3 = (!ap_reg_ppstg_tmp_13_reg_474_pp0_iter116.read()[0].is_01())? sc_lv<32>(): ((ap_reg_ppstg_tmp_13_reg_474_pp0_iter116.read()[0].to_bool())? ap_const_lv32_0: ap_const_lv32_3F800000);
 }
 
 void dut_calc_angle_float_float_s::thread_r_V_1_fu_240_p2() {
@@ -352,27 +352,35 @@ void dut_calc_angle_float_float_s::thread_sinThetaAdiv2_write_assign_phi_fu_71_p
 }
 
 void dut_calc_angle_float_float_s::thread_storemerge1_fu_377_p3() {
-    storemerge1_fu_377_p3 = (!tmp_26_fu_372_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_26_fu_372_p2.read()[0].to_bool())? ap_const_lv32_BF3504F3: ap_const_lv32_3F3504F3);
+    storemerge1_fu_377_p3 = (!tmp_16_fu_372_p2.read()[0].is_01())? sc_lv<32>(): ((tmp_16_fu_372_p2.read()[0].to_bool())? ap_const_lv32_BF3504F3: ap_const_lv32_3F3504F3);
 }
 
-void dut_calc_angle_float_float_s::thread_tmp_12_fu_300_p2() {
-    tmp_12_fu_300_p2 = (notrhs_reg_464.read() | notlhs_reg_459.read());
+void dut_calc_angle_float_float_s::thread_tmp_11_fu_300_p2() {
+    tmp_11_fu_300_p2 = (notrhs_reg_464.read() | notlhs_reg_459.read());
 }
 
-void dut_calc_angle_float_float_s::thread_tmp_14_fu_304_p2() {
-    tmp_14_fu_304_p2 = (tmp_12_fu_300_p2.read() & tmp_13_reg_469.read());
+void dut_calc_angle_float_float_s::thread_tmp_13_fu_304_p2() {
+    tmp_13_fu_304_p2 = (tmp_11_fu_300_p2.read() & tmp_12_reg_469.read());
 }
 
-void dut_calc_angle_float_float_s::thread_tmp_16_fu_309_p2() {
-    tmp_16_fu_309_p2 = (ap_reg_ppstg_notrhs8_reg_434_pp0_iter52.read() | ap_reg_ppstg_notlhs7_reg_429_pp0_iter52.read());
+void dut_calc_angle_float_float_s::thread_tmp_14_fu_368_p2() {
+    tmp_14_fu_368_p2 = (ap_reg_ppstg_notrhs6_reg_449_pp0_iter116.read() | ap_reg_ppstg_notlhs5_reg_444_pp0_iter116.read());
 }
 
-void dut_calc_angle_float_float_s::thread_tmp_18_fu_313_p2() {
-    tmp_18_fu_313_p2 = (tmp_16_fu_309_p2.read() & ap_reg_ppstg_tmp_17_reg_439_pp0_iter52.read());
+void dut_calc_angle_float_float_s::thread_tmp_16_fu_372_p2() {
+    tmp_16_fu_372_p2 = (tmp_14_fu_368_p2.read() & ap_reg_ppstg_tmp_15_reg_454_pp0_iter116.read());
 }
 
-void dut_calc_angle_float_float_s::thread_tmp_19_fu_330_p4() {
-    tmp_19_fu_330_p4 = cosThetaA_int_to_int_fu_327_p1.read().range(30, 23);
+void dut_calc_angle_float_float_s::thread_tmp_17_fu_309_p2() {
+    tmp_17_fu_309_p2 = (ap_reg_ppstg_notrhs8_reg_434_pp0_iter52.read() | ap_reg_ppstg_notlhs7_reg_429_pp0_iter52.read());
+}
+
+void dut_calc_angle_float_float_s::thread_tmp_19_fu_313_p2() {
+    tmp_19_fu_313_p2 = (tmp_17_fu_309_p2.read() & ap_reg_ppstg_tmp_18_reg_439_pp0_iter52.read());
+}
+
+void dut_calc_angle_float_float_s::thread_tmp_20_fu_330_p4() {
+    tmp_20_fu_330_p4 = cosThetaA_int_to_int_fu_327_p1.read().range(30, 23);
 }
 
 void dut_calc_angle_float_float_s::thread_tmp_21_fu_356_p2() {
@@ -383,24 +391,16 @@ void dut_calc_angle_float_float_s::thread_tmp_23_fu_362_p2() {
     tmp_23_fu_362_p2 = (tmp_21_fu_356_p2.read() & tmp_22_fu_147_p2.read());
 }
 
-void dut_calc_angle_float_float_s::thread_tmp_24_fu_368_p2() {
-    tmp_24_fu_368_p2 = (ap_reg_ppstg_notrhs6_reg_449_pp0_iter116.read() | ap_reg_ppstg_notlhs5_reg_444_pp0_iter116.read());
+void dut_calc_angle_float_float_s::thread_tmp_24_fu_274_p1() {
+    tmp_24_fu_274_p1 = p_Val2_7_fu_194_p1.read().range(23-1, 0);
 }
 
-void dut_calc_angle_float_float_s::thread_tmp_26_fu_372_p2() {
-    tmp_26_fu_372_p2 = (tmp_24_fu_368_p2.read() & ap_reg_ppstg_tmp_25_reg_454_pp0_iter116.read());
+void dut_calc_angle_float_float_s::thread_tmp_25_fu_264_p1() {
+    tmp_25_fu_264_p1 = p_Val2_s_fu_179_p1.read().range(23-1, 0);
 }
 
-void dut_calc_angle_float_float_s::thread_tmp_77_fu_274_p1() {
-    tmp_77_fu_274_p1 = p_Val2_7_fu_194_p1.read().range(23-1, 0);
-}
-
-void dut_calc_angle_float_float_s::thread_tmp_78_fu_264_p1() {
-    tmp_78_fu_264_p1 = p_Val2_s_fu_179_p1.read().range(23-1, 0);
-}
-
-void dut_calc_angle_float_float_s::thread_tmp_79_fu_340_p1() {
-    tmp_79_fu_340_p1 = cosThetaA_int_to_int_fu_327_p1.read().range(23-1, 0);
+void dut_calc_angle_float_float_s::thread_tmp_26_fu_340_p1() {
+    tmp_26_fu_340_p1 = cosThetaA_int_to_int_fu_327_p1.read().range(23-1, 0);
 }
 
 void dut_calc_angle_float_float_s::thread_tmp_fu_290_p1() {

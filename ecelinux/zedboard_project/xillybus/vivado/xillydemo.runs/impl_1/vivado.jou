@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Tue Dec  6 07:03:19 2022
-# Process ID: 5305
+# Start of session at: Thu Dec  8 09:20:21 2022
+# Process ID: 39071
 # Current directory: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/impl_1
 # Command line: vivado -log xillydemo.vdi -applog -messageDb vivado.pb -mode batch -source xillydemo.tcl -notrace
 # Log file: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/impl_1/xillydemo.vdi

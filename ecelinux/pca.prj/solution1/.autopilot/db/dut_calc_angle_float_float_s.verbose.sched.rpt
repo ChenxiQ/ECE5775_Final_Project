@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_calc_angle_float_float_s'
 ================================================================
-* Date:           Tue Dec  6 06:53:39 2022
+* Date:           Thu Dec  8 09:14:19 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -371,29 +371,29 @@ ST_1: stg_137 [1/1] 0.00ns
 ST_1: tanThetaA [16/16] 6.08ns
 :0  %tanThetaA = fdiv float %A_i_read, %A_r_read
 
-ST_1: tmp_78 [1/1] 0.00ns
-:1  %tmp_78 = trunc i32 %p_Val2_s to i23
+ST_1: tmp_25 [1/1] 0.00ns
+:1  %tmp_25 = trunc i32 %p_Val2_s to i23
 
 ST_1: notlhs7 [1/1] 2.00ns
 :2  %notlhs7 = icmp ne i8 %loc_V, -1
 
 ST_1: notrhs8 [1/1] 2.39ns
-:3  %notrhs8 = icmp eq i23 %tmp_78, 0
+:3  %notrhs8 = icmp eq i23 %tmp_25, 0
 
-ST_1: tmp_17 [1/1] 6.79ns
-:5  %tmp_17 = fcmp oge float %A_r_read, 0.000000e+00
+ST_1: tmp_18 [1/1] 6.79ns
+:5  %tmp_18 = fcmp oge float %A_r_read, 0.000000e+00
 
-ST_1: tmp_77 [1/1] 0.00ns
-:0  %tmp_77 = trunc i32 %p_Val2_7 to i23
+ST_1: tmp_24 [1/1] 0.00ns
+:0  %tmp_24 = trunc i32 %p_Val2_7 to i23
 
 ST_1: notlhs5 [1/1] 2.00ns
 :1  %notlhs5 = icmp ne i8 %loc_V_2, -1
 
 ST_1: notrhs6 [1/1] 2.39ns
-:2  %notrhs6 = icmp eq i23 %tmp_77, 0
+:2  %notrhs6 = icmp eq i23 %tmp_24, 0
 
-ST_1: tmp_25 [1/1] 6.79ns
-:4  %tmp_25 = fcmp olt float %A_i_read, 0.000000e+00
+ST_1: tmp_15 [1/1] 6.79ns
+:4  %tmp_15 = fcmp olt float %A_i_read, 0.000000e+00
 
 ST_1: tmp [1/1] 0.00ns
 :0  %tmp = trunc i32 %p_Val2_s to i23
@@ -404,19 +404,19 @@ ST_1: notlhs [1/1] 2.00ns
 ST_1: notrhs [1/1] 2.39ns
 :2  %notrhs = icmp eq i23 %tmp, 0
 
-ST_1: tmp_13 [1/1] 6.79ns
-:4  %tmp_13 = fcmp olt float %A_r_read, 0.000000e+00
+ST_1: tmp_12 [1/1] 6.79ns
+:4  %tmp_12 = fcmp olt float %A_r_read, 0.000000e+00
 
 
  <State 2>: 6.08ns
 ST_2: tanThetaA [15/16] 6.08ns
 :0  %tanThetaA = fdiv float %A_i_read, %A_r_read
 
-ST_2: tmp_12 [1/1] 0.00ns (grouped into LUT with out node tmp_14)
-:3  %tmp_12 = or i1 %notrhs, %notlhs
+ST_2: tmp_11 [1/1] 0.00ns (grouped into LUT with out node tmp_13)
+:3  %tmp_11 = or i1 %notrhs, %notlhs
 
-ST_2: tmp_14 [1/1] 1.37ns (out node of the LUT)
-:5  %tmp_14 = and i1 %tmp_12, %tmp_13
+ST_2: tmp_13 [1/1] 1.37ns (out node of the LUT)
+:5  %tmp_13 = and i1 %tmp_11, %tmp_12
 
 
  <State 3>: 6.08ns
@@ -490,48 +490,48 @@ ST_16: tanThetaA [1/16] 6.08ns
 
 
  <State 17>: 5.70ns
-ST_17: tmp_2 [4/4] 5.70ns
-:8  %tmp_2 = fmul float %tanThetaA, %tanThetaA
+ST_17: tmp_9 [4/4] 5.70ns
+:8  %tmp_9 = fmul float %tanThetaA, %tanThetaA
 
 
  <State 18>: 5.70ns
-ST_18: tmp_2 [3/4] 5.70ns
-:8  %tmp_2 = fmul float %tanThetaA, %tanThetaA
+ST_18: tmp_9 [3/4] 5.70ns
+:8  %tmp_9 = fmul float %tanThetaA, %tanThetaA
 
 
  <State 19>: 5.70ns
-ST_19: tmp_2 [2/4] 5.70ns
-:8  %tmp_2 = fmul float %tanThetaA, %tanThetaA
+ST_19: tmp_9 [2/4] 5.70ns
+:8  %tmp_9 = fmul float %tanThetaA, %tanThetaA
 
 
  <State 20>: 5.70ns
-ST_20: tmp_2 [1/4] 5.70ns
-:8  %tmp_2 = fmul float %tanThetaA, %tanThetaA
+ST_20: tmp_9 [1/4] 5.70ns
+:8  %tmp_9 = fmul float %tanThetaA, %tanThetaA
 
 
  <State 21>: 7.26ns
 ST_21: n_assign [5/5] 7.26ns
-:9  %n_assign = fadd float %tmp_2, 1.000000e+00
+:9  %n_assign = fadd float %tmp_9, 1.000000e+00
 
 
  <State 22>: 7.26ns
 ST_22: n_assign [4/5] 7.26ns
-:9  %n_assign = fadd float %tmp_2, 1.000000e+00
+:9  %n_assign = fadd float %tmp_9, 1.000000e+00
 
 
  <State 23>: 7.26ns
 ST_23: n_assign [3/5] 7.26ns
-:9  %n_assign = fadd float %tmp_2, 1.000000e+00
+:9  %n_assign = fadd float %tmp_9, 1.000000e+00
 
 
  <State 24>: 7.26ns
 ST_24: n_assign [2/5] 7.26ns
-:9  %n_assign = fadd float %tmp_2, 1.000000e+00
+:9  %n_assign = fadd float %tmp_9, 1.000000e+00
 
 
  <State 25>: 7.26ns
 ST_25: n_assign [1/5] 7.26ns
-:9  %n_assign = fadd float %tmp_2, 1.000000e+00
+:9  %n_assign = fadd float %tmp_9, 1.000000e+00
 
 
  <State 26>: 8.13ns
@@ -675,14 +675,14 @@ ST_53: tmp_i [1/16] 6.08ns
 
 
  <State 54>: 7.07ns
-ST_54: tmp_16 [1/1] 0.00ns (grouped into LUT with out node p_0_i)
-:4  %tmp_16 = or i1 %notrhs8, %notlhs7
+ST_54: tmp_17 [1/1] 0.00ns (grouped into LUT with out node p_0_i)
+:4  %tmp_17 = or i1 %notrhs8, %notlhs7
 
-ST_54: tmp_18 [1/1] 0.00ns (grouped into LUT with out node p_0_i)
-:6  %tmp_18 = and i1 %tmp_16, %tmp_17
+ST_54: tmp_19 [1/1] 0.00ns (grouped into LUT with out node p_0_i)
+:6  %tmp_19 = and i1 %tmp_17, %tmp_18
 
 ST_54: p_0_i [1/1] 1.37ns (out node of the LUT)
-:7  %p_0_i = select i1 %tmp_18, float 1.000000e+00, float -1.000000e+00
+:7  %p_0_i = select i1 %tmp_19, float 1.000000e+00, float -1.000000e+00
 
 ST_54: cosThetaA_int [4/4] 5.70ns
 :12  %cosThetaA_int = fmul float %p_0_i, %tmp_i
@@ -710,17 +710,17 @@ ST_58: sinThetaA_int [4/4] 5.70ns
 ST_58: cosThetaA_int_to_int [1/1] 0.00ns
 :14  %cosThetaA_int_to_int = bitcast float %cosThetaA_int to i32
 
-ST_58: tmp_19 [1/1] 0.00ns
-:15  %tmp_19 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %cosThetaA_int_to_int, i32 23, i32 30)
+ST_58: tmp_20 [1/1] 0.00ns
+:15  %tmp_20 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %cosThetaA_int_to_int, i32 23, i32 30)
 
-ST_58: tmp_79 [1/1] 0.00ns
-:16  %tmp_79 = trunc i32 %cosThetaA_int_to_int to i23
+ST_58: tmp_26 [1/1] 0.00ns
+:16  %tmp_26 = trunc i32 %cosThetaA_int_to_int to i23
 
 ST_58: notlhs9 [1/1] 2.00ns
-:17  %notlhs9 = icmp ne i8 %tmp_19, -1
+:17  %notlhs9 = icmp ne i8 %tmp_20, -1
 
 ST_58: notrhs1 [1/1] 2.39ns
-:18  %notrhs1 = icmp eq i23 %tmp_79, 0
+:18  %notrhs1 = icmp eq i23 %tmp_26, 0
 
 ST_58: tmp_21 [1/1] 0.00ns (grouped into LUT with out node tmp_23)
 :19  %tmp_21 = or i1 %notrhs1, %notlhs9
@@ -734,183 +734,183 @@ ST_58: tmp_23 [1/1] 1.37ns (out node of the LUT)
 ST_58: stg_221 [1/1] 0.00ns
 :22  br i1 %tmp_23, label %5, label %6
 
-ST_58: tmp_8 [5/5] 7.26ns
-:0  %tmp_8 = fadd float %cosThetaA_int, 1.000000e+00
+ST_58: tmp_6 [5/5] 7.26ns
+:0  %tmp_6 = fadd float %cosThetaA_int, 1.000000e+00
 
-ST_58: tmp_7 [5/5] 7.26ns
-:0  %tmp_7 = fsub float 1.000000e+00, %cosThetaA_int
+ST_58: tmp_5 [5/5] 7.26ns
+:0  %tmp_5 = fsub float 1.000000e+00, %cosThetaA_int
 
 
  <State 59>: 7.26ns
 ST_59: sinThetaA_int [3/4] 5.70ns
 :13  %sinThetaA_int = fmul float %cosThetaA_int, %tanThetaA
 
-ST_59: tmp_8 [4/5] 7.26ns
-:0  %tmp_8 = fadd float %cosThetaA_int, 1.000000e+00
+ST_59: tmp_6 [4/5] 7.26ns
+:0  %tmp_6 = fadd float %cosThetaA_int, 1.000000e+00
 
-ST_59: tmp_7 [4/5] 7.26ns
-:0  %tmp_7 = fsub float 1.000000e+00, %cosThetaA_int
+ST_59: tmp_5 [4/5] 7.26ns
+:0  %tmp_5 = fsub float 1.000000e+00, %cosThetaA_int
 
 
  <State 60>: 7.26ns
 ST_60: sinThetaA_int [2/4] 5.70ns
 :13  %sinThetaA_int = fmul float %cosThetaA_int, %tanThetaA
 
-ST_60: tmp_8 [3/5] 7.26ns
-:0  %tmp_8 = fadd float %cosThetaA_int, 1.000000e+00
+ST_60: tmp_6 [3/5] 7.26ns
+:0  %tmp_6 = fadd float %cosThetaA_int, 1.000000e+00
 
-ST_60: tmp_7 [3/5] 7.26ns
-:0  %tmp_7 = fsub float 1.000000e+00, %cosThetaA_int
+ST_60: tmp_5 [3/5] 7.26ns
+:0  %tmp_5 = fsub float 1.000000e+00, %cosThetaA_int
 
 
  <State 61>: 7.26ns
 ST_61: sinThetaA_int [1/4] 5.70ns
 :13  %sinThetaA_int = fmul float %cosThetaA_int, %tanThetaA
 
-ST_61: tmp_8 [2/5] 7.26ns
-:0  %tmp_8 = fadd float %cosThetaA_int, 1.000000e+00
+ST_61: tmp_6 [2/5] 7.26ns
+:0  %tmp_6 = fadd float %cosThetaA_int, 1.000000e+00
 
-ST_61: tmp_7 [2/5] 7.26ns
-:0  %tmp_7 = fsub float 1.000000e+00, %cosThetaA_int
+ST_61: tmp_5 [2/5] 7.26ns
+:0  %tmp_5 = fsub float 1.000000e+00, %cosThetaA_int
 
 
  <State 62>: 7.26ns
-ST_62: tmp_8 [1/5] 7.26ns
-:0  %tmp_8 = fadd float %cosThetaA_int, 1.000000e+00
+ST_62: tmp_6 [1/5] 7.26ns
+:0  %tmp_6 = fadd float %cosThetaA_int, 1.000000e+00
 
-ST_62: tmp_7 [1/5] 7.26ns
-:0  %tmp_7 = fsub float 1.000000e+00, %cosThetaA_int
+ST_62: tmp_5 [1/5] 7.26ns
+:0  %tmp_5 = fsub float 1.000000e+00, %cosThetaA_int
 
 
  <State 63>: 6.08ns
 ST_63: tanThetaAdiv2_1 [16/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_63: tanThetaAdiv2 [16/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 64>: 6.08ns
 ST_64: tanThetaAdiv2_1 [15/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_64: tanThetaAdiv2 [15/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 65>: 6.08ns
 ST_65: tanThetaAdiv2_1 [14/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_65: tanThetaAdiv2 [14/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 66>: 6.08ns
 ST_66: tanThetaAdiv2_1 [13/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_66: tanThetaAdiv2 [13/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 67>: 6.08ns
 ST_67: tanThetaAdiv2_1 [12/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_67: tanThetaAdiv2 [12/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 68>: 6.08ns
 ST_68: tanThetaAdiv2_1 [11/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_68: tanThetaAdiv2 [11/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 69>: 6.08ns
 ST_69: tanThetaAdiv2_1 [10/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_69: tanThetaAdiv2 [10/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 70>: 6.08ns
 ST_70: tanThetaAdiv2_1 [9/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_70: tanThetaAdiv2 [9/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 71>: 6.08ns
 ST_71: tanThetaAdiv2_1 [8/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_71: tanThetaAdiv2 [8/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 72>: 6.08ns
 ST_72: tanThetaAdiv2_1 [7/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_72: tanThetaAdiv2 [7/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 73>: 6.08ns
 ST_73: tanThetaAdiv2_1 [6/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_73: tanThetaAdiv2 [6/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 74>: 6.08ns
 ST_74: tanThetaAdiv2_1 [5/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_74: tanThetaAdiv2 [5/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 75>: 6.08ns
 ST_75: tanThetaAdiv2_1 [4/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_75: tanThetaAdiv2 [4/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 76>: 6.08ns
 ST_76: tanThetaAdiv2_1 [3/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_76: tanThetaAdiv2 [3/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 77>: 6.08ns
 ST_77: tanThetaAdiv2_1 [2/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_77: tanThetaAdiv2 [2/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 
  <State 78>: 7.65ns
 ST_78: tanThetaAdiv2_1 [1/16] 6.08ns
-:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_8
+:1  %tanThetaAdiv2_1 = fdiv float %sinThetaA_int, %tmp_6
 
 ST_78: stg_266 [1/1] 1.57ns
 :2  br label %7
 
 ST_78: tanThetaAdiv2 [1/16] 6.08ns
-:1  %tanThetaAdiv2 = fdiv float %tmp_7, %sinThetaA_int
+:1  %tanThetaAdiv2 = fdiv float %tmp_5, %sinThetaA_int
 
 ST_78: stg_268 [1/1] 1.57ns
 :2  br label %7
@@ -965,184 +965,184 @@ ST_87: n_assign_4 [1/5] 7.26ns
 
 
  <State 88>: 8.13ns
-ST_88: tmp_i_i2 [12/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_88: tmp_i_i1 [12/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 89>: 8.13ns
-ST_89: tmp_i_i2 [11/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_89: tmp_i_i1 [11/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 90>: 8.13ns
-ST_90: tmp_i_i2 [10/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_90: tmp_i_i1 [10/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 91>: 8.13ns
-ST_91: tmp_i_i2 [9/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_91: tmp_i_i1 [9/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 92>: 8.13ns
-ST_92: tmp_i_i2 [8/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_92: tmp_i_i1 [8/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 93>: 8.13ns
-ST_93: tmp_i_i2 [7/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_93: tmp_i_i1 [7/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 94>: 8.13ns
-ST_94: tmp_i_i2 [6/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_94: tmp_i_i1 [6/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 95>: 8.13ns
-ST_95: tmp_i_i2 [5/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_95: tmp_i_i1 [5/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 96>: 8.13ns
-ST_96: tmp_i_i2 [4/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_96: tmp_i_i1 [4/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 97>: 8.13ns
-ST_97: tmp_i_i2 [3/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_97: tmp_i_i1 [3/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 98>: 8.13ns
-ST_98: tmp_i_i2 [2/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_98: tmp_i_i1 [2/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 99>: 8.13ns
-ST_99: tmp_i_i2 [1/12] 8.13ns
-:3  %tmp_i_i2 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
+ST_99: tmp_i_i1 [1/12] 8.13ns
+:3  %tmp_i_i1 = call float @llvm.sqrt.f32(float %n_assign_4) nounwind
 
 
  <State 100>: 6.08ns
 ST_100: cosThetaAdiv2_int [16/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 101>: 6.08ns
 ST_101: cosThetaAdiv2_int [15/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 102>: 6.08ns
 ST_102: cosThetaAdiv2_int [14/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 103>: 6.08ns
 ST_103: cosThetaAdiv2_int [13/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 104>: 6.08ns
 ST_104: cosThetaAdiv2_int [12/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 105>: 6.08ns
 ST_105: cosThetaAdiv2_int [11/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 106>: 6.08ns
 ST_106: cosThetaAdiv2_int [10/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 107>: 6.08ns
 ST_107: cosThetaAdiv2_int [9/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 108>: 6.08ns
 ST_108: cosThetaAdiv2_int [8/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 109>: 6.08ns
 ST_109: cosThetaAdiv2_int [7/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 110>: 6.08ns
 ST_110: cosThetaAdiv2_int [6/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 111>: 6.08ns
 ST_111: cosThetaAdiv2_int [5/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 112>: 6.08ns
 ST_112: cosThetaAdiv2_int [4/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 113>: 6.08ns
 ST_113: cosThetaAdiv2_int [3/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 114>: 6.08ns
 ST_114: cosThetaAdiv2_int [2/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 115>: 6.08ns
 ST_115: cosThetaAdiv2_int [1/16] 6.08ns
-:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i2
+:4  %cosThetaAdiv2_int = fdiv float 1.000000e+00, %tmp_i_i1
 
 
  <State 116>: 5.70ns
-ST_116: tmp_4 [4/4] 5.70ns
-:5  %tmp_4 = fmul float %cosThetaAdiv2_int, %tanThetaAdiv
+ST_116: tmp_2 [4/4] 5.70ns
+:5  %tmp_2 = fmul float %cosThetaAdiv2_int, %tanThetaAdiv
 
 
  <State 117>: 5.70ns
-ST_117: tmp_4 [3/4] 5.70ns
-:5  %tmp_4 = fmul float %cosThetaAdiv2_int, %tanThetaAdiv
+ST_117: tmp_2 [3/4] 5.70ns
+:5  %tmp_2 = fmul float %cosThetaAdiv2_int, %tanThetaAdiv
 
 
  <State 118>: 5.70ns
-ST_118: tmp_4 [2/4] 5.70ns
-:5  %tmp_4 = fmul float %cosThetaAdiv2_int, %tanThetaAdiv
+ST_118: tmp_2 [2/4] 5.70ns
+:5  %tmp_2 = fmul float %cosThetaAdiv2_int, %tanThetaAdiv
 
-ST_118: tmp_24 [1/1] 0.00ns (grouped into LUT with out node storemerge1)
-:3  %tmp_24 = or i1 %notrhs6, %notlhs5
+ST_118: tmp_14 [1/1] 0.00ns (grouped into LUT with out node storemerge1)
+:3  %tmp_14 = or i1 %notrhs6, %notlhs5
 
-ST_118: tmp_26 [1/1] 0.00ns (grouped into LUT with out node storemerge1)
-:5  %tmp_26 = and i1 %tmp_24, %tmp_25
+ST_118: tmp_16 [1/1] 0.00ns (grouped into LUT with out node storemerge1)
+:5  %tmp_16 = and i1 %tmp_14, %tmp_15
 
 ST_118: storemerge1 [1/1] 1.37ns (out node of the LUT)
-:6  %storemerge1 = select i1 %tmp_26, float 0xBFE6A09E60000000, float 0x3FE6A09E60000000
+:6  %storemerge1 = select i1 %tmp_16, float 0xBFE6A09E60000000, float 0x3FE6A09E60000000
 
 ST_118: stg_313 [1/1] 1.57ns
 :7  br label %8
 
 ST_118: p_s [1/1] 1.37ns
-:6  %p_s = select i1 %tmp_14, float 0.000000e+00, float 1.000000e+00
+:6  %p_s = select i1 %tmp_13, float 0.000000e+00, float 1.000000e+00
 
 ST_118: p_1 [1/1] 1.37ns
-:7  %p_1 = select i1 %tmp_14, float 1.000000e+00, float 0.000000e+00
+:7  %p_1 = select i1 %tmp_13, float 1.000000e+00, float 0.000000e+00
 
 ST_118: stg_316 [1/1] 1.57ns
 :8  br label %8
 
 
  <State 119>: 7.27ns
-ST_119: tmp_4 [1/4] 5.70ns
-:5  %tmp_4 = fmul float %cosThetaAdiv2_int, %tanThetaAdiv
+ST_119: tmp_2 [1/4] 5.70ns
+:5  %tmp_2 = fmul float %cosThetaAdiv2_int, %tanThetaAdiv
 
 ST_119: stg_318 [1/1] 1.57ns
 :6  br label %8
@@ -1151,7 +1151,7 @@ ST_119: cosThetaAdiv2_write_assign [1/1] 0.00ns
 :0  %cosThetaAdiv2_write_assign = phi float [ %cosThetaAdiv2_int, %7 ], [ %storemerge1, %3 ], [ %p_s, %1 ]
 
 ST_119: sinThetaAdiv2_write_assign [1/1] 0.00ns
-:1  %sinThetaAdiv2_write_assign = phi float [ %tmp_4, %7 ], [ 0x3FE6A09E60000000, %3 ], [ %p_1, %1 ]
+:1  %sinThetaAdiv2_write_assign = phi float [ %tmp_2, %7 ], [ 0x3FE6A09E60000000, %3 ], [ %p_1, %1 ]
 
 ST_119: newret [1/1] 0.00ns
 :2  %newret = insertvalue { float, float } undef, float %cosThetaAdiv2_write_assign, 0

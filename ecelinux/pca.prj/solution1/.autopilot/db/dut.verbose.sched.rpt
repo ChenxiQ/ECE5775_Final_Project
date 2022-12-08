@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut'
 ================================================================
-* Date:           Tue Dec  6 06:53:42 2022
+* Date:           Thu Dec  8 09:14:20 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -20,29 +20,24 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      9.38|        1.25|
+    |ap_clk  |  10.00|      8.42|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
     * Summary: 
-    +-----+--------+-----+--------+---------+
-    |    Latency   |   Interval   | Pipeline|
-    | min |   max  | min |   max  |   Type  |
-    +-----+--------+-----+--------+---------+
-    |    3|  128012|    4|  128013|   none  |
-    +-----+--------+-----+--------+---------+
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|  266|    3|  267|   none  |
+    +-----+-----+-----+-----+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
-        |                    |  Latency  | Iteration|  Initiation Interval  | Trip |          |
-        |      Loop Name     | min | max |  Latency |  achieved |   target  | Count| Pipelined|
-        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
-        |- L_svd_calc_off_c  |  684|  684|        19|          6|          1|   112|    yes   |
-        +--------------------+-----+-----+----------+-----------+-----------+------+----------+
+        N/A
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -66,80 +61,28 @@ IsDontTouch: 0
 HasImplIP: 0
 IsGatedGlobalClock: 0
 
-+ Individual pipeline summary: 
-  * Pipeline-0: initiation interval (II) = 6, depth = 19
-
 
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states: 24
-* Pipeline: 1
-  Pipeline-0: II = 6, D = 19, States = { 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 }
+* Number of FSM states: 3
+* Pipeline: 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 
 	2  / true
 2 --> 
-	3  / (p_Val2_5 == 4) | (p_Val2_5 == 5) | (p_Val2_5 != 1 & p_Val2_5 != 2 & p_Val2_5 != 3)
-	4  / (p_Val2_5 == 3)
-	23  / (p_Val2_5 == 1) | (p_Val2_5 == 2)
+	3  / true
 3 --> 
-	24  / (p_Val2_5 == 4) | (p_Val2_5 == 5) | (p_Val2_5 != 1 & p_Val2_5 != 2 & p_Val2_5 != 3)
-4 --> 
-	24  / (exitcond_flatten)
-	5  / (!exitcond_flatten)
-5 --> 
-	6  / true
-6 --> 
-	7  / true
-7 --> 
-	8  / true
-8 --> 
-	9  / true
-9 --> 
-	10  / true
-10 --> 
-	11  / true
-11 --> 
-	12  / true
-12 --> 
-	13  / true
-13 --> 
-	14  / true
-14 --> 
-	15  / true
-15 --> 
-	16  / true
-16 --> 
-	17  / true
-17 --> 
-	18  / true
-18 --> 
-	19  / true
-19 --> 
-	20  / true
-20 --> 
-	21  / true
-21 --> 
-	22  / true
-22 --> 
-	4  / true
-23 --> 
-	24  / (p_Val2_5 == 1) | (p_Val2_5 == 2)
-24 --> 
 * FSM state operations: 
 
  <State 1>: 7.46ns
-ST_1: tmp_32 [1/1] 4.38ns
-_ifconv:5  %tmp_32 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
+ST_1: tmp_1 [1/1] 4.38ns
+_ifconv:5  %tmp_1 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
 
 ST_1: p_Val2_s [1/1] 0.00ns
-_ifconv:6  %p_Val2_s = bitcast float %tmp_32 to i32
-
-ST_1: p_Result_s [1/1] 0.00ns
-_ifconv:7  %p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %p_Val2_s, i32 31)
+_ifconv:6  %p_Val2_s = bitcast float %tmp_1 to i32
 
 ST_1: loc_V [1/1] 0.00ns
 _ifconv:8  %loc_V = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %p_Val2_s, i32 23, i32 30) nounwind
@@ -156,31 +99,34 @@ _ifconv:13  %sh_assign = add i9 -127, %tmp_i_i_i_cast1
 ST_1: isNeg [1/1] 0.00ns
 _ifconv:14  %isNeg = call i1 @_ssdm_op_BitSelect.i1.i9.i32(i9 %sh_assign, i32 8)
 
-ST_1: tmp_18_i_i [1/1] 1.72ns
-_ifconv:15  %tmp_18_i_i = sub i8 127, %loc_V
+ST_1: tmp_13_i_i [1/1] 1.72ns
+_ifconv:15  %tmp_13_i_i = sub i8 127, %loc_V
 
-ST_1: tmp_18_i_i_cast [1/1] 0.00ns
-_ifconv:16  %tmp_18_i_i_cast = sext i8 %tmp_18_i_i to i9
+ST_1: tmp_13_i_i_cast [1/1] 0.00ns
+_ifconv:16  %tmp_13_i_i_cast = sext i8 %tmp_13_i_i to i9
 
 ST_1: sh_assign_1 [1/1] 1.37ns
-_ifconv:17  %sh_assign_1 = select i1 %isNeg, i9 %tmp_18_i_i_cast, i9 %sh_assign
+_ifconv:17  %sh_assign_1 = select i1 %isNeg, i9 %tmp_13_i_i_cast, i9 %sh_assign
 
 
- <State 2>: 8.47ns
+ <State 2>: 7.74ns
 ST_2: empty [1/1] 0.00ns
-_ifconv:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str46, [1 x i8]* @p_str47, [1 x i8]* @p_str48, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str49)
+_ifconv:0  %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str39, [1 x i8]* @p_str40, [1 x i8]* @p_str41, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str42)
 
-ST_2: empty_14 [1/1] 0.00ns
-_ifconv:1  %empty_14 = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str42, [1 x i8]* @p_str43, [1 x i8]* @p_str44, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str45)
+ST_2: empty_7 [1/1] 0.00ns
+_ifconv:1  %empty_7 = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str35, [1 x i8]* @p_str36, [1 x i8]* @p_str37, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str38)
 
-ST_2: stg_38 [1/1] 0.00ns
+ST_2: stg_16 [1/1] 0.00ns
 _ifconv:2  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_in_V), !map !167
 
-ST_2: stg_39 [1/1] 0.00ns
+ST_2: stg_17 [1/1] 0.00ns
 _ifconv:3  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_out_V), !map !173
 
-ST_2: stg_40 [1/1] 0.00ns
+ST_2: stg_18 [1/1] 0.00ns
 _ifconv:4  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @dut_str) nounwind
+
+ST_2: p_Result_s [1/1] 0.00ns (grouped into LUT with out node cond)
+_ifconv:7  %p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %p_Val2_s, i32 31)
 
 ST_2: p_Result_1 [1/1] 0.00ns
 _ifconv:10  %p_Result_1 = call i24 @_ssdm_op_BitConcatenate.i24.i1.i23(i1 true, i23 %loc_V_1) nounwind
@@ -194,262 +140,52 @@ _ifconv:18  %sh_assign_1_cast = sext i9 %sh_assign_1 to i32
 ST_2: sh_assign_1_cast_cast [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
 _ifconv:19  %sh_assign_1_cast_cast = sext i9 %sh_assign_1 to i24
 
-ST_2: tmp_19_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
-_ifconv:20  %tmp_19_i_i = zext i32 %sh_assign_1_cast to i78
+ST_2: tmp_14_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
+_ifconv:20  %tmp_14_i_i = zext i32 %sh_assign_1_cast to i78
 
-ST_2: tmp_20_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
-_ifconv:21  %tmp_20_i_i = lshr i24 %p_Result_1, %sh_assign_1_cast_cast
+ST_2: tmp_15_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
+_ifconv:21  %tmp_15_i_i = lshr i24 %p_Result_1, %sh_assign_1_cast_cast
 
-ST_2: tmp_22_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
-_ifconv:22  %tmp_22_i_i = shl i78 %tmp_i_i, %tmp_19_i_i
+ST_2: tmp_17_i_i [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
+_ifconv:22  %tmp_17_i_i = shl i78 %tmp_i_i, %tmp_14_i_i
 
 ST_2: tmp [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
-_ifconv:23  %tmp = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %tmp_20_i_i, i32 23)
+_ifconv:23  %tmp = call i1 @_ssdm_op_BitSelect.i1.i24.i32(i24 %tmp_15_i_i, i32 23)
 
-ST_2: tmp_s [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
-_ifconv:24  %tmp_s = zext i1 %tmp to i32
+ST_2: tmp_2 [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
+_ifconv:24  %tmp_2 = zext i1 %tmp to i32
 
-ST_2: tmp_11 [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
-_ifconv:25  %tmp_11 = call i32 @_ssdm_op_PartSelect.i32.i78.i32.i32(i78 %tmp_22_i_i, i32 23, i32 54)
+ST_2: tmp_3 [1/1] 0.00ns (grouped into LUT with out node p_Val2_3)
+_ifconv:25  %tmp_3 = call i32 @_ssdm_op_PartSelect.i32.i78.i32.i32(i78 %tmp_17_i_i, i32 23, i32 54)
 
 ST_2: p_Val2_3 [1/1] 2.78ns (out node of the LUT)
-_ifconv:26  %p_Val2_3 = select i1 %isNeg, i32 %tmp_s, i32 %tmp_11
+_ifconv:26  %p_Val2_3 = select i1 %isNeg, i32 %tmp_2, i32 %tmp_3
 
 ST_2: p_Val2_8_i_i [1/1] 2.44ns
 _ifconv:27  %p_Val2_8_i_i = sub i32 0, %p_Val2_3
 
-ST_2: p_Val2_5 [1/1] 1.37ns
+ST_2: p_Val2_5 [1/1] 0.00ns (grouped into LUT with out node cond)
 _ifconv:28  %p_Val2_5 = select i1 %p_Result_s, i32 %p_Val2_8_i_i, i32 %p_Val2_3
 
-ST_2: stg_54 [1/1] 1.88ns
-_ifconv:29  switch i32 %p_Val2_5, label %._crit_edge [
-    i32 1, label %0
-    i32 2, label %1
-    i32 3, label %.preheader.i
-    i32 4, label %2
-    i32 5, label %3
-  ]
+ST_2: cond [1/1] 2.52ns (out node of the LUT)
+_ifconv:29  %cond = icmp eq i32 %p_Val2_5, 1
 
-ST_2: stg_55 [2/2] 0.00ns
-:0  call fastcc void @dut_backproj(float* %strm_in_V, float* %strm_out_V)
+ST_2: stg_34 [1/1] 0.00ns
+_ifconv:30  br i1 %cond, label %0, label %._crit_edge
 
-ST_2: stg_56 [2/2] 0.00ns
-:0  call fastcc void @dut_matmul(float* %strm_in_V, float* %strm_out_V)
-
-ST_2: stg_57 [2/2] 0.00ns
-:0  call fastcc void @dut_update_off_diag_r(float* %strm_in_V, float* %strm_out_V)
-
-ST_2: stg_58 [2/2] 0.00ns
+ST_2: stg_35 [2/2] 0.00ns
 :0  call fastcc void @dut_calc_svd(float* %strm_in_V, float* %strm_out_V)
 
 
  <State 3>: 0.00ns
-ST_3: stg_59 [1/2] 0.00ns
-:0  call fastcc void @dut_backproj(float* %strm_in_V, float* %strm_out_V)
-
-ST_3: stg_60 [1/1] 0.00ns
-:1  br label %._crit_edge
-
-ST_3: stg_61 [1/2] 0.00ns
-:0  call fastcc void @dut_matmul(float* %strm_in_V, float* %strm_out_V)
-
-ST_3: stg_62 [1/1] 0.00ns
-:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
-
-ST_3: stg_63 [1/1] 0.00ns
-._crit_edge:0  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
-
-
- <State 4>: 1.97ns
-ST_4: indvar_flatten [1/1] 0.00ns
-.preheader.i:0  %indvar_flatten = phi i7 [ %indvar_flatten_next, %.preheader ], [ 0, %_ifconv ]
-
-ST_4: exitcond_flatten [1/1] 1.97ns
-.preheader.i:1  %exitcond_flatten = icmp eq i7 %indvar_flatten, -16
-
-ST_4: indvar_flatten_next [1/1] 1.72ns
-.preheader.i:2  %indvar_flatten_next = add i7 %indvar_flatten, 1
-
-ST_4: stg_67 [1/1] 0.00ns
-.preheader.i:3  br i1 %exitcond_flatten, label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit", label %.preheader
-
-
- <State 5>: 4.38ns
-ST_5: tmp_33 [1/1] 4.38ns
-.preheader:5  %tmp_33 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
-
-
- <State 6>: 4.38ns
-ST_6: tmp_34 [1/1] 4.38ns
-.preheader:6  %tmp_34 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
-
-
- <State 7>: 4.38ns
-ST_7: tmp_35 [1/1] 4.38ns
-.preheader:7  %tmp_35 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
-
-
- <State 8>: 4.38ns
-ST_8: tmp_36 [1/1] 4.38ns
-.preheader:8  %tmp_36 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
-
-
- <State 9>: 4.38ns
-ST_9: tmp_37 [1/1] 4.38ns
-.preheader:9  %tmp_37 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
-
-
- <State 10>: 5.70ns
-ST_10: tmp_38 [1/1] 4.38ns
-.preheader:10  %tmp_38 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
-
-ST_10: tmp_i_i_16 [4/4] 5.70ns
-.preheader:11  %tmp_i_i_16 = fmul float %tmp_33, %tmp_37
-
-
- <State 11>: 5.70ns
-ST_11: tmp_i_i_16 [3/4] 5.70ns
-.preheader:11  %tmp_i_i_16 = fmul float %tmp_33, %tmp_37
-
-ST_11: tmp_3_i_i [4/4] 5.70ns
-.preheader:12  %tmp_3_i_i = fmul float %tmp_35, %tmp_38
-
-
- <State 12>: 5.70ns
-ST_12: tmp_i_i_16 [2/4] 5.70ns
-.preheader:11  %tmp_i_i_16 = fmul float %tmp_33, %tmp_37
-
-ST_12: tmp_3_i_i [3/4] 5.70ns
-.preheader:12  %tmp_3_i_i = fmul float %tmp_35, %tmp_38
-
-ST_12: tmp_i6_i [4/4] 5.70ns
-.preheader:14  %tmp_i6_i = fmul float %tmp_34, %tmp_37
-
-
- <State 13>: 5.70ns
-ST_13: tmp_i_i_16 [1/4] 5.70ns
-.preheader:11  %tmp_i_i_16 = fmul float %tmp_33, %tmp_37
-
-ST_13: tmp_3_i_i [2/4] 5.70ns
-.preheader:12  %tmp_3_i_i = fmul float %tmp_35, %tmp_38
-
-ST_13: tmp_i6_i [3/4] 5.70ns
-.preheader:14  %tmp_i6_i = fmul float %tmp_34, %tmp_37
-
-ST_13: tmp_3_i7_i [4/4] 5.70ns
-.preheader:15  %tmp_3_i7_i = fmul float %tmp_36, %tmp_38
-
-
- <State 14>: 5.70ns
-ST_14: tmp_3_i_i [1/4] 5.70ns
-.preheader:12  %tmp_3_i_i = fmul float %tmp_35, %tmp_38
-
-ST_14: tmp_i6_i [2/4] 5.70ns
-.preheader:14  %tmp_i6_i = fmul float %tmp_34, %tmp_37
-
-ST_14: tmp_3_i7_i [3/4] 5.70ns
-.preheader:15  %tmp_3_i7_i = fmul float %tmp_36, %tmp_38
-
-
- <State 15>: 7.26ns
-ST_15: tmp_30 [5/5] 7.26ns
-.preheader:13  %tmp_30 = fadd float %tmp_i_i_16, %tmp_3_i_i
-
-ST_15: tmp_i6_i [1/4] 5.70ns
-.preheader:14  %tmp_i6_i = fmul float %tmp_34, %tmp_37
-
-ST_15: tmp_3_i7_i [2/4] 5.70ns
-.preheader:15  %tmp_3_i7_i = fmul float %tmp_36, %tmp_38
-
-
- <State 16>: 7.26ns
-ST_16: tmp_30 [4/5] 7.26ns
-.preheader:13  %tmp_30 = fadd float %tmp_i_i_16, %tmp_3_i_i
-
-ST_16: tmp_3_i7_i [1/4] 5.70ns
-.preheader:15  %tmp_3_i7_i = fmul float %tmp_36, %tmp_38
-
-
- <State 17>: 7.26ns
-ST_17: tmp_30 [3/5] 7.26ns
-.preheader:13  %tmp_30 = fadd float %tmp_i_i_16, %tmp_3_i_i
-
-ST_17: tmp_31 [5/5] 7.26ns
-.preheader:16  %tmp_31 = fadd float %tmp_i6_i, %tmp_3_i7_i
-
-
- <State 18>: 7.26ns
-ST_18: tmp_30 [2/5] 7.26ns
-.preheader:13  %tmp_30 = fadd float %tmp_i_i_16, %tmp_3_i_i
-
-ST_18: tmp_31 [4/5] 7.26ns
-.preheader:16  %tmp_31 = fadd float %tmp_i6_i, %tmp_3_i7_i
-
-
- <State 19>: 7.26ns
-ST_19: tmp_30 [1/5] 7.26ns
-.preheader:13  %tmp_30 = fadd float %tmp_i_i_16, %tmp_3_i_i
-
-ST_19: tmp_31 [3/5] 7.26ns
-.preheader:16  %tmp_31 = fadd float %tmp_i6_i, %tmp_3_i7_i
-
-
- <State 20>: 7.26ns
-ST_20: tmp_31 [2/5] 7.26ns
-.preheader:16  %tmp_31 = fadd float %tmp_i6_i, %tmp_3_i7_i
-
-ST_20: stg_99 [1/1] 4.38ns
-.preheader:17  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_30)
-
-
- <State 21>: 7.26ns
-ST_21: tmp_31 [1/5] 7.26ns
-.preheader:16  %tmp_31 = fadd float %tmp_i6_i, %tmp_3_i7_i
-
-
- <State 22>: 4.38ns
-ST_22: stg_101 [1/1] 0.00ns
-.preheader:0  call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @L_svd_calc_off_c_str)
-
-ST_22: empty_15 [1/1] 0.00ns
-.preheader:1  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 112, i64 112, i64 112)
-
-ST_22: stg_103 [1/1] 0.00ns
-.preheader:2  call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str5) nounwind
-
-ST_22: tmp_32_i [1/1] 0.00ns
-.preheader:3  %tmp_32_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str5)
-
-ST_22: stg_105 [1/1] 0.00ns
-.preheader:4  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind
-
-ST_22: stg_106 [1/1] 4.38ns
-.preheader:18  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V, float %tmp_31)
-
-ST_22: empty_17 [1/1] 0.00ns
-.preheader:19  %empty_17 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str5, i32 %tmp_32_i)
-
-ST_22: stg_108 [1/1] 0.00ns
-.preheader:20  br label %.preheader.i
-
-
- <State 23>: 0.00ns
-ST_23: stg_109 [1/2] 0.00ns
-:0  call fastcc void @dut_update_off_diag_r(float* %strm_in_V, float* %strm_out_V)
-
-ST_23: stg_110 [1/1] 0.00ns
-:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
-
-ST_23: stg_111 [1/2] 0.00ns
+ST_3: stg_36 [1/2] 0.00ns
 :0  call fastcc void @dut_calc_svd(float* %strm_in_V, float* %strm_out_V)
 
-ST_23: stg_112 [1/1] 0.00ns
-:1  br label %"update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit"
+ST_3: stg_37 [1/1] 0.00ns
+:1  br label %._crit_edge
 
-
- <State 24>: 0.00ns
-ST_24: stg_113 [1/1] 0.00ns
-update_off_diag_c<16, 16, MY_CONFIG_SVD>.exit:0  ret void
+ST_3: stg_38 [1/1] 0.00ns
+._crit_edge:0  ret void
 
 
 
@@ -472,27 +208,6 @@ N/A
 	State 1
 	State 2
 	State 3
-	State 4
-	State 5
-	State 6
-	State 7
-	State 8
-	State 9
-	State 10
-	State 11
-	State 12
-	State 13
-	State 14
-	State 15
-	State 16
-	State 17
-	State 18
-	State 19
-	State 20
-	State 21
-	State 22
-	State 23
-	State 24
 
 
 ============================================================

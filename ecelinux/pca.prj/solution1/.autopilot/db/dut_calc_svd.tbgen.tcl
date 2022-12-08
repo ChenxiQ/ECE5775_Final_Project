@@ -59,31 +59,31 @@ set RtlHierarchyInfo {[
 		{"Name" : "A_i", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
 		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fadd_32ns_32ns_32_5_full_dsp_U15", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_faddfsub_32ns_32ns_32_5_full_dsp_U16", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fadd_32ns_32ns_32_5_full_dsp_U17", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U18", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U19", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U20", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U21", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U22", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U23", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U24", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U25", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U26", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fcmp_32ns_32ns_1_1_U27", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fcmp_32ns_32ns_1_1_U28", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fsqrt_32ns_32ns_32_12_U29", "Parent" : "1", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fsqrt_32ns_32ns_32_12_U30", "Parent" : "1", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_faddfsub_32ns_32ns_32_5_full_dsp_U33", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_faddfsub_32ns_32ns_32_5_full_dsp_U34", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fmul_32ns_32ns_32_4_max_dsp_U35", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fmul_32ns_32ns_32_4_max_dsp_U36", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fcmp_32ns_32ns_1_1_U37", "Parent" : "0", "Child" : []}]}
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fadd_32ns_32ns_32_5_full_dsp_U1", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_faddfsub_32ns_32ns_32_5_full_dsp_U2", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fadd_32ns_32ns_32_5_full_dsp_U3", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U4", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U5", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U6", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U7", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fmul_32ns_32ns_32_4_max_dsp_U8", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U9", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U10", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U11", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fdiv_32ns_32ns_32_16_U12", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fcmp_32ns_32ns_1_1_U13", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fcmp_32ns_32ns_1_1_U14", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fsqrt_32ns_32ns_32_12_U15", "Parent" : "1", "Child" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_angle_float_float_s_fu_101.dut_fsqrt_32ns_32ns_32_12_U16", "Parent" : "1", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_faddfsub_32ns_32ns_32_5_full_dsp_U19", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_faddfsub_32ns_32ns_32_5_full_dsp_U20", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fmul_32ns_32ns_32_4_max_dsp_U21", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fmul_32ns_32ns_32_4_max_dsp_U22", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_fcmp_32ns_32ns_1_1_U23", "Parent" : "0", "Child" : []}]}
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "327", "Max" : "327"}
-	, {"Name" : "Interval", "Min" : "327", "Max" : "327"}
+	{"Name" : "Latency", "Min" : "264", "Max" : "264"}
+	, {"Name" : "Interval", "Min" : "264", "Max" : "264"}
 ]}
 
 set Spec2ImplPortList { 

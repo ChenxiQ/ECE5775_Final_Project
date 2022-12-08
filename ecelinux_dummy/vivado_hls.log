@@ -1,0 +1,144 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2016.2
+  Build 1577090 on Thu Jun 02 16:59:10 MDT 2016
+  Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running '/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'yx388' on host 'en-ec-ecelinux-16.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Thu Dec 08 09:24:28 EST 2022
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy'
+INFO: [HLS 200-10] Opening and resetting project '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.prj'.
+INFO: [HLS 200-10] Adding design file 'pca.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'dut.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'pca_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'data' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+make[1]: Entering directory `/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.prj/solution1/csim/build'
+   Compiling ../../../../pca_test.cpp in release mode
+   Compiling ../../../../dut.cpp in release mode
+   Compiling ../../../../pca.cpp in release mode
+   Generating csim.exe
+make[1]: Leaving directory `/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.prj/solution1/csim/build'
+calculating norm...
+calculating cov...
+calculating svd...
+sweep=0 step=0sweep=0 step=1sweep=0 step=2sweep=0 step=3sweep=0 step=4sweep=0 step=5sweep=0 step=6sweep=0 step=7sweep=0 step=8sweep=0 step=9sweep=0 step=10sweep=0 step=11sweep=0 step=12sweep=0 step=13sweep=0 step=14sweep=1 step=0sweep=1 step=1sweep=1 step=2sweep=1 step=3sweep=1 step=4sweep=1 step=5sweep=1 step=6sweep=1 step=7sweep=1 step=8sweep=1 step=9sweep=1 step=10sweep=1 step=11sweep=1 step=12sweep=1 step=13sweep=1 step=14sweep=2 step=0sweep=2 step=1sweep=2 step=2sweep=2 step=3sweep=2 step=4sweep=2 step=5sweep=2 step=6sweep=2 step=7sweep=2 step=8sweep=2 step=9sweep=2 step=10sweep=2 step=11sweep=2 step=12sweep=2 step=13sweep=2 step=14sweep=3 step=0sweep=3 step=1sweep=3 step=2sweep=3 step=3sweep=3 step=4sweep=3 step=5sweep=3 step=6sweep=3 step=7sweep=3 step=8sweep=3 step=9sweep=3 step=10sweep=3 step=11sweep=3 step=12sweep=3 step=13sweep=3 step=14sweep=4 step=0sweep=4 step=1sweep=4 step=2sweep=4 step=3sweep=4 step=4sweep=4 step=5sweep=4 step=6sweep=4 step=7sweep=4 step=8sweep=4 step=9sweep=4 step=10sweep=4 step=11sweep=4 step=12sweep=4 step=13sweep=4 step=14sweep=5 step=0sweep=5 step=1sweep=5 step=2sweep=5 step=3sweep=5 step=4sweep=5 step=5sweep=5 step=6sweep=5 step=7sweep=5 step=8sweep=5 step=9sweep=5 step=10sweep=5 step=11sweep=5 step=12sweep=5 step=13sweep=5 step=14
+ranking...
+back projecting...
+transfering output...
+writing files...
+write y
+write tsf
+write mean
+pca                 :      1 calls;  14.297 msecs total time
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [HLS 200-10] Analyzing design file 'dut.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'pca.cpp' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/rd_buffer' has been applied in multiple source file:
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/dut.cpp
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.cpp
+Please use function labels to distinguish different locations if necessary.
+WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_diag' has been applied in multiple source file:
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/dut.cpp
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.cpp
+Please use function labels to distinguish different locations if necessary.
+WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'calc_svd/svd_calc_diag' has been applied in multiple source file:
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/dut.cpp
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.cpp
+Please use function labels to distinguish different locations if necessary.
+WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_wb_diag' has been applied in multiple source file:
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/dut.cpp
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.cpp
+Please use function labels to distinguish different locations if necessary.
+WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_off_r' has been applied in multiple source file:
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/dut.cpp
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.cpp
+Please use function labels to distinguish different locations if necessary.
+WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'update_off_diag_r/svd_calc_off_r' has been applied in multiple source file:
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/dut.cpp
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.cpp
+Please use function labels to distinguish different locations if necessary.
+WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_wb_off_r' has been applied in multiple source file:
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/dut.cpp
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.cpp
+Please use function labels to distinguish different locations if necessary.
+WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_off_c' has been applied in multiple source file:
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/dut.cpp
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.cpp
+Please use function labels to distinguish different locations if necessary.
+WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'update_off_diag_c/svd_calc_off_c' has been applied in multiple source file:
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/dut.cpp
+/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.cpp
+Please use function labels to distinguish different locations if necessary.
+WARNING: [HLS 200-40] Directive 'INLINE' cannot be applied: Function 'vm2x1_base' does not exist in any synthesis source file.
+WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Label 'svd_wb_off_c' does not exist in function 'svd_alt'. 
+WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Label 'wb_buffer' does not exist in function 'svd_alt'. 
+WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Function 'matmul' does not exist in any synthesis source file.
+WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Function 'matmul' does not exist in any synthesis source file.
+WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Function 'backproj' does not exist in any synthesis source file.
+WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Function 'backproj' does not exist in any synthesis source file.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<78, 55, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<55, 55, false, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:368) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:383) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/lib_floatconversion.cpp:39) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:29) automatically.
+INFO: [XFORM 203-602] Inlining function 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' into 'dut' (dut.cpp:31) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:368) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:383) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/lib_floatconversion.cpp:39) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:29) automatically.
+INFO: [XFORM 203-602] Inlining function 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' into 'dut' (dut.cpp:31) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (dut.cpp:29:3) in function 'dut'... converting 4 basic blocks.
+INFO: [HLS 200-111] Elapsed time: 8.52 seconds; current memory usage: 304 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dut' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Scheduling module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'svd_calc_diag'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between fifo write on port 'strm_out_V' (./svd.h:345->dut.cpp:31) and fifo write on port 'strm_out_V' (./svd.h:344->dut.cpp:31).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)
+   between fifo write on port 'strm_out_V' (./svd.h:346->dut.cpp:31) and fifo write on port 'strm_out_V' (./svd.h:344->dut.cpp:31).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)
+   between fifo write on port 'strm_out_V' (./svd.h:347->dut.cpp:31) and fifo write on port 'strm_out_V' (./svd.h:344->dut.cpp:31).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 4, distance = 1)
+   between fifo write on port 'strm_out_V' (./svd.h:350->dut.cpp:31) and fifo write on port 'strm_out_V' (./svd.h:344->dut.cpp:31).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 11, distance = 1)
+   between fifo write on port 'strm_out_V' (./svd.h:358->dut.cpp:31) and fifo write on port 'strm_out_V' (./svd.h:344->dut.cpp:31).
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 12, Depth: 13.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Elapsed time: 0.35 seconds; current memory usage: 304 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Elapsed time: 0.05 seconds; current memory usage: 305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_in_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_out_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
+INFO: [HLS 200-111] Elapsed time: 0.07 seconds; current memory usage: 305 MB.
+INFO: [HLS 200-10] Finished generating all RTL models.
+INFO: [SYSC 207-301] Generating SystemC RTL for dut.
+INFO: [VHDL 208-304] Generating VHDL RTL for dut.
+INFO: [VLOG 209-307] Generating Verilog RTL for dut.
+INFO: [HLS 200-112] Total elapsed time: 40.731 seconds; peak memory usage: 305 MB.
