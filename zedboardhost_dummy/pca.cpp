@@ -56,11 +56,11 @@ void PCA::normalize(fix32_t X[VEC_SIZ][IMG_NUM],fix32_t mean[VEC_SIZ]){
   }
   
   
-  std::ofstream fn("data/mean.dat", ios_base::out);
-  for(int i=0;i<VEC_SIZ;i++){
-    fn << mean[i] << endl;
-  }
-  fn.close();
+  //std::ofstream fn("data/mean.dat", ios_base::out);
+  //for(int i=0;i<VEC_SIZ;i++){
+  //  fn << mean[i] << endl;
+  //}
+  //fn.close();
 
   // std::ofstream fmean("data/xn.dat", ios_base::out);
   // for(int i=0;i<VEC_SIZ;i++){
@@ -125,14 +125,14 @@ void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
   // }
 
   
-  std::ofstream fxxt("data/xxt.dat", ios_base::out);
-  for(int i=0;i<VEC_SIZ;i++){
-    for(int j=0; j<VEC_SIZ;j++){
-      fxxt << XXT[i][j] << "\t";
-    }
-    fxxt <<endl;
-  }
-  fxxt.close();
+  //std::ofstream fxxt("data/xxt.dat", ios_base::out);
+  //for(int i=0;i<VEC_SIZ;i++){
+  //  for(int j=0; j<VEC_SIZ;j++){
+  //    fxxt << XXT[i][j] << "\t";
+  //  }
+  //  fxxt <<endl;
+  //}
+  //fxxt.close();
   
 
 }
@@ -141,14 +141,14 @@ void PCA::apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],f
   svd::svd_top<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD,fix32_t,fix32_t>(XXT,S,U,V,fdw, fdr);
   //hls::svd<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(XXT,S,U,V);
   
-  std::ofstream fs("data/s.dat", ios_base::out);
-  for(int i=0;i<VEC_SIZ;i++){
-    for(int j=0; j<VEC_SIZ;j++){
-      fs << S[i][j] << "\t";
-    }
-    fs <<endl;
-  }
-  fs.close();
+  //std::ofstream fs("data/s.dat", ios_base::out);
+  //for(int i=0;i<VEC_SIZ;i++){
+  //  for(int j=0; j<VEC_SIZ;j++){
+  //    fs << S[i][j] << "\t";
+  //  }
+  //  fs <<endl;
+  //}
+  //fs.close();
   
   // std::ofstream fu("data/u.dat", ios_base::out);
   // for(int i=0;i<VEC_SIZ;i++){

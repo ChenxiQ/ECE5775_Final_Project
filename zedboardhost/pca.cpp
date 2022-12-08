@@ -56,11 +56,11 @@ void PCA::normalize(fix32_t X[VEC_SIZ][IMG_NUM],fix32_t mean[VEC_SIZ]){
   }
   
   
-  std::ofstream fn("data/mean.dat", ios_base::out);
-  for(int i=0;i<VEC_SIZ;i++){
-    fn << mean[i] << endl;
-  }
-  fn.close();
+  //std::ofstream fn("data/mean.dat", ios_base::out);
+  //for(int i=0;i<VEC_SIZ;i++){
+  //  fn << mean[i] << endl;
+  //}
+  //fn.close();
 
   // std::ofstream fmean("data/xn.dat", ios_base::out);
   // for(int i=0;i<VEC_SIZ;i++){
@@ -71,9 +71,6 @@ void PCA::normalize(fix32_t X[VEC_SIZ][IMG_NUM],fix32_t mean[VEC_SIZ]){
 }
 
 void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
-  float input;
-  float output;
-  int nbytes;
   fix32_t XT[IMG_NUM][VEC_SIZ];
   for(int i=0;i<VEC_SIZ;i++){
     for(int j=0;j<IMG_NUM;j++){
@@ -81,36 +78,26 @@ void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
     }
   }
 
-  input = 4;
-  nbytes = write (fdw, (void*)&(input), sizeof(input));
-  //std::cout<<nbytes<<std::endl;
+  float result = 0;
+  float A[IMG_NUM];
 
+  LOOP_ROW:
   for (int i = 0; i < VEC_SIZ; i++) {
-    /*
-    for (int m = 0; m < 100; m++) {
-      pca_in->write(X[i][m]);
-    }*/
+    LOOP_COL:
     for (int j = 0; j < VEC_SIZ; j++) {
-      for (int n = 0; n < IMG_NUM; n++) {
+      // calculate A[j] dot B[j]
+      LOOP_DOT_PROD:
+      for (int k = 0; k < IMG_NUM; k++) {
         if (j == 0){
-          input = X[i][n];
-          nbytes = write (fdw, (void*)&(input), sizeof(input));
-          //std::cout<<nbytes<<std::endl;
+          A[k] = X[i][k];
         }
-        input = XT[n][j];
-        nbytes = write (fdw, (void*)&(input), sizeof(input));
-        //std::cout<<nbytes<<std::endl;
+        if (k == 0)
+          result = A[k] * XT[k][j];
+        else
+          result += A[k] * XT[k][j];
+        // write back result XXT[i][j]
+        if (k == IMG_NUM-1)  XXT[i][j] = result/(IMG_NUM-1);
       }
-    }
-  }
-
-  //dut(*pca_in, *pca_out);
-
-  for (int i = 0; i < VEC_SIZ; i++) {
-    for (int j = 0; j < VEC_SIZ; j++) {
-      nbytes = read (fdr, (void*)&output, sizeof(output));
-      //std::cout<<nbytes<<std::endl;
-      XXT[i][j] = output/(IMG_NUM-1);
     }
   }
 
@@ -125,14 +112,14 @@ void PCA::cov(fix32_t X[VEC_SIZ][IMG_NUM], fix32_t XXT[VEC_SIZ][VEC_SIZ]){
   // }
 
   
-  std::ofstream fxxt("data/xxt.dat", ios_base::out);
-  for(int i=0;i<VEC_SIZ;i++){
-    for(int j=0; j<VEC_SIZ;j++){
-      fxxt << XXT[i][j] << "\t";
-    }
-    fxxt <<endl;
-  }
-  fxxt.close();
+  // std::ofstream fxxt("data/xxt.dat", ios_base::out);
+  // for(int i=0;i<VEC_SIZ;i++){
+  //   for(int j=0; j<VEC_SIZ;j++){
+  //     fxxt << XXT[i][j] << "\t";
+  //   }
+  //   fxxt <<endl;
+  // }
+  // fxxt.close();
   
 
 }
@@ -141,14 +128,14 @@ void PCA::apply_svd(fix32_t XXT[VEC_SIZ][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ],f
   svd::svd_top<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD,fix32_t,fix32_t>(XXT,S,U,V,fdw, fdr);
   //hls::svd<VEC_SIZ,VEC_SIZ,fix32_t,fix32_t>(XXT,S,U,V);
   
-  std::ofstream fs("data/s.dat", ios_base::out);
-  for(int i=0;i<VEC_SIZ;i++){
-    for(int j=0; j<VEC_SIZ;j++){
-      fs << S[i][j] << "\t";
-    }
-    fs <<endl;
-  }
-  fs.close();
+  //std::ofstream fs("data/s.dat", ios_base::out);
+  //for(int i=0;i<VEC_SIZ;i++){
+  //  for(int j=0; j<VEC_SIZ;j++){
+  //    fs << S[i][j] << "\t";
+  //  }
+  //  fs <<endl;
+  //}
+  //fs.close();
   
   // std::ofstream fu("data/u.dat", ios_base::out);
   // for(int i=0;i<VEC_SIZ;i++){
@@ -208,40 +195,35 @@ void PCA::rank(fix32_t tsf_mat[K][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t
 }
 
 void PCA::back_pjt(fix32_t tsf_mat[K][VEC_SIZ], fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[K][IMG_NUM]){
-  float input,output;
+  float result = 0;
+  float A[VEC_SIZ];
 
-  input = 5;
-  write (fdw, (void*)&(input), sizeof(input));
+  LOOP_ROW:
   for (int i = 0; i < K; i++) {
+    // store A[i]
     /*
+    LOOP_ST_A:
     for (int m = 0; m < 784; m++) {
-      pca_in->write(tsf_mat[i][m]);
+      A[m] = strm_in.read();
     }*/
+    LOOP_COL:
     for (int j = 0; j < IMG_NUM; j++) {
-      for (int n = 0; n < VEC_SIZ; n++) {
-        if (j == 0){
-          input = tsf_mat[i][n];
-          write (fdw, (void*)&(input), sizeof(input));
+      // calculate A[j] dot B[j]
+      LOOP_DOT_PROD:
+      for (int k = 0; k < VEC_SIZ; k++) {
+        if (j == 0) {
+          A[k] = tsf_mat[i][k];
         }
-        input = X[n][j];
-        write (fdw, (void*)&(input), sizeof(input));
+        if (k == 0) {
+          result = X[k][j];
+        } else {
+          result += A[k] * X[k][j];
+        }
+        // write back result XXT[i][j]
+        if (k == VEC_SIZ-1)  Y[i][j] = result;
       }
     }
   }
-
-  //dut(*pca_in, *pca_out);
-
-  for (int i = 0; i < K; i++) {
-    for (int j = 0; j < IMG_NUM; j++) {
-      read (fdr, (void*)&output, sizeof(output));
-      Y[i][j] = output;
-    }
-  }
-  
-  // hls::matrix_multiply_top<hls::NoTranspose,hls::NoTranspose,
-  // K,VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,MY_CONFIG_MULT,fix32_t,fix32_t>(tsf_mat,X,Y);
-  //hls::matrix_multiply<hls::NoTranspose,hls::NoTranspose,K,
-  //VEC_SIZ,VEC_SIZ,IMG_NUM,K,IMG_NUM,fix32_t,fix32_t>(tsf_mat,X,Y);
 }
 
 /*

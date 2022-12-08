@@ -365,13 +365,13 @@ namespace svd {
     float input;
     float output;
     
-    for(int i=0; i<RowsA; i++){
-      rd_buffer:for(int j=0; j<ColsA; j++){
-        S[i][j] = A[i][j];
-        U[i][j] = i==j?1:0;
-        V[i][j] = i==j?1:0;
-      }
-    }
+    //for(int i=0; i<RowsA; i++){
+    //  rd_buffer:for(int j=0; j<ColsA; j++){
+    //    S[i][j] = A[i][j];
+    //    U[i][j] = i==j?1:0;
+    //    V[i][j] = i==j?1:0;
+    //  }
+    //}
 
     sweep_loop: for(int sweepnum = 0; sweepnum < SVDTraits::NUM_SWEEPS; sweepnum++) {
       // NOTE: Using the minimum dimension. i.e. will process a square matrix
@@ -415,13 +415,13 @@ namespace svd {
           if (top_left == RowsA || bottom_right == RowsA) continue;
 
           // Fetch w,x,y,z values
-          input = 1
+          //input = 1;
           write (fdw, (void*)&(input), sizeof(input));
-          input = 1
+          //input = 1;
           write (fdw, (void*)&(input), sizeof(input));
-          input = 1
+          //input = 1;
           write (fdw, (void*)&(input), sizeof(input));
-          input = 1
+          //input = 1;
           write (fdw, (void*)&(input), sizeof(input));
         }
 
@@ -443,22 +443,22 @@ namespace svd {
 
           //log J,k
           read (fdr, (void*)&output, sizeof(output));
-          uw_new = output;
+          //uw_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          ux_new = output;
+          //ux_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          uy_new = output;
+          //uy_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          uz_new = output;
+          //uz_new = output;
 
           read (fdr, (void*)&output, sizeof(output));
-          vw_new = output;
+          //vw_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          vx_new = output;
+          //vx_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          vy_new = output;
+          //vy_new = output;
           read (fdr, (void*)&output, sizeof(output));
-          vz_new = output;
+          //vz_new = output;
         }
 
       }
