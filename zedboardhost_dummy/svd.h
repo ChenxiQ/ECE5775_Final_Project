@@ -388,7 +388,7 @@ namespace svd {
 
       for (int step = 0; step < RowsA-1; step ++){
         
-        //std::cout << sweepnum << " " << step << std::endl;
+        std::cout << "sweep=" << sweepnum << " step=" << step << '\r';
         //init buffers
         InputType S_block_buffer[n_proc][2][2];
         InputType U_block_buffer[n_proc][2][2];
@@ -463,6 +463,7 @@ namespace svd {
 
       }
     }
+    std::cout << std::endl;
   }
 
 

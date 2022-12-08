@@ -2542,7 +2542,7 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>266</mMinLatency>
+        <mMinLatency>770</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -2799,11 +2799,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>7892</second>
+              <second>7896</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>12275</second>
+              <second>12282</second>
             </item>
           </second>
         </item>

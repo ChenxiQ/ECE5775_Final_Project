@@ -5,7 +5,7 @@
   Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 ================================================================
 INFO: [HLS 200-10] Running '/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'yx388' on host 'en-ec-ecelinux-16.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Thu Dec 08 09:24:28 EST 2022
+INFO: [HLS 200-10] For user 'yx388' on host 'en-ec-ecelinux-16.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Thu Dec 08 18:06:53 EST 2022
 INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
 INFO: [HLS 200-10] In directory '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy'
 INFO: [HLS 200-10] Opening and resetting project '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/pca.prj'.
@@ -34,7 +34,7 @@ writing files...
 write y
 write tsf
 write mean
-pca                 :      1 calls;  14.297 msecs total time
+pca                 :      1 calls;  14.607 msecs total time
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [HLS 200-10] Analyzing design file 'dut.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'pca.cpp' ... 
@@ -99,7 +99,7 @@ INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<int, float>' into '__
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:29) automatically.
 INFO: [XFORM 203-602] Inlining function 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' into 'dut' (dut.cpp:31) automatically.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (dut.cpp:29:3) in function 'dut'... converting 4 basic blocks.
-INFO: [HLS 200-111] Elapsed time: 8.52 seconds; current memory usage: 304 MB.
+INFO: [HLS 200-111] Elapsed time: 9.73 seconds; current memory usage: 304 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'dut' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -119,7 +119,7 @@ WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 
    between fifo write on port 'strm_out_V' (./svd.h:358->dut.cpp:31) and fifo write on port 'strm_out_V' (./svd.h:344->dut.cpp:31).
 INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 12, Depth: 13.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 0.35 seconds; current memory usage: 304 MB.
+INFO: [HLS 200-111] Elapsed time: 0.46 seconds; current memory usage: 304 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -136,9 +136,9 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_in_V' to 'ap_fifo
 INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_out_V' to 'ap_fifo'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
-INFO: [HLS 200-111] Elapsed time: 0.07 seconds; current memory usage: 305 MB.
+INFO: [HLS 200-111] Elapsed time: 0.1 seconds; current memory usage: 305 MB.
 INFO: [HLS 200-10] Finished generating all RTL models.
 INFO: [SYSC 207-301] Generating SystemC RTL for dut.
 INFO: [VHDL 208-304] Generating VHDL RTL for dut.
 INFO: [VLOG 209-307] Generating Verilog RTL for dut.
-INFO: [HLS 200-112] Total elapsed time: 40.731 seconds; peak memory usage: 305 MB.
+INFO: [HLS 200-112] Total elapsed time: 45.569 seconds; peak memory usage: 305 MB.

@@ -45252,7 +45252,7 @@ inline __attribute__((always_inline)) svd_traits() { _ssdm_SpecConstant(&NUM_SWE
 #pragma empty_line
 #pragma empty_line
 #pragma empty_line
-const int VEC_SIZ = 4 * 4;
+const int VEC_SIZ = 10 * 10;
 #pragma empty_line
 class PCA {
   public:

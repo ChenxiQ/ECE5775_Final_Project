@@ -214,7 +214,7 @@ _ifconv:1  %empty_7 = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_in_V,
 
 <node id="5" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-_ifconv:2  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_in_V), !map !167
+_ifconv:2  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_in_V), !map !166
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>
@@ -229,7 +229,7 @@ _ifconv:2  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_in_V), !map !167
 
 <node id="6" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-_ifconv:3  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_out_V), !map !173
+_ifconv:3  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_out_V), !map !172
 
 ]]></node>
 <StgValue><ssdm name=""/></StgValue>

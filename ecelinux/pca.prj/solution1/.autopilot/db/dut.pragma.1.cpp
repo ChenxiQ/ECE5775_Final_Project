@@ -45291,7 +45291,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
 
 
-const int VEC_SIZ = 4 * 4;
+const int VEC_SIZ = 10 * 10;
 
 class PCA {
   public:

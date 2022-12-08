@@ -58,9 +58,9 @@ architecture behav of dut_calc_svd is
     constant ap_const_lv32_9 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001001";
     constant ap_const_lv32_A : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001010";
     constant ap_const_lv32_B : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001011";
-    constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
-    constant ap_const_lv4_8 : STD_LOGIC_VECTOR (3 downto 0) := "1000";
-    constant ap_const_lv4_1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
+    constant ap_const_lv6_0 : STD_LOGIC_VECTOR (5 downto 0) := "000000";
+    constant ap_const_lv6_32 : STD_LOGIC_VECTOR (5 downto 0) := "110010";
+    constant ap_const_lv6_1 : STD_LOGIC_VECTOR (5 downto 0) := "000001";
     constant ap_const_lv32_80000000 : STD_LOGIC_VECTOR (31 downto 0) := "10000000000000000000000000000000";
     constant ap_const_lv32_17 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000010111";
     constant ap_const_lv32_1E : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000011110";
@@ -120,7 +120,7 @@ architecture behav of dut_calc_svd is
     signal ap_sig_198 : BOOLEAN;
     signal ap_sig_cseq_ST_pp0_stg10_fsm_11 : STD_LOGIC;
     signal ap_sig_208 : BOOLEAN;
-    signal proc_reg_90 : STD_LOGIC_VECTOR (3 downto 0);
+    signal proc_reg_90 : STD_LOGIC_VECTOR (5 downto 0);
     signal grp_fu_107_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal reg_136 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_sig_220 : BOOLEAN;
@@ -149,8 +149,8 @@ architecture behav of dut_calc_svd is
     signal ap_reg_ppstg_exitcond_reg_403_pp0_iter8 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_reg_ppstg_exitcond_reg_403_pp0_iter9 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_reg_ppstg_exitcond_reg_403_pp0_iter10 : STD_LOGIC_VECTOR (0 downto 0);
-    signal proc_1_fu_189_p2 : STD_LOGIC_VECTOR (3 downto 0);
-    signal proc_1_reg_407 : STD_LOGIC_VECTOR (3 downto 0);
+    signal proc_1_fu_189_p2 : STD_LOGIC_VECTOR (5 downto 0);
+    signal proc_1_reg_407 : STD_LOGIC_VECTOR (5 downto 0);
     signal tmp_20_reg_412 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_reg_ppstg_tmp_20_reg_412_pp0_iter1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_reg_ppstg_tmp_20_reg_412_pp0_iter2 : STD_LOGIC_VECTOR (31 downto 0);
@@ -256,7 +256,7 @@ architecture behav of dut_calc_svd is
     signal grp_dut_calc_angle_float_float_s_fu_101_ap_return_0 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_dut_calc_angle_float_float_s_fu_101_ap_return_1 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_dut_calc_angle_float_float_s_fu_101_ap_ce : STD_LOGIC;
-    signal proc_phi_fu_94_p4 : STD_LOGIC_VECTOR (3 downto 0);
+    signal proc_phi_fu_94_p4 : STD_LOGIC_VECTOR (5 downto 0);
     signal z_out_3_fu_359_p3 : STD_LOGIC_VECTOR (31 downto 0);
     signal vw_int_3_fu_380_p3 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_107_p0 : STD_LOGIC_VECTOR (31 downto 0);
@@ -692,7 +692,7 @@ begin
             if (((ap_const_logic_1 = ap_reg_ppiten_pp0_it1) and (exitcond_reg_403 = ap_const_lv1_0) and (ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg0_fsm_1) and not(((ap_const_logic_1 = ap_reg_ppiten_pp0_it14) and ap_sig_238)))) then 
                 proc_reg_90 <= proc_1_reg_407;
             elsif (((ap_const_logic_1 = ap_sig_cseq_ST_st1_fsm_0) and not((ap_start = ap_const_logic_0)))) then 
-                proc_reg_90 <= ap_const_lv4_0;
+                proc_reg_90 <= ap_const_lv6_0;
             end if; 
         end if;
     end process;
@@ -1448,7 +1448,7 @@ begin
 
     c_write_assign_6_to_int_fu_251_p1 <= w_out_int_reg_560;
     c_write_assign_9_to_int_fu_308_p1 <= reg_136;
-    exitcond_fu_183_p2 <= "1" when (proc_phi_fu_94_p4 = ap_const_lv4_8) else "0";
+    exitcond_fu_183_p2 <= "1" when (proc_phi_fu_94_p4 = ap_const_lv6_32) else "0";
 
     grp_dut_calc_angle_float_float_s_fu_101_A_i_assign_proc : process(ap_sig_cseq_ST_pp0_stg11_fsm_12, ap_sig_cseq_ST_pp0_stg10_fsm_11, reg_136, reg_143, ap_sig_897)
     begin
@@ -1737,7 +1737,7 @@ begin
     notlhs_fu_268_p2 <= "0" when (tmp_4_fu_254_p4 = ap_const_lv8_FF) else "1";
     notrhs3_fu_332_p2 <= "1" when (tmp_2_fu_322_p1 = ap_const_lv23_0) else "0";
     notrhs_fu_274_p2 <= "1" when (tmp_fu_264_p1 = ap_const_lv23_0) else "0";
-    proc_1_fu_189_p2 <= std_logic_vector(unsigned(proc_phi_fu_94_p4) + unsigned(ap_const_lv4_1));
+    proc_1_fu_189_p2 <= std_logic_vector(unsigned(proc_phi_fu_94_p4) + unsigned(ap_const_lv6_1));
 
     proc_phi_fu_94_p4_assign_proc : process(ap_reg_ppiten_pp0_it1, exitcond_reg_403, ap_sig_cseq_ST_pp0_stg0_fsm_1, proc_reg_90, proc_1_reg_407)
     begin

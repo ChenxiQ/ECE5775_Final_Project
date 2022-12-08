@@ -71,7 +71,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [XFORM-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:29) automatically.
 @I [XFORM-602] Inlining function 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' into 'dut' (dut.cpp:31) automatically.
 @I [XFORM-401] Performing if-conversion on hyperblock to (dut.cpp:29:3) in function 'dut'... converting 4 basic blocks.
-@I [HLS-111] Elapsed time: 8.52 seconds; current memory usage: 304 MB.
+@I [HLS-111] Elapsed time: 9.73 seconds; current memory usage: 304 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'dut' ...
 @I [HLS-10] ----------------------------------------------------------------
@@ -91,7 +91,7 @@ Please use function labels to distinguish different locations if necessary.
    between fifo write on port 'strm_out_V' (./svd.h:358->dut.cpp:31) and fifo write on port 'strm_out_V' (./svd.h:344->dut.cpp:31).
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 12, Depth: 13.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.35 seconds; current memory usage: 304 MB.
+@I [HLS-111] Elapsed time: 0.46 seconds; current memory usage: 304 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -108,9 +108,9 @@ Please use function labels to distinguish different locations if necessary.
 @I [RTGEN-500] Setting interface mode on port 'dut/strm_out_V' to 'ap_fifo'.
 @I [RTGEN-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
 @I [RTGEN-100] Finished creating RTL model for 'dut'.
-@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 305 MB.
+@I [HLS-111] Elapsed time: 0.1 seconds; current memory usage: 305 MB.
 @I [HLS-10] Finished generating all RTL models.
 @I [SYSC-301] Generating SystemC RTL for dut.
 @I [VHDL-304] Generating VHDL RTL for dut.
 @I [VLOG-307] Generating Verilog RTL for dut.
-@I [HLS-112] Total elapsed time: 40.731 seconds; peak memory usage: 305 MB.
+@I [HLS-112] Total elapsed time: 45.569 seconds; peak memory usage: 305 MB.

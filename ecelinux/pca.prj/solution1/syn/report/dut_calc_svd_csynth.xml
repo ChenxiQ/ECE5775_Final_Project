@@ -21,16 +21,16 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>264</Best-caseLatency>
-<Average-caseLatency>264</Average-caseLatency>
-<Worst-caseLatency>264</Worst-caseLatency>
-<Interval-min>264</Interval-min>
-<Interval-max>264</Interval-max>
+<Best-caseLatency>768</Best-caseLatency>
+<Average-caseLatency>768</Average-caseLatency>
+<Worst-caseLatency>768</Worst-caseLatency>
+<Interval-min>768</Interval-min>
+<Interval-max>768</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <svd_calc_diag>
-<TripCount>8</TripCount>
-<Latency>262</Latency>
+<TripCount>50</TripCount>
+<Latency>766</Latency>
 <PipelineII>12</PipelineII>
 <PipelineDepth>179</PipelineDepth>
 </svd_calc_diag>
@@ -40,8 +40,8 @@
 <AreaEstimates>
 <Resources>
 <DSP48E>31</DSP48E>
-<FF>7892</FF>
-<LUT>12275</LUT>
+<FF>7896</FF>
+<LUT>12282</LUT>
 <BRAM_18K>0</BRAM_18K>
 </Resources>
 <AvailableResources>

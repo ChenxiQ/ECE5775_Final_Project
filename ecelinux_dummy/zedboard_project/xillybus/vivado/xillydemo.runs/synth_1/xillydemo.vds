@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:35 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Thu Dec  8 09:25:48 2022
-# Process ID: 46320
+# Start of session at: Thu Dec  8 18:08:21 2022
+# Process ID: 10246
 # Current directory: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1
 # Command line: vivado -log xillydemo.vds -mode batch -messageDb vivado.pb -notrace -source xillydemo.tcl
 # Log file: /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/xillydemo.vds
@@ -15,12 +15,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 46511 
+INFO: Helper process launched with PID 10413 
 CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module fifo_8x2048 [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/src/fifo_8x2048.v:1]
 CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module fifo_32x512 [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/src/fifo_32x512.v:1]
 CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module system [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/vivado-essentials/system.v:4]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1269.566 ; gain = 227.785 ; free physical = 1735 ; free virtual = 27007
+Starting RTL Elaboration : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1269.566 ; gain = 227.785 ; free physical = 1410 ; free virtual = 26623
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'xillydemo' [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/src/xillydemo.v:3]
 INFO: [Synth 8-638] synthesizing module 'xillybus' [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/src/xillybus.v:3]
@@ -3479,7 +3479,7 @@ WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector__parameteriz
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector__parameterized3 has unconnected port s_axi_wuser[0]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 1426.832 ; gain = 385.051 ; free physical = 1559 ; free virtual = 26835
+Finished RTL Elaboration : Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 1426.832 ; gain = 385.051 ; free physical = 1382 ; free virtual = 26599
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3493,7 +3493,7 @@ WARNING: [Synth 8-3295] tying undriven pin xillybus_ins:PS_CLK to constant 0 [/h
 WARNING: [Synth 8-3295] tying undriven pin xillybus_ins:PS_PORB to constant 0 [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/src/xillydemo.v:124]
 WARNING: [Synth 8-3295] tying undriven pin xillybus_ins:user_r_read_32_eof to constant 0 [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/src/xillydemo.v:124]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:02 ; elapsed = 00:01:08 . Memory (MB): peak = 1426.832 ; gain = 385.051 ; free physical = 1559 ; free virtual = 26835
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 1426.832 ; gain = 385.051 ; free physical = 1385 ; free virtual = 26601
 ---------------------------------------------------------------------------------
 WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'fifo_32x512' instantiated as 'fifo_32_0'. 4 instances of this cell are unresolved black boxes. [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/src/xillydemo.v:334]
 WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'fifo_8x2048' instantiated as 'fifo_8'. 2 instances of this cell are unresolved black boxes. [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/src/xillydemo.v:393]
@@ -3506,18 +3506,18 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_2/fifo_8x2048_in_context.xdc] for cell 'fifo_8'
-Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_2/fifo_8x2048_in_context.xdc] for cell 'fifo_8'
-Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_2/fifo_8x2048_in_context.xdc] for cell 'smbus/fifo'
-Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_2/fifo_8x2048_in_context.xdc] for cell 'smbus/fifo'
-Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'fifo_32_0'
-Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'fifo_32_0'
-Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'fifo_32_1'
-Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'fifo_32_1'
-Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'audio/playback_fifo'
-Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'audio/playback_fifo'
-Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'audio/record_fifo'
-Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-46320-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'audio/record_fifo'
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_2/fifo_8x2048_in_context.xdc] for cell 'fifo_8'
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_2/fifo_8x2048_in_context.xdc] for cell 'fifo_8'
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_2/fifo_8x2048_in_context.xdc] for cell 'smbus/fifo'
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_2/fifo_8x2048_in_context.xdc] for cell 'smbus/fifo'
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'fifo_32_0'
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'fifo_32_0'
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'fifo_32_1'
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'fifo_32_1'
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'audio/playback_fifo'
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'audio/playback_fifo'
+Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'audio/record_fifo'
+Finished Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/.Xil/Vivado-10246-en-ec-ecelinux-16.coecis.cornell.edu/dcp_3/fifo_32x512_in_context.xdc] for cell 'audio/record_fifo'
 Parsing XDC File [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc] for cell 'xillybus_ins/system_i/vivado_system_i/processing_system7_0/inst'
 INFO: [Netlist 29-160] Cannot set property 'iostandard', because the property does not exist for objects of type 'pin'. [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc:30]
 Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
@@ -3750,16 +3750,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2226.566 ; gain = 0.008 ; free physical = 1407 ; free virtual = 26682
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2225.566 ; gain = 0.008 ; free physical = 1205 ; free virtual = 26422
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:33 ; elapsed = 00:01:40 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1371 ; free virtual = 26649
+Finished Constraint Validation : Time (s): cpu = 00:01:40 ; elapsed = 00:01:48 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 1129 ; free virtual = 26346
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:33 ; elapsed = 00:01:40 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1371 ; free virtual = 26649
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:40 ; elapsed = 00:01:48 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 1133 ; free virtual = 26350
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -3786,7 +3786,7 @@ Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i
 Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i/xillyvga_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for xillybus_ins/system_i/vivado_system_i/xlconcat_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:33 ; elapsed = 00:01:40 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1371 ; free virtual = 26649
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:40 ; elapsed = 00:01:48 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 1132 ; free virtual = 26349
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'gen_axi.s_axi_rvalid_i_reg' into 'gen_axi.read_cs_reg[0:0]' [/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_xbar_0/axi_crossbar_v2_1_10/hdl/verilog/axi_crossbar_v2_1_decerr_slave.v:231]
 INFO: [Synth 8-5546] ROM "read_cs" won't be mapped to RAM because it is too sparse
@@ -3865,7 +3865,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'smbus'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:36 ; elapsed = 00:01:44 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1337 ; free virtual = 26615
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:44 ; elapsed = 00:01:52 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 1118 ; free virtual = 26335
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4447,7 +4447,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:36 ; elapsed = 00:01:44 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1337 ; free virtual = 26615
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:44 ; elapsed = 00:01:52 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 1117 ; free virtual = 26334
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -4464,9 +4464,9 @@ INFO: [Synth 8-5546] ROM "smbus/pre_en" won't be mapped to RAM because it is too
 WARNING: [Synth 8-3917] design xillydemo has port smbus_addr[1] driven by constant 0
 WARNING: [Synth 8-3917] design xillydemo has port smbus_addr[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:46 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1336 ; free virtual = 26613
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:46 ; elapsed = 00:01:55 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 1187 ; free virtual = 26404
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:38 ; elapsed = 00:01:46 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1336 ; free virtual = 26613
+Finished Parallel Reinference  : Time (s): cpu = 00:01:46 ; elapsed = 00:01:55 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 1187 ; free virtual = 26404
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -4720,9 +4720,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\xillybus
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\xillybus_ins/system_i/vivado_system_i /processing_system7_0_axi_periph/xbar/\inst/gen_samd.crossbar_samd/gen_master_slots[4].reg_slice_mi/b_pipe/m_payload_i_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_fpga_design/sh_assign_1_reg_291_reg[8] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:50 ; elapsed = 00:01:58 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1348 ; free virtual = 26626
+Finished Area Optimization : Time (s): cpu = 00:01:59 ; elapsed = 00:02:08 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 1151 ; free virtual = 26368
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:50 ; elapsed = 00:01:58 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1348 ; free virtual = 26626
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:59 ; elapsed = 00:02:08 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 1151 ; free virtual = 26368
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -4736,10 +4736,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:56 ; elapsed = 00:02:05 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1165 ; free virtual = 26443
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:06 ; elapsed = 00:02:15 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 972 ; free virtual = 26189
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:59 ; elapsed = 00:02:07 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1124 ; free virtual = 26402
+Finished Timing Optimization : Time (s): cpu = 00:02:09 ; elapsed = 00:02:18 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 922 ; free virtual = 26139
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4751,16 +4751,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:03 ; elapsed = 00:02:12 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1100 ; free virtual = 26379
+Finished Technology Mapping : Time (s): cpu = 00:02:14 ; elapsed = 00:02:23 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 900 ; free virtual = 26117
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:02:03 ; elapsed = 00:02:12 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1100 ; free virtual = 26379
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:02:14 ; elapsed = 00:02:23 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 900 ; free virtual = 26117
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:03 ; elapsed = 00:02:12 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1100 ; free virtual = 26379
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:14 ; elapsed = 00:02:23 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 900 ; free virtual = 26117
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -4832,7 +4832,7 @@ INFO: [Synth 8-4163] Replicating register \audio/audio_dac_reg  to handle IOB=TR
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:05 ; elapsed = 00:02:14 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1095 ; free virtual = 26374
+Finished IO Insertion : Time (s): cpu = 00:02:15 ; elapsed = 00:02:25 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 897 ; free virtual = 26115
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4845,7 +4845,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:05 ; elapsed = 00:02:14 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1103 ; free virtual = 26382
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:16 ; elapsed = 00:02:25 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 897 ; free virtual = 26115
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4857,25 +4857,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:06 ; elapsed = 00:02:15 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1102 ; free virtual = 26381
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:17 ; elapsed = 00:02:26 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 897 ; free virtual = 26115
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:06 ; elapsed = 00:02:15 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1103 ; free virtual = 26382
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:17 ; elapsed = 00:02:27 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 891 ; free virtual = 26109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:07 ; elapsed = 00:02:15 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1104 ; free virtual = 26382
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:17 ; elapsed = 00:02:27 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 889 ; free virtual = 26107
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:07 ; elapsed = 00:02:16 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1104 ; free virtual = 26382
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:17 ; elapsed = 00:02:27 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 889 ; free virtual = 26107
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -5087,11 +5087,11 @@ Report Instance Areas:
 |134   |        xlconcat_0                                                 |vivado_system_xlconcat_0_0                                       |     0|
 +------+-------------------------------------------------------------------+-----------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:07 ; elapsed = 00:02:16 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1104 ; free virtual = 26383
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:17 ; elapsed = 00:02:27 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 879 ; free virtual = 26097
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 337 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:17 ; elapsed = 00:01:21 . Memory (MB): peak = 2226.566 ; gain = 238.445 ; free physical = 1100 ; free virtual = 26379
-Synthesis Optimization Complete : Time (s): cpu = 00:02:07 ; elapsed = 00:02:16 . Memory (MB): peak = 2226.566 ; gain = 1184.785 ; free physical = 1099 ; free virtual = 26378
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:24 ; elapsed = 00:01:29 . Memory (MB): peak = 2225.566 ; gain = 238.445 ; free physical = 881 ; free virtual = 26098
+Synthesis Optimization Complete : Time (s): cpu = 00:02:18 ; elapsed = 00:02:27 . Memory (MB): peak = 2225.566 ; gain = 1183.785 ; free physical = 882 ; free virtual = 26100
 INFO: [Project 1-571] Translating synthesized netlist
 Release 14.7 - ngc2edif P_INT.20160526 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
@@ -5140,7 +5140,7 @@ WARNING:NetListWriters:306 - Signal bus messages_ins/msg_buf_w0[26 : 0] on block
    signals.
   finished :Prep
 Writing EDIF netlist file xillybus_core.edif ...
-ngc2edif: Total memory usage is 118276 kilobytes
+ngc2edif: Total memory usage is 118280 kilobytes
 
 Reading core file '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/cores/xillybus_core.ngc' for (cell view 'xillybus_core', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillybus_core_ngc_b9d348a0.edif]
@@ -5158,7 +5158,7 @@ Processing design ...
    Preping design's macros ...
   finished :Prep
 Writing EDIF netlist file xillybus_lite.edif ...
-ngc2edif: Total memory usage is 104176 kilobytes
+ngc2edif: Total memory usage is 104172 kilobytes
 
 Reading core file '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux_dummy/zedboard_project/vivado-essentials/vivado_system/system/pcores/xillybus_lite_v1_00_a/netlist/xillybus_lite.ngc' for (cell view 'xillybus_lite', library 'work')
 Parsing EDIF File [./.ngc2edfcache/xillybus_lite_ngc_c5232fef.edif]
@@ -5219,6 +5219,6 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 817 Infos, 160 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:11 ; elapsed = 00:02:19 . Memory (MB): peak = 2429.965 ; gain = 1254.168 ; free physical = 1074 ; free virtual = 26369
-report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2685.980 ; gain = 0.000 ; free physical = 1090 ; free virtual = 26387
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  8 09:28:21 2022...
+synth_design: Time (s): cpu = 00:02:23 ; elapsed = 00:02:31 . Memory (MB): peak = 2428.965 ; gain = 1253.168 ; free physical = 847 ; free virtual = 26080
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2684.980 ; gain = 0.000 ; free physical = 805 ; free virtual = 26041
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  8 18:11:09 2022...

@@ -97,8 +97,8 @@ set RtlHierarchyInfo {[
 	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_calc_svd_fu_76.dut_fcmp_32ns_32ns_1_1_U23", "Parent" : "1", "Child" : []}]}
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "2", "Max" : "266"}
-	, {"Name" : "Interval", "Min" : "3", "Max" : "267"}
+	{"Name" : "Latency", "Min" : "2", "Max" : "770"}
+	, {"Name" : "Interval", "Min" : "3", "Max" : "771"}
 ]}
 
 set Spec2ImplPortList { 

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_calc_svd'
 ================================================================
-* Date:           Thu Dec  8 09:14:19 2022
+* Date:           Thu Dec  8 17:56:46 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |  264|  264|  264|  264|   none  |
+    |  768|  768|  768|  768|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                 |  Latency  | Iteration|  Initiation Interval  | Trip |          |
         |    Loop Name    | min | max |  Latency |  achieved |   target  | Count| Pipelined|
         +-----------------+-----+-----+----------+-----------+-----------+------+----------+
-        |- svd_calc_diag  |  262|  262|       179|         12|          1|     8|    yes   |
+        |- svd_calc_diag  |  766|  766|       179|         12|          1|    50|    yes   |
         +-----------------+-----+-----+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -454,15 +454,15 @@ ST_1: stg_184 [1/1] 1.57ns
 :2  br label %1
 
 
- <State 2>: 1.88ns
+ <State 2>: 1.94ns
 ST_2: proc [1/1] 0.00ns
-:0  %proc = phi i4 [ 0, %0 ], [ %proc_1, %_ifconv ]
+:0  %proc = phi i6 [ 0, %0 ], [ %proc_1, %_ifconv ]
 
-ST_2: exitcond [1/1] 1.88ns
-:1  %exitcond = icmp eq i4 %proc, -8
+ST_2: exitcond [1/1] 1.94ns
+:1  %exitcond = icmp eq i6 %proc, -14
 
-ST_2: proc_1 [1/1] 0.80ns
-:2  %proc_1 = add i4 %proc, 1
+ST_2: proc_1 [1/1] 1.72ns
+:2  %proc_1 = add i6 %proc, 1
 
 ST_2: stg_188 [1/1] 0.00ns
 :3  br i1 %exitcond, label %2, label %_ifconv
@@ -2144,7 +2144,7 @@ _ifconv:97  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V
 
  <State 180>: 4.38ns
 ST_180: empty_9 [1/1] 0.00ns
-_ifconv:0  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+_ifconv:0  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 50, i64 50, i64 50)
 
 ST_180: stg_630 [1/1] 0.00ns
 _ifconv:1  call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str) nounwind
