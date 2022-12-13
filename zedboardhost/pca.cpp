@@ -307,3 +307,7 @@ void PCA::quickSort(int arr[], int l, int h, fix32_t S[VEC_SIZ][VEC_SIZ]) {
 void PCA::find_max(fix32_t S[VEC_SIZ][VEC_SIZ]) {
   PCA::quickSort(sorted_idx, 0, VEC_SIZ-1, S);
 }
+
+int PCA::si(int i) {
+  return sorted_idx[i];
+}

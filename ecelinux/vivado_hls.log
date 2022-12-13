@@ -5,28 +5,28 @@
   Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 ================================================================
 INFO: [HLS 200-10] Running '/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'yx388' on host 'en-ec-ecelinux-16.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Thu Dec 08 17:55:58 EST 2022
+INFO: [HLS 200-10] For user 'cq53' on host 'en-ec-ecelinux-18.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-1160.76.1.el7.x86_64) on Fri Dec 09 18:09:51 EST 2022
 INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
-INFO: [HLS 200-10] In directory '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux'
-INFO: [HLS 200-10] Opening and resetting project '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj'.
+INFO: [HLS 200-10] In directory '/home/cq53/ece5775/ECE5775_Final_Project/ecelinux'
+INFO: [HLS 200-10] Opening and resetting project '/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj'.
 INFO: [HLS 200-10] Adding design file 'pca.cpp' to the project
 INFO: [HLS 200-10] Adding design file 'dut.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'pca_test.cpp' to the project
 INFO: [HLS 200-10] Adding test bench file 'data' to the project
-INFO: [HLS 200-10] Opening and resetting solution '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1'.
+INFO: [HLS 200-10] Opening and resetting solution '/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1'.
 INFO: [HLS 200-10] Cleaning up the solution database.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-make[1]: Entering directory `/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
+make[1]: Entering directory `/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
    Compiling ../../../../pca_test.cpp in release mode
    Compiling ../../../../dut.cpp in release mode
    Compiling ../../../../pca.cpp in release mode
    Generating csim.exe
-make[1]: Leaving directory `/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
+make[1]: Leaving directory `/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/csim/build'
 calculating norm...
 calculating cov...
 calculating svd...
-sweep=0 step=0sweep=0 step=1sweep=0 step=2sweep=0 step=3sweep=0 step=4sweep=0 step=5sweep=0 step=6sweep=0 step=7sweep=0 step=8sweep=0 step=9sweep=0 step=10sweep=0 step=11sweep=0 step=12sweep=0 step=13sweep=0 step=14sweep=0 step=15sweep=0 step=16sweep=0 step=17sweep=0 step=18sweep=0 step=19sweep=0 step=20sweep=0 step=21sweep=0 step=22sweep=0 step=23sweep=0 step=24sweep=0 step=25sweep=0 step=26sweep=0 step=27sweep=0 step=28sweep=0 step=29sweep=0 step=30sweep=0 step=31sweep=0 step=32sweep=0 step=33sweep=0 step=34sweep=0 step=35sweep=0 step=36sweep=0 step=37sweep=0 step=38sweep=0 step=39sweep=0 step=40sweep=0 step=41sweep=0 step=42sweep=0 step=43sweep=0 step=44sweep=0 step=45sweep=0 step=46sweep=0 step=47sweep=0 step=48sweep=0 step=49sweep=0 step=50sweep=0 step=51sweep=0 step=52sweep=0 step=53sweep=0 step=54sweep=0 step=55sweep=0 step=56sweep=0 step=57sweep=0 step=58sweep=0 step=59sweep=0 step=60sweep=0 step=61sweep=0 step=62sweep=0 step=63sweep=0 step=64sweep=0 step=65sweep=0 step=66sweep=0 step=67sweep=0 step=68sweep=0 step=69sweep=0 step=70sweep=0 step=71sweep=0 step=72sweep=0 step=73sweep=0 step=74sweep=0 step=75sweep=0 step=76sweep=0 step=77sweep=0 step=78sweep=0 step=79sweep=0 step=80sweep=0 step=81sweep=0 step=82sweep=0 step=83sweep=0 step=84sweep=0 step=85sweep=0 step=86sweep=0 step=87sweep=0 step=88sweep=0 step=89sweep=0 step=90sweep=0 step=91sweep=0 step=92sweep=0 step=93sweep=0 step=94sweep=0 step=95sweep=0 step=96sweep=0 step=97sweep=0 step=98sweep=1 step=0sweep=1 step=1sweep=1 step=2sweep=1 step=3sweep=1 step=4sweep=1 step=5sweep=1 step=6sweep=1 step=7sweep=1 step=8sweep=1 step=9sweep=1 step=10sweep=1 step=11sweep=1 step=12sweep=1 step=13sweep=1 step=14sweep=1 step=15sweep=1 step=16sweep=1 step=17sweep=1 step=18sweep=1 step=19sweep=1 step=20sweep=1 step=21sweep=1 step=22sweep=1 step=23sweep=1 step=24sweep=1 step=25sweep=1 step=26sweep=1 step=27sweep=1 step=28sweep=1 step=29sweep=1 step=30sweep=1 step=31sweep=1 step=32sweep=1 step=33sweep=1 step=34sweep=1 step=35sweep=1 step=36sweep=1 step=37sweep=1 step=38sweep=1 step=39sweep=1 step=40sweep=1 step=41sweep=1 step=42sweep=1 step=43sweep=1 step=44sweep=1 step=45sweep=1 step=46sweep=1 step=47sweep=1 step=48sweep=1 step=49sweep=1 step=50sweep=1 step=51sweep=1 step=52sweep=1 step=53sweep=1 step=54sweep=1 step=55sweep=1 step=56sweep=1 step=57sweep=1 step=58sweep=1 step=59sweep=1 step=60sweep=1 step=61sweep=1 step=62sweep=1 step=63sweep=1 step=64sweep=1 step=65sweep=1 step=66sweep=1 step=67sweep=1 step=68sweep=1 step=69sweep=1 step=70sweep=1 step=71sweep=1 step=72sweep=1 step=73sweep=1 step=74sweep=1 step=75sweep=1 step=76sweep=1 step=77sweep=1 step=78sweep=1 step=79sweep=1 step=80sweep=1 step=81sweep=1 step=82sweep=1 step=83sweep=1 step=84sweep=1 step=85sweep=1 step=86sweep=1 step=87sweep=1 step=88sweep=1 step=89sweep=1 step=90sweep=1 step=91sweep=1 step=92sweep=1 step=93sweep=1 step=94sweep=1 step=95sweep=1 step=96sweep=1 step=97sweep=1 step=98sweep=2 step=0sweep=2 step=1sweep=2 step=2sweep=2 step=3sweep=2 step=4sweep=2 step=5sweep=2 step=6sweep=2 step=7sweep=2 step=8sweep=2 step=9sweep=2 step=10sweep=2 step=11sweep=2 step=12sweep=2 step=13sweep=2 step=14sweep=2 step=15sweep=2 step=16sweep=2 step=17sweep=2 step=18sweep=2 step=19sweep=2 step=20sweep=2 step=21sweep=2 step=22sweep=2 step=23sweep=2 step=24sweep=2 step=25sweep=2 step=26sweep=2 step=27sweep=2 step=28sweep=2 step=29sweep=2 step=30sweep=2 step=31sweep=2 step=32sweep=2 step=33sweep=2 step=34sweep=2 step=35sweep=2 step=36sweep=2 step=37sweep=2 step=38sweep=2 step=39sweep=2 step=40sweep=2 step=41sweep=2 step=42sweep=2 step=43sweep=2 step=44sweep=2 step=45sweep=2 step=46sweep=2 step=47sweep=2 step=48sweep=2 step=49sweep=2 step=50sweep=2 step=51sweep=2 step=52sweep=2 step=53sweep=2 step=54sweep=2 step=55sweep=2 step=56sweep=2 step=57sweep=2 step=58sweep=2 step=59sweep=2 step=60sweep=2 step=61sweep=2 step=62sweep=2 step=63sweep=2 step=64sweep=2 step=65sweep=2 step=66sweep=2 step=67sweep=2 step=68sweep=2 step=69sweep=2 step=70sweep=2 step=71sweep=2 step=72sweep=2 step=73sweep=2 step=74sweep=2 step=75sweep=2 step=76sweep=2 step=77sweep=2 step=78sweep=2 step=79sweep=2 step=80sweep=2 step=81sweep=2 step=82sweep=2 step=83sweep=2 step=84sweep=2 step=85sweep=2 step=86sweep=2 step=87sweep=2 step=88sweep=2 step=89sweep=2 step=90sweep=2 step=91sweep=2 step=92sweep=2 step=93sweep=2 step=94sweep=2 step=95sweep=2 step=96sweep=2 step=97sweep=2 step=98sweep=3 step=0sweep=3 step=1sweep=3 step=2sweep=3 step=3sweep=3 step=4sweep=3 step=5sweep=3 step=6sweep=3 step=7sweep=3 step=8sweep=3 step=9sweep=3 step=10sweep=3 step=11sweep=3 step=12sweep=3 step=13sweep=3 step=14sweep=3 step=15sweep=3 step=16sweep=3 step=17sweep=3 step=18sweep=3 step=19sweep=3 step=20sweep=3 step=21sweep=3 step=22sweep=3 step=23sweep=3 step=24sweep=3 step=25sweep=3 step=26sweep=3 step=27sweep=3 step=28sweep=3 step=29sweep=3 step=30sweep=3 step=31sweep=3 step=32sweep=3 step=33sweep=3 step=34sweep=3 step=35sweep=3 step=36sweep=3 step=37sweep=3 step=38sweep=3 step=39sweep=3 step=40sweep=3 step=41sweep=3 step=42sweep=3 step=43sweep=3 step=44sweep=3 step=45sweep=3 step=46sweep=3 step=47sweep=3 step=48sweep=3 step=49sweep=3 step=50sweep=3 step=51sweep=3 step=52sweep=3 step=53sweep=3 step=54sweep=3 step=55sweep=3 step=56sweep=3 step=57sweep=3 step=58sweep=3 step=59sweep=3 step=60sweep=3 step=61sweep=3 step=62sweep=3 step=63sweep=3 step=64sweep=3 step=65sweep=3 step=66sweep=3 step=67sweep=3 step=68sweep=3 step=69sweep=3 step=70sweep=3 step=71sweep=3 step=72sweep=3 step=73sweep=3 step=74sweep=3 step=75sweep=3 step=76sweep=3 step=77sweep=3 step=78sweep=3 step=79sweep=3 step=80sweep=3 step=81sweep=3 step=82sweep=3 step=83sweep=3 step=84sweep=3 step=85sweep=3 step=86sweep=3 step=87sweep=3 step=88sweep=3 step=89sweep=3 step=90sweep=3 step=91sweep=3 step=92sweep=3 step=93sweep=3 step=94sweep=3 step=95sweep=3 step=96sweep=3 step=97sweep=3 step=98sweep=4 step=0sweep=4 step=1sweep=4 step=2sweep=4 step=3sweep=4 step=4sweep=4 step=5sweep=4 step=6sweep=4 step=7sweep=4 step=8sweep=4 step=9sweep=4 step=10sweep=4 step=11sweep=4 step=12sweep=4 step=13sweep=4 step=14sweep=4 step=15sweep=4 step=16sweep=4 step=17sweep=4 step=18sweep=4 step=19sweep=4 step=20sweep=4 step=21sweep=4 step=22sweep=4 step=23sweep=4 step=24sweep=4 step=25sweep=4 step=26sweep=4 step=27sweep=4 step=28sweep=4 step=29sweep=4 step=30sweep=4 step=31sweep=4 step=32sweep=4 step=33sweep=4 step=34sweep=4 step=35sweep=4 step=36sweep=4 step=37sweep=4 step=38sweep=4 step=39sweep=4 step=40sweep=4 step=41sweep=4 step=42sweep=4 step=43sweep=4 step=44sweep=4 step=45sweep=4 step=46sweep=4 step=47sweep=4 step=48sweep=4 step=49sweep=4 step=50sweep=4 step=51sweep=4 step=52sweep=4 step=53sweep=4 step=54sweep=4 step=55sweep=4 step=56sweep=4 step=57sweep=4 step=58sweep=4 step=59sweep=4 step=60sweep=4 step=61sweep=4 step=62sweep=4 step=63sweep=4 step=64sweep=4 step=65sweep=4 step=66sweep=4 step=67sweep=4 step=68sweep=4 step=69sweep=4 step=70sweep=4 step=71sweep=4 step=72sweep=4 step=73sweep=4 step=74sweep=4 step=75sweep=4 step=76sweep=4 step=77sweep=4 step=78sweep=4 step=79sweep=4 step=80sweep=4 step=81sweep=4 step=82sweep=4 step=83sweep=4 step=84sweep=4 step=85sweep=4 step=86sweep=4 step=87sweep=4 step=88sweep=4 step=89sweep=4 step=90sweep=4 step=91sweep=4 step=92sweep=4 step=93sweep=4 step=94sweep=4 step=95sweep=4 step=96sweep=4 step=97sweep=4 step=98sweep=5 step=0sweep=5 step=1sweep=5 step=2sweep=5 step=3sweep=5 step=4sweep=5 step=5sweep=5 step=6sweep=5 step=7sweep=5 step=8sweep=5 step=9sweep=5 step=10sweep=5 step=11sweep=5 step=12sweep=5 step=13sweep=5 step=14sweep=5 step=15sweep=5 step=16sweep=5 step=17sweep=5 step=18sweep=5 step=19sweep=5 step=20sweep=5 step=21sweep=5 step=22sweep=5 step=23sweep=5 step=24sweep=5 step=25sweep=5 step=26sweep=5 step=27sweep=5 step=28sweep=5 step=29sweep=5 step=30sweep=5 step=31sweep=5 step=32sweep=5 step=33sweep=5 step=34sweep=5 step=35sweep=5 step=36sweep=5 step=37sweep=5 step=38sweep=5 step=39sweep=5 step=40sweep=5 step=41sweep=5 step=42sweep=5 step=43sweep=5 step=44sweep=5 step=45sweep=5 step=46sweep=5 step=47sweep=5 step=48sweep=5 step=49sweep=5 step=50sweep=5 step=51sweep=5 step=52sweep=5 step=53sweep=5 step=54sweep=5 step=55sweep=5 step=56sweep=5 step=57sweep=5 step=58sweep=5 step=59sweep=5 step=60sweep=5 step=61sweep=5 step=62sweep=5 step=63sweep=5 step=64sweep=5 step=65sweep=5 step=66sweep=5 step=67sweep=5 step=68sweep=5 step=69sweep=5 step=70sweep=5 step=71sweep=5 step=72sweep=5 step=73sweep=5 step=74sweep=5 step=75sweep=5 step=76sweep=5 step=77sweep=5 step=78sweep=5 step=79sweep=5 step=80sweep=5 step=81sweep=5 step=82sweep=5 step=83sweep=5 step=84sweep=5 step=85sweep=5 step=86sweep=5 step=87sweep=5 step=88sweep=5 step=89sweep=5 step=90sweep=5 step=91sweep=5 step=92sweep=5 step=93sweep=5 step=94sweep=5 step=95sweep=5 step=96sweep=5 step=97sweep=5 step=98
+sweep=0 step=0sweep=0 step=1sweep=0 step=2sweep=0 step=3sweep=0 step=4sweep=0 step=5sweep=0 step=6sweep=0 step=7sweep=0 step=8sweep=0 step=9sweep=0 step=10sweep=0 step=11sweep=0 step=12sweep=0 step=13sweep=0 step=14sweep=1 step=0sweep=1 step=1sweep=1 step=2sweep=1 step=3sweep=1 step=4sweep=1 step=5sweep=1 step=6sweep=1 step=7sweep=1 step=8sweep=1 step=9sweep=1 step=10sweep=1 step=11sweep=1 step=12sweep=1 step=13sweep=1 step=14sweep=2 step=0sweep=2 step=1sweep=2 step=2sweep=2 step=3sweep=2 step=4sweep=2 step=5sweep=2 step=6sweep=2 step=7sweep=2 step=8sweep=2 step=9sweep=2 step=10sweep=2 step=11sweep=2 step=12sweep=2 step=13sweep=2 step=14sweep=3 step=0sweep=3 step=1sweep=3 step=2sweep=3 step=3sweep=3 step=4sweep=3 step=5sweep=3 step=6sweep=3 step=7sweep=3 step=8sweep=3 step=9sweep=3 step=10sweep=3 step=11sweep=3 step=12sweep=3 step=13sweep=3 step=14sweep=4 step=0sweep=4 step=1sweep=4 step=2sweep=4 step=3sweep=4 step=4sweep=4 step=5sweep=4 step=6sweep=4 step=7sweep=4 step=8sweep=4 step=9sweep=4 step=10sweep=4 step=11sweep=4 step=12sweep=4 step=13sweep=4 step=14sweep=5 step=0sweep=5 step=1sweep=5 step=2sweep=5 step=3sweep=5 step=4sweep=5 step=5sweep=5 step=6sweep=5 step=7sweep=5 step=8sweep=5 step=9sweep=5 step=10sweep=5 step=11sweep=5 step=12sweep=5 step=13sweep=5 step=14
 ranking...
 back projecting...
 transfering output...
@@ -34,46 +34,46 @@ writing files...
 write y
 write tsf
 write mean
-pca                 :      1 calls; 153.451 msecs total time
+pca                 :      1 calls;  12.915 msecs total time
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [HLS 200-10] Analyzing design file 'dut.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'pca.cpp' ... 
 INFO: [HLS 200-10] Validating synthesis directives ...
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/rd_buffer' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_diag' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'calc_svd/svd_calc_diag' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_wb_diag' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_off_r' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'update_off_diag_r/svd_calc_off_r' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_wb_off_r' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_off_c' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'PIPELINE' for location 'update_off_diag_c/svd_calc_off_c' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 WARNING: [HLS 200-40] Directive 'INLINE' cannot be applied: Function 'vm2x1_base' does not exist in any synthesis source file.
 WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Label 'svd_wb_off_c' does not exist in function 'svd_alt'. 
@@ -85,7 +85,7 @@ WARNING: [HLS 200-40] Directive 'PIPELINE' cannot be applied: Function 'backproj
 INFO: [HLS 200-10] Starting code transformations ...
 INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<78, 55, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371).
 INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<55, 55, false, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
-INFO: [XFORM 203-603] Inlining function 'svd::svd2x2<float, float, float>' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:341).
+INFO: [XFORM 203-603] Inlining function 'svd::svd2x2<float, float, float>' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:341).
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:368) automatically.
 INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371) automatically.
@@ -98,10 +98,10 @@ INFO: [XFORM 203-602] Inlining function 'svd::within_precision<float>' into 'svd
 INFO: [XFORM 203-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_angle<float, float>' (./svd.h:153) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::x_copysign<float>' into 'svd::calc_angle<float, float>' (./svd.h:186) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::x_rsqrt<float>' into 'svd::calc_angle<float, float>' (./svd.h:186) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::complex<float>::imag' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:239->./svd.h:341) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::complex<float>::real' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:240->./svd.h:341) automatically.
-INFO: [XFORM 203-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:253->./svd.h:341) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:283->./svd.h:341) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::complex<float>::imag' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:239->./svd.h:341) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::complex<float>::real' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:240->./svd.h:341) automatically.
+INFO: [XFORM 203-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:253->./svd.h:341) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:283->./svd.h:341) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:29) automatically.
 INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:368) automatically.
 INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371) automatically.
@@ -114,16 +114,16 @@ INFO: [XFORM 203-602] Inlining function 'svd::within_precision<float>' into 'svd
 INFO: [XFORM 203-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_angle<float, float>' (./svd.h:153) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::x_copysign<float>' into 'svd::calc_angle<float, float>' (./svd.h:186) automatically.
 INFO: [XFORM 203-602] Inlining function 'hls::x_rsqrt<float>' into 'svd::calc_angle<float, float>' (./svd.h:186) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::complex<float>::imag' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:239->./svd.h:341) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::complex<float>::real' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:240->./svd.h:341) automatically.
-INFO: [XFORM 203-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:253->./svd.h:341) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:283->./svd.h:341) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::complex<float>::imag' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:239->./svd.h:341) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::complex<float>::real' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:240->./svd.h:341) automatically.
+INFO: [XFORM 203-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:253->./svd.h:341) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:283->./svd.h:341) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:29) automatically.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./svd.h:333:70) to (./svd.h:333:62) in function 'svd::calc_svd<100, 100, MY_CONFIG_SVD>'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./svd.h:333:70) to (./svd.h:333:62) in function 'svd::calc_svd<16, 16, MY_CONFIG_SVD>'... converting 5 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (dut.cpp:29:3) in function 'dut'... converting 4 basic blocks.
-WARNING: [XFORM 203-631] Renaming function 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:17:62) into calc_svd.
+WARNING: [XFORM 203-631] Renaming function 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:17:62) into calc_svd.
 WARNING: [XFORM 203-631] Renaming function 'svd::calc_angle<float, float>' (./svd.h:17:7) into calc_angle<float, float>.
-INFO: [HLS 200-111] Elapsed time: 10.77 seconds; current memory usage: 352 MB.
+INFO: [HLS 200-111] Elapsed time: 10.41 seconds; current memory usage: 352 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'dut' ...
 WARNING: [SYN 201-103] Legalizing function name 'dut_calc_angle<float, float>' to 'dut_calc_angle_float_float_s'.
@@ -134,7 +134,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'dut_calc_angle<float, float>'.
 INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 119.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 0.16 seconds; current memory usage: 354 MB.
+INFO: [HLS 200-111] Elapsed time: 0.17 seconds; current memory usage: 354 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_calc_angle_float_float_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -143,7 +143,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 0.12 seconds; current memory usage: 355 MB.
+INFO: [HLS 200-111] Elapsed time: 0.07 seconds; current memory usage: 355 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Scheduling module 'dut_calc_svd' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -161,7 +161,7 @@ WARNING: [SCHED 204-68] Unable to enforce a carried dependency constraint (II = 
    between fifo write on port 'strm_out_V' (./svd.h:358) and fifo write on port 'strm_out_V' (./svd.h:344).
 INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 12, Depth: 179.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 0.7 seconds; current memory usage: 356 MB.
+INFO: [HLS 200-111] Elapsed time: 0.67 seconds; current memory usage: 356 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_calc_svd' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -170,13 +170,13 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 0.28 seconds; current memory usage: 358 MB.
+INFO: [HLS 200-111] Elapsed time: 0.24 seconds; current memory usage: 358 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Scheduling module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 0.22 seconds; current memory usage: 358 MB.
+INFO: [HLS 200-111] Elapsed time: 0.21 seconds; current memory usage: 358 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -185,7 +185,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 0.08 seconds; current memory usage: 358 MB.
+INFO: [HLS 200-111] Elapsed time: 0.05 seconds; current memory usage: 358 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut_calc_angle_float_float_s' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -204,7 +204,7 @@ INFO: [RTGEN 206-100] Generating core module 'dut_faddfsub_32ns_32ns_32_5_full_d
 INFO: [RTGEN 206-100] Generating core module 'dut_fcmp_32ns_32ns_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_calc_svd'.
-INFO: [HLS 200-111] Elapsed time: 0.52 seconds; current memory usage: 364 MB.
+INFO: [HLS 200-111] Elapsed time: 0.59 seconds; current memory usage: 364 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -212,9 +212,9 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_in_V' to 'ap_fifo
 INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_out_V' to 'ap_fifo'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
-INFO: [HLS 200-111] Elapsed time: 0.36 seconds; current memory usage: 367 MB.
+INFO: [HLS 200-111] Elapsed time: 0.35 seconds; current memory usage: 367 MB.
 INFO: [HLS 200-10] Finished generating all RTL models.
 INFO: [SYSC 207-301] Generating SystemC RTL for dut.
 INFO: [VHDL 208-304] Generating VHDL RTL for dut.
 INFO: [VLOG 209-307] Generating Verilog RTL for dut.
-INFO: [HLS 200-112] Total elapsed time: 53.816 seconds; peak memory usage: 367 MB.
+INFO: [HLS 200-112] Total elapsed time: 49.312 seconds; peak memory usage: 367 MB.

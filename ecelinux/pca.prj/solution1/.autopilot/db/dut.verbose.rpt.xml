@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut'" level="0">
-<item name = "Date">Thu Dec  8 17:56:49 2022
+<item name = "Date">Fri Dec  9 18:10:38 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2, 770, 3, 771, none</column>
+<column name="">2, 266, 3, 267, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_dut_calc_svd_fu_76">dut_calc_svd, 768, 768, 768, 768, none</column>
+<column name="grp_dut_calc_svd_fu_76">dut_calc_svd, 264, 264, 264, 264, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,7 +50,7 @@
 <column name="DSP">-, -, -, -</column>
 <column name="Expression">-, -, 0, 436</column>
 <column name="FIFO">-, -, -, -</column>
-<column name="Instance">-, 31, 7896, 12282</column>
+<column name="Instance">-, 31, 7892, 12275</column>
 <column name="Memory">-, -, -, -</column>
 <column name="Multiplexer">-, -, -, 4</column>
 <column name="Register">-, -, 70, -</column>
@@ -62,7 +62,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="grp_dut_calc_svd_fu_76">dut_calc_svd, 0, 31, 7896, 12282</column>
+<column name="grp_dut_calc_svd_fu_76">dut_calc_svd, 0, 31, 7892, 12275</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">

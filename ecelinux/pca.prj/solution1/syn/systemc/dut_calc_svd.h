@@ -97,7 +97,7 @@ struct dut_calc_svd : public sc_module {
     sc_signal< bool > ap_sig_198;
     sc_signal< sc_logic > ap_sig_cseq_ST_pp0_stg10_fsm_11;
     sc_signal< bool > ap_sig_208;
-    sc_signal< sc_lv<6> > proc_reg_90;
+    sc_signal< sc_lv<4> > proc_reg_90;
     sc_signal< sc_lv<32> > grp_fu_107_p2;
     sc_signal< sc_lv<32> > reg_136;
     sc_signal< bool > ap_sig_220;
@@ -126,8 +126,8 @@ struct dut_calc_svd : public sc_module {
     sc_signal< sc_lv<1> > ap_reg_ppstg_exitcond_reg_403_pp0_iter8;
     sc_signal< sc_lv<1> > ap_reg_ppstg_exitcond_reg_403_pp0_iter9;
     sc_signal< sc_lv<1> > ap_reg_ppstg_exitcond_reg_403_pp0_iter10;
-    sc_signal< sc_lv<6> > proc_1_fu_189_p2;
-    sc_signal< sc_lv<6> > proc_1_reg_407;
+    sc_signal< sc_lv<4> > proc_1_fu_189_p2;
+    sc_signal< sc_lv<4> > proc_1_reg_407;
     sc_signal< sc_lv<32> > tmp_20_reg_412;
     sc_signal< sc_lv<32> > ap_reg_ppstg_tmp_20_reg_412_pp0_iter1;
     sc_signal< sc_lv<32> > ap_reg_ppstg_tmp_20_reg_412_pp0_iter2;
@@ -233,7 +233,7 @@ struct dut_calc_svd : public sc_module {
     sc_signal< sc_lv<32> > grp_dut_calc_angle_float_float_s_fu_101_ap_return_0;
     sc_signal< sc_lv<32> > grp_dut_calc_angle_float_float_s_fu_101_ap_return_1;
     sc_signal< sc_logic > grp_dut_calc_angle_float_float_s_fu_101_ap_ce;
-    sc_signal< sc_lv<6> > proc_phi_fu_94_p4;
+    sc_signal< sc_lv<4> > proc_phi_fu_94_p4;
     sc_signal< sc_lv<32> > z_out_3_fu_359_p3;
     sc_signal< sc_lv<32> > vw_int_3_fu_380_p3;
     sc_signal< sc_lv<32> > grp_fu_107_p0;
@@ -312,9 +312,9 @@ struct dut_calc_svd : public sc_module {
     static const sc_lv<32> ap_const_lv32_9;
     static const sc_lv<32> ap_const_lv32_A;
     static const sc_lv<32> ap_const_lv32_B;
-    static const sc_lv<6> ap_const_lv6_0;
-    static const sc_lv<6> ap_const_lv6_32;
-    static const sc_lv<6> ap_const_lv6_1;
+    static const sc_lv<4> ap_const_lv4_0;
+    static const sc_lv<4> ap_const_lv4_8;
+    static const sc_lv<4> ap_const_lv4_1;
     static const sc_lv<32> ap_const_lv32_80000000;
     static const sc_lv<32> ap_const_lv32_17;
     static const sc_lv<32> ap_const_lv32_1E;

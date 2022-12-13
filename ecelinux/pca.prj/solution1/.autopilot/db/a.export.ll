@@ -1,4 +1,4 @@
-; ModuleID = '/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.2.bc'
+; ModuleID = '/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/a.o.2.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
@@ -29,8 +29,8 @@ define void @dut(float* %strm_in_V, float* %strm_out_V) {
 _ifconv:
   %empty = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str39, [1 x i8]* @p_str40, [1 x i8]* @p_str41, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str42)
   %empty_7 = call i32 (...)* @_ssdm_op_SpecInterface(float* %strm_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str35, [1 x i8]* @p_str36, [1 x i8]* @p_str37, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str38)
-  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_in_V), !map !166
-  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_out_V), !map !172
+  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_in_V), !map !167
+  call void (...)* @_ssdm_op_SpecBitsMap(float* %strm_out_V), !map !173
   call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @dut_str) nounwind
   %tmp_1 = call float @_ssdm_op_Read.ap_fifo.volatile.floatP(float* %strm_in_V)
   %p_Val2_s = bitcast float %tmp_1 to i32
@@ -73,13 +73,13 @@ define internal fastcc void @dut_calc_svd(float* %strm_in_V, float* %strm_out_V)
   br label %1
 
 ; <label>:1                                       ; preds = %_ifconv, %0
-  %proc = phi i6 [ 0, %0 ], [ %proc_1, %_ifconv ]
-  %exitcond = icmp eq i6 %proc, -14
-  %proc_1 = add i6 %proc, 1
+  %proc = phi i4 [ 0, %0 ], [ %proc_1, %_ifconv ]
+  %exitcond = icmp eq i4 %proc, -8
+  %proc_1 = add i4 %proc, 1
   br i1 %exitcond, label %2, label %_ifconv
 
 _ifconv:                                          ; preds = %1
-  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 50, i64 50, i64 50)
+  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
   call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str) nounwind
   %tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([14 x i8]* @p_str)
   call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
@@ -398,9 +398,9 @@ declare void @_GLOBAL__I_a10() nounwind section ".text.startup"
 
 declare void @_GLOBAL__I_a() nounwind section ".text.startup"
 
-!opencl.kernels = !{!0, !0, !7, !13, !19, !22, !28, !19, !34, !36, !36, !39, !42, !42, !45, !51, !54, !56, !59, !59, !45, !61, !45, !45, !45, !63, !63, !65, !65, !66, !68, !45, !45, !45, !70, !70, !71, !71, !73, !73, !75, !78, !78, !45, !45, !45, !80, !63, !63, !45, !81, !84, !84, !81, !90, !90, !75, !80, !63, !63, !45, !81, !92, !92, !94, !96, !96, !100, !45, !102, !94, !104, !104, !106, !106, !45, !45, !45, !45, !45, !45, !45, !45, !45, !45, !45, !45, !107, !109, !45, !45, !45, !111, !45, !114, !118, !121, !127, !131, !133, !135, !135, !139, !143, !143, !19, !22, !149, !45, !7, !155, !45, !45}
+!opencl.kernels = !{!0, !0, !7, !13, !19, !22, !28, !19, !34, !36, !36, !39, !42, !42, !45, !51, !54, !56, !59, !59, !45, !61, !45, !45, !45, !63, !63, !65, !65, !66, !68, !45, !45, !45, !70, !70, !71, !71, !73, !73, !75, !78, !78, !45, !45, !45, !80, !63, !63, !45, !81, !84, !84, !81, !90, !90, !75, !80, !63, !63, !45, !81, !92, !92, !94, !96, !96, !100, !45, !102, !94, !104, !104, !106, !106, !45, !45, !45, !45, !45, !45, !45, !45, !45, !45, !45, !45, !107, !109, !45, !45, !45, !111, !45, !114, !118, !121, !127, !131, !134, !136, !136, !140, !144, !144, !19, !22, !150, !45, !7, !156, !45, !45}
 !hls.encrypted.func = !{}
-!llvm.map.gv = !{!159}
+!llvm.map.gv = !{!160}
 
 !0 = metadata !{null, metadata !1, metadata !2, metadata !3, metadata !4, metadata !5, metadata !6}
 !1 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0}
@@ -521,60 +521,61 @@ declare void @_GLOBAL__I_a() nounwind section ".text.startup"
 !116 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [100]*", metadata !"fix32_t*"}
 !117 = metadata !{metadata !"kernel_arg_name", metadata !"X", metadata !"mean"}
 !118 = metadata !{null, metadata !115, metadata !2, metadata !119, metadata !4, metadata !120, metadata !6}
-!119 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [100]*", metadata !"fix32_t [100]*"}
+!119 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [100]*", metadata !"fix32_t [16]*"}
 !120 = metadata !{metadata !"kernel_arg_name", metadata !"X", metadata !"XXT"}
 !121 = metadata !{null, metadata !122, metadata !123, metadata !124, metadata !125, metadata !126, metadata !6}
 !122 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1, i32 1, i32 1}
 !123 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none", metadata !"none"}
-!124 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [100]*", metadata !"fix32_t [100]*", metadata !"fix32_t [100]*", metadata !"fix32_t [100]*"}
+!124 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [16]*", metadata !"fix32_t [16]*", metadata !"fix32_t [16]*", metadata !"fix32_t [16]*"}
 !125 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !"", metadata !""}
 !126 = metadata !{metadata !"kernel_arg_name", metadata !"XXT", metadata !"S", metadata !"U", metadata !"V"}
 !127 = metadata !{null, metadata !128, metadata !86, metadata !129, metadata !88, metadata !130, metadata !6}
 !128 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1, i32 1}
-!129 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [100]*", metadata !"fix32_t [100]*", metadata !"fix32_t [100]*"}
+!129 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [16]*", metadata !"fix32_t [16]*", metadata !"fix32_t [16]*"}
 !130 = metadata !{metadata !"kernel_arg_name", metadata !"tsf_mat", metadata !"S", metadata !"U"}
-!131 = metadata !{null, metadata !128, metadata !86, metadata !129, metadata !88, metadata !132, metadata !6}
-!132 = metadata !{metadata !"kernel_arg_name", metadata !"tsf_mat", metadata !"X", metadata !"Y"}
-!133 = metadata !{null, metadata !115, metadata !2, metadata !134, metadata !4, metadata !38, metadata !6}
-!134 = metadata !{metadata !"kernel_arg_type", metadata !"int*", metadata !"int*"}
-!135 = metadata !{null, metadata !136, metadata !123, metadata !137, metadata !125, metadata !138, metadata !6}
-!136 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0, i32 1}
-!137 = metadata !{metadata !"kernel_arg_type", metadata !"int*", metadata !"int", metadata !"int", metadata !"fix32_t [100]*"}
-!138 = metadata !{metadata !"kernel_arg_name", metadata !"arr", metadata !"l", metadata !"h", metadata !"S"}
-!139 = metadata !{null, metadata !140, metadata !9, metadata !141, metadata !11, metadata !142, metadata !6}
-!140 = metadata !{metadata !"kernel_arg_addr_space", i32 1}
-!141 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [100]*"}
-!142 = metadata !{metadata !"kernel_arg_name", metadata !"S"}
-!143 = metadata !{null, metadata !144, metadata !145, metadata !146, metadata !147, metadata !148, metadata !6}
-!144 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1, i32 1, i32 1, i32 0, i32 0}
-!145 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none"}
-!146 = metadata !{metadata !"kernel_arg_type", metadata !"const float [100]*", metadata !"float [100]*", metadata !"float [100]*", metadata !"float [100]*", metadata !"hls::stream<float> &", metadata !"hls::stream<float> &"}
-!147 = metadata !{metadata !"kernel_arg_type_qual", metadata !"const", metadata !"", metadata !"", metadata !"", metadata !"", metadata !""}
-!148 = metadata !{metadata !"kernel_arg_name", metadata !"A", metadata !"S", metadata !"U", metadata !"V", metadata !"pca_in", metadata !"pca_out"}
-!149 = metadata !{null, metadata !150, metadata !151, metadata !152, metadata !153, metadata !154, metadata !6}
-!150 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0}
-!151 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none"}
-!152 = metadata !{metadata !"kernel_arg_type", metadata !"float", metadata !"float", metadata !"float", metadata !"float", metadata !"float", metadata !"float", metadata !"float", metadata !"float", metadata !"float &", metadata !"float &", metadata !"float &", metadata !"float &"}
-!153 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !""}
-!154 = metadata !{metadata !"kernel_arg_name", metadata !"a1", metadata !"a2", metadata !"a3", metadata !"a4", metadata !"b1", metadata !"b2", metadata !"b3", metadata !"b4", metadata !"c1", metadata !"c2", metadata !"c3", metadata !"c4"}
-!155 = metadata !{null, metadata !156, metadata !123, metadata !157, metadata !125, metadata !158, metadata !6}
-!156 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0, i32 0, i32 0}
-!157 = metadata !{metadata !"kernel_arg_type", metadata !"int &", metadata !"int &", metadata !"int", metadata !"int"}
-!158 = metadata !{metadata !"kernel_arg_name", metadata !"top_left", metadata !"bottom_right", metadata !"idx1", metadata !"idx2"}
-!159 = metadata !{metadata !160, [3 x i32]* @llvm_global_ctors_0}
-!160 = metadata !{metadata !161}
-!161 = metadata !{i32 0, i32 31, metadata !162}
-!162 = metadata !{metadata !163}
-!163 = metadata !{metadata !"llvm.global_ctors.0", metadata !164, metadata !"", i32 0, i32 31}
-!164 = metadata !{metadata !165}
-!165 = metadata !{i32 0, i32 2, i32 1}
-!166 = metadata !{metadata !167}
-!167 = metadata !{i32 0, i32 31, metadata !168}
-!168 = metadata !{metadata !169}
-!169 = metadata !{metadata !"strm_in.V", metadata !170, metadata !"float", i32 0, i32 31}
-!170 = metadata !{metadata !171}
-!171 = metadata !{i32 0, i32 0, i32 1}
-!172 = metadata !{metadata !173}
-!173 = metadata !{i32 0, i32 31, metadata !174}
-!174 = metadata !{metadata !175}
-!175 = metadata !{metadata !"strm_out.V", metadata !170, metadata !"float", i32 0, i32 31}
+!131 = metadata !{null, metadata !128, metadata !86, metadata !132, metadata !88, metadata !133, metadata !6}
+!132 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [16]*", metadata !"fix32_t [100]*", metadata !"fix32_t [100]*"}
+!133 = metadata !{metadata !"kernel_arg_name", metadata !"tsf_mat", metadata !"X", metadata !"Y"}
+!134 = metadata !{null, metadata !115, metadata !2, metadata !135, metadata !4, metadata !38, metadata !6}
+!135 = metadata !{metadata !"kernel_arg_type", metadata !"int*", metadata !"int*"}
+!136 = metadata !{null, metadata !137, metadata !123, metadata !138, metadata !125, metadata !139, metadata !6}
+!137 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 0, i32 0, i32 1}
+!138 = metadata !{metadata !"kernel_arg_type", metadata !"int*", metadata !"int", metadata !"int", metadata !"fix32_t [16]*"}
+!139 = metadata !{metadata !"kernel_arg_name", metadata !"arr", metadata !"l", metadata !"h", metadata !"S"}
+!140 = metadata !{null, metadata !141, metadata !9, metadata !142, metadata !11, metadata !143, metadata !6}
+!141 = metadata !{metadata !"kernel_arg_addr_space", i32 1}
+!142 = metadata !{metadata !"kernel_arg_type", metadata !"fix32_t [16]*"}
+!143 = metadata !{metadata !"kernel_arg_name", metadata !"S"}
+!144 = metadata !{null, metadata !145, metadata !146, metadata !147, metadata !148, metadata !149, metadata !6}
+!145 = metadata !{metadata !"kernel_arg_addr_space", i32 1, i32 1, i32 1, i32 1, i32 0, i32 0}
+!146 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none"}
+!147 = metadata !{metadata !"kernel_arg_type", metadata !"const float [16]*", metadata !"float [16]*", metadata !"float [16]*", metadata !"float [16]*", metadata !"hls::stream<float> &", metadata !"hls::stream<float> &"}
+!148 = metadata !{metadata !"kernel_arg_type_qual", metadata !"const", metadata !"", metadata !"", metadata !"", metadata !"", metadata !""}
+!149 = metadata !{metadata !"kernel_arg_name", metadata !"A", metadata !"S", metadata !"U", metadata !"V", metadata !"pca_in", metadata !"pca_out"}
+!150 = metadata !{null, metadata !151, metadata !152, metadata !153, metadata !154, metadata !155, metadata !6}
+!151 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0, i32 0}
+!152 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none", metadata !"none"}
+!153 = metadata !{metadata !"kernel_arg_type", metadata !"float", metadata !"float", metadata !"float", metadata !"float", metadata !"float", metadata !"float", metadata !"float", metadata !"float", metadata !"float &", metadata !"float &", metadata !"float &", metadata !"float &"}
+!154 = metadata !{metadata !"kernel_arg_type_qual", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !"", metadata !""}
+!155 = metadata !{metadata !"kernel_arg_name", metadata !"a1", metadata !"a2", metadata !"a3", metadata !"a4", metadata !"b1", metadata !"b2", metadata !"b3", metadata !"b4", metadata !"c1", metadata !"c2", metadata !"c3", metadata !"c4"}
+!156 = metadata !{null, metadata !157, metadata !123, metadata !158, metadata !125, metadata !159, metadata !6}
+!157 = metadata !{metadata !"kernel_arg_addr_space", i32 0, i32 0, i32 0, i32 0}
+!158 = metadata !{metadata !"kernel_arg_type", metadata !"int &", metadata !"int &", metadata !"int", metadata !"int"}
+!159 = metadata !{metadata !"kernel_arg_name", metadata !"top_left", metadata !"bottom_right", metadata !"idx1", metadata !"idx2"}
+!160 = metadata !{metadata !161, [3 x i32]* @llvm_global_ctors_0}
+!161 = metadata !{metadata !162}
+!162 = metadata !{i32 0, i32 31, metadata !163}
+!163 = metadata !{metadata !164}
+!164 = metadata !{metadata !"llvm.global_ctors.0", metadata !165, metadata !"", i32 0, i32 31}
+!165 = metadata !{metadata !166}
+!166 = metadata !{i32 0, i32 2, i32 1}
+!167 = metadata !{metadata !168}
+!168 = metadata !{i32 0, i32 31, metadata !169}
+!169 = metadata !{metadata !170}
+!170 = metadata !{metadata !"strm_in.V", metadata !171, metadata !"float", i32 0, i32 31}
+!171 = metadata !{metadata !172}
+!172 = metadata !{i32 0, i32 0, i32 1}
+!173 = metadata !{metadata !174}
+!174 = metadata !{i32 0, i32 31, metadata !175}
+!175 = metadata !{metadata !176}
+!176 = metadata !{metadata !"strm_out.V", metadata !171, metadata !"float", i32 0, i32 31}

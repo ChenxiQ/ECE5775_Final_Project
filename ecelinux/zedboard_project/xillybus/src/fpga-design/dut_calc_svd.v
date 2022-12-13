@@ -49,9 +49,9 @@ parameter    ap_const_lv32_8 = 32'b1000;
 parameter    ap_const_lv32_9 = 32'b1001;
 parameter    ap_const_lv32_A = 32'b1010;
 parameter    ap_const_lv32_B = 32'b1011;
-parameter    ap_const_lv6_0 = 6'b000000;
-parameter    ap_const_lv6_32 = 6'b110010;
-parameter    ap_const_lv6_1 = 6'b1;
+parameter    ap_const_lv4_0 = 4'b0000;
+parameter    ap_const_lv4_8 = 4'b1000;
+parameter    ap_const_lv4_1 = 4'b1;
 parameter    ap_const_lv32_80000000 = 32'b10000000000000000000000000000000;
 parameter    ap_const_lv32_17 = 32'b10111;
 parameter    ap_const_lv32_1E = 32'b11110;
@@ -129,7 +129,7 @@ reg    ap_sig_cseq_ST_pp0_stg9_fsm_10;
 reg    ap_sig_198;
 reg    ap_sig_cseq_ST_pp0_stg10_fsm_11;
 reg    ap_sig_208;
-reg   [5:0] proc_reg_90;
+reg   [3:0] proc_reg_90;
 wire   [31:0] grp_fu_107_p2;
 reg   [31:0] reg_136;
 reg    ap_sig_220;
@@ -158,8 +158,8 @@ reg   [0:0] ap_reg_ppstg_exitcond_reg_403_pp0_iter7;
 reg   [0:0] ap_reg_ppstg_exitcond_reg_403_pp0_iter8;
 reg   [0:0] ap_reg_ppstg_exitcond_reg_403_pp0_iter9;
 reg   [0:0] ap_reg_ppstg_exitcond_reg_403_pp0_iter10;
-wire   [5:0] proc_1_fu_189_p2;
-reg   [5:0] proc_1_reg_407;
+wire   [3:0] proc_1_fu_189_p2;
+reg   [3:0] proc_1_reg_407;
 reg   [31:0] tmp_20_reg_412;
 reg   [31:0] ap_reg_ppstg_tmp_20_reg_412_pp0_iter1;
 reg   [31:0] ap_reg_ppstg_tmp_20_reg_412_pp0_iter2;
@@ -265,7 +265,7 @@ reg   [31:0] grp_dut_calc_angle_float_float_s_fu_101_A_i;
 wire   [31:0] grp_dut_calc_angle_float_float_s_fu_101_ap_return_0;
 wire   [31:0] grp_dut_calc_angle_float_float_s_fu_101_ap_return_1;
 reg    grp_dut_calc_angle_float_float_s_fu_101_ap_ce;
-reg   [5:0] proc_phi_fu_94_p4;
+reg   [3:0] proc_phi_fu_94_p4;
 wire   [31:0] z_out_3_fu_359_p3;
 wire   [31:0] vw_int_3_fu_380_p3;
 reg   [31:0] grp_fu_107_p0;
@@ -587,7 +587,7 @@ always @ (posedge ap_clk) begin
     if (((1'b1 == ap_reg_ppiten_pp0_it1) & (exitcond_reg_403 == 1'b0) & (1'b1 == ap_sig_cseq_ST_pp0_stg0_fsm_1) & ~((1'b1 == ap_reg_ppiten_pp0_it14) & ap_sig_238))) begin
         proc_reg_90 <= proc_1_reg_407;
     end else if (((1'b1 == ap_sig_cseq_ST_st1_fsm_0) & ~(ap_start == 1'b0))) begin
-        proc_reg_90 <= ap_const_lv6_0;
+        proc_reg_90 <= ap_const_lv4_0;
     end
 end
 
@@ -1529,7 +1529,7 @@ assign c_write_assign_6_to_int_fu_251_p1 = w_out_int_reg_560;
 
 assign c_write_assign_9_to_int_fu_308_p1 = reg_136;
 
-assign exitcond_fu_183_p2 = ((proc_phi_fu_94_p4 == ap_const_lv6_32) ? 1'b1 : 1'b0);
+assign exitcond_fu_183_p2 = ((proc_phi_fu_94_p4 == ap_const_lv4_8) ? 1'b1 : 1'b0);
 
 assign notlhs2_fu_326_p2 = ((tmp_7_fu_312_p4 != ap_const_lv8_FF) ? 1'b1 : 1'b0);
 
@@ -1539,7 +1539,7 @@ assign notrhs3_fu_332_p2 = ((tmp_2_fu_322_p1 == ap_const_lv23_0) ? 1'b1 : 1'b0);
 
 assign notrhs_fu_274_p2 = ((tmp_fu_264_p1 == ap_const_lv23_0) ? 1'b1 : 1'b0);
 
-assign proc_1_fu_189_p2 = (proc_phi_fu_94_p4 + ap_const_lv6_1);
+assign proc_1_fu_189_p2 = (proc_phi_fu_94_p4 + ap_const_lv4_1);
 
 assign tmp_10_fu_344_p2 = (tmp_8_fu_338_p2 & grp_fu_123_p2);
 

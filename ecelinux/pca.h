@@ -14,8 +14,8 @@
 #include "svd.h"
 
 #define IMG_NUM 100
-#define IMG_H 10
-#define IMG_W 10
+#define IMG_H 4
+#define IMG_W 4
 #define K 10
 const int VEC_SIZ = IMG_H * IMG_W; 
 

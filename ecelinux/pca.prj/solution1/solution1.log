@@ -12,40 +12,40 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [HLS-10] Analyzing design file 'pca.cpp' ... 
 @I [HLS-10] Validating synthesis directives ...
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/rd_buffer' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_diag' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'calc_svd/svd_calc_diag' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/svd_wb_diag' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_off_r' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'update_off_diag_r/svd_calc_off_r' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/svd_wb_off_r' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'svd_alt/svd_rd_off_c' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'PIPELINE' for location 'update_off_diag_c/svd_calc_off_c' has been applied in multiple source file:
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/dut.cpp
-/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/dut.cpp
+/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.cpp
 Please use function labels to distinguish different locations if necessary.
 @W [HLS-40] Directive 'INLINE' cannot be applied: Function 'vm2x1_base' does not exist in any synthesis source file.
 @W [HLS-40] Directive 'PIPELINE' cannot be applied: Label 'svd_wb_off_c' does not exist in function 'svd_alt'. 
@@ -57,7 +57,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [HLS-10] Starting code transformations ...
 @I [XFORM-603] Inlining function 'ap_fixed_base<78, 55, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371).
 @I [XFORM-603] Inlining function 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<55, 55, false, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
-@I [XFORM-603] Inlining function 'svd::svd2x2<float, float, float>' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:341).
+@I [XFORM-603] Inlining function 'svd::svd2x2<float, float, float>' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:341).
 @I [HLS-10] Checking synthesizability ...
 @I [XFORM-602] Inlining function 'fp_struct<float>::mantissa' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:368) automatically.
 @I [XFORM-602] Inlining function 'fp_struct<float>::expv' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371) automatically.
@@ -70,10 +70,10 @@ Please use function labels to distinguish different locations if necessary.
 @I [XFORM-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_angle<float, float>' (./svd.h:153) automatically.
 @I [XFORM-602] Inlining function 'hls::x_copysign<float>' into 'svd::calc_angle<float, float>' (./svd.h:186) automatically.
 @I [XFORM-602] Inlining function 'hls::x_rsqrt<float>' into 'svd::calc_angle<float, float>' (./svd.h:186) automatically.
-@I [XFORM-602] Inlining function 'hls::complex<float>::imag' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:239->./svd.h:341) automatically.
-@I [XFORM-602] Inlining function 'hls::complex<float>::real' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:240->./svd.h:341) automatically.
-@I [XFORM-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:253->./svd.h:341) automatically.
-@I [XFORM-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:283->./svd.h:341) automatically.
+@I [XFORM-602] Inlining function 'hls::complex<float>::imag' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:239->./svd.h:341) automatically.
+@I [XFORM-602] Inlining function 'hls::complex<float>::real' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:240->./svd.h:341) automatically.
+@I [XFORM-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:253->./svd.h:341) automatically.
+@I [XFORM-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:283->./svd.h:341) automatically.
 @I [XFORM-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:29) automatically.
 @I [XFORM-602] Inlining function 'fp_struct<float>::mantissa' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:368) automatically.
 @I [XFORM-602] Inlining function 'fp_struct<float>::expv' into 'hls::cast_IEEE754<int, float>' (/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h:371) automatically.
@@ -86,16 +86,16 @@ Please use function labels to distinguish different locations if necessary.
 @I [XFORM-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_angle<float, float>' (./svd.h:153) automatically.
 @I [XFORM-602] Inlining function 'hls::x_copysign<float>' into 'svd::calc_angle<float, float>' (./svd.h:186) automatically.
 @I [XFORM-602] Inlining function 'hls::x_rsqrt<float>' into 'svd::calc_angle<float, float>' (./svd.h:186) automatically.
-@I [XFORM-602] Inlining function 'hls::complex<float>::imag' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:239->./svd.h:341) automatically.
-@I [XFORM-602] Inlining function 'hls::complex<float>::real' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:240->./svd.h:341) automatically.
-@I [XFORM-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:253->./svd.h:341) automatically.
-@I [XFORM-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:283->./svd.h:341) automatically.
+@I [XFORM-602] Inlining function 'hls::complex<float>::imag' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:239->./svd.h:341) automatically.
+@I [XFORM-602] Inlining function 'hls::complex<float>::real' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:240->./svd.h:341) automatically.
+@I [XFORM-602] Inlining function 'svd::vm2x1<float, float, float>' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:253->./svd.h:341) automatically.
+@I [XFORM-602] Inlining function 'hls::x_isneg<float>' into 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:283->./svd.h:341) automatically.
 @I [XFORM-602] Inlining function '__hls_fptosi_float_i32' into 'dut' (dut.cpp:29) automatically.
-@I [XFORM-401] Performing if-conversion on hyperblock from (./svd.h:333:70) to (./svd.h:333:62) in function 'svd::calc_svd<100, 100, MY_CONFIG_SVD>'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (./svd.h:333:70) to (./svd.h:333:62) in function 'svd::calc_svd<16, 16, MY_CONFIG_SVD>'... converting 5 basic blocks.
 @I [XFORM-401] Performing if-conversion on hyperblock to (dut.cpp:29:3) in function 'dut'... converting 4 basic blocks.
-@W [XFORM-631] Renaming function 'svd::calc_svd<100, 100, MY_CONFIG_SVD>' (./svd.h:17:62) into calc_svd.
+@W [XFORM-631] Renaming function 'svd::calc_svd<16, 16, MY_CONFIG_SVD>' (./svd.h:17:62) into calc_svd.
 @W [XFORM-631] Renaming function 'svd::calc_angle<float, float>' (./svd.h:17:7) into calc_angle<float, float>.
-@I [HLS-111] Elapsed time: 10.77 seconds; current memory usage: 352 MB.
+@I [HLS-111] Elapsed time: 10.41 seconds; current memory usage: 352 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'dut' ...
 @W [SYN-103] Legalizing function name 'dut_calc_angle<float, float>' to 'dut_calc_angle_float_float_s'.
@@ -106,7 +106,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [SCHED-61] Pipelining function 'dut_calc_angle<float, float>'.
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 1, Depth: 119.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.16 seconds; current memory usage: 354 MB.
+@I [HLS-111] Elapsed time: 0.17 seconds; current memory usage: 354 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut_calc_angle_float_float_s' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -115,7 +115,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.12 seconds; current memory usage: 355 MB.
+@I [HLS-111] Elapsed time: 0.07 seconds; current memory usage: 355 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'dut_calc_svd' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -133,7 +133,7 @@ Please use function labels to distinguish different locations if necessary.
    between fifo write on port 'strm_out_V' (./svd.h:358) and fifo write on port 'strm_out_V' (./svd.h:344).
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 12, Depth: 179.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.7 seconds; current memory usage: 356 MB.
+@I [HLS-111] Elapsed time: 0.67 seconds; current memory usage: 356 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut_calc_svd' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -142,13 +142,13 @@ Please use function labels to distinguish different locations if necessary.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.28 seconds; current memory usage: 358 MB.
+@I [HLS-111] Elapsed time: 0.24 seconds; current memory usage: 358 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.22 seconds; current memory usage: 358 MB.
+@I [HLS-111] Elapsed time: 0.21 seconds; current memory usage: 358 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -157,7 +157,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.08 seconds; current memory usage: 358 MB.
+@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 358 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut_calc_angle_float_float_s' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -176,7 +176,7 @@ Please use function labels to distinguish different locations if necessary.
 @I [RTGEN-100] Generating core module 'dut_fcmp_32ns_32ns_1_1': 1 instance(s).
 @I [RTGEN-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 2 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut_calc_svd'.
-@I [HLS-111] Elapsed time: 0.52 seconds; current memory usage: 364 MB.
+@I [HLS-111] Elapsed time: 0.59 seconds; current memory usage: 364 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -184,9 +184,9 @@ Please use function labels to distinguish different locations if necessary.
 @I [RTGEN-500] Setting interface mode on port 'dut/strm_out_V' to 'ap_fifo'.
 @I [RTGEN-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
 @I [RTGEN-100] Finished creating RTL model for 'dut'.
-@I [HLS-111] Elapsed time: 0.36 seconds; current memory usage: 367 MB.
+@I [HLS-111] Elapsed time: 0.35 seconds; current memory usage: 367 MB.
 @I [HLS-10] Finished generating all RTL models.
 @I [SYSC-301] Generating SystemC RTL for dut.
 @I [VHDL-304] Generating VHDL RTL for dut.
 @I [VLOG-307] Generating Verilog RTL for dut.
-@I [HLS-112] Total elapsed time: 53.816 seconds; peak memory usage: 367 MB.
+@I [HLS-112] Total elapsed time: 49.312 seconds; peak memory usage: 367 MB.

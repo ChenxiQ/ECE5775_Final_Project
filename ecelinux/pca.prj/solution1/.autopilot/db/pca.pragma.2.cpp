@@ -1,5 +1,5 @@
-# 1 "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp"
-# 1 "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp" 1
+# 1 "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp"
+# 1 "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -203,7 +203,7 @@ extern "C" {
 // XSIP watermark, do not delete 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 6 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp" 2
+# 1 "/home/cq53/ece5775/ECE5775_Final_Project/ecelinux/pca.prj/solution1/.autopilot/db/pca.pragma.1.cpp" 2
 # 1 "pca.cpp"
 # 1 "pca.cpp" 1
 # 1 "<built-in>" 1
@@ -45297,7 +45297,7 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
 
 
-const int VEC_SIZ = 10 * 10;
+const int VEC_SIZ = 4 * 4;
 
 class PCA {
   public:

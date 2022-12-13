@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_calc_svd'" level="0">
-<item name = "Date">Thu Dec  8 17:56:48 2022
+<item name = "Date">Fri Dec  9 18:10:37 2022
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">pca.prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">768, 768, 768, 768, none</column>
+<column name="">264, 264, 264, 264, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -36,7 +36,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- svd_calc_diag">766, 766, 179, 12, 1, 50, yes</column>
+<column name="- svd_calc_diag">262, 262, 179, 12, 1, 8, yes</column>
 </table>
 </item>
 </section>
@@ -49,12 +49,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 546</column>
+<column name="Expression">-, -, 0, 543</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, 31, 6603, 10878</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 569</column>
-<column name="Register">-, -, 1293, 289</column>
+<column name="Multiplexer">-, -, -, 565</column>
+<column name="Register">-, -, 1289, 289</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
 <specialColumn name="Utilization (%)">0, 14, 7, 23</specialColumn>
 </table>
@@ -85,14 +85,14 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="proc_1_fu_189_p2">+, 0, 0, 6, 6, 1</column>
+<column name="proc_1_fu_189_p2">+, 0, 0, 4, 4, 1</column>
 <column name="ap_sig_220">and, 0, 0, 1, 1, 1</column>
 <column name="ap_sig_228">and, 0, 0, 1, 1, 1</column>
 <column name="ap_sig_238">and, 0, 0, 1, 1, 1</column>
 <column name="ap_sig_897">and, 0, 0, 1, 1, 1</column>
 <column name="tmp_10_fu_344_p2">and, 0, 0, 1, 1, 1</column>
 <column name="tmp_6_fu_286_p2">and, 0, 0, 1, 1, 1</column>
-<column name="exitcond_fu_183_p2">icmp, 0, 0, 3, 6, 5</column>
+<column name="exitcond_fu_183_p2">icmp, 0, 0, 2, 4, 5</column>
 <column name="notlhs2_fu_326_p2">icmp, 0, 0, 3, 8, 2</column>
 <column name="notlhs_fu_268_p2">icmp, 0, 0, 3, 8, 2</column>
 <column name="notrhs3_fu_332_p2">icmp, 0, 0, 8, 23, 1</column>
@@ -131,8 +131,8 @@
 <column name="grp_fu_119_p0">32, 7, 32, 224</column>
 <column name="grp_fu_119_p1">32, 7, 32, 224</column>
 <column name="grp_fu_123_p0">32, 3, 32, 96</column>
-<column name="proc_phi_fu_94_p4">6, 2, 6, 12</column>
-<column name="proc_reg_90">6, 2, 6, 12</column>
+<column name="proc_phi_fu_94_p4">4, 2, 4, 8</column>
+<column name="proc_reg_90">4, 2, 4, 8</column>
 <column name="strm_in_V_blk_n">1, 2, 1, 2</column>
 <column name="strm_out_V_blk_n">1, 2, 1, 2</column>
 <column name="strm_out_V_din">64, 11, 32, 352</column>
@@ -161,8 +161,8 @@
 <column name="cosA_half_reg_445">32, 0, 32, 0</column>
 <column name="cosB_half_reg_459">32, 0, 32, 0</column>
 <column name="exitcond_reg_403">1, 0, 1, 0</column>
-<column name="proc_1_reg_407">6, 0, 6, 0</column>
-<column name="proc_reg_90">6, 0, 6, 0</column>
+<column name="proc_1_reg_407">4, 0, 4, 0</column>
+<column name="proc_reg_90">4, 0, 4, 0</column>
 <column name="reg_136">32, 0, 32, 0</column>
 <column name="reg_143">32, 0, 32, 0</column>
 <column name="reg_149">32, 0, 32, 0</column>

@@ -77,14 +77,14 @@
 						<id>8</id>
 						<name>tmp_1</name>
 						<fileName>dut.cpp</fileName>
-						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>27</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -119,14 +119,14 @@
 						<id>9</id>
 						<name>p_Val2_s</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>309</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -188,14 +188,14 @@
 						<id>10</id>
 						<name>p_Result_s</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>315</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -259,14 +259,14 @@
 						<id>11</id>
 						<name>loc_V</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>316</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -331,14 +331,14 @@
 						<id>12</id>
 						<name>loc_V_1</name>
 						<fileName>/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/common/technology/autopilot/hls/utils/x_hls_utils.h</fileName>
-						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>317</lineNumber>
 						<contextFuncName>fp_struct</contextFuncName>
 						<inlineStackInfo>
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>2</count>
 									<item_version>0</item_version>
@@ -407,7 +407,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -478,7 +478,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -540,7 +540,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -609,7 +609,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -679,7 +679,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -743,7 +743,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -806,7 +806,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -868,7 +868,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -932,7 +932,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -994,7 +994,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1056,7 +1056,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1118,7 +1118,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1181,7 +1181,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1244,7 +1244,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1308,7 +1308,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1370,7 +1370,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1435,7 +1435,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1499,7 +1499,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1562,7 +1562,7 @@
 							<count>2</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1619,14 +1619,14 @@
 						<id>32</id>
 						<name>cond</name>
 						<fileName>dut.cpp</fileName>
-						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>29</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1661,14 +1661,14 @@
 						<id>33</id>
 						<name></name>
 						<fileName>dut.cpp</fileName>
-						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>29</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1704,14 +1704,14 @@
 						<id>35</id>
 						<name></name>
 						<fileName>dut.cpp</fileName>
-						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>31</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1748,14 +1748,14 @@
 						<id>36</id>
 						<name></name>
 						<fileName>dut.cpp</fileName>
-						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>32</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1789,14 +1789,14 @@
 						<id>38</id>
 						<name></name>
 						<fileName>dut.cpp</fileName>
-						<fileDirectory>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</fileDirectory>
+						<fileDirectory>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</fileDirectory>
 						<lineNumber>130</lineNumber>
 						<contextFuncName>dut</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+								<first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2542,7 +2542,7 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>770</mMinLatency>
+			<mMinLatency>266</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>

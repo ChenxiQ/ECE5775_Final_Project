@@ -45,6 +45,8 @@ class PCA {
   void rank(fix32_t tsf_mat[K][VEC_SIZ], fix32_t S[VEC_SIZ][VEC_SIZ], fix32_t V[VEC_SIZ][VEC_SIZ]);
   void back_pjt(fix32_t tsf_mat[K][VEC_SIZ], fix32_t X[VEC_SIZ][IMG_NUM], fix32_t Y[K][IMG_NUM]);
 
+  int si(int i);
+
   private:
   //fix32_t A[IMG_NUM][VEC_SIZ];
   int sorted_idx[VEC_SIZ];

@@ -42,6 +42,18 @@ void read_test_images(uint8_t test_images[IMG_NUM][VEC_SIZ]) {
   }
 }
 
+void read_ref_images(float test_images[K]) {
+  std::ifstream infile("data/ref.dat");
+  if (infile.is_open()) {
+    for (int index = 0; index < K; index++) {
+      float i;
+      infile >> i;
+      test_images[index] = i;
+    }
+    infile.close();
+  }
+}
+
 void read_test_labels(uint8_t test_labels[IMG_NUM]) {
   std::ifstream infile("data/label.dat");
   if (infile.is_open()) {
@@ -125,6 +137,22 @@ int fdw, int fdr){
   cout << "transfering output..." << endl;
   cout<<"writing files..."<<endl;
   write_test_result(Y,tsf_mat,mean);
+  
+  float ref[K];
+  read_ref_images(ref);
+
+  int counter = 0;
+  float thresh = 1e-3;
+  float max_diff = 0;
+  for (int i = 0; i < K; i++) {
+    int idx = pca.si(i);
+    float diff = abs(abs(S[idx][idx]) - abs(ref[i])) / abs(ref[i]);
+    if (diff > thresh) counter++;
+    if (diff > max_diff) max_diff = diff;
+  }
+
+  std::cout << "Number of wrong eigen value: " << counter << std::endl;
+  std::cout << "Max difference ratio: " << max_diff << std::endl;
 }
 
 //------------------------------------------------------------------------
@@ -201,6 +229,7 @@ int main(){
   write_test_result(Y,tsf_mat,mean);
   */
   timer.stop();
+
 
   // Calculate accuracy
   // std::cout << "Accuracy: " << correct/IMG_NUM << std::endl;

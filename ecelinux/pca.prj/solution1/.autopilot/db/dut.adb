@@ -84,7 +84,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -126,7 +126,7 @@
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -195,7 +195,7 @@
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -266,7 +266,7 @@
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -338,7 +338,7 @@
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>2</count>
                     <item_version>0</item_version>
@@ -400,14 +400,14 @@
               <id>13</id>
               <name>p_Result_1</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>364</lineNumber>
               <contextFuncName>mantissa</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -471,14 +471,14 @@
               <id>14</id>
               <name>tmp_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>368</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -533,14 +533,14 @@
               <id>15</id>
               <name>tmp_i_i_i_cast1</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>338</lineNumber>
               <contextFuncName>expv</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -602,14 +602,14 @@
               <id>16</id>
               <name>sh_assign</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>338</lineNumber>
               <contextFuncName>expv</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -672,14 +672,14 @@
               <id>17</id>
               <name>isNeg</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -736,14 +736,14 @@
               <id>18</id>
               <name>tmp_13_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -799,14 +799,14 @@
               <id>19</id>
               <name>tmp_13_i_i_cast</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -861,14 +861,14 @@
               <id>20</id>
               <name>sh_assign_1</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -925,14 +925,14 @@
               <id>21</id>
               <name>sh_assign_1_cast</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -987,14 +987,14 @@
               <id>22</id>
               <name>sh_assign_1_cast_cast</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1049,14 +1049,14 @@
               <id>23</id>
               <name>tmp_14_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1111,14 +1111,14 @@
               <id>24</id>
               <name>tmp_15_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1174,14 +1174,14 @@
               <id>25</id>
               <name>tmp_17_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1237,14 +1237,14 @@
               <id>26</id>
               <name>tmp</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>374</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1301,14 +1301,14 @@
               <id>27</id>
               <name>tmp_2</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>374</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1363,14 +1363,14 @@
               <id>28</id>
               <name>tmp_3</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>374</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1428,14 +1428,14 @@
               <id>29</id>
               <name>p_Val2_3</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>371</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1492,14 +1492,14 @@
               <id>30</id>
               <name>p_Val2_8_i_i</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>383</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1555,14 +1555,14 @@
               <id>31</id>
               <name>p_Val2_5</name>
               <fileName>/wrk/2016.2/continuous/2016_06_02_1577090/src/products/hls/hls_lib/src/hls/hls_round.h</fileName>
-              <fileDirectory>../../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
+              <fileDirectory>../../../../../../wrk/2016.2/continuous/2016_06_02_1577090/src/products</fileDirectory>
               <lineNumber>383</lineNumber>
               <contextFuncName>cast_IEEE754&amp;lt;int, float&amp;gt;</contextFuncName>
               <inlineStackInfo>
                 <count>2</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1626,7 +1626,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1668,7 +1668,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1711,7 +1711,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1755,7 +1755,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1796,7 +1796,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux</first>
+                  <first>/home/cq53/ece5775/ECE5775_Final_Project/ecelinux</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -2542,7 +2542,7 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>770</mMinLatency>
+        <mMinLatency>266</mMinLatency>
         <mMaxLatency>-1</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
@@ -2799,11 +2799,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>7896</second>
+              <second>7892</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>12282</second>
+              <second>12275</second>
             </item>
           </second>
         </item>

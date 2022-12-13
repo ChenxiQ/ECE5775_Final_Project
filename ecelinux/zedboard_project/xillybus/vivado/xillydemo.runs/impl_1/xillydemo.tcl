@@ -57,38 +57,38 @@ set rc [catch {
   create_msg_db init_design.pb
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.cache/wt [current_project]
-  set_property parent.project_path /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.xpr [current_project]
+  set_property webtalk.parent_dir /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.cache/wt [current_project]
+  set_property parent.project_path /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.xpr [current_project]
   set_property ip_repo_paths {
-  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.cache/ip
-  /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado-ip
+  /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.cache/ip
+  /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado-ip
 } [current_project]
-  set_property ip_output_repo /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.cache/ip [current_project]
+  set_property ip_output_repo /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.cache/ip [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
-  add_files -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/xillydemo.dcp
-  set_property edif_extra_search_paths /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/cores [current_fileset]
-  read_edif /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/system/pcores/xillybus_lite_v1_00_a/netlist/xillybus_lite.ngc
-  add_files -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp
-  set_property netlist_only true [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp]
-  add_files -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp
-  set_property netlist_only true [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp]
-  add_files -quiet /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp
-  set_property netlist_only true [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp]
-  read_xdc -ref vga_fifo -cells U0 /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc
-  set_property processing_order EARLY [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc]
-  read_xdc -ref fifo_8x2048 -cells U0 /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048/fifo_8x2048.xdc
-  set_property processing_order EARLY [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048/fifo_8x2048.xdc]
-  read_xdc -ref fifo_32x512 -cells U0 /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512/fifo_32x512.xdc
-  set_property processing_order EARLY [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512/fifo_32x512.xdc]
-  read_xdc -ref vivado_system_processing_system7_0_0 -cells inst /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc
-  set_property processing_order EARLY [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc]
-  read_xdc -prop_thru_buffers -ref vivado_system_rst_processing_system7_0_100M_0 -cells U0 /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_board.xdc
-  set_property processing_order EARLY [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_board.xdc]
-  read_xdc -ref vivado_system_rst_processing_system7_0_100M_0 -cells U0 /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0.xdc
-  set_property processing_order EARLY [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0.xdc]
-  read_xdc /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/xillydemo.xdc
-  read_xdc -ref vga_fifo -cells U0 /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc
-  set_property processing_order LATE [get_files /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc]
+  add_files -quiet /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/xillybus/vivado/xillydemo.runs/synth_1/xillydemo.dcp
+  set_property edif_extra_search_paths /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/cores [current_fileset]
+  read_edif /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/system/pcores/xillybus_lite_v1_00_a/netlist/xillybus_lite.ngc
+  add_files -quiet /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp
+  set_property netlist_only true [get_files /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp]
+  add_files -quiet /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp
+  set_property netlist_only true [get_files /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp]
+  add_files -quiet /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp
+  set_property netlist_only true [get_files /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp]
+  read_xdc -ref vga_fifo -cells U0 /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc
+  set_property processing_order EARLY [get_files /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc]
+  read_xdc -ref fifo_8x2048 -cells U0 /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048/fifo_8x2048.xdc
+  set_property processing_order EARLY [get_files /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048/fifo_8x2048.xdc]
+  read_xdc -ref fifo_32x512 -cells U0 /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512/fifo_32x512.xdc
+  set_property processing_order EARLY [get_files /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512/fifo_32x512.xdc]
+  read_xdc -ref vivado_system_processing_system7_0_0 -cells inst /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc
+  set_property processing_order EARLY [get_files /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc]
+  read_xdc -prop_thru_buffers -ref vivado_system_rst_processing_system7_0_100M_0 -cells U0 /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_board.xdc
+  set_property processing_order EARLY [get_files /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_board.xdc]
+  read_xdc -ref vivado_system_rst_processing_system7_0_100M_0 -cells U0 /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0.xdc
+  set_property processing_order EARLY [get_files /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0.xdc]
+  read_xdc /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/xillydemo.xdc
+  read_xdc -ref vga_fifo -cells U0 /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc
+  set_property processing_order LATE [get_files /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc]
   link_design -top xillydemo -part xc7z020clg484-1
   write_hwdef -file xillydemo.hwdef
   close_msg_db -file init_design.pb
@@ -138,12 +138,12 @@ set rc [catch {
   create_msg_db route_design.pb
   route_design 
   set src_rc [catch { 
-    puts "source /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/showstopper.tcl"
-    source /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/showstopper.tcl
+    puts "source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/showstopper.tcl"
+    source /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/showstopper.tcl
   } _RESULT] 
   if {$src_rc} { 
     send_msg_id runtcl-1 error "$_RESULT"
-    send_msg_id runtcl-2 error "sourcing script /home/yx388/ece5775/final_project/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/showstopper.tcl failed"
+    send_msg_id runtcl-2 error "sourcing script /home/cq53/ece5775/ECE5775_Final_Project/ecelinux/zedboard_project/vivado-essentials/showstopper.tcl failed"
     return -code error
   }
   write_checkpoint -force xillydemo_routed.dcp

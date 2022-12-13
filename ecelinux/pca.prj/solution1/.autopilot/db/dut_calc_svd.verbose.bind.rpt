@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'dut_calc_svd'
 ================================================================
-* Date:           Thu Dec  8 17:56:46 2022
+* Date:           Fri Dec  9 18:10:36 2022
 
 * Version:        2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)
 * Project:        pca.prj
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |  768|  768|  768|  768|   none  |
+    |  264|  264|  264|  264|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                 |  Latency  | Iteration|  Initiation Interval  | Trip |          |
         |    Loop Name    | min | max |  Latency |  achieved |   target  | Count| Pipelined|
         +-----------------+-----+-----+----------+-----------+-----------+------+----------+
-        |- svd_calc_diag  |  766|  766|       179|         12|          1|    50|    yes   |
+        |- svd_calc_diag  |  262|  262|       179|         12|          1|     8|    yes   |
         +-----------------+-----+-----+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -454,15 +454,15 @@ ST_1: stg_184 [1/1] 1.57ns
 :2  br label %1
 
 
- <State 2>: 1.94ns
+ <State 2>: 1.88ns
 ST_2: proc [1/1] 0.00ns
-:0  %proc = phi i6 [ 0, %0 ], [ %proc_1, %_ifconv ]
+:0  %proc = phi i4 [ 0, %0 ], [ %proc_1, %_ifconv ]
 
-ST_2: exitcond [1/1] 1.94ns
-:1  %exitcond = icmp eq i6 %proc, -14
+ST_2: exitcond [1/1] 1.88ns
+:1  %exitcond = icmp eq i4 %proc, -8
 
-ST_2: proc_1 [1/1] 1.72ns
-:2  %proc_1 = add i6 %proc, 1
+ST_2: proc_1 [1/1] 0.80ns
+:2  %proc_1 = add i4 %proc, 1
 
 ST_2: stg_188 [1/1] 0.00ns
 :3  br i1 %exitcond, label %2, label %_ifconv
@@ -2144,7 +2144,7 @@ _ifconv:97  call void @_ssdm_op_Write.ap_fifo.volatile.floatP(float* %strm_out_V
 
  <State 180>: 4.38ns
 ST_180: empty_9 [1/1] 0.00ns
-_ifconv:0  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 50, i64 50, i64 50)
+_ifconv:0  %empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
 
 ST_180: stg_630 [1/1] 0.00ns
 _ifconv:1  call void (...)* @_ssdm_op_SpecLoopName([14 x i8]* @p_str) nounwind
@@ -2674,8 +2674,8 @@ stg_636                 (ret              ) [ 0000000000000000000000000000000000
 
 <comp id="90" class="1005" name="proc_reg_90">
 <pin_list>
-<pin id="91" dir="0" index="0" bw="6" slack="1"/>
-<pin id="92" dir="1" index="1" bw="6" slack="1"/>
+<pin id="91" dir="0" index="0" bw="4" slack="1"/>
+<pin id="92" dir="1" index="1" bw="4" slack="1"/>
 </pin_list>
 <bind>
 <opset="proc (phireg) "/>
@@ -2686,9 +2686,9 @@ stg_636                 (ret              ) [ 0000000000000000000000000000000000
 <pin_list>
 <pin id="95" dir="0" index="0" bw="1" slack="1"/>
 <pin id="96" dir="0" index="1" bw="0" slack="2147483647"/>
-<pin id="97" dir="0" index="2" bw="6" slack="0"/>
+<pin id="97" dir="0" index="2" bw="4" slack="0"/>
 <pin id="98" dir="0" index="3" bw="0" slack="2147483647"/>
-<pin id="99" dir="1" index="4" bw="6" slack="0"/>
+<pin id="99" dir="1" index="4" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
@@ -2873,8 +2873,8 @@ stg_636                 (ret              ) [ 0000000000000000000000000000000000
 
 <comp id="183" class="1004" name="exitcond_fu_183">
 <pin_list>
-<pin id="184" dir="0" index="0" bw="6" slack="0"/>
-<pin id="185" dir="0" index="1" bw="5" slack="0"/>
+<pin id="184" dir="0" index="0" bw="4" slack="0"/>
+<pin id="185" dir="0" index="1" bw="4" slack="0"/>
 <pin id="186" dir="1" index="2" bw="1" slack="1"/>
 </pin_list>
 <bind>
@@ -2885,9 +2885,9 @@ stg_636                 (ret              ) [ 0000000000000000000000000000000000
 
 <comp id="189" class="1004" name="proc_1_fu_189">
 <pin_list>
-<pin id="190" dir="0" index="0" bw="6" slack="0"/>
+<pin id="190" dir="0" index="0" bw="4" slack="0"/>
 <pin id="191" dir="0" index="1" bw="1" slack="0"/>
-<pin id="192" dir="1" index="2" bw="6" slack="0"/>
+<pin id="192" dir="1" index="2" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -3369,8 +3369,8 @@ stg_636                 (ret              ) [ 0000000000000000000000000000000000
 
 <comp id="407" class="1005" name="proc_1_reg_407">
 <pin_list>
-<pin id="408" dir="0" index="0" bw="6" slack="0"/>
-<pin id="409" dir="1" index="1" bw="6" slack="0"/>
+<pin id="408" dir="0" index="0" bw="4" slack="0"/>
+<pin id="409" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opset="proc_1 "/>
@@ -4403,13 +4403,13 @@ stg_636                 (ret              ) [ 0000000000000000000000000000000000
 |          |             vy_int_2_fu_392             |    0    |    0    |    0    |    32   |
 |          |              vz_int_fu_397              |    0    |    0    |    0    |    32   |
 |----------|-----------------------------------------|---------|---------|---------|---------|
-|          |             exitcond_fu_183             |    0    |    0    |    0    |    3    |
+|          |             exitcond_fu_183             |    0    |    0    |    0    |    2    |
 |          |              notlhs_fu_268              |    0    |    0    |    0    |    3    |
 |   icmp   |              notrhs_fu_274              |    0    |    0    |    0    |    8    |
 |          |              notlhs2_fu_326             |    0    |    0    |    0    |    3    |
 |          |              notrhs3_fu_332             |    0    |    0    |    0    |    8    |
 |----------|-----------------------------------------|---------|---------|---------|---------|
-|    add   |              proc_1_fu_189              |    0    |    0    |    0    |    6    |
+|    add   |              proc_1_fu_189              |    0    |    0    |    0    |    4    |
 |----------|-----------------------------------------|---------|---------|---------|---------|
 |    or    |               tmp_3_fu_280              |    0    |    0    |    0    |    1    |
 |          |               tmp_8_fu_338              |    0    |    0    |    0    |    1    |
@@ -4430,7 +4430,7 @@ stg_636                 (ret              ) [ 0000000000000000000000000000000000
 |   trunc  |                tmp_fu_264               |    0    |    0    |    0    |    0    |
 |          |               tmp_2_fu_322              |    0    |    0    |    0    |    0    |
 |----------|-----------------------------------------|---------|---------|---------|---------|
-|   Total  |                                         |    31   |  12.568 |   6795  |  11118  |
+|   Total  |                                         |    31   |  12.568 |   6795  |  11115  |
 |----------|-----------------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -4446,8 +4446,8 @@ N/A
 |       cosA_half_reg_445       |   32   |
 |       cosB_half_reg_459       |   32   |
 |        exitcond_reg_403       |    1   |
-|         proc_1_reg_407        |    6   |
-|          proc_reg_90          |    6   |
+|         proc_1_reg_407        |    4   |
+|          proc_reg_90          |    4   |
 |            reg_136            |   32   |
 |            reg_143            |   32   |
 |            reg_149            |   32   |
@@ -4487,7 +4487,7 @@ N/A
 |       w_out_int_reg_560       |   32   |
 |         z_out1_reg_555        |   32   |
 +-------------------------------+--------+
-|             Total             |  1296  |
+|             Total             |  1292  |
 +-------------------------------+--------+
 
 * Multiplexer (MUX) list: 
@@ -4516,10 +4516,10 @@ N/A
 +-----------+--------+--------+--------+--------+
 |           | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+
-|  Function |   31   |   12   |  6795  |  11118 |
+|  Function |   31   |   12   |  6795  |  11115 |
 |   Memory  |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |   22   |    -   |   480  |
-|  Register |    -   |    -   |  1296  |    -   |
+|  Register |    -   |    -   |  1292  |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |   31   |   34   |  8091  |  11598 |
+|   Total   |   31   |   34   |  8087  |  11595 |
 +-----------+--------+--------+--------+--------+

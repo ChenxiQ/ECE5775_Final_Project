@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (lin64) Build 1577090 Thu Jun  2 16:32:35 MDT 2016
-| Date             : Thu Dec  8 18:05:51 2022
-| Host             : en-ec-ecelinux-16.coecis.cornell.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Date             : Fri Dec  9 18:20:04 2022
+| Host             : en-ec-ecelinux-18.coecis.cornell.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command          : report_power -file xillydemo_power_routed.rpt -pb xillydemo_power_summary_routed.pb -rpx xillydemo_power_routed.rpx
 | Design           : xillydemo
 | Device           : xc7z020clg484-1
@@ -31,7 +31,7 @@ Table of Contents
 
 +--------------------------+-------+
 | Total On-Chip Power (W)  | 1.929 |
-| Dynamic (W)              | 1.770 |
+| Dynamic (W)              | 1.769 |
 | Device Static (W)        | 0.159 |
 | Effective TJA (C/W)      | 11.5  |
 | Max Ambient (C)          | 62.8  |
@@ -49,16 +49,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.036 |        6 |       --- |             --- |
-| Slice Logic              |     0.014 |    32660 |       --- |             --- |
-|   LUT as Logic           |     0.012 |    12295 |     53200 |           23.11 |
-|   Register               |    <0.001 |    13611 |    106400 |           12.79 |
+| Clocks                   |     0.035 |        6 |       --- |             --- |
+| Slice Logic              |     0.014 |    32648 |       --- |             --- |
+|   LUT as Logic           |     0.012 |    12310 |     53200 |           23.14 |
+|   Register               |    <0.001 |    13607 |    106400 |           12.79 |
 |   CARRY4                 |    <0.001 |     1551 |     13300 |           11.66 |
 |   LUT as Distributed RAM |    <0.001 |      270 |     17400 |            1.55 |
 |   F7/F8 Muxes            |    <0.001 |      106 |     53200 |            0.20 |
-|   LUT as Shift Register  |    <0.001 |      593 |     17400 |            3.41 |
+|   LUT as Shift Register  |    <0.001 |      595 |     17400 |            3.42 |
 |   Others                 |     0.000 |     2705 |       --- |             --- |
-| Signals                  |     0.021 |    24688 |       --- |             --- |
+| Signals                  |     0.021 |    24675 |       --- |             --- |
 | Block RAM                |     0.008 |        5 |       140 |            3.57 |
 | PLL                      |     0.107 |        1 |         4 |           25.00 |
 | DSPs                     |     0.006 |       31 |       220 |           14.09 |
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.112 |       0.095 |      0.017 |
+| Vccint    |       1.000 |     0.111 |       0.094 |      0.017 |
 | Vccaux    |       1.800 |     0.076 |       0.055 |      0.021 |
 | Vcco33    |       3.300 |     0.014 |       0.013 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -154,7 +154,7 @@ Table of Contents
 +--------------------------------------------------------------------+-----------+
 | Name                                                               | Power (W) |
 +--------------------------------------------------------------------+-----------+
-| xillydemo                                                          |     1.770 |
+| xillydemo                                                          |     1.769 |
 |   PS_GPIO_IOBUF[0]_inst                                            |    <0.001 |
 |   PS_GPIO_IOBUF[10]_inst                                           |    <0.001 |
 |   PS_GPIO_IOBUF[11]_inst                                           |    <0.001 |
@@ -389,11 +389,11 @@ Table of Contents
 |   test_fpga_design                                                 |     0.029 |
 |     grp_dut_calc_svd_fu_76                                         |     0.029 |
 |       dut_faddfsub_32ns_32ns_32_5_full_dsp_U19                     |     0.003 |
-|         dut_ap_faddfsub_3_full_dsp_32_u                            |     0.003 |
-|           U0                                                       |     0.003 |
-|             i_synth                                                |     0.003 |
-|               ADDSUB_OP.ADDSUB                                     |     0.003 |
-|                 SPEED_OP.DSP.OP                                    |     0.003 |
+|         dut_ap_faddfsub_3_full_dsp_32_u                            |     0.002 |
+|           U0                                                       |     0.002 |
+|             i_synth                                                |     0.002 |
+|               ADDSUB_OP.ADDSUB                                     |     0.002 |
+|                 SPEED_OP.DSP.OP                                    |     0.002 |
 |                   A_IP_DELAY                                       |    <0.001 |
 |                     i_pipe                                         |    <0.001 |
 |                   B_IP_DELAY                                       |    <0.001 |
@@ -464,8 +464,8 @@ Table of Contents
 |                     i_pipe                                         |    <0.001 |
 |                   B_IP_DELAY                                       |    <0.001 |
 |                     i_pipe                                         |    <0.001 |
-|                   DSP48E1_BODY.ALIGN_ADD                           |    <0.001 |
-|                     DSP2                                           |    <0.001 |
+|                   DSP48E1_BODY.ALIGN_ADD                           |     0.001 |
+|                     DSP2                                           |     0.001 |
 |                     ZERO_14_DET.CARRY_MUX                          |     0.000 |
 |                     ZERO_14_DET.ZERO_DET                           |    <0.001 |
 |                       CARRY_ZERO_DET                               |    <0.001 |
@@ -513,7 +513,7 @@ Table of Contents
 |                     SUB_DELAY                                      |    <0.001 |
 |                       i_pipe                                       |    <0.001 |
 |                     merged_sub_mux.STRUCT_ADD                      |    <0.001 |
-|                   DSP48E1_BODY.NORM_RND                            |     0.001 |
+|                   DSP48E1_BODY.NORM_RND                            |    <0.001 |
 |                     FULL_USAGE_DSP.LOD                             |    <0.001 |
 |                     FULL_USAGE_DSP.MSBS_DELAY                      |    <0.001 |
 |                       i_pipe                                       |    <0.001 |
@@ -1466,7 +1466,7 @@ Table of Contents
 |                   R_AND_R                                          |    <0.001 |
 |                     LAT_OPT.FULL.R_AND_R                           |    <0.001 |
 |                       DSP48E1_SGL_EXP_IP.OLD_ADD.ADD               |    <0.001 |
-|         dut_fmul_32ns_32ns_32_4_max_dsp_U8                         |     0.001 |
+|         dut_fmul_32ns_32ns_32_4_max_dsp_U8                         |    <0.001 |
 |           dut_ap_fmul_2_max_dsp_32_u                               |    <0.001 |
 |             U0                                                     |    <0.001 |
 |               i_synth                                              |    <0.001 |
@@ -1848,9 +1848,9 @@ Table of Contents
 |           inst                                                     |    <0.001 |
 |         xillybus_lite_0                                            |    <0.001 |
 |           inst                                                     |    <0.001 |
-|         xillyvga_0                                                 |     0.112 |
-|           inst                                                     |     0.112 |
-|             xillyvga_core_ins                                      |     0.112 |
+|         xillyvga_0                                                 |     0.111 |
+|           inst                                                     |     0.111 |
+|             xillyvga_core_ins                                      |     0.111 |
 |               vga_fifo_wrapper_ins/vga_fifo                        |     0.001 |
 |                 U0                                                 |     0.001 |
 |                   inst_fifo_gen                                    |     0.001 |
