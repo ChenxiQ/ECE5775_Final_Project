@@ -1,0 +1,36 @@
+//==========================================================================
+// dut.cpp
+//==========================================================================
+// @brief: entance for fpga
+
+#include "pca.h"
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include "svd.h"
+#include "dut.h"
+
+using namespace std;
+
+//----------------------------------------------------------
+// Top function
+//----------------------------------------------------------
+
+
+void dut(
+    hls::stream<flt32_t> &strm_in,
+    hls::stream<flt32_t> &strm_out
+)
+{
+  float input_l;
+  input_l = strm_in.read();
+  //1 = svd,
+  switch ((int)input_l){
+    case 1:{//calculate svd
+      svd::calc_svd<VEC_SIZ,VEC_SIZ,MY_CONFIG_SVD>(strm_in, strm_out);
+    break;
+    }
+    default:
+    break;
+  }
+}

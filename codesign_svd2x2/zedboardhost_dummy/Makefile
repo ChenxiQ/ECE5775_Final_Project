@@ -1,0 +1,25 @@
+#==========================================================================
+# Makefile
+#==========================================================================
+# @brief: A makefile the compiles and runs the cordic program
+#
+# @desc: 1. "make" or "make fpga" invokes the HW accelerator
+#        2. "make fpga_batch" invokes the HW accelerator using batch mode
+#        3. "make clean" cleans up the directory
+
+
+#INC_PATH=/usr/include/vivado_hls
+INC_PATH=/usr/include/vivado_hls/
+CFLAGS = -I${INC_PATH}  -DHLS_NO_XIL_FPO_LIB 
+
+all: fpga
+
+fpga: pca.cpp pca_test.cpp
+	@echo "Compiling host program & running CORDIC accelerator ..."
+	g++ ${CFLAGS}  pca.cpp pca_test.cpp -o pca-arm
+	./pca-arm
+	
+clean:
+	@echo "Clean up output files"
+	@echo "WARNING: This is not implemented yet ..."
+	rm -f pca-fpga  *.dat
