@@ -2,7 +2,7 @@
 
 ⚠️ Warning ⚠️ Remember to download the source code from `master` branch. Due to the size limitation for source code upload on CMS, the MNIST dataset and modified Xillybus `zedboard_project_f.tgz` cannot be uploaded. Rembember to add file `zedboard_project_f.tgz` to root directory of the project if using our CMS submission.
 
-This directory includes 3 implementation includes PCA image compression.
+This directory includes 3 implementation includes PCA image compression. It requires Vivado HLS 2016.
 
 ## `./codesign_svd2x2`
 
